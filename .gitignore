@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+data/
+*.csv
+*.tsv
+!data/README.md
+.env
+.venv/
+*.egg-info/
+dist/
+build/
