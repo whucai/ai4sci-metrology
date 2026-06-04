@@ -1,0 +1,1 @@
+{"round": 4, "threadId": "019e8d75-f791-75c3-a914-08dbf2898ba9", "status": "completed", "difficulty": "medium", "last_score": 5.0, "last_verdict": "not ready", "pending_experiments": [], "bugs_fixed": ["error_detection_false_positive", "parser_too_strict", "l2_l3_output_format_unspecified", "l3_provenance_fake_fulltext", "l2_formula_leak"], "timestamp": "2026-06-03T21:00:00"}

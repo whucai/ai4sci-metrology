@@ -1,0 +1,169 @@
+======================================================================
+E2E PAPER REPRODUCTION BENCHMARK
+  Condition: all, Papers: 30
+  Comparing: template vs abstract vs pdf
+======================================================================
+  LLM: ChatOpenAI
+  Loading SciSciNet... OK (111,927 papers, 78,417,834 citations)
+
+  Sampling 30 papers...
+    Target journals: ['Management Science', 'Research Policy']
+    Journal distribution:
+      Management Science: 8
+      Pest Management Science: 4
+      Research Policy: 2
+      Journal of Polymer Science Part A: 1
+      Journal of Pharmaceutical Sciences: 1
+      Physical Review E: 1
+      Computational Management Science: 1
+      Health Care Management Science: 1
+      Toxicology and Applied Pharmacology: 1
+      Molecular Genetics and Genomics: 1
+
+======================================================================
+CONDITION: template
+======================================================================
+  [1/30] Paper 3122337292 (Environmental Externalities and Cost of Capital...) ✓ REI=0.0 [ETA: 0s]
+  [2/30] Paper 1981524267 (Competitive and Cooperative Inventory Policies in a Two-Stag...) ✓ REI=0.0 [ETA: 145s]
+  [3/30] Paper 2010234539 (N-Job, One Machine Sequencing Problems Under Uncertainty...) ✓ REI=0.0 [ETA: 228s]
+  [4/30] Paper 2106446528 (Capsicum oleoresin: development of an in-soil repellent for ...) ✓ REI=0.0 [ETA: 223s]
+  [5/30] Paper 2010089286 (Optimal Stock Depletion Policies with Stochastic Lives...) ✓ REI=0.0 [ETA: 211s]
+  [6/30] Paper 2095405190 (An empirical study of design and testing of hybrid evolution...) ✓ REI=0.0 [ETA: 203s]
+  [7/30] Paper 1993419226 (Validation of RNA interference in western corn rootworm Diab...) ✓ REI=0.0 [ETA: 196s]
+  [8/30] Paper 2528933008 (Evaluation of systemic neonicotinoid insecticides for the ma...) ✓ REI=0.0 [ETA: 194s]
+  [9/30] Paper 2093744780 (Designing Supply Contracts: Contract Type and Information As...) ✓ REI=0.0 [ETA: 183s]
+  [10/30] Paper 2089020611 (New Organizational Forms for Enhancing Innovation: The Case ...) ✓ REI=0.0 [ETA: 185s]
+  [11/30] Paper 2520933363 (Chemotherapy appointment scheduling under uncertainty using ...) ✓ REI=0.0 [ETA: 180s]
+  [12/30] Paper 2161685913 (The development of the asparagus miner (Ophiomyia simplex Lo...) ✓ REI=0.0 [ETA: 170s]
+  [13/30] Paper 2056320678 (A scalable solution framework for stochastic transmission an...) ✓ REI=0.0 [ETA: 158s]
+  [14/30] Paper 1984973964 (A Bi-Extremal Principle for Frontier Estimation and Efficien...) ✓ REI=0.0 [ETA: 149s]
+  [15/30] Paper 2013453700 (Project Assignments When Budget Padding Taints Resource Allo...) ✓ REI=0.0 [ETA: 141s]
+  [16/30] Paper 1983063801 (Coordination costs and project outcomes in multi-university ...) ✓ REI=0.0 [ETA: 130s]
+  [17/30] Paper 2161197120 (Technology transfer and absorption: an ‘R & D value-mapping’...) ✓ REI=0.0 [ETA: 124s]
+  [18/30] Paper 2135838710 (IR Studies on Carrageenan of Ahnfeltia concinna, a Marine Re...) ✓ REI=0.0 [ETA: 114s]
+  [19/30] Paper 1970891428 (ATP-stimulated interaction between epidermal growth factor r...) ✓ REI=0.0 [ETA: 104s]
+  [20/30] Paper 2038524198 (Surfactant Protein-A Suppresses Eosinophil-Mediated Killing ...) ✓ REI=0.0 [ETA: 95s]
+  [21/30] Paper 2593479526 (Nearly maximally predictive features and their dimensions....) ✓ REI=3.0 [ETA: 85s]
+  [22/30] Paper 2137323330 (Synthesis and properties of a bisphenol A based phthalonitri...) ✓ REI=0.0 [ETA: 79s]
+  [23/30] Paper 2167194485 (Anthropogenic environments exert variable selection on crani...) ✓ REI=0.0 [ETA: 69s]
+  [24/30] Paper 1987964936 (Glomerular pathology in Alport syndrome: a molecular perspec...) ✓ REI=0.0 [ETA: 59s]
+  [25/30] Paper 1970799724 (Enhancement of rifampin teratogenicity in cultured rat embry...) ✓ REI=0.0 [ETA: 49s]
+  [26/30] Paper 2040142791 (Misfit dislocations in the epitaxial (111) Cu2O/(111) Cu sys...) ✓ REI=0.0 [ETA: 39s]
+  [27/30] Paper 2002926244 (A new class of locally decoupled Gough-Stewart platform mani...) ✓ REI=0.0 [ETA: 29s]
+  [28/30] Paper 2026542751 (A microtiter plate-based β-lactam binding assay for inhibito...) ✓ REI=0.0 [ETA: 19s]
+  [29/30] Paper 1603918837 (Differential regulation of antiviral T-cell immunity results...) ✓ REI=0.0 ⚠️ [ETA: 10s]
+  [30/30] Paper 2050210628 (Escherichia coli plasmid pBR313 insertion into plant protopl...) ✓ REI=0.0 [ETA: 0s]
+
+  template summary: 30/30 success, 1 silent failures, 319s
+
+======================================================================
+CONDITION: abstract
+======================================================================
+  [1/30] Paper 3122337292 (Environmental Externalities and Cost of Capital...) ✓ REI=0.0 [ETA: 0s]
+  [2/30] Paper 1981524267 (Competitive and Cooperative Inventory Policies in a Two-Stag...) ✓ REI=0.0 [ETA: 158s]
+  [3/30] Paper 2010234539 (N-Job, One Machine Sequencing Problems Under Uncertainty...) ✓ REI=0.0 [ETA: 232s]
+  [4/30] Paper 2106446528 (Capsicum oleoresin: development of an in-soil repellent for ...) ✓ REI=0.0 [ETA: 242s]
+  [5/30] Paper 2010089286 (Optimal Stock Depletion Policies with Stochastic Lives...) ✓ REI=0.0 [ETA: 227s]
+  [6/30] Paper 2095405190 (An empirical study of design and testing of hybrid evolution...) ✓ REI=0.0 [ETA: 217s]
+  [7/30] Paper 1993419226 (Validation of RNA interference in western corn rootworm Diab...) ✓ REI=0.0 [ETA: 209s]
+  [8/30] Paper 2528933008 (Evaluation of systemic neonicotinoid insecticides for the ma...) ✓ REI=0.0 [ETA: 205s]
+  [9/30] Paper 2093744780 (Designing Supply Contracts: Contract Type and Information As...) ✓ REI=0.0 [ETA: 193s]
+  [10/30] Paper 2089020611 (New Organizational Forms for Enhancing Innovation: The Case ...) ✓ REI=0.0 [ETA: 197s]
+  [11/30] Paper 2520933363 (Chemotherapy appointment scheduling under uncertainty using ...) ✓ REI=0.0 [ETA: 192s]
+  [12/30] Paper 2161685913 (The development of the asparagus miner (Ophiomyia simplex Lo...) ✓ REI=0.0 [ETA: 179s]
+  [13/30] Paper 2056320678 (A scalable solution framework for stochastic transmission an...) ✓ REI=0.0 [ETA: 168s]
+  [14/30] Paper 1984973964 (A Bi-Extremal Principle for Frontier Estimation and Efficien...) ✓ REI=0.0 [ETA: 159s]
+  [15/30] Paper 2013453700 (Project Assignments When Budget Padding Taints Resource Allo...) ✓ REI=0.0 [ETA: 153s]
+  [16/30] Paper 1983063801 (Coordination costs and project outcomes in multi-university ...) ✓ REI=0.0 [ETA: 143s]
+  [17/30] Paper 2161197120 (Technology transfer and absorption: an ‘R & D value-mapping’...) ✓ REI=0.0 [ETA: 136s]
+  [18/30] Paper 2135838710 (IR Studies on Carrageenan of Ahnfeltia concinna, a Marine Re...) ✓ REI=0.0 [ETA: 126s]
+  [19/30] Paper 1970891428 (ATP-stimulated interaction between epidermal growth factor r...) ✓ REI=0.0 [ETA: 115s]
+  [20/30] Paper 2038524198 (Surfactant Protein-A Suppresses Eosinophil-Mediated Killing ...) ✓ REI=0.0 [ETA: 105s]
+  [21/30] Paper 2593479526 (Nearly maximally predictive features and their dimensions....) ✓ REI=0.0 [ETA: 94s]
+  [22/30] Paper 2137323330 (Synthesis and properties of a bisphenol A based phthalonitri...) ✓ REI=0.0 [ETA: 84s]
+  [23/30] Paper 2167194485 (Anthropogenic environments exert variable selection on crani...) ✓ REI=0.0 [ETA: 74s]
+  [24/30] Paper 1987964936 (Glomerular pathology in Alport syndrome: a molecular perspec...) ✓ REI=0.0 [ETA: 63s]
+  [25/30] Paper 1970799724 (Enhancement of rifampin teratogenicity in cultured rat embry...) ✓ REI=0.0 [ETA: 52s]
+  [26/30] Paper 2040142791 (Misfit dislocations in the epitaxial (111) Cu2O/(111) Cu sys...) ✓ REI=0.0 [ETA: 42s]
+  [27/30] Paper 2002926244 (A new class of locally decoupled Gough-Stewart platform mani...) ✓ REI=0.0 [ETA: 31s]
+  [28/30] Paper 2026542751 (A microtiter plate-based β-lactam binding assay for inhibito...) ✓ REI=0.0 [ETA: 21s]
+  [29/30] Paper 1603918837 (Differential regulation of antiviral T-cell immunity results...) ✓ REI=0.0 ⚠️ [ETA: 10s]
+  [30/30] Paper 2050210628 (Escherichia coli plasmid pBR313 insertion into plant protopl...) ✓ REI=0.0 [ETA: 0s]
+
+  abstract summary: 30/30 success, 1 silent failures, 334s
+
+======================================================================
+CONDITION: pdf
+======================================================================
+  [1/30] Paper 3122337292 (Environmental Externalities and Cost of Capital...) ✓ REI=0.0 ⚠️ [ETA: 0s]
+  [2/30] Paper 1981524267 (Competitive and Cooperative Inventory Policies in a Two-Stag...) ✓ REI=0.0 [ETA: 216s]
+  [3/30] Paper 2010234539 (N-Job, One Machine Sequencing Problems Under Uncertainty...) ✓ REI=0.0 [ETA: 328s]
+  [4/30] Paper 2106446528 (Capsicum oleoresin: development of an in-soil repellent for ...) ✓ REI=0.0 [ETA: 320s]
+  [5/30] Paper 2010089286 (Optimal Stock Depletion Policies with Stochastic Lives...) ✓ REI=0.0 [ETA: 290s]
+  [6/30] Paper 2095405190 (An empirical study of design and testing of hybrid evolution...) ✓ REI=0.0 [ETA: 272s]
+  [7/30] Paper 1993419226 (Validation of RNA interference in western corn rootworm Diab...) ✓ REI=0.0 [ETA: 259s]
+  [8/30] Paper 2528933008 (Evaluation of systemic neonicotinoid insecticides for the ma...) ✓ REI=0.0 [ETA: 257s]
+  [9/30] Paper 2093744780 (Designing Supply Contracts: Contract Type and Information As...) ✓ REI=0.0 [ETA: 240s]
+  [10/30] Paper 2089020611 (New Organizational Forms for Enhancing Innovation: The Case ...) ✓ REI=0.0 ⚠️ [ETA: 246s]
+  [11/30] Paper 2520933363 (Chemotherapy appointment scheduling under uncertainty using ...) ✓ REI=0.0 [ETA: 240s]
+  [12/30] Paper 2161685913 (The development of the asparagus miner (Ophiomyia simplex Lo...) ✓ REI=0.0 [ETA: 225s]
+  [13/30] Paper 2056320678 (A scalable solution framework for stochastic transmission an...) ✓ REI=0.0 [ETA: 209s]
+  [14/30] Paper 1984973964 (A Bi-Extremal Principle for Frontier Estimation and Efficien...) ✓ REI=0.0 [ETA: 197s]
+  [15/30] Paper 2013453700 (Project Assignments When Budget Padding Taints Resource Allo...) ✓ REI=0.0 [ETA: 188s]
+  [16/30] Paper 1983063801 (Coordination costs and project outcomes in multi-university ...) ✓ REI=0.0 [ETA: 175s]
+  [17/30] Paper 2161197120 (Technology transfer and absorption: an ‘R & D value-mapping’...) ✓ REI=0.0 [ETA: 169s]
+  [18/30] Paper 2135838710 (IR Studies on Carrageenan of Ahnfeltia concinna, a Marine Re...) ✓ REI=0.0 [ETA: 157s]
+  [19/30] Paper 1970891428 (ATP-stimulated interaction between epidermal growth factor r...) ✓ REI=0.0 [ETA: 141s]
+  [20/30] Paper 2038524198 (Surfactant Protein-A Suppresses Eosinophil-Mediated Killing ...) ✓ REI=0.0 [ETA: 130s]
+  [21/30] Paper 2593479526 (Nearly maximally predictive features and their dimensions....) ✓ REI=0.0 [ETA: 116s]
+  [22/30] Paper 2137323330 (Synthesis and properties of a bisphenol A based phthalonitri...) ✓ REI=0.0 [ETA: 102s]
+  [23/30] Paper 2167194485 (Anthropogenic environments exert variable selection on crani...) ✓ REI=0.0 [ETA: 89s]
+  [24/30] Paper 1987964936 (Glomerular pathology in Alport syndrome: a molecular perspec...) ✓ REI=0.0 [ETA: 76s]
+  [25/30] Paper 1970799724 (Enhancement of rifampin teratogenicity in cultured rat embry...) ✓ REI=0.0 [ETA: 63s]
+  [26/30] Paper 2040142791 (Misfit dislocations in the epitaxial (111) Cu2O/(111) Cu sys...) ✓ REI=0.0 [ETA: 50s]
+  [27/30] Paper 2002926244 (A new class of locally decoupled Gough-Stewart platform mani...) ✓ REI=0.0 [ETA: 37s]
+  [28/30] Paper 2026542751 (A microtiter plate-based β-lactam binding assay for inhibito...) ✓ REI=0.0 [ETA: 25s]
+  [29/30] Paper 1603918837 (Differential regulation of antiviral T-cell immunity results...) ✓ REI=0.0 ⚠️ [ETA: 12s]
+  [30/30] Paper 2050210628 (Escherichia coli plasmid pBR313 insertion into plant protopl...) ✓ REI=0.0 [ETA: 0s]
+
+  pdf summary: 30/30 success, 3 silent failures, 414s
+
+======================================================================
+CROSS-CONDITION COMPARISON
+======================================================================
+
+Condition     Success    REI  REI-c   Silent    D_dev
+-------------------------------------------------------
+template      30/30    0.100  0.146    3.3% 0.000454
+abstract      30/30    0.000  0.046    3.3% 0.000454
+pdf           30/30    0.000  4.237   10.0% 0.060645
+
+  Papers succeeded in all conditions: 30
+
+======================================================================
+PER-JOURNAL BREAKDOWN (abstract condition)
+======================================================================
+
+Journal                                   Papers  Success  Silent
+-----------------------------------------------------------------
+Management Science                             8       8       0
+Pest Management Science                        4       4       0
+Research Policy                                2       2       0
+Omega-international Journal of Managemen       1       1       0
+Health Care Management Science                 1       1       0
+Computational Management Science               1       1       0
+Journal of Pharmaceutical Sciences             1       1       0
+Nature                                         1       1       0
+PLOS ONE                                       1       1       0
+Physical Review E                              1       1       0
+Journal of Polymer Science Part A              1       1       0
+Proceedings of The Royal Society B: Biol       1       1       0
+Pediatric Nephrology                           1       1       0
+Toxicology and Applied Pharmacology            1       1       0
+Philosophical Magazine                         1       1       0
+<NA>                                           1       1       0
+Analytical Biochemistry                        1       1       0
+Nature Medicine                                1       1       1
+Molecular Genetics and Genomics                1       1       0
+
+Results saved to /mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/e2e_benchmark_comparison.json

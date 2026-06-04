@@ -1,0 +1,37 @@
+{
+  "n_papers": 3,
+  "rei_stats": {
+    "mean": 1.0,
+    "ci_lower": 0.0,
+    "ci_upper": 3.0,
+    "std": 1.7320508075688772,
+    "n": 3,
+    "alpha": 0.05
+  },
+  "status_breakdown": {
+    "SUCCESS": 3
+  },
+  "d_index_comparison": {
+    "n_pairs": 1,
+    "mean_abs_diff": 0.0,
+    "max_abs_diff": 0.0,
+    "tost_equivalence": {
+      "equivalent": "True",
+      "p_upper": 0.0,
+      "p_lower": 0.0,
+      "diff_mean": 0.0,
+      "diff_ci": [
+        0.0,
+        0.0
+      ],
+      "margin": 0.05
+    },
+    "bayesian_rope": {
+      "in_rope": 1.0,
+      "ci_lower": 0.0,
+      "ci_upper": 0.0,
+      "rope_radius": 0.01,
+      "verdict": "equivalent"
+    }
+  }
+}

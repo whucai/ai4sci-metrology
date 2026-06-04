@@ -1,0 +1,17 @@
+{
+  "validation": {
+    "n_tested": 50,
+    "n_valid": 50,
+    "n_errors": 0,
+    "mean_absolute_diff": 0.093895,
+    "median_absolute_diff": 0.008224,
+    "max_absolute_diff": 1.006211,
+    "spearman_rho": 0.4778,
+    "spearman_p": 0.000449,
+    "pearson_r": 0.0867,
+    "pearson_p": 0.549371,
+    "mean_elapsed": 1.003,
+    "interpretation": "Moderate correlation"
+  },
+  "n_examples": 5
+}

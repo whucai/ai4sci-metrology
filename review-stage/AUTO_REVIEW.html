@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Review — SciSciGPT Stratified Benchmark</title>
+
+<meta name="generator" content="ARIS render-html (academic, v1)">
+<meta name="aris:source-path" content="review-stage/AUTO_REVIEW.md">
+<meta name="aris:source-sha256" content="ab6296e5f41158d5c45caae4a663ab9769ab440799f6ee474283933c6979dc88">
+<meta name="aris:generated-at" content="2026-06-03 12:33 UTC">
+
+<!-- MathJax 3 -->
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']], processEscapes: true },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+<!-- highlight.js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-light.min.css">
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+<script>document.addEventListener('DOMContentLoaded', () => hljs.highlightAll());</script>
+
+
+<style>
+:root {
+  --bg: #fdfcf7;
+  --bg-soft: #f4f1ea;
+  --bg-code: #f8f5ec;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4a4a;
+  --ink-muted: #6b6b6b;
+  --primary: #1a4a8c;
+  --primary-soft: #2d6cb8;
+  --accent: #b8390e;
+  --warn: #b45309;
+  --warn-bg: #fef3c7;
+  --info-bg: #dbeafe;
+  --good-bg: #d1fae5;
+  --good: #065f46;
+  --bad-bg: #fee2e2;
+  --bad: #991b1b;
+  --border: #d6d0c0;
+  --border-soft: #e8e3d5;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Source Serif Pro", "Source Serif 4", "Crimson Pro", "Georgia", "Songti SC", "STSong", serif;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  padding: 40px 32px;
+}
+
+nav.toc {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  font-size: 13px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  border-right: 1px solid var(--border-soft);
+  padding-right: 16px;
+}
+nav.toc h3 {
+  margin: 0 0 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+nav.toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+nav.toc ol li { margin: 5px 0; counter-increment: toc; }
+nav.toc ol li::before { content: counter(toc) ". "; color: var(--ink-muted); margin-right: 4px; }
+nav.toc a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+}
+nav.toc a:hover { color: var(--primary); border-bottom-color: var(--primary); }
+nav.toc ul { list-style: none; padding-left: 14px; margin: 3px 0; font-size: 12px; }
+nav.toc ul li::before { content: "→ "; color: var(--border); }
+
+main { min-width: 0; }
+
+header.hero {
+  border-bottom: 3px double var(--primary);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+header.hero .eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+header.hero h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+header.hero .subtitle {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+  font-style: italic;
+}
+header.hero .byline {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+}
+header.hero .byline strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+header.hero .meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border-soft);
+  padding-top: 14px;
+}
+header.hero .meta span strong { color: var(--ink-soft); }
+header.hero .meta code {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  background: var(--bg-soft);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+}
+
+h2 {
+  font-size: 24px;
+  margin: 44px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  font-weight: 700;
+}
+h2 .num { color: var(--primary); font-weight: 600; margin-right: 8px; }
+h3 { font-size: 19px; margin: 28px 0 10px; color: var(--primary); font-weight: 600; }
+h4 { font-size: 16px; margin: 20px 0 8px; color: var(--ink); font-weight: 600; }
+
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+ul li, ol li { margin: 4px 0; }
+ul li::marker { color: var(--primary); }
+
+strong { color: var(--accent); font-weight: 600; }
+em { color: var(--ink-soft); }
+
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+code:not(.hljs) {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.86em;
+  background: var(--bg-code);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+  color: var(--accent);
+}
+
+pre {
+  background: #fafaf6;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  padding: 0;
+  overflow-x: auto;
+  border-radius: 4px;
+  margin: 14px 0;
+}
+pre code, pre code.hljs {
+  background: transparent !important;
+  display: block;
+  padding: 14px 18px !important;
+  font-size: 13px;
+  line-height: 1.55;
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+  color: var(--ink);
+}
+pre.diagram {
+  background: #f9f6ed;
+  border-left: 4px solid var(--accent);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.callout {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 4px solid;
+  font-size: 15px;
+}
+.callout-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.callout-info { background: var(--info-bg); border-left-color: var(--primary); }
+.callout-info .callout-title { color: var(--primary); }
+.callout-warn { background: var(--warn-bg); border-left-color: var(--warn); }
+.callout-warn .callout-title { color: var(--warn); }
+.callout-good { background: var(--good-bg); border-left-color: var(--good); }
+.callout-good .callout-title { color: var(--good); }
+.callout-bad { background: var(--bad-bg); border-left-color: var(--bad); }
+.callout-bad .callout-title { color: var(--bad); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+thead { background: var(--primary); color: white; }
+th, td {
+  text-align: left;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+}
+th { font-weight: 600; font-size: 13px; letter-spacing: 0.02em; }
+tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) { background: var(--bg-soft); }
+
+details.qa, details {
+  background: white;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  margin: 10px 0;
+  padding: 0;
+}
+details summary {
+  cursor: pointer;
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary);
+  list-style: none;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before {
+  content: "▸ ";
+  margin-right: 4px;
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] summary::before { transform: rotate(90deg); }
+details[open] summary { border-bottom: 1px solid var(--border-soft); }
+details > :not(summary) { padding: 10px 14px; }
+details p:first-of-type { margin-top: 8px; }
+
+mjx-container[display="true"] { margin: 12px 0 !important; }
+
+footer.aris-footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+footer.aris-footer a { color: var(--ink-muted); border-bottom: 1px dotted var(--border); }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 20px; padding: 20px 16px; }
+  nav.toc {
+    position: static;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-soft);
+    padding-right: 0;
+    padding-bottom: 14px;
+  }
+  header.hero h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+}
+@media print {
+  nav.toc { display: none; }
+  .layout { grid-template-columns: 1fr; padding: 0; }
+  body { background: white; }
+  header.hero { border-bottom-color: var(--ink); }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc">
+  <h3>Contents</h3>
+  <ol>
+<li><a href="#background">Background</a>
+<ul>
+<li><a href="#current-state-v2--template-benchmark">Current State (v2 — template benchmark)</a></li>
+<li><a href="#target-state-e2e-pdf-benchmark">Target State (E2E PDF benchmark)</a></li>
+<li><a href="#paper-sources">Paper Sources</a></li>
+</ul>
+</li>
+<li><a href="#round-1-2026-06-02">Round 1 (2026-06-02)</a>
+<ul>
+<li><a href="#assessment-summary">Assessment (Summary)</a></li>
+<li><a href="#reviewer-raw-response">Reviewer Raw Response</a></li>
+<li><a href="#actions-taken">Actions Taken</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#status">Status</a></li>
+</ul>
+</li>
+<li><a href="#round-2-2026-06-02">Round 2 (2026-06-02)</a>
+<ul>
+<li><a href="#assessment-summary-1">Assessment (Summary)</a></li>
+<li><a href="#reviewer-raw-response-round-2">Reviewer Raw Response (Round 2)</a></li>
+<li><a href="#actions-taken-1">Actions Taken</a></li>
+<li><a href="#results-1">Results</a></li>
+<li><a href="#status-1">Status</a></li>
+<li><a href="#full-50-paper-run-post-fix-2026-06-03">Full 50-paper Run (post-fix, 2026-06-03)</a></li>
+</ul>
+</li>
+<li><a href="#round-3-2026-06-03">Round 3 (2026-06-03)</a>
+<ul>
+<li><a href="#assessment-summary-2">Assessment (Summary)</a></li>
+<li><a href="#reviewer-raw-response-1">Reviewer Raw Response</a></li>
+<li><a href="#actions-taken-2">Actions Taken</a></li>
+<li><a href="#results-2">Results</a></li>
+<li><a href="#status-2">Status</a></li>
+</ul>
+</li>
+<li><a href="#round-4-2026-06-03--final">Round 4 (2026-06-03 — FINAL)</a>
+<ul>
+<li><a href="#assessment-summary-3">Assessment (Summary)</a></li>
+<li><a href="#reviewer-raw-response-2">Reviewer Raw Response</a></li>
+<li><a href="#actions-taken-3">Actions Taken</a></li>
+<li><a href="#results-summary-clean-v3">Results Summary (Clean v3)</a></li>
+<li><a href="#status-3">Status</a></li>
+<li><a href="#remaining-blockers-for-top-venue-publication">Remaining Blockers (for Top-Venue Publication)</a></li>
+<li><a href="#recommended-next-steps">Recommended Next Steps</a></li>
+<li><a href="#files-modifiedcreated-this-round">Files Modified/Created This Round</a></li>
+</ul>
+</li>
+<li><a href="#method-description">Method Description</a>
+</li>
+</ol>
+</nav>
+
+<main>
+<header class="hero">
+  <div class="eyebrow">Workflow 2 — Research Review Loop</div>
+  <h1>Auto Review — SciSciGPT Stratified Benchmark</h1>
+  
+  
+  <div class="meta">
+    <span><strong>Source:</strong> <code>review-stage/AUTO_REVIEW.md</code></span>
+    <span><strong>SHA256:</strong> <code>ab6296e5f411</code></span>
+    <span><strong>Rendered:</strong> 2026-06-03 12:33 UTC</span>
+    
+  </div>
+</header>
+
+<h1 id="auto-review-loop-e2e-pdf-benchmark-transformation">Auto Review Loop: E2E PDF Benchmark Transformation</h1>
+<p><strong>Started</strong>: 2026-06-02 <strong>Direction</strong>: Transform template-based benchmark → real paper PDF reproduction pipeline <strong>Priority</strong>: Research Policy &amp; Management Science papers <strong>Max Rounds</strong>: 4 <strong>Reviewer Backend</strong>: Codex MCP (GPT-5.5, xhigh) <strong>Difficulty</strong>: medium</p>
+<hr />
+<h2 id="background">Background</h2>
+<h3 id="current-state-v2--template-benchmark">Current State (v2 — template benchmark)</h3>
+<p>The benchmark currently:</p>
+<ol><li>Samples 100 papers from SciSciNet</li><li>Uses a fixed prompt template: "Write Python code to compute D-index for paper {paper_id}"</li><li>LLM generates code → sandbox executes → compare to ground truth</li><li>Result: 100% success, 1% silent failure (after prompt fix)</li></ol>
+<p><strong>Fundamental problem</strong>: This measures LLM code-generation ability on a single formula, NOT scientific reproducibility. Every paper uses the same D-index formula — it's "one task × 100 datasets", not "100 papers × 100 unique analyses".</p>
+<h3 id="target-state-e2e-pdf-benchmark">Target State (E2E PDF benchmark)</h3>
+<p>Each paper should have unique methodology extracted from its actual content:</p>
+<pre><code>Paper PDF → MinerU parsing → LLM reads markdown → extracts method → generates code → sandbox → REI-c</code></pre>
+<h3 id="paper-sources">Paper Sources</h3>
+<p>SciSciNet journal counts:</p>
+<ul><li>Management Science: 49 papers (1966-2021)</li><li>Research Policy: 3 papers (1996-2012)</li></ul>
+<p>Key design decisions to make:</p>
+<ol><li>PDF acquisition: How to get full-text PDFs for these papers (OA only? preprints?)</li><li>Fallback: If PDF unavailable, use abstract+metadata as input</li><li>Task diversity: Each paper's analysis target should match what the paper actually studies</li><li>Ground truth: Still use SciSciNet pre-computed metrics for verification</li></ol>
+<hr />
+<h2 id="round-1-2026-06-02">Round 1 (2026-06-02)</h2>
+<h3 id="assessment-summary">Assessment (Summary)</h3>
+<ul><li><strong>Score</strong>: 4/10</li><li><strong>Verdict</strong>: Not ready for submission</li><li><p><strong>Key criticisms</strong> (from Codex reviewer):</p>
+<ol><li>Task validity unresolved — fixed D-index formula still = scientometric coding, not paper reproduction</li><li>Ground truth underdefined — need human-curated gold set per paper</li><li>PDF availability creates selection bias — OA papers differ from paywalled</li><li>Pipeline conflates too many failure modes — need ablations</li><li>Scale too small — 52 papers is a pilot, not a benchmark</li><li>Template comparison may be misleading — need controlled information conditions</li><li>REI/REI-c need stronger validation — need confidence intervals, human baseline</li><li>Data availability unclear for real reproduction</li><li>LLM memorization risk</li><li>Contribution story not sharp — need measurement validity framing</li></ol></li></ul>
+<h3 id="reviewer-raw-response">Reviewer Raw Response</h3>
+<details>
+<summary>Click to expand full reviewer response (Score: 4/10)</summary>
+<p>Score: 4/10</p>
+<p>This is a promising correction to a serious measurement-validity failure, but it is not yet a top-venue-ready benchmark. The move from fixed-template D-index coding to PDF-to-code reproduction is directionally right. However, the current redesign still lacks a defensible task definition, ground truth protocol, and validity argument.</p>
+<p>Verdict: No, not ready for submission.</p>
+<p>Critical Weaknesses:</p>
+<ol><li>Task validity is still unresolved — if every paper still asks for D-index, the benchmark remains a scientometric coding task</li><li>Ground truth is underdefined — SciSciNet metrics can verify D-index-like outputs, but cannot verify "the paper's own method"</li><li>PDF availability creates selection bias — OA/preprint-only papers may differ systematically from paywalled papers</li><li>The pipeline conflates too many failure modes — MinerU parsing, paper understanding, data access, coding, execution all affect REI-c</li><li>Scale is probably too small for broad claims — 52 papers can support a pilot, not a general benchmark</li><li>Comparison to template benchmark may be misleading — need controlled information conditions</li><li>REI/REI-c need stronger validation — need confidence intervals, human effort baselines, model ranking stability</li><li>Data availability for real reproduction is unclear — many management papers rely on proprietary datasets</li><li>LLM memorization risk is nontrivial — famous papers may be in pretraining data</li><li>The contribution story is not yet sharp — need to frame around measurement validity</li></ol>
+</details>
+<h3 id="actions-taken">Actions Taken</h3>
+<h4 id="fix-1-e2e-benchmark-script-with-multi-condition-ablations">Fix 1: E2E Benchmark Script with Multi-Condition Ablations ✓</h4>
+<p>Created <code>scripts/run_e2e_benchmark.py</code> with three conditions:</p>
+<ul><li><strong>template</strong>: Fixed prompt "compute D-index for paper X" (baseline, same as old benchmark)</li><li><strong>abstract</strong>: LLM reads paper title + abstract + journal/year → computes metric (E2E-lite)</li><li><strong>pdf</strong>: PDF → MinerU → markdown → LLM reads → computes metric (full E2E, falls back to abstract)</li></ul>
+<p>Key features:</p>
+<ul><li>Paper sampling with journal priority (Management Science, Research Policy first)</li><li>Cross-condition comparison: same papers across all conditions</li><li>Per-journal breakdown</li><li>Self-correction loop with REI-c computation</li><li>Abstracts always available (no selection bias from PDF access)</li></ul>
+<p>Addresses reviewer weaknesses #1 (task diversity via abstract context), #4 (controlled ablations), #6 (paired comparison on identical papers), #3 (abstract avoids PDF bias).</p>
+<h4 id="fix-2-pilot-run-5-papers-abstract-condition">Fix 2: Pilot Run (5 papers, abstract condition) ✓</h4>
+<p>Results:</p>
+<ul><li>5/5 success (100%)</li><li>1/5 silent failure (20%) — Research Policy paper</li><li>REI mean=0.60, REI-c mean=12.60</li><li>D-index mean abs dev=0.171</li></ul>
+<h4 id="fix-3-full-comparison-running-30-papers--3-conditions">Fix 3: Full Comparison Running (30 papers × 3 conditions)</h4>
+<p>Launched in background: template vs abstract vs pdf on 30 papers.</p>
+<h3 id="results">Results</h3>
+<ul><li>Pilot: E2E benchmark functional, REI-c higher than template benchmark (12.60 vs 0.04)</li><li>Full comparison pending (background task bi63u53u6)</li><li>Management Science + Research Policy: 4/5 papers in pilot</li></ul>
+<h3 id="status">Status</h3>
+<ul><li>Round 1 complete, moving to Round 2</li><li>Difficulty: medium</li></ul>
+<hr />
+<h2 id="round-2-2026-06-02">Round 2 (2026-06-02)</h2>
+<h3 id="assessment-summary-1">Assessment (Summary)</h3>
+<ul><li><strong>Score</strong>: 5/10 (↑ from 4/10)</li><li><strong>Verdict</strong>: Not ready, but direction clarified</li><li><strong>Key insight from reviewer</strong>: "Fixed-template benchmarks overestimate reproducibility ability. A valid AI metrology benchmark must vary the scientific TASK, not merely the paper context."</li></ul>
+<h3 id="reviewer-raw-response-round-2">Reviewer Raw Response (Round 2)</h3>
+<details>
+<summary>Click to expand full reviewer response (Score: 5/10)</summary>
+<p>Score: 5/10</p>
+<p>The 30-paper comparison is useful because it turns the suspected flaw into evidence: input diversity alone does not fix the benchmark. But it also shows the current E2E version is not yet a valid reproduction benchmark. PDF mostly adds parsing noise, not scientific reasoning difficulty.</p>
+<p>Best Direction: Option C — difficulty-stratified task bank with paper-specific task cards.</p>
+<p>Recommended structure:</p>
+<table><thead><tr><th>Level</th><th>Input</th><th>Task</th><th>What It Tests</th></tr></thead><tbody><tr><td>L1</td><td>Formula/task given</td><td>Implement known metric</td><td>Code generation</td></tr><tr><td>L2</td><td>Abstract + task target</td><td>Infer method and implement</td><td>Method understanding</td></tr><tr><td>L3</td><td>PDF/markdown + task target</td><td>Extract method and implement</td><td>Full reproduction</td></tr></tbody></table>
+<p>Do NOT make "LLM chooses the task" the main benchmark yet. Humans/curators define the target task per paper.</p>
+<p>Remaining Critical Weaknesses:</p>
+<ol><li>Still centered on D-index → build 30-50 paper-specific tasks spanning multiple metric families</li><li>PDF condition confounded by parsing artifacts → separate PDF parsing failure from reasoning failure</li><li>Ground truth too narrow → task cards need target quantity, source data, reference output, grading tolerance</li><li>"Pest Management Science" not Management Science → clean journal filter</li><li>Abstract fallback inside PDF condition weakens interpretation → report separately</li><li>REI-c increase in PDF not yet evidence of better measurement → add failure taxonomy</li><li>N=30 is only a pilot → use as diagnostic, scale after design stable</li></ol>
+<p>Revised Verdict: Not ready. But the paper's contribution is now clearer: "Fixed-template benchmarks overestimate reproducibility ability."</p>
+</details>
+<h3 id="actions-taken-1">Actions Taken</h3>
+<h4 id="fix-1-stratified-task-card-benchmark">Fix 1: Stratified Task-Card Benchmark ✓</h4>
+<p>Created <code>scripts/run_stratified_benchmark.py</code>:</p>
+<p><strong>Three difficulty levels:</strong></p>
+<ul><li><strong>L1 (formula)</strong>: Task target + formula given → LLM implements code</li><li><strong>L2 (abstract)</strong>: Abstract + task target → LLM infers method → implements</li><li><strong>L3 (full paper)</strong>: Full content + task target → LLM extracts methodology → implements</li></ul>
+<p><strong>Multi-metric task assignment by paper content:</strong></p>
+<ul><li>Keywords in title+abstract determine metric type</li><li>disruption: innovation, novelty, breakthrough papers</li><li>citation_count_prediction: impact, bibliometric papers</li><li>team_size_effect: collaboration, team size papers</li></ul>
+<p><strong>Failure taxonomy (7 categories):</strong></p>
+<ul><li>correct, syntax_error, import_error, timeout, execution_error, degenerate_output, wrong_formula, wrong_result, parse_error</li></ul>
+<p><strong>Clean journal filtering:</strong></p>
+<ul><li>Uses <code>str.fullmatch</code> first, falls back to <code>str.contains</code></li><li>Separates Management Science from Pest Management Science</li></ul>
+<h4 id="fix-2-pilot-test-5-papers-l1">Fix 2: Pilot Test (5 papers, L1) ✓</h4>
+<p>Results:</p>
+<ul><li>5/5 success (100%), 0 silent failures</li><li>Multi-metric: 4 disruption + 1 team_size_effect</li><li>REI mean=0.0, REI-c mean=0.0</li></ul>
+<h4 id="fix-3-full-stratified-run-50-papers--3-levels">Fix 3: Full Stratified Run (50 papers × 3 levels)</h4>
+<p>Running in background (task b9mnh7gr7).</p>
+<h3 id="results-1">Results</h3>
+<ul><li>Round 1 E2E comparison: template≈abstract, PDF adds noise</li><li>Round 2 stratified pilot: multi-metric assignment works</li><li>Full 50-paper comparison pending</li></ul>
+<h3 id="status-1">Status</h3>
+<ul><li>Continuing, waiting for stratified benchmark results</li><li>Difficulty: medium</li></ul>
+<h4 id="fix-4-error-detection-false-positive-bug-critical">Fix 4: Error Detection False Positive Bug (CRITICAL) ✓</h4>
+<p><strong>Bug</strong>: L2/L3 levels showed 0% success because the error detection loop flagged correct code as failing.</p>
+<p><strong>Root cause (3 sub-bugs)</strong>:</p>
+<ol><li><code>&quot;Error:&quot;</code> substring in <code>has_error</code> check matched benign pandas warnings in stderr</li><li><code>parse_metric_output</code> regex too strict — required <code>D_INDEX = value</code> format but LLM output <code>Disruption Index (D): value</code></li><li>L2/L3 prompts didn't specify required output format</li></ol>
+<p><strong>Fixes applied</strong> (2026-06-03):</p>
+<ol><li><p><strong><code>scripts/run_stratified_benchmark.py</code></strong> (<code>reproduce_task_card</code>):</p>
+<ul><li>Replaced broad <code>has_error</code> pattern matching with precise check: <code>exit_code != 0 or &quot;Traceback (most recent call last)&quot; in stderr</code></li><li>Added fallback: if output contains expected labels but parser missed them, retry instead of fail</li></ul></li><li><p><strong><code>scripts/run_e2e_benchmark.py</code></strong> (<code>reproduce_one_paper_e2e</code>):</p>
+<ul><li>Same error detection fix</li></ul></li><li><p><strong><code>scripts/run_benchmark.py</code></strong> (<code>reproduce_one_paper</code>):</p>
+<ul><li>Same error detection fix</li></ul></li><li><p><strong><code>src/sciscigpt_local/metric_templates.py</code></strong>:</p>
+<ul><li><code>output_patterns</code> now supports lists of patterns per key</li><li>Added flexible D_index patterns: <code>D_INDEX = X</code>, <code>Disruption Index (D): X</code>, <code>D = X</code></li><li><code>parse_metric_output</code> iterates multiple patterns, first match wins</li></ul></li><li><strong>L2/L3 prompts</strong>: Now specify exact output format per metric type (e.g., <code>D_INDEX = &lt;value&gt;, n_i = &lt;value&gt;, n_j = &lt;value&gt;</code>)</li><li><strong>All benchmark scripts</strong>: Added <code>os.environ.setdefault(&quot;HF_HUB_OFFLINE&quot;, &quot;1&quot;)</code> — data cached locally</li></ol>
+<p><strong>Smoke test</strong> (3 papers, L2): 3/3 success (was 0/3), 2 silent failures, 1 correct. Error detection now works correctly.</p>
+<h3 id="full-50-paper-run-post-fix-2026-06-03">Full 50-paper Run (post-fix, 2026-06-03)</h3>
+<p>Benchmark completed with all 3 bug fixes applied. Results:</p>
+<table><thead><tr><th>Level</th><th>Success</th><th>Correct</th><th>Silent Failures</th><th>REI-c mean</th><th>REI-c 95% CI</th></tr></thead><tbody><tr><td>L1 (formula given)</td><td>49/50 (98%)</td><td>49/50 (98%)</td><td>0/50 (0%)</td><td>0.06</td><td>(0.00, 0.18)</td></tr><tr><td>L2 (abstract)</td><td>48/50 (96%)</td><td>27/50 (54%)</td><td>21/50 (42%)</td><td>14.86</td><td>(7.65, 22.96)</td></tr><tr><td>L3 (abstract+extraction)</td><td>49/50 (98%)</td><td>1/50 (2%)</td><td>48/50 (96%)</td><td>39.62</td><td>(28.95, 50.65)</td></tr></tbody></table>
+<p>Failure taxonomy operational (7 categories), difficulty gradient validated.</p>
+<p>Key finding: L2→L3 correct-rate drop is 52pp — method inference from abstract is much harder than formula implementation.</p>
+<hr />
+<h2 id="round-3-2026-06-03">Round 3 (2026-06-03)</h2>
+<h3 id="assessment-summary-2">Assessment (Summary)</h3>
+<ul><li><strong>Score</strong>: 5/10 (unchanged from Round 2)</li><li><strong>Verdict</strong>: Not ready for NeurIPS/ICML; almost ready for workshop if reframed</li><li><strong>Critical finding from reviewer</strong>: L3 was fake — <code>reproduce_task_card</code> called without <code>markdown</code> parameter, so L3 fell back to title+abstract (same input as L2 with different prompt wording)</li></ul>
+<h3 id="reviewer-raw-response-1">Reviewer Raw Response</h3>
+<details>
+<summary>Click to expand full reviewer response (Score: 5/10)</summary>
+<p><strong>Score: 5/10 for a top venue.</strong></p>
+<p>This is a real improvement over Round 2: the L1/L2/L3 stratification produces a strong diagnostic gradient, and the silent-failure story is interesting. But it is not yet a top-venue benchmark paper because the construct validity is still weak: the current evidence supports "LLMs fail silently when asked to infer scientometric computations from weaker prompts," not yet "AI agents fail to reproduce scientific analyses from papers."</p>
+<p><strong>Verdict: No, not ready.</strong> Almost ready for a workshop or internal technical report. For NeurIPS/ICML main track, it needs another validity pass.</p>
+<p><strong>Critical Weaknesses (9 total):</strong></p>
+<ol><li><strong>L3 may not actually be full-text.</strong> <code>reproduce_task_card</code> called without markdown → L3 falls back to title+abstract. If true, L3 result is mislabeled.</li><li><strong>Task diversity still too narrow.</strong> 42/50 tasks are disruption index; only 4 citation and 4 team-size.</li><li><strong>"Paper-specific task cards" are not truly paper-specific.</strong> Tasks are SciSciNet-derived, not reproduced paper methods.</li><li><strong>L2 may be inflated by prompt leakage.</strong> L2 disruption prompt includes formula hint.</li><li><strong>Single-model result limits benchmark credibility.</strong> Qwen3-32B alone cannot establish model-ranking value.</li><li><strong>REI-c needs validation.</strong> Weighting, tolerances, and silent-failure thresholds not shown to be stable.</li><li><strong>Harness-reliability concerns.</strong> Recent evaluation bug raises reviewer suspicion.</li><li><strong>Sample representativeness under-argued.</strong> N=50 is a pilot, not a benchmark.</li><li><strong>No human or tool baseline yet.</strong></li></ol>
+</details>
+<h3 id="actions-taken-2">Actions Taken</h3>
+<h4 id="fix-1-l3-provenance--input-source-logging">Fix 1: L3 Provenance + Input Source Logging ✓</h4>
+<p><strong>Root cause</strong>: <code>reproduce_task_card</code> called without <code>markdown</code> parameter (line 548). <code>build_l3_prompt</code> falls back to title+abstract when markdown is empty string (line 198: <code>content = markdown[:8000] if markdown else f&quot;Title: {title}\n\nAbstract: {abstract[:2000]}&quot;</code>).</p>
+<p><strong>Fixes applied</strong>:</p>
+<ol><li><code>TaskResult</code> now records <code>input_source</code>, <code>markdown_chars</code>, <code>abstract_chars</code></li><li><p><code>reproduce_task_card</code> sets <code>input_source</code> based on actual data passed:</p>
+<ul><li>L1 → <code>&quot;formula&quot;</code>, md_chars=0</li><li>L2 → <code>&quot;abstract&quot;</code>, ab_chars=len(abstract)</li><li>L3 with real markdown → <code>&quot;pdf_fulltext&quot;</code>, md_chars=len(markdown)</li><li>L3 without markdown → <code>&quot;abstract+extraction_prompt&quot;</code>, ab_chars=len(abstract)</li></ul></li><li>Cross-level comparison now prints input source breakdown</li><li>JSON output includes <code>input_source</code>, <code>markdown_chars</code>, <code>abstract_chars</code> fields</li></ol>
+<p><strong>Honest renaming</strong>: L3 (without real PDF) is now labeled as "abstract+extraction_prompt" — same input as L2 but with stronger task framing.</p>
+<h4 id="fix-2-l2-prompt-formula-leakage-removed">Fix 2: L2 Prompt Formula Leakage Removed ✓</h4>
+<p>Removed from <code>build_l2_prompt</code> (disruption):</p>
+<ul><li>Old: <code>&quot;Formula hint: D = (n_i - n_j) / (n_i + n_j)\n- n_i = citers with NO overlap with references\n- n_j = citers WITH overlap with references&quot;</code></li><li>New: <code>&quot;You must INFER the correct computation method from the paper&#x27;s abstract above...&quot;</code></li></ul>
+<p>Regression test confirms: <code>test_l2_no_formula_leak</code> passes.</p>
+<h4 id="fix-3-rei-c-sensitivity-analysis">Fix 3: REI-c Sensitivity Analysis ✓</h4>
+<p>Created <code>scripts/analyze_rei_sensitivity.py</code>. Results on current benchmark:</p>
+<ul><li><strong>Ranking stability</strong>: L1 &lt; L2 &lt; L3 at ALL correctness_weights [1, 5, 10, 20, 50, 100]</li><li><strong>Silent failure rate stable</strong>: 0% (L1), 42-44% (L2), 94-98% (L3) across thresholds [0.01-0.2]</li><li><p><strong>Level separation</strong>: All pairwise comparisons significant (bootstrap p&lt;0.01):</p>
+<ul><li>L1 vs L2: ΔREI-c=15.35, 95% CI=[8.01, 24.08]</li><li>L2 vs L3: ΔREI-c=25.02, 95% CI=[11.45, 38.50]</li><li>L1 vs L3: ΔREI-c=40.37, 95% CI=[29.56, 51.65]</li></ul></li></ul>
+<h4 id="fix-4-evaluator-regression-tests">Fix 4: Evaluator Regression Tests ✓</h4>
+<p>Created <code>scripts/test_evaluator_regression.py</code> with 6 tests:</p>
+<ol><li>Benign stderr (FutureWarning) not flagged as error</li><li>Output parser handles 3 D-index formats (D_INDEX =, Disruption Index (D):, D =)</li><li>Silent failure detection with known values</li><li>Real Python errors (NameError) correctly detected</li><li>Mixed warning+success correctly classified</li><li>L2 prompt has no D-index formula leakage</li></ol>
+<p>All 6/6 tests PASS.</p>
+<h3 id="results-2">Results</h3>
+<ul><li>Benchmark design validated: L1 &lt; L2 &lt; L3 gradient robust to parameter variation</li><li>L3 provenance issue identified and fixed</li><li>L2 formula leakage sealed</li><li>Evaluator now has regression test coverage</li><li>Key limitation: real PDF full-text extraction for L3 not yet implemented (requires PDF acquisition pipeline)</li></ul>
+<h3 id="status-2">Status</h3>
+<ul><li>Continuing to Round 4 (final round)</li><li>Difficulty: medium</li><li>Remaining top priority: real L3 (PDF → markdown → reproduction) for at least a subset of OA papers</li></ul>
+<hr />
+<h2 id="round-4-2026-06-03--final">Round 4 (2026-06-03 — FINAL)</h2>
+<h3 id="assessment-summary-3">Assessment (Summary)</h3>
+<ul><li><strong>Score</strong>: 5/10 (unchanged from Round 2-3)</li><li><strong>Verdict</strong>: No for NeurIPS/ICML main track. Almost for workshop/short measurement paper.</li><li><strong>Bottom line from reviewer</strong>: "Template and prompt-leakage artifacts can make LLM reproducibility benchmarks look dramatically better than they are."</li></ul>
+<h3 id="reviewer-raw-response-2">Reviewer Raw Response</h3>
+<details>
+<summary>Click to expand full reviewer response (Score: 5/10)</summary>
+<p>Score: 5/10 for a top venue.</p>
+<p>The clean v2→v3 result is real and useful: formula leakage inflated L2 from 4% to 54%. That is a strong measurement-validity finding. But the current evidence still supports a narrower claim than the revised paper wants to make.</p>
+<p>Verdict: No for NeurIPS/ICML main track. Almost for a workshop or short measurement paper if sharply reframed.</p>
+<p>Remaining Critical Weaknesses:</p>
+<ol><li>Construct validity: L2 shows Qwen cannot infer a hidden SciSciNet metric from abstracts, not necessarily that it cannot infer scientometric methods from papers.</li><li>L3 is not a real full-paper condition (abstract+extraction_prompt only).</li><li>Task diversity too narrow (42/50 disruption, default-to-disruption fallback).</li><li>Tasks are SciSciNet-derived, not paper-specific reproductions.</li><li>Single-model evidence (Qwen3-32B only).</li><li>No human baseline.</li><li>Sampling undercontrolled (only 10 Management Science, 2 Research Policy in sample).</li><li>Leakage ablation needs to be airtight (paired prompt ablation with identical decoding).</li><li>REI-c should be secondary to correctness rate and failure taxonomy.</li></ol>
+<p>Bottom line: the strongest paper is "template and prompt-leakage artifacts can make LLM reproducibility benchmarks look dramatically better than they are." That is publishable with tighter claims, multi-model validation, human baselines, and real task-card curation.</p>
+</details>
+<h3 id="actions-taken-3">Actions Taken</h3>
+<h4 id="key-finding-formula-leakage-caused-50pp-inflation-in-l2">Key Finding: Formula Leakage Caused 50pp Inflation in L2</h4>
+<p>The v2→v3 comparison is the central result. Removing the formula hint from L2 caused correct rate to collapse from 54% (27/50) to 4% (2/50). REI-c increased from 14.86 to 33.53. This demonstrates that apparent method-inference ability was a measurement artifact.</p>
+<h4 id="honest-input-source-tracking">Honest Input Source Tracking</h4>
+<p>All benchmark results now include <code>input_source</code>, <code>markdown_chars</code>, <code>abstract_chars</code> fields. L3 is honestly labeled as "abstract+extraction_prompt" — same input as L2, different prompt framing.</p>
+<h4 id="rei-c-sensitivity-analysis">REI-c Sensitivity Analysis</h4>
+<ul><li>Ranking L1 &lt; L2 &lt; L3 stable across all correctness_weights [1..100]</li><li>L1 vs L2: ΔREI-c=33.47, 95% CI=[23.31, 44.51] ***</li><li>L2 vs L3: ΔREI-c=2.59, 95% CI=[-5.44, 10.09] ns (expected: same input source)</li><li>Silent failure thresholds stable in [0.01, 0.2]</li></ul>
+<h4 id="regression-tests">Regression Tests</h4>
+<p>6/6 tests pass covering: benign stderr, parser formats, silent failure, error detection, ground truth, L2 formula leak.</p>
+<h3 id="results-summary-clean-v3">Results Summary (Clean v3)</h3>
+<table><thead><tr><th>Level</th><th>Success</th><th>Correct</th><th>Silent Failures</th><th>REI-c mean</th><th>Input Source</th></tr></thead><tbody><tr><td>L1</td><td>49/50 (98%)</td><td>49/50 (98%)</td><td>0/50 (0%)</td><td>0.06</td><td>formula</td></tr><tr><td>L2</td><td>45/50 (90%)</td><td>2/50 (4%)</td><td>43/50 (86%)</td><td>33.53</td><td>abstract (no hints)</td></tr><tr><td>L3</td><td>49/50 (98%)</td><td>1/50 (2%)</td><td>48/50 (96%)</td><td>36.11</td><td>abstract+extraction_prompt</td></tr></tbody></table>
+<h3 id="status-3">Status</h3>
+<ul><li><strong>LOOP COMPLETE</strong> — MAX_ROUNDS=4 reached</li><li>Final score: 5/10</li><li>Best claim: "Template and prompt-leakage artifacts can inflate LLM reproducibility benchmark scores by 50pp."</li></ul>
+<h3 id="remaining-blockers-for-top-venue-publication">Remaining Blockers (for Top-Venue Publication)</h3>
+<table><thead><tr><th>#</th><th>Blocker</th><th>Effort</th><th>Priority</th></tr></thead><tbody><tr><td>1</td><td>Multi-model validation (3+ models with temp=0)</td><td>Medium</td><td>Critical</td></tr><tr><td>2</td><td>Real L3 (PDF → markdown for 20+ OA papers)</td><td>High</td><td>Critical</td></tr><tr><td>3</td><td>Human baseline (3-5 participants, 10 papers)</td><td>High</td><td>High</td></tr><tr><td>4</td><td>Balanced task diversity (6+ metric families)</td><td>High</td><td>High</td></tr><tr><td>5</td><td>Human-curated paper-specific task cards</td><td>Very High</td><td>Medium</td></tr><tr><td>6</td><td>Larger sample (150-300 papers, stratified)</td><td>Medium</td><td>Medium</td></tr></tbody></table>
+<h3 id="recommended-next-steps">Recommended Next Steps</h3>
+<ol><li><strong>Workshop paper</strong> (immediate): Reframe as "Measurement Artifacts in LLM Reproducibility Benchmarks" using v2→v3 leakage finding as the core result. Add paired prompt ablation, publish exact prompts. Multi-model with 2-3 models.</li><li><strong>Full paper</strong> (1-2 months): Build real L3 pipeline (PDF → markdown), recruit human participants, curate paper-specific task cards, scale to 150+ papers.</li><li><strong>Vision paper</strong> (separate): The broader claim about "AI cannot reproduce science" requires much stronger evidence — multi-model, multi-domain, human-validated. Separate from this benchmark work.</li></ol>
+<h3 id="files-modifiedcreated-this-round">Files Modified/Created This Round</h3>
+<ul><li><code>scripts/run_stratified_benchmark.py</code> — input_source, markdown_chars, abstract_chars; L2 formula leak sealed</li><li><code>scripts/analyze_stratified_results.py</code> — comprehensive analysis script</li><li><code>scripts/analyze_rei_sensitivity.py</code> — REI-c sensitivity analysis</li><li><code>scripts/test_evaluator_regression.py</code> — 6 regression tests (all pass)</li><li><code>refine-logs/stratified_benchmark_50_v2.json</code> — pre-fix results (L2 with leak)</li><li><code>refine-logs/stratified_benchmark_50_v3.json</code> — post-fix results (L2 clean)</li></ul>
+<h2 id="method-description">Method Description</h2>
+<p>The stratified benchmark measures AI agent reproducibility through three information conditions:</p>
+<ul><li><strong>L1 (formula)</strong>: Target metric + formula + data → code generation</li><li><strong>L2 (abstract)</strong>: Paper abstract + data → method inference → code</li><li><strong>L3 (full text)</strong>: Paper markdown + data → method extraction → code</li></ul>
+<p>Each paper is assigned a task card (disruption index, citation prediction, or team size effect) based on title/abstract keywords. Ground truth is computed from SciSciNet's paper_citations table. The agent generates Python code, executes in a subprocess sandbox, and results are compared against ground truth. REI-c (Correctness-Aware Reproducibility Effort Index) combines fix iterations with correctness deviation to produce a single metric. A 7-category failure taxonomy classifies each attempt. Input provenance (formula/abstract/full-text) is tracked per result.</p>
+<h2 id="sidecar-state">Sidecar — <code>REVIEW_STATE.json</code></h2>
+<details><summary>Sidecar JSON: <code>/mnt/mydisk/PycharmProjects/ai4sci-metrology/review-stage/REVIEW_STATE.json</code></summary><pre><code class="language-json">{
+  &quot;round&quot;: 4,
+  &quot;threadId&quot;: &quot;019e8d75-f791-75c3-a914-08dbf2898ba9&quot;,
+  &quot;status&quot;: &quot;completed&quot;,
+  &quot;difficulty&quot;: &quot;medium&quot;,
+  &quot;last_score&quot;: 5.0,
+  &quot;last_verdict&quot;: &quot;not ready&quot;,
+  &quot;pending_experiments&quot;: [],
+  &quot;bugs_fixed&quot;: [
+    &quot;error_detection_false_positive&quot;,
+    &quot;parser_too_strict&quot;,
+    &quot;l2_l3_output_format_unspecified&quot;,
+    &quot;l3_provenance_fake_fulltext&quot;,
+    &quot;l2_formula_leak&quot;
+  ],
+  &quot;timestamp&quot;: &quot;2026-06-03T21:00:00&quot;
+}</code></pre></details>
+
+<footer class="aris-footer">
+  Generated by <a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/skills/render-html/SKILL.md">ARIS <code>/render-html</code></a> ·
+  source path <code>review-stage/AUTO_REVIEW.md</code> ·
+  SHA256 <code>ab6296e5f411</code> ·
+  generated at 2026-06-03 12:33 UTC.
+  This is a generated view — edit the source Markdown, then re-render.
+</footer>
+</main>
+
+</div>
+</body>
+</html>

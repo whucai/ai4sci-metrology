@@ -1,0 +1,235 @@
+======================================================================
+STRATIFIED TASK-CARD BENCHMARK
+  Levels: all, Papers: 50
+======================================================================
+  LLM: ChatOpenAI
+  Loading SciSciNet... OK (111,927 papers, 78,417,834 citations)
+
+  Building task cards for 50 papers...
+  Metric distribution: {'disruption': 42, 'team_size_effect': 4, 'citation_count_prediction': 4}
+  Journal distribution (top 10):
+    Management Science: 10
+    PLOS ONE: 6
+    Nature: 5
+    Research Policy: 2
+    Physical Review D: 2
+    Physical Review B: 2
+    <NA>: 2
+    Environmental Science & Technology: 1
+    Science: 1
+    Journal of Integrative Neuroscience: 1
+
+======================================================================
+LEVEL: L1
+======================================================================
+  [1/50] Paper 1984973964 [disrupti] (A Bi-Extremal Principle for Frontier Estimation an...) ✓ REI=0.0 [correct] [ETA: 0s]
+  [2/50] Paper 2093744780 [disrupti] (Designing Supply Contracts: Contract Type and Info...) ✓ REI=0.0 [correct] [ETA: 297s]
+  [3/50] Paper 3121717788 [disrupti] (Reducing Discrimination with Reviews in the Sharin...) ✓ REI=0.0 [correct] [ETA: 405s]
+  [4/50] Paper 2015765761 [disrupti] (An HMMS Type Interactive Model for Aggregate Plann...) ✓ REI=0.0 [correct] [ETA: 412s]
+  [5/50] Paper 2013453700 [team_siz] (Project Assignments When Budget Padding Taints Res...) ✓ REI=0.0 [correct] [ETA: 394s]
+  [6/50] Paper 2103425354 [team_siz] (Optimal Forecasting Groups...) ✓ REI=0.0 [correct] [ETA: 356s]
+  [7/50] Paper 2097414563 [disrupti] (Network Models for Building Evacuation...) ✓ REI=0.0 [correct] [ETA: 327s]
+  [8/50] Paper 3125000981 [disrupti] (Observability Increases the Demand for Commitment ...) ✓ REI=0.0 [correct] [ETA: 342s]
+  [9/50] Paper 3123237664 [citation] (Do CMO Incentives Matter? An Empirical Investigati...) ✓ REI=0.0 [correct] [ETA: 333s]
+  [10/50] Paper 2162187820 [disrupti] (Estimating Dynamic Effects of Market Communication...) ✓ REI=0.0 [correct] [ETA: 312s]
+  [11/50] Paper 1983063801 [team_siz] (Coordination costs and project outcomes in multi-u...) ✓ REI=0.0 [correct] [ETA: 314s]
+  [12/50] Paper 2161197120 [citation] (Technology transfer and absorption: an ‘R & D valu...) ✓ REI=0.0 [correct] [ETA: 295s]
+  [13/50] Paper 3112155693 [disrupti] (High Lead Bioavailability of Indoor Dust Contamina...) ✓ REI=0.0 [correct] [ETA: 279s]
+  [14/50] Paper 2070932380 [disrupti] (Neutron Activation Analysis of Milligram Quantifie...) ✓ REI=0.0 [correct] [ETA: 274s]
+  [15/50] Paper 2012470057 [team_siz] (Rallian "equivalent" cylinders reconsidered: compa...) ✓ REI=0.0 [correct] [ETA: 270s]
+  [16/50] Paper 2463357768 [disrupti] (<NA>...) ✓ REI=0.0 [correct] [ETA: 256s]
+  [17/50] Paper 2049270647 [disrupti] (Application of Immersional Calorimetry to Investig...) ✓ REI=0.0 [correct] [ETA: 250s]
+  [18/50] Paper 2944392236 [disrupti] (Linking neural responses to behavior with informat...) ✓ REI=0.0 [correct] [ETA: 247s]
+  [19/50] Paper 1970891428 [disrupti] (ATP-stimulated interaction between epidermal growt...) ✓ REI=0.0 [correct] [ETA: 239s]
+  [20/50] Paper 1988185025 [disrupti] (to a future of genetic medicine...) ✓ REI=0.0 [correct] [ETA: 237s]
+  [21/50] Paper 2041294498 [disrupti] (Atomic physics: a whiff of antimatter soup....) ✓ REI=0.0 [correct] [ETA: 232s]
+  [22/50] Paper 2949280410 [disrupti] (Neuropathological correlates and genetic architect...) ✓ REI=0.0 [correct] [ETA: 226s]
+  [23/50] Paper 1965604852 [disrupti] (<NA>...) ✗ REI=3.0 [execution_error] [ETA: 218s]
+  [24/50] Paper 2014919422 [disrupti] (Volcanic components in pelitic sediments...) ✓ REI=0.0 [correct] [ETA: 233s]
+  [25/50] Paper 2038524198 [disrupti] (Surfactant Protein-A Suppresses Eosinophil-Mediate...) ✓ REI=0.0 [correct] [ETA: 224s]
+  [26/50] Paper 2111051564 [citation] (Influence of pollen transport dynamics on sire pro...) ✓ REI=0.0 [correct] [ETA: 215s]
+  [27/50] Paper 2802840419 [disrupti] (Oral microbiota reveals signs of acculturation in ...) ✓ REI=0.0 [correct] [ETA: 203s]
+  [28/50] Paper 2068083739 [disrupti] (A Functional Requirement for Astroglia in Promotin...) ✓ REI=0.0 [correct] [ETA: 194s]
+  [29/50] Paper 2079839605 [disrupti] (The effect of viewing eccentricity on enumeration....) ✓ REI=0.0 [correct] [ETA: 185s]
+  [30/50] Paper 2117829554 [disrupti] (Dietary manipulation and social isolation alter di...) ✓ REI=0.0 [correct] [ETA: 176s]
+  [31/50] Paper 2593479526 [disrupti] (Nearly maximally predictive features and their dim...) ✓ REI=0.0 [correct] [ETA: 167s]
+  [32/50] Paper 2914999970 [disrupti] (Constraining sterile neutrino interpretations of t...) ✓ REI=0.0 [correct] [ETA: 158s]
+  [33/50] Paper 2158458711 [disrupti] (Modal analysis and coupling in metal-insulator-met...) ✓ REI=0.0 [correct] [ETA: 149s]
+  [34/50] Paper 2011828917 [disrupti] (Symmetries of Large N c Matrix Models for Closed S...) ✓ REI=0.0 [correct] [ETA: 141s]
+  [35/50] Paper 2946502924 [disrupti] (Deep inelastic scattering on an extremal Reissner-...) ✓ REI=0.0 [correct] [ETA: 132s]
+  [36/50] Paper 2078663105 [disrupti] (Phonon Boltzmann Equation and Second Sound in Soli...) ✓ REI=0.0 [correct] [ETA: 123s]
+  [37/50] Paper 2137323330 [disrupti] (Synthesis and properties of a bisphenol A based ph...) ✓ REI=0.0 [correct] [ETA: 114s]
+  [38/50] Paper 1993623056 [disrupti] (Toward an alternative notion of information system...) ✓ REI=0.0 [correct] [ETA: 106s]
+  [39/50] Paper 2071473052 [disrupti] (Lactation Biology Symposium: circadian clocks as m...) ✓ REI=0.0 [correct] [ETA: 97s]
+  [40/50] Paper 2104919530 [disrupti] (DIFFERENTIAL EFFECTS OF ADENOSINE ON FOCAL AND MAC...) ✓ REI=0.0 [correct] [ETA: 89s]
+  [41/50] Paper 2132674664 [disrupti] (Photoelectrochemical and water photoelectrolysis p...) ✓ REI=0.0 [correct] [ETA: 80s]
+  [42/50] Paper 2109538565 [disrupti] (The self renewal probability of hemopoietic stem c...) ✓ REI=0.0 [correct] [ETA: 71s]
+  [43/50] Paper 2018453096 [disrupti] (Experiments with cross-gyre flow patterns on a bet...) ✓ REI=0.0 [correct] [ETA: 62s]
+  [44/50] Paper 2076022778 [citation] (Effects of fine and ultrafine sulfuric acid aeroso...) ✓ REI=0.0 [correct] [ETA: 53s]
+  [45/50] Paper 2108473458 [disrupti] (Description and scaling of pectoral muscles in ict...) ✓ REI=0.0 [correct] [ETA: 44s]
+  [46/50] Paper 2065969773 [disrupti] (Annual Summary of Vital Statistics: 2009...) ✓ REI=0.0 [correct] [ETA: 35s]
+  [47/50] Paper 1972731531 [disrupti] (Current prosthodontic practice: A dental laborator...) ✓ REI=0.0 [correct] [ETA: 27s]
+  [48/50] Paper 2061542708 [disrupti] (Isolation and partial purification of a proteolyti...) ✓ REI=0.0 [correct] [ETA: 18s]
+  [49/50] Paper 2176610406 [disrupti] (Lifetime Studies of 130 nm nMOS Transistors Intend...) ✓ REI=0.0 [correct] [ETA: 9s]
+  [50/50] Paper 2320783822 [disrupti] (A benchmark of excitonic couplings derived from at...) ✓ REI=0.0 [correct] [ETA: 0s]
+
+  L1 summary: 49/50 success, 0 silent failures, 452s
+
+======================================================================
+LEVEL: L2
+======================================================================
+  [1/50] Paper 1984973964 [disrupti] (A Bi-Extremal Principle for Frontier Estimation an...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 0s]
+  [2/50] Paper 2093744780 [disrupti] (Designing Supply Contracts: Contract Type and Info...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 309s]
+  [3/50] Paper 3121717788 [disrupti] (Reducing Discrimination with Reviews in the Sharin...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 452s]
+  [4/50] Paper 2015765761 [disrupti] (An HMMS Type Interactive Model for Aggregate Plann...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 449s]
+  [5/50] Paper 2013453700 [team_siz] (Project Assignments When Budget Padding Taints Res...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 460s]
+  [6/50] Paper 2103425354 [team_siz] (Optimal Forecasting Groups...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 435s]
+  [7/50] Paper 2097414563 [disrupti] (Network Models for Building Evacuation...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 402s]
+  [8/50] Paper 3125000981 [disrupti] (Observability Increases the Demand for Commitment ...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 422s]
+  [9/50] Paper 3123237664 [citation] (Do CMO Incentives Matter? An Empirical Investigati...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 429s]
+  [10/50] Paper 2162187820 [disrupti] (Estimating Dynamic Effects of Market Communication...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 401s]
+  [11/50] Paper 1983063801 [team_siz] (Coordination costs and project outcomes in multi-u...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 386s]
+  [12/50] Paper 2161197120 [citation] (Technology transfer and absorption: an ‘R & D valu...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 364s]
+  [13/50] Paper 3112155693 [disrupti] (High Lead Bioavailability of Indoor Dust Contamina...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 345s]
+  [14/50] Paper 2070932380 [disrupti] (Neutron Activation Analysis of Milligram Quantifie...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 323s]
+  [15/50] Paper 2012470057 [team_siz] (Rallian "equivalent" cylinders reconsidered: compa...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 309s]
+  [16/50] Paper 2463357768 [disrupti] (<NA>...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 296s]
+  [17/50] Paper 2049270647 [disrupti] (Application of Immersional Calorimetry to Investig...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 294s]
+  [18/50] Paper 2944392236 [disrupti] (Linking neural responses to behavior with informat...) ✗ REI=3.0 [execution_error] [ETA: 287s]
+  [19/50] Paper 1970891428 [disrupti] (ATP-stimulated interaction between epidermal growt...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 316s]
+  [20/50] Paper 1988185025 [disrupti] (to a future of genetic medicine...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 303s]
+  [21/50] Paper 2041294498 [disrupti] (Atomic physics: a whiff of antimatter soup....) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 293s]
+  [22/50] Paper 2949280410 [disrupti] (Neuropathological correlates and genetic architect...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 283s]
+  [23/50] Paper 1965604852 [disrupti] (<NA>...) ✓ REI=3.0 [correct] [ETA: 267s]
+  [24/50] Paper 2014919422 [disrupti] (Volcanic components in pelitic sediments...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 266s]
+  [25/50] Paper 2038524198 [disrupti] (Surfactant Protein-A Suppresses Eosinophil-Mediate...) ✓ REI=0.0 [degenerate_output] ⚠️ [ETA: 253s]
+  [26/50] Paper 2111051564 [citation] (Influence of pollen transport dynamics on sire pro...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 244s]
+  [27/50] Paper 2802840419 [disrupti] (Oral microbiota reveals signs of acculturation in ...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 232s]
+  [28/50] Paper 2068083739 [disrupti] (A Functional Requirement for Astroglia in Promotin...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 221s]
+  [29/50] Paper 2079839605 [disrupti] (The effect of viewing eccentricity on enumeration....) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 208s]
+  [30/50] Paper 2117829554 [disrupti] (Dietary manipulation and social isolation alter di...) ✗ REI=3.0 [execution_error] [ETA: 195s]
+  [31/50] Paper 2593479526 [disrupti] (Nearly maximally predictive features and their dim...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 191s]
+  [32/50] Paper 2914999970 [disrupti] (Constraining sterile neutrino interpretations of t...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 179s]
+  [33/50] Paper 2158458711 [disrupti] (Modal analysis and coupling in metal-insulator-met...) ✗ REI=3.0 [execution_error] [ETA: 168s]
+  [34/50] Paper 2011828917 [disrupti] (Symmetries of Large N c Matrix Models for Closed S...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 171s]
+  [35/50] Paper 2946502924 [disrupti] (Deep inelastic scattering on an extremal Reissner-...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 161s]
+  [36/50] Paper 2078663105 [disrupti] (Phonon Boltzmann Equation and Second Sound in Soli...) ✓ REI=0.0 [degenerate_output] ⚠️ [ETA: 149s]
+  [37/50] Paper 2137323330 [disrupti] (Synthesis and properties of a bisphenol A based ph...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 138s]
+  [38/50] Paper 1993623056 [disrupti] (Toward an alternative notion of information system...) ✗ REI=3.0 [execution_error] [ETA: 128s]
+  [39/50] Paper 2071473052 [disrupti] (Lactation Biology Symposium: circadian clocks as m...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 124s]
+  [40/50] Paper 2104919530 [disrupti] (DIFFERENTIAL EFFECTS OF ADENOSINE ON FOCAL AND MAC...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 113s]
+  [41/50] Paper 2132674664 [disrupti] (Photoelectrochemical and water photoelectrolysis p...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 101s]
+  [42/50] Paper 2109538565 [disrupti] (The self renewal probability of hemopoietic stem c...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 89s]
+  [43/50] Paper 2018453096 [disrupti] (Experiments with cross-gyre flow patterns on a bet...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 78s]
+  [44/50] Paper 2076022778 [citation] (Effects of fine and ultrafine sulfuric acid aeroso...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 66s]
+  [45/50] Paper 2108473458 [disrupti] (Description and scaling of pectoral muscles in ict...) ✗ REI=3.0 [execution_error] [ETA: 55s]
+  [46/50] Paper 2065969773 [disrupti] (Annual Summary of Vital Statistics: 2009...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 46s]
+  [47/50] Paper 1972731531 [disrupti] (Current prosthodontic practice: A dental laborator...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 34s]
+  [48/50] Paper 2061542708 [disrupti] (Isolation and partial purification of a proteolyti...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 23s]
+  [49/50] Paper 2176610406 [disrupti] (Lifetime Studies of 130 nm nMOS Transistors Intend...) ✓ REI=0.0 [correct] [ETA: 11s]
+  [50/50] Paper 2320783822 [disrupti] (A benchmark of excitonic couplings derived from at...) ✓ REI=0.0 [degenerate_output] ⚠️ [ETA: 0s]
+
+  L2 summary: 45/50 success, 43 silent failures, 584s
+
+======================================================================
+LEVEL: L3
+======================================================================
+  [1/50] Paper 1984973964 [disrupti] (A Bi-Extremal Principle for Frontier Estimation an...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 0s]
+  [2/50] Paper 2093744780 [disrupti] (Designing Supply Contracts: Contract Type and Info...) ✓ REI=0.0 [degenerate_output] ⚠️ [ETA: 231s]
+  [3/50] Paper 3121717788 [disrupti] (Reducing Discrimination with Reviews in the Sharin...) ✓ REI=0.0 [degenerate_output] ⚠️ [ETA: 323s]
+  [4/50] Paper 2015765761 [disrupti] (An HMMS Type Interactive Model for Aggregate Plann...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 333s]
+  [5/50] Paper 2013453700 [team_siz] (Project Assignments When Budget Padding Taints Res...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 323s]
+  [6/50] Paper 2103425354 [team_siz] (Optimal Forecasting Groups...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 310s]
+  [7/50] Paper 2097414563 [disrupti] (Network Models for Building Evacuation...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 309s]
+  [8/50] Paper 3125000981 [disrupti] (Observability Increases the Demand for Commitment ...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 316s]
+  [9/50] Paper 3123237664 [citation] (Do CMO Incentives Matter? An Empirical Investigati...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 299s]
+  [10/50] Paper 2162187820 [disrupti] (Estimating Dynamic Effects of Market Communication...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 296s]
+  [11/50] Paper 1983063801 [team_siz] (Coordination costs and project outcomes in multi-u...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 289s]
+  [12/50] Paper 2161197120 [citation] (Technology transfer and absorption: an ‘R & D valu...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 277s]
+  [13/50] Paper 3112155693 [disrupti] (High Lead Bioavailability of Indoor Dust Contamina...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 265s]
+  [14/50] Paper 2070932380 [disrupti] (Neutron Activation Analysis of Milligram Quantifie...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 252s]
+  [15/50] Paper 2012470057 [team_siz] (Rallian "equivalent" cylinders reconsidered: compa...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 243s]
+  [16/50] Paper 2463357768 [disrupti] (<NA>...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 236s]
+  [17/50] Paper 2049270647 [disrupti] (Application of Immersional Calorimetry to Investig...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 225s]
+  [18/50] Paper 2944392236 [disrupti] (Linking neural responses to behavior with informat...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 221s]
+  [19/50] Paper 1970891428 [disrupti] (ATP-stimulated interaction between epidermal growt...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 211s]
+  [20/50] Paper 1988185025 [disrupti] (to a future of genetic medicine...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 207s]
+  [21/50] Paper 2041294498 [disrupti] (Atomic physics: a whiff of antimatter soup....) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 203s]
+  [22/50] Paper 2949280410 [disrupti] (Neuropathological correlates and genetic architect...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 195s]
+  [23/50] Paper 1965604852 [disrupti] (<NA>...) ✓ REI=0.0 [degenerate_output] ⚠️ [ETA: 185s]
+  [24/50] Paper 2014919422 [disrupti] (Volcanic components in pelitic sediments...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 183s]
+  [25/50] Paper 2038524198 [disrupti] (Surfactant Protein-A Suppresses Eosinophil-Mediate...) ✓ REI=0.0 [degenerate_output] ⚠️ [ETA: 175s]
+  [26/50] Paper 2111051564 [citation] (Influence of pollen transport dynamics on sire pro...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 168s]
+  [27/50] Paper 2802840419 [disrupti] (Oral microbiota reveals signs of acculturation in ...) ✗ REI=3.0 [execution_error] [ETA: 162s]
+  [28/50] Paper 2068083739 [disrupti] (A Functional Requirement for Astroglia in Promotin...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 167s]
+  [29/50] Paper 2079839605 [disrupti] (The effect of viewing eccentricity on enumeration....) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 161s]
+  [30/50] Paper 2117829554 [disrupti] (Dietary manipulation and social isolation alter di...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 152s]
+  [31/50] Paper 2593479526 [disrupti] (Nearly maximally predictive features and their dim...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 144s]
+  [32/50] Paper 2914999970 [disrupti] (Constraining sterile neutrino interpretations of t...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 136s]
+  [33/50] Paper 2158458711 [disrupti] (Modal analysis and coupling in metal-insulator-met...) ✓ REI=0.0 [correct] [ETA: 128s]
+  [34/50] Paper 2011828917 [disrupti] (Symmetries of Large N c Matrix Models for Closed S...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 121s]
+  [35/50] Paper 2946502924 [disrupti] (Deep inelastic scattering on an extremal Reissner-...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 113s]
+  [36/50] Paper 2078663105 [disrupti] (Phonon Boltzmann Equation and Second Sound in Soli...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 105s]
+  [37/50] Paper 2137323330 [disrupti] (Synthesis and properties of a bisphenol A based ph...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 98s]
+  [38/50] Paper 1993623056 [disrupti] (Toward an alternative notion of information system...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 91s]
+  [39/50] Paper 2071473052 [disrupti] (Lactation Biology Symposium: circadian clocks as m...) ✓ REI=0.0 [degenerate_output] ⚠️ [ETA: 83s]
+  [40/50] Paper 2104919530 [disrupti] (DIFFERENTIAL EFFECTS OF ADENOSINE ON FOCAL AND MAC...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 75s]
+  [41/50] Paper 2132674664 [disrupti] (Photoelectrochemical and water photoelectrolysis p...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 67s]
+  [42/50] Paper 2109538565 [disrupti] (The self renewal probability of hemopoietic stem c...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 60s]
+  [43/50] Paper 2018453096 [disrupti] (Experiments with cross-gyre flow patterns on a bet...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 53s]
+  [44/50] Paper 2076022778 [citation] (Effects of fine and ultrafine sulfuric acid aeroso...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 45s]
+  [45/50] Paper 2108473458 [disrupti] (Description and scaling of pectoral muscles in ict...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 37s]
+  [46/50] Paper 2065969773 [disrupti] (Annual Summary of Vital Statistics: 2009...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 30s]
+  [47/50] Paper 1972731531 [disrupti] (Current prosthodontic practice: A dental laborator...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 22s]
+  [48/50] Paper 2061542708 [disrupti] (Isolation and partial purification of a proteolyti...) ✓ REI=0.0 [wrong_formula] ⚠️ [ETA: 15s]
+  [49/50] Paper 2176610406 [disrupti] (Lifetime Studies of 130 nm nMOS Transistors Intend...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 7s]
+  [50/50] Paper 2320783822 [disrupti] (A benchmark of excitonic couplings derived from at...) ✓ REI=0.0 [wrong_result] ⚠️ [ETA: 0s]
+
+  L3 summary: 49/50 success, 48 silent failures, 373s
+
+======================================================================
+CROSS-LEVEL COMPARISON
+======================================================================
+
+--- L1 ---
+  Success: 49/50 (98%)
+  Failed: 1, Silent failures: 0
+  REI: mean=0.060, median=0.00
+  REI-c: mean=0.060, median=0.00
+  By metric type:
+    citation_count_prediction: n=4, REI-c=0.001, silent=0
+    disruption: n=41, REI-c=0.000, silent=0
+    team_size_effect: n=4, REI-c=0.000, silent=0
+  Input sources:
+    formula: 50/50, avg markdown_chars=0
+  Failure taxonomy: {'correct': 49, 'execution_error': 1}
+
+--- L2 ---
+  Success: 45/50 (90%)
+  Failed: 5, Silent failures: 43
+  REI: mean=0.360, median=0.00
+  REI-c: mean=33.528, median=10.94
+  By metric type:
+    citation_count_prediction: n=4, REI-c=7.208, silent=4
+    disruption: n=37, REI-c=35.424, silent=35
+    team_size_effect: n=4, REI-c=80.465, silent=4
+  Input sources:
+    abstract: 50/50, avg markdown_chars=0
+  Failure taxonomy: {'wrong_formula': 32, 'wrong_result': 8, 'execution_error': 5, 'correct': 2, 'degenerate_output': 3}
+
+--- L3 ---
+  Success: 49/50 (98%)
+  Failed: 1, Silent failures: 48
+  REI: mean=0.060, median=0.00
+  REI-c: mean=36.108, median=15.83
+  By metric type:
+    citation_count_prediction: n=4, REI-c=5.816, silent=4
+    disruption: n=41, REI-c=35.544, silent=40
+    team_size_effect: n=4, REI-c=80.455, silent=4
+  Input sources:
+    abstract+extraction_prompt: 50/50, avg markdown_chars=0
+  Failure taxonomy: {'wrong_formula': 37, 'degenerate_output': 5, 'wrong_result': 6, 'execution_error': 1, 'correct': 1}
+
+  Papers succeeded at ALL levels: 43/50
+
+Results saved to /mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/stratified_benchmark_50_v3.json

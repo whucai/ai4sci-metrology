@@ -1,0 +1,43 @@
+{
+  "papers_tested": 2,
+  "measured_REI": true,
+  "results": [
+    {
+      "status": "SUCCESS",
+      "fix_iterations": 0,
+      "error_types": [],
+      "computed_D": 1.0,
+      "subgraph_D": 1.0,
+      "precomputed_D": 0.8518518518518519,
+      "deviation": 0.0,
+      "n_i_parsed": 8.0,
+      "n_j_parsed": null,
+      "code": "import pandas as pd\n\ndf = pd.read_csv('/tmp/tmph3syp91b_16038286.csv')\nn_i = df[df['cites_refs'] == False].shape[0]\nn_j = df[df['cites_refs'] == True].shape[0]\nn_k = 0\nD = (n_i - n_j) / (n_i + n_j + n_k)\nprint(f\"D_INDEX = {D}\")\nprint(f\"n_i = {n_i}, n_j = {n_j}, n_k = {n_k}\")",
+      "stdout": "D_INDEX = 1.0\nn_i = 8, n_j = 0, n_k = 0\n",
+      "difficulty": "easy",
+      "REI": 0.0,
+      "paper_id": "1603828649",
+      "title": "International Organizations and Higher Education Policy: Thinking Globally, Acting Locally?",
+      "year": 2009
+    },
+    {
+      "status": "SUCCESS",
+      "fix_iterations": 0,
+      "error_types": [],
+      "computed_D": 1.0,
+      "subgraph_D": 1.0,
+      "precomputed_D": 0.3465346534653465,
+      "deviation": 0.0,
+      "n_i_parsed": 12.0,
+      "n_j_parsed": null,
+      "code": "import pandas as pd\n\ndf = pd.read_csv('/tmp/tmptw79jhyu_15709470.csv')\nn_j = df['cites_refs'].sum()\nn_i = len(df) - n_j\nn_k = 0\nD = (n_i - n_j) / (n_i + n_j + n_k)\nprint(f\"D_INDEX = {D}\")\nprint(f\"n_i = {n_i}, n_j = {n_j}, n_k = {n_k}\")",
+      "stdout": "D_INDEX = 1.0\nn_i = 12, n_j = 0, n_k = 0\n",
+      "difficulty": "medium",
+      "REI": 0.0,
+      "paper_id": "1570947054",
+      "title": "Tort reform by contract",
+      "year": 1993
+    }
+  ],
+  "mean_REI": 0.0
+}

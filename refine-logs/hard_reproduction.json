@@ -1,0 +1,18 @@
+{
+  "status": "SUCCESS",
+  "fix_iterations": 0,
+  "error_types": [],
+  "computed_D": 0.2727272727272727,
+  "subgraph_D": 0.272727,
+  "precomputed_D": -0.0038297872340425,
+  "deviation": 0.0,
+  "n_i_parsed": 7.0,
+  "n_j_parsed": 4.0,
+  "env_info": {
+    "python_version": "Python 3.11.15",
+    "top_packages": ""
+  },
+  "guardrail_failures": [],
+  "REI": 0.0,
+  "paper_id": "2016964321"
+}

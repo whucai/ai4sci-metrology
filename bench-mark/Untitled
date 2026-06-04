@@ -1,0 +1,3 @@
+径 1：语义嵌入（Jina 1024-dim）
+
+  论文摘要 → Jina SentenceTransformer → 1024 维归一化向量。然后计算 leave-self-out 的标量特征：

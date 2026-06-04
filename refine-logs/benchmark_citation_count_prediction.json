@@ -1,0 +1,92 @@
+{
+  "config": {
+    "metric_type": "citation_count_prediction",
+    "n_papers": 3,
+    "max_fixes": 2
+  },
+  "summary": {
+    "n_total": 3,
+    "n_success": 3,
+    "n_failed": 0,
+    "n_skipped": 0,
+    "time_s": 15.1
+  },
+  "rei_stats": {
+    "mean": 0.0,
+    "median": 0.0,
+    "mean_rei_c": 0.0
+  },
+  "silent_failures": 0,
+  "citation_count_mean_abs_dev": 0.002306,
+  "results": [
+    {
+      "status": "SUCCESS",
+      "paper_id": 2123596877,
+      "metric_type": "citation_count_prediction",
+      "ground_truth": {
+        "citation_count": 42.68,
+        "median": 14.0,
+        "same_year_count": 1821
+      },
+      "computed": {
+        "citation_count": 42.678198791872596,
+        "median": 14.0,
+        "same_year_count": 1821.0
+      },
+      "computed_primary": 42.678198791872596,
+      "ground_truth_primary": 42.68,
+      "REI": 0.0,
+      "REI_c": 0.0004,
+      "correctness_ratio": 4.2e-05,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1979431553,
+      "metric_type": "citation_count_prediction",
+      "ground_truth": {
+        "citation_count": 14.5,
+        "median": 5.0,
+        "same_year_count": 3880
+      },
+      "computed": {
+        "citation_count": 14.503350515463918,
+        "median": 5.0,
+        "same_year_count": 3880.0
+      },
+      "computed_primary": 14.503350515463918,
+      "ground_truth_primary": 14.5,
+      "REI": 0.0,
+      "REI_c": 0.0023,
+      "correctness_ratio": 0.000231,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2953083880,
+      "metric_type": "citation_count_prediction",
+      "ground_truth": {
+        "citation_count": 43.25,
+        "median": 12.0,
+        "same_year_count": 1841
+      },
+      "computed": {
+        "citation_count": 43.24823465507876,
+        "median": 12.0,
+        "same_year_count": 1841.0
+      },
+      "computed_primary": 43.24823465507876,
+      "ground_truth_primary": 43.25,
+      "REI": 0.0,
+      "REI_c": 0.0004,
+      "correctness_ratio": 4.1e-05,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    }
+  ]
+}

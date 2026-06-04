@@ -1,0 +1,72 @@
+{
+  "config": {
+    "level": "L2",
+    "n_papers": 3,
+    "max_fixes": 2,
+    "target_journals": [
+      "Management Science",
+      "Research Policy"
+    ],
+    "seed": 123,
+    "total_time_s": 30.0,
+    "metric_distribution": {
+      "disruption": 2,
+      "citation_count_prediction": 1
+    }
+  },
+  "results": {
+    "L2": [
+      {
+        "paper_id": 2129626659,
+        "metric_type": "disruption",
+        "level": "L2",
+        "status": "SUCCESS",
+        "rei": 0.0,
+        "rei_c": 10.0,
+        "computed_primary": 0.0,
+        "ground_truth_primary": 1.0,
+        "is_silent_failure": true,
+        "failure_category": "wrong_formula",
+        "error_types": [],
+        "fix_count": 0,
+        "paper_title": "Evaluating Parallel Computing Systems in Bioinformatics",
+        "paper_journal": "<NA>",
+        "paper_year": 2006
+      },
+      {
+        "paper_id": 2045154734,
+        "metric_type": "disruption",
+        "level": "L2",
+        "status": "SUCCESS",
+        "rei": 0.0,
+        "rei_c": 0.0,
+        "computed_primary": 0.0,
+        "ground_truth_primary": 0.0,
+        "is_silent_failure": false,
+        "failure_category": "correct",
+        "error_types": [],
+        "fix_count": 0,
+        "paper_title": "A comparison of standing steadiness measurements from two devices: covariates and normal values.",
+        "paper_journal": "Neurotoxicology and Teratology",
+        "paper_year": 1996
+      },
+      {
+        "paper_id": 1966482095,
+        "metric_type": "citation_count_prediction",
+        "level": "L2",
+        "status": "SUCCESS",
+        "rei": 0.0,
+        "rei_c": 7.0836,
+        "computed_primary": 9.0,
+        "ground_truth_primary": 30.86,
+        "is_silent_failure": true,
+        "failure_category": "wrong_formula",
+        "error_types": [],
+        "fix_count": 0,
+        "paper_title": "Ultrasonographer experience does not impact outcomes following ultrasound-guided embryo transfer.",
+        "paper_journal": "Fertility and Sterility",
+        "paper_year": 2009
+      }
+    ]
+  }
+}

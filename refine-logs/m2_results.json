@@ -1,0 +1,24 @@
+{
+  "primary": {
+    "small_team_mean": 0.00603,
+    "large_team_mean": 0.00053,
+    "small_team_std": 0.06106,
+    "large_team_std": 0.03864,
+    "small_team_count": 1105007,
+    "large_team_count": 495826,
+    "difference": 0.0055,
+    "mannwhitney_u_stat": 306169030970.5,
+    "mannwhitney_p": 0.0,
+    "significant": "True"
+  },
+  "field_level_n": 262,
+  "field_level_sig": 157,
+  "field_level_pos_frac": 0.958,
+  "year_level_n": 74,
+  "year_level_sig_001": 50,
+  "year_level_sig_005": 51,
+  "year_level_pos_frac": 0.919,
+  "distribution_mean": 0.00433,
+  "distribution_median": -0.00031,
+  "total_papers": 2462394
+}

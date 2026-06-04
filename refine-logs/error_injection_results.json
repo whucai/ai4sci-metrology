@@ -1,0 +1,285 @@
+{
+  "data_missing_filter": {
+    "error_key": "data_missing_filter",
+    "error_type": "data",
+    "status": "fixed",
+    "fix_count": 1,
+    "error_types": [
+      "runtime"
+    ],
+    "parsed_D": 0.2727272727272727,
+    "attempts": [
+      {
+        "attempt": 0,
+        "exit_code": 1,
+        "has_error": true,
+        "stderr_preview": "Traceback (most recent call last):\n  File \"/tmp/sandbox_meirqwq3/script.py\", line 14, in <module>\n    if citer_refs & ref_set:\n       ~~~~~~~~~~~^~~~~~~~~\nTypeError: unsupported operand type(s) for &:"
+      },
+      {
+        "attempt": 1,
+        "exit_code": 0,
+        "has_error": false,
+        "stderr_preview": ""
+      }
+    ],
+    "REI": 3.0
+  },
+  "data_wrong_column": {
+    "error_key": "data_wrong_column",
+    "error_type": "data",
+    "status": "unfixed",
+    "fix_count": 4,
+    "error_types": [
+      "runtime",
+      "runtime",
+      "runtime",
+      "runtime"
+    ],
+    "parsed_D": null,
+    "attempts": [
+      {
+        "attempt": 0,
+        "exit_code": 1,
+        "has_error": true,
+        "stderr_preview": "Traceback (most recent call last):\n  File \"/home/caile/anaconda3/envs/sciscigpt/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3641, in get_loc\n    return self._engine.get_loc(casted_"
+      },
+      {
+        "attempt": 1,
+        "exit_code": 1,
+        "has_error": true,
+        "stderr_preview": "Traceback (most recent call last):\n  File \"/home/caile/anaconda3/envs/sciscigpt/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3641, in get_loc\n    return self._engine.get_loc(casted_"
+      },
+      {
+        "attempt": 2,
+        "exit_code": 1,
+        "has_error": true,
+        "stderr_preview": "Traceback (most recent call last):\n  File \"/home/caile/anaconda3/envs/sciscigpt/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3641, in get_loc\n    return self._engine.get_loc(casted_"
+      },
+      {
+        "attempt": 3,
+        "exit_code": 1,
+        "has_error": true,
+        "stderr_preview": "Traceback (most recent call last):\n  File \"/home/caile/anaconda3/envs/sciscigpt/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3641, in get_loc\n    return self._engine.get_loc(casted_"
+      }
+    ],
+    "REI": 3.0
+  },
+  "data_wrong_type": {
+    "error_key": "data_wrong_type",
+    "error_type": "data",
+    "status": "resilient",
+    "fix_count": 0,
+    "error_types": [],
+    "parsed_D": 1.0,
+    "attempts": [
+      {
+        "attempt": 0,
+        "exit_code": 0,
+        "has_error": false,
+        "stderr_preview": ""
+      }
+    ],
+    "REI": 0.0
+  },
+  "import_hallucinated": {
+    "error_key": "import_hallucinated",
+    "error_type": "import",
+    "status": "fixed",
+    "fix_count": 1,
+    "error_types": [
+      "import"
+    ],
+    "parsed_D": 0.2727272727272727,
+    "attempts": [
+      {
+        "attempt": 0,
+        "exit_code": 1,
+        "has_error": true,
+        "stderr_preview": "Traceback (most recent call last):\n  File \"/tmp/sandbox_d6t9rip6/script.py\", line 1, in <module>\n    from scipy.special import cohen_effect_size\nImportError: cannot import name 'cohen_effect_size' fro"
+      },
+      {
+        "attempt": 1,
+        "exit_code": 0,
+        "has_error": false,
+        "stderr_preview": ""
+      }
+    ],
+    "REI": 2.0
+  },
+  "import_missing": {
+    "error_key": "import_missing",
+    "error_type": "import",
+    "status": "fixed",
+    "fix_count": 1,
+    "error_types": [
+      "runtime"
+    ],
+    "parsed_D": 0.2727272727272727,
+    "attempts": [
+      {
+        "attempt": 0,
+        "exit_code": 1,
+        "has_error": true,
+        "stderr_preview": "Traceback (most recent call last):\n  File \"/tmp/sandbox_h6n0ww16/script.py\", line 4, in <module>\n    refs = pd.read_csv(\"/tmp/tmpfmcjbftr_refs.csv\")\n           ^^\nNameError: name 'pd' is not defined. "
+      },
+      {
+        "attempt": 1,
+        "exit_code": 0,
+        "has_error": false,
+        "stderr_preview": ""
+      }
+    ],
+    "REI": 3.0
+  },
+  "import_wrong_name": {
+    "error_key": "import_wrong_name",
+    "error_type": "import",
+    "status": "fixed",
+    "fix_count": 1,
+    "error_types": [
+      "import"
+    ],
+    "parsed_D": 0.2727272727272727,
+    "attempts": [
+      {
+        "attempt": 0,
+        "exit_code": 1,
+        "has_error": true,
+        "stderr_preview": "Traceback (most recent call last):\n  File \"/tmp/sandbox_n7j6u5zg/script.py\", line 1, in <module>\n    from pandas import read_csvfile\nImportError: cannot import name 'read_csvfile' from 'pandas' (/home"
+      },
+      {
+        "attempt": 1,
+        "exit_code": 0,
+        "has_error": false,
+        "stderr_preview": ""
+      }
+    ],
+    "REI": 2.0
+  },
+  "logic_off_by_one": {
+    "error_key": "logic_off_by_one",
+    "error_type": "logic",
+    "status": "resilient",
+    "fix_count": 0,
+    "error_types": [],
+    "parsed_D": -0.2727272727272727,
+    "attempts": [
+      {
+        "attempt": 0,
+        "exit_code": 0,
+        "has_error": false,
+        "stderr_preview": ""
+      }
+    ],
+    "REI": 0.0
+  },
+  "logic_wrong_formula": {
+    "error_key": "logic_wrong_formula",
+    "error_type": "logic",
+    "status": "resilient",
+    "fix_count": 0,
+    "error_types": [],
+    "parsed_D": 0.36363636363636365,
+    "attempts": [
+      {
+        "attempt": 0,
+        "exit_code": 0,
+        "has_error": false,
+        "stderr_preview": ""
+      }
+    ],
+    "REI": 0.0
+  },
+  "logic_wrong_var": {
+    "error_key": "logic_wrong_var",
+    "error_type": "logic",
+    "status": "fixed",
+    "fix_count": 1,
+    "error_types": [
+      "syntax"
+    ],
+    "parsed_D": 0.2727272727272727,
+    "attempts": [
+      {
+        "attempt": 0,
+        "exit_code": 1,
+        "has_error": true,
+        "stderr_preview": "  File \"/tmp/sandbox_ncvpwp1l/script.py\", line 20\n    denom_wrong = 0\nIndentationError: unexpected indent\n"
+      },
+      {
+        "attempt": 1,
+        "exit_code": 0,
+        "has_error": false,
+        "stderr_preview": ""
+      }
+    ],
+    "REI": 1.0
+  },
+  "syntax_bad_indent": {
+    "error_key": "syntax_bad_indent",
+    "error_type": "syntax",
+    "status": "resilient",
+    "fix_count": 0,
+    "error_types": [],
+    "parsed_D": 0.2727272727272727,
+    "attempts": [
+      {
+        "attempt": 0,
+        "exit_code": 0,
+        "has_error": false,
+        "stderr_preview": ""
+      }
+    ],
+    "REI": 0.0
+  },
+  "syntax_keyword_typo": {
+    "error_key": "syntax_keyword_typo",
+    "error_type": "syntax",
+    "status": "fixed",
+    "fix_count": 1,
+    "error_types": [
+      "syntax"
+    ],
+    "parsed_D": 0.2727272727272727,
+    "attempts": [
+      {
+        "attempt": 0,
+        "exit_code": 1,
+        "has_error": true,
+        "stderr_preview": "  File \"/tmp/sandbox_jk0w9j08/script.py\", line 14\n    df citer_refs & ref_set:\n       ^^^^^^^^^^\nSyntaxError: invalid syntax\n"
+      },
+      {
+        "attempt": 1,
+        "exit_code": 0,
+        "has_error": false,
+        "stderr_preview": ""
+      }
+    ],
+    "REI": 1.0
+  },
+  "syntax_missing_colon": {
+    "error_key": "syntax_missing_colon",
+    "error_type": "syntax",
+    "status": "fixed",
+    "fix_count": 1,
+    "error_types": [
+      "syntax"
+    ],
+    "parsed_D": 0.2727272727272727,
+    "attempts": [
+      {
+        "attempt": 0,
+        "exit_code": 1,
+        "has_error": true,
+        "stderr_preview": "  File \"/tmp/sandbox__azkvm_k/script.py\", line 14\n    if citer_refs & ref_set\n                           ^\nSyntaxError: expected ':'\n"
+      },
+      {
+        "attempt": 1,
+        "exit_code": 0,
+        "has_error": false,
+        "stderr_preview": ""
+      }
+    ],
+    "REI": 1.0
+  }
+}

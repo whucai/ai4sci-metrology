@@ -1,0 +1,104 @@
+{
+  "config": {
+    "metric_type": "team_size_effect",
+    "n_papers": 3,
+    "max_fixes": 2
+  },
+  "summary": {
+    "n_total": 3,
+    "n_success": 3,
+    "n_failed": 0,
+    "n_skipped": 0,
+    "time_s": 14.2
+  },
+  "rei_stats": {
+    "mean": 0.0,
+    "median": 0.0,
+    "mean_rei_c": 0.0
+  },
+  "silent_failures": 0,
+  "difference_mean_abs_dev": 0.0,
+  "results": [
+    {
+      "status": "SUCCESS",
+      "paper_id": 2123596877,
+      "metric_type": "team_size_effect",
+      "ground_truth": {
+        "small_mean": 0.006367,
+        "large_mean": 0.00038,
+        "difference": 0.005987,
+        "n_small": 81590,
+        "n_large": 30337
+      },
+      "computed": {
+        "small_mean": 0.006366681395322818,
+        "large_mean": 0.00037990715974732807,
+        "difference": 0.00598677423557549,
+        "n_small": 81590.0,
+        "n_large": 30337.0
+      },
+      "computed_primary": 0.00598677423557549,
+      "ground_truth_primary": 0.005987,
+      "REI": 0.0,
+      "REI_c": 0.0004,
+      "correctness_ratio": 3.8e-05,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1979431553,
+      "metric_type": "team_size_effect",
+      "ground_truth": {
+        "small_mean": 0.006367,
+        "large_mean": 0.00038,
+        "difference": 0.005987,
+        "n_small": 81590,
+        "n_large": 30337
+      },
+      "computed": {
+        "small_mean": 0.006366681395322818,
+        "large_mean": 0.00037990715974732807,
+        "difference": 0.00598677423557549,
+        "n_small": 81590.0,
+        "n_large": 30337.0
+      },
+      "computed_primary": 0.00598677423557549,
+      "ground_truth_primary": 0.005987,
+      "REI": 0.0,
+      "REI_c": 0.0004,
+      "correctness_ratio": 3.8e-05,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2953083880,
+      "metric_type": "team_size_effect",
+      "ground_truth": {
+        "small_mean": 0.006367,
+        "large_mean": 0.00038,
+        "difference": 0.005987,
+        "n_small": 81590,
+        "n_large": 30337
+      },
+      "computed": {
+        "small_mean": 0.006366681395322818,
+        "large_mean": 0.00037990715974732807,
+        "difference": 0.00598677423557549,
+        "n_small": 81590.0,
+        "n_large": 30337.0
+      },
+      "computed_primary": 0.00598677423557549,
+      "ground_truth_primary": 0.005987,
+      "REI": 0.0,
+      "REI_c": 0.0004,
+      "correctness_ratio": 3.8e-05,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    }
+  ]
+}

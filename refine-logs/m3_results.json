@@ -1,0 +1,41 @@
+{
+  "trials": [
+    {
+      "label": "Baseline",
+      "status": "SUCCESS",
+      "REI": 0.0,
+      "fixes": 0,
+      "errors": []
+    },
+    {
+      "label": "Malformed prompt",
+      "status": "SUCCESS",
+      "REI": 1.5,
+      "fixes": 1,
+      "errors": [
+        {
+          "iteration": 1,
+          "category": "runtime",
+          "error": "Traceback (most recent call last):\n  File \"/tmp/sandbox_cmicd8ic/script.py\", line 3, in <module>\n    df = pd.read_csv('/tmp/tmpqlbuf9ah.csvx')\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/caile/anaconda3/envs/sciscigpt/lib/python3.11/site-packages/pandas/io/parsers/readers.py\", line 8"
+        }
+      ]
+    },
+    {
+      "label": "Missing import",
+      "status": "SUCCESS",
+      "REI": 0.0,
+      "fixes": 0,
+      "errors": []
+    }
+  ],
+  "ground_truth": {
+    "small_mean_ratio": 1.2254,
+    "large_mean_ratio": 1.3795,
+    "small_mean_cites": 34.76,
+    "large_mean_cites": 40.25,
+    "small_count": 132,
+    "large_count": 68,
+    "overall_mean_disruption": 0.00284
+  },
+  "data_csv": "/tmp/tmpqlbuf9ah.csv"
+}

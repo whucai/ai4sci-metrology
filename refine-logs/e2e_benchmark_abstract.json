@@ -1,0 +1,106 @@
+{
+  "config": {
+    "condition": "abstract",
+    "n_papers": 5,
+    "max_fixes": 3,
+    "target_journals": [
+      "Management Science",
+      "Research Policy"
+    ],
+    "seed": 42,
+    "total_time_s": 73.2
+  },
+  "comparison": {
+    "abstract": {
+      "n_total": 5,
+      "n_success": 5,
+      "n_silent": 1,
+      "success_rate": 1.0,
+      "silent_rate": 0.2,
+      "rei_mean": 0.6,
+      "rei_c_mean": 12.6,
+      "rei_median": 0.0,
+      "d_mean_abs_dev": 0.171429,
+      "d_exact_match": 4,
+      "error_distribution": {
+        "runtime": 1
+      }
+    }
+  },
+  "results": {
+    "abstract": [
+      {
+        "paper_id": 3122337292,
+        "status": "SUCCESS",
+        "rei": 0.0,
+        "rei_c": 0.0,
+        "computed_d": -0.08571428571428572,
+        "gt_d": -0.085714,
+        "is_silent_failure": false,
+        "error_types": [],
+        "fix_count": 0,
+        "paper_title": "Environmental Externalities and Cost of Capital",
+        "paper_journal": "Management Science",
+        "paper_year": 2014
+      },
+      {
+        "paper_id": 1981524267,
+        "status": "SUCCESS",
+        "rei": 0.0,
+        "rei_c": 0.0,
+        "computed_d": -0.28205128205128205,
+        "gt_d": -0.282051,
+        "is_silent_failure": false,
+        "error_types": [],
+        "fix_count": 0,
+        "paper_title": "Competitive and Cooperative Inventory Policies in a Two-Stage Supply Chain",
+        "paper_journal": "Management Science",
+        "paper_year": 1999
+      },
+      {
+        "paper_id": 1983063801,
+        "status": "SUCCESS",
+        "rei": 0.0,
+        "rei_c": 0.0,
+        "computed_d": 0.16363636363636364,
+        "gt_d": 0.163636,
+        "is_silent_failure": false,
+        "error_types": [],
+        "fix_count": 0,
+        "paper_title": "Coordination costs and project outcomes in multi-university collaborations",
+        "paper_journal": "Research Policy",
+        "paper_year": 2007
+      },
+      {
+        "paper_id": 2161197120,
+        "status": "SUCCESS",
+        "rei": 0.0,
+        "rei_c": 60.0001,
+        "computed_d": 1.0,
+        "gt_d": 0.142857,
+        "is_silent_failure": true,
+        "error_types": [],
+        "fix_count": 0,
+        "paper_title": "Technology transfer and absorption: an \u2018R & D value-mapping\u2019 approach to evaluation\u2606",
+        "paper_journal": "Research Policy",
+        "paper_year": 1996
+      },
+      {
+        "paper_id": 2783393271,
+        "status": "SUCCESS",
+        "rei": 3.0,
+        "rei_c": 3.0,
+        "computed_d": 0.0,
+        "gt_d": 0.0,
+        "is_silent_failure": false,
+        "error_types": [
+          "runtime"
+        ],
+        "fix_count": 1,
+        "paper_title": "Disparities in cancer outcomes across age, sex, and race/ethnicity among patients with pancreatic ca",
+        "paper_journal": "Cancer Medicine",
+        "paper_year": 2018
+      }
+    ]
+  }
+}

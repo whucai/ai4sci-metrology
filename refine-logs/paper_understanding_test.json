@@ -1,0 +1,114 @@
+{
+  "structure": {
+    "title": "Large teams develop and small teams disrupt science and technology",
+    "authors": [
+      "Lingfei Wu",
+      "Dashun Wang",
+      "James A. Evans"
+    ],
+    "abstract": "This study analyzes over 65 million papers, patents, and software products from 1954 to 2014 to demonstrate that smaller teams tend to disrupt science and technology with new ideas, while larger teams tend to develop existing ones. The findings are consistent across all fields and years.",
+    "methods": [
+      {
+        "name": "Disruption Index (D-index)",
+        "description": "A citation-based measure that quantifies the degree to which a paper disrupts or consolidates existing knowledge.",
+        "parameters": {
+          "n_i": "subsequent papers that cite the focal paper but not its references",
+          "n_j": "papers that cite both the focal paper and its references",
+          "n_k": "papers that cite only the references"
+        },
+        "implementation": "D = (n_i - n_j) / (n_i + n_j + n_k)"
+      }
+    ],
+    "datasets": [
+      {
+        "name": "SciSciNet",
+        "source": "Web of Science, USPTO, GitHub",
+        "size": "42 million papers",
+        "fields": [
+          "citation relationships",
+          "paper metadata"
+        ]
+      }
+    ],
+    "analysis_steps": [
+      {
+        "step": 1,
+        "action": "Load paper metadata and citation edges",
+        "input": "SciSciNet dataset",
+        "output": "Paper metadata and citation graph",
+        "tool": "Python"
+      },
+      {
+        "step": 2,
+        "action": "Compute Disruption Index for each paper",
+        "input": "Citation graph",
+        "output": "Disruption scores for all papers",
+        "tool": "Python"
+      },
+      {
+        "step": 3,
+        "action": "Group papers by team size",
+        "input": "Paper metadata",
+        "output": "Grouped papers by team size (1, 2-5, 6-10, 11+)",
+        "tool": "Python"
+      },
+      {
+        "step": 4,
+        "action": "Compute mean disruption score for each team-size group",
+        "input": "Disruption scores and team size groups",
+        "output": "Mean D for each team-size group",
+        "tool": "Python"
+      },
+      {
+        "step": 5,
+        "action": "Verify field-level trends",
+        "input": "Disruption scores and field metadata",
+        "output": "Field-level validation of small-team advantage",
+        "tool": "Python"
+      },
+      {
+        "step": 6,
+        "action": "Verify year-level trends",
+        "input": "Disruption scores and year metadata",
+        "output": "Year-level validation of small-team advantage",
+        "tool": "Python"
+      },
+      {
+        "step": 7,
+        "action": "Statistical testing",
+        "input": "Disruption scores",
+        "output": "Bootstrap confidence intervals and Cohen's d effect size",
+        "tool": "Python"
+      }
+    ],
+    "evaluation": {
+      "metrics": [
+        "mean D",
+        "Cohen's d effect size"
+      ],
+      "expected_values": {
+        "mean D for small teams": "0.42",
+        "mean D for large teams": "0.21"
+      },
+      "comparison_method": "Bootstrap confidence intervals and field/year-level validation"
+    },
+    "dependencies": [
+      "Python",
+      "SciSciNet dataset"
+    ],
+    "reproducibility_notes": "The SciSciNet dataset provides the citation graph and paper metadata for reproducible computation. All analysis steps can be replicated using the dataset and Python."
+  },
+  "plan_length": 1655,
+  "code_length": 3732,
+  "guardrail": {
+    "valid": true,
+    "failures": [],
+    "code_length": 3732,
+    "code_lines": 90
+  },
+  "execution": {
+    "exit_code": 1,
+    "elapsed": 0.63,
+    "stdout_preview": ""
+  }
+}

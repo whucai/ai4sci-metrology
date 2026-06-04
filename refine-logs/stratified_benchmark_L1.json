@@ -1,0 +1,106 @@
+{
+  "config": {
+    "level": "L1",
+    "n_papers": 5,
+    "max_fixes": 3,
+    "target_journals": [
+      "Management Science",
+      "Research Policy"
+    ],
+    "seed": 42,
+    "total_time_s": 44.2,
+    "metric_distribution": {
+      "disruption": 4,
+      "team_size_effect": 1
+    }
+  },
+  "results": {
+    "L1": [
+      {
+        "paper_id": 1984973964,
+        "metric_type": "disruption",
+        "level": "L1",
+        "status": "SUCCESS",
+        "rei": 0.0,
+        "rei_c": 0.0,
+        "computed_primary": -0.76,
+        "ground_truth_primary": -0.76,
+        "is_silent_failure": false,
+        "failure_category": "correct",
+        "error_types": [],
+        "fix_count": 0,
+        "paper_title": "A Bi-Extremal Principle for Frontier Estimation and Efficiency Evaluations",
+        "paper_journal": "Management Science",
+        "paper_year": 1981
+      },
+      {
+        "paper_id": 1983063801,
+        "metric_type": "team_size_effect",
+        "level": "L1",
+        "status": "SUCCESS",
+        "rei": 0.0,
+        "rei_c": 0.0004,
+        "computed_primary": 0.005986774235575489,
+        "ground_truth_primary": 0.005987,
+        "is_silent_failure": false,
+        "failure_category": "correct",
+        "error_types": [],
+        "fix_count": 0,
+        "paper_title": "Coordination costs and project outcomes in multi-university collaborations",
+        "paper_journal": "Research Policy",
+        "paper_year": 2007
+      },
+      {
+        "paper_id": 2783393271,
+        "metric_type": "disruption",
+        "level": "L1",
+        "status": "SUCCESS",
+        "rei": 0.0,
+        "rei_c": 0.0,
+        "computed_primary": 0.0,
+        "ground_truth_primary": 0.0,
+        "is_silent_failure": false,
+        "failure_category": "correct",
+        "error_types": [],
+        "fix_count": 0,
+        "paper_title": "Disparities in cancer outcomes across age, sex, and race/ethnicity among patients with pancreatic ca",
+        "paper_journal": "Cancer Medicine",
+        "paper_year": 2018
+      },
+      {
+        "paper_id": 2031692917,
+        "metric_type": "disruption",
+        "level": "L1",
+        "status": "SUCCESS",
+        "rei": 0.0,
+        "rei_c": 0.0,
+        "computed_primary": 1.0,
+        "ground_truth_primary": 1.0,
+        "is_silent_failure": false,
+        "failure_category": "correct",
+        "error_types": [],
+        "fix_count": 0,
+        "paper_title": "The Scholarship of Teaching and Learning\u2014Done by Sociologists: Let's Make That the Sociology of High",
+        "paper_journal": "Teaching Sociology",
+        "paper_year": 2005
+      },
+      {
+        "paper_id": 2052235577,
+        "metric_type": "disruption",
+        "level": "L1",
+        "status": "SUCCESS",
+        "rei": 0.0,
+        "rei_c": 0.0,
+        "computed_primary": 1.0,
+        "ground_truth_primary": 1.0,
+        "is_silent_failure": false,
+        "failure_category": "correct",
+        "error_types": [],
+        "fix_count": 0,
+        "paper_title": "Usefulness of serum brain natriuretic peptide to predict adverse events in patients with the Eisenme",
+        "paper_journal": "American Journal of Cardiology",
+        "paper_year": 2012
+      }
+    ]
+  }
+}

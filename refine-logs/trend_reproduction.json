@@ -1,0 +1,13 @@
+{
+  "status": "SUCCESS",
+  "REI": 0.0,
+  "fix_iterations": 0,
+  "error_types": [],
+  "computed_rho": -0.2862369337979095,
+  "gt_rho": -0.2862,
+  "computed_early_D": 0.006628547004228136,
+  "computed_late_D": 0.0024231837084669645,
+  "gt_early_D": 0.006629,
+  "gt_late_D": 0.002423,
+  "task": "field_year_trend_analysis"
+}

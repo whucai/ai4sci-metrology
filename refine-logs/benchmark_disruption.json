@@ -1,0 +1,2327 @@
+{
+  "config": {
+    "metric_type": "disruption",
+    "n_papers": 100,
+    "max_fixes": 3
+  },
+  "summary": {
+    "n_total": 100,
+    "n_success": 74,
+    "n_failed": 26,
+    "n_skipped": 0,
+    "time_s": 1787.4
+  },
+  "rei_stats": {
+    "mean": 0.84,
+    "median": 0.0,
+    "mean_rei_c": 10.92
+  },
+  "silent_failures": 55,
+  "D_index_mean_abs_dev": 0.57398,
+  "results": [
+    {
+      "status": "SUCCESS",
+      "paper_id": 2013368152,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.8,
+        "n_i": 2,
+        "n_j": 18
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.8,
+      "REI": 3.0,
+      "REI_c": 13.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime"
+      ],
+      "fix_count": 1
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2066668100,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 10
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 6.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2065039955,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.263158,
+        "n_i": 14,
+        "n_j": 24
+      },
+      "computed_primary": null,
+      "ground_truth_primary": -0.263158,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2003924215,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.714286,
+        "n_i": 10,
+        "n_j": 60
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 1.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": -0.714286,
+      "REI": 0.0,
+      "REI_c": 4.0,
+      "correctness_ratio": 0.399999,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2436609398,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.0,
+        "n_i": 7,
+        "n_j": 7
+      },
+      "computed": {
+        "D_index": 1.0,
+        "n_i": 1.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 1.0,
+      "ground_truth_primary": 0.0,
+      "REI": 0.0,
+      "REI_c": 100.0,
+      "correctness_ratio": 10.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1974570173,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.333333,
+        "n_i": 1,
+        "n_j": 2
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.333333,
+      "REI": 3.0,
+      "REI_c": 13.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime"
+      ],
+      "fix_count": 1
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1980798939,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.52381,
+        "n_i": 25,
+        "n_j": 80
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 2.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": -0.52381,
+      "REI": 0.0,
+      "REI_c": 9.0909,
+      "correctness_ratio": 0.909089,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2015668238,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.0,
+        "n_i": 5,
+        "n_j": 5
+      },
+      "computed": {
+        "D_index": 1.0,
+        "n_i": 1.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 1.0,
+      "ground_truth_primary": 0.0,
+      "REI": 0.0,
+      "REI_c": 100.0,
+      "correctness_ratio": 10.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2047761338,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.692308,
+        "n_i": 2,
+        "n_j": 11
+      },
+      "computed_primary": null,
+      "ground_truth_primary": -0.692308,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2519129897,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.032258,
+        "n_i": 15,
+        "n_j": 16
+      },
+      "computed": {
+        "D_index": 1.0,
+        "n_i": 1.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 1.0,
+      "ground_truth_primary": -0.032258,
+      "REI": 0.0,
+      "REI_c": 100.0,
+      "correctness_ratio": 10.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2094314743,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.2,
+        "n_i": 4,
+        "n_j": 6
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.2,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2009871133,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.826087,
+        "n_i": 2,
+        "n_j": 21
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.826087,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2045596266,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.733333,
+        "n_i": 2,
+        "n_j": 13
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.733333,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2509610189,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.5,
+        "n_i": 1,
+        "n_j": 3
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 2.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": -0.5,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2006689444,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 3
+      },
+      "computed_primary": null,
+      "ground_truth_primary": -1.0,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 3129414735,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 1.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1480738048,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.6,
+        "n_i": 4,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.6,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2103676147,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 9,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 3094518141,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 2
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2096403717,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.506849,
+        "n_i": 36,
+        "n_j": 110
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.506849,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2085999436,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.52381,
+        "n_i": 16,
+        "n_j": 5
+      },
+      "computed": {
+        "D_index": 0.3333333333333333,
+        "n_i": 2.0,
+        "n_j": 1.0
+      },
+      "computed_primary": 0.3333333333333333,
+      "ground_truth_primary": 0.52381,
+      "REI": 0.0,
+      "REI_c": 3.6364,
+      "correctness_ratio": 0.363637,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2171629370,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.069767,
+        "n_i": 23,
+        "n_j": 20
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 0.069767,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2033283704,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 1
+      },
+      "computed_primary": null,
+      "ground_truth_primary": -1.0,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2058895626,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.857143,
+        "n_i": 2,
+        "n_j": 26
+      },
+      "computed_primary": null,
+      "ground_truth_primary": -0.857143,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1921017389,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.272727,
+        "n_i": 4,
+        "n_j": 7
+      },
+      "computed": {
+        "D_index": -0.2727272727272727,
+        "n_i": 4.0,
+        "n_j": 7.0
+      },
+      "computed_primary": -0.2727272727272727,
+      "ground_truth_primary": -0.272727,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 1e-06,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2033004746,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.578947,
+        "n_i": 4,
+        "n_j": 15
+      },
+      "computed": {
+        "D_index": -0.7142857142857143,
+        "n_i": 1.0,
+        "n_j": 6.0
+      },
+      "computed_primary": -0.7142857142857143,
+      "ground_truth_primary": -0.578947,
+      "REI": 0.0,
+      "REI_c": 2.3377,
+      "correctness_ratio": 0.233767,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2105742987,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 13
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2330136130,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 1,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 1902852561,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.446809,
+        "n_i": 13,
+        "n_j": 34
+      },
+      "computed_primary": null,
+      "ground_truth_primary": -0.446809,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2078741875,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.333333,
+        "n_i": 2,
+        "n_j": 4
+      },
+      "computed_primary": null,
+      "ground_truth_primary": -0.333333,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2413219222,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.2,
+        "n_i": 3,
+        "n_j": 2
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.2,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2000625356,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.6,
+        "n_i": 60,
+        "n_j": 15
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 0.6,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2169370736,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.333333,
+        "n_i": 16,
+        "n_j": 32
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 1.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": -0.333333,
+      "REI": 0.0,
+      "REI_c": 20.0,
+      "correctness_ratio": 2.000003,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2025255292,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 1,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 1.0,
+        "n_i": 1.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 1.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2052155916,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.285714,
+        "n_i": 10,
+        "n_j": 18
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.285714,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2076721693,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.692308,
+        "n_i": 11,
+        "n_j": 2
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.692308,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2110888434,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.347826,
+        "n_i": 31,
+        "n_j": 15
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 1.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": 0.347826,
+      "REI": 0.0,
+      "REI_c": 38.75,
+      "correctness_ratio": 3.875001,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2964584023,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 3
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 1.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2163571608,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 3
+      },
+      "computed_primary": null,
+      "ground_truth_primary": -1.0,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1967766964,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 1.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2956548085,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 1.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2911400593,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 1,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 1.0,
+        "n_i": 1.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 1.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2103608744,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 4,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2169745702,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 4,
+        "n_j": 0
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 1.0,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "unknown",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2047108401,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.333333,
+        "n_i": 24,
+        "n_j": 12
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 4.0,
+        "n_j": 4.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.333333,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2103081747,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.6,
+        "n_i": 20,
+        "n_j": 5
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.6,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 3087782972,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 2,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 1.0,
+        "n_i": 2.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 1.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2135090537,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.818182,
+        "n_i": 1,
+        "n_j": 10
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 1.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": -0.818182,
+      "REI": 0.0,
+      "REI_c": 2.2222,
+      "correctness_ratio": 0.222222,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2885711225,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 1,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2125428603,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.0,
+        "n_i": 4,
+        "n_j": 4
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2474713743,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 1,
+        "n_j": 0
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 1.0,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2046339265,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.4,
+        "n_i": 21,
+        "n_j": 9
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 0.4,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2028470519,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.492063,
+        "n_i": 47,
+        "n_j": 16
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 0.492063,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2034810251,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.090909,
+        "n_i": 10,
+        "n_j": 12
+      },
+      "computed": {
+        "D_index": 1.0,
+        "n_i": 1.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 1.0,
+      "ground_truth_primary": -0.090909,
+      "REI": 0.0,
+      "REI_c": 100.0,
+      "correctness_ratio": 10.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2598188102,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 1,
+        "n_j": 0
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 1.0,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2439580280,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.6,
+        "n_i": 1,
+        "n_j": 4
+      },
+      "computed_primary": null,
+      "ground_truth_primary": -0.6,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2505774855,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.333333,
+        "n_i": 1,
+        "n_j": 2
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.333333,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2913923180,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1831538758,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 1,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 3000206092,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 1.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2773319064,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 1,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2108836903,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.538462,
+        "n_i": 3,
+        "n_j": 10
+      },
+      "computed": {
+        "D_index": 1.0,
+        "n_i": 1.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 1.0,
+      "ground_truth_primary": -0.538462,
+      "REI": 0.0,
+      "REI_c": 28.5714,
+      "correctness_ratio": 2.857141,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2037474496,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 5
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2023072473,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.6,
+        "n_i": 8,
+        "n_j": 2
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 0.6,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2023884001,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.5,
+        "n_i": 3,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 1.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": 0.5,
+      "REI": 0.0,
+      "REI_c": 30.0,
+      "correctness_ratio": 3.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2029163594,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.777778,
+        "n_i": 1,
+        "n_j": 8
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.777778,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1981119372,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 2,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2045752222,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.0,
+        "n_i": 6,
+        "n_j": 6
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1490716986,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.8,
+        "n_i": 9,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": 0.8,
+        "n_i": 9.0,
+        "n_j": 1.0
+      },
+      "computed_primary": 0.8,
+      "ground_truth_primary": 0.8,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 3014694217,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1965434130,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.2,
+        "n_i": 12,
+        "n_j": 8
+      },
+      "computed": {
+        "D_index": -0.6,
+        "n_i": 1.0,
+        "n_j": 4.0
+      },
+      "computed_primary": -0.6,
+      "ground_truth_primary": 0.2,
+      "REI": 0.0,
+      "REI_c": 40.0,
+      "correctness_ratio": 4.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1489589819,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.428571,
+        "n_i": 4,
+        "n_j": 10
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.428571,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2031795328,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.692308,
+        "n_i": 22,
+        "n_j": 4
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 0.692308,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1993719982,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 1,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2033333294,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 4,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 1.0,
+        "n_i": 5.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 1.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2508326151,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.6,
+        "n_i": 4,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.6,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2602673918,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 2,
+        "n_j": 0
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 1.0,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2995394879,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.2,
+        "n_i": 3,
+        "n_j": 2
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 0.2,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2066871138,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.6,
+        "n_i": 4,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.6,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2519416439,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.333333,
+        "n_i": 1,
+        "n_j": 2
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.333333,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 1978010712,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 3,
+        "n_j": 0
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 1.0,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2011712222,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 5,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 1.0,
+        "n_i": 1.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 1.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2147533670,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2033522108,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.652174,
+        "n_i": 19,
+        "n_j": 4
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.652174,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1571419078,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 2,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2003756714,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.5,
+        "n_i": 1,
+        "n_j": 3
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.5,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 3000178428,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.0,
+        "n_i": 1,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2155295967,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.066667,
+        "n_i": 8,
+        "n_j": 7
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 0.066667,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1553188428,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.666667,
+        "n_i": 1,
+        "n_j": 5
+      },
+      "computed": {
+        "D_index": -1.0,
+        "n_i": 0.0,
+        "n_j": 1.0
+      },
+      "computed_primary": -1.0,
+      "ground_truth_primary": -0.666667,
+      "REI": 0.0,
+      "REI_c": 5.0,
+      "correctness_ratio": 0.499999,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2000922567,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.333333,
+        "n_i": 2,
+        "n_j": 1
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 0.333333,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2148324781,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.923077,
+        "n_i": 25,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.923077,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2057576259,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.666667,
+        "n_i": 1,
+        "n_j": 5
+      },
+      "computed_primary": null,
+      "ground_truth_primary": -0.666667,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2066204782,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 1,
+        "n_j": 0
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 1.0,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1967835237,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.5,
+        "n_i": 1,
+        "n_j": 3
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -0.5,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "FAILED",
+      "paper_id": 2047720611,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.428571,
+        "n_i": 5,
+        "n_j": 2
+      },
+      "computed_primary": null,
+      "ground_truth_primary": 0.428571,
+      "REI": 3.0,
+      "REI_c": 3.0,
+      "correctness_ratio": null,
+      "is_silent_failure": false,
+      "error_types": [
+        "runtime",
+        "runtime",
+        "runtime",
+        "runtime"
+      ],
+      "fix_count": 4
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2099950032,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 1.0,
+        "n_i": 2,
+        "n_j": 0
+      },
+      "computed": {
+        "D_index": 1.0,
+        "n_i": 1.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 1.0,
+      "ground_truth_primary": 1.0,
+      "REI": 0.0,
+      "REI_c": 0.0,
+      "correctness_ratio": 0.0,
+      "is_silent_failure": false,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 1988016604,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.6,
+        "n_i": 8,
+        "n_j": 2
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 1.0,
+        "n_j": 1.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.6,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2066147004,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -1.0,
+        "n_i": 0,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": -1.0,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2010982089,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": 0.6,
+        "n_i": 4,
+        "n_j": 1
+      },
+      "computed": {
+        "D_index": 0.0,
+        "n_i": 0.0,
+        "n_j": 0.0
+      },
+      "computed_primary": 0.0,
+      "ground_truth_primary": 0.6,
+      "REI": 0.0,
+      "REI_c": 10.0,
+      "correctness_ratio": 1.0,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    },
+    {
+      "status": "SUCCESS",
+      "paper_id": 2061565106,
+      "metric_type": "disruption",
+      "ground_truth": {
+        "D_index": -0.384615,
+        "n_i": 4,
+        "n_j": 9
+      },
+      "computed": {
+        "D_index": 0.18181818181818182,
+        "n_i": 13.0,
+        "n_j": 9.0
+      },
+      "computed_primary": 0.18181818181818182,
+      "ground_truth_primary": -0.384615,
+      "REI": 0.0,
+      "REI_c": 14.7273,
+      "correctness_ratio": 1.472728,
+      "is_silent_failure": true,
+      "error_types": [],
+      "fix_count": 0
+    }
+  ]
+}

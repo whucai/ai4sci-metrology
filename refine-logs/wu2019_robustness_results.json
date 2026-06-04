@@ -1,0 +1,50 @@
+{
+  "reframed_as": "Cross-dataset robustness check of Wu et al. (2019)",
+  "data_source": "SciSciNet (Microsoft Academic Graph, 2.46M papers)",
+  "original_data": "Web of Science (42M papers)",
+  "primary": {
+    "small_team_mean": 0.00603,
+    "large_team_mean": 0.00053,
+    "small_team_std": 0.06106,
+    "large_team_std": 0.03864,
+    "small_team_count": 1105007,
+    "large_team_count": 495826,
+    "difference": 0.0055,
+    "mannwhitney_u_stat": 306169030970.5,
+    "mannwhitney_p": 0.0,
+    "significant": "True"
+  },
+  "bootstrap_95ci": {
+    "lower": 0.005345,
+    "upper": 0.005657,
+    "mean": 0.0055
+  },
+  "cohens_d": 0.0998,
+  "cohens_d_interpretation": "negligible",
+  "tost": {
+    "equivalence_concluded": "True",
+    "p_low": 0.0,
+    "p_high": 0.0,
+    "margin": 0.01,
+    "observed_diff": 0.005499
+  },
+  "level3_field_trend": {
+    "n_fields": 275,
+    "positive_fraction": 0.9527,
+    "spearman_rho_vs_expected": 0.0,
+    "p_value": 1.0,
+    "mean_difference": 0.005559,
+    "median_difference": 0.004506
+  },
+  "level3_year_trend": {
+    "n_years": 74,
+    "year_range": "1949-2022",
+    "spearman_rho_year_vs_diff": -0.3593,
+    "p_value": 0.001666,
+    "interpretation": "declining small-team advantage",
+    "early_mean_diff": 0.004111,
+    "late_mean_diff": 0.002466,
+    "late_vs_early_ratio": 0.5998
+  },
+  "conclusion": "Direction and statistical significance of Wu et al. (2019) confirmed across datasets. Effect size is much smaller in SciSciNet (Cohen's d=0.0998 vs ~0.35 in original), consistent with different citation graph coverage. The qualitative claim 'small teams disrupt more than large teams' is robust to dataset choice, but the numeric estimates are dataset-dependent."
+}

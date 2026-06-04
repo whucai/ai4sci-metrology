@@ -1,0 +1,140 @@
+======================================================================
+MULTI-PAPER BENCHMARK — Disruption Index (D)
+  Papers: 100, Max fixes: 3
+======================================================================
+  LLM: ChatOpenAI
+
+Loading SciSciNet...
+  Papers: 111,927, Citations: 78,417,834
+
+Sampling 100 papers...
+  Selected 100 papers
+
+  [1/100] Paper 2013368152... ✓ SUCCESS REI=3.0  [ETA: 0s]
+  [2/100] Paper 2066668100... ✓ SUCCESS REI=0.0  [ETA: 981s]
+  [3/100] Paper 2065039955... ✗ FAILED REI=3.0  [ETA: 965s]
+  [4/100] Paper 2003924215... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1708s]
+  [5/100] Paper 2436609398... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1631s]
+  [6/100] Paper 1974570173... ✓ SUCCESS REI=3.0  [ETA: 1503s]
+  [7/100] Paper 1980798939... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1514s]
+  [8/100] Paper 2015668238... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1502s]
+  [9/100] Paper 2047761338... ✗ FAILED REI=3.0  [ETA: 1427s]
+  [10/100] Paper 2519129897... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1617s]
+  [11/100] Paper 2094314743... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1545s]
+  [12/100] Paper 2009871133... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1475s]
+  [13/100] Paper 2045596266... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1419s]
+  [14/100] Paper 2509610189... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1363s]
+  [15/100] Paper 2006689444... ✗ FAILED REI=3.0  [ETA: 1311s]
+  [16/100] Paper 3129414735... ✓ SUCCESS REI=0.0  [ETA: 1416s]
+  [17/100] Paper 1480738048... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1361s]
+  [18/100] Paper 2103676147... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1308s]
+  [19/100] Paper 3094518141... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1263s]
+  [20/100] Paper 2096403717... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1219s]
+  [21/100] Paper 2085999436... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1215s]
+  [22/100] Paper 2171629370... ✗ FAILED REI=3.0  [ETA: 1190s]
+  [23/100] Paper 2033283704... ✗ FAILED REI=3.0  [ETA: 1260s]
+  [24/100] Paper 2058895626... ✗ FAILED REI=3.0  [ETA: 1323s]
+  [25/100] Paper 1921017389... ✓ SUCCESS REI=0.0  [ETA: 1383s]
+  [26/100] Paper 2033004746... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1345s]
+  [27/100] Paper 2105742987... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1309s]
+  [28/100] Paper 2330136130... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1271s]
+  [29/100] Paper 1902852561... ✗ FAILED REI=3.0  [ETA: 1231s]
+  [30/100] Paper 2078741875... ✗ FAILED REI=3.0  [ETA: 1267s]
+  [31/100] Paper 2413219222... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1292s]
+  [32/100] Paper 2000625356... ✗ FAILED REI=3.0  [ETA: 1254s]
+  [33/100] Paper 2169370736... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1283s]
+  [34/100] Paper 2025255292... ✓ SUCCESS REI=0.0  [ETA: 1252s]
+  [35/100] Paper 2052155916... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1215s]
+  [36/100] Paper 2076721693... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1184s]
+  [37/100] Paper 2110888434... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1153s]
+  [38/100] Paper 2964584023... ✓ SUCCESS REI=0.0  [ETA: 1126s]
+  [39/100] Paper 2163571608... ✗ FAILED REI=3.0  [ETA: 1095s]
+  [40/100] Paper 1967766964... ✓ SUCCESS REI=0.0  [ETA: 1105s]
+  [41/100] Paper 2956548085... ✓ SUCCESS REI=0.0  [ETA: 1073s]
+  [42/100] Paper 2911400593... ✓ SUCCESS REI=0.0  [ETA: 1041s]
+  [43/100] Paper 2103608744... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 1012s]
+  [44/100] Paper 2169745702... ✗ FAILED REI=3.0  [ETA: 985s]
+  [45/100] Paper 2047108401... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 991s]
+  [46/100] Paper 2103081747... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 966s]
+  [47/100] Paper 3087782972... ✓ SUCCESS REI=0.0  [ETA: 941s]
+  [48/100] Paper 2135090537... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 914s]
+  [49/100] Paper 2885711225... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 889s]
+  [50/100] Paper 2125428603... ✓ SUCCESS REI=0.0  [ETA: 861s]
+  [51/100] Paper 2474713743... ✗ FAILED REI=3.0  [ETA: 838s]
+  [52/100] Paper 2046339265... ✗ FAILED REI=3.0  [ETA: 838s]
+  [53/100] Paper 2028470519... ✗ FAILED REI=3.0  [ETA: 838s]
+  [54/100] Paper 2034810251... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 842s]
+  [55/100] Paper 2598188102... ✗ FAILED REI=3.0  [ETA: 818s]
+  [56/100] Paper 2439580280... ✗ FAILED REI=3.0  [ETA: 814s]
+  [57/100] Paper 2505774855... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 810s]
+  [58/100] Paper 2913923180... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 784s]
+  [59/100] Paper 1831538758... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 758s]
+  [60/100] Paper 3000206092... ✓ SUCCESS REI=0.0  [ETA: 733s]
+  [61/100] Paper 2773319064... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 709s]
+  [62/100] Paper 2108836903... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 685s]
+  [63/100] Paper 2037474496... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 664s]
+  [64/100] Paper 2023072473... ✗ FAILED REI=3.0  [ETA: 641s]
+  [65/100] Paper 2023884001... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 635s]
+  [66/100] Paper 2029163594... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 613s]
+  [67/100] Paper 1981119372... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 591s]
+  [68/100] Paper 2045752222... ✓ SUCCESS REI=0.0  [ETA: 569s]
+  [69/100] Paper 1490716986... ✓ SUCCESS REI=0.0  [ETA: 548s]
+  [70/100] Paper 3014694217... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 527s]
+  [71/100] Paper 1965434130... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 506s]
+  [72/100] Paper 1489589819... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 486s]
+  [73/100] Paper 2031795328... ✗ FAILED REI=3.0  [ETA: 466s]
+  [74/100] Paper 1993719982... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 458s]
+  [75/100] Paper 2033333294... ✓ SUCCESS REI=0.0  [ETA: 437s]
+  [76/100] Paper 2508326151... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 417s]
+  [77/100] Paper 2602673918... ✗ FAILED REI=3.0  [ETA: 397s]
+  [78/100] Paper 2995394879... ✗ FAILED REI=3.0  [ETA: 386s]
+  [79/100] Paper 2066871138... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 373s]
+  [80/100] Paper 2519416439... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 353s]
+  [81/100] Paper 1978010712... ✗ FAILED REI=3.0  [ETA: 333s]
+  [82/100] Paper 2011712222... ✓ SUCCESS REI=0.0  [ETA: 320s]
+  [83/100] Paper 2147533670... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 301s]
+  [84/100] Paper 2033522108... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 281s]
+  [85/100] Paper 1571419078... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 263s]
+  [86/100] Paper 2003756714... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 244s]
+  [87/100] Paper 3000178428... ✓ SUCCESS REI=0.0  [ETA: 225s]
+  [88/100] Paper 2155295967... ✗ FAILED REI=3.0  [ETA: 207s]
+  [89/100] Paper 1553188428... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 192s]
+  [90/100] Paper 2000922567... ✗ FAILED REI=3.0  [ETA: 174s]
+  [91/100] Paper 2148324781... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 158s]
+  [92/100] Paper 2057576259... ✗ FAILED REI=3.0  [ETA: 140s]
+  [93/100] Paper 2066204782... ✗ FAILED REI=3.0  [ETA: 124s]
+  [94/100] Paper 1967835237... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 108s]
+  [95/100] Paper 2047720611... ✗ FAILED REI=3.0  [ETA: 89s]
+  [96/100] Paper 2099950032... ✓ SUCCESS REI=0.0  [ETA: 73s]
+  [97/100] Paper 1988016604... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 54s]
+  [98/100] Paper 2066147004... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 36s]
+  [99/100] Paper 2010982089... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 18s]
+  [100/100] Paper 2061565106... ✓ SUCCESS REI=0.0 ⚠️SILENT  [ETA: 0s]
+
+======================================================================
+BENCHMARK RESULTS — Disruption Index (D)
+======================================================================
+
+  Papers attempted: 100
+  SUCCESS: 74 (74%)
+  FAILED: 26
+  SKIPPED: 0
+  Total time: 1787s (17.9s/paper)
+
+  REI: mean=0.84, median=0.0, min=0.0, max=3.0
+  REI-c: mean=10.92, median=10.0, min=0.0, max=100.0
+
+  ⚠️  SILENT FAILURES: 55/74 successful papers have WRONG D_index
+     (code ran without errors, but metric is numerically incorrect)
+
+  D_index mean abs dev: 0.573980
+  D_index max abs dev: 1.538462
+  Exact match: 13/69
+
+  Error type distribution: {'runtime': 105, 'unknown': 1}
+
+Results saved to /mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/benchmark_disruption.json
+'(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /datasets/cssi/SciSciGPT-SciSciNet/resolve/main/papers/shard_00.parquet (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1016)')))"), '(Request ID: 6fde0391-a05a-4a0e-8c4d-dd469f008d65)')' thrown while requesting HEAD https://huggingface.co/datasets/cssi/SciSciGPT-SciSciNet/resolve/main/papers/shard_00.parquet
+Retrying in 1s [Retry 1/5].
+
+

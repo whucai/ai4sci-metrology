@@ -1,0 +1,94 @@
+{
+  "tiers": {
+    "easy": {
+      "n_papers": 1136,
+      "mean_difficulty": 0.2251,
+      "mean_citation_count": 176.5,
+      "mean_reference_count": 1.6,
+      "mean_abs_disruption": 0.6974,
+      "mean_disruption": 0.51854,
+      "theoretical_REI": 1.13
+    },
+    "medium": {
+      "n_papers": 171799,
+      "mean_difficulty": 0.6202,
+      "mean_citation_count": 68.1,
+      "mean_reference_count": 21.4,
+      "mean_abs_disruption": 0.01799,
+      "mean_disruption": 0.00598,
+      "theoretical_REI": 3.1
+    },
+    "hard": {
+      "n_papers": 191075,
+      "mean_difficulty": 0.7352,
+      "mean_citation_count": 11.9,
+      "mean_reference_count": 38.5,
+      "mean_abs_disruption": 0.00197,
+      "mean_disruption": -0.0003,
+      "theoretical_REI": 3.68
+    }
+  },
+  "correlation": {
+    "spearman_rho": -0.596,
+    "p_value": 0.0,
+    "interpretation": "Negative correlation expected: harder papers have D near zero"
+  },
+  "criterion_met": "True",
+  "total_papers": 364010,
+  "sampled_for_LLM": [
+    {
+      "paper_id": 3125832339,
+      "tier": "easy",
+      "difficulty": 0.2024,
+      "D": 0.71622
+    },
+    {
+      "paper_id": 1985132746,
+      "tier": "easy",
+      "difficulty": 0.1974,
+      "D": 0.83333
+    },
+    {
+      "paper_id": 150677383,
+      "tier": "easy",
+      "difficulty": 0.0403,
+      "D": -1.0
+    },
+    {
+      "paper_id": 1511768140,
+      "tier": "medium",
+      "difficulty": 0.3579,
+      "D": 0.43636
+    },
+    {
+      "paper_id": 2029792949,
+      "tier": "medium",
+      "difficulty": 0.6426,
+      "D": -0.00082
+    },
+    {
+      "paper_id": 2434100867,
+      "tier": "medium",
+      "difficulty": 0.6422,
+      "D": -0.0026
+    },
+    {
+      "paper_id": 2020638819,
+      "tier": "hard",
+      "difficulty": 0.6748,
+      "D": -0.00052
+    },
+    {
+      "paper_id": 2036429156,
+      "tier": "hard",
+      "difficulty": 0.6877,
+      "D": -0.00058
+    },
+    {
+      "paper_id": 2061074467,
+      "tier": "hard",
+      "difficulty": 0.6849,
+      "D": -0.0125
+    }
+  ]
+}

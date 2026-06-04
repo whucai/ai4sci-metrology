@@ -1,0 +1,35 @@
+{
+  "status": "SUCCESS",
+  "REI": 3.0,
+  "fix_iterations": 1,
+  "error_types": [
+    "runtime"
+  ],
+  "parsed_metrics": {
+    "mean_d_solo": 0.37,
+    "mean_d_small": 0.36,
+    "mean_d_medium": 0.35,
+    "mean_d_large": 0.35
+  },
+  "attempts": [
+    {
+      "attempt": 0,
+      "exit_code": 1,
+      "has_error": true,
+      "stderr_preview": "Traceback (most recent call last):\n  File \"/tmp/sandbox_va275ane/script.py\", line 49, in <module>\n    mean, lower, upper = bootstrap_mean_ci(scores)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^\n",
+      "stdout_preview": ""
+    },
+    {
+      "attempt": 1,
+      "exit_code": 0,
+      "has_error": false,
+      "stderr_preview": "",
+      "stdout_preview": "MEAN_D_SOLO = 0.37\nMEAN_D_SMALL = 0.36\nMEAN_D_MEDIUM = 0.35\nMEAN_D_LARGE = 0.35\n"
+    }
+  ],
+  "paper_title": "Large teams develop and small teams disrupt science and technology",
+  "env_info": {
+    "python_version": "Python 3.11.15",
+    "top_packages": ""
+  }
+}
