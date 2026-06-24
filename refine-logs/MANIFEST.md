@@ -31,3 +31,9 @@
 - scripts/ecrf_v1_scorer.py — v1 weights + 5 execution-evidence gates + refined B2 + R132-lite B1
 - refine-logs/r100/r100b_v1_rescore.json — v0/v1 comparison
 - R100B_REPORT.md — v0=0.792 -> v1=0.490 (IO1 now LOW); 3/3 B1 CONFIRMED; R101 may start
+
+## R101 (mini Study 2 IO2) — 2026-06-24
+- scripts/run_v72_pilot.py — extended for IO2 (docs+raw_data into workdir, IO2 prompt)
+- scripts/r101_analysis.py — IO2 v1 scoring + IO1 comparison + result-line classifier
+- refine-logs/r101/ — 10 IO2 run JSONs + responses + r101_v1_rescore.json
+- R101_REPORT.md — 10/10 isolated; overall 0.483 (flat vs IO1); Result UP; gate-c no misfire; scorer fixes needed before R102

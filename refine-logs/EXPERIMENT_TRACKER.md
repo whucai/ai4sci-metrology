@@ -88,7 +88,7 @@
 |--------|-----------|-------|---------|--------|-------|---------|----------|--------|
 | R100 | P1 | S2 | Mini pilot — IO₁ | 5 papers × IO₁ × 2 models (qwen3-32b, deepseek-v4-pro) | 10 runs DONE | ECRF v0 (R100) + v1 rescoring (R100b). v0=0.79 -> v1=0.49 (IO1 now LOW). See `R100_REPORT.md` + `R100B_REPORT.md` | MUST | DONE |
 | R100b | P1 | S2 | ECRF v1 rescoring + B1 adjudication | existing 10 R100 outputs, no new runs | — | v1 weights+gates; 3/3 B1 CONFIRMED. See `R100B_REPORT.md` | MUST | DONE |
-| R101 | P1 | S2 | Mini pilot — IO₂ | 5 papers × IO₂ × 2 models | 5 pilot | Per-component ECRF | MUST | BLOCKED — needs ECRF v1 scorer (R100 showed v0 ceiling-inflated) |
+| R101 | P1 | S2 | Mini pilot — IO₂ | 5 papers × IO₂ × 2 models (qwen3-32b, deepseek-v4-pro) | 10 runs DONE | ECRF v1: overall 0.483 (vs IO1 0.490, flat); Result 0.35->0.40 UP; gate-c no misfire. See `R101_REPORT.md` | MUST | DONE (criterion partial) |
 | R102 | P1 | S2 | Mini pilot — IO₃ | 5 papers × IO₃ × 2 models | 5 pilot | Per-component ECRF | MUST | BLOCKED — same as R101 |
 | R103 | P1 | S2 | Mini-pilot green-light gate | Aggregate R100–R102 | 30 runs | 4 gates (below) | MUST | TODO |
 

@@ -1,0 +1,306 @@
+[
+  {
+    "paper": "arts2021",
+    "model": "deepseek-v4-pro",
+    "io": 2,
+    "v1": {
+      "components": {
+        "data_source": 0.5,
+        "sample": 0.0,
+        "indicator": 1.0,
+        "model": 0.5,
+        "result": 0.0,
+        "claim": 1.0
+      },
+      "weighted": 0.4,
+      "final_ecrf": 0.4,
+      "caps_applied": [
+        [
+          "b result=0",
+          0.55
+        ],
+        [
+          "c synthetic-substitute",
+          0.5
+        ],
+        [
+          "d claim>0 result=0",
+          0.6
+        ]
+      ]
+    },
+    "io1_v1": 0.45
+  },
+  {
+    "paper": "arts2021",
+    "model": "qwen3-32b",
+    "io": 2,
+    "v1": {
+      "components": {
+        "data_source": 0.5,
+        "sample": 0.5,
+        "indicator": 1.0,
+        "model": 0.5,
+        "result": 0.0,
+        "claim": 1.0
+      },
+      "weighted": 0.475,
+      "final_ecrf": 0.475,
+      "caps_applied": [
+        [
+          "b result=0",
+          0.55
+        ],
+        [
+          "c synthetic-substitute",
+          0.5
+        ],
+        [
+          "d claim>0 result=0",
+          0.6
+        ]
+      ]
+    },
+    "io1_v1": 0.45
+  },
+  {
+    "paper": "bikard2013",
+    "model": "deepseek-v4-pro",
+    "io": 2,
+    "v1": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 0.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "result": 0.0,
+        "claim": 1.0
+      },
+      "weighted": 0.5,
+      "final_ecrf": 0.5,
+      "caps_applied": [
+        [
+          "b result=0",
+          0.55
+        ],
+        [
+          "c synthetic-substitute",
+          0.5
+        ],
+        [
+          "d claim>0 result=0",
+          0.6
+        ]
+      ]
+    },
+    "io1_v1": 0.5
+  },
+  {
+    "paper": "bikard2013",
+    "model": "qwen3-32b",
+    "io": 2,
+    "v1": {
+      "components": {
+        "data_source": 0.5,
+        "sample": 0.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "result": 0.0,
+        "claim": 1.0
+      },
+      "weighted": 0.45,
+      "final_ecrf": 0.45,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ],
+        [
+          "b result=0",
+          0.55
+        ],
+        [
+          "d claim>0 result=0",
+          0.6
+        ]
+      ]
+    },
+    "io1_v1": 0.5
+  },
+  {
+    "paper": "funk2017",
+    "model": "deepseek-v4-pro",
+    "io": 2,
+    "v1": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "result": 1.0,
+        "claim": 1.0
+      },
+      "weighted": 1.0,
+      "final_ecrf": 0.5,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ],
+        [
+          "c synthetic-substitute",
+          0.5
+        ]
+      ]
+    },
+    "io1_v1": 0.5
+  },
+  {
+    "paper": "funk2017",
+    "model": "qwen3-32b",
+    "io": 2,
+    "v1": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "result": 1.0,
+        "claim": 1.0
+      },
+      "weighted": 1.0,
+      "final_ecrf": 0.6,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ]
+      ]
+    },
+    "io1_v1": 0.5
+  },
+  {
+    "paper": "maddi2024",
+    "model": "deepseek-v4-pro",
+    "io": 2,
+    "v1": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "result": 1.0,
+        "claim": 1.0
+      },
+      "weighted": 1.0,
+      "final_ecrf": 0.5,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ],
+        [
+          "c synthetic-substitute",
+          0.5
+        ],
+        [
+          "e paper-numbers-as-computed",
+          0.5
+        ]
+      ]
+    },
+    "io1_v1": 0.5
+  },
+  {
+    "paper": "maddi2024",
+    "model": "qwen3-32b",
+    "io": 2,
+    "v1": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "result": 1.0,
+        "claim": 1.0
+      },
+      "weighted": 1.0,
+      "final_ecrf": 0.5,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ],
+        [
+          "c synthetic-substitute",
+          0.5
+        ],
+        [
+          "e paper-numbers-as-computed",
+          0.5
+        ]
+      ]
+    },
+    "io1_v1": 0.5
+  },
+  {
+    "paper": "petersen2024",
+    "model": "deepseek-v4-pro",
+    "io": 2,
+    "v1": {
+      "components": {
+        "data_source": 0.5,
+        "sample": 0.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "result": 0.0,
+        "claim": 1.0
+      },
+      "weighted": 0.45,
+      "final_ecrf": 0.45,
+      "caps_applied": [
+        [
+          "b result=0",
+          0.55
+        ],
+        [
+          "d claim>0 result=0",
+          0.6
+        ]
+      ]
+    },
+    "io1_v1": 0.5
+  },
+  {
+    "paper": "petersen2024",
+    "model": "qwen3-32b",
+    "io": 2,
+    "v1": {
+      "components": {
+        "data_source": 0.5,
+        "sample": 0.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "result": 0.0,
+        "claim": 1.0
+      },
+      "weighted": 0.45,
+      "final_ecrf": 0.45,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ],
+        [
+          "b result=0",
+          0.55
+        ],
+        [
+          "d claim>0 result=0",
+          0.6
+        ]
+      ]
+    },
+    "io1_v1": 0.5
+  }
+]
