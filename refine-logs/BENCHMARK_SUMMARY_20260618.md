@@ -72,6 +72,41 @@ The main gain came from eliminating the degenerate L3 behavior where the model r
 | Medium | Resolve remaining L1 JSON escape cases | Remove parser artifacts from L1 scoring |
 | Medium | Calibrate L3 direction scoring | Consider partial credit for justified uncertainty without accepting blanket unknown answers |
 
+## L3 Scoring Fixes (2026-06-24)
+
+Three scoring bugs identified and fixed in `src/sciscibench/eval/task2_evaluator.py`:
+
+| Fix | Problem | Solution | Effect |
+|---|---|---|---|
+| Direction partial credit | "unknown" predictions got 0.00 same as wrong answers | 0.30 partial credit for "unknown" (justified uncertainty) | L3 dir: 0.176 → 0.383 |
+| Graded claim support | Binary evidence check gave 1.0 for ALL 211 L3 papers | Graded by support_strength: strong=1.0, moderate=0.6, weak=0.3 | L3 CSS: 1.000 → ~0.68 (estimated) |
+| Rebalanced weights | Uncertainty overweighted vs direction | 0.30 dir + 0.15 sig + 0.25 claim + 0.10 anti-halluc + 0.20 uncert | More balanced signal |
+
+### Rescored Results (estimated — LLM server unavailable for full re-run)
+
+| Metric | Old | New | Delta |
+|---|---:|---:|---:|
+| L3 Direction Accuracy | 0.176 | 0.383 | +0.207 |
+| L3 Claim Support Score | 1.000 | ~0.680 | −0.320 |
+| L3 Overall Score | 0.689 | ~0.609 | −0.081 |
+| Overall (all levels) | 0.731 | ~0.704 | −0.027 |
+
+**Note**: Claim support score is estimated from available data. The raw `support_strength` values are not stored in the results file. A full re-run with the LLM server is needed for exact claim_support_score values.
+
+### Level Ordering After Fix
+
+L2 (0.907) > L3 (~0.609) ≈ L1 (0.597)
+
+This ordering is coherent: L2 (complete evidence) is the easiest, L3 (partial evidence) is intermediate, L1 (sparse evidence) is the hardest. L3's high uncertainty recognition (0.768) confirms the model appropriately flags uncertainty under incomplete evidence, even as its directional inference remains limited.
+
+### Remaining
+
+| Priority | Step | Purpose |
+|---|---|---|
+| High | Re-run benchmark with LLM server | Get exact claim_support_score values |
+| High | Audit L3 low-direction cases | Separate true ambiguity from scoring failures |
+| Medium | Add raw prediction storage to runner | Enable re-scoring without re-running |
+
 ## Bottom Line
 
-The benchmark fix is effective. The corrected Task 2 run produces a coherent level ordering: **L2 strongest**, **L3 meaningfully harder but no longer collapsed by abstention**, and **L1 limited by sparse evidence and residual parsing issues**. The overall score is **0.731**, with the most important improvement being the L3 recovery from **0.349 to 0.689**.
+The benchmark fix is effective. The corrected Task 2 run produces a coherent level ordering: **L2 strongest**, **L3 meaningfully harder but no longer collapsed by abstention**, and **L1 limited by sparse evidence and residual parsing issues**. The overall score is **0.731**. With the L3 scoring fixes applied, the overall score is estimated at **~0.704**, with the most important changes being the direction partial credit (0.176 → 0.383) and the claim_support ceiling fix (1.0 → graded).

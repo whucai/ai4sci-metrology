@@ -1,5 +1,9 @@
 # Research Wiki Log
 
+## 2026-06-24
+- `2026-06-24T00:00:00Z` protocol_revision: Task 2 L3 scoring protocol revised. The previous implementation produced a ceiling effect in claim support (1.000 for all 211 L3 papers) and treated cautious "unknown" predictions as fully incorrect in directional inference. The revised protocol introduces: (1) a direction calibration matrix with partial credit for tentative predictions (0.75) and justified uncertainty (0.25 for unknown when gold has directional signal), (2) graded evidence support (strong=1.0, moderate=0.6, weak=0.3), and (3) a rebalanced overall score including evidence anchoring and limitation awareness. See `BENCHMARK_SUMMARY_20260618.md` §L3 Scoring Fixes for details.
+- `2026-06-24T00:00:00Z` evaluator_enhancement: Added per-conclusion diagnostic fields (conclusion_details, support_strength_distribution, direction_commit_rate, direction_correct_when_committed) to L3 evaluator output for error taxonomy and ablation analysis.
+
 ## 2026-05-26
 - Wiki initialized- `2026-05-29T05:39:40Z` Wiki initialized
 - `2026-06-01T03:22:20Z` ingest_paper: ingested paper:freedman2024_detecting_scientific_fraud (arxiv:)
@@ -205,3 +209,12 @@ Prompt：`src/extraction/toulmin_prompt.py`
 - `2026-06-01T07:59:03Z` ingest_paper: ingested paper:authors2025_from_science_agentic (arxiv:)
 - `2026-06-01T07:59:06Z` ingest_paper: ingested paper:al2025_scireplicatebench_benchmarking_llms (arxiv:)
 - `2026-06-01T07:59:08Z` ingest_paper: ingested paper:li2024_mlrcopilot_autonomous_machine (arxiv:)
+- `2026-06-11T09:45:59Z` ingest_paper: ingested paper:wang2026_firebench_evaluating_agents (arxiv:2602.02905)
+- `2026-06-11T09:46:00Z` ingest_paper: ingested paper:lew2026_projectionbench_evaluating_scientific (arxiv:2605.30284)
+- `2026-06-11T09:46:00Z` ingest_paper: ingested paper:chen2024_scienceagentbench_toward_rigorous (arxiv:2410.05080)
+- `2026-06-11T09:46:01Z` ingest_paper: ingested paper:majumder2024_discoverybench_towards_datadriven (arxiv:2407.01725)
+- `2026-06-11T09:46:02Z` ingest_paper: ingested paper:lou2024_aaar10_assessing_ais (arxiv:2410.22394)
+- `2026-06-11T09:46:03Z` ingest_paper: ingested paper:siegel2024_corebench_fostering_credibility (arxiv:2409.11363)
+- `2026-06-11T09:46:04Z` ingest_paper: ingested paper:nguyen2026_replicatorbench_benchmarking_llm (arxiv:2602.11354)
+- `2026-06-11T09:46:05Z` ingest_paper: ingested paper:waltman2018_exploration_reproducibility_issues (arxiv:1804.05024)
+- `2026-06-11T09:46:06Z` ingest_paper: ingested paper:velden2018_exploration_reproducibility_issues (arxiv:1804.05026)
