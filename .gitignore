@@ -17,6 +17,11 @@ sciscigpt_repo/
 # local LiteLLM proxy config — contains plaintext API keys
 .litellm/
 
+# GCP / cloud service-account keys — never commit
+*service_account*.json
+psychic-binder-*.json
+*-sa.json
+
 # ARIS / Claude skill installs — symlinks into ~/下载, not project content
 .agents/
 .claude/skills/
