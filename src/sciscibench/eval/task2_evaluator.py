@@ -432,22 +432,49 @@ class Task2Evaluator:
 
     def evaluate_l3(self, gold: dict[str, Any], pred: dict[str, Any],
                     paper_id: str = "") -> Task2EvalResult:
-        """Evaluate L3: Partial Results → Uncertainty Recognition.
+        """Evaluate L3: Partial Results → Calibrated Inference.
 
-        The key metric is whether the agent says "insufficient evidence" when appropriate.
-        L3 uses a different output format (supported_conclusions vs conclusions).
+        Uses direction calibration scoring: tentative directions get partial credit,
+        unknown gets low credit when gold has a directional signal, and full
+        credit only when evidence is genuinely insufficient.
         """
-        # L3 prompt asks for supported_conclusions — normalize to conclusions for evaluate_l2
+        # --- Direction calibration matrix ---
+        # Score for (gold_dir, pred_dir) pairs
+        DIRECTION_SCORE = {
+            # Exact matches
+            ("positive", "positive"): 1.0,
+            ("negative", "negative"): 1.0,
+            # Tentative matches (correct sign, appropriate uncertainty)
+            ("positive", "tentative_positive"): 0.75,
+            ("negative", "tentative_negative"): 0.75,
+            ("null", "tentative_positive"): 0.50,
+            ("null", "tentative_negative"): 0.50,
+            ("null", "unknown"): 1.0,  # null effect correctly identified
+            # Unknown/avoidance penalties
+            ("positive", "unknown"): 0.25,
+            ("negative", "unknown"): 0.25,
+            ("null", "positive"): 0.0,
+            ("null", "negative"): 0.0,
+            # Direction reversal
+            ("positive", "negative"): 0.0,
+            ("positive", "tentative_negative"): 0.10,
+            ("negative", "positive"): 0.0,
+            ("negative", "tentative_positive"): 0.10,
+        }
+
+        # Normalize prompt output format
         pred_output = pred.get("output", {})
         if "supported_conclusions" in pred_output and "conclusions" not in pred_output:
             pred_output = dict(pred_output)
+            sc_list = pred_output.get("supported_conclusions", [])
             pred_output["conclusions"] = [
                 {"claim": sc.get("claim", ""),
-                 "direction": self._extract_direction(sc.get("claim", "")),
+                 "direction": sc.get("direction", "unknown"),
                  "significance": sc.get("support_strength", "unknown"),
                  "support_level": sc.get("support_strength", "weak"),
-                 "evidence": sc.get("missing_evidence", "")}
-                for sc in pred_output.get("supported_conclusions", [])
+                 "evidence": sc.get("missing_evidence", sc.get("evidence_anchor", "")),
+                 "_support_strength": sc.get("support_strength", "weak")}
+                for sc in sc_list
             ]
             pred = dict(pred)
             pred["output"] = pred_output
@@ -456,7 +483,85 @@ class Task2Evaluator:
         result.level = "L3"
         pred_output = pred.get("output", {})
 
-        # --- Uncertainty Recognition (L3-specific) ---
+        # --- L3 Calibrated Direction Scoring ---
+        # Get gold directions and predicted directions, score via matrix
+        gold_dirs = []
+        for c in gold.get("result_claims", gold.get("conclusion_claims", [])):
+            gold_dirs.append(self._parse_gold_direction(c))
+        if not gold_dirs:
+            gold_dirs = ["unknown"]  # fallback
+
+        pred_claims = pred_output.get("conclusions", [])
+        pred_dirs = [
+            pc.get("direction", "unknown") if isinstance(pc, dict) else "unknown"
+            for pc in pred_claims
+        ]
+
+        dir_total = 0.0
+        dir_count = 0
+        dir_details = []
+        for i, gd in enumerate(gold_dirs):
+            pd = pred_dirs[i] if i < len(pred_dirs) else "unknown"
+            score = DIRECTION_SCORE.get((gd, pd), 0.0)
+            dir_total += score
+            dir_count += 1
+            dir_details.append({
+                "gold_direction": gd,
+                "pred_direction": pd,
+                "score": score,
+            })
+
+        result.direction_accuracy = dir_total / max(dir_count, 1)
+        result.direction_detail.details = dir_details
+        result.direction_detail.correct = sum(1 for d in dir_details if d["score"] >= 0.75)
+        result.direction_detail.total = dir_count
+
+        # --- L3 Graded Claim Support ---
+        strength_weight = {"strong": 1.0, "moderate": 0.6, "weak": 0.3}
+        graded_support = 0.0
+        l3_conclusions = pred_output.get("conclusions", [])
+        for pc in l3_conclusions:
+            if isinstance(pc, dict):
+                ss = pc.get("_support_strength", "weak")
+                graded_support += strength_weight.get(ss, 0.0)
+        result.claim_support_score = graded_support / max(len(l3_conclusions), 1)
+        result.claim_support_detail["graded_by_support_strength"] = True
+
+        # --- L3 Limitation Awareness ---
+        # New prompt v2 requires limitation per claim — extract and compare
+        gold_lims = gold.get("limitations", [])
+        pred_lims_raw = []
+        for pc in pred_claims:
+            if isinstance(pc, dict):
+                lim = pc.get("limitation", pred_output.get("limitations", ""))
+                if lim and isinstance(lim, str):
+                    pred_lims_raw.append(lim)
+        if not pred_lims_raw:
+            pred_lims_raw = pred_output.get("limitations", [])
+            if isinstance(pred_lims_raw, str):
+                pred_lims_raw = [pred_lims_raw]
+            elif isinstance(pred_lims_raw, dict):
+                pred_lims_raw = list(pred_lims_raw.values())
+
+        lim_matches = sum(
+            1 for gl in gold_lims
+            if any(_semantic_overlap(gl, str(pl)) >= 0.12 for pl in pred_lims_raw)
+        )
+        result.limitation_awareness = lim_matches / max(len(gold_lims), 1)
+        result.limitation_detail = {
+            "gold_limitations": gold_lims,
+            "pred_limitations": [str(p)[:100] for p in pred_lims_raw[:5]],
+            "matches_found": lim_matches,
+        }
+
+        # --- Evidence Anchor Check ---
+        # Each conclusion must have a non-empty evidence_anchor
+        sc_list = pred_output.get("supported_conclusions", [])
+        anchored = sum(
+            1 for sc in sc_list
+            if isinstance(sc, dict) and len(sc.get("evidence_anchor", "").strip()) > 10
+        )
+        evidence_anchor_rate = anchored / max(len(sc_list), 1)
         # Two-sided: reward appropriate uncertainty, penalize blanket abstention.
         # The optimal strategy is to make correct specific claims when evidence
         # supports them AND flag uncertainty when evidence is missing.
@@ -514,30 +619,28 @@ class Task2Evaluator:
         result.uncertainty_detail = ur_detail
 
         # --- Claim Specificity (L3 anti-template measure) ---
-        # Templates use generic language. Real models mention paper-specific variables.
-        # Uses word-level matching (e.g., "team_size" matches "team size").
         l3_claim_text = " ".join(
             c.get("claim", "") if isinstance(c, dict) else str(c)
             for c in supported_claims
         )
         claim_specificity = _variable_specificity(l3_claim_text, gold)
         result.claim_support_detail["l3_specificity"] = claim_specificity
+        result.claim_support_detail["evidence_anchor_rate"] = evidence_anchor_rate
 
-        # Re-weight overall for L3: uncertainty recognition is still important
-        # but now two-sided (blanket abstention penalized). Limitation awareness
-        # excluded from aggregate.
+        # --- L3 Overall Score (v2 weights) ---
+        # Rebalanced to emphasize calibrated direction + evidence anchoring.
+        # Limitation awareness now included (prompt v2 requires per-claim limitation).
+        # Direction accuracy uses the calibration matrix (tentative=0.75, unknown=0.25).
         result.overall_score = (
-            0.20 * result.direction_accuracy +
-            0.15 * result.significance_match +
+            0.25 * result.direction_accuracy +
             0.25 * result.claim_support_score +
-            0.10 * (1.0 - result.hallucinated_claim_rate) +
-            0.30 * result.uncertainty_recognition
+            0.15 * claim_specificity +
+            0.15 * result.limitation_awareness +
+            0.10 * evidence_anchor_rate +
+            0.10 * (1.0 - result.hallucinated_claim_rate)
         )
 
-        # Multiplicative penalty for completely generic claims (no paper-specific
-        # variable tokens mentioned). A template that says "positive effect" without
-        # naming any actual variables gets penalized. Strengthened from 0.80 to 0.65
-        # because the L3 template was scoring 0.618 — same as Qwen3.
+        # Multiplicative penalty for completely generic claims
         if claim_specificity < 0.05:
             result.overall_score *= 0.65
             result.claim_support_detail["generic_claim_penalty"] = True
