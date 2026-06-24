@@ -1,0 +1,75 @@
+{
+  "paper": "arts2021",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782298848,
+  "io2_data_files": [
+    "gold_sample.parquet",
+    "patent_indicators.parquet"
+  ],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 109.6,
+    "usage": {
+      "completion": 11092,
+      "prompt": 13175
+    },
+    "finish": "stop",
+    "n_content_chars": 19506
+  },
+  "llm_response_chars": 19506,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.05,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 2352,
+    "stderr_chars": 1188
+  },
+  "stdout": "Columns in gold_sample: ['patent_id', 'filing_year', 'filing_date', 'n_kw', 'new_word', 'new_bigram', 'new_trigram', 'new_word_comb', 'cosine_similarity', 'new_word_reuse', 'new_bigram_reuse', 'new_trigram_reuse', 'new_word_comb_reuse', 'cosine_similarity_impact']\nShape: (300, 14)\n  patent_id  filing_year  ... new_word_comb_reuse  cosine_similarity_impact\n0   9275320         2016  ...                 131                  1.029076\n1   9274471         2016  ...                  34                  0.899380\n2   9273962         2016  ...                  15                  1.052560\n3   9276381         2016  ...                 170                  0.987839\n4   9276423         2016  ...                  11                  1.007007\n\n[5 rows x 14 columns]\nOutcome variable: is_award\nWarning: could not find n_keywords, using alternative search\nWarning: could not find n_backward_cites, using alternative search\nWarning: could not find n_classes, using alternative search\nWarning: could not find n_subclasses, using alternative search\nprimary_class column: None\nfiling_year column: filing_year\nIndependent variable mappings:\n  new_word ➔ new_word\n  new_word_reuse ➔ new_word_reuse\n  new_bigram ➔ new_bigram\n  new_bigram_reuse ➔ new_bigram_reuse\n  new_trigram ➔ new_trigram\n  new_trigram_reuse ➔ new_trigram_reuse\n  new_word_comb ➔ new_word_comb\n  new_word_comb_reuse ➔ new_word_comb_reuse\n  new_subclass_comb ➔ new_subclass_comb\n  new_subclass_comb_reuse ➔ new_subclass_comb_reuse\n  new_cit_comb ➔ new_cit_comb\n  new_cit_comb_reuse ➔ new_cit_comb_reuse\n  forward_cit ➔ forward_cit\n  1-backward_cosine ➔ 1-backward_cosine\n  forward/backward_cosine ➔ forward/backward_cosine\n  originality ➔ originality\n  generality ➔ generality\nMissing variables: ['new_subclass_comb', 'new_subclass_comb_reuse', 'new_cit_comb', 'new_cit_comb_reuse', 'forward_cit', 'originality', 'generality']\nWarning: column new_subclass_comb not found for new_subclass_comb\nWarning: column new_subclass_comb_reuse not found for new_subclass_comb_reuse\nWarning: column new_cit_comb not found for new_cit_comb\nWarning: column new_cit_comb_reuse not found for new_cit_comb_reuse\nWarning: column forward_cit not found for forward_cit\nCannot compute forward/backward_cosine\nWarning: originality not found\nWarning: generality not found\n\n=================== TABLE 3 ===================\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3805, in get_loc\n    return self._engine.get_loc(casted_key)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"index.pyx\", line 167, in pandas._libs.index.IndexEngine.get_loc\n  File \"index.pyx\", line 196, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item\nKeyError: 'is_award'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/workspace/script.py\", line 236, in <module>\n    award_vals = data[data[y_col]==1][col_used]\n                      ~~~~^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4102, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3812, in get_loc\n    raise KeyError(key) from err\nKeyError: 'is_award'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.5,
+        "rationale": "partial: ['patent']"
+      },
+      "sample": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['novelty', 'cosine', 'tf', 'indicator']"
+      },
+      "model": {
+        "score": 0.5,
+        "rationale": "partial: ['descriptive']"
+      },
+      "result": {
+        "score": 0.0,
+        "rationale": "no gold signals for this component"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['novelty', 'reuse']"
+      }
+    },
+    "overall_ecrf": 0.5
+  },
+  "status": "DONE",
+  "t_end": 1782298959
+}

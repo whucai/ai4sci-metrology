@@ -1,0 +1,74 @@
+{
+  "paper": "bikard2013",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782299044,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 79.2,
+    "usage": {
+      "completion": 6570,
+      "prompt": 12125
+    },
+    "finish": "stop",
+    "n_content_chars": 8638
+  },
+  "llm_response_chars": 8638,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.02,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 239,
+    "stderr_chars": 274
+  },
+  "stdout": "Loaded raw data: 40000 rows, 11 columns\nColumns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 46, in <module>\n    raise ValueError(f\"Required column '{col}' not found in dataset. Please check column names.\")\nValueError: Required column 'author_id' not found in dataset. Please check column names.\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.5,
+        "rationale": "partial: ['faculty']"
+      },
+      "sample": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['coauthor', 'collaboration', 'credit']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'fixed effect']"
+      },
+      "result": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['collaboration', 'credit', 'tradeoff', 'free-rid']"
+      }
+    },
+    "overall_ecrf": 0.583
+  },
+  "status": "DONE",
+  "t_end": 1782299125
+}

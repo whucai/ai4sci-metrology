@@ -1,0 +1,74 @@
+{
+  "paper": "petersen2024",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782298773,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 73.3,
+    "usage": {
+      "completion": 5902,
+      "prompt": 13371
+    },
+    "finish": "stop",
+    "n_content_chars": 12606
+  },
+  "llm_response_chars": 12606,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.09,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 572,
+    "stderr_chars": 179
+  },
+  "stdout": "Loading raw data from /workspace/raw_data/sciscinet_sample.parquet ...\nData loaded. Shape: (40000, 11)\nColumns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\n\nFirst 3 rows:\n     paper_id  year  ...  conventionality_score  doc_type\n0  1007094955  1994  ...                   <NA>      <NA>\n1  2095417707  2008  ...              25.089676   Journal\n2  2024868452  1980  ...             250.205093   Journal\n\n[3 rows x 11 columns]\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 40, in <module>\n    raise ValueError(\"No references column found.\")\nValueError: No references column found.\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.5,
+        "rationale": "partial: ['sciscinet']"
+      },
+      "sample": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['disruption', '(ni', 'cd']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'fixed effect', 'reference_count']"
+      },
+      "result": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['citation inflation', 'downward', 'negative']"
+      }
+    },
+    "overall_ecrf": 0.583
+  },
+  "status": "DONE",
+  "t_end": 1782298848
+}

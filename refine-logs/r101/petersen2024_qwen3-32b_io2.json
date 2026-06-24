@@ -3,25 +3,25 @@
   "model": "qwen3-32b",
   "io": 2,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782298645,
+  "t_start": 1782298773,
   "io2_data_files": [
     "sciscinet_sample.parquet"
   ],
   "llm": {
     "model": "qwen3-32b",
-    "elapsed": 86.2,
+    "elapsed": 94.7,
     "usage": {
-      "completion": 7111,
+      "completion": 7823,
       "prompt": 14486
     },
     "finish": "stop",
-    "n_content_chars": 7861
+    "n_content_chars": 8892
   },
-  "llm_response_chars": 7861,
+  "llm_response_chars": 8892,
   "code_parsed": true,
   "exec": {
     "exit_code": 0,
-    "elapsed": 1.29,
+    "elapsed": 0.58,
     "network_blocked": true,
     "network_probe": {
       "reachable": false,
@@ -31,11 +31,11 @@
       "_audit_net.json",
       "_audit_probe.py"
     ],
-    "stdout_chars": 71,
-    "stderr_chars": 255
+    "stdout_chars": 240,
+    "stderr_chars": 269
   },
-  "stdout": "Loaded 40000 records from /workspace/raw_data/sciscinet_sample.parquet\n",
-  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 60, in <module>\n    raise ValueError(f\"Missing required column: {col}. Please check dataset schema.\")\nValueError: Missing required column: num_references. Please check dataset schema.\n",
+  "stdout": "Loaded data shape: (40000, 11)\nAvailable columns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 33, in <module>\n    raise ValueError(\"Could not automatically map required columns. Please check column names.\")\nValueError: Could not automatically map required columns. Please check column names.\n",
   "isolation": {
     "network_blocked": true,
     "network_egress_ok": true
@@ -43,8 +43,8 @@
   "ecrf": {
     "components": {
       "data_source": {
-        "score": 1.0,
-        "rationale": "strong: ['sciscinet', 'mag']"
+        "score": 0.5,
+        "rationale": "partial: ['sciscinet']"
       },
       "sample": {
         "score": 0.0,
@@ -52,11 +52,11 @@
       },
       "indicator": {
         "score": 1.0,
-        "rationale": "strong: ['disruption', 'n_j', 'n_i', 'cd']"
+        "rationale": "strong: ['disruption', '(ni', 'cd']"
       },
       "model": {
         "score": 1.0,
-        "rationale": "strong: ['ols', 'fixed effect']"
+        "rationale": "strong: ['ols', 'fixed effect', 'reference_count', 'ln_rp', 'ln_kp']"
       },
       "result": {
         "score": 0.0,
@@ -64,11 +64,11 @@
       },
       "claim": {
         "score": 1.0,
-        "rationale": "strong: ['citation inflation', 'biased', 'decline']"
+        "rationale": "strong: ['citation inflation', 'biased', 'downward', 'negative']"
       }
     },
-    "overall_ecrf": 0.667
+    "overall_ecrf": 0.583
   },
   "status": "DONE",
-  "t_end": 1782298733
+  "t_end": 1782298869
 }

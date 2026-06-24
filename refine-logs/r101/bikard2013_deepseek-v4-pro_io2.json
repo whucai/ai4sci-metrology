@@ -1,0 +1,74 @@
+{
+  "paper": "bikard2013",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782299056,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 89.3,
+    "usage": {
+      "completion": 6953,
+      "prompt": 11617
+    },
+    "finish": "stop",
+    "n_content_chars": 14575
+  },
+  "llm_response_chars": 14575,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.15,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 697,
+    "stderr_chars": 240
+  },
+  "stdout": "Data loaded. Shape: (40000, 11)\nColumns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\nFirst few rows:\n     paper_id  year  ...  conventionality_score  doc_type\n0  1007094955  1994  ...                   <NA>      <NA>\n1  2095417707  2008  ...              25.089676   Journal\n2  2024868452  1980  ...             250.205093   Journal\n3  1979849067  1982  ...                   <NA>   Journal\n4  1990642712  1999  ...              45.503286   Journal\n\n[5 rows x 11 columns]\nData is not at scientist-year level; attempting publication-level aggregation.\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 39, in <module>\n    raise KeyError(f\"Missing publication-level columns: {missing}\")\nKeyError: \"Missing publication-level columns: {'num_authors', 'cites', 'author_id'}\"\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['mit', 'faculty', 'isi']"
+      },
+      "sample": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['coauthor', 'collaboration', 'credit']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'fixed effect', 'department-year', 'clustered']"
+      },
+      "result": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['collaboration', 'credit', 'tradeoff']"
+      }
+    },
+    "overall_ecrf": 0.667
+  },
+  "status": "DONE",
+  "t_end": 1782299147
+}

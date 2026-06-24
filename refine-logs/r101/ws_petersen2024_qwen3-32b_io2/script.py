@@ -1,6 +1,3 @@
-
-
-```python
 import pandas as pd
 import numpy as np
 import os
@@ -225,4 +222,3 @@ if beta_r < -0.01 and r_squared > 0.8:
 else:
     print("Results diverge from paper expectations. This may be due to sample size, data coverage, or structural differences in the provided dataset. The directional relationship between reference list length and CD should be inspected manually.")
 print("="*60)
-```

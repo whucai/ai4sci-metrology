@@ -1,0 +1,74 @@
+{
+  "paper": "funk2017",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782298899,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 163.5,
+    "usage": {
+      "completion": 12789,
+      "prompt": 14320
+    },
+    "finish": "stop",
+    "n_content_chars": 21526
+  },
+  "llm_response_chars": 21526,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.28,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 234
+  },
+  "stdout": "",
+  "stderr": "  File \"/workspace/script.py\", line 197\n    assignee_mapping = {'firm': 1, 'university': 2, 'government': 3, ...}\n                                                                       ^\nSyntaxError: ':' expected after dictionary key\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['nber', 'uspto', 'patent']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['1977', '2005']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['cd5', 'mcd5', 'destabil']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'regression']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['0.07', '0.23', '0.31', '1.75']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['destabiliz', 'federal']"
+      }
+    },
+    "overall_ecrf": 1.0
+  },
+  "status": "DONE",
+  "t_end": 1782299063
+}

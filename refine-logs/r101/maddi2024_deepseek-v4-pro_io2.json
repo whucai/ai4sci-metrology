@@ -1,0 +1,72 @@
+{
+  "paper": "maddi2024",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782298976,
+  "io2_data_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 67.3,
+    "usage": {
+      "completion": 5672,
+      "prompt": 12220
+    },
+    "finish": "stop",
+    "n_content_chars": 15106
+  },
+  "llm_response_chars": 15106,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.95,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 170,
+    "stderr_chars": 252
+  },
+  "stdout": "No raw data files found. Creating synthetic (placeholder) dataset for demonstration.\nAll results using this data are labelled SYNTHETIC and are NOT reproduction results.\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 51, in <module>\n    year_probs = np.array(year_probs) / year_probs.sum()\n                                        ^^^^^^^^^^^^^^\nAttributeError: 'list' object has no attribute 'sum'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['publons', 'wos']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['57,482', '57482', '2009', '2020', '947']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['report length', 'word count', 'iqr', 'fisher']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['glm', 'log(1', 'log1p']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['947', 'positive']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['longer', 'positive']"
+      }
+    },
+    "overall_ecrf": 1.0
+  },
+  "status": "DONE",
+  "t_end": 1782299044
+}

@@ -1,0 +1,74 @@
+{
+  "paper": "funk2017",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782298869,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 105.8,
+    "usage": {
+      "completion": 8797,
+      "prompt": 16349
+    },
+    "finish": "stop",
+    "n_content_chars": 12128
+  },
+  "llm_response_chars": 12128,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.67,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 93,
+    "stderr_chars": 1240
+  },
+  "stdout": "Loading raw data...\nWARNING: Expected long citation format. Attempting to infer structure...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3805, in get_loc\n    return self._engine.get_loc(casted_key)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"index.pyx\", line 167, in pandas._libs.index.IndexEngine.get_loc\n  File \"index.pyx\", line 196, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item\nKeyError: 'grant_year'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/workspace/script.py\", line 55, in <module>\n    valid_years = (citations['grant_year'] >= 1977) & (citations['grant_year'] <= 2005)\n                   ~~~~~~~~~^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4102, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3812, in get_loc\n    raise KeyError(key) from err\nKeyError: 'grant_year'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['nber', 'patent']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['1977', '2005']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['cdt', 'cd5', 'mcdt', 'mcd5', 'destabil', 'consolid']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'regression']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['0.07', '0.23', '0.31', '1.75']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['destabiliz', 'consolid']"
+      }
+    },
+    "overall_ecrf": 1.0
+  },
+  "status": "DONE",
+  "t_end": 1782298976
+}

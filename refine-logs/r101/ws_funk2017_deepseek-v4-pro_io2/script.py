@@ -1,0 +1,406 @@
+import pandas as pd
+import numpy as np
+import os
+from scipy.stats import pearsonr
+import warnings
+warnings.filterwarnings('ignore')
+
+# ------------------------------------------------------------
+# 1. Load the provided data
+# ------------------------------------------------------------
+DATA_PATH = '/workspace/raw_data/sciscinet_sample.parquet'
+if not os.path.exists(DATA_PATH):
+    print("ERROR: Data file not found at", DATA_PATH)
+    exit(1)
+
+df = pd.read_parquet(DATA_PATH)
+print("Data loaded. Shape:", df.shape)
+print("Columns:", df.columns.tolist())
+print(df.head(2))
+
+# ------------------------------------------------------------
+# 2. Identify data structure (edge list vs. patent record)
+# ------------------------------------------------------------
+# Based on the paper and typical SciSciNet samples, we expect either:
+#   - Edge list:   citing, cited, citing_year, cited_year
+#   - Patent table: patent_id, grant_year, backward_cites(list), forward_cites(list), ...
+# We will try to detect which one it is.
+# ------------------------------------------------------------
+
+# ---- Case A: Edge list format ----
+edge_cols = {'citing', 'cited'}
+if edge_cols.issubset(df.columns):
+    print("Detected edge list format.")
+    # Check for year columns
+    year_col_citing = 'citing_year' if 'citing_year' in df.columns else 'year'
+    year_col_cited  = 'cited_year'  if 'cited_year'  in df.columns else 'year'
+    # If only one year column exists, we assume both patents share the same year? That's invalid for forward citations.
+    # We need both citing and cited years. If missing, stop.
+    if not (year_col_citing in df.columns and year_col_cited in df.columns):
+        print("ERROR: Edge list requires both citing and cited years. Columns present:", df.columns.tolist())
+        exit(1)
+    edges = df[['citing', 'cited', year_col_citing, year_col_cited]].copy()
+    edges.rename(columns={year_col_citing: 'citing_year', year_col_cited: 'cited_year'}, inplace=True)
+    edges.dropna(subset=['citing', 'cited'], inplace=True)
+    # Drop duplicates if any
+    edges.drop_duplicates(inplace=True)
+    # Build a patent-year map from edges (every patent appears either as citing or cited)
+    citing_years = edges[['citing', 'citing_year']].rename(columns={'citing': 'patent', 'citing_year': 'grant_year'})
+    cited_years  = edges[['cited', 'cited_year']].rename(columns={'cited': 'patent', 'cited_year': 'grant_year'})
+    patent_years = pd.concat([citing_years, cited_years]).drop_duplicates(subset='patent', keep='first')
+    print(f"Number of unique patents with grant years: {patent_years.shape[0]}")
+    # Filter to focal patents: grant year between 1977 and 2005 (as in paper)
+    focal_patents = patent_years[(patent_years.grant_year >= 1977) & (patent_years.grant_year <= 2005)].copy()
+    print(f"Number of candidate focal patents (1977-2005): {focal_patents.shape[0]}")
+    focal_list = focal_patents['patent'].tolist()
+    
+    # Build efficient lookup structures for forward citations
+    # We'll need to filter edges by citing year > focal year and citing year <= focal year+5
+    # Pre-index edges by cited and citing year.
+    # Since sample is small we can iterate over each focal patent using boolean indexing.
+    # But to keep it efficient, we create a dictionary mapping cited -> [(citing, citing_year)]
+    # and then for each focal, we retrieve all forward citations.
+    print("Building citation lookup...")
+    # For forward citations we need edges where cited is in focal or its predecessors,
+    # and citing_year within window. So we index by 'cited'.
+    cited_groups = edges.groupby('cited')
+    # Also we need to know backward citations of each focal.
+    
+    # We'll loop over a subset of focal patents (to avoid very long runtime on large sample)
+    # If the sample is huge (>50k), we may limit to a random subset for demonstration.
+    MAX_FOCAL = 5000  # limit for demonstration purposes; adjust as needed
+    if len(focal_list) > MAX_FOCAL:
+        print(f"Limiting to {MAX_FOCAL} focal patents for demonstration.")
+        focal_subset = focal_patents.sample(MAX_FOCAL, random_state=42)
+        focal_list = focal_subset['patent'].tolist()
+    
+    results = []
+    for idx, focal in enumerate(focal_list):
+        if idx % 500 == 0:
+            print(f"Processing patent {idx+1}/{len(focal_list)}...")
+        focal_year = focal_patents[focal_patents.patent == focal]['grant_year'].iloc[0]
+        # Get predecessors (citations made by focal)
+        # Backward edges are where citing == focal
+        back_edges = edges[edges['citing'] == focal]
+        predecessors = set(back_edges['cited'].unique()) & set(patent_years['patent'])  # keep only patent IDs
+        # Get forward citations that cite either focal or any predecessor within window
+        candidate_targets = [focal] + list(predecessors) if predecessors else [focal]
+        # Retrieve all citing patents that cite any candidate target in the time window
+        forward_cands = []
+        for targ in candidate_targets:
+            if targ in cited_groups.groups:
+                group = cited_groups.get_group(targ)
+            else:
+                continue
+            # filter by citing year: > focal_year and <= focal_year+5
+            mask = (group['citing_year'] > focal_year) & (group['citing_year'] <= focal_year + 5)
+            forward_cands.append(group[mask][['citing']])
+        if not forward_cands:
+            forward_df = pd.DataFrame(columns=['citing'])
+        else:
+            forward_df = pd.concat(forward_cands).drop_duplicates()
+        citing_patents = forward_df['citing'].unique()
+        nt = len(citing_patents)
+        if nt == 0:
+            cd5 = np.nan
+            i5 = 0
+            mcd5 = np.nan
+        else:
+            # For each citing patent, determine f and b flags
+            # We can aggregate by citing using the original edges in the window
+            # Get all edges where cited in candidate_targets and citing in citing_patents and within year range
+            # This might be more efficient: query edges table for these citing patents and candidate_targets, then group.
+            # But to simplify, we process each citing patent individually (since nt is typically small).
+            sum_val = 0
+            i5 = 0
+            for c in citing_patents:
+                # check if c cites focal
+                f = 1 if ((edges['citing'] == c) & (edges['cited'] == focal)).any() else 0
+                # check if c cites any predecessor
+                if predecessors:
+                    b = 1 if edges[(edges['citing'] == c) & (edges['cited'].isin(predecessors))].shape[0] > 0 else 0
+                else:
+                    b = 0
+                term = -2 * f * b + f
+                sum_val += term
+                if f == 1:
+                    i5 += 1
+            cd5 = sum_val / nt
+            mcd5 = (i5 * sum_val) / nt
+        # Count number of predecessors cited (for correlation later)
+        num_pred_cited = len(predecessors)
+        results.append({
+            'patent': focal,
+            'grant_year': focal_year,
+            'i5': i5,
+            'cd5': cd5,
+            'mcd5': mcd5,
+            'predecessor_patents_cited': num_pred_cited,
+            'nt': nt
+        })
+    result_df = pd.DataFrame(results)
+    print("Finished computing CD5 and mCD5.")
+
+# ---- Case B: Patent-record format (already have lists) ----
+else:
+    # Assume we have columns: 'patent_id', 'grant_year', 'backward_cites', 'forward_cites', etc.
+    print("Assuming patent-record format.")
+    required_cols = {'patent_id', 'grant_year', 'backward_cites', 'forward_cites'}
+    if not required_cols.issubset(df.columns):
+        print("ERROR: Cannot determine data format. Required columns missing.")
+        exit(1)
+    # Prepare focal patents (1977-2005)
+    focal_df = df[(df['grant_year'] >= 1977) & (df['grant_year'] <= 2005)].copy()
+    print(f"Number of candidate focal patents: {focal_df.shape[0]}")
+    # For each row, backward_cites is a list of cited patent IDs; forward_cites is a list of forward citing patent IDs.
+    # We need to map each forward citing patent to its grant year (from another column or external mapping).
+    # If forward_cites is just IDs without year, we cannot filter by 5-year window.
+    # We'll look for a 'forward_cite_years' column or a separate mapping.
+    # If not present, we'll proceed assuming the forward_cites column already contains only citations within 5 years (pre-filtered).
+    # For robustness, we try to load a separate mapping if available.
+    if 'forward_cite_years' in df.columns:
+        # list of years corresponding to forward_cites
+        pass
+    else:
+        # Attempt to build a mapping from patent_years if we have a separate table (maybe from same file).
+        # We'll assume the dataset also contains a 'patent_id2year' mapping in the same DataFrame (maybe a column).
+        if 'year_of_citing' in df.columns:
+            pass
+        else:
+            print("Warning: Forward citing patent years not provided. Using all forward citations irrespective of window (may deviate from paper).")
+            # We'll artificially limit to first 5 years if we can't. We'll set all forward citings as within window.
+            # This is a limitation of substitute data; will label results DATA_SUB.
+    # Given this complexity, we'll exit and request proper format, or produce synthetic computations.
+    # Since the user provided only one file, we must handle gracefully.
+    print("Unable to compute CD5 accurately with current format. Please provide edge list with citing_year and cited_year columns.")
+    exit(1)
+
+# ------------------------------------------------------------
+# 3. Merge with additional patent-level attributes if available
+# ------------------------------------------------------------
+# Check if the original data contains assignee type, NBER category, claims, etc.
+# We will attempt to merge with the result_df on patent.
+attr_cols = ['patent', 'assignee_type', 'nber_subcategory', 'claims', 'govt_interest', 'nonpatent_refs', 'num_inventors', 'firm', 'university', 'government']
+# If the dataset has these columns under different names, adapt.
+additional = df.copy()
+if 'patent' in additional.columns:
+    # rename to 'patent' if needed
+    if 'patent_id' in additional.columns:
+        additional.rename(columns={'patent_id': 'patent'}, inplace=True)
+    # Check if we have assignee type codes (e.g., 'firm', 'university', 'government')
+    # The paper used dummies for Firm, University, Government.
+    assignee_types = None
+    if 'assignee_type' in additional.columns:
+        assignee_types = additional[['patent', 'assignee_type']]
+    elif 'assignee' in additional.columns:
+        # map to categories
+        assignee_mapping = {'firm': 1, 'university': 2, 'government': 3, ...}
+        additional['assignee_type'] = additional['assignee'].map(assignee_mapping)
+        assignee_types = additional[['patent', 'assignee_type']]
+    # NBER category mapping
+    if 'nber_subcategory' in additional.columns:
+        # map subcategory to one of six main categories (Chemical, Computers, Drugs, Electrical, Mechanical, Others)
+        # Use NBER mapping if available.
+        nber_main_map = {
+            # Chemical: subcat 10-15, 31-33
+            # Computers: 20-26
+            # Drugs: 41-44
+            # Electrical: 60-69
+            # Mechanical: 70-79
+            # Others: all else
+        }
+        additional['nber_main'] = additional['nber_subcategory'].apply(lambda x: 'Chemical' if x in [10,11,12,13,14,15,31,32,33] else
+                                                                                'Computers' if x in range(20,27) else
+                                                                                'Drugs' if x in range(41,45) else
+                                                                                'Electrical' if x in range(60,70) else
+                                                                                'Mechanical' if x in range(70,80) else 'Others')
+        nber_dummies = pd.get_dummies(additional[['patent', 'nber_main']], columns=['nber_main'])
+        additional = additional.merge(nber_dummies, on='patent')
+    # Merge with result_df
+    merged = result_df.merge(additional[['patent', 'assignee_type']], on='patent', how='left')
+    # Create dummies for assignee types
+    if 'assignee_type' in merged.columns:
+        type_map = {1: 'firm', 2: 'university', 3: 'government'}
+        merged['type_str'] = merged['assignee_type'].map(type_map)
+        dummy_types = pd.get_dummies(merged['type_str'])
+        merged = pd.concat([merged, dummy_types], axis=1)
+    else:
+        # try to locate direct dummies
+        for dummy in ['firm', 'university', 'government']:
+            if dummy in additional.columns:
+                merged[dummy] = additional.loc[additional['patent'].isin(merged['patent']), dummy].values
+    # For government interest (acknowledgement of federal support)
+    if 'govt_interest' in additional.columns:
+        merged = merged.merge(additional[['patent', 'govt_interest']], on='patent', how='left')
+    # nonpatent predecessors cited (log)
+    if 'nonpatent_refs' in additional.columns:
+        merged = merged.merge(additional[['patent', 'nonpatent_refs']], on='patent', how='left')
+        merged['nonpatent_predecessors_cited_log'] = np.log1p(merged['nonpatent_refs'])
+    # claims
+    if 'claims' in additional.columns:
+        merged = merged.merge(additional[['patent', 'claims']], on='patent', how='left')
+    # number of inventors
+    if 'num_inventors' in additional.columns or 'inventors' in additional.columns:
+        inv_col = 'num_inventors' if 'num_inventors' in additional.columns else 'inventors'
+        merged = merged.merge(additional[['patent', inv_col]], on='patent', how='left')
+    # median assignee experience, team distance, etc. are probably not present.
+    # We'll compute what we can.
+    print("Merged result with available covariates.")
+else:
+    merged = result_df
+    print("No additional patent attributes found. Only CD5/mCD5 computed.")
+
+# ------------------------------------------------------------
+# 4. Compute descriptive statistics and compare to paper
+# ------------------------------------------------------------
+print("\n========== RESULTS (DATA_SUB - substitute dataset) ==========")
+print("NOTE: All computed values are from the provided sciscinet_sample.parquet, which is not the original dataset used in the paper.\n")
+
+# Count undefined (nan) CD5
+undefined_count = merged['cd5'].isna().sum()
+total = len(merged)
+print(f"Number of patents with undefined CD5 (nt=0): {undefined_count} / {total} ({undefined_count/total*100:.1f}%)")
+print("Paper reported: 2.8% undefined.")
+
+# Drop undefined for statistics
+valid = merged.dropna(subset=['cd5'])
+print(f"Number of valid patents for CD5: {len(valid)}")
+
+cd5_mean = valid['cd5'].mean()
+cd5_std  = valid['cd5'].std()
+print(f"RESULT DATA_SUB CD5 mean = {cd5_mean:.3f}")
+print("PAPER_REPORTED CD5 mean = 0.07")
+print(f"RESULT DATA_SUB CD5 SD   = {cd5_std:.3f}")
+print("PAPER_REPORTED CD5 SD   = 0.23")
+
+mcd5_mean = valid['mcd5'].mean()
+mcd5_std  = valid['mcd5'].std()
+print(f"\nRESULT DATA_SUB mCD5 mean = {mcd5_mean:.3f}")
+print("PAPER_REPORTED mCD5 mean = 0.31")
+print(f"RESULT DATA_SUB mCD5 SD   = {mcd5_std:.3f}")
+print("PAPER_REPORTED mCD5 SD   = 1.75")
+
+i5_mean = valid['i5'].mean()
+i5_std  = valid['i5'].std()
+print(f"\nRESULT DATA_SUB I5 (impact) mean = {i5_mean:.3f}")
+print("PAPER_REPORTED I5 mean = 3.60")
+print(f"RESULT DATA_SUB I5 SD   = {i5_std:.3f}")
+print("PAPER_REPORTED I5 SD   = 5.92")
+
+# Correlation between CD5 and impact (I5)
+if 'i5' in valid.columns:
+    corr_cd5_i5, _ = pearsonr(valid['cd5'], valid['i5'])
+    print(f"\nRESULT DATA_SUB Corr(CD5, I5) = {corr_cd5_i5:.3f}")
+    print("PAPER_REPORTED Corr(CD5, I5) = 0.03")
+
+# Correlations with assignee types
+for assign in ['firm', 'university', 'government']:
+    if assign in valid.columns:
+        corr_val, _ = pearsonr(valid['cd5'], valid[assign].astype(int))
+        print(f"RESULT DATA_SUB Corr(CD5, {assign}) = {corr_val:.3f}")
+        paper_val = -0.00 if assign == 'firm' else 0.02
+        print(f"PAPER_REPORTED Corr(CD5, {assign}) = {paper_val}")
+
+# Correlation with government interest
+if 'govt_interest' in valid.columns:
+    corr_govt, _ = pearsonr(valid['cd5'], valid['govt_interest'].astype(int))
+    print(f"RESULT DATA_SUB Corr(CD5, govt_interest) = {corr_govt:.3f}")
+    print("PAPER_REPORTED Corr(CD5, government_interest) = 0.02")
+
+# Correlation with predecessor patents cited
+if 'predecessor_patents_cited' in valid.columns:
+    corr_pred, _ = pearsonr(valid['cd5'], valid['predecessor_patents_cited'])
+    print(f"RESULT DATA_SUB Corr(CD5, predecessor_patents_cited) = {corr_pred:.3f}")
+    print("PAPER_REPORTED Corr(CD5, predecessor_patents_cited) = -0.17")
+
+# Correlation with claims
+if 'claims' in valid.columns:
+    corr_cl, _ = pearsonr(valid['cd5'], valid['claims'])
+    print(f"RESULT DATA_SUB Corr(CD5, claims) = {corr_cl:.3f}")
+    print("PAPER_REPORTED Corr(CD5, claims) = -0.04")
+
+# ------------------------------------------------------------
+# 5. Regression analyses (approximate patent-level models)
+# ------------------------------------------------------------
+# The paper included OLS regressions of I5, CD5, mCD5 on covariates.
+# We attempt to replicate the spirit using available variables.
+# Dependent variables: I5, CD5, mCD5
+# Independent variables: Predecessor patents cited (log), Claims (log), Nonpatent refs (log),
+#   Num inventors (log), Year dummies, NBER category dummies, Assignee type dummies.
+# Since we don't have the exact model specification from the paper (text is truncated),
+# we will run a simplified model and report coefficients as DATA_SUB.
+try:
+    import statsmodels.api as sm
+    from statsmodels.tools import add_constant
+except ImportError:
+    print("statsmodels not available; skipping regressions.")
+    sm = None
+
+if sm is not None and 'predecessor_patents_cited' in valid.columns:
+    reg_data = valid.dropna(subset=['cd5', 'i5', 'predecessor_patents_cited']).copy()
+    # Add log transforms
+    reg_data['log_pred_cited'] = np.log1p(reg_data['predecessor_patents_cited'])
+    X = reg_data[['log_pred_cited']]
+    X = add_constant(X)
+    
+    # Model for CD5
+    model_cd5 = sm.OLS(reg_data['cd5'], X, missing='drop').fit()
+    print("\n===== Regression: CD5 ~ log(Predecessor patents cited) =====")
+    print(model_cd5.summary().tables[1])
+    print("(DATA_SUB - simplified model)")
+    
+    # Model for I5
+    model_i5 = sm.OLS(reg_data['i5'], X, missing='drop').fit()
+    print("\n===== Regression: I5 ~ log(Predecessor patents cited) =====")
+    print(model_i5.summary().tables[1])
+    print("(DATA_SUB - simplified model)")
+    
+    # Add more covariates if available
+    add_covariates = []
+    if 'claims' in reg_data.columns:
+        reg_data['log_claims'] = np.log1p(reg_data['claims'])
+        add_covariates.append('log_claims')
+    if 'nonpatent_refs' in reg_data.columns:
+        reg_data['log_nonpatent'] = np.log1p(reg_data['nonpatent_refs'])
+        add_covariates.append('log_nonpatent')
+    if 'num_inventors' in reg_data.columns:
+        reg_data['log_inventors'] = np.log1p(reg_data['num_inventors'])
+        add_covariates.append('log_inventors')
+    # if assignee dummies exist
+    for dummy in ['firm', 'university', 'government']:
+        if dummy in reg_data.columns:
+            add_covariates.append(dummy)
+    # if NBER dummies
+    nber_cols = [col for col in reg_data.columns if col.startswith('nber_main_')]
+    for col in nber_cols:
+        add_covariates.append(col)
+    
+    if add_covariates:
+        X_full = reg_data[['log_pred_cited'] + add_covariates]
+        X_full = add_constant(X_full)
+        model_full = sm.OLS(reg_data['cd5'], X_full, missing='drop').fit()
+        print("\n===== Extended Regression: CD5 with multiple covariates =====")
+        print(model_full.summary().tables[1])
+        print("(DATA_SUB - extended model with available covariates)")
+    
+    # Organisational-level: if we have assignee types, compute mean CD5 by type
+    if 'firm' in reg_data.columns:
+        mean_by_type = reg_data.groupby('firm')['cd5'].mean()
+        print("\nMean CD5 by assignee type (0=not firm,1=firm):")
+        print(mean_by_type)
+        print("Paper: firm assignee had correlation -0.00 (essentially zero difference).")
+    if 'university' in reg_data.columns:
+        mean_uni = reg_data.groupby('university')['cd5'].mean()
+        print("Mean CD5 for university patent (1=university):")
+        print(mean_uni)
+        print("Paper: university patents slightly more destabilizing (corr 0.02).")
+else:
+    print("Not enough variables to run regressions.")
+
+print("\n========== END OF ANALYSIS ==========")
+print("Conclusion: The computed CD5 index from the substitute dataset yields a mean of {:.3f}, SD of {:.3f}, which {}. The correlations with impact and assignee types {}. These results provide a partial reproduction of the paper's descriptive statistics.".format(
+    cd5_mean, cd5_std,
+    "approximate the paper's reported values" if abs(cd5_mean - 0.07) < 0.1 else "differ from the paper",
+    "are generally consistent with the reported ones" if ('firm' in valid.columns and abs(corr_cd5_i5 - 0.03) < 0.1) else "show some deviations"
+))
+print("All values labeled DATA_SUB as they were computed on a substitute sample, not the original USPTO dataset.")
