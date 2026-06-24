@@ -97,6 +97,11 @@ class Task2EvalResult:
     hallucinated_detail: dict[str, Any] = field(default_factory=dict)
     uncertainty_recognition: float = 0.0   # L3-specific
     overall_score: float = 0.0
+    # Per-conclusion diagnostics (L3)
+    conclusion_details: list[dict[str, Any]] = field(default_factory=list)
+    support_strength_distribution: dict[str, int] = field(default_factory=dict)
+    direction_commit_rate: float = 0.0
+    direction_correct_when_committed: float = 0.0
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -118,6 +123,10 @@ class Task2EvalResult:
             "hallucinated_detail": self.hallucinated_detail,
             "uncertainty_recognition": self.uncertainty_recognition,
             "overall_score": self.overall_score,
+            "conclusion_details": self.conclusion_details,
+            "support_strength_distribution": self.support_strength_distribution,
+            "direction_commit_rate": self.direction_commit_rate,
+            "direction_correct_when_committed": self.direction_correct_when_committed,
         }
 
 
@@ -626,6 +635,40 @@ class Task2Evaluator:
         claim_specificity = _variable_specificity(l3_claim_text, gold)
         result.claim_support_detail["l3_specificity"] = claim_specificity
         result.claim_support_detail["evidence_anchor_rate"] = evidence_anchor_rate
+
+        # --- Per-Conclusion Diagnostics (L3) ---
+        # Store raw per-claim data for error taxonomy, ablation, and paper tables.
+        # Each entry maps gold_direction → pred_direction with support_strength and
+        # evidence anchor status, enabling downstream analysis without re-running.
+        strength_weight = {"strong": 1.0, "moderate": 0.6, "weak": 0.3}
+        ss_dist = {"strong": 0, "moderate": 0, "weak": 0}
+        for i, gd in enumerate(gold_dirs):
+            pd = pred_dirs[i] if i < len(pred_dirs) else "unknown"
+            sc = sc_list[i] if i < len(sc_list) else {}
+            ss = sc.get("support_strength", "weak") if isinstance(sc, dict) else "weak"
+            anchor = sc.get("evidence_anchor", "") if isinstance(sc, dict) else ""
+            ss_dist[ss] = ss_dist.get(ss, 0) + 1
+            result.conclusion_details.append({
+                "gold_direction": gd,
+                "pred_direction": pd,
+                "direction_score": DIRECTION_SCORE.get((gd, pd), 0.0),
+                "support_strength": ss,
+                "support_strength_score": strength_weight.get(ss, 0.0),
+                "has_evidence_anchor": len(anchor.strip()) > 10,
+                "evidence_anchor": anchor[:200] if anchor else "",
+            })
+        result.support_strength_distribution = ss_dist
+
+        # Direction commit rate: fraction of non-unknown predictions
+        committed = sum(1 for pd in pred_dirs if pd not in ("unknown",))
+        result.direction_commit_rate = committed / max(len(pred_dirs), 1)
+        # Accuracy when committed (only among non-unknown predictions)
+        committed_correct = sum(
+            1 for i, gd in enumerate(gold_dirs)
+            if (pred_dirs[i] if i < len(pred_dirs) else "unknown") not in ("unknown",)
+            and DIRECTION_SCORE.get((gd, pred_dirs[i] if i < len(pred_dirs) else "unknown"), 0.0) >= 0.75
+        )
+        result.direction_correct_when_committed = committed_correct / max(committed, 1)
 
         # --- L3 Overall Score (v2 weights) ---
         # Rebalanced to emphasize calibrated direction + evidence anchoring.
