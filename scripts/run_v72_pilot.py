@@ -31,7 +31,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from sciscigpt_local.isolated_executor import execute_python_isolated  # noqa: E402
 
 PILOT_DIR = ROOT / "pilot"
-OUTPUT_DIR = ROOT / "refine-logs" / "r100"
+OUTPUT_DIR = Path(os.environ.get("R100_OUTPUT_DIR", str(ROOT / "refine-logs" / "r100")))
 PROXY = os.environ.get("LITELLM_PROXY", "http://127.0.0.1:4000/v1")
 PROXY_KEY = os.environ.get("LITELLM_KEY", "sk-local-litellm")
 IMAGE = os.environ.get("R097_IMAGE", "sciscigpt-ds:0.1")
@@ -150,6 +150,50 @@ PAPER ({paper_id}):
 """
 
 
+def build_prompt_io2(paper_id: str, paper_md: str, io2_dir: Path) -> tuple[str, list[Path]]:
+    """IO₂ prompt: paper + structured docs + controlled raw data (where provided), NO original code."""
+    import shutil
+    docs, data_files = [], []
+    for p in sorted(io2_dir.iterdir()):
+        if p.suffix == ".md" and p.name != "paper.md":
+            docs.append(f"### {p.name}\n\n{p.read_text()}")
+    raw = io2_dir / "raw_data"
+    if raw.exists():
+        for p in sorted(raw.iterdir()):
+            if p.suffix in (".parquet", ".csv", ".tsv", ".json"):
+                data_files.append(p)
+    docs_block = "\n\n".join(docs) if docs else "(no structured docs provided)"
+    data_block = (f"raw_data/ contains: {', '.join(p.name for p in data_files)} (available at /workspace/raw_data/ inside the execution environment)"
+                  if data_files else "NO raw data file is provided (data unavailable — see data dictionary).")
+    prompt = f"""You are reproducing the quantitative analysis of a scientific paper.
+
+You have (IO₂ condition):
+  1. The paper text (below).
+  2. Structured documentation: data dictionary + sample notes + indicator definitions (below).
+  3. Controlled raw data files in raw_data/ (listed below) — available at /workspace/raw_data/ at runtime.
+NO original code is provided. You must write your own.
+
+Rules:
+- Load the provided raw_data file(s) from /workspace/raw_data/ (use pandas). If no raw data is provided, document what is needed and clearly mark any synthetic/placeholder data as SYNTHETIC — do NOT present synthetic numbers as reproduction results.
+- Implement every indicator/formula and model specification from the paper.
+- Print every key numerical result with a clear label: print("RESULT <name> = <value>"). Label paper-reported comparison values as PAPER_REPORTED. If you use a substitute dataset (not the paper's original), label those results as DATA_SUB.
+- Print the final conclusion/direction.
+- Output only ONE Python script in a ```python block.
+
+PAPER ({paper_id}):
+\"\"\"
+{paper_md[:50000]}
+\"\"\"
+
+STRUCTURED DOCUMENTATION:
+{docs_block}
+
+RAW DATA:
+{data_block}
+"""
+    return prompt, data_files
+
+
 def score_ecrf(paper_id: str, code: str, stdout: str, stderr: str, exec_ok: bool) -> dict:
     """Rules-based v0 ECRF scorer. Returns per-component 0/0.5/1.0 + rationale."""
     gold = PAPER_GOLD.get(paper_id, {})
@@ -183,10 +227,16 @@ def run_one(paper_id: str, model_key: str, io_level: int) -> dict:
     assert paper_md_path.exists(), f"missing {paper_md_path}"
     paper_md = paper_md_path.read_text()
 
-    prompt = build_prompt_io1(paper_id, paper_md) if io_level == 1 else None
-    assert prompt, "only IO1 implemented in this runner"
+    if io_level == 1:
+        prompt = build_prompt_io1(paper_id, paper_md)
+        data_files = []
+    elif io_level == 2:
+        prompt, data_files = build_prompt_io2(paper_id, paper_md, io_dir)
+    else:
+        raise NotImplementedError("only IO1/IO2 implemented in this runner")
 
-    rec = {"paper": paper_id, "model": model_key, "io": io_level, "image": IMAGE, "t_start": int(time.time())}
+    rec = {"paper": paper_id, "model": model_key, "io": io_level, "image": IMAGE, "t_start": int(time.time()),
+           "io2_data_files": [p.name for p in data_files]}
 
     # 1. LLM call
     try:
@@ -207,10 +257,21 @@ def run_one(paper_id: str, model_key: str, io_level: int) -> dict:
         rec["status"] = "NO_CODE"
         return rec
 
-    # 3. isolated execution
+    # 3. isolated execution — pre-populate workdir with IO₂ docs + raw_data (no code)
     workdir = OUTPUT_DIR / f"ws_{paper_id}_{model_key}_io{io_level}"
+    if workdir.exists():
+        import shutil
+        shutil.rmtree(workdir)
     workdir.mkdir(parents=True, exist_ok=True)
     workdir.chmod(0o755)
+    if io_level == 2:
+        import shutil
+        # copy docs (non-code .md) and raw_data into the per-run workdir
+        for p in io_dir.iterdir():
+            if p.suffix == ".md" and p.name != "paper.md":
+                shutil.copy2(p, workdir / p.name)
+        if (io_dir / "raw_data").exists():
+            shutil.copytree(io_dir / "raw_data", workdir / "raw_data", dirs_exist_ok=True)
     try:
         ex = execute_python_isolated(code, workdir, image=IMAGE, timeout=600)
         rec["exec"] = {
