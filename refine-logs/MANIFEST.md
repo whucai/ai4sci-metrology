@@ -37,3 +37,8 @@
 - scripts/r101_analysis.py — IO2 v1 scoring + IO1 comparison + result-line classifier
 - refine-logs/r101/ — 10 IO2 run JSONs + responses + r101_v1_rescore.json
 - R101_REPORT.md — 10/10 isolated; overall 0.483 (flat vs IO1); Result UP; gate-c no misfire; scorer fixes needed before R102
+
+## R101b (ECRF v2 rescoring, no new runs) — 2026-06-24
+- scripts/ecrf_v2_scorer.py — v2 recognition (file-load data_source, computed sample, broad result evidence) + v1 weights/gates + result-line classifier
+- refine-logs/r101/r101b_v2_rescore.json — v1/v2 per-run
+- R101B_REPORT.md — IO2 v2=0.552 > IO1 0.490 (PASS); data-using 0.631 > synth 0.500 (PASS); gate-c no misfire (PASS); R102 READY

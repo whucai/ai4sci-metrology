@@ -1,0 +1,335 @@
+[
+  {
+    "paper": "arts2021",
+    "model": "deepseek-v4-pro",
+    "v1": 0.4,
+    "v2": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 0.5,
+        "claim": 1.0,
+        "result": 0.5
+      },
+      "notes": {
+        "data_source": "loaded provided raw_data file",
+        "sample": "N + window/filter evidence",
+        "result": "computed result evidence (no gold match)"
+      },
+      "weighted": 0.775,
+      "final_ecrf": 0.5,
+      "caps_applied": [
+        [
+          "c synthetic-substitute",
+          0.5
+        ]
+      ]
+    },
+    "data_using": false
+  },
+  {
+    "paper": "arts2021",
+    "model": "qwen3-32b",
+    "v1": 0.475,
+    "v2": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 0.5,
+        "claim": 1.0,
+        "result": 0.5
+      },
+      "notes": {
+        "data_source": "loaded provided raw_data file",
+        "sample": "N + window/filter evidence",
+        "result": "computed result evidence (no gold match)"
+      },
+      "weighted": 0.775,
+      "final_ecrf": 0.5,
+      "caps_applied": [
+        [
+          "c synthetic-substitute",
+          0.5
+        ]
+      ]
+    },
+    "data_using": false
+  },
+  {
+    "paper": "bikard2013",
+    "model": "deepseek-v4-pro",
+    "v1": 0.5,
+    "v2": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "claim": 1.0,
+        "result": 0.0
+      },
+      "notes": {
+        "data_source": "loaded provided raw_data file",
+        "sample": "N + window/filter evidence",
+        "result": "no result evidence"
+      },
+      "weighted": 0.65,
+      "final_ecrf": 0.5,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ],
+        [
+          "b result=0",
+          0.55
+        ],
+        [
+          "c synthetic-substitute",
+          0.5
+        ],
+        [
+          "d claim>0 result=0",
+          0.6
+        ]
+      ]
+    },
+    "data_using": false
+  },
+  {
+    "paper": "bikard2013",
+    "model": "qwen3-32b",
+    "v1": 0.45,
+    "v2": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "claim": 1.0,
+        "result": 0.0
+      },
+      "notes": {
+        "data_source": "loaded provided raw_data file",
+        "sample": "N + window/filter evidence",
+        "result": "no result evidence"
+      },
+      "weighted": 0.65,
+      "final_ecrf": 0.55,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ],
+        [
+          "b result=0",
+          0.55
+        ],
+        [
+          "d claim>0 result=0",
+          0.6
+        ]
+      ]
+    },
+    "data_using": true
+  },
+  {
+    "paper": "funk2017",
+    "model": "deepseek-v4-pro",
+    "v1": 0.5,
+    "v2": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "claim": 1.0,
+        "result": 1.0
+      },
+      "notes": {
+        "data_source": "loaded provided raw_data file",
+        "sample": "N + window/filter evidence",
+        "result": "gold result number matched"
+      },
+      "weighted": 1.0,
+      "final_ecrf": 0.5,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ],
+        [
+          "c synthetic-substitute",
+          0.5
+        ]
+      ]
+    },
+    "data_using": false
+  },
+  {
+    "paper": "funk2017",
+    "model": "qwen3-32b",
+    "v1": 0.6,
+    "v2": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "claim": 1.0,
+        "result": 1.0
+      },
+      "notes": {
+        "data_source": "loaded provided raw_data file",
+        "sample": "N + window/filter evidence",
+        "result": "gold result number matched"
+      },
+      "weighted": 1.0,
+      "final_ecrf": 0.6,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ]
+      ]
+    },
+    "data_using": true
+  },
+  {
+    "paper": "maddi2024",
+    "model": "deepseek-v4-pro",
+    "v1": 0.5,
+    "v2": {
+      "components": {
+        "data_source": 0.5,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "claim": 1.0,
+        "result": 1.0
+      },
+      "notes": {
+        "data_source": "named source (no file load)",
+        "sample": "N + window/filter evidence",
+        "result": "gold result number matched"
+      },
+      "weighted": 0.95,
+      "final_ecrf": 0.5,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ],
+        [
+          "c synthetic-substitute",
+          0.5
+        ],
+        [
+          "e paper-numbers-as-computed",
+          0.5
+        ]
+      ]
+    },
+    "data_using": false
+  },
+  {
+    "paper": "maddi2024",
+    "model": "qwen3-32b",
+    "v1": 0.5,
+    "v2": {
+      "components": {
+        "data_source": 0.5,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "claim": 1.0,
+        "result": 1.0
+      },
+      "notes": {
+        "data_source": "named source (no file load)",
+        "sample": "N + window/filter evidence",
+        "result": "gold result number matched"
+      },
+      "weighted": 0.95,
+      "final_ecrf": 0.5,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ],
+        [
+          "c synthetic-substitute",
+          0.5
+        ],
+        [
+          "e paper-numbers-as-computed",
+          0.5
+        ]
+      ]
+    },
+    "data_using": false
+  },
+  {
+    "paper": "petersen2024",
+    "model": "deepseek-v4-pro",
+    "v1": 0.45,
+    "v2": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "claim": 1.0,
+        "result": 0.5
+      },
+      "notes": {
+        "data_source": "loaded provided raw_data file",
+        "sample": "N + window/filter evidence",
+        "result": "computed result evidence (no gold match)"
+      },
+      "weighted": 0.825,
+      "final_ecrf": 0.825,
+      "caps_applied": []
+    },
+    "data_using": true
+  },
+  {
+    "paper": "petersen2024",
+    "model": "qwen3-32b",
+    "v1": 0.45,
+    "v2": {
+      "components": {
+        "data_source": 1.0,
+        "sample": 1.0,
+        "indicator": 1.0,
+        "model": 1.0,
+        "claim": 1.0,
+        "result": 0.0
+      },
+      "notes": {
+        "data_source": "loaded provided raw_data file",
+        "sample": "N + window/filter evidence",
+        "result": "no result evidence"
+      },
+      "weighted": 0.65,
+      "final_ecrf": 0.55,
+      "caps_applied": [
+        [
+          "a no-exec-result",
+          0.6
+        ],
+        [
+          "b result=0",
+          0.55
+        ],
+        [
+          "d claim>0 result=0",
+          0.6
+        ]
+      ]
+    },
+    "data_using": true
+  }
+]
