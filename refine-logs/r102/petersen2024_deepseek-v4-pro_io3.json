@@ -1,0 +1,77 @@
+{
+  "paper": "petersen2024",
+  "model": "deepseek-v4-pro",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782300509,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [
+    "reproduce_final.py"
+  ],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 49.3,
+    "usage": {
+      "completion": 4078,
+      "prompt": 12538
+    },
+    "finish": "stop",
+    "n_content_chars": 3193
+  },
+  "llm_response_chars": 3193,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.94,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 2231
+  },
+  "stdout": "",
+  "stderr": "atsmodels/base/model.py\", line 203, in from_formula\n    tmp = handle_formula_data(data, None, formula, depth=eval_env,\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/formula/formulatools.py\", line 63, in handle_formula_data\n    result = dmatrices(formula, Y, depth, return_type='dataframe',\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/highlevel.py\", line 317, in dmatrices\n    (lhs, rhs) = _do_highlevel_design(\n                 ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/highlevel.py\", line 162, in _do_highlevel_design\n    design_infos = _try_incr_builders(\n                   ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/highlevel.py\", line 56, in _try_incr_builders\n    return design_matrix_builders(\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/build.py\", line 746, in design_matrix_builders\n    (num_column_counts, cat_levels_contrasts) = _examine_factor_types(\n                                                ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/build.py\", line 495, in _examine_factor_types\n    done = cat_sniffers[factor].sniff(value)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/categorical.py\", line 207, in sniff\n    if hasattr(data, \"dtype\") and safe_issubdtype(data.dtype, np.bool_):\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/util.py\", line 821, in safe_issubdtype\n    return np.issubdtype(dt1, dt2)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/numpy/core/numerictypes.py\", line 417, in issubdtype\n    arg1 = dtype(arg1).type\n           ^^^^^^^^^^^\nTypeError: Cannot interpret 'Int64Dtype()' as a data type\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.5,
+        "rationale": "partial: ['sciscinet']"
+      },
+      "sample": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['disruption', 'cd', 'abs(']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'fixed effect', 'reference_count', 'ln_rp', 'ln_kp']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['-0.002322', '-0.00232', '-0.0023']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['negative', 'decline']"
+      }
+    },
+    "overall_ecrf": 0.75
+  },
+  "status": "DONE",
+  "t_end": 1782300560
+}

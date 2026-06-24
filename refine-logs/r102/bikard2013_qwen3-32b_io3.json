@@ -1,0 +1,75 @@
+{
+  "paper": "bikard2013",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782300655,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 55.9,
+    "usage": {
+      "completion": 4614,
+      "prompt": 11417
+    },
+    "finish": "stop",
+    "n_content_chars": 3719
+  },
+  "llm_response_chars": 3719,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 2.16,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1107,
+    "stderr_chars": 0
+  },
+  "stdout": "Loading raw data...\nRESULT H1_COEFF_QUALITY = 0.1278\nRESULT H1_SE_QUALITY = 0.0035\nRESULT H1_PVAL_QUALITY = 0.0000\nRESULT H1_R2 = 0.1003\nRESULT H1_N = 40000\nPAPER_REPORTED H1_COEFF_QUALITY = 0.099\nRESULT H2_COEFF_FRAC_PUBS = -0.2634\nRESULT H2_SE_FRAC_PUBS = 0.0048\nRESULT H2_PVAL_FRAC_PUBS = 0.0000\nRESULT H2_R2 = 0.8197\nRESULT H2_N = 40000\nPAPER_REPORTED H2_COEFF_FRAC_PUBS = -0.069\n\n--- FINAL CONCLUSION ---\nRESULT H1_DIRECTION = POSITIVE (Collaboration associated with higher quality)\nRESULT H2_DIRECTION = NEGATIVE (Collaboration associated with lower fractional output)\nCONCLUSION: The reproduced analysis on the provided paper-level sample aligns with the paper's theoretical predictions. Collaboration (author_count) shows a positive association with publication quality (H1) and a negative association with fractional publication credit (H2), consistent with the tradeoff model where teams produce higher-impact work but dilute individual credit allocation. Note: Coefficients are approximations due to the absence of individual-scientist and department-year fixed effects in the provided DATA-SUB.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['mit', '661', 'faculty']"
+      },
+      "sample": {
+        "score": 0.5,
+        "rationale": "partial: ['661']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['collaboration', 'credit']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'fixed effect', 'department-year', 'career']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['0.099', '-0.069', '0.099']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['collaboration', 'credit', 'tradeoff']"
+      }
+    },
+    "overall_ecrf": 0.917
+  },
+  "status": "DONE",
+  "t_end": 1782300713
+}

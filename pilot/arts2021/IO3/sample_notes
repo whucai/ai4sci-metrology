@@ -1,0 +1,5 @@
+# Sample Notes — Arts2021
+
+USPTO patent claims; 10 preprocessing steps (P1–P10: tokenize, lemmatize, stopwords, n-grams, embeddings).
+Provided raw_data/patent_indicators.parquet contains the 10 indicator columns for 500 patents (real, from R003).
+Verify: novelty indicator formulas correct; cosine indicators match within 1–5%; reuse aggregation uses |set|+Σui (not the buggy multiply form).

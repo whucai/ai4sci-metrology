@@ -1,0 +1,7 @@
+# Sample Notes — funk2017
+
+Paper N = 2.9M utility patents 1977–2005; excludes 34,889 non-NBER-category + 177 missing; 2.8% undefined.
+Provided DATA-SUB: 40,000 SciSciNet papers. disruption_score is the precomputed CD5.
+Descriptive targets (paper Table 1): CD5 mean≈0.07, SD≈0.23, range[-1,1]; mCD5 mean≈0.31, SD≈1.75.
+Correlations: CD5×impact r≈0.03 (p<0.001); firm assignee r≈-0.00; universities r≈0.02; government r≈0.02.
+NOTE: 'firm assignee'/'government' labels are patent-specific — not in the paper sample; use institution_count as a proxy if needed, or restrict to the CD5 descriptives.

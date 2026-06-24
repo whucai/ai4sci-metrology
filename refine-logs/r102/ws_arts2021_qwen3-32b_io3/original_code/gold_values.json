@@ -1,0 +1,130 @@
+{
+  "paper_id": "arts2021_nlp_patent_novelty",
+  "task_type": "component_diagnosis",
+  "data_source": "USPTO patents 2016 (weekly filing dates), PatentsView",
+  "pre_computed_date": "2026-06-15",
+  "sample_N": 300,
+  "year_range": [
+    2016,
+    2016
+  ],
+  "methodology_reference": "Arts, Hou, Gomez (2021) Research Policy 50, 104144",
+  "sub_components": {
+    "preprocessing": {
+      "text_concatenation": "title + abstract + claims (note: title not in data, use abstract+claims)",
+      "tokenization": "regex: [a-z0-9][a-z0-9-]*[a-z0-9]+|[a-z0-9]",
+      "filters": [
+        "remove number-only tokens",
+        "remove single-character tokens",
+        "remove NLTK stopwords",
+        "remove custom stoplist of frequent non-technical terms",
+        "remove words appearing in only 1 patent"
+      ],
+      "stemming": "SnowBall (NLTK)",
+      "output": "deduplicated list of stemmed keywords per patent"
+    },
+    "indicators": {
+      "novelty": {
+        "new_word": "count of keywords first-appearing in USPTO by filing date",
+        "new_bigram": "count of consecutive keyword pairs first-appearing",
+        "new_trigram": "count of consecutive keyword triples first-appearing",
+        "new_word_comb": "count of pairwise keyword combinations first-appearing",
+        "cosine_similarity": "1 - avg(cosine_sim(focal, prior_5yr_patents))"
+      },
+      "impact": {
+        "new_word_reuse": "Σ(1+future_reuse) over new keywords introduced",
+        "new_bigram_reuse": "Σ(1+future_reuse) over new bigrams introduced",
+        "new_trigram_reuse": "Σ(1+future_reuse) over new trigrams introduced",
+        "new_word_comb_reuse": "Σ(1+future_reuse) over new keyword pairs introduced",
+        "cosine_similarity_impact": "forward_cosine / backward_cosine"
+      }
+    }
+  },
+  "gold_indicators": {
+    "new_word": {
+      "mean": 1.533333,
+      "median": 1.0,
+      "std": 2.639212,
+      "min": 0.0,
+      "max": 27.0,
+      "pct_nonzero": 58.0
+    },
+    "new_bigram": {
+      "mean": 22.013333,
+      "median": 20.0,
+      "std": 10.861233,
+      "min": 5.0,
+      "max": 70.0,
+      "pct_nonzero": 100.0
+    },
+    "new_trigram": {
+      "mean": 40.213333,
+      "median": 37.0,
+      "std": 15.980794,
+      "min": 14.0,
+      "max": 96.0,
+      "pct_nonzero": 100.0
+    },
+    "new_word_comb": {
+      "mean": 227.273333,
+      "median": 142.0,
+      "std": 253.372844,
+      "min": 0.0,
+      "max": 1468.0,
+      "pct_nonzero": 99.33
+    },
+    "cosine_similarity": {
+      "mean": 0.942773,
+      "median": 0.94194,
+      "std": 0.014864,
+      "min": 0.901487,
+      "max": 0.982326,
+      "pct_nonzero": 100.0
+    },
+    "new_word_reuse": {
+      "mean": 2.403333,
+      "median": 1.0,
+      "std": 4.210274,
+      "min": 0.0,
+      "max": 40.0,
+      "pct_nonzero": 58.0
+    },
+    "new_bigram_reuse": {
+      "mean": 22.996667,
+      "median": 21.0,
+      "std": 11.128167,
+      "min": 6.0,
+      "max": 70.0,
+      "pct_nonzero": 100.0
+    },
+    "new_trigram_reuse": {
+      "mean": 40.23,
+      "median": 37.0,
+      "std": 15.989245,
+      "min": 14.0,
+      "max": 96.0,
+      "pct_nonzero": 100.0
+    },
+    "new_word_comb_reuse": {
+      "mean": 227.273333,
+      "median": 142.0,
+      "std": 253.372844,
+      "min": 0.0,
+      "max": 1468.0,
+      "pct_nonzero": 99.33
+    },
+    "cosine_similarity_impact": {
+      "mean": 1.038059,
+      "median": 1.03711,
+      "std": 0.047805,
+      "min": 0.885975,
+      "max": 1.151981,
+      "pct_nonzero": 100.0
+    }
+  },
+  "preprocessing_stats": {
+    "mean_keywords_per_patent": 42.37,
+    "median_keywords": 39.0
+  },
+  "md_path": "Research Policy/1-s2.0-S0048733320302195-main.md"
+}

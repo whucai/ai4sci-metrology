@@ -1,0 +1,73 @@
+{
+  "paper": "maddi2024",
+  "model": "deepseek-v4-pro",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782300628,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 43.9,
+    "usage": {
+      "completion": 3472,
+      "prompt": 10389
+    },
+    "finish": "stop",
+    "n_content_chars": 7903
+  },
+  "llm_response_chars": 7903,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.03,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 82,
+    "stderr_chars": 377
+  },
+  "stdout": "DATA UNAVAILABLE: raw data not provided. Using synthetic data for demonstration.\n\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 66, in <module>\n    log_cit_base = np.array([cat_coeffs[c] for c in cat]) + \\\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 66, in <listcomp>\n    log_cit_base = np.array([cat_coeffs[c] for c in cat]) + \\\n                             ~~~~~~~~~~^^^\nKeyError: 6\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['publons', 'wos']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['57482', '947']"
+      },
+      "indicator": {
+        "score": 0.5,
+        "rationale": "partial: ['iqr']"
+      },
+      "model": {
+        "score": 0.5,
+        "rationale": "partial: ['log1p']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['947', 'positive']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['positive', 'threshold']"
+      }
+    },
+    "overall_ecrf": 0.833
+  },
+  "status": "DONE",
+  "t_end": 1782300674
+}

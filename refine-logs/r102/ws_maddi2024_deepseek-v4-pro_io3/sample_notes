@@ -1,0 +1,6 @@
+# Sample Notes — maddi2024
+
+N=57,482 (from 57,694 after IQR×5 outlier removal of 212). Window 2009–2020.
+Estimator: GLM with log(1+citations) DV — NOT plain OLS.
+Key result: from 947 words, report length significantly positively associated with citations.
+DATA UNAVAILABLE: if you cannot access Publons/WoS, document the data needed and either (a) construct a documented stub OR (b) state that reproduction is data-blocked. Do NOT present synthetic numbers as the paper's reproduction.

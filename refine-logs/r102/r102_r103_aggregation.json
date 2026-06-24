@@ -1,0 +1,365 @@
+{
+  "io1_v2_mean": 0.49749999999999994,
+  "io2_v2_mean": 0.5525,
+  "io3_v2_mean": 0.7125,
+  "per_paper": {
+    "arts2021": {
+      "IO1": 0.4875,
+      "IO2": 0.5,
+      "IO3": 0.6625
+    },
+    "bikard2013": {
+      "IO1": 0.5,
+      "IO2": 0.525,
+      "IO3": 0.975
+    },
+    "funk2017": {
+      "IO1": 0.5,
+      "IO2": 0.55,
+      "IO3": 0.825
+    },
+    "maddi2024": {
+      "IO1": 0.5,
+      "IO2": 0.5,
+      "IO3": 0.5
+    },
+    "petersen2024": {
+      "IO1": 0.5,
+      "IO2": 0.6875,
+      "IO3": 0.6
+    }
+  },
+  "gates": {
+    "G1 monotonicity (overall)": true,
+    "G1 monotonicity (≥4/5 papers)": false,
+    "G2 component heterogeneity": true,
+    "G3 disagreement exists": true,
+    "G4 break feasibility": true
+  },
+  "b_candidates": {
+    "B1": 19,
+    "B4": 7,
+    "B3": 11,
+    "B2": 5
+  },
+  "b1_confirmed": 19,
+  "io3_code_usage": {
+    "used_reference": 2,
+    "synth_despite_io3": 1
+  },
+  "io3_runs": [
+    {
+      "paper": "arts2021",
+      "model": "deepseek-v4-pro",
+      "v2": {
+        "components": {
+          "data_source": 1.0,
+          "sample": 1.0,
+          "indicator": 1.0,
+          "model": 0.5,
+          "claim": 1.0,
+          "result": 0.5
+        },
+        "notes": {
+          "data_source": "loaded provided raw_data file",
+          "sample": "N + window/filter evidence",
+          "result": "computed result evidence (no gold match)"
+        },
+        "weighted": 0.775,
+        "final_ecrf": 0.5,
+        "caps_applied": [
+          [
+            "c synthetic-substitute",
+            0.5
+          ]
+        ]
+      },
+      "io3_usage": {
+        "ref_available": true,
+        "used_reference": true,
+        "modified_reference": false,
+        "synth_despite_io3": true
+      }
+    },
+    {
+      "paper": "arts2021",
+      "model": "qwen3-32b",
+      "v2": {
+        "components": {
+          "data_source": 1.0,
+          "sample": 1.0,
+          "indicator": 1.0,
+          "model": 1.0,
+          "claim": 1.0,
+          "result": 0.5
+        },
+        "notes": {
+          "data_source": "loaded provided raw_data file",
+          "sample": "N + window/filter evidence",
+          "result": "computed result evidence (no gold match)"
+        },
+        "weighted": 0.825,
+        "final_ecrf": 0.825,
+        "caps_applied": []
+      },
+      "io3_usage": {
+        "ref_available": true,
+        "used_reference": false,
+        "modified_reference": false,
+        "synth_despite_io3": false
+      }
+    },
+    {
+      "paper": "bikard2013",
+      "model": "deepseek-v4-pro",
+      "v2": {
+        "components": {
+          "data_source": 1.0,
+          "sample": 1.0,
+          "indicator": 1.0,
+          "model": 0.5,
+          "claim": 1.0,
+          "result": 1.0
+        },
+        "notes": {
+          "data_source": "loaded provided raw_data file",
+          "sample": "N + window/filter evidence",
+          "result": "gold result number matched"
+        },
+        "weighted": 0.95,
+        "final_ecrf": 0.95,
+        "caps_applied": []
+      },
+      "io3_usage": {
+        "ref_available": false,
+        "used_reference": false,
+        "modified_reference": false,
+        "synth_despite_io3": false
+      }
+    },
+    {
+      "paper": "bikard2013",
+      "model": "qwen3-32b",
+      "v2": {
+        "components": {
+          "data_source": 1.0,
+          "sample": 1.0,
+          "indicator": 1.0,
+          "model": 1.0,
+          "claim": 1.0,
+          "result": 1.0
+        },
+        "notes": {
+          "data_source": "loaded provided raw_data file",
+          "sample": "N + window/filter evidence",
+          "result": "gold result number matched"
+        },
+        "weighted": 1.0,
+        "final_ecrf": 1.0,
+        "caps_applied": []
+      },
+      "io3_usage": {
+        "ref_available": false,
+        "used_reference": false,
+        "modified_reference": false,
+        "synth_despite_io3": false
+      }
+    },
+    {
+      "paper": "funk2017",
+      "model": "deepseek-v4-pro",
+      "v2": {
+        "components": {
+          "data_source": 1.0,
+          "sample": 1.0,
+          "indicator": 1.0,
+          "model": 0.0,
+          "claim": 0.0,
+          "result": 1.0
+        },
+        "notes": {
+          "data_source": "loaded provided raw_data file",
+          "sample": "N + window/filter evidence",
+          "result": "gold result number matched"
+        },
+        "weighted": 0.75,
+        "final_ecrf": 0.75,
+        "caps_applied": []
+      },
+      "io3_usage": {
+        "ref_available": true,
+        "used_reference": false,
+        "modified_reference": false,
+        "synth_despite_io3": false
+      }
+    },
+    {
+      "paper": "funk2017",
+      "model": "qwen3-32b",
+      "v2": {
+        "components": {
+          "data_source": 1.0,
+          "sample": 1.0,
+          "indicator": 1.0,
+          "model": 0.0,
+          "claim": 1.0,
+          "result": 1.0
+        },
+        "notes": {
+          "data_source": "loaded provided raw_data file",
+          "sample": "N + window/filter evidence",
+          "result": "gold result number matched"
+        },
+        "weighted": 0.9,
+        "final_ecrf": 0.9,
+        "caps_applied": []
+      },
+      "io3_usage": {
+        "ref_available": true,
+        "used_reference": true,
+        "modified_reference": false,
+        "synth_despite_io3": false
+      }
+    },
+    {
+      "paper": "maddi2024",
+      "model": "deepseek-v4-pro",
+      "v2": {
+        "components": {
+          "data_source": 0.5,
+          "sample": 1.0,
+          "indicator": 0.5,
+          "model": 0.5,
+          "claim": 1.0,
+          "result": 1.0
+        },
+        "notes": {
+          "data_source": "named source (no file load)",
+          "sample": "N + window/filter evidence",
+          "result": "gold result number matched"
+        },
+        "weighted": 0.825,
+        "final_ecrf": 0.5,
+        "caps_applied": [
+          [
+            "a no-exec-result",
+            0.6
+          ],
+          [
+            "c synthetic-substitute",
+            0.5
+          ],
+          [
+            "e paper-numbers-as-computed",
+            0.5
+          ]
+        ]
+      },
+      "io3_usage": {
+        "ref_available": false,
+        "used_reference": false,
+        "modified_reference": false,
+        "synth_despite_io3": false
+      }
+    },
+    {
+      "paper": "maddi2024",
+      "model": "qwen3-32b",
+      "v2": {
+        "components": {
+          "data_source": 0.5,
+          "sample": 1.0,
+          "indicator": 1.0,
+          "model": 1.0,
+          "claim": 1.0,
+          "result": 1.0
+        },
+        "notes": {
+          "data_source": "named source (no file load)",
+          "sample": "N + window/filter evidence",
+          "result": "gold result number matched"
+        },
+        "weighted": 0.95,
+        "final_ecrf": 0.5,
+        "caps_applied": [
+          [
+            "c synthetic-substitute",
+            0.5
+          ]
+        ]
+      },
+      "io3_usage": {
+        "ref_available": false,
+        "used_reference": false,
+        "modified_reference": false,
+        "synth_despite_io3": false
+      }
+    },
+    {
+      "paper": "petersen2024",
+      "model": "deepseek-v4-pro",
+      "v2": {
+        "components": {
+          "data_source": 1.0,
+          "sample": 0.5,
+          "indicator": 1.0,
+          "model": 1.0,
+          "claim": 1.0,
+          "result": 1.0
+        },
+        "notes": {
+          "data_source": "loaded provided raw_data file",
+          "sample": "partial sample evidence",
+          "result": "gold result number matched"
+        },
+        "weighted": 0.925,
+        "final_ecrf": 0.6,
+        "caps_applied": [
+          [
+            "a no-exec-result",
+            0.6
+          ]
+        ]
+      },
+      "io3_usage": {
+        "ref_available": true,
+        "used_reference": false,
+        "modified_reference": false,
+        "synth_despite_io3": false
+      }
+    },
+    {
+      "paper": "petersen2024",
+      "model": "qwen3-32b",
+      "v2": {
+        "components": {
+          "data_source": 1.0,
+          "sample": 1.0,
+          "indicator": 1.0,
+          "model": 1.0,
+          "claim": 1.0,
+          "result": 1.0
+        },
+        "notes": {
+          "data_source": "loaded provided raw_data file",
+          "sample": "N + window/filter evidence",
+          "result": "gold result number matched"
+        },
+        "weighted": 1.0,
+        "final_ecrf": 0.6,
+        "caps_applied": [
+          [
+            "a no-exec-result",
+            0.6
+          ]
+        ]
+      },
+      "io3_usage": {
+        "ref_available": true,
+        "used_reference": false,
+        "modified_reference": false,
+        "synth_despite_io3": false
+      }
+    }
+  ]
+}

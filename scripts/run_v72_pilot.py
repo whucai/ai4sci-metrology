@@ -194,6 +194,60 @@ RAW DATA:
     return prompt, data_files
 
 
+def build_prompt_io3(paper_id: str, paper_md: str, io3_dir: Path) -> tuple[str, list[Path], list[Path]]:
+    """IO₃ prompt: paper + docs + raw data + original/reference code (highest observability)."""
+    docs, data_files, code_files = [], [], []
+    for p in sorted(io3_dir.iterdir()):
+        if p.is_file() and p.name != "paper.md":
+            docs.append(f"### {p.name}\n\n{p.read_text()[:6000]}")
+    raw = io3_dir / "raw_data"
+    if raw.exists():
+        for p in sorted(raw.iterdir()):
+            if p.suffix in (".parquet", ".csv", ".tsv", ".json"):
+                data_files.append(p)
+    oc = io3_dir / "original_code"
+    if oc.exists():
+        for p in sorted(oc.iterdir()):
+            if p.suffix in (".py", ".R", ".jl", ".do"):
+                code_files.append(p)
+    docs_block = "\n\n".join(docs) if docs else "(no structured docs)"
+    data_block = (f"raw_data/ contains: {', '.join(p.name for p in data_files)} (at /workspace/raw_data/)"
+                  if data_files else "NO raw data file (data unavailable).")
+    code_block = (f"original_code/ contains: {', '.join(p.name for p in code_files)} (at /workspace/original_code/)"
+                  if code_files else "NO original code (boundary case — write your own).")
+    prompt = f"""You are reproducing the quantitative analysis of a scientific paper.
+
+You have (IO₃ condition — highest observability):
+  1. The paper text (below).
+  2. Structured documentation (data dictionary, sample notes, indicator defs — below).
+  3. Raw data files in raw_data/ (at /workspace/raw_data/ at runtime).
+  4. Original/reference code in original_code/ (at /workspace/original_code/ at runtime) — you may study, run, or adapt it.
+
+Rules:
+- You MAY import or execute the reference code from /workspace/original_code/, or adapt it. Document whether you used it as-is, modified it, or wrote your own.
+- Load raw_data and reproduce the paper's numerical results.
+- Print every key result with a label: print("RESULT <name> = <value>"). Label paper-reported comparison values as PAPER_REPORTED. Do NOT embed paper-reported numbers as if computed.
+- If you synthesize/placeholder any data despite real materials being available, label those outputs SYNTHETIC.
+- Print the final conclusion/direction.
+- Output only ONE Python script in a ```python block.
+
+PAPER ({paper_id}):
+\"\"\"
+{paper_md[:45000]}
+\"\"\"
+
+DOCUMENTATION:
+{docs_block}
+
+RAW DATA:
+{data_block}
+
+REFERENCE CODE:
+{code_block}
+"""
+    return prompt, data_files, code_files
+
+
 def score_ecrf(paper_id: str, code: str, stdout: str, stderr: str, exec_ok: bool) -> dict:
     """Rules-based v0 ECRF scorer. Returns per-component 0/0.5/1.0 + rationale."""
     gold = PAPER_GOLD.get(paper_id, {})
@@ -229,14 +283,18 @@ def run_one(paper_id: str, model_key: str, io_level: int) -> dict:
 
     if io_level == 1:
         prompt = build_prompt_io1(paper_id, paper_md)
-        data_files = []
+        data_files, ref_code_files = [], []
     elif io_level == 2:
         prompt, data_files = build_prompt_io2(paper_id, paper_md, io_dir)
+        ref_code_files = []
+    elif io_level == 3:
+        prompt, data_files, ref_code_files = build_prompt_io3(paper_id, paper_md, io_dir)
     else:
-        raise NotImplementedError("only IO1/IO2 implemented in this runner")
+        raise NotImplementedError("only IO1/IO2/IO3 implemented in this runner")
 
     rec = {"paper": paper_id, "model": model_key, "io": io_level, "image": IMAGE, "t_start": int(time.time()),
-           "io2_data_files": [p.name for p in data_files]}
+           "io2_data_files": [p.name for p in data_files],
+           "io3_ref_code_files": [p.name for p in ref_code_files]}
 
     # 1. LLM call
     try:
@@ -257,21 +315,25 @@ def run_one(paper_id: str, model_key: str, io_level: int) -> dict:
         rec["status"] = "NO_CODE"
         return rec
 
-    # 3. isolated execution — pre-populate workdir with IO₂ docs + raw_data (no code)
+    # 3. isolated execution — pre-populate workdir with IO₂/IO₃ docs + raw_data (+ original_code for IO₃)
     workdir = OUTPUT_DIR / f"ws_{paper_id}_{model_key}_io{io_level}"
     if workdir.exists():
         import shutil
         shutil.rmtree(workdir)
     workdir.mkdir(parents=True, exist_ok=True)
     workdir.chmod(0o755)
-    if io_level == 2:
+    if io_level in (2, 3):
         import shutil
-        # copy docs (non-code .md) and raw_data into the per-run workdir
+        # copy docs (all files, non-paper.md, non-dir) and raw_data into the per-run workdir
         for p in io_dir.iterdir():
-            if p.suffix == ".md" and p.name != "paper.md":
+            if p.is_file() and p.name != "paper.md":
                 shutil.copy2(p, workdir / p.name)
         if (io_dir / "raw_data").exists():
             shutil.copytree(io_dir / "raw_data", workdir / "raw_data", dirs_exist_ok=True)
+    if io_level == 3:
+        import shutil
+        if (io_dir / "original_code").exists():
+            shutil.copytree(io_dir / "original_code", workdir / "original_code", dirs_exist_ok=True)
     try:
         ex = execute_python_isolated(code, workdir, image=IMAGE, timeout=600)
         rec["exec"] = {

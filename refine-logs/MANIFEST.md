@@ -42,3 +42,9 @@
 - scripts/ecrf_v2_scorer.py — v2 recognition (file-load data_source, computed sample, broad result evidence) + v1 weights/gates + result-line classifier
 - refine-logs/r101/r101b_v2_rescore.json — v1/v2 per-run
 - R101B_REPORT.md — IO2 v2=0.552 > IO1 0.490 (PASS); data-using 0.631 > synth 0.500 (PASS); gate-c no misfire (PASS); R102 READY
+
+## R102 + R103 (mini Study 2 IO3 + green-light gate) — 2026-06-24
+- scripts/run_v72_pilot.py — extended for IO3 (build_prompt_io3, original_code into workdir)
+- scripts/r102_r103_analysis.py — R102 v2 scoring + IO3 code-usage + R103 4-gate aggregation
+- refine-logs/r102/ — 10 IO3 runs + r102_r103_aggregation.json
+- R102_R103_REPORT.md — IO1 0.497 < IO2 0.552 < IO3 0.713; ALL 4 R103 GATES PASS; green-light for S2

@@ -1,0 +1,73 @@
+{
+  "paper": "maddi2024",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782300605,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 68.2,
+    "usage": {
+      "completion": 5707,
+      "prompt": 11488
+    },
+    "finish": "stop",
+    "n_content_chars": 5247
+  },
+  "llm_response_chars": 5247,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.97,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 290,
+    "stderr_chars": 467
+  },
+  "stdout": "DATA UNAVAILABLE: Raw data files not found in /workspace/raw_data/.\nDOCUMENTATION: The study requires Publons reviewer report word counts matched to Web of Science citation data (N=57,482, 2009-2020).\nACTION: Constructing a documented synthetic stub to demonstrate the analytical pipeline.\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 39, in <module>\n    year = np.random.choice(range(2009, 2021), size=N, p=[0.01, 0.02, 0.03, 0.04, 0.05, 0.08, 0.10, 0.12, 0.15, 0.10, 0.05])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 968, in numpy.random.mtrand.RandomState.choice\nValueError: 'a' and 'p' must have same size\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['publons', 'web of science', 'wos']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['57,482', '57482', '2009', '2020', '947']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['word count', 'reviewer']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['log(1', 'log1p']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['947', 'positive']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['longer', 'positive', 'threshold']"
+      }
+    },
+    "overall_ecrf": 1.0
+  },
+  "status": "DONE",
+  "t_end": 1782300674
+}
