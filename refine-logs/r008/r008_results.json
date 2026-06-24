@@ -1,0 +1,78 @@
+{
+  "experiment": "R008",
+  "paper": "Deng2023 (Edge-Removal Disruption, Scientometrics)",
+  "task_type": "component",
+  "model": "deepseek-v4-pro",
+  "timestamp": "2026-06-17T17:03:55.724308",
+  "generation_time_s": 151.8,
+  "execution_success": false,
+  "section_compliance": {
+    "DATA_LOAD": true,
+    "CITATION_GRAPH": true,
+    "HOTSPOT": true,
+    "CD5_BASELINE": true,
+    "CD5_EDGE_REMOVAL": true,
+    "COMPARISON": false,
+    "DIFF_TABLE": false
+  },
+  "all_sections_found": false,
+  "component_evaluation": {
+    "c1_baseline_cd5": false,
+    "c2_hotspot_id": true,
+    "c3_edge_removal": false,
+    "c4_comparison": true,
+    "all_components_present": false
+  },
+  "d1_score": 0.7142857142857143,
+  "d2_score": 0.0,
+  "d3_score": 0.0,
+  "d4_score": 0.5,
+  "d5_score": 0.5,
+  "overall_score": 0.232,
+  "d3_checks": [
+    {
+      "metric": "n_focal",
+      "gold": 500,
+      "agent": null,
+      "pass": false
+    },
+    {
+      "metric": "baseline_cd5_mean",
+      "gold": 0.05939334,
+      "agent": null,
+      "pass": false
+    },
+    {
+      "metric": "new_cd5_mean",
+      "gold": 0.07889757,
+      "agent": null,
+      "pass": false
+    },
+    {
+      "metric": "cd5_delta_mean",
+      "gold": 0.01950423,
+      "agent": null,
+      "pass": false
+    },
+    {
+      "metric": "rank_correlation",
+      "gold": 0.966786,
+      "agent": null,
+      "pass": false
+    },
+    {
+      "metric": "n_papers_changed",
+      "gold": 22,
+      "agent": null,
+      "pass": false
+    },
+    {
+      "metric": "n_hotspot_papers",
+      "gold": 139,
+      "agent": null,
+      "pass": false
+    }
+  ],
+  "d3_pass": false,
+  "agent_metrics": {}
+}

@@ -1,0 +1,4 @@
+  File "/tmp/sandbox_bxci2m_t/script.py", line 1
+    ```python
+    ^
+SyntaxError: invalid syntax

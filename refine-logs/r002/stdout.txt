@@ -1,0 +1,77 @@
+=== DATA_LOAD ===
+Initial sample size: 1119270
+After dropping NaNs in key columns: 621577
+After year filter (2011-2015): 122466
+After reference_count filter (10-200): 105002
+After author_count filter (1-25): 104968
+After citation_count_5y filter (1-1000): 102550
+Final sample size after all filters: 102550
+
+=== DESCRIPTIVE ===
+Mean |CD|: 0.002316
+Mean reference_count (rp): 40.6938
+Mean author_count (kp): 3.6591
+Mean citation_count_5y (cp5): 20.5758
+Std |CD|: 0.005855
+
+=== TRANSFORM ===
+ln_kp: min=0.000000, max=3.218876
+ln_rp: min=2.302585, max=5.298317
+ln_cp5: min=0.000000, max=6.901737
+
+=== REGRESSION ===
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 abs_CD   R-squared:                       0.120
+Model:                            OLS   Adj. R-squared:                  0.120
+Method:                 Least Squares   F-statistic:                     2005.
+Date:                Fri, 12 Jun 2026   Prob (F-statistic):               0.00
+Time:                        16:27:41   Log-Likelihood:             3.8821e+05
+No. Observations:              102550   AIC:                        -7.764e+05
+Df Residuals:                  102542   BIC:                        -7.763e+05
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.0071      0.000     67.506      0.000       0.007       0.007
+ln_kp         -0.0002    2.7e-05     -8.831      0.000      -0.000      -0.000
+ln_rp         -0.0023   2.91e-05    -79.819      0.000      -0.002      -0.002
+ln_cp5         0.0017   1.57e-05    106.116      0.000       0.002       0.002
+year_2012     -0.0001   5.58e-05     -2.023      0.043      -0.000   -3.49e-06
+year_2013     -0.0002   5.52e-05     -3.949      0.000      -0.000      -0.000
+year_2014     -0.0004   5.48e-05     -7.041      0.000      -0.000      -0.000
+year_2015     -0.0006   5.44e-05    -11.363      0.000      -0.001      -0.001
+==============================================================================
+Omnibus:                   234375.791   Durbin-Watson:                   1.990
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):       9444044943.419
+Skew:                          21.355   Prob(JB):                         0.00
+Kurtosis:                    1489.064   Cond. No.                         30.6
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+=== COEFFICIENTS ===
+ln_kp: coef=-0.00023815, std_err=0.00002697, p_value=0.000000
+ln_rp: coef=-0.00232168, std_err=0.00002909, p_value=0.000000
+ln_cp5: coef=0.00166938, std_err=0.00001573, p_value=0.000000
+
+=== RESULTS ===
+Sample N = 102550.0
+R-squared = 0.120403
+Direction of ln_kp coefficient: negative
+Direction of ln_rp coefficient: negative
+Direction of ln_cp5 coefficient: positive
+
+=== DIFF_TABLE ===
+| Metric | Agent Value |
+|--------|-------------|
+| sample_N | 102550.0 |
+| R_squared | 0.120403 |
+| coef_ln_kp | -0.000238 |
+| coef_ln_rp | -0.002322 |
+| coef_ln_cp5 | 0.001669 |
+| p_ln_kp | 0.000000 |
+| p_ln_rp | 0.000000 |
+| p_ln_cp5 | 0.000000 |

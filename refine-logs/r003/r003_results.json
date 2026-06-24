@@ -1,0 +1,96 @@
+{
+  "experiment": "R003",
+  "paper": "Arts, Hou, Gomez (2021) 'NLP to identify creation and impact of new technologies in patent text', Research Policy 50, 104144",
+  "task_type": "component_diagnosis",
+  "model": "deepseek-v4-pro (via DeepSeek Anthropic API)",
+  "timestamp": "2026-06-15T18:15:00",
+  "execution_summary": {
+    "code_generated_chars": 12314,
+    "generation_time_s": 166.1,
+    "execution_success": true,
+    "first_attempt_syntax_error": true,
+    "syntax_fix": "escaped newlines (\\\\n → real \\n) + truncated component list repair",
+    "fixed_code_path": "refine-logs/r003/reproduce_v0_fixed.py",
+    "stdout_path": "refine-logs/r003/stdout.txt",
+    "agent_output_path": "refine-logs/r003/patent_indicators.parquet"
+  },
+  "component_identification": {
+    "preprocessing_steps_identified": 10,
+    "preprocessing_steps_total": 10,
+    "step_completeness": 1.0,
+    "indicators_identified": 10,
+    "indicators_total": 10,
+    "indicator_coverage": 1.0
+  },
+  "error_localization": {
+    "error_found": true,
+    "error_category": "formula_error",
+    "affected_indicators": [
+      "new_word_reuse", "new_bigram_reuse", "new_trigram_reuse", "new_word_comb_reuse"
+    ],
+    "error_description": "Reuse indicators compute |set|*(1+Σui) instead of |set|+Σui. The agent uses sum(1+total_future_count for _ in new_items) which multiplies rather than adds.",
+    "correct_formula": "new_word_reuse = Σ(1+ui) where ui = future patent count for keyword i",
+    "agent_formula_bug": "reuse_word = sum(1+future_keywords for _ in new_kw_set) = |set|*(1+Σui)",
+    "fix": "reuse_word = len(new_kw_set) + future_keywords",
+    "code_location": "lines 233-236 in reproduce_v0_fixed.py",
+    "root_cause": "Aggregation pattern miscoding — the agent correctly accumulates Σui but then applies sum(1+X for _ in set) which multiplies instead of adding",
+    "impact": "Reuse values inflated by factor of |new_items| (e.g., new_word_comb_reuse: 342K vs expected ~228)"
+  },
+  "component_diagnosis_scores": {
+    "D1_component_fidelity": {
+      "score": 1.00,
+      "detail": "All 10 preprocessing steps (P1-P10) and 10 indicators (I1-I10) correctly identified and documented"
+    },
+    "D2_executability": {
+      "score": 1.00,
+      "detail": "Code executed without runtime errors. First-attempt syntax error from response escaping, not logic."
+    },
+    "D3_methodology_accuracy": {
+      "score": 0.80,
+      "detail": "Novelty indicators (I1-I5): all correct. Impact indicators: I10 (cosine impact) correct, I6-I9 have aggregation formula bug. Cosine values match gold despite different samples."
+    },
+    "D4_error_localization": {
+      "score": 0.85,
+      "detail": "Reuse indicator error successfully localized to formula sub-component at code lines 233-236. Error source is clearly formula-level, not data or preprocessing."
+    },
+    "D5_auditability": {
+      "score": 0.85,
+      "detail": "COMPONENT_DECOMPOSITION section lists each sub-component. COMPONENT_DEPENDENCY_GRAPH shows prerequisite chains. Code has clear section structure."
+    },
+    "overall": 0.90
+  },
+  "indicator_stats_comparison": {
+    "note": "Agent uses 500 patents from patents_sample_50k (first 500, single date 2016-01-05). Gold uses 300 patents from patents_full across 40 weeks. Different samples prevent direct correlation. Compare distribution shapes.",
+    "novelty_indicators": {
+      "new_word": {"agent_mean": 3.80, "gold_mean": 1.53, "ratio": 2.48, "agent_pct_nz": 69.6, "gold_pct_nz": 58.0},
+      "new_bigram": {"agent_mean": 61.75, "gold_mean": 22.01, "ratio": 2.81, "agent_pct_nz": 100.0, "gold_pct_nz": 100.0},
+      "new_trigram": {"agent_mean": 90.58, "gold_mean": 40.21, "ratio": 2.25, "agent_pct_nz": 100.0, "gold_pct_nz": 100.0},
+      "new_word_comb": {"agent_mean": 473.92, "gold_mean": 227.27, "ratio": 2.09, "agent_pct_nz": 100.0, "gold_pct_nz": 99.3},
+      "cosine_similarity": {"agent_mean": 0.929, "gold_mean": 0.943, "ratio": 0.99, "agent_pct_nz": 100.0, "gold_pct_nz": 100.0}
+    },
+    "impact_indicators": {
+      "new_word_reuse": {"agent_mean": 1011.9, "gold_mean": 2.4, "ratio": 421.1, "note": "FORMULA BUG"},
+      "new_bigram_reuse": {"agent_mean": 991.1, "gold_mean": 23.0, "ratio": 43.1, "note": "FORMULA BUG"},
+      "new_trigram_reuse": {"agent_mean": 251.3, "gold_mean": 40.2, "ratio": 6.25, "note": "FORMULA BUG"},
+      "new_word_comb_reuse": {"agent_mean": 342162.8, "gold_mean": 227.3, "ratio": 1505.5, "note": "FORMULA BUG"},
+      "cosine_similarity_impact": {"agent_mean": 1.049, "gold_mean": 1.038, "ratio": 1.01, "note": "CLOSE MATCH"}
+    }
+  },
+  "key_findings": [
+    "1. Component identification is 100% complete: agent correctly decomposes Arts2021 into 10 preprocessing steps and 10 indicators",
+    "2. All 5 novelty indicator formulas are correctly implemented",
+    "3. Reuse indicator formulas (I6-I9) have a systematic aggregation bug: |set|*(1+Σui) instead of |set|+Σui",
+    "4. Error is precisely localized to lines 233-236 — formula sub-component, not data or preprocessing",
+    "5. Cosine similarity indicators (I5, I10) match gold within 1-5% despite different data samples",
+    "6. Framework successfully distinguishes formula errors from data errors and preprocessing errors",
+    "7. R003 validates component diagnosis as a distinct evaluation paradigm from strict numerical reproduction (R002)"
+  ],
+  "contrast_with_r002": {
+    "r002_task": "STRICT numerical reproduction of regression model",
+    "r002_strength": "Proves agent can achieve coefficient-level exact reproduction when methodology is formalizable",
+    "r003_task": "Component diagnosis of 10 complex NLP indicators",
+    "r003_strength": "Proves agent can decompose complex methodology into sub-components and framework can localize errors to specific components",
+    "framework_insight": "Task type taxonomy (STRICT vs COMPONENT_DIAGNOSIS → METHOD) is validated. Evaluation dimensions differ meaningfully between task types."
+  },
+  "spurious_flags": []
+}

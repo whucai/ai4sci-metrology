@@ -1,86 +1,258 @@
-# Research Idea Report: AI Reproducibility Metrology
+# Idea Discovery Report: Evidence-Chain Theory of AI Reproduction Auditing
 
-**Direction**: AI Agent 自动论文复现与可复现性计量
-**Target Paper**: SciSciGPT (Nature Computational Science 2025)
-**Date**: 2026-06-01
+**Direction**: When Can We Trust AI-Generated Scientific Reproductions? An Evidence-Chain Theory of Generative Agent Auditing
+**Date**: 2026-06-24 (v7 — theory compression: IO → ECRF → TCE, 4 Propositions)
+**Target Venue**: UTD journals — ISR / MISQ / Management Science
+
+---
 
 ## Executive Summary
 
-提出一个新范式：**用 AI Agent 作为"计量仪器"自动测量科学研究的可复现性**。
+Generative AI agents can now execute computational research — finding data, writing code, running models, producing results. When they succeed, organizations face a governance question: **can these AI-generated reproductions be trusted?**
 
-核心思路：AI Agent 读取论文 → 自动构建复现环境 → 执行分析 → 比对结论 → 输出可复现性评估报告。
-关键创新：不仅测量"结论是否可复现"，还测量"环境构建需要多少次修复迭代"——后者本身就是一个计量指标（Reproducibility Effort Index, REI）。
+This paper develops an **evidence-chain theory of AI reproduction auditing**. The core theoretical claim: AI reproduction is not limited by model accuracy, but by the **partial observability of the scientific evidence chain**. The evidence chain (Data → Sample → Indicator → Model → Result → Claim) is unevenly reconstructible — some components are fully observable from paper text, others remain opaque regardless of how much information is provided. This asymmetry produces a systematic gap between perceived reproduction success (result-level evaluation) and actual reproduction validity (component-level audit). We call this gap **trust calibration error**.
 
-对标 SciSciGPT (Nature Computational Science 2025)，该工作用 5-Agent 协作系统自动做 SciSci 研究，
-完成时间为研究人员的 ~10%。我们在此基础上构建**可复现性测量仪器**。
+**One theoretical chain**: Information Observability → Evidence Chain Reconstruction Fidelity → Trust Calibration Error.
 
-## System Architecture
+---
 
-```
-论文 PDF → [Agent 读取] → 提取实验方案(方法/数据/分析步骤)
-              ↓
-        [环境构建] → 动态生成 Dockerfile
-              ↓
-        [沙箱执行] → 运行分析代码(支持 Python/R/Julia)
-              ↓
-        [结果比对] → Agent 输出 vs 论文声称的结果
-              ↓
-        [失败] → Self-Correction: Agent 读报错 → 修复 → 重试
-              ↓
-        输出: 可复现性评估报告 + REI 分数
-```
+## 1. Theory: Information Observability → Reconstruction Fidelity → Trust Calibration
 
-## Four Modules
+### 1.1 The Core Theoretical Construct: Information Observability (IO)
 
-1. **论文理解模块**: 结构化提取方法、数据、分析步骤 (Grobid/LLM)
-2. **环境构建模块**: 动态生成容器 + Self-Correction 修复循环 ← 技术壁垒
-3. **分析复现模块**: 沙箱执行 + 结果比对 (Python/R/Julia subprocess)
-4. **可复现性报告模块**: 自动生成评估报告 (REI + 逐步骤评估)
+Computational papers describe a chain of evidentiary operations: where data came from, how samples were constructed, which indicators were computed, what models were estimated, what results were obtained, and what claims were drawn. But this chain is never fully visible to a reader — or to an AI agent. Some components are explicitly described (formulas, table values). Others are compressed into phrases like "standard preprocessing" or "following prior work." Still others are entirely implicit — the analyst's judgment calls about outlier treatment, bandwidth selection, or specification choice.
 
-## Key Innovation: Reproducibility Effort Index (REI)
+We define **Information Observability (IO)** as the degree to which each component of the scientific evidence chain is explicitly specified and directly accessible to an AI agent attempting reproduction. IO varies across components within the same paper — a formula may be fully observable while the sample filtering logic is only partially specified — and across papers — some papers provide code and data, others provide only narrative.
 
-REI = Σ(每步骤修复迭代次数) / (成功步骤数)
+IO is the independent variable in our theory.
 
-这是首个**可复现性努力的定量计量指标**：
-- REI = 0: 一键复现（黄金标准）
-- REI ≤ 2: 低努力（常规可复现）
-- REI ≤ 5: 中等努力（需要专业调试）
-- REI > 5: 高努力（可能需要原作者介入）
-- REI = ∞: 不可复现（放弃）
+### 1.2 The Mediating Mechanism: Evidence Chain Reconstruction Fidelity (ECRF)
 
-## SciSciGPT Reproduction Strategy
+An AI agent attempting reproduction must reconstruct each component of the evidence chain from observable information. **Evidence Chain Reconstruction Fidelity (ECRF)** measures how accurately the agent reconstructs each component: Did it identify the correct data source? Did it apply the correct filtering rules? Did it implement the correct indicator formula? Did it specify the correct model? Do its results match? Do its conclusions follow from its results?
 
-1. 提取 SciSciGPT 的核心多 Agent 架构 (LangGraph StateGraph)
-2. 适配到本地基础设施 (Qwen3-32B/DeepSeek, 本地沙箱, 本地存储)
-3. 复现论文中的 Case Study 2 (Wu et al. 2019 "大团队发展科学，小团队颠覆科学" 图表复现)
-4. 计算 REI，记录所有修复迭代
+The key theoretical claim: **ECRF is not uniform across components.** Components with high observability (explicit formulas, target table values) can be reconstructed with high fidelity. Components with low observability (implicit preprocessing, undocumented specification choices) resist reconstruction. Model capability matters, but its effect is bounded by the observability of the evidence chain. This asymmetry, beyond model capability alone, is a primary mechanism governing AI reproduction quality.
 
-## SciSci SDK Design (Step 2)
+ECRF is the mediating mechanism in our theory.
 
-SDK 封装高阶 SciSci 操作，Agent 不再裸写底层代码：
+### 1.3 The Outcome Variable: Trust Calibration Error (TCE)
 
-| SDK 函数 | 底层处理 |
-|---------|---------|
-| `sci.disruption_index(doi)` | 引文网络图查询 + 三元组计数 |
-| `sci.cem_match(ids, pool, on)` | 分布式 CEM 匹配 |
-| `sci.citation_cascade(doi, depth)` | 引文级联分析（多跳遍历） |
-| `sci.coauthor_network(author_id)` | 子图提取 + 中心性计算 |
-| `sci.field_normalize(metric, field, year)` | 领域×年份 Z-score 标准化 |
+When organizations evaluate AI-generated reproductions, they rely on observable signals. The most accessible signal is result-level agreement: do the reproduced numbers match the paper's reported numbers? But result-level agreement is a systematically misleading signal. It can be high when ECRF is low — the agent produced the right number through the wrong process, or hard-coded the paper's values, or used a different sample that coincidentally produced similar results.
 
-## Experiment Roadmap
+We define **Trust Calibration Error (TCE)** as the gap between perceived reproduction success (result-level evaluation) and actual reproduction validity (component-level audit):
 
-| Phase | Task | Status |
-|-------|------|--------|
-| M0 | Multi-agent graph smoke test | ✓ DONE |
-| M1 | Single-specialist + real LLM + sandbox | ✓ DONE (mock), pending (API) |
-| M2 | Paper reproduction pipeline | In progress |
-| M3 | Self-Correction loop + REI | Planned |
-| E2a-c | SciSci SDK validation | Planned |
+> TCE = P(result-level success) − P(component-valid success)
 
-## Next Steps
+TCE captures the governance failure: organizations that rely on result-level evaluation systematically overestimate the trustworthiness of AI-generated reproductions. Component-level auditing reduces TCE by detecting evidence-chain breaks that result-level evaluation misses.
 
-1. Configure LLM API key (ANTHROPIC_API_KEY or OPENAI_API_KEY)
-2. Run M1 with real LLM → verify >70% task completion
-3. Build paper ingestion module (PDF → structured method extraction)
-4. Reproduce SciSciGPT Case Study 2 → compute REI
-5. Implement SciSci SDK disruption_index(), cem_match()
+TCE is the outcome variable in our theory.
+
+### 1.4 Four Theoretical Propositions
+
+**P1 (Observability Bound)**: AI reproduction fidelity is bounded by the partial observability of the scientific evidence chain. Components with higher observability are reconstructed with higher fidelity.
+
+→ Tested in Study 2 via the IO gradient (C1: narrative-only → C2: structured descriptions → C3: full materials).
+
+**P2 (Asymmetric Reconstructability)**: Errors arise from asymmetric reconstructability across evidence-chain components. Sample construction, indicator operationalization, and model specification — components where judgment and implicit knowledge matter most — are systematically harder to reconstruct than data source identification or result reporting.
+
+→ Tested in Studies 1-2 via per-component ECRF variation and the Component × IO interaction.
+
+**P3 (Trust Inflation)**: Result-level evaluation produces systematic trust calibration error. Because observable agreement at the result level can mask unobservable failures at upstream components, organizations relying on result-level evaluation will overestimate reproduction validity.
+
+→ Tested in Study 3 via the three-protocol comparison: Protocol A (result-level) vs Protocol C (component-level) against human-adjudicated labels.
+
+**P4 (Audit Correction)**: Component-level auditing reduces trust calibration error by surfacing evidence-chain breaks that result-level evaluation fails to detect.
+
+→ Tested in Study 3 via TCE reduction when moving from Protocol A to Protocol C, and via the evidence break type taxonomy.
+
+### 1.5 From Propositions to Empirical Hypotheses
+
+Theory propositions are translated into testable empirical hypotheses:
+
+| Theory Proposition | Empirical Hypothesis | Study |
+|-------------------|---------------------|-------|
+| P1: Observability Bound | H1: ECRF increases from IO₁ to IO₃ | Study 2 |
+| P2: Asymmetric Reconstructability | H2: IO effect varies systematically across evidence-chain components | Study 2 |
+| P3: Trust Inflation | H3: Result-level regime has positive Trust Inflation Rate | Study 3 |
+| P4: Audit Correction | H4: Component-level audit reduces Trust Inflation Rate relative to result-level evaluation | Study 3 |
+
+---
+
+## 2. Theoretical Positioning
+
+### 2.1 What Kind of Theory Is This?
+
+This is an **explanatory mechanism theory** in the IS tradition. It does not predict *whether* AI can reproduce papers (a performance question). It explains *why* AI reproductions fail in ways invisible to conventional evaluation, *where* in the evidence chain failures concentrate, and *how* organizations can detect them.
+
+### 2.2 Relationship to Existing Theory Streams
+
+| Stream | Core Concept | Our Extension |
+|--------|-------------|---------------|
+| **Information processing theory** (Galbraith, Tushman & Nadler) | Organizations process information to reduce uncertainty | AI agents face the same information-processing constraint — but the "information" is the evidence chain, and its observability determines reconstruction fidelity |
+| **Algorithmic auditing** (Metaxa et al., Raji et al.) | Automated decisions require independent audit | Extends auditing from fairness/accountability to scientific validity — the audit target is evidence-chain integrity, not decision bias |
+| **Scientific reproducibility** (NASEM, ACM Artifact Badging) | Reproducibility requires artifacts and verification | Extends from human-submitted artifacts to AI-generated reproductions — the reproducing entity is the variable, not the artifact |
+| **AI governance / trust** (Glikson & Woolley, Lebovitz et al.) | Trust in AI requires understanding capability boundaries | Introduces trust calibration error as a measurable governance metric specific to AI-generated knowledge outputs |
+
+### 2.3 What This Theory Is NOT
+
+- NOT a benchmark performance paper ("LLMs score X on task Y")
+- NOT an evaluation system paper ("we built a tool that scores reproductions")
+- NOT a model comparison paper ("GPT-4o outperforms Qwen3 on reproduction")
+- It IS a theory about **why AI-generated scientific outputs create a specific, measurable governance failure — and how to correct it.**
+
+---
+
+## 3. Empirical Strategy: Three Studies
+
+### Study 1: Construct Validation (ECRF Dimensionality)
+
+**Theoretical purpose**: Establish that ECRF is multi-dimensional — evidence-chain components vary independently, confirming that component-level measurement captures structure invisible to aggregate scores.
+
+**Key evidence**: Disagreement rate (P(result-success ≠ component-success)), error localization rate, inter-component correlation structure.
+
+**Status**: Existing M0/M1 pilot data. Calibration, not main experiment.
+
+---
+
+### Study 2: Observability → Reconstruction Fidelity (P1, P2)
+
+**Theoretical purpose**: Test the core mechanism — IO causally affects ECRF, and the effect is asymmetric across components.
+
+**Design**: 20 papers × 3 IO levels × 2 primary models = 120 runs. Robustness: 8-10 papers × 2 frontier models.
+
+**IO Gradient**:
+
+| Level | Observability | Agent Access Boundary |
+|-------|-------------|----------------------|
+| **IO₁ (Low)** | Narrative evidence only | Paper text; no web, no data, no code |
+| **IO₂ (Medium)** | Structured documentation, no executable code | Paper + data dictionary + variable documentation + sample construction notes; controlled raw data access where task requires it, but **no original code or reproduction scripts** |
+| **IO₃ (High)** | Full executable materials | Paper + data + original code; provided materials only |
+
+**Critical design rules**: Fresh isolated workspace per run; condition order randomized; no cross-condition context leakage.
+
+**Analysis**: Paired ECRF differences across IO levels per component; Component × IO interaction (mixed-effects model).
+
+**Success criteria**: Monotonic ECRF increase from IO₁ to IO₃; significant improvement in ≥2 components; Component × IO interaction confirms asymmetric reconstructability.
+
+---
+
+### Study 3: Trust Calibration Error (P3, P4) — **MAIN CONTRIBUTION**
+
+**Theoretical purpose**: Demonstrate that result-level evaluation produces systematic TCE, and component-level auditing corrects it by detecting evidence-chain breaks.
+
+**Design**: All runs from Studies 1-2 scored under three evaluation regimes against human-adjudicated validity labels.
+
+#### Three Evaluation Regimes
+
+| Regime | Observability Assumption | Trust Signal | Expected TCE |
+|--------|-------------------------|-------------|-------------|
+| **R₁: Result-level** | Assumes result agreement implies valid reproduction | Final numbers match → trust | High |
+| **R₂: Aggregate composite** | Assumes weighted combination captures validity | Composite score > threshold → trust | Moderate |
+| **R₃: Component-level audit** | Requires evidence at each task-critical chain component | All **task-critical** components pass + no evidence break flagged → trust | Low |
+
+**R₃ is task-contingent**: Not all six components apply to every task type. The audit requires components that are *applicable to the task type* to pass.
+
+**Trust Calibration Error (TCE)** — the aggregate calibration construct:
+
+> TCE^r = P(Regime r says trust) − P(Human says valid)
+
+TCE captures the overall trust deviation: positive values indicate net trust inflation, negative values indicate net trust deflation.
+
+**Trust Inflation Rate (TIR)** — the primary empirical measure:
+
+> TIR = P(Human says invalid | Regime says trust)
+
+We use TCE as the aggregate calibration construct and TIR as the primary empirical measure of trust inflation (P3). TIR is the paper's main dependent variable in Study 3: among reproductions a regime deems trustworthy, what fraction are actually invalid? Compared via McNemar test on paired classifications (each run scored by all three regimes against the same human label).
+
+#### Evidence Break Types (Mechanisms of Trust Inflation)
+
+Result-level trust inflation (P3) operates through four structural mechanisms. Each describes *why* result-level agreement can be high while component-level validity is low:
+
+| Evidence Break Type | Mechanism | Observable at Result Level? | Detected by Component Audit? |
+|--------------------|-----------|---------------------------|---------------------------|
+| **B₁: Substitution** | Agent uses wrong data/sample/indicator that coincidentally produces similar results | No — result looks correct | Yes — DSF or VMF low despite RRF moderate |
+| **B₂: Circularity** | Agent embeds paper's reported values as computational outputs without genuine computation | No — result is "correct" by construction | Yes — code audit with semantic review distinguishes legitimate constants from target leakage |
+| **B₃: Shopping** | Agent iterates through model variants until results approximate the paper's reported values, without documented theoretical or methodological justification | No — final result matches | Yes — model iteration log reveals selection by paper-proximity |
+| **B₄: Assertion** | Agent claims conclusions that its own computational outputs do not support | No — claims appear plausible | Yes — claim-evidence traceability check fails |
+
+**Three-layer evidence per type**: automated screening rule → audit trace documentation → human adjudication.
+
+#### Human Validation (Two-Layer)
+
+- **Layer 1 (Gold evidence chain)**: 2 annotators per paper establish gold data source, sample, indicator, model, results, claims. Component-stratified reliability targets: Data Source α ≥ 0.75, Sample/Indicator/Model α ≥ 0.67, Result α ≥ 0.80, Claim α ≥ 0.60. Claim-level labels involve higher interpretive judgment (claims are stated in natural language with varying specificity), so lower raw agreement is expected; all disagreements are adjudicated. Components below target are flagged and reported transparently.
+- **Layer 2 (Validity adjudication)**: Human experts review all flagged cases + random sample of unflagged cases (recall estimation). Two adjudicators, resolve by discussion.
+
+#### Success Criteria
+1. ≥5 human-confirmed evidence break cases
+2. Trust Inflation Rate(R₁) > Trust Inflation Rate(R₃), McNemar p<0.05
+3. ≥2 evidence break types confirmed
+4. Component audit correctly localizes the break in majority of confirmed cases
+
+---
+
+## 4. Paper Pool: Stratified by Observability Variation
+
+**Selection rule**: Paper selection is finalized before agent execution to avoid outcome-driven sampling. Each paper is pre-annotated on data availability, code availability, indicator complexity, sample ambiguity, model multiplicity, and claim-result distance.
+
+| Stratum | Observability Profile | Target N |
+|---------|----------------------|----------|
+| **Low variation** | Data, formulas, and model clearly specified; code available | 8 |
+| **Medium variation** | Multi-step indicators or complex samples; some components under-specified | 12 |
+| **High variation** | Key components ambiguously described; data unavailable or claims exceed results | 10 |
+
+**Domain distribution**: Science of Science (10), IS/Innovation (10), Management/Strategy (10).
+
+---
+
+## 5. Model Configuration
+
+Models identified by capability tier; specific versions and access dates reported in experimental setup.
+
+| Tier | Representative Model | Deployment | Scope |
+|------|---------------------|-----------|-------|
+| Open-weight reasoning | Qwen3-32B | Local GPU | Study 2 full 120 runs |
+| Low-cost API | DeepSeek-V3/V4-Pro | API | Study 2 full 120 runs |
+| Commercial frontier A | GPT-4o | API | Study 2 robustness subset |
+| Commercial frontier B | Claude Opus 4 / Sonnet 4 | API | Study 2 robustness subset |
+
+**Rationale**: Primary analysis estimates within-model effects of information observability (IO₁→IO₃); the frontier subset tests whether the observed pattern generalizes to stronger commercial agents.
+
+---
+
+## 6. Paper Structure
+
+1. **Introduction** — AI agents in research, the trust question, P1-P4 preview
+2. **Theory** — Information Observability → Evidence Chain Reconstruction Fidelity → Trust Calibration Error
+3. **Study 1** — Construct validation (ECRF dimensionality)
+4. **Study 2** — Observability → Reconstruction (P1, P2)
+5. **Study 3** — Trust Calibration Error and Audit Correction (P3, P4) — **main results**
+6. **General Discussion** — Theory contributions, governance implications, limitations
+7. **Conclusion**
+
+---
+
+## 7. Terminology Discipline
+
+| Prefer | Avoid (engineering-oriented uses) |
+|--------|----------------------------------|
+| theory, theoretical construct, mechanism | pipeline, system, benchmark |
+| observability, reconstruction fidelity | scoring, metric |
+| governance, audit, trust calibration | evaluation system, scoring system |
+| evidence chain, evidence break | component failure, error type |
+| proposition (theory) → hypothesis (empirical) | — |
+
+Note: "theoretical framework" is acceptable in the IS tradition when referring to the theory structure; the concern is engineering-oriented uses of "framework" (e.g., "evaluation framework").
+
+---
+
+## 8. What Was Deleted
+
+| Deleted | Reason |
+|---------|--------|
+| All "framework" / "pipeline" / "benchmark" language | Replaced with theory language |
+| R000-R007 narrative | Absorbed into Study 1 calibration |
+| SciSciBench details | One-paragraph motivation only |
+| retracted-paper-detection | Different paper |
+| ARIS/Codex/Claude engineering | Not relevant |
+| "Spurious reproduction taxonomy" | Renamed: Evidence Break Types (mechanisms, not classification) |
+| "Three evaluation protocols" | Renamed: Three evaluation regimes (embody different observability assumptions) |
+| "H1/H2/H3" hypothesis language | Renamed: P1-P4 (theoretical propositions) |

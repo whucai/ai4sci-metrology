@@ -1,0 +1,848 @@
+[
+  {
+    "title": "Hunting for Room Temperature Superconductors",
+    "doi": "10.59717/j.xinn-mater.2024.100119",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2503.02216v1.md",
+    "year": 2025,
+    "metric_type": "disruption",
+    "source_id": "auto_2503_02216"
+  },
+  {
+    "title": "Scientific literature cited in patents: A Technology Transfer indicator in Portuguese universities",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2502.10496v1.md",
+    "year": 2025,
+    "metric_type": "disruption",
+    "source_id": "auto_2502_10496"
+  },
+  {
+    "title": "The role of preprints in open science: Accelerating knowledge transfer from science to technology",
+    "doi": "10.1016/j.joi.2025.101663",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2506.20225v2.md",
+    "year": 2025,
+    "metric_type": "disruption",
+    "source_id": "auto_2506_20225"
+  },
+  {
+    "title": "Do male leading authors retract more articles than female leading authors?",
+    "doi": "10.1016/j.joi.2025.101682",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2507.17127v1.md",
+    "year": 2025,
+    "metric_type": "disruption",
+    "source_id": "auto_2507_17127"
+  },
+  {
+    "title": "Similarity-Based Assessment of Computational Reproducibility in Jupyter Notebooks",
+    "doi": "10.1145/3736731.3746159",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2509.23645v1.md",
+    "year": 2025,
+    "metric_type": "disruption",
+    "source_id": "auto_2509_23645"
+  },
+  {
+    "title": "On The Peer Review Reports: Does Size Matter?",
+    "doi": "10.1007/s11192-024-04977-6",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2403.18845v1.md",
+    "year": 2024,
+    "metric_type": "disruption",
+    "source_id": "auto_2403_18845"
+  },
+  {
+    "title": "COARA will not save science from the tyranny of administrative evaluation",
+    "doi": "10.1093/reseval/rvaf024",
+    "subdir": "Research Policy",
+    "md_path": "Research Policy/2408.05587v3.md",
+    "year": 2024,
+    "metric_type": "disruption",
+    "source_id": "auto_2408_05587"
+  },
+  {
+    "title": "Can social media provide early warning of retraction? Evidence from critical tweets identified by human annotation and large language models",
+    "doi": "10.1002/asi.70028",
+    "subdir": "Science",
+    "md_path": "Science/2403.16851v3.md",
+    "year": 2024,
+    "metric_type": "disruption",
+    "source_id": "auto_2403_16851"
+  },
+  {
+    "title": "Data inaccuracy quantification and uncertainty propagation for bibliometric indicators",
+    "doi": "10.1093/reseval/rvae047",
+    "subdir": "Research Policy",
+    "md_path": "Research Policy/2303.16613v3.md",
+    "year": 2023,
+    "metric_type": "disruption",
+    "source_id": "auto_2303_16613"
+  },
+  {
+    "title": "The strain on scientific publishing",
+    "doi": "10.1162/qss_a_00327",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2309.15884v2.md",
+    "year": 2023,
+    "metric_type": "disruption",
+    "source_id": "auto_2309_15884"
+  },
+  {
+    "title": "The using of bibliometric analysis to classify trends and future directions on ''Smart Farm''",
+    "doi": "10.1109/ICDAMT.2017.7904950",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2310.05926v1.md",
+    "year": 2023,
+    "metric_type": "disruption",
+    "source_id": "auto_2310_05926"
+  },
+  {
+    "title": "KheOps: Cost-effective Repeatability, Reproducibility, and Replicability of Edge-to-Cloud Experiments",
+    "doi": "10.1145/3589806.3600032",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2307.12796v1.md",
+    "year": 2023,
+    "metric_type": "disruption",
+    "source_id": "auto_2307_12796"
+  },
+  {
+    "title": "MOPRD: A multidisciplinary open peer review dataset",
+    "doi": "10.1007/s00521-023-08891-5",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2212.04972v2.md",
+    "year": 2022,
+    "metric_type": "disruption",
+    "source_id": "auto_2212_04972"
+  },
+  {
+    "title": "The effect of the rapid growth of covid-19 publications on citation indicators",
+    "doi": "10.5281/zenodo.7043186",
+    "subdir": "Science",
+    "md_path": "Science/2205.01010v2.md",
+    "year": 2022,
+    "metric_type": "disruption",
+    "source_id": "auto_2205_01010"
+  },
+  {
+    "title": "Which Factors are associated with Open Access Publishing? A Springer Nature Case Study",
+    "doi": "10.1162/qss_a_00253",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2208.08221v4.md",
+    "year": 2022,
+    "metric_type": "disruption",
+    "source_id": "auto_2208_08221"
+  },
+  {
+    "title": "Are We Standing on Unreliable Shoulders? The Effect of Retracted Papers Citations on Previous and Subsequent Published Papers: A Study of the Web of Science Database",
+    "doi": "",
+    "subdir": "Science",
+    "md_path": "Science/2201.09090v1.md",
+    "year": 2022,
+    "metric_type": "disruption",
+    "source_id": "auto_2201_09090"
+  },
+  {
+    "title": "[Re] Badder Seeds: Reproducing the Evaluation of Lexical Methods for Bias Measurement",
+    "doi": "10.5281/zenodo.6574705",
+    "subdir": "Science",
+    "md_path": "Science/2206.01767v1.md",
+    "year": 2022,
+    "metric_type": "disruption",
+    "source_id": "auto_2206_01767"
+  },
+  {
+    "title": "Retracted papers by Iranian authors: Causes, journals, time lags, affiliations, collaborations",
+    "doi": "10.1007/s11192-021-04104-9",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2108.12837v1.md",
+    "year": 2021,
+    "metric_type": "disruption",
+    "source_id": "auto_2108_12837"
+  },
+  {
+    "title": "Distributed peer review enhanced with natural language processing and machine learning",
+    "doi": "10.1038/s41550-020-1038-y",
+    "subdir": "Nature",
+    "md_path": "Nature/2004.04165v1.md",
+    "year": 2020,
+    "metric_type": "disruption",
+    "source_id": "auto_2004_04165"
+  },
+  {
+    "title": "Scientometric engineering: Exploring citation dynamics via arXiv eprints",
+    "doi": "10.1162/qss_a_00174",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2106.05027v2.md",
+    "year": 2021,
+    "metric_type": "disruption_temporal",
+    "source_id": "auto_2106_05027"
+  },
+  {
+    "title": "Data Obsolescence Detection in the Light of Newly Acquired Valid Observations",
+    "doi": "10.1007/s10489-022-03212-0",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2101.07067v3.md",
+    "year": 2021,
+    "metric_type": "disruption_temporal",
+    "source_id": "auto_2101_07067"
+  },
+  {
+    "title": "Science through Wikipedia: A novel representation of open knowledge through co-citation networks",
+    "doi": "10.1371/journal.pone.0228713",
+    "subdir": "PLoS ONE",
+    "md_path": "PLoS ONE/2002.04347v1.md",
+    "year": 2020,
+    "metric_type": "disruption_temporal",
+    "source_id": "auto_2002_04347"
+  },
+  {
+    "title": "Updating Weight Values for Function Point Counting",
+    "doi": "10.3233/HIS-2009-0061",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2005.11218v1.md",
+    "year": 2020,
+    "metric_type": "disruption_temporal",
+    "source_id": "auto_2005_11218"
+  },
+  {
+    "title": "Gender shapes the relationship between productivity and journal prestige in science",
+    "doi": "10.1038/s41598-026-45844-z",
+    "subdir": "Science",
+    "md_path": "Science/2603.22151v1.md",
+    "year": 2026,
+    "metric_type": "team_size_effect",
+    "source_id": "auto_2603_22151"
+  },
+  {
+    "title": "The Effect of Gender Diversity on Scientific Team Impact: A Team Roles Perspective",
+    "doi": "10.1016/j.joi.2025.101766",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2512.23429v1.md",
+    "year": 2025,
+    "metric_type": "team_size_effect",
+    "source_id": "auto_2512_23429"
+  },
+  {
+    "title": "Voice Passing : a Non-Binary Voice Gender Prediction System for evaluating Transgender voice transition",
+    "doi": "10.21437/Interspeech.2023-1835",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2404.15176v1.md",
+    "year": 2024,
+    "metric_type": "team_size_effect",
+    "source_id": "auto_2404_15176"
+  },
+  {
+    "title": "Exploring Citation Diversity in Scholarly Literature: An Entropy-Based Approach",
+    "doi": "10.1007/s11192-025-05313-2",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2409.02592v2.md",
+    "year": 2024,
+    "metric_type": "team_size_effect",
+    "source_id": "auto_2409_02592"
+  },
+  {
+    "title": "Quantifying gender imbalance in East Asian academia: Research career and citation practice",
+    "doi": "10.1016/j.joi.2023.101460",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2302.07843v2.md",
+    "year": 2023,
+    "metric_type": "team_size_effect",
+    "source_id": "auto_2302_07843"
+  },
+  {
+    "title": "The citation advantage of foreign language references for Chinese social science papers",
+    "doi": "10.1007/s11192-019-03146-4",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/1908.07576v1.md",
+    "year": 2019,
+    "metric_type": "team_size_effect",
+    "source_id": "auto_1908_07576"
+  },
+  {
+    "title": "Should the research performance of scientists be distinguished by gender?",
+    "doi": "10.1016/j.joi.2014.11.002",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/1810.12737v1.md",
+    "year": 2018,
+    "metric_type": "team_size_effect",
+    "source_id": "auto_1810_12737"
+  },
+  {
+    "title": "Theory and Practice of Data Citation",
+    "doi": "10.1002/asi.23917",
+    "subdir": "Science",
+    "md_path": "Science/1706.07976v1.md",
+    "year": 2017,
+    "metric_type": "team_size_effect",
+    "source_id": "auto_1706_07976"
+  },
+  {
+    "title": "Quantifying the Knowledge Proximity Between Academic and Industry Research: An Entity and Semantic Perspective",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2602.05211v1.md",
+    "year": 2026,
+    "metric_type": "network_normalized_impact",
+    "source_id": "auto_2602_05211"
+  },
+  {
+    "title": "Influential scientists shape knowledge flows between science and IGO policy",
+    "doi": "10.1073/pnas.2514861123",
+    "subdir": "Science",
+    "md_path": "Science/2506.06753v1.md",
+    "year": 2025,
+    "metric_type": "network_normalized_impact",
+    "source_id": "auto_2506_06753"
+  },
+  {
+    "title": "Leveraging GANs for citation intent classification and its impact on citation network analysis",
+    "doi": "10.1016/j.joi.2026.101791",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2505.21162v1.md",
+    "year": 2025,
+    "metric_type": "network_normalized_impact",
+    "source_id": "auto_2505_21162"
+  },
+  {
+    "title": "Two-stage dynamic creative optimization under sparse ambiguous samples for e-commerce advertising",
+    "doi": "",
+    "subdir": "Science",
+    "md_path": "Science/2312.01295v1.md",
+    "year": 2023,
+    "metric_type": "network_normalized_impact",
+    "source_id": "auto_2312_01295"
+  },
+  {
+    "title": "The Concept of Decentralization Through Time and Disciplines: A Quantitative Exploration",
+    "doi": "10.1140/epjds/s13688-023-00418-1",
+    "subdir": "Science",
+    "md_path": "Science/2207.14260v2.md",
+    "year": 2022,
+    "metric_type": "network_normalized_impact",
+    "source_id": "auto_2207_14260"
+  },
+  {
+    "title": "Objectives of platform research: A co-citation and systematic literature review analysis",
+    "doi": "10.1007/978-3-658-31118-6_1",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2202.08822v1.md",
+    "year": 2022,
+    "metric_type": "network_normalized_impact",
+    "source_id": "auto_2202_08822"
+  },
+  {
+    "title": "Similarity matrix average for aggregating multiplex networks",
+    "doi": "10.1088/2632-072X/acda09",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2208.06431v2.md",
+    "year": 2022,
+    "metric_type": "network_normalized_impact",
+    "source_id": "auto_2208_06431"
+  },
+  {
+    "title": "Is academia becoming more localised? The growth of regional knowledge networks within international research collaboration",
+    "doi": "10.1007/s41109-021-00371-w",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2101.09520v2.md",
+    "year": 2021,
+    "metric_type": "network_normalized_impact",
+    "source_id": "auto_2101_09520"
+  },
+  {
+    "title": "Higher-order rich-club phenomenon in collaborative research grants",
+    "doi": "10.1007/s11192-022-04621-1",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2206.11470v2.md",
+    "year": 2022,
+    "metric_type": "frontier_author_impact",
+    "source_id": "auto_2206_11470"
+  },
+  {
+    "title": "On predicting research grants productivity",
+    "doi": "10.1016/j.joi.2022.101260",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2106.10700v1.md",
+    "year": 2021,
+    "metric_type": "frontier_author_impact",
+    "source_id": "auto_2106_10700"
+  },
+  {
+    "title": "Can Author Collaboration Reveal Impact? The Case of h-index",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2104.05562v1.md",
+    "year": 2021,
+    "metric_type": "frontier_author_impact",
+    "source_id": "auto_2104_05562"
+  },
+  {
+    "title": "Contest models highlight inherent inefficiencies of scientific funding competitions",
+    "doi": "10.1371/journal.pbio.3000065",
+    "subdir": "arXiv",
+    "md_path": "arXiv/1804.03732v3.md",
+    "year": 2018,
+    "metric_type": "frontier_author_impact",
+    "source_id": "auto_1804_03732"
+  },
+  {
+    "title": "Concentration of research funding leads to decreasing marginal returns",
+    "doi": "10.1093/reseval/rvw007",
+    "subdir": "Research Policy",
+    "md_path": "Research Policy/1602.07396v1.md",
+    "year": 2016,
+    "metric_type": "frontier_author_impact",
+    "source_id": "auto_1602_07396"
+  },
+  {
+    "title": "Delayed Recognition; the Co-citation Perspective",
+    "doi": "10.3389/frma.2020.577131",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2006.16737v1.md",
+    "year": 2020,
+    "metric_type": "sleeping_beauty",
+    "source_id": "auto_2006_16737"
+  },
+  {
+    "title": "Comparing scientific and technological impact of biomedical research",
+    "doi": "10.1016/j.joi.2018.06.010",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/1804.04105v2.md",
+    "year": 2018,
+    "metric_type": "sleeping_beauty",
+    "source_id": "auto_1804_04105"
+  },
+  {
+    "title": "Is your EPL attractive? Classification of publications through download statistics",
+    "doi": "10.1209/0295-5075/108/50011",
+    "subdir": "arXiv",
+    "md_path": "arXiv/1409.7889v2.md",
+    "year": 2014,
+    "metric_type": "sleeping_beauty",
+    "source_id": "auto_1409_7889"
+  },
+  {
+    "title": "Community-centric modeling of citation dynamics explains collective citation patterns in science, law, and patents",
+    "doi": "",
+    "subdir": "Science",
+    "md_path": "Science/2501.15552v2.md",
+    "year": 2025,
+    "metric_type": "sleeping_beauty",
+    "source_id": "auto_2501_15552"
+  },
+  {
+    "title": "Predicting Star Scientists in the Field of Artificial Intelligence: A Machine Learning Approach",
+    "doi": "10.3390/metrics2040022",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2407.14559v1.md",
+    "year": 2024,
+    "metric_type": "career_mobility",
+    "source_id": "auto_2407_14559"
+  },
+  {
+    "title": "Universal productivity patterns in research careers",
+    "doi": "10.1103/PhysRevResearch.5.043203",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2311.03834v1.md",
+    "year": 2023,
+    "metric_type": "career_mobility",
+    "source_id": "auto_2311_03834"
+  },
+  {
+    "title": "The academic wanderer: structure of collaboration network and relation with research performance",
+    "doi": "10.1007/s41109-021-00369-4",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2105.06840v1.md",
+    "year": 2021,
+    "metric_type": "career_mobility",
+    "source_id": "auto_2105_06840"
+  },
+  {
+    "title": "Automating Transfer Credit Assessment in Student Mobility -- A Natural Language Processing-based Approach",
+    "doi": "10.32604/cmc.2022.027236",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2104.01955v1.md",
+    "year": 2021,
+    "metric_type": "career_mobility",
+    "source_id": "auto_2104_01955"
+  },
+  {
+    "title": "Achieving competitive advantage in academia through early career coauthorship with top scientists",
+    "doi": "10.1038/s41467-019-13130-4",
+    "subdir": "Nature",
+    "md_path": "Nature/1906.04619v1.md",
+    "year": 2019,
+    "metric_type": "career_mobility",
+    "source_id": "auto_1906_04619"
+  },
+  {
+    "title": "Assessing the accuracy of the h and g indexes for measuring researchers' productivity",
+    "doi": "10.1002/asi.22828",
+    "subdir": "Science",
+    "md_path": "Science/1812.09241v1.md",
+    "year": 2018,
+    "metric_type": "career_mobility",
+    "source_id": "auto_1812_09241"
+  },
+  {
+    "title": "How long do top scientists maintain their stardom? An analysis by region, gender and discipline: evidence from Italy",
+    "doi": "10.1007/s11192-016-2193-x",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/1810.12647v1.md",
+    "year": 2018,
+    "metric_type": "career_mobility",
+    "source_id": "auto_1810_12647"
+  },
+  {
+    "title": "Openness and Impact of Leading Scientific Countries",
+    "doi": "10.3389/frma.2018.00010",
+    "subdir": "arXiv",
+    "md_path": "arXiv/1810.07812v1.md",
+    "year": 2018,
+    "metric_type": "career_mobility",
+    "source_id": "auto_1810_07812"
+  },
+  {
+    "title": "Exploring Novelty Differences between Industry and Academia: A Knowledge Entity-centric Perspective",
+    "doi": "",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2603.19319v1.md",
+    "year": 2026,
+    "metric_type": "novelty_conventionality",
+    "source_id": "auto_2603_19319"
+  },
+  {
+    "title": "A review on the novelty measurements of academic papers",
+    "doi": "10.1007/s11192-025-05234-0",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2501.17456v1.md",
+    "year": 2025,
+    "metric_type": "novelty_conventionality",
+    "source_id": "auto_2501_17456"
+  },
+  {
+    "title": "Measuring Difficulty of Novelty Reaction",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2207.13857v1.md",
+    "year": 2022,
+    "metric_type": "novelty_conventionality",
+    "source_id": "auto_2207_13857"
+  },
+  {
+    "title": "Novelty-based Generalization Evaluation for Traffic Light Detection",
+    "doi": "10.1109/ICMLA52953.2021.00032",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2201.00531v1.md",
+    "year": 2022,
+    "metric_type": "novelty_conventionality",
+    "source_id": "auto_2201_00531"
+  },
+  {
+    "title": "Eternalism and the Problem of Hyperplanes",
+    "doi": "10.1111/rati.12331",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2202.06661v2.md",
+    "year": 2022,
+    "metric_type": "novelty_conventionality",
+    "source_id": "auto_2202_06661"
+  },
+  {
+    "title": "Citation Structural Diversity: A Novel and Concise Metric Combining Structure and Semantics for Literature Evaluation",
+    "doi": "10.1007/s11192-025-05356-5",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2501.02429v1.md",
+    "year": 2025,
+    "metric_type": "interdisciplinarity",
+    "source_id": "auto_2501_02429"
+  },
+  {
+    "title": "Quantifying interdisciplinary synergy in higher STEM education",
+    "doi": "10.1140/epjds/s13688-025-00566-6",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2502.17841v3.md",
+    "year": 2025,
+    "metric_type": "interdisciplinarity",
+    "source_id": "auto_2502_17841"
+  },
+  {
+    "title": "Is OpenAlex Suitable for Research Quality Evaluation and Which Citation Indicator is Best?",
+    "doi": "10.1002/asi.70020",
+    "subdir": "Science",
+    "md_path": "Science/2502.18427v1.md",
+    "year": 2025,
+    "metric_type": "interdisciplinarity",
+    "source_id": "auto_2502_18427"
+  },
+  {
+    "title": "Two Decades of Research at the University of Lagos (2004-2023): A Scientometric Analysis of Productivity, Collaboration, and Impact",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2511.04075v1.md",
+    "year": 2025,
+    "metric_type": "interdisciplinarity",
+    "source_id": "auto_2511_04075"
+  },
+  {
+    "title": "Interdisciplinary Papers Supported by Disciplinary Grants Garner Deep and Broad Scientific Impact",
+    "doi": "10.1093/pnasnexus/pgag057",
+    "subdir": "PNAS",
+    "md_path": "PNAS/2303.14732v3.md",
+    "year": 2023,
+    "metric_type": "interdisciplinarity",
+    "source_id": "auto_2303_14732"
+  },
+  {
+    "title": "The use of social media among library professionals and patrons: A review of literature",
+    "doi": "10.14662/IJALIS2020.140",
+    "subdir": "Science",
+    "md_path": "Science/2511.05051v1.md",
+    "year": 2025,
+    "metric_type": "altmetrics",
+    "source_id": "auto_2511_05051"
+  },
+  {
+    "title": "Academic Writing with GPT-3.5: Reflections on Practices, Efficacy and Transparency",
+    "doi": "10.1145/3616961.3616992",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2304.11079v1.md",
+    "year": 2023,
+    "metric_type": "altmetrics",
+    "source_id": "auto_2304_11079"
+  },
+  {
+    "title": "Article Processing Charges, Altmetrics and Citation Impact: Is there an economic rationale?",
+    "doi": "10.1007/s11192-022-04284-y",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2203.06218v2.md",
+    "year": 2022,
+    "metric_type": "altmetrics",
+    "source_id": "auto_2203_06218"
+  },
+  {
+    "title": "Do altmetric scores reflect article quality? Evidence from the UK Research Excellence Framework 2021",
+    "doi": "10.1108/10.1002/asi.24751",
+    "subdir": "Science",
+    "md_path": "Science/2212.07811v1.md",
+    "year": 2022,
+    "metric_type": "altmetrics",
+    "source_id": "auto_2212_07811"
+  },
+  {
+    "title": "The Impact of Social Media in Learning and Teaching: A Bibliometric-based Citation Analysis",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2209.11284v1.md",
+    "year": 2022,
+    "metric_type": "altmetrics",
+    "source_id": "auto_2209_11284"
+  },
+  {
+    "title": "Industry Influence in High-Profile Social Media Research",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2601.11507v1.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2601_11507"
+  },
+  {
+    "title": "PeeriScope: A Multi-Faceted Framework for Evaluating Peer Review Quality",
+    "doi": "10.1145/3774905.3793128",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2604.24071v1.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2604_24071"
+  },
+  {
+    "title": "The State of Peer Review in Empirical Software Engineering: A Community Survey on Review Load, Quality, and GenAI Use",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2606.04716v1.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2606_04716"
+  },
+  {
+    "title": "Reviewing the Reviewer: Elevating Peer Review Quality through LLM-Guided Feedback",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2602.10118v1.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2602_10118"
+  },
+  {
+    "title": "Is Peer Review Really in Decline? Analyzing Review Quality across Venues and Time",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2601.15172v1.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2601_15172"
+  },
+  {
+    "title": "Towards A Sustainable Future for Peer Review in Software Engineering",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2601.21761v1.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2601_21761"
+  },
+  {
+    "title": "DREAM: Deep Research Evaluation with Agentic Metrics",
+    "doi": "",
+    "subdir": "Research Policy",
+    "md_path": "Research Policy/2602.18940v1.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2602_18940"
+  },
+  {
+    "title": "Large language models for post-publication research evaluation: Evidence from expert recommendations and citation indicators",
+    "doi": "",
+    "subdir": "Research Policy",
+    "md_path": "Research Policy/2604.16387v1.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2604_16387"
+  },
+  {
+    "title": "Which stylistic features fool ChatGPT research evaluations?",
+    "doi": "",
+    "subdir": "Research Policy",
+    "md_path": "Research Policy/2603.14919v1.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2603_14919"
+  },
+  {
+    "title": "Structural Diversity Drives Disruptive Scientific Innovation",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2605.12514v1.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2605_12514"
+  },
+  {
+    "title": "Project Synapse: A Hierarchical Multi-Agent Framework with Hybrid Memory for Autonomous Resolution of Last-Mile Delivery Disruptions",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2601.08156v1.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2601_08156"
+  },
+  {
+    "title": "Persistent geographical biases in global scientific collaboration and citations",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2604.01602v1.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2604_01602"
+  },
+  {
+    "title": "A Data-Driven Analysis for Engineering Conferences: The Institute of Industrial and Systems Engineering (IISE) Annual Conference Proceedings (2002-2025)",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2603.00399v2.md",
+    "year": 2026,
+    "metric_type": "disruption",
+    "source_id": "auto_2603_00399"
+  },
+  {
+    "title": "HLM-Cite: Hybrid Language Model Workflow for Text-based Scientific Citation Prediction",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2410.09112v1.md",
+    "year": 2024,
+    "metric_type": "citation_count_prediction",
+    "source_id": "auto_2410_09112"
+  },
+  {
+    "title": "What Should I Cite? A RAG Benchmark for Academic Citation Prediction",
+    "doi": "10.1145/3774904.3792075",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2601.14949v2.md",
+    "year": 2026,
+    "metric_type": "citation_count_prediction",
+    "source_id": "auto_2601_14949"
+  },
+  {
+    "title": "From Newborn to Impact: Bias-Aware Citation Prediction",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2510.19246v2.md",
+    "year": 2025,
+    "metric_type": "citation_count_prediction",
+    "source_id": "auto_2510_19246"
+  },
+  {
+    "title": "Prototype-Based Interpretability for Legal Citation Prediction",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2305.16490v1.md",
+    "year": 2023,
+    "metric_type": "citation_count_prediction",
+    "source_id": "auto_2305_16490"
+  },
+  {
+    "title": "Longitudinal Citation Prediction using Temporal Graph Neural Networks",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2012.05742v2.md",
+    "year": 2020,
+    "metric_type": "citation_count_prediction",
+    "source_id": "auto_2012_05742"
+  },
+  {
+    "title": "The disruption index is biased by citation inflation",
+    "doi": "10.1162/qss_a_00333",
+    "subdir": "Scientometrics",
+    "md_path": "Scientometrics/2306.01949v1.md",
+    "year": 2023,
+    "metric_type": "citation_inflation",
+    "source_id": "auto_2306_01949"
+  },
+  {
+    "title": "The disruption index suffers from citation inflation and is confounded by shifts in scholarly citation practice",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2406.15311v1.md",
+    "year": 2024,
+    "metric_type": "citation_inflation",
+    "source_id": "auto_2406_15311"
+  },
+  {
+    "title": "Uncited articles and their effect on the concentration of citations",
+    "doi": "10.1002/asi.24852",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2306.09911v1.md",
+    "year": 2023,
+    "metric_type": "citation_inflation",
+    "source_id": "auto_2306_09911"
+  },
+  {
+    "title": "From Content Creation to Citation Inflation: A GenAI Case Study",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2503.23414v1.md",
+    "year": 2025,
+    "metric_type": "citation_inflation",
+    "source_id": "auto_2503_23414"
+  },
+  {
+    "title": "Billions at Stake: How Self-Citation Adjusted Metrics Can Transform Equitable Research Funding",
+    "doi": "",
+    "subdir": "arXiv",
+    "md_path": "arXiv/2504.20081v3.md",
+    "year": 2025,
+    "metric_type": "citation_inflation",
+    "source_id": "auto_2504_20081"
+  }
+]

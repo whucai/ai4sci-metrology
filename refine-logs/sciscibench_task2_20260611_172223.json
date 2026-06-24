@@ -1,0 +1,545 @@
+{
+  "wu2019_disruption": {
+    "L1": {
+      "paper_id": "wu2019_disruption",
+      "level": "L1",
+      "direction_accuracy": 1.0,
+      "direction_detail": {
+        "correct": 1,
+        "total": 1,
+        "details": [
+          {
+            "gold_direction": "negative",
+            "pred_direction": "negative",
+            "match": true
+          }
+        ]
+      },
+      "significance_match": 0.0,
+      "significance_detail": {},
+      "claim_support_score": 0.0,
+      "claim_support_detail": {},
+      "limitation_awareness": 0.0,
+      "limitation_detail": {},
+      "hallucinated_claim_rate": 0.0,
+      "hallucinated_detail": {},
+      "uncertainty_recognition": 0.0,
+      "overall_score": 0.8
+    },
+    "L2": {
+      "paper_id": "wu2019_disruption",
+      "level": "L2",
+      "direction_accuracy": 1.0,
+      "direction_detail": {
+        "correct": 2,
+        "total": 2,
+        "details": [
+          {
+            "gold_claim": "D-index small_teams higher negative correlation with team_size p < 0.001",
+            "gold_direction": "negative",
+            "pred_directions": [
+              "negative",
+              "negative"
+            ],
+            "match": true
+          },
+          {
+            "gold_claim": "D-index trend monotonically decreasing negative p < 0.001",
+            "gold_direction": "negative",
+            "pred_directions": [
+              "negative",
+              "negative"
+            ],
+            "match": true
+          }
+        ]
+      },
+      "significance_match": 0.0,
+      "significance_detail": {
+        "gold_significance": [
+          "p < 0.001",
+          "p < 0.001"
+        ],
+        "gold_significance_category": "highly_significant",
+        "pred_significance": "unknown",
+        "match": false
+      },
+      "claim_support_score": 1.0,
+      "claim_support_detail": {
+        "total_claims": 2,
+        "supported_claims": 2
+      },
+      "limitation_awareness": 0.0,
+      "limitation_detail": {
+        "gold_limitations": [
+          "D-index definition depends on citation window choice",
+          "Team size is a proxy — doesn't capture collaboration structure",
+          "Correlational, not causal"
+        ],
+        "pred_limitations": [
+          "Observational design prevents causal interpretation; unobserved confounders remain possible.",
+          "The D-index is only one operationalization of disruptiveness; other metrics could yield different re",
+          "Sample restricted to outputs with references may introduce selection bias.",
+          "Controlling for citation count may mediate or collider-bias the relationship.",
+          "Results may not generalize beyond the specific institutional and cultural contexts of 1954–2014."
+        ],
+        "matches_found": 0
+      },
+      "hallucinated_claim_rate": 0.5,
+      "hallucinated_detail": {
+        "total_predicted": 2,
+        "hallucinated": 1
+      },
+      "uncertainty_recognition": 0.0,
+      "overall_score": 0.6
+    },
+    "L3": {
+      "paper_id": "wu2019_disruption",
+      "level": "L3",
+      "direction_accuracy": 1.0,
+      "direction_detail": {
+        "correct": 2,
+        "total": 2,
+        "details": [
+          {
+            "gold_claim": "D-index small_teams higher negative correlation with team_size p < 0.001",
+            "gold_direction": "negative",
+            "pred_directions": [],
+            "match": true
+          },
+          {
+            "gold_claim": "D-index trend monotonically decreasing negative p < 0.001",
+            "gold_direction": "negative",
+            "pred_directions": [],
+            "match": true
+          }
+        ]
+      },
+      "significance_match": 0.0,
+      "significance_detail": {
+        "gold_significance": [
+          "p < 0.001",
+          "p < 0.001"
+        ],
+        "gold_significance_category": "highly_significant",
+        "pred_significance": "unknown",
+        "match": false
+      },
+      "claim_support_score": 0.0,
+      "claim_support_detail": {
+        "total_claims": 0,
+        "supported_claims": 0
+      },
+      "limitation_awareness": 0.0,
+      "limitation_detail": {
+        "gold_limitations": [
+          "D-index definition depends on citation window choice",
+          "Team size is a proxy — doesn't capture collaboration structure",
+          "Correlational, not causal"
+        ],
+        "pred_limitations": [],
+        "matches_found": 0
+      },
+      "hallucinated_claim_rate": 0.0,
+      "hallucinated_detail": {
+        "total_predicted": 0,
+        "hallucinated": 0
+      },
+      "uncertainty_recognition": 1.0,
+      "overall_score": 0.65
+    }
+  },
+  "ke2023_normalized_impact": {
+    "L1": {
+      "paper_id": "ke2023_normalized_impact",
+      "level": "L1",
+      "direction_accuracy": 1.0,
+      "direction_detail": {
+        "correct": 1,
+        "total": 1,
+        "details": [
+          {
+            "gold_direction": "null",
+            "pred_direction": "null",
+            "match": true
+          }
+        ]
+      },
+      "significance_match": 0.0,
+      "significance_detail": {},
+      "claim_support_score": 0.0,
+      "claim_support_detail": {},
+      "limitation_awareness": 0.0,
+      "limitation_detail": {},
+      "hallucinated_claim_rate": 0.0,
+      "hallucinated_detail": {},
+      "uncertainty_recognition": 0.0,
+      "overall_score": 0.8
+    },
+    "L2": {
+      "paper_id": "ke2023_normalized_impact",
+      "level": "L2",
+      "direction_accuracy": 1.0,
+      "direction_detail": {
+        "correct": 3,
+        "total": 3,
+        "details": [
+          {
+            "gold_claim": "Ĉ distribution shape log-normal σ≈1.0-1.2 across all years null (invariant) consistent across 1945-2007",
+            "gold_direction": "null",
+            "pred_directions": [
+              "null",
+              "null",
+              "positive",
+              "positive"
+            ],
+            "match": true
+          },
+          {
+            "gold_claim": "Field bias correction Ĉ eliminates field-level citation disparities null (unbiased) KS-test: Ĉ shows no field bias",
+            "gold_direction": "null",
+            "pred_directions": [
+              "null",
+              "null",
+              "positive",
+              "positive"
+            ],
+            "match": true
+          },
+          {
+            "gold_claim": "Milestone paper recovery Ĉ ranks milestone papers consistently higher than C_raw positive for Ĉ Milestone rank improve",
+            "gold_direction": "positive",
+            "pred_directions": [
+              "null",
+              "null",
+              "positive",
+              "positive"
+            ],
+            "match": true
+          }
+        ]
+      },
+      "significance_match": 0.0,
+      "significance_detail": {
+        "gold_significance": [
+          "consistent across 1945-2007",
+          "ks-test: ĉ shows no field bias",
+          "milestone rank improvement: higher percentiles under ĉ"
+        ],
+        "gold_significance_category": "not_significant",
+        "pred_significance": "unknown",
+        "match": false
+      },
+      "claim_support_score": 1.0,
+      "claim_support_detail": {
+        "total_claims": 4,
+        "supported_claims": 4
+      },
+      "limitation_awareness": 0.0,
+      "limitation_detail": {
+        "gold_limitations": [
+          "Relies on Web of Science coverage; may underrepresent non-English or non-journal literature",
+          "Cocitation data requires reference lists; older papers with incomplete reference data may be affected",
+          "T=10 citation window may disadvantage very recent papers with insufficient citation accumulation",
+          "Does not address citation motives (positive vs. negative citations)"
+        ],
+        "pred_limitations": [
+          "The metric for temporal invariance relies solely on the stability of the log-normal spread parameter"
+        ],
+        "matches_found": 0
+      },
+      "hallucinated_claim_rate": 0.5,
+      "hallucinated_detail": {
+        "total_predicted": 4,
+        "hallucinated": 2
+      },
+      "uncertainty_recognition": 0.0,
+      "overall_score": 0.6
+    },
+    "L3": {
+      "paper_id": "ke2023_normalized_impact",
+      "level": "L3",
+      "direction_accuracy": 1.0,
+      "direction_detail": {
+        "correct": 3,
+        "total": 3,
+        "details": [
+          {
+            "gold_claim": "Ĉ distribution shape log-normal σ≈1.0-1.2 across all years null (invariant) consistent across 1945-2007",
+            "gold_direction": "null",
+            "pred_directions": [],
+            "match": true
+          },
+          {
+            "gold_claim": "Field bias correction Ĉ eliminates field-level citation disparities null (unbiased) KS-test: Ĉ shows no field bias",
+            "gold_direction": "null",
+            "pred_directions": [],
+            "match": true
+          },
+          {
+            "gold_claim": "Milestone paper recovery Ĉ ranks milestone papers consistently higher than C_raw positive for Ĉ Milestone rank improve",
+            "gold_direction": "positive",
+            "pred_directions": [],
+            "match": true
+          }
+        ]
+      },
+      "significance_match": 0.0,
+      "significance_detail": {
+        "gold_significance": [
+          "consistent across 1945-2007",
+          "ks-test: ĉ shows no field bias",
+          "milestone rank improvement: higher percentiles under ĉ"
+        ],
+        "gold_significance_category": "not_significant",
+        "pred_significance": "unknown",
+        "match": false
+      },
+      "claim_support_score": 0.0,
+      "claim_support_detail": {
+        "total_claims": 0,
+        "supported_claims": 0
+      },
+      "limitation_awareness": 0.0,
+      "limitation_detail": {
+        "gold_limitations": [
+          "Relies on Web of Science coverage; may underrepresent non-English or non-journal literature",
+          "Cocitation data requires reference lists; older papers with incomplete reference data may be affected",
+          "T=10 citation window may disadvantage very recent papers with insufficient citation accumulation",
+          "Does not address citation motives (positive vs. negative citations)"
+        ],
+        "pred_limitations": [],
+        "matches_found": 0
+      },
+      "hallucinated_claim_rate": 0.0,
+      "hallucinated_detail": {
+        "total_predicted": 0,
+        "hallucinated": 0
+      },
+      "uncertainty_recognition": 1.0,
+      "overall_score": 0.65
+    }
+  },
+  "arts2025_frontier_scientists": {
+    "L1": {
+      "paper_id": "arts2025_frontier_scientists",
+      "level": "L1",
+      "direction_accuracy": 1.0,
+      "direction_detail": {
+        "correct": 1,
+        "total": 1,
+        "details": [
+          {
+            "gold_direction": "positive",
+            "pred_direction": "positive",
+            "match": true
+          }
+        ]
+      },
+      "significance_match": 0.0,
+      "significance_detail": {},
+      "claim_support_score": 0.0,
+      "claim_support_detail": {},
+      "limitation_awareness": 0.0,
+      "limitation_detail": {},
+      "hallucinated_claim_rate": 0.0,
+      "hallucinated_detail": {},
+      "uncertainty_recognition": 0.0,
+      "overall_score": 0.8
+    },
+    "L2": {
+      "paper_id": "arts2025_frontier_scientists",
+      "level": "L2",
+      "direction_accuracy": 1.0,
+      "direction_detail": {
+        "correct": 5,
+        "total": 5,
+        "details": [
+          {
+            "gold_claim": "Frontier-author patent forward citations +15-25% premium positive p < 0.01",
+            "gold_direction": "positive",
+            "pred_directions": [
+              "positive",
+              "positive",
+              "positive",
+              "positive",
+              "positive"
+            ],
+            "match": true
+          },
+          {
+            "gold_claim": "Technology hit probability +30-50% higher likelihood positive p < 0.01",
+            "gold_direction": "positive",
+            "pred_directions": [
+              "positive",
+              "positive",
+              "positive",
+              "positive",
+              "positive"
+            ],
+            "match": true
+          },
+          {
+            "gold_claim": "Generality/broad impact significantly broader positive p < 0.05",
+            "gold_direction": "positive",
+            "pred_directions": [
+              "positive",
+              "positive",
+              "positive",
+              "positive",
+              "positive"
+            ],
+            "match": true
+          },
+          {
+            "gold_claim": "Kogan private value +20-30% premium positive p < 0.05",
+            "gold_direction": "positive",
+            "pred_directions": [
+              "positive",
+              "positive",
+              "positive",
+              "positive",
+              "positive"
+            ],
+            "match": true
+          },
+          {
+            "gold_claim": "Frontier science reference mechanism Partial mediation confirmed positive Frontier-author premium persists even without ",
+            "gold_direction": "positive",
+            "pred_directions": [
+              "positive",
+              "positive",
+              "positive",
+              "positive",
+              "positive"
+            ],
+            "match": true
+          }
+        ]
+      },
+      "significance_match": 0.0,
+      "significance_detail": {
+        "gold_significance": [
+          "p < 0.01",
+          "p < 0.01",
+          "p < 0.05",
+          "p < 0.05",
+          "frontier-author premium persists even without frontier refs"
+        ],
+        "gold_significance_category": "significant_p01",
+        "pred_significance": "unknown",
+        "match": false
+      },
+      "claim_support_score": 1.0,
+      "claim_support_detail": {
+        "total_claims": 5,
+        "supported_claims": 5
+      },
+      "limitation_awareness": 0.0,
+      "limitation_detail": {
+        "gold_limitations": [
+          "Analysis limited to biomedical sector; findings may not generalize to other industries (e.g., software, chemicals)",
+          "Selection on unobservables: frontier authors may select into firms/projects with inherently higher innovative potential",
+          "Author-inventor disambiguation may have false positives/negatives despite using validated linkage methods",
+          "Kogan private value data available for only 36% of sample (public firms only)",
+          "Causal interpretation limited: despite FE and matching, unobserved time-varying confounders may remain",
+          "Frontier science definition based on top-general journals may miss important frontier work in specialized outlets"
+        ],
+        "pred_limitations": [
+          "Observational design precludes causal claims; associations may reflect selection or omitted variable",
+          "The five-year citation window may not fully capture long-run technological impact, and patents near ",
+          "The Kogan private value measure relies on stock market reactions, which can be noisy and capture onl",
+          "Only one mechanism (frontier science prior art references) is tested; other channels like boundary-s",
+          "The sample is restricted to biomedical patents, limiting external validity to other disciplines."
+        ],
+        "matches_found": 0
+      },
+      "hallucinated_claim_rate": 0.0,
+      "hallucinated_detail": {
+        "total_predicted": 5,
+        "hallucinated": 0
+      },
+      "uncertainty_recognition": 0.0,
+      "overall_score": 0.7
+    },
+    "L3": {
+      "paper_id": "arts2025_frontier_scientists",
+      "level": "L3",
+      "direction_accuracy": 1.0,
+      "direction_detail": {
+        "correct": 5,
+        "total": 5,
+        "details": [
+          {
+            "gold_claim": "Frontier-author patent forward citations +15-25% premium positive p < 0.01",
+            "gold_direction": "positive",
+            "pred_directions": [],
+            "match": true
+          },
+          {
+            "gold_claim": "Technology hit probability +30-50% higher likelihood positive p < 0.01",
+            "gold_direction": "positive",
+            "pred_directions": [],
+            "match": true
+          },
+          {
+            "gold_claim": "Generality/broad impact significantly broader positive p < 0.05",
+            "gold_direction": "positive",
+            "pred_directions": [],
+            "match": true
+          },
+          {
+            "gold_claim": "Kogan private value +20-30% premium positive p < 0.05",
+            "gold_direction": "positive",
+            "pred_directions": [],
+            "match": true
+          },
+          {
+            "gold_claim": "Frontier science reference mechanism Partial mediation confirmed positive Frontier-author premium persists even without ",
+            "gold_direction": "positive",
+            "pred_directions": [],
+            "match": true
+          }
+        ]
+      },
+      "significance_match": 0.0,
+      "significance_detail": {
+        "gold_significance": [
+          "p < 0.01",
+          "p < 0.01",
+          "p < 0.05",
+          "p < 0.05",
+          "frontier-author premium persists even without frontier refs"
+        ],
+        "gold_significance_category": "significant_p01",
+        "pred_significance": "unknown",
+        "match": false
+      },
+      "claim_support_score": 0.0,
+      "claim_support_detail": {
+        "total_claims": 0,
+        "supported_claims": 0
+      },
+      "limitation_awareness": 0.0,
+      "limitation_detail": {
+        "gold_limitations": [
+          "Analysis limited to biomedical sector; findings may not generalize to other industries (e.g., software, chemicals)",
+          "Selection on unobservables: frontier authors may select into firms/projects with inherently higher innovative potential",
+          "Author-inventor disambiguation may have false positives/negatives despite using validated linkage methods",
+          "Kogan private value data available for only 36% of sample (public firms only)",
+          "Causal interpretation limited: despite FE and matching, unobserved time-varying confounders may remain",
+          "Frontier science definition based on top-general journals may miss important frontier work in specialized outlets"
+        ],
+        "pred_limitations": [],
+        "matches_found": 0
+      },
+      "hallucinated_claim_rate": 0.0,
+      "hallucinated_detail": {
+        "total_predicted": 0,
+        "hallucinated": 0
+      },
+      "uncertainty_recognition": 0.6,
+      "overall_score": 0.49
+    }
+  }
+}

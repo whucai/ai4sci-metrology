@@ -1,0 +1,44 @@
+[
+  {
+    "paper_id": "ke2023_normalized_impact",
+    "condition": "blind",
+    "elapsed": 83.2,
+    "status": "json_error",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "paper_id": "ke2023_normalized_impact",
+    "condition": "obfuscated",
+    "elapsed": 91.2,
+    "status": "json_error",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "paper_id": "wu2019_disruption",
+    "condition": "blind",
+    "elapsed": 92.6,
+    "status": "json_error",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "paper_id": "wu2019_disruption",
+    "condition": "obfuscated",
+    "elapsed": 93.2,
+    "status": "json_error",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "paper_id": "arts2025_frontier_scientists",
+    "condition": "blind",
+    "elapsed": 101.9,
+    "status": "json_error",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "paper_id": "arts2025_frontier_scientists",
+    "condition": "obfuscated",
+    "elapsed": 151.7,
+    "status": "json_error",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  }
+]

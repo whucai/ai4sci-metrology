@@ -1,0 +1,40 @@
+{
+  "code_generated": {
+    "chars": 6030,
+    "extracted": true
+  },
+  "code_executed": {
+    "exit_code": 0,
+    "elapsed": 19.35,
+    "has_traceback": false,
+    "has_timeout": false
+  },
+  "section_compliance": {
+    "compliant": false,
+    "present": 1,
+    "total": 6,
+    "missing_headers": [
+      "DESCRIPTIVE",
+      "TRANSFORM",
+      "REGRESSION",
+      "COEFFICIENTS",
+      "RESULTS"
+    ],
+    "stubbed": []
+  },
+  "constraint_compliance": {
+    "compliant": false,
+    "violations": [
+      "Missing metrics: ['coef_ln_rp', 'coef_ln_kp', 'coef_ln_cp5']"
+    ],
+    "missing_sections": [],
+    "missing_metrics": [
+      "coef_ln_rp",
+      "coef_ln_kp",
+      "coef_ln_cp5"
+    ],
+    "sections_found": 6
+  },
+  "metrics_parsed": 2,
+  "coefficients_found": 0
+}

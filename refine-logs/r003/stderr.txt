@@ -1,0 +1,4 @@
+  File "/tmp/sandbox_ylytc3um/script.py", line 1
+    "name": "P7_CUSTOM_STOPWORDS", "category": "preprocessing",\n     "formula": "remove predefined patent boilerplate list",\n     "dependencies": "P6"},\n    {"name": "P8_RARE_WORD_REMOVAL", "category": "preprocessing",\n     "formula": "remove words with DF=1 (across all patents)",\n     "dependencies": "P7', 'type': 'text'}]
+                        ^
+SyntaxError: unexpected character after line continuation character

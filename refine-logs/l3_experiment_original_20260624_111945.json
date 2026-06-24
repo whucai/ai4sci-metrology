@@ -1,0 +1,6911 @@
+[
+  {
+    "paper_id": "Research_Policy_2603.14919v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 11.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.05263157894736842,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.2578947368421053,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "strong",
+        "support_strength_score": 1.0,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 1,
+      "moderate": 0,
+      "weak": 0
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "PLoS_ONE_2002.04347v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 13.0,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.10526315789473684,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09078947368421052,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "PNAS_2303.14732v3",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 17.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.105,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Ribeiro2026_GenderProductivityPrestige",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.22727272727272727,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.10909090909090909,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Science_1706.07976v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.2,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Research_Policy_2408.05587v3",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 34.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Science_1812.09241v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 23.4,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.4166666666666667,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.1375,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Science_2207.14260v2",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.4,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.23076923076923078,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.10961538461538461,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Science_2201.09090v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 19.9,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.16666666666666666,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09999999999999999,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Science_2506.06753v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 17.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.08333333333333333,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.0875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Science_2511.05051v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.8,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.5,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.15,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Scientometrics_2106.05027v2",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.16666666666666666,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09999999999999999,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Scientometrics_2106.10700v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.6,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.45,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.14250000000000002,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Scientometrics_2203.06218v2",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.14285714285714285,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 2
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09642857142857142,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Scientometrics_2306.01949v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 13.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.15789473684210525,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09868421052631579,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Scientometrics_2512.23429v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.8,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.35294117647058826,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 2
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.12794117647058822,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Scientometrics_2603.19319v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 11.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.16666666666666666,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09999999999999999,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "Scientometrics_2501.17456v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 21.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.65,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 2
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.10562500000000001,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "strong",
+        "support_strength_score": 1.0,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 1,
+      "moderate": 0,
+      "weak": 0
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "abramo2015_research_performance",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.6666666666666666,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.175,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "ahmad2025_university_of_lagos",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 10.8,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.05,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.08249999999999999,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "abramo2017_stardom",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 14.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.3,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.12,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "akella2023_reproducibility_signals",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 17.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.025,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.1649375,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "strong",
+        "support_strength_score": 1.0,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 1,
+      "moderate": 0,
+      "weak": 0
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_1409.7889v2",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.8,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.3076923076923077,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.12115384615384615,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2006.16737v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 13.6,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2608695652173913,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.11413043478260869,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2012.05742v2",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 11.8,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.3333333333333333,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.125,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2101.09520v2",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 14.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.3,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.12,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2201.00531v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 12.2,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.3333333333333333,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.125,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2202.08822v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 13.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2202.06661v2",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 17.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2207.13857v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.2,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.3333333333333333,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.125,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2212.04972v2",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 11.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.1,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2209.11284v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.4,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2304.11079v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 18.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2310.05926v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 12.8,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2307.12796v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 13.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2404.15176v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.9,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.10344827586206896,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09051724137931035,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2406.15311v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 14.4,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2222222222222222,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.10833333333333334,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2410.09112v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 11.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.4375,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.140625,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2503.02216v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 19.2,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2510.19246v2",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.4,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.5909090909090909,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.16363636363636364,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2602.05211v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2777777777777778,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.11666666666666667,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2601.08156v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 19.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.3333333333333333,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.125,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arXiv_2605.12514v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 14.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.1794871794871795,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.10192307692307692,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arroyomachado2020_science_wikipedia",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.2,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.05263157894736842,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.08289473684210526,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "baccini2025_coara",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 11.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "arts2021_natural_language_processing",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 17.6,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.19230769230769232,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.10384615384615384,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "buruk2023_academic_writing",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 14.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "bak_coleman2026_industry_influence",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 24.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.65,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.35294117647058826,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 2
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.21544117647058825,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "strong",
+        "support_strength_score": 1.0,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 1,
+      "moderate": 0,
+      "weak": 0
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "fitzgerald2021_localization",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 10.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "chandrasekaran2021_automating_transfer",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 19.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.4,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.135,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "deng2023_enhancing_disruption",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 21.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2727272727272727,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 2
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.1159090909090909,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "funk2017_dynamic_network",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2777777777777778,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.11666666666666667,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "galuez2023_technology_transfer",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.2,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2727272727272727,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.2909090909090909,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "strong",
+        "support_strength_score": 1.0,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 1,
+      "moderate": 0,
+      "weak": 0
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "fletcher2024_reproducibility",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 23.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.65,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2777777777777778,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 2
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.20416666666666666,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "gebhart2023_mathematical_framework",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.21428571428571427,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.10714285714285714,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "hao2024_hlm_cite",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 11.6,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.25,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.11249999999999999,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "gim2025_interdisciplinary_synergy",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 17.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.05263157894736842,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.2578947368421053,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "strong",
+        "support_strength_score": 1.0,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 1,
+      "moderate": 0,
+      "weak": 0
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "ke2018_comparing_scientific_technological_impact",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.11764705882352941,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09264705882352942,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "kong2025_citation_structural_diversity",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 14.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.47058823529411764,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.14558823529411763,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "ke2023_network_based_normalized_impact",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 28.8,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.17647058823529413,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.10147058823529412,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "kozlowski2023_uncited_articles",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 17.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.21739130434782608,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.1076086956521739,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "leibel2023_disruption_index",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 14.4,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "li2023_two_stage",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 13.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.1,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "lin2023_moprd",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.1,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "luo2024_hunting_room_temperature_superconductors",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 21.6,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.1625,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "strong",
+        "support_strength_score": 1.0,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 1,
+      "moderate": 0,
+      "weak": 0
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "maddi2024_peer_review_reports",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.2,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2777777777777778,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.11666666666666667,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "maddi2022_article_processing_charges",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 27.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.44999999999999996,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.19047619047619047,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 2
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.14107142857142857,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "moderate",
+        "support_strength_score": 0.6,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 1,
+      "weak": 0
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "mryglod2014_is_your_epl_attractive",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 14.4,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.46153846153846156,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.14423076923076922,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "nikonova2022_measuring_difficulty",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 14.4,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.26666666666666666,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.11499999999999999,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "momeni2023_factors_oa",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 20.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.06451612903225806,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.0846774193548387,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "obadage2023_citations_reproducibility",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 14.6,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.5,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.15,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "okamura2022_scientometric_engineering",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 9.8,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.16666666666666666,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09999999999999999,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "others_2502.04457v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 13.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.058823529411764705,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.0838235294117647,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "others_2410.13989v1",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 18.9,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.16666666666666666,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09999999999999999,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "park2023_grants_interdisciplinary_advances",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 13.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.105,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "peng2026_structural_diversity",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 21.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.16666666666666666,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09999999999999999,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "petersen2023_citation_inflation",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 17.5,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.15789473684210525,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09868421052631579,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "rosendo2023_kheops",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 11.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "petersen2024_disruption_index",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.8,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2222222222222222,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.10833333333333334,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "schueler2023_platform_research",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 8.6,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "rudnicka2021_in_order_that",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.0,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "schaper2025_frontier_scientists",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.09090909090909091,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.08863636363636364,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "shaikh2023_social_media_learning",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 20.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "shekar2022_novelty_based",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 18.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.44999999999999996,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2222222222222222,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 2
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.14583333333333331,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "shirouyeh2023_predicting_star_scientists",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 13.9,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.52,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.153,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "silvello2017_theory_practice_data_citation",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 18.2,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "slavov2022_eternalism",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 14.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "suebsombut2023_smart_farm",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 12.2,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.04875,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "tiyavorabun2022_badder_seeds",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 11.0,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.11764705882352941,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09264705882352942,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "traag2025_citation_models",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 12.6,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2727272727272727,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.1159090909090909,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "sun2023_ranking_mobility",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 23.4,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.23529411764705882,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.11029411764705882,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "tohalino2021_predicting_grants",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.05,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.08249999999999999,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "vasarhelyi2023_who_benefits",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 17.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.5263157894736842,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.1539473684210526,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "wu2025_large_language_models",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 11.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.105,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "wagner2023_openness_impact",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 13.8,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.15384615384615385,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09807692307692308,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "wu2026_geographical_biases",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 19.8,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.15,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.0975,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "xia2019_function_point",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.0,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.13333333333333333,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.095,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "yadav2026_project_synapse",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.3333333333333333,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.125,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "zhao2020_delayed_recognition",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 22.9,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.44999999999999996,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.30434782608695654,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 2
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.15815217391304348,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "moderate",
+        "support_strength_score": 0.6,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 1,
+      "weak": 0
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "zhao2023_academic_industry_knowledge_proximity",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 15.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.2777777777777778,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.11666666666666667,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "zhao2025_novelty_measurements",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.2,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.0,
+      "evidence_anchor_rate": 0.0,
+      "generic_claim_penalty": true,
+      "generic_uncertainty_penalty": true
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.48,
+    "overall_score": 0.1625,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "strong",
+        "support_strength_score": 1.0,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 1,
+      "moderate": 0,
+      "weak": 0
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "zhao2023_effect_of_gender_diversity",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 19.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.29411764705882354,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.11911764705882352,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "zheng2025_male_female_retractions",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 13.2,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.21052631578947367,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.10657894736842105,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  },
+  {
+    "paper_id": "zheng2025_social_media_retraction",
+    "level": "L3",
+    "arm": "original",
+    "elapsed": 16.6,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_direction": "unknown",
+          "pred_direction": "unknown",
+          "score": 0.0
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [],
+      "gold_significance_category": "n/a",
+      "pred_significance": "n/a",
+      "pred_category": "n/a",
+      "match": false
+    },
+    "claim_support_score": 0.3,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1,
+      "graded_by_support_strength": true,
+      "l3_specificity": 0.14285714285714285,
+      "evidence_anchor_rate": 0.0
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.8,
+    "overall_score": 0.09642857142857142,
+    "conclusion_details": [
+      {
+        "gold_direction": "unknown",
+        "pred_direction": "unknown",
+        "direction_score": 0.0,
+        "support_strength": "weak",
+        "support_strength_score": 0.3,
+        "has_evidence_anchor": false,
+        "evidence_anchor": ""
+      }
+    ],
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    },
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "status": "success"
+  }
+]

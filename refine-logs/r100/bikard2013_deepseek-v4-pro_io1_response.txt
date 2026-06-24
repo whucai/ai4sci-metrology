@@ -1,0 +1,302 @@
+```python
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm
+from itertools import product
+
+# --------------------------------------------------------------------
+# DATA LOADING STUB
+# --------------------------------------------------------------------
+def load_placeholder_data():
+    """
+    Construct a synthetic placeholder dataset that mimics the schema
+    described in the paper.
+
+    Required real data (NOT available):
+        - MIT faculty publications from ISI Web of Science, 1976-2006.
+        - Individual-level: faculty ID, department, career stage each year,
+          PhD year, full publication list with author counts, citations,
+          journal impact factors, first/last author flags.
+        - Exclusions: researchers who ever co-authored a paper with >20 authors,
+          and "Big Science" subfields (Astronomy & Astrophysics,
+          Multidisciplinary Physics, Nuclear Physics, Instruments & Instrumentation,
+          Particles & Fields Physics).
+
+    Placeholder design:
+        - Synthetic 661 scientists over up to 31 years (1976-2006).
+        - 7 departments, career stages, random publication counts per year.
+        - Paper-level records with realistic co-author distributions and citation
+          patterns that embed a positive collaboration–quality relationship
+          and a hump-shaped fractional productivity relationship.
+    """
+
+    np.random.seed(42)
+
+    # Parameters
+    n_scientists = 661
+    years = list(range(1976, 2007))
+    departments = ['EECS', 'ChemEng', 'MatSciEng', 'MechEng', 'Biology', 'Chemistry', 'Physics']
+    career_stages = ['Assistant', 'Associate', 'Full', 'Emeritus']
+
+    # Random scientist base characteristics
+    sci = pd.DataFrame({
+        'scientist_id': [f'S{str(i).zfill(4)}' for i in range(n_scientists)],
+        'dept': np.random.choice(departments, size=n_scientists, replace=True),
+        'base_ability': np.random.normal(0, 1, n_scientists)  # latent ability
+    })
+
+    records = []
+    paper_id_counter = 0
+
+    for _, row in sci.iterrows():
+        sid = row['scientist_id']
+        dept = row['dept']
+        ability = row['base_ability']
+
+        # Decide active years: start year random, until 2006 or after 30 years
+        start_year = np.random.choice(years[:20])  # ensure at least a few years
+        max_span = min(31, 2006 - start_year + 1)
+        active_years = np.random.choice(range(start_year, 2007), size=max_span, replace=False)
+        active_years = sorted(active_years)
+
+        # Career stage progression (simplified)
+        career_len = len(active_years)
+        # Rough progression: first 7 years Assistant, next 7 Associate, then Full, then Emeritus later
+        for idx, yr in enumerate(active_years):
+            if idx < 7:
+                stage = 'Assistant'
+            elif idx < 14:
+                stage = 'Associate'
+            else:
+                stage = 'Full'
+            if yr > 2000 and idx > 20:  # some become Emeritus
+                stage = 'Emeritus'
+
+            # Number of papers in this year: influenced by ability and career stage
+            base_pubs = max(0, int(np.random.poisson(lam=2.0 + ability + (stage != 'Emeritus') * 0.5)))
+            if base_pubs == 0:
+                base_pubs = 1
+
+            for _ in range(base_pubs):
+                paper_id_counter += 1
+                # Co-authors: skewed distribution (1 to maybe 12, rarely >)
+                nauthors = np.random.choice([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], p=[0.3, 0.25, 0.15, 0.1, 0.07, 0.05, 0.03, 0.02, 0.02, 0.01])
+                # Ensure no >20 (excluded if any ever had >20, but we ignore that fine detail)
+                if nauthors > 20:
+                    nauthors = np.random.randint(1, 5)
+
+                # Citations: quality increases with nauthors but diminishing, plus noise
+                quality_base = 1.0 + 0.3 * nauthors + ability + np.random.normal(0, 0.5)
+                # Some career stage boost
+                if stage == 'Full':
+                    quality_base += 0.2
+                if stage == 'Emeritus':
+                    quality_base -= 0.1
+                # Year effect (more recent papers have fewer years to accumulate cites, but we mimic 2008 counts)
+                age_factor = 2008 - yr
+                citations = max(0, np.random.poisson(lam=np.exp(quality_base) * 2.0) + 1)  # ensure positive
+
+                # Journal impact factor (correlated with citations)
+                jif = max(0, np.random.normal(loc=np.log(citations + 1), scale=0.5))
+
+                # First/last author dummy (propensity depends on career stage and nauthors)
+                is_first_author = np.random.binomial(1, 0.4 if stage in ['Assistant', 'Associate'] else 0.2)
+                is_last_author = np.random.binomial(1, 0.3 if stage == 'Full' else 0.1)
+
+                records.append({
+                    'scientist_id': sid,
+                    'year': yr,
+                    'dept': dept,
+                    'career_stage': stage,
+                    'paper_id': paper_id_counter,
+                    'nauthors': nauthors,
+                    'cites': citations,
+                    'jif': jif,
+                    'is_first_author': is_first_author,
+                    'is_last_author': is_last_author
+                })
+
+    papers = pd.DataFrame(records)
+    return papers
+
+
+# --------------------------------------------------------------------
+# CREDIT ALLOCATION FUNCTIONS
+# --------------------------------------------------------------------
+def alpha_equal(N):
+    """Equal share: 1/N."""
+    return 1.0 / N
+
+def alpha_proportional(N):
+    """Proportional where sum > 1, e.g., 1/sqrt(N)."""
+    return 1.0 / np.sqrt(N)
+
+def alpha_whole(N):
+    """Each author gets full credit."""
+    return 1.0
+
+# --------------------------------------------------------------------
+# MAIN ANALYSIS
+# --------------------------------------------------------------------
+def run_analysis():
+    papers = load_placeholder_data()
+
+    # Aggregate to scientist-year level
+    # First compute yearly metrics per scientist
+    agg_funcs = {
+        'paper_id': 'count',  # npubs
+        'nauthors': 'mean',
+        'cites': 'mean',      # average cites per paper
+        'jif': 'mean',
+        'is_first_author': 'mean',
+        'is_last_author': 'mean'
+    }
+    sci_year = papers.groupby(['scientist_id', 'year']).agg(agg_funcs).reset_index()
+    sci_year.rename(columns={
+        'paper_id': 'npubs',
+        'nauthors': 'avg_nauthors',
+        'cites': 'avg_cites'
+    }, inplace=True)
+
+    # Merge back department and career stage (take first per scientist-year)
+    aux = papers[['scientist_id', 'year', 'dept', 'career_stage']].drop_duplicates()
+    sci_year = sci_year.merge(aux, on=['scientist_id', 'year'], how='left')
+
+    # Fractional publications for different alpha functions
+    alphas = {
+        'equal_share': alpha_equal,
+        'sqrt_share': alpha_proportional,
+        'full_credit': alpha_whole
+    }
+
+    # Compute fractional counts at paper level then aggregate
+    papers['frac_equal'] = alpha_equal(papers['nauthors'])
+    papers['frac_sqrt'] = alpha_proportional(papers['nauthors'])
+    papers['frac_whole'] = alpha_whole(papers['nauthors'])
+    papers['att_cites_equal'] = papers['cites'] * papers['frac_equal']
+    papers['att_cites_sqrt'] = papers['cites'] * papers['frac_sqrt']
+    papers['att_cites_whole'] = papers['cites'] * papers['frac_whole']
+
+    paper_frac = papers.groupby(['scientist_id', 'year']).agg({
+        'frac_equal': 'sum',
+        'frac_sqrt': 'sum',
+        'frac_whole': 'sum',
+        'att_cites_equal': 'sum',
+        'att_cites_sqrt': 'sum',
+        'att_cites_whole': 'sum'
+    }).reset_index()
+
+    sci_year = sci_year.merge(paper_frac, on=['scientist_id', 'year'], how='left')
+
+    # Log transformations
+    sci_year['ln_avg_cites'] = np.log(sci_year['avg_cites'] + 1)
+    sci_year['ln_att_cites_equal'] = np.log(sci_year['att_cites_equal'] + 1)
+    sci_year['ln_att_cites_sqrt'] = np.log(sci_year['att_cites_sqrt'] + 1)
+    sci_year['ln_att_cites_whole'] = np.log(sci_year['att_cites_whole'] + 1)
+
+    # Create fixed-effects dummies
+    sci_year['const'] = 1
+    # For illustration, we use a subset of fixed effects to keep regression manageable.
+    # In the paper they use scientist FE, department-year FE, and career stage FE.
+    # We'll use dept-year interaction, career stage, and scientist dummies.
+    sci_year['dept_year'] = sci_year['dept'] + '_' + sci_year['year'].astype(str)
+
+    # Limit to a sample to avoid enormous dummy matrices (in real analysis, we'd have more memory)
+    # But we'll keep all data for this synthetic example (~5000 rows) – it's okay.
+    print("Shape of scientist-year data:", sci_year.shape)
+
+    # ---- H1: Quality vs collaboration ----
+    # ln(avg_cites) ~ avg_nauthors + fixed effects
+    # We'll use OLS with categorical dummies.
+    # Note: statsmodels OLS can handle categorical via formula, but dummies are fine.
+    X_h1 = pd.get_dummies(sci_year[['avg_nauthors', 'scientist_id', 'dept_year', 'career_stage']],
+                          columns=['scientist_id', 'dept_year', 'career_stage'],
+                          drop_first=True, dtype=float)
+    X_h1['avg_nauthors'] = sci_year['avg_nauthors']
+    y_h1 = sci_year['ln_avg_cites']
+
+    # Drop any columns that are constant (may occur in small synthetic data)
+    # Use OLS
+    model_h1 = sm.OLS(y_h1, X_h1)
+    try:
+        results_h1 = model_h1.fit()
+        coef_collab_h1 = results_h1.params['avg_nauthors']
+        pval_h1 = results_h1.pvalues['avg_nauthors']
+        print(f"RESULT H1: coefficient avg_nauthors on ln(avg_cites) = {coef_collab_h1:.4f} (p = {pval_h1:.4f})")
+    except Exception as e:
+        print(f"Regression H1 failed: {e}")
+        # Fallback: simple OLS without full dummies
+        X_simple = sm.add_constant(sci_year['avg_nauthors'])
+        res_simple = sm.OLS(y_h1, X_simple).fit()
+        print(f"RESULT H1 (simple): coefficient avg_nauthors = {res_simple.params['avg_nauthors']:.4f}, p = {res_simple.pvalues['avg_nauthors']:.4f}")
+
+    # ---- H2: Fractional productivity vs collaboration ----
+    # We'll test with equal-share fractional count (1/N)
+    # Frac_Pubs (equal) ~ avg_nauthors + fixed effects
+    X_h2 = pd.get_dummies(sci_year[['avg_nauthors', 'scientist_id', 'dept_year', 'career_stage']],
+                          columns=['scientist_id', 'dept_year', 'career_stage'],
+                          drop_first=True, dtype=float)
+    X_h2['avg_nauthors'] = sci_year['avg_nauthors']
+    y_h2 = sci_year['frac_equal']
+
+    try:
+        model_h2 = sm.OLS(y_h2, X_h2)
+        results_h2 = model_h2.fit()
+        coef_collab_h2 = results_h2.params['avg_nauthors']
+        pval_h2 = results_h2.pvalues['avg_nauthors']
+        print(f"RESULT H2: coefficient avg_nauthors on frac_pubs (equal share) = {coef_collab_h2:.4f} (p = {pval_h2:.4f})")
+    except Exception as e:
+        print(f"Regression H2 failed: {e}")
+        X_simple2 = sm.add_constant(sci_year['avg_nauthors'])
+        res_simple2 = sm.OLS(y_h2, X_simple2).fit()
+        print(f"RESULT H2 (simple): coefficient avg_nauthors = {res_simple2.params['avg_nauthors']:.4f}, p = {res_simple2.pvalues['avg_nauthors']:.4f}")
+
+    # ---- H3: Attributed quality for different credit rules ----
+    # For each alpha, regress ln(att_cites) on avg_nauthors.
+    # If coefficient is negative, that alpha is inconsistent with observed behavior.
+    for label, col in [('equal share (1/N)', 'ln_att_cites_equal'),
+                       ('sqrt share (1/sqrt(N))', 'ln_att_cites_sqrt'),
+                       ('full credit (1)', 'ln_att_cites_whole')]:
+        X_h3 = pd.get_dummies(sci_year[['avg_nauthors', 'scientist_id', 'dept_year', 'career_stage']],
+                              columns=['scientist_id', 'dept_year', 'career_stage'],
+                              drop_first=True, dtype=float)
+        X_h3['avg_nauthors'] = sci_year['avg_nauthors']
+        y_h3 = sci_year[col]
+        try:
+            model_h3 = sm.OLS(y_h3, X_h3)
+            results_h3 = model_h3.fit()
+            coef = results_h3.params['avg_nauthors']
+            pval = results_h3.pvalues['avg_nauthors']
+            print(f"RESULT H3 ({label}): coefficient avg_nauthors on log(att_cites) = {coef:.4f} (p = {pval:.4f})")
+            # Check consistency: should be non-negative for the 'true' alpha
+            if coef < 0 and pval < 0.05:
+                print(f"  -> Inconsistent: collaboration reduces attributed citations, alpha({label}) too low.")
+            else:
+                print(f"  -> Consistent with revealed preference (or not statistically distinguishable from zero).")
+        except Exception as e:
+            print(f"Regression H3 ({label}) failed: {e}")
+
+    # Additional analysis: check non-linearity (squared term) for H1 and H2 as paper mentions up to 4 coauthors behaviour.
+    sci_year['avg_nauthors_sq'] = sci_year['avg_nauthors']**2
+    X_h1_nl = pd.get_dummies(sci_year[['avg_nauthors', 'avg_nauthors_sq', 'scientist_id', 'dept_year', 'career_stage']],
+                             columns=['scientist_id', 'dept_year', 'career_stage'],
+                             drop_first=True, dtype=float)
+    X_h1_nl[['avg_nauthors', 'avg_nauthors_sq']] = sci_year[['avg_nauthors', 'avg_nauthors_sq']]
+    try:
+        res_nl_h1 = sm.OLS(sci_year['ln_avg_cites'], X_h1_nl).fit()
+        print(f"RESULT H1 non-linear: coef avg_nauthors = {res_nl_h1.params['avg_nauthors']:.4f}, coef sq = {res_nl_h1.params['avg_nauthors_sq']:.4f}")
+    except:
+        pass
+
+    # Print the conclusion supported by the synthetic data (demonstration)
+    print("\nCONCLUSION: The analysis (on synthetic data) demonstrates the pipeline to examine trade-offs.")
+    print("Directions typically found: Collaboration increases per-paper citations, while fractional productivity may decrease")
+    print("unless credit allocation is more generous than equal sharing. The revealed-preference approach can infer")
+    print("whether scientists act as if credit sums to more than 1, suggesting disproportionate reward for collaborative work.")
+    print("(Actual paper reports: collaboration yields >60% citation boost; fractional count may rise up to ~4 coauthors;")
+    print(" credit sharing appears sum > 1.)")
+
+
+if __name__ == "__main__":
+    run_analysis()
+```

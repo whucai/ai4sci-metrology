@@ -1,0 +1,37 @@
+{
+  "table1": {
+    "N_total": 324982,
+    "N_frontier": 29435,
+    "N_non_frontier": 295482,
+    "N_no_inventor": 68,
+    "hit_rate_frontier": 0.08,
+    "hit_rate_non_frontier": 0.082,
+    "mean_cites_frontier": 32.7,
+    "mean_cites_non_frontier": 49.2
+  },
+  "table2": {
+    "model": "OLS log-linear + PPML",
+    "FA_coef_ols": 0.18,
+    "FA_se_ols": 0.0085,
+    "FA_pct_effect_ols": 19.7,
+    "FA_coef_ppml": 0.1797,
+    "adj_R2_ols": 0.306,
+    "wald_FA_eq_0_chi2": 449.7,
+    "wald_FA_eq_0_p": 0.0,
+    "N": 324982
+  },
+  "table3": {
+    "hit_frontier_coef": 0.0332,
+    "hit_frontier_se": 0.0017,
+    "hit_adj_R2": 0.047,
+    "logcites_frontier_coef": 0.18,
+    "logcites_frontier_se": 0.0085,
+    "logcites_adj_R2": 0.306,
+    "F_test_FA_eq_0_hit": 404.1,
+    "F_test_FA_eq_0_hit_p": 0.0
+  },
+  "table5": {
+    "has_sci_frontier_coef": 0.1471,
+    "log_sci_frontier_coef": 0.7706
+  }
+}

@@ -1,0 +1,736 @@
+[
+  {
+    "paper_id": "wu2019_disruption",
+    "condition": "blind",
+    "elapsed": 15.0,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [
+        "team_size"
+      ],
+      "partial_matches": [],
+      "missing": [],
+      "extra": []
+    },
+    "dependent_var_match": {
+      "precision": 0.16666666666666666,
+      "recall": 0.16666666666666666,
+      "f1": 0.16666666666666666,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [
+        "disruption_index"
+      ],
+      "extra": [
+        "disruptiveness"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "exact_matches": [
+        "field",
+        "journal",
+        "year"
+      ],
+      "partial_matches": [],
+      "missing": [
+        "citation_count"
+      ],
+      "extra": []
+    },
+    "model_match": 0.014285714285714285,
+    "model_match_detail": {
+      "family_match": 0.0,
+      "gold_family": "descriptive",
+      "pred_family": "regression",
+      "specification_similarity": 0.03571428571428571,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.0,
+    "data_protocol_detail": {
+      "time_window_match": 0.0,
+      "gold_time_window": "1954-2014",
+      "pred_time_window": "2000-2020",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 0.8,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": false
+    },
+    "overall_f1": 0.37023809523809526,
+    "status": "success"
+  },
+  {
+    "paper_id": "ke2023_normalized_impact",
+    "condition": "blind",
+    "elapsed": 18.0,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 0.06111111111111111,
+      "recall": 0.06666666666666667,
+      "f1": 0.06376811594202898,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [
+        "field",
+        "paper_year"
+      ],
+      "extra": [
+        "cocitation_network_normalization",
+        "t_year_window"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 0.20833333333333331,
+      "recall": 0.20299145299145302,
+      "f1": 0.20562770562770566,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [
+        "c_field_normalized_t",
+        "c_hat_t",
+        "c_raw_t"
+      ],
+      "extra": [
+        "normalized_citation_success",
+        "raw_citation_success"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [
+        "journal"
+      ],
+      "partial_matches": [
+        [
+          "citing_year_volume",
+          "field",
+          1.0
+        ],
+        [
+          "citation_window_t",
+          "field",
+          1.0
+        ]
+      ],
+      "missing": [
+        "citation_window_t",
+        "citing_year_volume"
+      ],
+      "extra": [
+        "field",
+        "year"
+      ]
+    },
+    "model_match": 0.032,
+    "model_match_detail": {
+      "family_match": 0.0,
+      "gold_family": "nonparametric_test",
+      "pred_family": "regression",
+      "specification_similarity": 0.08,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.0,
+    "data_protocol_detail": {
+      "time_window_match": 0.0,
+      "gold_time_window": "1945-2007",
+      "pred_time_window": "1980-2020",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 0.8,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": false
+    },
+    "overall_f1": 0.2105605495953322,
+    "status": "success"
+  },
+  {
+    "paper_id": "wu2019_disruption",
+    "condition": "obfuscated",
+    "elapsed": 18.1,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "team_size",
+          "v1",
+          1.0
+        ]
+      ],
+      "missing": [
+        "team_size"
+      ],
+      "extra": [
+        "v1"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "disruption_index",
+          "v2",
+          1.0
+        ]
+      ],
+      "missing": [
+        "disruption_index"
+      ],
+      "extra": [
+        "v2"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "year",
+          "v3",
+          1.0
+        ],
+        [
+          "field",
+          "v3",
+          1.0
+        ],
+        [
+          "journal",
+          "v3",
+          1.0
+        ],
+        [
+          "citation_count",
+          "v3",
+          1.0
+        ]
+      ],
+      "missing": [
+        "citation_count",
+        "field",
+        "journal",
+        "year"
+      ],
+      "extra": [
+        "v3",
+        "v4",
+        "v5",
+        "v6"
+      ]
+    },
+    "model_match": 0.0,
+    "model_match_detail": {
+      "family_match": 0.0,
+      "gold_family": "descriptive",
+      "pred_family": "regression analysis",
+      "specification_similarity": 0.0,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.0,
+    "data_protocol_detail": {
+      "time_window_match": 0.0,
+      "gold_time_window": "1954-2014",
+      "pred_time_window": "2000-2020",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 1.0,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": true
+    },
+    "overall_f1": 0.6000000000000001,
+    "status": "success"
+  },
+  {
+    "paper_id": "arts2025_frontier_scientists",
+    "condition": "blind",
+    "elapsed": 19.0,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 0.09090909090909091,
+      "recall": 0.06876456876456877,
+      "f1": 0.07830126078301261,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [
+        "first_frontier_author",
+        "frontier_author",
+        "non_frontier_author"
+      ],
+      "extra": [
+        "frontier_author_flag"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 0.7301587301587302,
+      "recall": 0.5642857142857143,
+      "f1": 0.6365945519838837,
+      "exact_matches": [
+        "forward_citations",
+        "generality_index"
+      ],
+      "partial_matches": [],
+      "missing": [
+        "kogan_private_value",
+        "tech_hit"
+      ],
+      "extra": [
+        "kogan_value"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [
+        "firm_age"
+      ],
+      "partial_matches": [
+        [
+          "firm_fixed_effects",
+          "filing_year",
+          1.0
+        ],
+        [
+          "patent_filing_year_fe",
+          "filing_year",
+          1.0
+        ],
+        [
+          "ipc_3digit_fe",
+          "filing_year",
+          1.0
+        ],
+        [
+          "inventor_team_size",
+          "filing_year",
+          1.0
+        ],
+        [
+          "firm_patent_stock",
+          "filing_year",
+          1.0
+        ],
+        [
+          "science_ref_count",
+          "filing_year",
+          1.0
+        ]
+      ],
+      "missing": [
+        "firm_fixed_effects",
+        "firm_patent_stock",
+        "inventor_team_size",
+        "ipc_3digit_fe",
+        "patent_filing_year_fe",
+        "science_ref_count"
+      ],
+      "extra": [
+        "filing_year",
+        "firm_size",
+        "journal_tier",
+        "science_references"
+      ]
+    },
+    "model_match": 0.010526315789473684,
+    "model_match_detail": {
+      "family_match": 0.0,
+      "gold_family": "fixed_effects",
+      "pred_family": "regression",
+      "specification_similarity": 0.02631578947368421,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.2,
+    "data_protocol_detail": {
+      "time_window_match": 0.5,
+      "gold_time_window": "1980-2009 (patent filing)",
+      "pred_time_window": "1980-2009",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 1.0,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": true
+    },
+    "overall_f1": 0.3469141533104682,
+    "status": "success"
+  },
+  {
+    "paper_id": "ke2023_normalized_impact",
+    "condition": "obfuscated",
+    "elapsed": 19.8,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "paper_year",
+          "v1",
+          1.0
+        ],
+        [
+          "field",
+          "v2",
+          1.0
+        ]
+      ],
+      "missing": [
+        "field",
+        "paper_year"
+      ],
+      "extra": [
+        "v1",
+        "v2"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "c_hat_t",
+          "v3",
+          1.0
+        ],
+        [
+          "c_raw_t",
+          "v4",
+          1.0
+        ],
+        [
+          "c_field_normalized_t",
+          "v5",
+          1.0
+        ]
+      ],
+      "missing": [
+        "c_field_normalized_t",
+        "c_hat_t",
+        "c_raw_t"
+      ],
+      "extra": [
+        "v3",
+        "v4",
+        "v5"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "journal",
+          "v6",
+          1.0
+        ],
+        [
+          "citing_year_volume",
+          "v6",
+          1.0
+        ],
+        [
+          "citation_window_t",
+          "v6",
+          1.0
+        ]
+      ],
+      "missing": [
+        "citation_window_t",
+        "citing_year_volume",
+        "journal"
+      ],
+      "extra": [
+        "v6",
+        "v7",
+        "v8"
+      ]
+    },
+    "model_match": 0.01509433962264151,
+    "model_match_detail": {
+      "family_match": 0.0,
+      "gold_family": "nonparametric_test",
+      "pred_family": "regression analysis",
+      "specification_similarity": 0.03773584905660377,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.0,
+    "data_protocol_detail": {
+      "time_window_match": 0.0,
+      "gold_time_window": "1945-2007",
+      "pred_time_window": "1980-2020",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 1.0,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": true
+    },
+    "overall_f1": 0.6030188679245284,
+    "status": "success"
+  },
+  {
+    "paper_id": "arts2025_frontier_scientists",
+    "condition": "obfuscated",
+    "elapsed": 29.4,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "frontier_author",
+          "v1",
+          1.0
+        ],
+        [
+          "non_frontier_author",
+          "v2",
+          1.0
+        ],
+        [
+          "first_frontier_author",
+          "v3",
+          1.0
+        ]
+      ],
+      "missing": [
+        "first_frontier_author",
+        "frontier_author",
+        "non_frontier_author"
+      ],
+      "extra": [
+        "v1",
+        "v2",
+        "v3"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "forward_citations",
+          "v4",
+          1.0
+        ],
+        [
+          "tech_hit",
+          "v5",
+          1.0
+        ],
+        [
+          "generality_index",
+          "v6",
+          1.0
+        ],
+        [
+          "kogan_private_value",
+          "v7",
+          1.0
+        ]
+      ],
+      "missing": [
+        "forward_citations",
+        "generality_index",
+        "kogan_private_value",
+        "tech_hit"
+      ],
+      "extra": [
+        "v4",
+        "v5",
+        "v6",
+        "v7"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "firm_fixed_effects",
+          "v10",
+          1.0
+        ],
+        [
+          "patent_filing_year_fe",
+          "v10",
+          1.0
+        ],
+        [
+          "ipc_3digit_fe",
+          "v10",
+          1.0
+        ],
+        [
+          "inventor_team_size",
+          "v10",
+          1.0
+        ],
+        [
+          "firm_patent_stock",
+          "v10",
+          1.0
+        ],
+        [
+          "firm_age",
+          "v10",
+          1.0
+        ],
+        [
+          "science_ref_count",
+          "v10",
+          1.0
+        ]
+      ],
+      "missing": [
+        "firm_age",
+        "firm_fixed_effects",
+        "firm_patent_stock",
+        "inventor_team_size",
+        "ipc_3digit_fe",
+        "patent_filing_year_fe",
+        "science_ref_count"
+      ],
+      "extra": [
+        "v10",
+        "v11",
+        "v12",
+        "v13",
+        "v14",
+        "v8",
+        "v9"
+      ]
+    },
+    "model_match": 0.008163265306122448,
+    "model_match_detail": {
+      "family_match": 0.0,
+      "gold_family": "fixed_effects",
+      "pred_family": "regression analysis",
+      "specification_similarity": 0.02040816326530612,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.2,
+    "data_protocol_detail": {
+      "time_window_match": 0.5,
+      "gold_time_window": "1980-2009 (patent filing)",
+      "pred_time_window": "1980-2009",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 1.0,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": true
+    },
+    "overall_f1": 0.6216326530612246,
+    "status": "success"
+  }
+]

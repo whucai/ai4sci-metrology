@@ -1,0 +1,68 @@
+{
+  "paper": "petersen2024",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782297002,
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 141.6,
+    "usage": {
+      "completion": 11442,
+      "prompt": 17904
+    },
+    "finish": "stop",
+    "n_content_chars": 14802
+  },
+  "llm_response_chars": 14802,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 31.72,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [],
+    "stdout_chars": 843,
+    "stderr_chars": 613
+  },
+  "stdout": "============================================================\nREPRODUCING: Petersen et al. (2024) - Citation Inflation & CD Bias\n============================================================\n\n[1] LOADING DATA (STUB + SYNTHETIC PLACEHOLDER)...\n    Generated 40297 synthetic publications (1990-2009).\n\n[2] COMPUTING DISRUPTION INDEX & DECOMPOSITION...\n    Computed CD, CD_nok, Rk for 40297 papers.\n\n[3] RUNNING EMPIRICAL REGRESSION (Eq. 3)...\n    RESULT coef_ln_k (team size) = 0.0016\n    RESULT coef_ln_r (refs)      = -0.0308\n    RESULT coef_ln_c (citations) = -0.0019\n    RESULT R_squared             = 0.7119\n    PAPER_REPORTED coef_ln_r     = -0.025 ± 0.001\n    PAPER_REPORTED coef_ln_k     = +0.0039 ± 0.0008\n    PAPER_REPORTED R_squared     = 0.96\n\n[4] RUNNING GENERATIVE NETWORK SIMULATIONS...\n    Simulating Scenario 1_NoCI_NoRedirect...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 351, in <module>\n    main()\n  File \"/workspace/script.py\", line 319, in main\n    agg = run_generative_model(T=100, gn=0.033, gr=params['gr'], r0=params['r0'],\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 228, in run_generative_model\n    chosen = np.random.choice(len(nodes), p=weights)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 968, in numpy.random.mtrand.RandomState.choice\nValueError: 'a' and 'p' must have same size\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['microsoft academic', 'mag']"
+      },
+      "sample": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['disruption', '(ni', 'cd']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'fixed effect']"
+      },
+      "result": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['citation inflation', 'biased', 'negative', 'decline']"
+      }
+    },
+    "overall_ecrf": 0.667
+  },
+  "status": "DONE",
+  "t_end": 1782297175
+}

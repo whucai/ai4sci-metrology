@@ -94,7 +94,7 @@ def load_llm_from_env(model: str | None = None) -> BaseChatModel:
                 anthropic_api_key=api_key,
                 anthropic_api_url=base_url or None,
                 temperature=0.0,
-                max_tokens=4096,
+                max_tokens=int(os.environ.get("LLM_MAX_TOKENS", "8192")),
             )
         except ImportError:
             pass

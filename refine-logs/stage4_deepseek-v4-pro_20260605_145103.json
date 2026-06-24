@@ -1,0 +1,470 @@
+{
+  "timestamp": "2026-06-05T14:51:03.165110",
+  "model": {
+    "name": "DeepSeek-V4-Pro",
+    "provider": "anthropic",
+    "model": "deepseek-v4-pro"
+  },
+  "stage2_source": "refine-logs/manual_papers_benchmark_20260605_105345.json",
+  "n_tasks": 12,
+  "results": [
+    {
+      "methodology_paper": "nber_w18958",
+      "test_paper_id": 2166706824,
+      "level": "L2",
+      "metric_type": "team_size_effect",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0004,
+      "parsed": true,
+      "judgments": [
+        {
+          "claim_id": "T1",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduced metric (Team Size Effect) measures team size vs. disruption, not collaboration scale vs. individual scientific contribution recognition."
+        },
+        {
+          "claim_id": "T2",
+          "judgment": "SUPPORTED",
+          "confidence": "high",
+          "rationale": "The precisely replicated Team Size Effect metric (REI-c=0.00) directly quantifies the difference in disruptive work between small and large teams, confirming the claim."
+        },
+        {
+          "claim_id": "T3",
+          "judgment": "PARTIALLY SUPPORTED",
+          "confidence": "medium",
+          "rationale": "The successful replication on one dataset (SciSciNet) is consistent with robustness, but does not test the claim across multiple different datasets."
+        }
+      ],
+      "overall_assessment": {
+        "reproduction_quality": "good",
+        "main_finding_supported": true,
+        "summary": "The reproduction perfectly replicated the team size effect metric, strongly supporting the core finding that small teams produce more disruptive work. The claim about individual recognition tradeoffs was not tested, and the multi-dataset robustness claim received limited support from this single-dataset replication."
+      },
+      "judgment_counts": {
+        "NOT TESTABLE": 1,
+        "SUPPORTED": 1,
+        "PARTIALLY SUPPORTED": 1
+      }
+    },
+    {
+      "methodology_paper": "nber_w18958",
+      "test_paper_id": 2166706824,
+      "level": "L1",
+      "metric_type": "team_size_effect",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0004,
+      "parsed": true,
+      "judgments": [
+        {
+          "claim_id": "T1",
+          "judgment": "SUPPORTED",
+          "confidence": "medium",
+          "rationale": "The reproduced team size effect (positive difference of ~0.00599) is consistent with a tradeoff where collaboration scale reduces individual contribution recognition, and the numerically perfect reproduction confirms the original calculation."
+        },
+        {
+          "claim_id": "T2",
+          "judgment": "SUPPORTED",
+          "confidence": "medium",
+          "rationale": "The reproduced metric yields a positive value (small minus large team disruption) matching ground truth, directly indicating that small teams produce more individually disruptive work in this dataset."
+        },
+        {
+          "claim_id": "T3",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction only verifies the metric on the original SciSciNet dataset; it does not test replication across different datasets as required by the claim."
+        }
+      ],
+      "overall_assessment": {
+        "reproduction_quality": "good",
+        "main_finding_supported": true,
+        "summary": "The reproduction flawlessly recovers the team size effect metric with a relative error of 0.0038%, confirming the computational reliability of the original result. This supports the paper's core finding of a collaboration-disruption tradeoff but provides no evidence on cross-dataset robustness."
+      },
+      "judgment_counts": {
+        "SUPPORTED": 2,
+        "NOT TESTABLE": 1
+      }
+    },
+    {
+      "methodology_paper": "nber_w18958",
+      "test_paper_id": 2166706824,
+      "level": "L3",
+      "metric_type": "team_size_effect",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 100.0,
+      "parsed": true,
+      "judgments": [
+        {
+          "claim_id": "T1",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction attempt computed a single metric with a silent failure; it does not provide evidence for or against the broad claim of a tradeoff between collaboration scale and individual recognition."
+        },
+        {
+          "claim_id": "T2",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The evidence is a failed metric computation for one paper; it does not directly test whether small teams produce more disruptive work overall."
+        },
+        {
+          "claim_id": "T3",
+          "judgment": "NOT SUPPORTED",
+          "confidence": "high",
+          "rationale": "The reproduction of the team size effect metric failed catastrophically (REI-c 100) despite code running, directly contradicting the claim that the pattern is robust and replicable across datasets."
+        }
+      ],
+      "overall_assessment": {
+        "reproduction_quality": "poor",
+        "main_finding_supported": false,
+        "summary": "The reproduction attempt resulted in a silent failure with an enormous relative error, indicating the provided computational method cannot reproduce the paper's own team size effect result. This does not refute the tradeoff or team size findings themselves but strongly undermines the claim of robustness and replicability."
+      },
+      "judgment_counts": {
+        "NOT TESTABLE": 2,
+        "NOT SUPPORTED": 1
+      }
+    },
+    {
+      "methodology_paper": "ms_dynamic_network",
+      "test_paper_id": 2166706824,
+      "level": "L1",
+      "metric_type": "disruption",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0,
+      "parsed": true,
+      "judgments": [
+        {
+          "claim_id": "D1",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction only verifies the numerical computation of D from the given formula; it does not test whether the computed value meaningfully captures disruption versus consolidation."
+        },
+        {
+          "claim_id": "D2",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction computes D for a single paper and does not compare dynamic network measures to static citation counts or evaluate technological evolution, so the finding remains unexamined."
+        },
+        {
+          "claim_id": "D3",
+          "judgment": "PARTIALLY SUPPORTED",
+          "confidence": "medium",
+          "rationale": "The method was successfully applied to one citation network (the paper's own context) yielding a perfect match, but the claim of applicability to 'any' network requires broader testing not provided here."
+        }
+      ],
+      "overall_assessment": {
+        "reproduction_quality": "good",
+        "main_finding_supported": false,
+        "summary": "The reproduction computed the disruption index with negligible error, confirming the formula can be correctly implemented for a specific case. However, it did not test the index's interpretive meaning, its comparative performance, or its generality across diverse citation networks, leaving the paper's core theoretical and empirical claims unaddressed."
+      },
+      "judgment_counts": {
+        "NOT TESTABLE": 2,
+        "PARTIALLY SUPPORTED": 1
+      }
+    },
+    {
+      "methodology_paper": "ms_dynamic_network",
+      "test_paper_id": 2166706824,
+      "level": "L2",
+      "metric_type": "disruption",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0,
+      "parsed": true,
+      "judgments": [
+        {
+          "claim_id": "D1",
+          "judgment": "SUPPORTED",
+          "confidence": "high",
+          "rationale": "The computed D-index matches the ground truth with negligible error, confirming the formula is correctly implemented as defined."
+        },
+        {
+          "claim_id": "D2",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction only computes a single disruption index value; it provides no comparison with static citation counts or any evidence about capturing technological evolution."
+        },
+        {
+          "claim_id": "D3",
+          "judgment": "PARTIALLY SUPPORTED",
+          "confidence": "low",
+          "rationale": "The method was successfully applied to one paper's citation network, consistent with the claim, but a single case does not demonstrate applicability to any citation network."
+        }
+      ],
+      "overall_assessment": {
+        "reproduction_quality": "good",
+        "main_finding_supported": true,
+        "summary": "The reproduction verifies that the disruption index formula yields the correct numerical value for the test paper, supporting the method's definition (D1). However, it does not assess the measure's comparative performance (D2) and provides only minimal evidence for universal applicability (D3)."
+      },
+      "judgment_counts": {
+        "SUPPORTED": 1,
+        "NOT TESTABLE": 1,
+        "PARTIALLY SUPPORTED": 1
+      }
+    },
+    {
+      "methodology_paper": "arxiv_2308_02383",
+      "test_paper_id": 2166706824,
+      "level": "L1",
+      "metric_type": "disruption",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0,
+      "parsed": true,
+      "judgments": [
+        {
+          "claim_id": "R1",
+          "judgment": "SUPPORTED",
+          "confidence": "high",
+          "rationale": "The reproduction computed D using the given formula and matched the ground truth with a relative error of 0.0001%, directly confirming the formula's correctness."
+        },
+        {
+          "claim_id": "R2",
+          "judgment": "NOT TESTABLE",
+          "confidence": "low",
+          "rationale": "Only the D-index was computed; no variants like CD-index were reproduced, so the existence of multiple variants is not tested."
+        },
+        {
+          "claim_id": "R3",
+          "judgment": "NOT TESTABLE",
+          "confidence": "low",
+          "rationale": "A single computation of D for one paper provides no evidence about sensitivity to citation windows or field effects."
+        }
+      ],
+      "overall_assessment": {
+        "reproduction_quality": "good",
+        "main_finding_supported": true,
+        "summary": "The reproduction successfully verified the disruption index formula for one paper with near-perfect accuracy, supporting the claim that D is a computable metric. However, the test does not address the existence of index variants or the claimed limitations, as it focused narrowly on a single numerical result."
+      },
+      "judgment_counts": {
+        "SUPPORTED": 1,
+        "NOT TESTABLE": 2
+      }
+    },
+    {
+      "methodology_paper": "ms_dynamic_network",
+      "test_paper_id": 2166706824,
+      "level": "L3",
+      "metric_type": "disruption",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0,
+      "parsed": true,
+      "judgments": [
+        {
+          "claim_id": "D1",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction only verifies the numerical computation of D for the paper itself, not that D actually measures disruption or consolidation of knowledge."
+        },
+        {
+          "claim_id": "D2",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "No comparison with static citation counts or analysis of technological evolution was performed; the reproduction only computed the disruption index for a single paper."
+        },
+        {
+          "claim_id": "D3",
+          "judgment": "PARTIALLY SUPPORTED",
+          "confidence": "low",
+          "rationale": "The method was successfully applied to the paper's own citation network, showing implementability, but a single application does not demonstrate that it works for 'any' citation network."
+        }
+      ],
+      "overall_assessment": {
+        "reproduction_quality": "good",
+        "main_finding_supported": false,
+        "summary": "The reproduction perfectly matched the ground-truth disruption index for the paper, demonstrating correct implementation of the formula. However, it did not test the index's validity as a disruption measure, its comparative performance, or its generalizability, so the paper's key findings remain unevaluated."
+      },
+      "judgment_counts": {
+        "NOT TESTABLE": 2,
+        "PARTIALLY SUPPORTED": 1
+      }
+    },
+    {
+      "methodology_paper": "arxiv_2308_02383",
+      "test_paper_id": 2166706824,
+      "level": "L3",
+      "metric_type": "disruption",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0,
+      "parsed": true,
+      "judgments": [
+        {
+          "claim_id": "R1",
+          "judgment": "SUPPORTED",
+          "confidence": "high",
+          "rationale": "The reproduction computed D using the exact formula and matched the ground truth with negligible error, directly confirming the formula's implementation."
+        },
+        {
+          "claim_id": "R2",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The evidence only computes the D-index for a single paper and does not test any variants like CD-index."
+        },
+        {
+          "claim_id": "R3",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction does not examine sensitivity to citation windows or field effects; it merely computes one value."
+        }
+      ],
+      "overall_assessment": {
+        "reproduction_quality": "good",
+        "main_finding_supported": true,
+        "summary": "The reproduction successfully validated the D-index calculation for the paper itself, confirming claim R1. However, claims about variant indices (R2) and known limitations (R3) were not tested by this single computation. Overall, the core formula is reliably reproduced."
+      },
+      "judgment_counts": {
+        "SUPPORTED": 1,
+        "NOT TESTABLE": 2
+      }
+    },
+    {
+      "methodology_paper": "arxiv_2308_02383",
+      "test_paper_id": 2166706824,
+      "level": "L2",
+      "metric_type": "disruption",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0,
+      "parsed": true,
+      "judgments": [
+        {
+          "claim_id": "R1",
+          "judgment": "SUPPORTED",
+          "confidence": "high",
+          "rationale": "The exact numerical match between computed D-index and the SciSciNet ground truth confirms that the standard formula was correctly implemented and yields the expected disruption value."
+        },
+        {
+          "claim_id": "R2",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction only computed the D-index; no variants (CD-index etc.) were implemented or compared, so this claim about multiple variants is not addressed."
+        },
+        {
+          "claim_id": "R3",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction used a single paper and a fixed citation window with no field-level comparisons, thus cannot speak to limitations like sensitivity to citation window or field effects."
+        }
+      ],
+      "overall_assessment": {
+        "reproduction_quality": "good",
+        "main_finding_supported": false,
+        "summary": "The reproduction successfully validated the D-index calculation for the overview paper itself, demonstrating the formula can be correctly implemented. However, it only tests a single methodological claim (R1) and provides no evidence on the existence of variants or the known limitations discussed in the paper. The overall findings of the overview remain unsupported by this narrow computational check."
+      },
+      "judgment_counts": {
+        "SUPPORTED": 1,
+        "NOT TESTABLE": 2
+      }
+    },
+    {
+      "methodology_paper": "pnas_network_impact",
+      "test_paper_id": 2166706824,
+      "level": "L1",
+      "metric_type": "network_normalized_impact",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.6323,
+      "parsed": true,
+      "judgments": [
+        {
+          "claim_id": "P1",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction only computed the metric for one paper, without comparing its ability to identify breakthrough discoveries against raw citation counts."
+        },
+        {
+          "claim_id": "P2",
+          "judgment": "SUPPORTED",
+          "confidence": "medium",
+          "rationale": "The successful numerical computation of the network-impact metric (REI-c 0.63) confirms that the formula, which normalizes by co-cited papers' mean citations, can be implemented and yields the expected result."
+        },
+        {
+          "claim_id": "P3",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction involved a single paper and no cross-field comparison, so it cannot assess whether the method reveals hidden impact in fields with lower citation rates."
+        }
+      ],
+      "overall_assessment": {
+        "reproduction_quality": "good",
+        "main_finding_supported": false,
+        "summary": "The reproduction correctly computed the network-normalized impact for the methodology paper itself with low error, validating the metric's formula. However, it did not evaluate the measure's ability to identify breakthroughs or reveal hidden impact across fields, leaving the paper's central substantive claims untested."
+      },
+      "judgment_counts": {
+        "NOT TESTABLE": 2,
+        "SUPPORTED": 1
+      }
+    },
+    {
+      "methodology_paper": "nature_2023_disruption",
+      "test_paper_id": 2166706824,
+      "level": "L2",
+      "metric_type": "disruption_temporal",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 3.0006,
+      "parsed": true,
+      "judgments": [
+        {
+          "claim_id": "N1",
+          "judgment": "SUPPORTED",
+          "confidence": "high",
+          "rationale": "The reproduction computed a disruption temporal trend correlation of -0.6771, which directly confirms a negative trend (decline) over time and matches the paper's ground truth with negligible error."
+        },
+        {
+          "claim_id": "N2",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction only tested the raw temporal trend and did not include any controls for citation or authorship practices, so it cannot address this claim."
+        },
+        {
+          "claim_id": "N3",
+          "judgment": "SUPPORTED",
+          "confidence": "high",
+          "rationale": "The trend correlation produced exactly matches the SciSciNet ground truth for the CD-index temporal trend used in the paper, numerically confirming the declining trend for this variant."
+        }
+      ],
+      "overall_assessment": {
+        "reproduction_quality": "good",
+        "main_finding_supported": true,
+        "summary": "The reproduction successfully computed the disruption temporal trend with extremely high fidelity (relative error 0.0058%, REI-c 3.0). It provides strong evidence that the CD-index declines over time, directly supporting the paper's core finding of decreasing disruptiveness. However, it does not test claims about persistence after controlling for confounds."
+      },
+      "judgment_counts": {
+        "SUPPORTED": 2,
+        "NOT TESTABLE": 1
+      }
+    },
+    {
+      "methodology_paper": "nature_2023_disruption",
+      "test_paper_id": 2166706824,
+      "level": "L1",
+      "metric_type": "disruption_temporal",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 3.0006,
+      "parsed": true,
+      "judgments": [
+        {
+          "claim_id": "N1",
+          "judgment": "SUPPORTED",
+          "confidence": "high",
+          "rationale": "The reproduction successfully computed the disruption temporal trend with a correlation of -0.6771, matching the paper's ground truth with negligible error, confirming a declining trend."
+        },
+        {
+          "claim_id": "N2",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction only addresses the disruption temporal trend metric and does not involve any controls for citation or authorship practices."
+        },
+        {
+          "claim_id": "N3",
+          "judgment": "NOT TESTABLE",
+          "confidence": "high",
+          "rationale": "The reproduction does not mention or compute the CD-index trend, so it cannot confirm that claim."
+        }
+      ],
+      "overall_assessment": {
+        "reproduction_quality": "good",
+        "main_finding_supported": true,
+        "summary": "The reproduction successfully replicates the paper's disruption temporal trend metric with near-perfect accuracy, supporting the main finding that disruptiveness declines over time. However, it does not test the robustness claims regarding controls or the CD-index variant."
+      },
+      "judgment_counts": {
+        "SUPPORTED": 1,
+        "NOT TESTABLE": 2
+      }
+    }
+  ]
+}

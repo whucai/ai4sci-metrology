@@ -71,7 +71,7 @@ def execute_python(code: str, timeout: int = 30, workdir: str | None = None) -> 
         )
         elapsed = time.time() - start
         return {
-            "stdout": result.stdout[-5000:],
+            "stdout": result.stdout[-50000:],
             "stderr": result.stderr[-5000:],
             "exit_code": result.returncode,
             "elapsed": round(elapsed, 2),
@@ -112,7 +112,7 @@ def execute_r(code: str, timeout: int = 30, workdir: str | None = None) -> dict:
         )
         elapsed = time.time() - start
         return {
-            "stdout": result.stdout[-5000:],
+            "stdout": result.stdout[-50000:],
             "stderr": result.stderr[-5000:],
             "exit_code": result.returncode,
             "elapsed": round(elapsed, 2),
@@ -148,7 +148,7 @@ def execute_julia(code: str, timeout: int = 30, workdir: str | None = None) -> d
         )
         elapsed = time.time() - start
         return {
-            "stdout": result.stdout[-5000:],
+            "stdout": result.stdout[-50000:],
             "stderr": result.stderr[-5000:],
             "exit_code": result.returncode,
             "elapsed": round(elapsed, 2),

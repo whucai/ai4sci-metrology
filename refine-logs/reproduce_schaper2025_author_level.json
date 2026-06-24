@@ -1,0 +1,33 @@
+{
+  "paper": "Schaper, Arts, Veugelers (2025)",
+  "adaptation": "Author-level frontier status → paper-level impact",
+  "sample": 8467,
+  "frontier_author_pct": 0.08314633282154246,
+  "table2": {
+    "ppml_frontier": 0.7565834176490143,
+    "ppml_frontier_exp": 2.131,
+    "ols_log_frontier": 0.7490911296248063,
+    "col3_frontier_recent": 0.7336720199349057,
+    "col3_top_old": 7.052236979623075e-16,
+    "col3_recent_only": -1.0067115931106723
+  },
+  "table3": {
+    "hit_frontier": 0.0016702714956743953,
+    "logcit_frontier": 0.7490911296248063
+  },
+  "table5": {
+    "has_ref_frontier": 0.18624212004884244,
+    "log_refs_frontier": -0.11497266792176386,
+    "frontier_ref_frontier": 0.017557374860331914
+  },
+  "table6_ols_logcit": {
+    "cat_fa_fref": 9.624204529621847,
+    "cat_fa_nonfref_hasref": 8.802970173302075,
+    "cat_fa_noref": 6.9683541745927755,
+    "cat_nfa_fref": 9.251900068821637,
+    "cat_nfa_nonfref_hasref": 8.204164011139333,
+    "cat_nfa_noref": 7.017188560807061,
+    "cat_noa_fref": 1.5622179372752428e-15,
+    "cat_noa_nonfref_hasref": 1.1896483689402469e-17
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "analysis_a_claim_masking": {
+    "papers_with_claim_gold": 3,
+    "papers_without_claim_gold": 109,
+    "claim_gold_papers": [
+      "wu2019_disruption",
+      "ke2023_normalized_impact",
+      "arts2025_frontier_scientists"
+    ],
+    "migrations": {
+      "upgraded": 15,
+      "downgraded": 2,
+      "unchanged": 95,
+      "details": [
+        {
+          "paper": "2208_06431",
+          "from": "L0",
+          "to": "L1",
+          "reason": "mathematical methods paper, not scientometric schema"
+        },
+        {
+          "paper": "papers_and_patent_a110d105",
+          "from": "L1",
+          "to": "L2"
+        },
+        {
+          "paper": "2306_14364",
+          "from": "L1",
+          "to": "L2"
+        },
+        {
+          "paper": "2307_12796",
+          "from": "L1",
+          "to": "L2"
+        },
+        {
+          "paper": "2108_12837",
+          "from": "L1",
+          "to": "L2"
+        },
+        {
+          "paper": "2304_11079",
+          "from": "L1",
+          "to": "L2"
+        },
+        {
+          "paper": "2604_16387",
+          "from": "L1",
+          "to": "L2"
+        },
+        {
+          "paper": "2603_00399",
+          "from": "L1",
+          "to": "L2"
+        },
+        {
+          "paper": "2406_15311",
+          "from": "L1",
+          "to": "L2"
+        },
+        {
+          "paper": "2212_04972",
+          "from": "L1(m)",
+          "to": "L2"
+        },
+        {
+          "paper": "2501_17456",
+          "from": "L1(m)",
+          "to": "L2"
+        },
+        {
+          "paper": "2511_05051",
+          "from": "L1(m)",
+          "to": "L2"
+        },
+        {
+          "paper": "2606_04716",
+          "from": "L1(m)",
+          "to": "L2"
+        },
+        {
+          "paper": "natura_langua_proces_875c1ca4",
+          "from": "L2",
+          "to": "L3",
+          "note": "upgrade with gold_values.json present"
+        },
+        {
+          "paper": "1505_06454",
+          "from": "L2",
+          "to": "L3"
+        },
+        {
+          "paper": "what_do_we_1c79e049",
+          "from": "L3",
+          "to": "L2",
+          "note": "downgrade — review paper with inflated scores from empty claim"
+        },
+        {
+          "paper": "2604_24071",
+          "from": "L3(m)",
+          "to": "L2",
+          "note": "downgrade — peer review framework paper"
+        }
+      ]
+    },
+    "maturity_before": {
+      "L0": 1,
+      "L1": 8,
+      "L1(ds)": 1,
+      "L1(m)": 5,
+      "L2": 76,
+      "L3": 1,
+      "L3(m)": 20
+    },
+    "maturity_after": {
+      "L0": 0,
+      "L1": 1,
+      "L1(ds)": 1,
+      "L1(m)": 1,
+      "L2": 88,
+      "L3": 2,
+      "L3(m)": 19
+    }
+  },
+  "analysis_b_l0_diagnosis": {
+    "paper": "2208_06431",
+    "title": "Similarity matrix average for aggregating multiplex networks",
+    "venue": "arXiv",
+    "md_chars": 50588,
+    "prompt_chars": 10000,
+    "metric_type": "network_normalized_impact",
+    "root_cause": "Mathematical methods paper. Describes a similarity matrix averaging technique, not a scientometric experiment with dataset/sample/claims. The component schema doesn't fit theoretical methods papers. This is a schema misfit edge case, not a pipeline failure.",
+    "recommendation": "Tag as METHOD type; note as known schema-misfit category for theoretical papers."
+  },
+  "analysis_c_metric_families": {
+    "disruption": {
+      "n": 35,
+      "fidelity": 0.315,
+      "executability": 0.943,
+      "numerical_accuracy": 0.243,
+      "claim_consistency": 0.243,
+      "auditability": 0.971,
+      "claim_masked_fidelity": 0.377
+    },
+    "network_normalized_impact": {
+      "n": 10,
+      "fidelity": 0.377,
+      "executability": 0.9,
+      "numerical_accuracy": 0.25,
+      "claim_consistency": 0.275,
+      "auditability": 0.95,
+      "claim_masked_fidelity": 0.433
+    },
+    "team_size_effect": {
+      "n": 9,
+      "fidelity": 0.382,
+      "executability": 0.978,
+      "numerical_accuracy": 0.25,
+      "claim_consistency": 0.278,
+      "auditability": 0.989,
+      "claim_masked_fidelity": 0.436
+    },
+    "career_mobility": {
+      "n": 8,
+      "fidelity": 0.333,
+      "executability": 0.975,
+      "numerical_accuracy": 0.25,
+      "claim_consistency": 0.25,
+      "auditability": 0.988,
+      "claim_masked_fidelity": 0.4
+    },
+    "frontier_author_impact": {
+      "n": 7,
+      "fidelity": 0.411,
+      "executability": 1.0,
+      "numerical_accuracy": 0.25,
+      "claim_consistency": 0.357,
+      "auditability": 1.0,
+      "claim_masked_fidelity": 0.465
+    },
+    "citation_inflation": {
+      "n": 6,
+      "fidelity": 0.313,
+      "executability": 1.0,
+      "numerical_accuracy": 0.25,
+      "claim_consistency": 0.25,
+      "auditability": 1.0,
+      "claim_masked_fidelity": 0.376
+    },
+    "sleeping_beauty": {
+      "n": 6,
+      "fidelity": 0.347,
+      "executability": 1.0,
+      "numerical_accuracy": 0.25,
+      "claim_consistency": 0.25,
+      "auditability": 1.0,
+      "claim_masked_fidelity": 0.417
+    },
+    "other_small_families": "10 families with n≤5, similar pattern: fidelity 0.30-0.35, exec/audit ~1.0"
+  }
+}

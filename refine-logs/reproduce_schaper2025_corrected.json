@@ -1,0 +1,39 @@
+{
+  "paper": "Schaper, Arts, Veugelers (2025) — Corrected Reproduction",
+  "corrections": [
+    "Look-ahead bias: frontier pubs >=1yr before focal paper year",
+    "Table 6 colinearity fixed: NFA_NOREF = reference category",
+    "Wald tests for all key H1/H2/H3 comparisons",
+    "Journal-decade FE for within-field comparison",
+    "Distinguished no-refs from has-refs in all models"
+  ],
+  "sample": {
+    "n_total": 19781,
+    "n_frontier_author": 62,
+    "n_non_frontier_author": 19719,
+    "n_no_author_pub": 0,
+    "frontier_ref_rate": 0.0015166068449522269
+  },
+  "h1_ols": {
+    "frontier_author_coef": 0.14568491704140277,
+    "non_frontier_coef": 0.0,
+    "h1_consistent": "CONSISTENT (FA > NFA)"
+  },
+  "h2_frontier_ref": {
+    "fa_coef": 0.13956347744554015,
+    "nfa_coef": null,
+    "h2_consistent": "CHECK"
+  },
+  "h3_critical_test": {
+    "fa_noref_vs_nfa_noref_coef": 0.027372468405128664,
+    "fa_noref_se": 0.2858886091848299,
+    "wald_p_value": 0.9237229237506472,
+    "interpretation": "CONSISTENT (both weak/ns)"
+  },
+  "table6_wald_tests": {
+    "FA_FREF_vs_NFA_FREF_p": 0.44573480652735986,
+    "FA_NOREF_vs_NFA_NOREF_p": 0.9237229237506472,
+    "FA_FREF_vs_FA_NOREF_p": 0.00014682927809550606,
+    "NFA_FREF_vs_NFA_NOREF_p": 0.0
+  }
+}

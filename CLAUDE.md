@@ -83,7 +83,7 @@ Adapting SciSciGPT's multi-agent LangGraph architecture to local infrastructure.
 3. **Result comparison fidelity**: Cherry-picked results, statistical test differences. Solution: 4-level comparison framework (exact numeric → statistical equivalence → chart comparison → conclusion consistency).
 <!-- ARIS:BEGIN -->
 ## ARIS Skill Scope
-ARIS skills installed in this project: 79 entries.
+ARIS skills installed in this project: 80 entries.
 Manifest: `.aris/installed-skills.txt` (lists every skill ARIS installed and its upstream target).
 For ARIS workflows, prefer the project-local skills under `.claude/skills/` over global skills.
 Do not modify or delete files inside any skill that is a symlink (symlinks point into `/home/caile/下载/Auto-claude-code-research-in-sleep`).

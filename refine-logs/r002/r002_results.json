@@ -1,0 +1,334 @@
+{
+  "run_id": "R002",
+  "paper": "petersen2024_disruption_index",
+  "task_type": "strict",
+  "model": "deepseek-v4-pro",
+  "gold": {
+    "data_source": {
+      "data_source": "SciSciNet (cssi/SciSciGPT-SciSciNet), shards 0-9"
+    },
+    "sample": {
+      "filter_rules": [
+        "year: 2011-2015",
+        "reference_count: 10-200",
+        "author_count: 1-25",
+        "citation_count_5y: 1-1000"
+      ],
+      "N": 102550
+    },
+    "indicator": {
+      "formula": "|CDp,5| = |disruption_score| from SciSciNet, pre-computed CD index",
+      "indicator_stats": {
+        "mean": 0.002316,
+        "std": 0.005855,
+        "n": 102550
+      }
+    },
+    "model": {
+      "spec_elements": [
+        "OLS regression",
+        "dependent: |CDp,5|",
+        "independent: ln(kp), ln(rp), ln(cp5)",
+        "year fixed effects",
+        "statsmodels OLS with add_constant"
+      ],
+      "coefficients": {
+        "ln_kp": -0.000238,
+        "ln_rp": -0.002322,
+        "ln_cp5": 0.001669
+      },
+      "_full_coefficients": {
+        "ln_kp": {
+          "coef": -0.000238,
+          "std_err": 2.7e-05,
+          "p_value": 0.0
+        },
+        "ln_rp": {
+          "coef": -0.002322,
+          "std_err": 2.9e-05,
+          "p_value": 0.0
+        },
+        "ln_cp5": {
+          "coef": 0.001669,
+          "std_err": 1.6e-05,
+          "p_value": 0.0
+        }
+      }
+    },
+    "result_table": {
+      "target_tables": [
+        "OLS regression summary"
+      ],
+      "target_values": [
+        {
+          "metric": "R_squared",
+          "value": 0.120403
+        },
+        {
+          "metric": "N",
+          "value": 102550
+        }
+      ],
+      "expected_direction": "ln_rp negative, ln_cp5 positive"
+    },
+    "claim": {
+      "conclusion_claims": [
+        "CD decreases as reference list length (rp) increases (br negative)",
+        "Citation inflation biases the disruption index downward over time"
+      ]
+    }
+  },
+  "agent": {
+    "data_source": {
+      "data_source": "SciSciNet (loaded via sciscinet_connector.load_papers_sample)",
+      "code_executed": {
+        "data_source": true
+      },
+      "traceable": {
+        "data_source": true
+      },
+      "hard_coded": {
+        "data_source": false
+      },
+      "hallucinated": {
+        "data_source": false
+      }
+    },
+    "sample": {
+      "filter_rules": [
+        "year: 2011-2015",
+        "reference_count: 10-200",
+        "author_count: 1-25",
+        "citation_count_5y: 1-1000"
+      ],
+      "N": 102550,
+      "code_executed": {
+        "sample": true
+      },
+      "traceable": {
+        "sample": true
+      },
+      "hard_coded": {
+        "sample": false
+      },
+      "hallucinated": {
+        "sample": false
+      }
+    },
+    "indicator": {
+      "formula": "|CD| = abs(disruption_score)",
+      "indicator_stats": {
+        "mean": 0.002316,
+        "std": 0.005855
+      },
+      "code_executed": {
+        "indicator": true
+      },
+      "traceable": {
+        "indicator": true
+      },
+      "hard_coded": {
+        "indicator": false
+      },
+      "hallucinated": {
+        "indicator": false
+      }
+    },
+    "model": {
+      "spec_elements": [
+        "OLS regression",
+        "dependent: |CDp,5|",
+        "independent: ln(kp), ln(rp), ln(cp5)",
+        "year fixed effects",
+        "statsmodels OLS with add_constant"
+      ],
+      "coefficients": {
+        "ln_kp": -0.000238,
+        "ln_rp": -0.002322,
+        "ln_cp5": 0.001669
+      },
+      "_full_coefficients": {
+        "ln_kp": {
+          "coef": -0.000238,
+          "p_value": 0.0,
+          "std_err": null
+        },
+        "ln_rp": {
+          "coef": -0.002322,
+          "p_value": 0.0,
+          "std_err": null
+        },
+        "ln_cp5": {
+          "coef": 0.001669,
+          "p_value": 0.0,
+          "std_err": null
+        }
+      },
+      "code_executed": {
+        "model": true
+      },
+      "traceable": {
+        "model": true
+      },
+      "hard_coded": {
+        "model": false
+      },
+      "hallucinated": {
+        "model": false
+      }
+    },
+    "result_table": {
+      "produced_tables": [
+        "OLS regression summary"
+      ],
+      "reproduced_values": [
+        {
+          "metric": "R_squared",
+          "value": 0.120403
+        },
+        {
+          "metric": "N",
+          "value": 102550
+        }
+      ],
+      "observed_direction": "ln_rp negative, ln_cp5 positive",
+      "code_executed": {
+        "result_table": true
+      },
+      "traceable": {
+        "result_table": true
+      },
+      "hard_coded": {
+        "result_table": false
+      },
+      "hallucinated": {
+        "result_table": false
+      }
+    },
+    "claim": {
+      "conclusion_claims": [
+        "CD decreases as reference list length (rp) increases (br negative)",
+        "Citation inflation biases the disruption index downward over time"
+      ]
+    }
+  },
+  "diff_table": [
+    {
+      "component": "sample",
+      "metric": "N",
+      "gold": 102550,
+      "agent": 102550,
+      "absolute_error": 0,
+      "match": true
+    },
+    {
+      "component": "result_table",
+      "metric": "R_squared",
+      "gold": 0.120403,
+      "agent": 0.120403,
+      "absolute_error": 0.0,
+      "match": true
+    },
+    {
+      "component": "model",
+      "metric": "coef_ln_kp",
+      "gold": -0.000238,
+      "agent": -0.000238,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "match": true
+    },
+    {
+      "component": "model",
+      "metric": "sig_ln_kp",
+      "gold": "p=0.0000, sig=True",
+      "agent": "p=0.0000, sig=True",
+      "match": true
+    },
+    {
+      "component": "model",
+      "metric": "coef_ln_rp",
+      "gold": -0.002322,
+      "agent": -0.002322,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "match": true
+    },
+    {
+      "component": "model",
+      "metric": "sig_ln_rp",
+      "gold": "p=0.0000, sig=True",
+      "agent": "p=0.0000, sig=True",
+      "match": true
+    },
+    {
+      "component": "model",
+      "metric": "coef_ln_cp5",
+      "gold": 0.001669,
+      "agent": 0.001669,
+      "absolute_error": 0.0,
+      "relative_error": 0.0,
+      "match": true
+    },
+    {
+      "component": "model",
+      "metric": "sig_ln_cp5",
+      "gold": "p=0.0000, sig=True",
+      "agent": "p=0.0000, sig=True",
+      "match": true
+    }
+  ],
+  "d3_match_rate": "8/8",
+  "profile": {
+    "maturity": 3,
+    "task_type": "strict",
+    "d3_applicable": true,
+    "matrix": {
+      "data_source": {
+        "fidelity": 0.25,
+        "executability": 1.0,
+        "auditability": 1.0
+      },
+      "sample": {
+        "fidelity": 1.0,
+        "executability": 1.0,
+        "numerical_accuracy": 1.0,
+        "auditability": 1.0
+      },
+      "indicator": {
+        "fidelity": 0.175,
+        "executability": 1.0,
+        "numerical_accuracy": 1.0,
+        "auditability": 1.0
+      },
+      "model": {
+        "fidelity": 1.0,
+        "executability": 1.0,
+        "numerical_accuracy": 1.0,
+        "auditability": 1.0
+      },
+      "result_table": {
+        "fidelity": 1.0,
+        "executability": 1.0,
+        "numerical_accuracy": 1.0,
+        "claim_consistency": 1.0,
+        "auditability": 1.0
+      },
+      "claim": {
+        "fidelity": 1.0,
+        "claim_consistency": 1.0
+      }
+    },
+    "spurious_flags": []
+  },
+  "parsed_metrics": {
+    "sample_N": 102550,
+    "r_squared": 0.120403,
+    "coef_ln_kp": -0.000238,
+    "coef_ln_rp": -0.002322,
+    "coef_ln_cp5": 0.001669,
+    "p_ln_kp": 0.0,
+    "p_ln_rp": 0.0,
+    "p_ln_cp5": 0.0
+  }
+}

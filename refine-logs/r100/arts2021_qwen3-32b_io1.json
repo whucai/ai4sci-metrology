@@ -1,0 +1,71 @@
+{
+  "paper": "arts2021",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782297002,
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 125.1,
+    "usage": {
+      "completion": 10123,
+      "prompt": 17234
+    },
+    "finish": "stop",
+    "n_content_chars": 19872
+  },
+  "llm_response_chars": 19872,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.93,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 23,
+    "stderr_chars": 898
+  },
+  "stdout": "LOADING DATA (STUB)...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 74, in <module>\n    df = generate_synthetic_patent_data(n=200)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 59, in generate_synthetic_patent_data\n    back_cites = [f\"US{np.random.randint(1000000, 1000000+i)}\" for _ in range(np.random.randint(0, 15))]\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 59, in <listcomp>\n    back_cites = [f\"US{np.random.randint(1000000, 1000000+i)}\" for _ in range(np.random.randint(0, 15))]\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 782, in numpy.random.mtrand.RandomState.randint\n  File \"numpy/random/_bounded_integers.pyx\", line 1334, in numpy.random._bounded_integers._rand_int64\nValueError: low >= high\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['uspto', 'patent']"
+      },
+      "sample": {
+        "score": 0.5,
+        "rationale": "partial: ['preprocess']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['cosine', 'tf']"
+      },
+      "model": {
+        "score": 0.5,
+        "rationale": "partial: ['descriptive']"
+      },
+      "result": {
+        "score": 0.0,
+        "rationale": "no gold signals for this component"
+      },
+      "claim": {
+        "score": 0.5,
+        "rationale": "partial: ['reuse']"
+      }
+    },
+    "overall_ecrf": 0.583
+  },
+  "status": "DONE",
+  "t_end": 1782297128
+}

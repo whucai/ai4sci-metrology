@@ -1,0 +1,206 @@
+{
+  "run_id": "20260606_170015",
+  "timestamp": "2026-06-06T17:02:38.915576",
+  "description": "Stages=[2] condition=oracle level=L2",
+  "models": [
+    "mock"
+  ],
+  "papers": [
+    "ms_dynamic_network",
+    "nber_w18958",
+    "arxiv_2306_01949",
+    "arxiv_2308_02383",
+    "nature_2023_disruption",
+    "pnas_network_impact",
+    "rp_2021_ccby",
+    "rp_2025_sam_arts"
+  ],
+  "stages": [
+    2
+  ],
+  "conditions": [
+    "oracle"
+  ],
+  "n_stage2_results": 8,
+  "n_stage4_judgments": 0,
+  "summary": {
+    "stage2_total": 8,
+    "stage2_success": 0,
+    "stage2_failed": 8,
+    "stage2_success_rate": 0.0,
+    "silent_failures": 0,
+    "silent_failure_rate": 0.0,
+    "stage4_total": 0
+  },
+  "stage2_results": [
+    {
+      "paper_id": "2166706824",
+      "methodology_paper": "ms_dynamic_network",
+      "level": "L2",
+      "metric_type": "disruption",
+      "status": "FAILED",
+      "rei": 0.1,
+      "rei_c": 1.0,
+      "computed_primary": null,
+      "ground_truth_primary": 0.366197,
+      "is_silent_failure": false,
+      "fix_count": 4,
+      "error_types": [
+        "syntax",
+        "syntax",
+        "syntax",
+        "syntax"
+      ],
+      "input_source": "oracle",
+      "paper_chars": 0
+    },
+    {
+      "paper_id": "2166706824",
+      "methodology_paper": "nber_w18958",
+      "level": "L2",
+      "metric_type": "team_size_effect",
+      "status": "FAILED",
+      "rei": 0.1,
+      "rei_c": 1.0,
+      "computed_primary": null,
+      "ground_truth_primary": 0.005987,
+      "is_silent_failure": false,
+      "fix_count": 4,
+      "error_types": [
+        "syntax",
+        "syntax",
+        "syntax",
+        "syntax"
+      ],
+      "input_source": "oracle",
+      "paper_chars": 0
+    },
+    {
+      "paper_id": "2166706824",
+      "methodology_paper": "arxiv_2306_01949",
+      "level": "L2",
+      "metric_type": "citation_inflation",
+      "status": "FAILED",
+      "rei": 0.1,
+      "rei_c": 1.0,
+      "computed_primary": null,
+      "ground_truth_primary": -0.090608,
+      "is_silent_failure": false,
+      "fix_count": 4,
+      "error_types": [
+        "syntax",
+        "syntax",
+        "syntax",
+        "syntax"
+      ],
+      "input_source": "oracle",
+      "paper_chars": 0
+    },
+    {
+      "paper_id": "2166706824",
+      "methodology_paper": "arxiv_2308_02383",
+      "level": "L2",
+      "metric_type": "disruption",
+      "status": "FAILED",
+      "rei": 0.1,
+      "rei_c": 1.0,
+      "computed_primary": null,
+      "ground_truth_primary": 0.366197,
+      "is_silent_failure": false,
+      "fix_count": 4,
+      "error_types": [
+        "syntax",
+        "syntax",
+        "syntax",
+        "syntax"
+      ],
+      "input_source": "oracle",
+      "paper_chars": 0
+    },
+    {
+      "paper_id": "2166706824",
+      "methodology_paper": "nature_2023_disruption",
+      "level": "L2",
+      "metric_type": "disruption_temporal",
+      "status": "FAILED",
+      "rei": 0.1,
+      "rei_c": 1.0,
+      "computed_primary": null,
+      "ground_truth_primary": -0.677139,
+      "is_silent_failure": false,
+      "fix_count": 4,
+      "error_types": [
+        "syntax",
+        "syntax",
+        "syntax",
+        "syntax"
+      ],
+      "input_source": "oracle",
+      "paper_chars": 0
+    },
+    {
+      "paper_id": "2166706824",
+      "methodology_paper": "pnas_network_impact",
+      "level": "L2",
+      "metric_type": "network_normalized_impact",
+      "status": "FAILED",
+      "rei": 0.1,
+      "rei_c": 1.0,
+      "computed_primary": null,
+      "ground_truth_primary": 34.1037,
+      "is_silent_failure": false,
+      "fix_count": 4,
+      "error_types": [
+        "syntax",
+        "syntax",
+        "syntax",
+        "syntax"
+      ],
+      "input_source": "oracle",
+      "paper_chars": 0
+    },
+    {
+      "paper_id": "2166706824",
+      "methodology_paper": "rp_2021_ccby",
+      "level": "L2",
+      "metric_type": "disruption",
+      "status": "FAILED",
+      "rei": 0.1,
+      "rei_c": 1.0,
+      "computed_primary": null,
+      "ground_truth_primary": 0.366197,
+      "is_silent_failure": false,
+      "fix_count": 4,
+      "error_types": [
+        "syntax",
+        "syntax",
+        "syntax",
+        "syntax"
+      ],
+      "input_source": "oracle",
+      "paper_chars": 0
+    },
+    {
+      "paper_id": "2166706824",
+      "methodology_paper": "rp_2025_sam_arts",
+      "level": "L2",
+      "metric_type": "frontier_author_impact",
+      "status": "FAILED",
+      "rei": 0.1,
+      "rei_c": 1.0,
+      "computed_primary": null,
+      "ground_truth_primary": 93.85,
+      "is_silent_failure": false,
+      "fix_count": 4,
+      "error_types": [
+        "syntax",
+        "syntax",
+        "syntax",
+        "syntax"
+      ],
+      "input_source": "oracle",
+      "paper_chars": 0
+    }
+  ],
+  "stage4_judgments": []
+}

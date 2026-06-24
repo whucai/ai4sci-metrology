@@ -1,0 +1,50 @@
+{
+  "wu2019_disruption": {
+    "blind": {
+      "status": "error",
+      "output": {},
+      "raw": "",
+      "error": "Connection error.",
+      "attempt": 1
+    },
+    "obfuscated": {
+      "status": "error",
+      "output": {},
+      "raw": "",
+      "error": "Connection error.",
+      "attempt": 1
+    }
+  },
+  "ke2023_normalized_impact": {
+    "blind": {
+      "status": "error",
+      "output": {},
+      "raw": "",
+      "error": "Connection error.",
+      "attempt": 1
+    },
+    "obfuscated": {
+      "status": "error",
+      "output": {},
+      "raw": "",
+      "error": "Connection error.",
+      "attempt": 1
+    }
+  },
+  "arts2025_frontier_scientists": {
+    "blind": {
+      "status": "error",
+      "output": {},
+      "raw": "",
+      "error": "Connection error.",
+      "attempt": 1
+    },
+    "obfuscated": {
+      "status": "error",
+      "output": {},
+      "raw": "",
+      "error": "Connection error.",
+      "attempt": 1
+    }
+  }
+}

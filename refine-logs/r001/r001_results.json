@@ -1,0 +1,324 @@
+{
+  "run_id": "R001",
+  "paper": "wu2019_disruption",
+  "task_type": "data_sub",
+  "model": "deepseek-v4-pro (hybrid: LLM+manual fix)",
+  "timestamp": "2026-06-12T14:12:41.579810",
+  "stages": {
+    "code_generation": {
+      "elapsed": 42.9,
+      "code_chars": 6000
+    },
+    "execution": {
+      "exit_code": 0,
+      "elapsed": 12.0,
+      "has_traceback": false
+    }
+  },
+  "gold": {
+    "data_source": {
+      "data_source": "Web of Science, USPTO, GitHub",
+      "data_description": "Citation network of ~42 million papers, ~6 million patents, ~16 million software products. Each work linked to its references via citation graph.",
+      "filter_rules": [
+        "Web of Science, USPTO, GitHub"
+      ]
+    },
+    "sample": {
+      "data_source": "Web of Science, USPTO, GitHub",
+      "N": 42000000,
+      "time_window": "1954-2014",
+      "filter_rules": [
+        "article type",
+        "has references"
+      ]
+    },
+    "indicator": {
+      "formula": "D = (n_i - n_j) / (n_i + n_j + n_k) where n_i = papers citing only the focal work, n_j = papers citing both focal work and its references, n_k = papers citing only references",
+      "indicator_stats": {
+        "mean": -0.02,
+        "std": 0.15
+      }
+    },
+    "model": {
+      "spec_elements": [
+        "descriptive",
+        "OLS",
+        "team_size_deciles",
+        "mean_D_by_group",
+        "year_fixed_effects"
+      ],
+      "coefficients": {
+        "team_size_coef": -0.03,
+        "year_1954": 0.01
+      }
+    },
+    "result_table": {
+      "target_tables": [
+        "Table 1: Mean D-index by team size decile"
+      ],
+      "target_values": [
+        {
+          "label": "small_teams_D",
+          "value": 0.04
+        },
+        {
+          "label": "large_teams_D",
+          "value": -0.02
+        }
+      ],
+      "expected_direction": "negative"
+    },
+    "claim": {
+      "conclusion_claims": [
+        "Large teams develop existing science and technology",
+        "Small teams disrupt science and technology",
+        "Both team types are essential"
+      ]
+    }
+  },
+  "agent": {
+    "data_source": {
+      "data_source": "SciSciNet (Web of Science subset)",
+      "code_executed": {
+        "data_source": true
+      },
+      "traceable": {
+        "data_source": true
+      },
+      "hard_coded": {
+        "data_source": false
+      },
+      "hallucinated": {
+        "data_source": false
+      }
+    },
+    "sample": {
+      "N": 20000,
+      "filter_rules": [
+        "'year in [1954",
+        "2014"
+      ],
+      "code_executed": {
+        "sample": true
+      },
+      "traceable": {
+        "sample": true
+      },
+      "hard_coded": {
+        "sample": false
+      },
+      "hallucinated": {
+        "sample": false
+      }
+    },
+    "indicator": {
+      "formula": "D = (n_i - n_j) / (n_i + n_j + n_k)",
+      "indicator_stats": {
+        "mean": 0.004866,
+        "std": 0.060482
+      },
+      "code_executed": {
+        "indicator": true
+      },
+      "traceable": {
+        "indicator": true
+      },
+      "hard_coded": {
+        "indicator": false
+      },
+      "hallucinated": {
+        "indicator": false
+      }
+    },
+    "model": {
+      "spec_elements": [
+        "OLS",
+        "team_size",
+        "year_fixed_effects"
+      ],
+      "coefficients": {
+        "team_size_coef": -0.00929,
+        "year_1954": 0.0
+      },
+      "code_executed": {
+        "model": true
+      },
+      "traceable": {
+        "model": true
+      },
+      "hard_coded": {
+        "model": false
+      },
+      "hallucinated": {
+        "model": false
+      }
+    },
+    "result_table": {
+      "produced_tables": [
+        "Regression table"
+      ],
+      "reproduced_values": [
+        {
+          "label": "team_size_coef",
+          "value": -0.00929
+        }
+      ],
+      "observed_direction": "negative",
+      "code_executed": {
+        "result_table": true
+      },
+      "traceable": {
+        "result_table": true
+      },
+      "hard_coded": {
+        "result_table": false
+      },
+      "hallucinated": {
+        "result_table": false
+      }
+    },
+    "claim": {
+      "conclusion_claims": [
+        "Larger teams are associated with lower disruptiveness (negative coefficient, statistically significant).",
+        "Small teams tend to produce more disruptive work.",
+        "Disruption scores vary widely within team-size groups, supporting the paper's claim that both team types are essential.",
+        "Outputs saved to reproduction_outputs/"
+      ]
+    }
+  },
+  "diff_table": [
+    {
+      "component": "sample",
+      "metric": "N",
+      "gold": 42000000,
+      "agent": 20000,
+      "relative_error": 0.9995,
+      "note": "Agent uses SciSciNet sample (expected — full WoS unavailable)"
+    },
+    {
+      "component": "indicator",
+      "metric": "D_mean",
+      "gold": -0.02,
+      "agent": 0.004866,
+      "relative_error": 1.2433
+    },
+    {
+      "component": "indicator",
+      "metric": "D_std",
+      "gold": 0.15,
+      "agent": 0.060482,
+      "relative_error": 0.5968
+    },
+    {
+      "component": "model",
+      "metric": "team_size_coef",
+      "gold": -0.03,
+      "agent": -0.00929,
+      "relative_error": 0.6903
+    },
+    {
+      "component": "result_table",
+      "metric": "direction",
+      "gold": "negative",
+      "agent": "negative",
+      "match": true
+    }
+  ],
+  "profile": {
+    "maturity": 1,
+    "task_type": "data_sub",
+    "matrix": {
+      "data_source": {
+        "fidelity": 0.4,
+        "executability": 1.0,
+        "auditability": 1.0
+      },
+      "sample": {
+        "fidelity": 0,
+        "executability": 1.0,
+        "numerical_accuracy": 0.0004761904761905189,
+        "auditability": 1.0
+      },
+      "indicator": {
+        "fidelity": 0.6083333333333333,
+        "executability": 1.0,
+        "numerical_accuracy": 0.0,
+        "auditability": 1.0
+      },
+      "model": {
+        "fidelity": 0.4,
+        "executability": 1.0,
+        "numerical_accuracy": 0.15483333333333338,
+        "auditability": 1.0
+      },
+      "result_table": {
+        "fidelity": 1.0,
+        "executability": 1.0,
+        "numerical_accuracy": 0.0,
+        "claim_consistency": 1.0,
+        "auditability": 1.0
+      },
+      "claim": {
+        "fidelity": 0.3333333333333333,
+        "claim_consistency": 0.3333333333333333
+      }
+    },
+    "spurious_flags": []
+  },
+  "audit": {
+    "A1_code_executability": {
+      "executable": true,
+      "exit_code": 0,
+      "has_traceback": false,
+      "has_import_error": false,
+      "has_timeout": false,
+      "elapsed": 12.0
+    },
+    "A2_intermediate_files": {
+      "sandbox_dir": "",
+      "code_saved": true,
+      "code_length": 6000,
+      "stdout_length": 8951
+    },
+    "A3_sample_traceability": {
+      "sample_size_reported": 20000,
+      "filters_parsed": true,
+      "data_source_identified": true
+    },
+    "A4_indicator_distribution": {
+      "D_mean": 0.004866,
+      "D_std": 0.060482,
+      "D_range_plausible": true
+    },
+    "A5_table_generation": {
+      "regression_table_in_stdout": true,
+      "diff_table_in_stdout": true
+    },
+    "A6_error_recovery": {
+      "errors_encountered": false,
+      "error_type": "none",
+      "stderr_snippet": ""
+    }
+  },
+  "parsed_metrics": {
+    "papers_loaded": 111927,
+    "citations_loaded": 78417834,
+    "sample_size": 20000,
+    "time_window": "1954-2014",
+    "filters_applied": "'year in [1954,2014",
+    "D_mean": 0.004866,
+    "D_std": 0.060482,
+    "D_min": -1.0,
+    "D_max": 0.971429,
+    "team_size_coefficient": -0.00929,
+    "team_size_pvalue": 6.250091e-22,
+    "r_squared": 0.019939
+  },
+  "parsed_claims": [
+    "Larger teams are associated with lower disruptiveness (negative coefficient, statistically significant).",
+    "Small teams tend to produce more disruptive work.",
+    "Disruption scores vary widely within team-size groups, supporting the paper's claim that both team types are essential.",
+    "Outputs saved to reproduction_outputs/"
+  ],
+  "note": "Hybrid: LLM generated structure + manual fix (nullable int types for patsy regression)"
+}

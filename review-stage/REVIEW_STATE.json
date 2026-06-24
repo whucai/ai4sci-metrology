@@ -1,1 +1,78 @@
-{"round": 4, "threadId": "019e8d75-f791-75c3-a914-08dbf2898ba9", "status": "completed", "difficulty": "medium", "last_score": 5.0, "last_verdict": "not ready", "pending_experiments": [], "bugs_fixed": ["error_detection_false_positive", "parser_too_strict", "l2_l3_output_format_unspecified", "l3_provenance_fake_fulltext", "l2_formula_leak"], "timestamp": "2026-06-03T21:00:00"}
+{
+  "round": 4,
+  "threadId": "019eba74-bff8-78f2-a947-6c16f4617179",
+  "status": "post_review_improvements",
+  "difficulty": "medium",
+  "last_score": 4.0,
+  "last_verdict": "not ready (top-venue); borderline for workshop",
+  "bugs_fixed": [
+    "significance_match_zero",
+    "l3_claim_support_zero",
+    "l3_direction_unknown",
+    "task1_model_match_zero",
+    "l1_single_direction",
+    "l1_structural_completeness_gameable",
+    "l3_blanket_abstention",
+    "limitation_awareness_broken",
+    "to_task2_gold_missing_variables",
+    "l3_gold_var_names_undefined",
+    "l1_template_indistinguishable",
+    "l3_template_indistinguishable",
+    "l2_claim_count_bias_documented"
+  ],
+  "post_review_improvements": {
+    "registry_expansion": {
+      "papers": "115 → 211",
+      "new_extractions": 96,
+      "method": "Qwen3-32B vLLM extraction, path-based unique keys",
+      "all_metadata_covered": true
+    },
+    "l1_l3_discrimination_fix": {
+      "l1_formula": "0.30×direction + 0.50×specificity + 0.20×code, ×0.75 penalty if specificity<0.05",
+      "l3_formula": "×0.65 specificity penalty (was ×0.80), ×0.60 uncertainty penalty for generic claims",
+      "result": "All levels P>0.999 Qwen3 vs Template",
+      "regression_tests": 42
+    },
+    "cross_run_variability": {
+      "runs": 3,
+      "l1_sigma": 0.0031,
+      "l2_sigma": 0.0003,
+      "l3_sigma": 0.0003,
+      "identical_scores_pct": 92.4,
+      "mean_max_diff": 0.0101
+    },
+    "multi_model_comparison": {
+      "models": ["Qwen3-32B", "DeepSeek-chat", "Template"],
+      "papers": 50,
+      "qwen3_overall": 0.678,
+      "deepseek_overall": 0.639,
+      "template_overall": 0.548,
+      "qwen3_beats_deepseek": "all levels, P>0.999"
+    },
+    "l2_construct_validity": {
+      "extraction_floor": "85% of Qwen3 score achieved by template",
+      "reasoning_premium": "+0.139 (15% of Qwen3 score)",
+      "claim_count_correlation": "r=+0.32 (moderate bias)",
+      "verdict": "L2 validly measures extraction; reasoning signal is real but modest"
+    }
+  },
+  "final_results_task2_211": {
+    "L1_qwen3": 0.598,
+    "L2_qwen3": 0.907,
+    "L3_qwen3": 0.605,
+    "L1_template": 0.374,
+    "L2_template": 0.768,
+    "L3_template": 0.503,
+    "overall_qwen3": 0.704,
+    "regression_tests": 42,
+    "baselines": 6,
+    "cross_run_sigma_max": 0.0031
+  },
+  "remaining_issues": [
+    "Gold annotation quality unvalidated (needs human experts)",
+    "L2 extraction floor is high (85%) — limited headroom for reasoning measurement",
+    "L3 scores are low (~0.6) — task may be too hard or gold annotations lack uncertainty",
+    "Single reference model architecture (all Qwen3 family)"
+  ],
+  "timestamp": "2026-06-17T00:00:00"
+}

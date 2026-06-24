@@ -1,0 +1,204 @@
+{
+  "timestamp": "2026-06-05T11:58:44.397872",
+  "model": {
+    "name": "DeepSeek-V4-Pro",
+    "provider": "anthropic",
+    "model": "deepseek-v4-pro"
+  },
+  "stage2_source": "refine-logs/manual_papers_benchmark_20260605_105345.json",
+  "n_tasks": 12,
+  "results": [
+    {
+      "methodology_paper": "nber_w18958",
+      "test_paper_id": 2166706824,
+      "level": "L1",
+      "metric_type": "team_size_effect",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0004,
+      "parsed": false,
+      "judgments": [],
+      "overall_assessment": {
+        "error": "Failed to parse LLM response"
+      },
+      "judgment_counts": {
+        "PARSE_ERROR": 3
+      }
+    },
+    {
+      "methodology_paper": "nber_w18958",
+      "test_paper_id": 2166706824,
+      "level": "L2",
+      "metric_type": "team_size_effect",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0004,
+      "parsed": false,
+      "judgments": [],
+      "overall_assessment": {
+        "error": "Failed to parse LLM response"
+      },
+      "judgment_counts": {
+        "PARSE_ERROR": 3
+      }
+    },
+    {
+      "methodology_paper": "nber_w18958",
+      "test_paper_id": 2166706824,
+      "level": "L3",
+      "metric_type": "team_size_effect",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 100.0,
+      "parsed": false,
+      "judgments": [],
+      "overall_assessment": {
+        "error": "Failed to parse LLM response"
+      },
+      "judgment_counts": {
+        "PARSE_ERROR": 3
+      }
+    },
+    {
+      "methodology_paper": "ms_dynamic_network",
+      "test_paper_id": 2166706824,
+      "level": "L1",
+      "metric_type": "disruption",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0,
+      "parsed": false,
+      "judgments": [],
+      "overall_assessment": {
+        "error": "Failed to parse LLM response"
+      },
+      "judgment_counts": {
+        "PARSE_ERROR": 3
+      }
+    },
+    {
+      "methodology_paper": "ms_dynamic_network",
+      "test_paper_id": 2166706824,
+      "level": "L3",
+      "metric_type": "disruption",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0,
+      "parsed": false,
+      "judgments": [],
+      "overall_assessment": {
+        "error": "Failed to parse LLM response"
+      },
+      "judgment_counts": {
+        "PARSE_ERROR": 3
+      }
+    },
+    {
+      "methodology_paper": "ms_dynamic_network",
+      "test_paper_id": 2166706824,
+      "level": "L2",
+      "metric_type": "disruption",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0,
+      "parsed": false,
+      "judgments": [],
+      "overall_assessment": {
+        "error": "Failed to parse LLM response"
+      },
+      "judgment_counts": {
+        "PARSE_ERROR": 3
+      }
+    },
+    {
+      "methodology_paper": "arxiv_2308_02383",
+      "test_paper_id": 2166706824,
+      "level": "L1",
+      "metric_type": "disruption",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0,
+      "parsed": false,
+      "judgments": [],
+      "overall_assessment": {
+        "error": "Failed to parse LLM response"
+      },
+      "judgment_counts": {
+        "PARSE_ERROR": 3
+      }
+    },
+    {
+      "methodology_paper": "arxiv_2308_02383",
+      "test_paper_id": 2166706824,
+      "level": "L2",
+      "metric_type": "disruption",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0,
+      "parsed": false,
+      "judgments": [],
+      "overall_assessment": {
+        "error": "Failed to parse LLM response"
+      },
+      "judgment_counts": {
+        "PARSE_ERROR": 3
+      }
+    },
+    {
+      "methodology_paper": "arxiv_2308_02383",
+      "test_paper_id": 2166706824,
+      "level": "L3",
+      "metric_type": "disruption",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.0,
+      "parsed": false,
+      "judgments": [],
+      "overall_assessment": {
+        "error": "Failed to parse LLM response"
+      },
+      "judgment_counts": {
+        "PARSE_ERROR": 3
+      }
+    },
+    {
+      "methodology_paper": "pnas_network_impact",
+      "test_paper_id": 2166706824,
+      "level": "L1",
+      "metric_type": "network_normalized_impact",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 0.6323,
+      "parsed": false,
+      "judgments": [],
+      "overall_assessment": {
+        "error": "Failed to parse LLM response"
+      },
+      "judgment_counts": {
+        "PARSE_ERROR": 3
+      }
+    },
+    {
+      "methodology_paper": "nature_2023_disruption",
+      "test_paper_id": 2166706824,
+      "level": "L2",
+      "metric_type": "disruption_temporal",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 3.0006,
+      "parsed": false,
+      "judgments": [],
+      "overall_assessment": {
+        "error": "Failed to parse LLM response"
+      },
+      "judgment_counts": {
+        "PARSE_ERROR": 3
+      }
+    },
+    {
+      "methodology_paper": "nature_2023_disruption",
+      "test_paper_id": 2166706824,
+      "level": "L1",
+      "metric_type": "disruption_temporal",
+      "stage2_status": "SUCCESS",
+      "stage2_rei_c": 3.0006,
+      "parsed": false,
+      "judgments": [],
+      "overall_assessment": {
+        "error": "Failed to parse LLM response"
+      },
+      "judgment_counts": {
+        "PARSE_ERROR": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,621 @@
+{
+  "run_id": "20260618_105612",
+  "timestamp": "2026-06-18T10:56:12.661681",
+  "model": "gemma",
+  "n_papers": 10,
+  "elapsed_s": 282.7,
+  "analysis": {
+    "test1_correlation": {
+      "pass": true,
+      "high_pairs": [
+        "executability/auditability",
+        "fidelity/claim_consistency"
+      ],
+      "correlations": {
+        "fidelity_executability": -0.2242,
+        "fidelity_numerical_accuracy": -0.0424,
+        "fidelity_claim_consistency": 0.903,
+        "fidelity_auditability": -0.2242,
+        "executability_numerical_accuracy": 0.697,
+        "executability_claim_consistency": -0.2,
+        "executability_auditability": 1.0,
+        "numerical_accuracy_claim_consistency": -0.1394,
+        "numerical_accuracy_auditability": 0.697,
+        "claim_consistency_auditability": -0.2
+      }
+    },
+    "test2_failure_patterns": {
+      "pass": true,
+      "unique_weakest": 2,
+      "non_uniform_papers": 10,
+      "patterns": {
+        "wu2019_disruption": {
+          "weakest": "model",
+          "value": 0.5,
+          "spread": 0.5
+        },
+        "ke2023_normalized_impact": {
+          "weakest": "model",
+          "value": 0.5,
+          "spread": 0.5
+        },
+        "arts2025_frontier_scientists": {
+          "weakest": "model",
+          "value": 0.5,
+          "spread": 0.5
+        },
+        "petersen2024_disruption_index": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.756
+        },
+        "park2023_disruptive": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.7
+        },
+        "zhao2025_novelty_review": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.667
+        },
+        "bentley2023_disruption": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.831
+        },
+        "deng2023_robust_disruption": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.887
+        },
+        "arts2021_nlp_patent": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "funk2021_science_disruption": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        }
+      }
+    },
+    "test3_dim_stats": {
+      "fidelity": {
+        "mean": 0.431,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.415
+      },
+      "executability": {
+        "mean": 0.98,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.14
+      },
+      "numerical_accuracy": {
+        "mean": 0.225,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.418
+      },
+      "claim_consistency": {
+        "mean": 0.35,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.391
+      },
+      "auditability": {
+        "mean": 0.99,
+        "min": 0.5,
+        "max": 1.0,
+        "std": 0.07
+      }
+    },
+    "test4_spurious": {
+      "total_flags": 0,
+      "flags": {
+        "wu2019_disruption": [],
+        "ke2023_normalized_impact": [],
+        "arts2025_frontier_scientists": [],
+        "petersen2024_disruption_index": [],
+        "park2023_disruptive": [],
+        "zhao2025_novelty_review": [],
+        "bentley2023_disruption": [],
+        "deng2023_robust_disruption": [],
+        "arts2021_nlp_patent": [],
+        "funk2021_science_disruption": []
+      }
+    },
+    "maturity_distribution": {
+      "L1(ds)": 1,
+      "L2": 3,
+      "L1(m)": 2,
+      "L1": 3,
+      "L3(m)": 1
+    }
+  },
+  "paper_profiles": {
+    "wu2019_disruption": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.6083333333333333,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.0,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 1.0,
+          "claim_consistency": 1.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 1.0,
+        "sample": 0.75,
+        "indicator": 0.9021,
+        "model": 0.5,
+        "result_table": 0.6,
+        "claim": 1.0
+      }
+    },
+    "ke2023_normalized_impact": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.6425,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.0,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 1.0,
+          "claim_consistency": 1.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 1.0,
+        "sample": 0.75,
+        "indicator": 0.9106,
+        "model": 0.5,
+        "result_table": 0.6,
+        "claim": 1.0
+      }
+    },
+    "arts2025_frontier_scientists": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.625,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 1.0,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 1.0,
+          "claim_consistency": 1.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 1.0,
+        "sample": 0.75,
+        "indicator": 0.9062,
+        "model": 0.5,
+        "result_table": 0.8,
+        "claim": 1.0
+      }
+    },
+    "petersen2024_disruption_index": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.25,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.025,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.75,
+        "sample": 0.5,
+        "indicator": 0.7562,
+        "model": 0.5,
+        "result_table": 0.7,
+        "claim": 0.0
+      }
+    },
+    "park2023_disruptive": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.175,
+          "executability": 1.0,
+          "numerical_accuracy": 0.00017467248908298316,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.5,
+        "indicator": 0.5438,
+        "model": 0.5,
+        "result_table": 0.7,
+        "claim": 0.0
+      }
+    },
+    "zhao2025_novelty_review": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 0.5
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.375,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "bentley2023_disruption": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.32499999999999996,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.0,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.5,
+        "indicator": 0.8313,
+        "model": 0.5,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "deng2023_robust_disruption": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5471428571428572,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.8868,
+        "model": 0.5,
+        "result_table": 0.7,
+        "claim": 0.0
+      }
+    },
+    "arts2021_nlp_patent": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.14285714285714285,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.7143,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.7,
+        "claim": 0.0
+      }
+    },
+    "funk2021_science_disruption": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    }
+  }
+}

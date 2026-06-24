@@ -1,0 +1,92 @@
+{
+  "experiment": "R005",
+  "paper": "Zhao2025 (Novelty Measurement Taxonomy, Scientometrics)",
+  "task_type": "method",
+  "model": "deepseek-v4-pro",
+  "timestamp": "2026-06-17T11:56:22.684973",
+  "generation_time_s": 39.5,
+  "section_compliance": {
+    "CONCEPTUAL_DISTINCTIONS": true,
+    "NOVELTY_TYPES": true,
+    "MEASUREMENT_APPROACHES": true,
+    "VALIDATION_APPROACHES": true,
+    "KEY_CHALLENGES": true,
+    "DIFF_TABLE": true
+  },
+  "all_sections_found": true,
+  "evaluation": {
+    "conceptual_distinctions": {
+      "novelty": true,
+      "originality": true,
+      "innovation": true
+    },
+    "novelty_types_count": 5,
+    "measurement_categories": {
+      "text_based": 0.6666666666666666,
+      "citation_based": 0.7142857142857143,
+      "metadata_based": 0.8333333333333334,
+      "hybrid": 0.8
+    },
+    "validation_approaches_count": 7,
+    "challenges_count": 8,
+    "overall_coverage": 0.951
+  },
+  "d1_score": 1.0,
+  "d4_score": 1.0,
+  "d5_score": 1.0,
+  "overall_score": 0.98,
+  "spurious_flags": [],
+  "gold_taxonomy": {
+    "conceptual_distinctions": {
+      "novelty": "Studies that contribute something new to human knowledge \u2014 the quality of being new, original, or unusual",
+      "originality": "Something that is both novel and useful/usefulness dimension; emphasis on creativity and unexpectedness",
+      "innovation": "The implementation/commercialization of novel ideas; broader than academic novelty, includes practical adoption"
+    },
+    "novelty_types": [
+      "Radical vs incremental novelty",
+      "Technical vs scientific novelty",
+      "Theoretical vs methodological vs empirical novelty",
+      "Combinational novelty (new combinations of existing knowledge)",
+      "Result novelty vs approach novelty"
+    ],
+    "measurement_approaches_by_data_type": {
+      "text_based": [
+        "Bag-of-words / TF-IDF based similarity",
+        "Topic model based (LDA, word embeddings)",
+        "Deep learning / BERT-based semantic similarity",
+        "N-gram / phrase-level novelty detection"
+      ],
+      "citation_based": [
+        "Reference combination analysis (atypical combinations of references)",
+        "Bibliographic coupling / co-citation novelty",
+        "Disruption index (CD index \u2014 new directions vs consolidation)",
+        "Network-based propagation measures"
+      ],
+      "metadata_based": [
+        "Journal/venue novelty (cross-field publishing)",
+        "Author team novelty (new collaborations)",
+        "Keyword/concept co-occurrence novelty"
+      ],
+      "hybrid_approaches": [
+        "Combining text + citation features",
+        "Multi-dimensional novelty indicators",
+        "Machine learning with multi-modal features"
+      ]
+    },
+    "validation_approaches": [
+      "Peer/expert assessment correlation",
+      "Award/prize prediction (Nobel, Milestone papers)",
+      "Citation impact correlation",
+      "Disruption/citation pattern comparison",
+      "Known benchmark datasets",
+      "Inter-rater reliability with human judgments"
+    ],
+    "key_challenges": [
+      "Delayed recognition \u2014 novel work may take years to be recognized",
+      "Interdisciplinary evaluation \u2014 domain expertise gap",
+      "Ground truth scarcity \u2014 no gold-standard novelty labels",
+      "Dimensionality \u2014 novelty is multi-faceted, not a scalar",
+      "Temporal dynamics \u2014 what is novel changes over time"
+    ]
+  }
+}

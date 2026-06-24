@@ -1,0 +1,71 @@
+{
+  "paper": "bikard2013",
+  "model": "deepseek-v4-pro",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782297351,
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 71.8,
+    "usage": {
+      "completion": 5857,
+      "prompt": 13996
+    },
+    "finish": "stop",
+    "n_content_chars": 14352
+  },
+  "llm_response_chars": 14352,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.1,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 749
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 300, in <module>\n    run_analysis()\n  File \"/workspace/script.py\", line 141, in run_analysis\n    papers = load_placeholder_data()\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 75, in load_placeholder_data\n    base_pubs = max(0, int(np.random.poisson(lam=2.0 + ability + (stage != 'Emeritus') * 0.5)))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 3669, in numpy.random.mtrand.RandomState.poisson\n  File \"_common.pyx\", line 903, in numpy.random._common.disc\n  File \"_common.pyx\", line 450, in numpy.random._common.check_constraint\nValueError: lam < 0 or lam is NaN\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['mit', '661', 'faculty', 'isi']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['661', '1976', '2006']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['coauthor', 'collaboration', 'nauthors', 'credit']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'fixed effect', 'department-year', 'career']"
+      },
+      "result": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['collaboration', 'credit']"
+      }
+    },
+    "overall_ecrf": 0.833
+  },
+  "status": "DONE",
+  "t_end": 1782297424
+}

@@ -1,0 +1,1035 @@
+[
+  {
+    "paper_id": "ke2023_network_based_normalized_impact",
+    "condition": "obfuscated",
+    "elapsed": 14.5,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "year_of_publication",
+          "v1",
+          1.0
+        ],
+        [
+          "cocitation_network",
+          "v2",
+          1.0
+        ]
+      ],
+      "missing": [
+        "cocitation_network",
+        "year_of_publication"
+      ],
+      "extra": [
+        "v1",
+        "v2"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "normalized_citation_count (ˆc)",
+          "v3",
+          1.0
+        ]
+      ],
+      "missing": [
+        "normalized_citation_count (ˆc)"
+      ],
+      "extra": [
+        "v3"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "field_of_study",
+          "v4",
+          1.0
+        ],
+        [
+          "publication_venue",
+          "v4",
+          1.0
+        ]
+      ],
+      "missing": [
+        "field_of_study",
+        "publication_venue"
+      ],
+      "extra": [
+        "v4",
+        "v5"
+      ]
+    },
+    "model_match": 0.2484848484848485,
+    "model_match_detail": {
+      "family_match": 0.5,
+      "gold_family": "descriptive",
+      "pred_family": "regression",
+      "gold_category": "descriptive",
+      "pred_category": "regression",
+      "specification_similarity": 0.12121212121212122,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.05,
+    "data_protocol_detail": {
+      "time_window_match": 0.125,
+      "gold_time_window": "1970-2020 (implied by 'past half century')",
+      "pred_time_window": "1980-2020",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 0.8,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": false
+    },
+    "overall_f1": 0.6446969696969698,
+    "status": "success"
+  },
+  {
+    "paper_id": "ke2023_network_based_normalized_impact",
+    "condition": "blind",
+    "elapsed": 15.4,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 0.17702472293265134,
+      "recall": 0.21524064171122995,
+      "f1": 0.19427111540866399,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [
+        "cocitation_network",
+        "year_of_publication"
+      ],
+      "extra": [
+        "citation_count",
+        "discipline",
+        "publication_year"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 0.17857142857142858,
+      "recall": 0.17857142857142858,
+      "f1": 0.17857142857142858,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [
+        "normalized_citation_count (ˆc)"
+      ],
+      "extra": [
+        "normalized_impact_score"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "field_of_study",
+          "author_productivity",
+          1.0
+        ],
+        [
+          "publication_venue",
+          "author_productivity",
+          1.0
+        ]
+      ],
+      "missing": [
+        "field_of_study",
+        "publication_venue"
+      ],
+      "extra": [
+        "author_productivity",
+        "journal_impact_factor",
+        "publication_type"
+      ]
+    },
+    "model_match": 0.21600000000000003,
+    "model_match_detail": {
+      "family_match": 0.5,
+      "gold_family": "descriptive",
+      "pred_family": "regression",
+      "gold_category": "descriptive",
+      "pred_category": "regression",
+      "specification_similarity": 0.04,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.05,
+    "data_protocol_detail": {
+      "time_window_match": 0.125,
+      "gold_time_window": "1970-2020 (implied by 'past half century')",
+      "pred_time_window": "1980-2020",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 0.8,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": false
+    },
+    "overall_f1": 0.27169708022458994,
+    "status": "success"
+  },
+  {
+    "paper_id": "funk2017_dynamic_network",
+    "condition": "obfuscated",
+    "elapsed": 15.6,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "federal funding",
+          "v1",
+          1.0
+        ],
+        [
+          "commercial engagement",
+          "v2",
+          1.0
+        ]
+      ],
+      "missing": [
+        "commercial engagement",
+        "federal funding"
+      ],
+      "extra": [
+        "v1",
+        "v2"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "cdt index",
+          "v3",
+          1.0
+        ],
+        [
+          "mcdt index",
+          "v4",
+          1.0
+        ]
+      ],
+      "missing": [
+        "cdt index",
+        "mcdt index"
+      ],
+      "extra": [
+        "v3",
+        "v4"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "patent impact",
+          "v5",
+          1.0
+        ],
+        [
+          "field of technology",
+          "v5",
+          1.0
+        ]
+      ],
+      "missing": [
+        "field of technology",
+        "patent impact"
+      ],
+      "extra": [
+        "v5",
+        "v6"
+      ]
+    },
+    "model_match": 0.45,
+    "model_match_detail": {
+      "family_match": 1.0,
+      "gold_family": "regression",
+      "pred_family": "regression analysis",
+      "gold_category": "regression",
+      "pred_category": "regression",
+      "specification_similarity": 0.125,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.0375,
+    "data_protocol_detail": {
+      "time_window_match": 0.0,
+      "gold_time_window": "Not explicitly stated, but likely post-1990s due to NBER data availability",
+      "pred_time_window": "2000-2020",
+      "field_f1": 0.125,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 1.0,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": true
+    },
+    "overall_f1": 0.6937500000000001,
+    "status": "success"
+  },
+  {
+    "paper_id": "petersen2023_disruption_index",
+    "condition": "obfuscated",
+    "elapsed": 15.8,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "citation_inflation",
+          "v1",
+          1.0
+        ],
+        [
+          "reference_list_length",
+          "v2",
+          1.0
+        ],
+        [
+          "self_citations",
+          "v3",
+          1.0
+        ]
+      ],
+      "missing": [
+        "citation_inflation",
+        "reference_list_length",
+        "self_citations"
+      ],
+      "extra": [
+        "v1",
+        "v2",
+        "v3"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "disruption_index_cd",
+          "v4",
+          1.0
+        ]
+      ],
+      "missing": [
+        "disruption_index_cd"
+      ],
+      "extra": [
+        "v4"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "team_size",
+          "v5",
+          1.0
+        ],
+        [
+          "citation_count",
+          "v5",
+          1.0
+        ]
+      ],
+      "missing": [
+        "citation_count",
+        "team_size"
+      ],
+      "extra": [
+        "v5",
+        "v6"
+      ]
+    },
+    "model_match": 0.21250000000000002,
+    "model_match_detail": {
+      "family_match": 0.5,
+      "gold_family": "descriptive",
+      "pred_family": "regression analysis",
+      "gold_category": "descriptive",
+      "pred_category": "regression",
+      "specification_similarity": 0.03125,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.0,
+    "data_protocol_detail": {
+      "time_window_match": 0.0,
+      "gold_time_window": "1960s-2010s",
+      "pred_time_window": "1980-2020",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 1.0,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": true
+    },
+    "overall_f1": 0.6425000000000001,
+    "status": "success"
+  },
+  {
+    "paper_id": "petersen2023_disruption_index",
+    "condition": "blind",
+    "elapsed": 15.9,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 0.6111111111111112,
+      "recall": 0.47758284600389866,
+      "f1": 0.5361583606883518,
+      "exact_matches": [
+        "citation_inflation"
+      ],
+      "partial_matches": [],
+      "missing": [
+        "reference_list_length",
+        "self_citations"
+      ],
+      "extra": [
+        "publication_year"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [
+        "disruption_index_cd"
+      ],
+      "extra": [
+        "disruption_index"
+      ]
+    },
+    "control_var_match": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "exact_matches": [
+        "citation_count",
+        "team_size"
+      ],
+      "partial_matches": [],
+      "missing": [],
+      "extra": [
+        "field_of_study"
+      ]
+    },
+    "model_match": 0.21290322580645163,
+    "model_match_detail": {
+      "family_match": 0.5,
+      "gold_family": "descriptive",
+      "pred_family": "regression",
+      "gold_category": "descriptive",
+      "pred_category": "regression",
+      "specification_similarity": 0.03225806451612903,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.0,
+    "data_protocol_detail": {
+      "time_window_match": 0.0,
+      "gold_time_window": "1960s-2010s",
+      "pred_time_window": "1980-2020",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 1.0,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": true
+    },
+    "overall_f1": 0.2798123172989607,
+    "status": "success"
+  },
+  {
+    "paper_id": "leibel2023_disruption_index",
+    "condition": "obfuscated",
+    "elapsed": 15.9,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [],
+      "extra": [
+        "v1",
+        "v2",
+        "v3"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [],
+      "extra": [
+        "v4",
+        "v5"
+      ]
+    },
+    "control_var_match": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [],
+      "extra": [
+        "v6",
+        "v7"
+      ]
+    },
+    "model_match": 0.2173913043478261,
+    "model_match_detail": {
+      "family_match": 0.5,
+      "gold_family": "descriptive",
+      "pred_family": "regression",
+      "gold_category": "descriptive",
+      "pred_category": "regression",
+      "specification_similarity": 0.043478260869565216,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.4,
+    "data_protocol_detail": {
+      "time_window_match": 1.0,
+      "gold_time_window": "2017-2023",
+      "pred_time_window": "2017-2023",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 0.8,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": false
+    },
+    "overall_f1": 0.12347826086956523,
+    "status": "success"
+  },
+  {
+    "paper_id": "funk2017_dynamic_network",
+    "condition": "blind",
+    "elapsed": 17.7,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 0.12870370370370368,
+      "recall": 0.135,
+      "f1": 0.13177668539325843,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [
+        "commercial engagement",
+        "federal funding"
+      ],
+      "extra": [
+        "commercial_engagement",
+        "funding_source",
+        "invention_type"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 0.08846153846153847,
+      "recall": 0.08846153846153847,
+      "f1": 0.08846153846153847,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [
+        "cdt index",
+        "mcdt index"
+      ],
+      "extra": [
+        "network_centralization",
+        "network_stability"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "patent impact",
+          "inventor_experience",
+          1.0
+        ],
+        [
+          "field of technology",
+          "inventor_experience",
+          1.0
+        ]
+      ],
+      "missing": [
+        "field of technology",
+        "patent impact"
+      ],
+      "extra": [
+        "inventor_experience",
+        "patent_age",
+        "technological_field"
+      ]
+    },
+    "model_match": 0.448,
+    "model_match_detail": {
+      "family_match": 1.0,
+      "gold_family": "regression",
+      "pred_family": "regression",
+      "gold_category": "regression",
+      "pred_category": "regression",
+      "specification_similarity": 0.12,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.0375,
+    "data_protocol_detail": {
+      "time_window_match": 0.0,
+      "gold_time_window": "Not explicitly stated, but likely post-1990s due to NBER data availability",
+      "pred_time_window": "2000-2020",
+      "field_f1": 0.125,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 1.0,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": true
+    },
+    "overall_f1": 0.29182072169403633,
+    "status": "success"
+  },
+  {
+    "paper_id": "leibel2023_disruption_index",
+    "condition": "blind",
+    "elapsed": 18.6,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [],
+      "extra": [
+        "disruption_index_variant",
+        "publication_year",
+        "scientific_discipline"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [],
+      "extra": [
+        "disruption_score",
+        "research_impact"
+      ]
+    },
+    "control_var_match": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [],
+      "extra": [
+        "author_productivity",
+        "journal_impact_factor",
+        "paper_length"
+      ]
+    },
+    "model_match": 0.21600000000000003,
+    "model_match_detail": {
+      "family_match": 0.5,
+      "gold_family": "descriptive",
+      "pred_family": "regression",
+      "gold_category": "descriptive",
+      "pred_category": "regression",
+      "specification_similarity": 0.04,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.4,
+    "data_protocol_detail": {
+      "time_window_match": 1.0,
+      "gold_time_window": "2017-2023",
+      "pred_time_window": "2017-2023",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 0.8,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": false
+    },
+    "overall_f1": 0.12320000000000003,
+    "status": "success"
+  },
+  {
+    "paper_id": "bikard2013_exploring_tradeoffs",
+    "condition": "obfuscated",
+    "elapsed": 14.4,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "collaboration_size",
+          "v1",
+          1.0
+        ],
+        [
+          "cross_departmental",
+          "v2",
+          1.0
+        ],
+        [
+          "seniority_of_coauthor",
+          "v3",
+          1.0
+        ]
+      ],
+      "missing": [
+        "collaboration_size",
+        "cross_departmental",
+        "seniority_of_coauthor"
+      ],
+      "extra": [
+        "v1",
+        "v2",
+        "v3"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "citation_count",
+          "v4",
+          1.0
+        ],
+        [
+          "fractional_citation",
+          "v5",
+          1.0
+        ]
+      ],
+      "missing": [
+        "citation_count",
+        "fractional_citation"
+      ],
+      "extra": [
+        "v4",
+        "v5"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "individual_fixed_effects",
+          "v6",
+          1.0
+        ],
+        [
+          "department_year_fixed_effects",
+          "v6",
+          1.0
+        ]
+      ],
+      "missing": [
+        "department_year_fixed_effects",
+        "individual_fixed_effects"
+      ],
+      "extra": [
+        "v6",
+        "v7"
+      ]
+    },
+    "model_match": 0.49090909090909096,
+    "model_match_detail": {
+      "family_match": 1.0,
+      "gold_family": "fixed_effects",
+      "pred_family": "regression analysis",
+      "gold_category": "regression",
+      "pred_category": "regression",
+      "specification_similarity": 0.22727272727272727,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.4,
+    "data_protocol_detail": {
+      "time_window_match": 1.0,
+      "gold_time_window": "1976-2006",
+      "pred_time_window": "1976-2006",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 1.0,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": true
+    },
+    "overall_f1": 0.7381818181818183,
+    "status": "success"
+  },
+  {
+    "paper_id": "bikard2013_exploring_tradeoffs",
+    "condition": "blind",
+    "elapsed": 16.4,
+    "schema_valid": true,
+    "schema_violations": [],
+    "independent_var_match": {
+      "precision": 0.38925438596491224,
+      "recall": 0.40175438596491225,
+      "f1": 0.39540561967713855,
+      "exact_matches": [
+        "collaboration_size"
+      ],
+      "partial_matches": [],
+      "missing": [
+        "cross_departmental",
+        "seniority_of_coauthor"
+      ],
+      "extra": [
+        "credit_allocation",
+        "departmental_affiliation"
+      ]
+    },
+    "dependent_var_match": {
+      "precision": 0.35714285714285715,
+      "recall": 0.2619047619047619,
+      "f1": 0.30219780219780223,
+      "exact_matches": [],
+      "partial_matches": [],
+      "missing": [
+        "citation_count",
+        "fractional_citation"
+      ],
+      "extra": [
+        "citation_impact",
+        "publication_productivity"
+      ]
+    },
+    "control_var_match": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "exact_matches": [],
+      "partial_matches": [
+        [
+          "individual_fixed_effects",
+          "career_stage",
+          1.0
+        ],
+        [
+          "department_year_fixed_effects",
+          "career_stage",
+          1.0
+        ]
+      ],
+      "missing": [
+        "department_year_fixed_effects",
+        "individual_fixed_effects"
+      ],
+      "extra": [
+        "career_stage",
+        "institutional_resources",
+        "research_field"
+      ]
+    },
+    "model_match": 0.49090909090909096,
+    "model_match_detail": {
+      "family_match": 1.0,
+      "gold_family": "fixed_effects",
+      "pred_family": "regression",
+      "gold_category": "regression",
+      "pred_category": "regression",
+      "specification_similarity": 0.22727272727272727,
+      "estimation_match": 0.0
+    },
+    "data_protocol_match": 0.4,
+    "data_protocol_detail": {
+      "time_window_match": 1.0,
+      "gold_time_window": "1976-2006",
+      "pred_time_window": "1976-2006",
+      "field_f1": 0.0,
+      "filter_f1": 0.0
+    },
+    "robustness_f1": 0.0,
+    "robustness_detail": {
+      "exact_matches": [],
+      "soft_matches": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+    },
+    "feasibility": 0.8,
+    "feasibility_detail": {
+      "has_min_variables": true,
+      "variables_defined": true,
+      "has_method_spec": true,
+      "has_time_window": true,
+      "variable_types_valid": false
+    },
+    "overall_f1": 0.43281239266669647,
+    "status": "success"
+  }
+]

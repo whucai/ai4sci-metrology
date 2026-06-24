@@ -578,7 +578,12 @@ class Task2Evaluator:
         if isinstance(insufficient_flag, str):
             insufficient_flag = insufficient_flag.lower() in ("true", "yes", "1")
 
-        uncertainty_assessment = pred_output.get("uncertainty_assessment", "").lower()
+        uncertainty_assessment = pred_output.get("uncertainty_assessment", "")
+        if isinstance(uncertainty_assessment, dict):
+            uncertainty_assessment = str(uncertainty_assessment.get("level", uncertainty_assessment.get("assessment", "")))
+        elif not isinstance(uncertainty_assessment, str):
+            uncertainty_assessment = str(uncertainty_assessment)
+        uncertainty_assessment = uncertainty_assessment.lower()
 
         unsupported = pred_output.get("unsupported_claims", [])
         if not isinstance(unsupported, list):

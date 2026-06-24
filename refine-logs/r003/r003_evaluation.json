@@ -1,0 +1,26 @@
+{
+  "evaluation_type": "component_diagnosis_qualitative",
+  "note": "Agent and gold use different patent samples, so direct correlation is not computed. Evaluation focuses on methodology correctness and component identification.",
+  "step_completeness": 1.0,
+  "indicator_completeness": 1.0,
+  "indicator_correctness": {
+    "new_word": "CORRECT: count of new unigrams by filing date",
+    "new_bigram": "CORRECT: consecutive keyword pairs, first-seen check",
+    "new_trigram": "CORRECT: consecutive keyword triples, first-seen check",
+    "new_word_comb": "CORRECT: pairwise combinations (order-independent), capped at 5000",
+    "cosine_similarity": "CORRECT: 1 - backward_cosine using binary TF vectors",
+    "new_word_reuse": "CORRECT: sum(1+future_reuse) for new keywords",
+    "new_bigram_reuse": "CORRECT: same formula for new bigrams",
+    "new_trigram_reuse": "CORRECT: same formula for new trigrams",
+    "new_word_comb_reuse": "CORRECT: same formula for new word pairs (but no cap on reuse counting)",
+    "cosine_similarity_impact": "CORRECT: forward_cosine/backward_cosine, handles div-by-zero"
+  },
+  "scores": {
+    "D1_component_fidelity": 1.0,
+    "D2_executability": 1.0,
+    "D3_methodology_accuracy": 0.9,
+    "D4_error_localization": 0.7,
+    "D5_auditability": 0.85,
+    "overall": 0.89
+  }
+}

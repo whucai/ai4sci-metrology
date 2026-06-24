@@ -1,0 +1,71 @@
+{
+  "paper": "arts2021",
+  "model": "deepseek-v4-pro",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782297128,
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 118.6,
+    "usage": {
+      "completion": 10163,
+      "prompt": 15524
+    },
+    "finish": "stop",
+    "n_content_chars": 26230
+  },
+  "llm_response_chars": 26230,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.96,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 65,
+    "stderr_chars": 317
+  },
+  "stdout": "Data source: SYNTHETIC placeholder data generated within script.\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 346, in <module>\n    db = create_synthetic_patent_db(n_patients=2000)  # note: variable name typo but ok\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: create_synthetic_patent_db() got an unexpected keyword argument 'n_patients'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['uspto', 'patent']"
+      },
+      "sample": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['novelty', 'cosine', 'tf']"
+      },
+      "model": {
+        "score": 0.5,
+        "rationale": "partial: ['descriptive']"
+      },
+      "result": {
+        "score": 0.0,
+        "rationale": "no gold signals for this component"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['novelty', 'reuse']"
+      }
+    },
+    "overall_ecrf": 0.583
+  },
+  "status": "DONE",
+  "t_end": 1782297248
+}

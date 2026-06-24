@@ -1,0 +1,3800 @@
+[
+  {
+    "paper_id": "leibel2023_disruption_index",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2561,
+    "overall_v2_dir_partial": 0.2886,
+    "overall_v3_graded_support": 0.33735000000000004,
+    "overall_v4_full_revised": 0.21937500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "petersen2023_disruption_index",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.19999999999999998,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.53,
+    "overall_v3_graded_support": 0.605,
+    "overall_v4_full_revised": 0.3644736842105263,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "ke2023_network_based_normalized_impact",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.37279411764705883,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "bikard2013_exploring_tradeoffs",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2535,
+    "overall_v2_dir_partial": 0.28600000000000003,
+    "overall_v3_graded_support": 0.33475000000000005,
+    "overall_v4_full_revised": 0.154375,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 5
+    }
+  },
+  {
+    "paper_id": "funk2017_dynamic_network",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.125,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.33999999999999997,
+    "overall_v2_dir_partial": 0.365,
+    "overall_v3_graded_support": 0.44,
+    "overall_v4_full_revised": 0.33125000000000004,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arts2021_natural_language_processing",
+    "dir_original": 0.6666666666666666,
+    "dir_calibrated": 0.6666666666666666,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.6233333333333333,
+    "overall_v2_dir_partial": 0.6233333333333333,
+    "overall_v3_graded_support": 0.6983333333333334,
+    "overall_v4_full_revised": 0.45320512820512815,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "gebhart2023_mathematical_framework",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.59,
+    "overall_v2_dir_partial": 0.59,
+    "overall_v3_graded_support": 0.665,
+    "overall_v4_full_revised": 0.44285714285714284,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "ke2023_sleeping_beauties",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.5733333333333334,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.4041666666666667,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "park2023_disruptive",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.47,
+    "overall_v2_dir_partial": 0.47,
+    "overall_v3_graded_support": 0.545,
+    "overall_v4_full_revised": 0.41000000000000003,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "schaper2025_frontier_scientists",
+    "dir_original": 0.75,
+    "dir_calibrated": 0.6875,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.42333333333333334,
+    "overall_v2_dir_partial": 0.41083333333333333,
+    "overall_v3_graded_support": 0.48583333333333334,
+    "overall_v4_full_revised": 0.39839015151515156,
+    "direction_commit_rate": 0.75,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "bentley2023_disruption",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.3333333333333333,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.45666666666666667,
+    "overall_v3_graded_support": 0.5316666666666667,
+    "overall_v4_full_revised": 0.26715686274509803,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "obadage2023_citations_reproducibility",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.4125,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "traag2025_citation_models",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.27840909090909094,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "sun2023_ranking_mobility",
+    "dir_original": 0.25,
+    "dir_calibrated": 0.375,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.54,
+    "overall_v2_dir_partial": 0.565,
+    "overall_v3_graded_support": 0.64,
+    "overall_v4_full_revised": 0.40404411764705883,
+    "direction_commit_rate": 0.25,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "akella2023_reproducibility_signals",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.29,
+    "overall_v2_dir_partial": 0.33999999999999997,
+    "overall_v3_graded_support": 0.415,
+    "overall_v4_full_revised": 0.31375000000000003,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "luo2024_hunting_room_temperature_superconductors",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.0,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.10010000000000002,
+    "overall_v3_graded_support": 0.14884999999999998,
+    "overall_v4_full_revised": 0.065,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "vasarhelyi2023_who_benefits",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.16666666666666666,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.33999999999999997,
+    "overall_v2_dir_partial": 0.3733333333333333,
+    "overall_v3_graded_support": 0.44833333333333336,
+    "overall_v4_full_revised": 0.3956140350877193,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "baccini2025_coara",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.0,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.10010000000000002,
+    "overall_v3_graded_support": 0.14884999999999998,
+    "overall_v4_full_revised": 0.065,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "deng2023_enhancing_disruption",
+    "dir_original": 0.25,
+    "dir_calibrated": 0.375,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.54,
+    "overall_v2_dir_partial": 0.565,
+    "overall_v3_graded_support": 0.64,
+    "overall_v4_full_revised": 0.4232954545454546,
+    "direction_commit_rate": 0.25,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "galuez2023_technology_transfer",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.44,
+    "overall_v2_dir_partial": 0.49,
+    "overall_v3_graded_support": 0.565,
+    "overall_v4_full_revised": 0.3693181818181818,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "maddi2024_peer_review_reports",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.33999999999999997,
+    "overall_v2_dir_partial": 0.39,
+    "overall_v3_graded_support": 0.46499999999999997,
+    "overall_v4_full_revised": 0.37916666666666665,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "zheng2025_male_female_retractions",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.27697368421052637,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "wanga2023_preprints",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.27083333333333337,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "suebsombut2023_smart_farm",
+    "dir_original": 1.0,
+    "dir_calibrated": 0.75,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.3861,
+    "overall_v2_dir_partial": 0.3536,
+    "overall_v3_graded_support": 0.4023500000000001,
+    "overall_v4_full_revised": 0.30062500000000003,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "zheng2025_social_media_retraction",
+    "dir_original": 0.6666666666666666,
+    "dir_calibrated": 0.6166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5733333333333333,
+    "overall_v2_dir_partial": 0.5633333333333332,
+    "overall_v3_graded_support": 0.6383333333333333,
+    "overall_v4_full_revised": 0.40059523809523806,
+    "direction_commit_rate": 0.6666666666666666,
+    "direction_correct_when_committed": 0.5,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "hossain2025_similarity_reproducibility",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.39375000000000004,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "rosendo2023_kheops",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.13260000000000002,
+    "overall_v3_graded_support": 0.18135,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "donner2024_data_inaccuracy",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.49,
+    "overall_v3_graded_support": 0.565,
+    "overall_v4_full_revised": 0.31500000000000006,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "fletcher2024_reproducibility",
+    "dir_original": 1.0,
+    "dir_calibrated": 1.0,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.69,
+    "overall_v2_dir_partial": 0.69,
+    "overall_v3_graded_support": 0.765,
+    "overall_v4_full_revised": 0.55,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "lin2023_moprd",
+    "dir_original": 1.0,
+    "dir_calibrated": 0.75,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.3835,
+    "overall_v2_dir_partial": 0.35100000000000003,
+    "overall_v3_graded_support": 0.39975,
+    "overall_v4_full_revised": 0.23562500000000003,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "hanson2023_strain_publishing",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.2555,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "sjogarde2023_covid_citations",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.38749999999999996,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "fahimifar2022_unreliable_shoulders",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.24,
+    "overall_v2_dir_partial": 0.29,
+    "overall_v3_graded_support": 0.365,
+    "overall_v4_full_revised": 0.26875000000000004,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "momeni2023_factors_oa",
+    "dir_original": 0.2,
+    "dir_calibrated": 0.35,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.43,
+    "overall_v2_dir_partial": 0.45999999999999996,
+    "overall_v3_graded_support": 0.5349999999999999,
+    "overall_v4_full_revised": 0.2721774193548387,
+    "direction_commit_rate": 0.2,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 5
+    }
+  },
+  {
+    "paper_id": "kerzendorf2020_distributed_peer_review",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.16666666666666666,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.5233333333333333,
+    "overall_v3_graded_support": 0.5983333333333333,
+    "overall_v4_full_revised": 0.32971014492753625,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "ghorbi2023_iranian_retractions",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.25113636363636366,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 6
+    }
+  },
+  {
+    "paper_id": "okamura2022_scientometric_engineering",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.45666666666666667,
+    "overall_v2_dir_partial": 0.47333333333333333,
+    "overall_v3_graded_support": 0.5483333333333333,
+    "overall_v4_full_revised": 0.3041666666666667,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "tiyavorabun2022_badder_seeds",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2535,
+    "overall_v2_dir_partial": 0.27625,
+    "overall_v3_graded_support": 0.325,
+    "overall_v4_full_revised": 0.1421875,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "rudnicka2021_in_order_that",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.156,
+    "overall_v2_dir_partial": 0.17875,
+    "overall_v3_graded_support": 0.22749999999999998,
+    "overall_v4_full_revised": 0.1421875,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "chaieb2022_data_obsolescence",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arroyomachado2020_science_wikipedia",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.5733333333333334,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.4028508771929824,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "xia2019_function_point",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.1,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.51,
+    "overall_v3_graded_support": 0.585,
+    "overall_v4_full_revised": 0.34,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "Ribeiro2026_GenderProductivityPrestige",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.26477272727272727,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "zhao2023_effect_of_gender_diversity",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.4066666666666667,
+    "overall_v2_dir_partial": 0.42333333333333334,
+    "overall_v3_graded_support": 0.4983333333333333,
+    "overall_v4_full_revised": 0.42328431372549025,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "silvello2017_theory_practice_data_citation",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.0,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.10010000000000002,
+    "overall_v3_graded_support": 0.14884999999999998,
+    "overall_v4_full_revised": 0.065,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "nakajima2023_quantifying_gender_imbalance",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.36250000000000004,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "doukhan2024_voice_passing",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 6
+    }
+  },
+  {
+    "paper_id": "abramo2015_research_performance",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.525,
+    "overall_v3_graded_support": 0.6,
+    "overall_v4_full_revised": 0.39374999999999993,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "schueler2023_platform_research",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.13260000000000002,
+    "overall_v3_graded_support": 0.18135,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "banerjee2025_citation_diversity",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.45666666666666667,
+    "overall_v2_dir_partial": 0.49,
+    "overall_v3_graded_support": 0.565,
+    "overall_v4_full_revised": 0.375,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "gong2023_citation_advantage",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.44,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.43333333333333335,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "li2023_two_stage",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.1,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.51,
+    "overall_v3_graded_support": 0.585,
+    "overall_v4_full_revised": 0.31500000000000006,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "zhao2023_academic_industry_knowledge_proximity",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.5733333333333334,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.4208333333333333,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "bezerra2025_leveraging_gans",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.525,
+    "overall_v3_graded_support": 0.6,
+    "overall_v4_full_revised": 0.3520833333333333,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "baccini2025_similarity_matrix",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.36750000000000005,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "diBona2023_decentralization",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5625,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.59,
+    "overall_v2_dir_partial": 0.6025,
+    "overall_v3_graded_support": 0.6775,
+    "overall_v4_full_revised": 0.43870192307692313,
+    "direction_commit_rate": 0.25,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "nikolentzos2021_author_collaboration",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.24,
+    "overall_v2_dir_partial": 0.27499999999999997,
+    "overall_v3_graded_support": 0.35,
+    "overall_v4_full_revised": 0.2764423076923077,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "fitzgerald2021_localization",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "asatani2025_influential_scientists",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.5733333333333334,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.4041666666666667,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "nakajima2023_higher_order_rich_club",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.38125,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "tohalino2021_predicting_grants",
+    "dir_original": 0.6666666666666666,
+    "dir_calibrated": 0.5833333333333334,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5733333333333333,
+    "overall_v2_dir_partial": 0.5566666666666666,
+    "overall_v3_graded_support": 0.6316666666666666,
+    "overall_v4_full_revised": 0.40833333333333327,
+    "direction_commit_rate": 0.6666666666666666,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "mongeon2023_concentration",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.59,
+    "overall_v3_graded_support": 0.665,
+    "overall_v4_full_revised": 0.475,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "gross2019_contest_models",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.38749999999999996,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "mryglod2014_is_your_epl_attractive",
+    "dir_original": 0.25,
+    "dir_calibrated": 0.375,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.54,
+    "overall_v2_dir_partial": 0.565,
+    "overall_v3_graded_support": 0.64,
+    "overall_v4_full_revised": 0.4149038461538461,
+    "direction_commit_rate": 0.25,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "zhao2020_delayed_recognition",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.3766304347826087,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "ke2018_comparing_scientific_technological_impact",
+    "dir_original": 0.6666666666666666,
+    "dir_calibrated": 0.6666666666666666,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5233333333333333,
+    "overall_v2_dir_partial": 0.5233333333333333,
+    "overall_v3_graded_support": 0.5983333333333334,
+    "overall_v4_full_revised": 0.3681372549019608,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "kojaku2025_community_centric",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.1875,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2535,
+    "overall_v2_dir_partial": 0.277875,
+    "overall_v3_graded_support": 0.326625,
+    "overall_v4_full_revised": 0.14421875,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "mir2026_forsaking",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.5733333333333334,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.41666666666666663,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "sunahara2023_universal_productivity",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.5733333333333334,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.406439393939394,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "abramo2013_assessing_accuracy",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.5733333333333334,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.44166666666666665,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "chandrasekaran2021_automating_transfer",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.59,
+    "overall_v3_graded_support": 0.665,
+    "overall_v4_full_revised": 0.45999999999999996,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "paraskevopoulos2021_academic_wanderer",
+    "dir_original": 0.25,
+    "dir_calibrated": 0.4375,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.28600000000000003,
+    "overall_v2_dir_partial": 0.310375,
+    "overall_v3_graded_support": 0.359125,
+    "overall_v4_full_revised": 0.1892755681818182,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "li2019_achieving_competitive_advantage",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.33999999999999997,
+    "overall_v2_dir_partial": 0.39,
+    "overall_v3_graded_support": 0.46499999999999997,
+    "overall_v4_full_revised": 0.4164473684210527,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "shirouyeh2023_predicting_star_scientists",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.33999999999999997,
+    "overall_v2_dir_partial": 0.39,
+    "overall_v3_graded_support": 0.46499999999999997,
+    "overall_v4_full_revised": 0.4215,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "slavov2022_eternalism",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.625,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2561,
+    "overall_v2_dir_partial": 0.27235000000000004,
+    "overall_v3_graded_support": 0.3211,
+    "overall_v4_full_revised": 0.21531250000000005,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "zhao2025_novelty_measurements",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.0,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.10010000000000002,
+    "overall_v3_graded_support": 0.14884999999999998,
+    "overall_v4_full_revised": 0.065,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "zhao2026_novelty_differences",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.59,
+    "overall_v2_dir_partial": 0.59,
+    "overall_v3_graded_support": 0.665,
+    "overall_v4_full_revised": 0.42500000000000004,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "abramo2017_stardom",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.2975,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 5
+    }
+  },
+  {
+    "paper_id": "wagner2023_openness_impact",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.24,
+    "overall_v2_dir_partial": 0.29,
+    "overall_v3_graded_support": 0.365,
+    "overall_v4_full_revised": 0.2605769230769231,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "kong2025_citation_structural_diversity",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.3816176470588235,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "shekar2022_novelty_based",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.425,
+    "overall_v3_graded_support": 0.5,
+    "overall_v4_full_revised": 0.23541666666666666,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "buruk2023_academic_writing",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.0,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.10010000000000002,
+    "overall_v3_graded_support": 0.14884999999999998,
+    "overall_v4_full_revised": 0.065,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "nikonova2022_measuring_difficulty",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.525,
+    "overall_v3_graded_support": 0.6,
+    "overall_v4_full_revised": 0.35875,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "ahmad2025_university_of_lagos",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.26,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "thelwall2025_openalex_citation",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 5
+    }
+  },
+  {
+    "paper_id": "agboke2020_social_media",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.40312499999999996,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "gim2025_interdisciplinary_synergy",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.375,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.54,
+    "overall_v2_dir_partial": 0.515,
+    "overall_v3_graded_support": 0.59,
+    "overall_v4_full_revised": 0.3424342105263158,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 0.5,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "shaikh2023_social_media_learning",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.13260000000000002,
+    "overall_v3_graded_support": 0.18135,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "park2023_grants_interdisciplinary_advances",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.3666666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.4066666666666667,
+    "overall_v2_dir_partial": 0.41333333333333333,
+    "overall_v3_graded_support": 0.48833333333333334,
+    "overall_v4_full_revised": 0.4041666666666667,
+    "direction_commit_rate": 0.6666666666666666,
+    "direction_correct_when_committed": 0.5,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "bak_coleman2026_industry_influence",
+    "dir_original": 0.25,
+    "dir_calibrated": 0.375,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.54,
+    "overall_v2_dir_partial": 0.565,
+    "overall_v3_graded_support": 0.64,
+    "overall_v4_full_revised": 0.39522058823529416,
+    "direction_commit_rate": 0.25,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "purkayastha2026_reviewing_reviewer",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2535,
+    "overall_v2_dir_partial": 0.28600000000000003,
+    "overall_v3_graded_support": 0.33475000000000005,
+    "overall_v4_full_revised": 0.154375,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "thelwall2023_altmetric_reflection",
+    "dir_original": 0.2,
+    "dir_calibrated": 0.32,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.48,
+    "overall_v2_dir_partial": 0.504,
+    "overall_v3_graded_support": 0.579,
+    "overall_v4_full_revised": 0.3686363636363636,
+    "direction_commit_rate": 0.4,
+    "direction_correct_when_committed": 0.5,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 5
+    }
+  },
+  {
+    "paper_id": "maddi2022_article_processing_charges",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.525,
+    "overall_v3_graded_support": 0.6,
+    "overall_v4_full_revised": 0.3544642857142857,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "kuznetsov2026_peer_review",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.625,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.515,
+    "overall_v3_graded_support": 0.5900000000000001,
+    "overall_v4_full_revised": 0.35,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "ebrahimi2026_peeriscope",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "benAvraham2026_dream",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "bogner2026_state_peer_review",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.16666666666666666,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.5233333333333333,
+    "overall_v3_graded_support": 0.5983333333333333,
+    "overall_v4_full_revised": 0.35416666666666663,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "kousha2025_stylistic_features",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.24539473684210528,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 6
+    }
+  },
+  {
+    "paper_id": "parra2026_sustainable_peer_review",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2535,
+    "overall_v2_dir_partial": 0.28600000000000003,
+    "overall_v3_graded_support": 0.33475000000000005,
+    "overall_v4_full_revised": 0.154375,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "yadav2026_project_synapse",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.2675,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "wu2025_large_language_models",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.2125,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.4325,
+    "overall_v3_graded_support": 0.5075000000000001,
+    "overall_v4_full_revised": 0.258125,
+    "direction_commit_rate": 0.25,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "hao2024_hlm_cite",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.49,
+    "overall_v3_graded_support": 0.565,
+    "overall_v4_full_revised": 0.328125,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "bank2026_data_driven_analysis",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.5733333333333334,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.4091666666666667,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "peng2026_structural_diversity",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.1875,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.24,
+    "overall_v2_dir_partial": 0.27749999999999997,
+    "overall_v3_graded_support": 0.3525,
+    "overall_v4_full_revised": 0.234375,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "zheng2026_citerag",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "luo2023_prototype_based_interpretability",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.3185,
+    "overall_v2_dir_partial": 0.35100000000000003,
+    "overall_v3_graded_support": 0.39975,
+    "overall_v4_full_revised": 0.21937500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "holm2021_longitudinal_citation_prediction",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.3185,
+    "overall_v2_dir_partial": 0.35100000000000003,
+    "overall_v3_graded_support": 0.39975,
+    "overall_v4_full_revised": 0.21937500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "petersen2023_citation_inflation",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.19999999999999998,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.53,
+    "overall_v3_graded_support": 0.605,
+    "overall_v4_full_revised": 0.3486842105263158,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "lu2026_bias_aware_citation_prediction",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2535,
+    "overall_v2_dir_partial": 0.28600000000000003,
+    "overall_v3_graded_support": 0.33475000000000005,
+    "overall_v4_full_revised": 0.154375,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "wu2026_geographical_biases",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5625,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.33999999999999997,
+    "overall_v2_dir_partial": 0.3525,
+    "overall_v3_graded_support": 0.4275,
+    "overall_v4_full_revised": 0.338125,
+    "direction_commit_rate": 0.25,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "kozlowski2023_uncited_articles",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.19999999999999998,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.53,
+    "overall_v3_graded_support": 0.605,
+    "overall_v4_full_revised": 0.3576086956521739,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "banerjee2025_self_citation_adjusted",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.525,
+    "overall_v3_graded_support": 0.6,
+    "overall_v4_full_revised": 0.35624999999999996,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2503.02216v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.0,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.10010000000000002,
+    "overall_v3_graded_support": 0.14884999999999998,
+    "overall_v4_full_revised": 0.065,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "petersen2024_disruption_index",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.45,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.58,
+    "overall_v3_graded_support": 0.655,
+    "overall_v4_full_revised": 0.4541666666666666,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 0.3333333333333333,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "wu2026_persistent_geographical_biases",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5625,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.33999999999999997,
+    "overall_v2_dir_partial": 0.3525,
+    "overall_v3_graded_support": 0.4275,
+    "overall_v4_full_revised": 0.345625,
+    "direction_commit_rate": 0.25,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "alSinani2025_aiGeneratedPapers",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2535,
+    "overall_v2_dir_partial": 0.28600000000000003,
+    "overall_v3_graded_support": 0.33475000000000005,
+    "overall_v4_full_revised": 0.15812500000000002,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2403.18845v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.33999999999999997,
+    "overall_v2_dir_partial": 0.39,
+    "overall_v3_graded_support": 0.46499999999999997,
+    "overall_v4_full_revised": 0.38749999999999996,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "arXiv_2509.23645v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.29375,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2506.20225v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.27083333333333337,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2502.10496v1",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.625,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.515,
+    "overall_v3_graded_support": 0.5900000000000001,
+    "overall_v4_full_revised": 0.37215909090909094,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Science_2403.16851v3",
+    "dir_original": 0.6666666666666666,
+    "dir_calibrated": 0.6666666666666666,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5233333333333333,
+    "overall_v2_dir_partial": 0.5233333333333333,
+    "overall_v3_graded_support": 0.5983333333333334,
+    "overall_v4_full_revised": 0.363095238095238,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "Research_Policy_2408.05587v3",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.3211,
+    "overall_v2_dir_partial": 0.3211,
+    "overall_v3_graded_support": 0.36985000000000007,
+    "overall_v4_full_revised": 0.26,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2307.12796v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.13260000000000002,
+    "overall_v3_graded_support": 0.18135,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2507.17127v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.3848684210526315,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2310.05926v1",
+    "dir_original": 1.0,
+    "dir_calibrated": 0.75,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.3861,
+    "overall_v2_dir_partial": 0.3536,
+    "overall_v3_graded_support": 0.4023500000000001,
+    "overall_v4_full_revised": 0.30062500000000003,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "Research_Policy_2303.16613v3",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.0,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.44,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.5149999999999999,
+    "overall_v4_full_revised": 0.23653846153846153,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "arXiv_2309.15884v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.2555,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "arXiv_2212.04972v2",
+    "dir_original": 1.0,
+    "dir_calibrated": 0.75,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.69,
+    "overall_v2_dir_partial": 0.64,
+    "overall_v3_graded_support": 0.7150000000000001,
+    "overall_v4_full_revised": 0.47750000000000004,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "Science_2206.01767v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.1,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2535,
+    "overall_v2_dir_partial": 0.2665,
+    "overall_v3_graded_support": 0.31525,
+    "overall_v4_full_revised": 0.13,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "Science_2205.01010v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "Science_2201.09090v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.24,
+    "overall_v2_dir_partial": 0.29,
+    "overall_v3_graded_support": 0.365,
+    "overall_v4_full_revised": 0.25625,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2106.05027v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.25,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2208.08221v4",
+    "dir_original": 0.2,
+    "dir_calibrated": 0.35,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.43,
+    "overall_v2_dir_partial": 0.45999999999999996,
+    "overall_v3_graded_support": 0.5349999999999999,
+    "overall_v4_full_revised": 0.27701612903225803,
+    "direction_commit_rate": 0.2,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 5
+    }
+  },
+  {
+    "paper_id": "arXiv_2101.07067v3",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2535,
+    "overall_v2_dir_partial": 0.28600000000000003,
+    "overall_v3_graded_support": 0.33475000000000005,
+    "overall_v4_full_revised": 0.154375,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "Nature_2004.04165v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.3333333333333333,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.5566666666666666,
+    "overall_v3_graded_support": 0.6316666666666667,
+    "overall_v4_full_revised": 0.38201754385964914,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2005.11218v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.1,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.51,
+    "overall_v3_graded_support": 0.585,
+    "overall_v4_full_revised": 0.31000000000000005,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2512.23429v1",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.3333333333333333,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.4066666666666667,
+    "overall_v2_dir_partial": 0.4066666666666667,
+    "overall_v3_graded_support": 0.4816666666666667,
+    "overall_v4_full_revised": 0.4024509803921569,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2108.12837v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.25113636363636366,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 6
+    }
+  },
+  {
+    "paper_id": "PLoS_ONE_2002.04347v1",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.45666666666666667,
+    "overall_v2_dir_partial": 0.47333333333333333,
+    "overall_v3_graded_support": 0.5483333333333333,
+    "overall_v4_full_revised": 0.3028508771929824,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "Science_1706.07976v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.0,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.10010000000000002,
+    "overall_v3_graded_support": 0.14884999999999998,
+    "overall_v4_full_revised": 0.065,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "Science_2603.22151v1",
+    "dir_original": 0.25,
+    "dir_calibrated": 0.4375,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.44,
+    "overall_v2_dir_partial": 0.4775,
+    "overall_v3_graded_support": 0.5525,
+    "overall_v4_full_revised": 0.31164772727272727,
+    "direction_commit_rate": 0.25,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2409.02592v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.19999999999999998,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.53,
+    "overall_v3_graded_support": 0.605,
+    "overall_v4_full_revised": 0.38125,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2302.07843v2",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.59,
+    "overall_v3_graded_support": 0.665,
+    "overall_v4_full_revised": 0.42500000000000004,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "Scientometrics_1810.12737v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.525,
+    "overall_v3_graded_support": 0.6,
+    "overall_v4_full_revised": 0.39374999999999993,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Scientometrics_1908.07576v1",
+    "dir_original": 1.0,
+    "dir_calibrated": 0.75,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.54,
+    "overall_v2_dir_partial": 0.49,
+    "overall_v3_graded_support": 0.5650000000000001,
+    "overall_v4_full_revised": 0.49583333333333335,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2202.08822v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.13260000000000002,
+    "overall_v3_graded_support": 0.18135,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2404.15176v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.35301724137931034,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 6
+    }
+  },
+  {
+    "paper_id": "arXiv_2602.05211v1",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.5733333333333334,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.4208333333333333,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "Science_2312.01295v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.1,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.51,
+    "overall_v3_graded_support": 0.585,
+    "overall_v4_full_revised": 0.31500000000000006,
+    "direction_commit_rate": 1.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2505.21162v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.525,
+    "overall_v3_graded_support": 0.6,
+    "overall_v4_full_revised": 0.3520833333333333,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2208.06431v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.39749999999999996,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "Science_2207.14260v2",
+    "dir_original": 0.25,
+    "dir_calibrated": 0.4375,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.15600000000000003,
+    "overall_v2_dir_partial": 0.18037500000000004,
+    "overall_v3_graded_support": 0.22912500000000002,
+    "overall_v4_full_revised": 0.13609375,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "Science_2506.06753v1",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.29683333333333334,
+    "overall_v2_dir_partial": 0.3076666666666667,
+    "overall_v3_graded_support": 0.35641666666666666,
+    "overall_v4_full_revised": 0.18552083333333333,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2101.09520v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2535,
+    "overall_v2_dir_partial": 0.28600000000000003,
+    "overall_v3_graded_support": 0.33475000000000005,
+    "overall_v4_full_revised": 0.154375,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2104.05562v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.33999999999999997,
+    "overall_v2_dir_partial": 0.375,
+    "overall_v3_graded_support": 0.44999999999999996,
+    "overall_v4_full_revised": 0.3533653846153846,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2106.10700v1",
+    "dir_original": 0.6666666666666666,
+    "dir_calibrated": 0.5833333333333334,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.6233333333333333,
+    "overall_v2_dir_partial": 0.6066666666666667,
+    "overall_v3_graded_support": 0.6816666666666666,
+    "overall_v4_full_revised": 0.4358333333333333,
+    "direction_commit_rate": 0.6666666666666666,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "Research_Policy_1602.07396v1",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.16683333333333336,
+    "overall_v2_dir_partial": 0.18850000000000003,
+    "overall_v3_graded_support": 0.23725000000000004,
+    "overall_v4_full_revised": 0.14625000000000002,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_1804.03732v3",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.38749999999999996,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2206.11470v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Scientometrics_1804.04105v2",
+    "dir_original": 0.6666666666666666,
+    "dir_calibrated": 0.6666666666666666,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5233333333333333,
+    "overall_v2_dir_partial": 0.5233333333333333,
+    "overall_v3_graded_support": 0.5983333333333334,
+    "overall_v4_full_revised": 0.35049019607843135,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2006.16737v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.3766304347826087,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "Science_2501.15552v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.1875,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.3185,
+    "overall_v2_dir_partial": 0.342875,
+    "overall_v3_graded_support": 0.39162500000000006,
+    "overall_v4_full_revised": 0.20921875,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "arXiv_2104.01955v1",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.625,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.3185,
+    "overall_v2_dir_partial": 0.33475000000000005,
+    "overall_v3_graded_support": 0.38350000000000006,
+    "overall_v4_full_revised": 0.21531250000000005,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_1409.7889v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "arXiv_2311.03834v1",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.45666666666666667,
+    "overall_v2_dir_partial": 0.47333333333333333,
+    "overall_v3_graded_support": 0.5483333333333333,
+    "overall_v4_full_revised": 0.29280303030303034,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2407.14559v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.33999999999999997,
+    "overall_v2_dir_partial": 0.39,
+    "overall_v3_graded_support": 0.46499999999999997,
+    "overall_v4_full_revised": 0.35550000000000004,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 5
+    }
+  },
+  {
+    "paper_id": "Science_1812.09241v1",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.5733333333333334,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.44166666666666665,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2105.06840v1",
+    "dir_original": 0.25,
+    "dir_calibrated": 0.4375,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.44,
+    "overall_v2_dir_partial": 0.4775,
+    "overall_v3_graded_support": 0.5525,
+    "overall_v4_full_revised": 0.29801136363636366,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "Nature_1906.04619v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2501.17456v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.0,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.10010000000000002,
+    "overall_v3_graded_support": 0.14884999999999998,
+    "overall_v4_full_revised": 0.065,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "Scientometrics_1810.12647v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.2675,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 5
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2603.19319v1",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.59,
+    "overall_v2_dir_partial": 0.59,
+    "overall_v3_graded_support": 0.665,
+    "overall_v4_full_revised": 0.42500000000000004,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2202.06661v2",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.625,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.3211,
+    "overall_v2_dir_partial": 0.33735000000000004,
+    "overall_v3_graded_support": 0.38610000000000005,
+    "overall_v4_full_revised": 0.2803125,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_1810.07812v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.25,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2501.02429v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.40808823529411764,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2207.13857v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.425,
+    "overall_v3_graded_support": 0.5,
+    "overall_v4_full_revised": 0.25875000000000004,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2304.11079v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.0,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.10010000000000002,
+    "overall_v3_graded_support": 0.14884999999999998,
+    "overall_v4_full_revised": 0.065,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 1
+    }
+  },
+  {
+    "paper_id": "arXiv_2502.17841v3",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2535,
+    "overall_v2_dir_partial": 0.28600000000000003,
+    "overall_v3_graded_support": 0.33475000000000005,
+    "overall_v4_full_revised": 0.154375,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2201.00531v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.44,
+    "overall_v2_dir_partial": 0.49,
+    "overall_v3_graded_support": 0.565,
+    "overall_v4_full_revised": 0.30416666666666664,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Science_2502.18427v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.22000000000000003,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.534,
+    "overall_v3_graded_support": 0.609,
+    "overall_v4_full_revised": 0.3694736842105263,
+    "direction_commit_rate": 0.2,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 5
+    }
+  },
+  {
+    "paper_id": "Science_2511.05051v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.4125,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2209.11284v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.10010000000000002,
+    "overall_v2_dir_partial": 0.13260000000000002,
+    "overall_v3_graded_support": 0.18135,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "PNAS_2303.14732v3",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.19999999999999998,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.33999999999999997,
+    "overall_v2_dir_partial": 0.38,
+    "overall_v3_graded_support": 0.45499999999999996,
+    "overall_v4_full_revised": 0.355,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2511.04075v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.25250000000000006,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2601.11507v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.27279411764705885,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "arXiv_2604.24071v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "Science_2212.07811v1",
+    "dir_original": 0.2,
+    "dir_calibrated": 0.32,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.53,
+    "overall_v2_dir_partial": 0.554,
+    "overall_v3_graded_support": 0.629,
+    "overall_v4_full_revised": 0.4186363636363636,
+    "direction_commit_rate": 0.4,
+    "direction_correct_when_committed": 0.5,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 5
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2203.06218v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.175,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.525,
+    "overall_v3_graded_support": 0.6,
+    "overall_v4_full_revised": 0.34732142857142856,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "arXiv_2602.10118v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.2535,
+    "overall_v2_dir_partial": 0.28600000000000003,
+    "overall_v3_graded_support": 0.33475000000000005,
+    "overall_v4_full_revised": 0.154375,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Research_Policy_2602.18940v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.375,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Research_Policy_2604.16387v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.2125,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.4325,
+    "overall_v3_graded_support": 0.5075000000000001,
+    "overall_v4_full_revised": 0.24857954545454544,
+    "direction_commit_rate": 0.25,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "arXiv_2601.15172v1",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.625,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.59,
+    "overall_v2_dir_partial": 0.615,
+    "overall_v3_graded_support": 0.6900000000000001,
+    "overall_v4_full_revised": 0.46339285714285716,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2601.21761v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.3185,
+    "overall_v2_dir_partial": 0.35100000000000003,
+    "overall_v3_graded_support": 0.39975,
+    "overall_v4_full_revised": 0.21937500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2606.04716v1",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.5733333333333334,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.4072916666666666,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2601.08156v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2605.12514v1",
+    "dir_original": 0.25,
+    "dir_calibrated": 0.375,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.41500000000000004,
+    "overall_v3_graded_support": 0.49,
+    "overall_v4_full_revised": 0.39567307692307696,
+    "direction_commit_rate": 0.25,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 4
+    }
+  },
+  {
+    "paper_id": "arXiv_2410.09112v1",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.59,
+    "overall_v2_dir_partial": 0.59,
+    "overall_v3_graded_support": 0.665,
+    "overall_v4_full_revised": 0.46562499999999996,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Research_Policy_2603.14919v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.39,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.2532894736842105,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 6
+    }
+  },
+  {
+    "paper_id": "arXiv_2603.00399v2",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.45666666666666667,
+    "overall_v2_dir_partial": 0.47333333333333333,
+    "overall_v3_graded_support": 0.5483333333333333,
+    "overall_v4_full_revised": 0.2941666666666667,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2601.14949v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.54,
+    "overall_v3_graded_support": 0.615,
+    "overall_v4_full_revised": 0.35416666666666663,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2510.19246v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2012.05742v2",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.12350000000000001,
+    "overall_v2_dir_partial": 0.15600000000000003,
+    "overall_v3_graded_support": 0.20475000000000002,
+    "overall_v4_full_revised": 0.10562500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2305.16490v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.25,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.3185,
+    "overall_v2_dir_partial": 0.35100000000000003,
+    "overall_v3_graded_support": 0.39975,
+    "overall_v4_full_revised": 0.21937500000000001,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2504.20081v3",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.49,
+    "overall_v3_graded_support": 0.565,
+    "overall_v4_full_revised": 0.3375,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "Scientometrics_2306.01949v1",
+    "dir_original": 0.0,
+    "dir_calibrated": 0.19999999999999998,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.49,
+    "overall_v2_dir_partial": 0.53,
+    "overall_v3_graded_support": 0.605,
+    "overall_v4_full_revised": 0.3486842105263158,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2406.15311v1",
+    "dir_original": 0.6666666666666666,
+    "dir_calibrated": 0.6666666666666666,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.6233333333333333,
+    "overall_v2_dir_partial": 0.6233333333333333,
+    "overall_v3_graded_support": 0.6983333333333334,
+    "overall_v4_full_revised": 0.4666666666666667,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "others_2410.13989v1",
+    "dir_original": 1.0,
+    "dir_calibrated": 1.0,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.69,
+    "overall_v2_dir_partial": 0.69,
+    "overall_v3_graded_support": 0.765,
+    "overall_v4_full_revised": 0.55,
+    "direction_commit_rate": 0.0,
+    "direction_correct_when_committed": 0.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "arXiv_2503.23414v1",
+    "dir_original": 0.6666666666666666,
+    "dir_calibrated": 0.6666666666666666,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5733333333333333,
+    "overall_v2_dir_partial": 0.5733333333333333,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.4205128205128205,
+    "direction_commit_rate": 0.6666666666666666,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "arXiv_2306.09911v1",
+    "dir_original": 0.3333333333333333,
+    "dir_calibrated": 0.4166666666666667,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.5566666666666666,
+    "overall_v2_dir_partial": 0.5733333333333334,
+    "overall_v3_graded_support": 0.6483333333333333,
+    "overall_v4_full_revised": 0.4117753623188406,
+    "direction_commit_rate": 0.3333333333333333,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  },
+  {
+    "paper_id": "others_2502.04457v1",
+    "dir_original": 0.5,
+    "dir_calibrated": 0.5,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.44,
+    "overall_v2_dir_partial": 0.44,
+    "overall_v3_graded_support": 0.515,
+    "overall_v4_full_revised": 0.41764705882352937,
+    "direction_commit_rate": 0.5,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 2
+    }
+  },
+  {
+    "paper_id": "others_2512.16943v4",
+    "dir_original": 0.6666666666666666,
+    "dir_calibrated": 0.6666666666666666,
+    "css_binary": 0.0,
+    "css_graded": 0.3,
+    "overall_v1_original": 0.6233333333333333,
+    "overall_v2_dir_partial": 0.6233333333333333,
+    "overall_v3_graded_support": 0.6983333333333334,
+    "overall_v4_full_revised": 0.47916666666666663,
+    "direction_commit_rate": 0.6666666666666666,
+    "direction_correct_when_committed": 1.0,
+    "support_strength_distribution": {
+      "strong": 0,
+      "moderate": 0,
+      "weak": 3
+    }
+  }
+]

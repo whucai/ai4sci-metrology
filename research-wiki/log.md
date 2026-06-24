@@ -218,3 +218,4 @@ Prompt：`src/extraction/toulmin_prompt.py`
 - `2026-06-11T09:46:04Z` ingest_paper: ingested paper:nguyen2026_replicatorbench_benchmarking_llm (arxiv:2602.11354)
 - `2026-06-11T09:46:05Z` ingest_paper: ingested paper:waltman2018_exploration_reproducibility_issues (arxiv:1804.05024)
 - `2026-06-11T09:46:06Z` ingest_paper: ingested paper:velden2018_exploration_reproducibility_issues (arxiv:1804.05026)
+- `2026-06-24T04:06:34Z` Wiki initialized

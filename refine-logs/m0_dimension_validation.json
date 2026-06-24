@@ -1,0 +1,32 @@
+{
+  "paper": "wu2019_disruption",
+  "scenarios": [
+    "Perfect",
+    "Sample-Error",
+    "Indicator-Error",
+    "Spurious"
+  ],
+  "correlations": {
+    "fidelity_executability": 0.9054712273424937,
+    "fidelity_numerical_accuracy": -0.21471035212781323,
+    "fidelity_claim_consistency": -0.1624063872137643,
+    "fidelity_auditability": 0.9054712273424937,
+    "executability_numerical_accuracy": -0.5943157403164855,
+    "executability_claim_consistency": -0.3333333333333333,
+    "executability_auditability": 0.9999999999999998,
+    "numerical_accuracy_claim_consistency": 0.6755595657784098,
+    "numerical_accuracy_auditability": -0.5943157403164855,
+    "claim_consistency_auditability": -0.33333333333333326
+  },
+  "failure_patterns": {
+    "Perfect": "fidelity",
+    "Sample-Error": "claim_consistency",
+    "Indicator-Error": "numerical_accuracy",
+    "Spurious": "auditability"
+  },
+  "tests": {
+    "correlation": false,
+    "failure_patterns": true,
+    "all_pass": false
+  }
+}

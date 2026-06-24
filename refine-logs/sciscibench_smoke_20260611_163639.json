@@ -1,0 +1,19 @@
+{
+  "wu2019_disruption": {
+    "schema_valid": true,
+    "violations": [],
+    "contamination": "high",
+    "gold_json_keys": [
+      "paper_id",
+      "independent_variables",
+      "dependent_variables",
+      "control_variables",
+      "statistical_method",
+      "network_construction",
+      "sample_scope",
+      "grouping_strategy",
+      "robustness_checks",
+      "expected_result_form"
+    ]
+  }
+}

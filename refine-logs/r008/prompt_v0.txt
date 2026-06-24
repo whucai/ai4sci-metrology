@@ -1,0 +1,99 @@
+Reproduce the edge-removal disruption robustness method from:
+
+  Deng & Zeng (2023) "Enhancing the robustness of the disruption metric against noise"
+  Scientometrics, 2023. DOI: 10.1007/s11192-023-04644-2
+
+## METHOD SUMMARY
+
+The paper proposes a modified disruption index that removes edges to "hot-spot
+papers" (highly cited references) from the citation network, then recomputes CD5.
+The goal: show that removing highly-cited-reference edges makes the disruption
+metric better at distinguishing innovative from developmental papers.
+
+## TASK
+
+Implement the edge-removal disruption method using SciSciNet data. The method
+has these components:
+
+### Component 1: Baseline CD5 Computation
+- For a sample of focal papers, compute CD5 = (ni - nj) / (ni + nj + nk)
+- ni = # papers citing focal but NONE of focal's references
+- nj = # papers citing both focal AND at least one reference
+- nk = # papers citing references but NOT focal
+- Use paper_citations.parquet for the citation graph
+
+### Component 2: Hot-Spot Paper Identification
+- Among all reference papers cited by the focal papers, identify the top 3%
+  most cited papers (by in-degree in the citation graph)
+- These are the "hot-spot papers"
+
+### Component 3: Edge Removal
+- For each focal paper, identify which of its references are hot-spot papers
+- When computing nj (citers that also cite references), ignore edges from
+  citers to hot-spot references
+- Recompute ni and nj with the pruned edge set
+
+### Component 4: Comparison
+- Compare CD5 before vs after edge removal
+- Report: mean CD5 change, rank correlation before/after, % papers with
+  significant rank change, number of hot-spot papers identified
+
+## MANDATORY CONSTRAINTS
+
+### C1: DATA SOURCE
+Use SciSciNet:
+  from src.sciscigpt_local.sciscinet_connector import load_papers_sample, load_table
+  papers = load_papers_sample(n_shards=3)
+  pc = load_table("paper_citations")
+
+### C2: SAMPLE
+- Filter papers to: year >= 1945, disruption_score not null, citation_count > 0, reference_count > 0
+- Sample 500 papers using np.random.seed(42) and np.random.choice
+- Use these 500 as focal papers
+
+### C3: CITATION COUNTS
+- Compute in-degree from paper_citations using groupby("cited_paper_id").size()
+- Hot-spot threshold: top 3% most cited among all references (sorted citation counts)
+
+### C4: CD5 FORMULA
+- CD5 = (ni - nj) / (ni + nj + nk)
+- ni = citers with NO overlap with focal's references
+- nj = citers with at least one reference overlap with focal's references
+- nk = papers citing focal's references but not citing focal
+
+### C5: REQUIRED OUTPUT SECTIONS
+
+print("\n=== DATA_LOAD ===")
+# N papers loaded, N valid, N focal sampled
+
+print("\n=== CITATION_GRAPH ===")
+# N edges in paper_citations, N unique cited papers, in-degree range
+
+print("\n=== HOTSPOT ===")
+# N unique references, threshold, N hotspot papers
+
+print("\n=== CD5_BASELINE ===")
+# Mean, std of baseline CD5 across focal papers
+
+print("\n=== CD5_EDGE_REMOVAL ===")
+# Mean, std of new CD5, mean delta, N papers with CD5 change
+
+print("\n=== COMPARISON ===")
+# Rank correlation, % significant rank change
+
+print("\n=== DIFF_TABLE ===")
+# | Metric | Value |
+# | n_focal | 500 |
+# | baseline_cd5_mean | ... |
+# | new_cd5_mean | ... |
+# | cd5_delta_mean | ... |
+# | rank_correlation | ... |
+# | pct_rank_change | ... |
+# | n_papers_changed | ... |
+# | n_hotspot_papers | ... |
+
+### C6: KEY REQUIREMENTS
+- Use defaultdict(set) for refs, citers, citer_refs dicts
+- Use set operations (&, |, -) for ni/nj/nk computation
+- Hot-spot removal: effective_refs = citer_refs - hotspot_ids
+- Print progress every 100 papers

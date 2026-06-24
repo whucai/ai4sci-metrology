@@ -1,0 +1,53 @@
+{
+  "wu2019_disruption": {
+    "schema_valid": true,
+    "violations": [],
+    "contamination": "high",
+    "gold_json_keys": [
+      "paper_id",
+      "independent_variables",
+      "dependent_variables",
+      "control_variables",
+      "statistical_method",
+      "network_construction",
+      "sample_scope",
+      "grouping_strategy",
+      "robustness_checks",
+      "expected_result_form"
+    ]
+  },
+  "ke2023_normalized_impact": {
+    "schema_valid": true,
+    "violations": [],
+    "contamination": "high",
+    "gold_json_keys": [
+      "paper_id",
+      "independent_variables",
+      "dependent_variables",
+      "control_variables",
+      "statistical_method",
+      "network_construction",
+      "sample_scope",
+      "grouping_strategy",
+      "robustness_checks",
+      "expected_result_form"
+    ]
+  },
+  "arts2025_frontier_scientists": {
+    "schema_valid": true,
+    "violations": [],
+    "contamination": "medium",
+    "gold_json_keys": [
+      "paper_id",
+      "independent_variables",
+      "dependent_variables",
+      "control_variables",
+      "statistical_method",
+      "network_construction",
+      "sample_scope",
+      "grouping_strategy",
+      "robustness_checks",
+      "expected_result_form"
+    ]
+  }
+}

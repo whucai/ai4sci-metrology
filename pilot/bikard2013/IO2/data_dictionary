@@ -1,0 +1,15 @@
+# Data Dictionary — bikard2013 (IO₂, no executable code)
+
+Original: 661 MIT faculty, 5,964 scientist-year observations, 1976–2006 (PRIVATE — unavailable).
+Provided sample: raw_data/sciscinet_sample.parquet — 40,000 SCIENTIFIC PAPERS (DATA-SUB: paper-author stands in for MIT faculty; collaboration = author_count).
+
+| column | type | meaning |
+|--------|------|---------|
+| paper_id | str | publication id |
+| year | int | publication year |
+| author_count | int | # coauthors (proxy for collaboration / group size; paper mean group=3.8) |
+| citation_count_5y | float | forward citations (quality proxy; paper uses E[Cites]) |
+| reference_count | int | references |
+
+Paper model: OLS + department-year + individual-scientist + career-stage FE, robust SE clustered at scientist. DV: quality (citations) for H1 (β≈0.099); Frac_Pubs (log) for H2 (β≈-0.069). Inflection points 5.4 / 9.6.
+DATA-SUB limitation: cannot reconstruct individual-scientist FE from paper-level data; approximate with year FE + author_count as the collaboration measure.

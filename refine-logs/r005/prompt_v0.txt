@@ -1,0 +1,46 @@
+Reproduce the taxonomy and methodological structure from:
+
+  Zhao & Zhang (2025) "A Review on the Novelty Measurements of Academic Papers"
+  Scientometrics, 2025. DOI: 10.1007/s11192-025-05234-0
+
+## TASK
+
+This is a SURVEY/METHOD paper. Reproduce the conceptual framework and
+taxonomy of novelty measurements. No code execution is needed — this
+task evaluates whether you can correctly identify, categorize, and
+describe the methodological structure of the paper.
+
+## REQUIRED OUTPUT SECTIONS
+
+### 1. CONCEPTUAL_DISTINCTIONS
+Define and distinguish: novelty, originality, and innovation.
+Print in format:
+  novelty: <definition>
+  originality: <definition>
+  innovation: <definition>
+
+### 2. NOVELTY_TYPES
+List at least 4 types/dimensions of scientific novelty discussed in the paper.
+Print each on a new line with a brief description.
+
+### 3. MEASUREMENT_APPROACHES
+Categorize novelty measurement approaches by data type.
+For each category, list at least 3 specific methods/techniques.
+Format:
+  CATEGORY: <name>
+    - <method 1>
+    - <method 2>
+    - <method 3>
+
+### 4. VALIDATION_APPROACHES
+List approaches used to validate novelty measures.
+Print each on a new line.
+
+### 5. KEY_CHALLENGES
+List at least 4 open challenges in novelty measurement.
+Print each on a new line.
+
+### 6. DIFF_TABLE
+Print a markdown table summarizing the taxonomy:
+| Category | Data Type | Example Methods | Validation |
+|----------|-----------|-----------------|------------|

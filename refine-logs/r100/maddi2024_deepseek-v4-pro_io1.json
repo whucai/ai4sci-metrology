@@ -1,0 +1,71 @@
+{
+  "paper": "maddi2024",
+  "model": "deepseek-v4-pro",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782297256,
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 118.2,
+    "usage": {
+      "completion": 8909,
+      "prompt": 15175
+    },
+    "finish": "stop",
+    "n_content_chars": 13397
+  },
+  "llm_response_chars": 13397,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.96,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 355
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 93, in <module>\n    df['erc'] = np.random.choice(erc_list, size=n_total, p=erc_props)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 975, in numpy.random.mtrand.RandomState.choice\nValueError: probabilities do not sum to 1\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['publons', 'wos']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['57482', '2020', '947']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['word count', 'iqr']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['glm', 'log(1', 'log1p']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['947', 'positive']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['longer', 'positive', 'threshold']"
+      }
+    },
+    "overall_ecrf": 1.0
+  },
+  "status": "DONE",
+  "t_end": 1782297375
+}

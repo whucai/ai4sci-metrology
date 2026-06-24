@@ -1,0 +1,7 @@
+# Sample Notes — Petersen2024
+
+Original paper N = 2.9M patents 1977–2005 (WoS/MAG); the regression (Eq. 2) uses a 2011–2015 subset, N=102,550.
+Provided sample: 40,000 SciSciNet papers 1980–2015 (DATA-SUB for the WoS subset).
+Filters to apply: drop NaN in disruption_score, reference_count, author_count, citation_count_5y, year.
+Construct ln_rp = ln(1+reference_count), ln_kp = ln(1+author_count), ln_cp = ln(1+citation_count_5y).
+Target: OLS of abs(disruption_score) ~ ln_rp + ln_kp + ln_cp + C(year); paper reports ln_rp coef ≈ -0.002322 (p<0.001), R²≈0.120.

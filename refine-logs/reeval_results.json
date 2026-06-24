@@ -1,0 +1,542 @@
+[
+  {
+    "paper_id": "kong2025_citation_structural_diversity",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "akella2023_reproducibility_signals",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "ke2023_network_based_normalized_impact",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "parra2026_sustainable_peer_review",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "ghorbi2023_iranian_retractions",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "sjogarde2023_covid_citations",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "fletcher2024_reproducibility",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "deng2023_enhancing_disruption",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "kozlowski2023_uncited_articles",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "sun2023_ranking_mobility",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "thelwall2025_openalex_citation",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "zheng2026_citerag",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "sunahara2023_universal_productivity",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "traag2025_citation_models",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "slavov2022_eternalism",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "baccini2025_similarity_matrix",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "bikard2013_exploring_tradeoffs",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "alSinani2025_aiGeneratedPapers",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "hao2024_hlm_cite",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "rosendo2023_kheops",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "hanson2023_strain_publishing",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "zhao2020_delayed_recognition",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "wagner2023_openness_impact",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "benAvraham2026_dream",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "abramo2013_assessing_accuracy",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "donner2024_data_inaccuracy",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "buruk2023_academic_writing",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "wu2026_geographical_biases",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "li2023_two_stage",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "holm2021_longitudinal_citation_prediction",
+    "level": "L1",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "kong2025_citation_structural_diversity",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "akella2023_reproducibility_signals",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "ke2023_network_based_normalized_impact",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "parra2026_sustainable_peer_review",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "ghorbi2023_iranian_retractions",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "sjogarde2023_covid_citations",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "fletcher2024_reproducibility",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "deng2023_enhancing_disruption",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "kozlowski2023_uncited_articles",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "sun2023_ranking_mobility",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "thelwall2025_openalex_citation",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "zheng2026_citerag",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "sunahara2023_universal_productivity",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "traag2025_citation_models",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "slavov2022_eternalism",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "baccini2025_similarity_matrix",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "bikard2013_exploring_tradeoffs",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "alSinani2025_aiGeneratedPapers",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "hao2024_hlm_cite",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "rosendo2023_kheops",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "hanson2023_strain_publishing",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "zhao2020_delayed_recognition",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "wagner2023_openness_impact",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "benAvraham2026_dream",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "abramo2013_assessing_accuracy",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "donner2024_data_inaccuracy",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "buruk2023_academic_writing",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "wu2026_geographical_biases",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "li2023_two_stage",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "holm2021_longitudinal_citation_prediction",
+    "level": "L2",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "kong2025_citation_structural_diversity",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "akella2023_reproducibility_signals",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "ke2023_network_based_normalized_impact",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "parra2026_sustainable_peer_review",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "ghorbi2023_iranian_retractions",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "sjogarde2023_covid_citations",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "fletcher2024_reproducibility",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "deng2023_enhancing_disruption",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "kozlowski2023_uncited_articles",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "sun2023_ranking_mobility",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "thelwall2025_openalex_citation",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "zheng2026_citerag",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "sunahara2023_universal_productivity",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "traag2025_citation_models",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "slavov2022_eternalism",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "baccini2025_similarity_matrix",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "bikard2013_exploring_tradeoffs",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "alSinani2025_aiGeneratedPapers",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "hao2024_hlm_cite",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "rosendo2023_kheops",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "hanson2023_strain_publishing",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "zhao2020_delayed_recognition",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "wagner2023_openness_impact",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "benAvraham2026_dream",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "abramo2013_assessing_accuracy",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "donner2024_data_inaccuracy",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "buruk2023_academic_writing",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "wu2026_geographical_biases",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "li2023_two_stage",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  },
+  {
+    "paper_id": "holm2021_longitudinal_citation_prediction",
+    "level": "L3",
+    "overall_score": null,
+    "error": "type object 'SciSciPaper' has no attribute 'from_registry_entry'"
+  }
+]

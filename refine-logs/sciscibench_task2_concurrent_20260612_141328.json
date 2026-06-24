@@ -1,0 +1,1841 @@
+[
+  {
+    "paper_id": "leibel2023_disruption_index",
+    "level": "L3",
+    "elapsed": 6.4,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 3,
+      "details": [
+        {
+          "gold_claim": "convergent validity some modified index variants (e.g., DI5) show higher degrees of convergent validity than DI1 positiv",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "data-induced biases disruption indices suffer from several data-induced biases negative descriptive",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "time-sensitive biases disruption indices suffer from time-sensitive biases negative descriptive",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The literature on convergent validity is not entirely conclusive.",
+        "Disruption indices suffer from inconsistency, time-sensitive biases, and several data-induced biases.",
+        "The theoretical construct of disruption is not yet fully understood."
+      ],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 1.0,
+    "overall_score": 0.75,
+    "status": "success"
+  },
+  {
+    "paper_id": "funk2017_dynamic_network",
+    "level": "L3",
+    "elapsed": 7.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 2,
+      "details": [
+        {
+          "gold_claim": "CDt Index Higher for universities with federal funding positive p < 0.01",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "mCDt Index Higher for universities with commercial engagement positive p < 0.01",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [
+        "p < 0.01",
+        "p < 0.01"
+      ],
+      "gold_significance_category": "significant",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": false
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The study focuses on university-related patents and may not generalize to other types of organizations.",
+        "The measurement of commercial engagement and federal funding may be subject to biases or incomplete data."
+      ],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 1.0,
+    "overall_score": 0.65,
+    "status": "success"
+  },
+  {
+    "paper_id": "leibel2023_disruption_index",
+    "level": "L2",
+    "elapsed": 9.0,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 3,
+      "total": 3,
+      "details": [
+        {
+          "gold_claim": "convergent validity some modified index variants (e.g., DI5) show higher degrees of convergent validity than DI1 positiv",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "negative",
+            "negative"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "data-induced biases disruption indices suffer from several data-induced biases negative descriptive",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "positive",
+            "negative",
+            "negative"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "time-sensitive biases disruption indices suffer from time-sensitive biases negative descriptive",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "positive",
+            "negative",
+            "negative"
+          ],
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 3,
+      "supported_claims": 3
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The literature on convergent validity is not entirely conclusive.",
+        "Disruption indices suffer from inconsistency, time-sensitive biases, and several data-induced biases.",
+        "The theoretical construct of disruption is not yet fully understood."
+      ],
+      "pred_limitations": [
+        "The study is descriptive and based on a synthesis of existing literature, which may be subject to pu"
+      ],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 3,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.8500000000000001,
+    "status": "success"
+  },
+  {
+    "paper_id": "petersen2023_disruption_index",
+    "level": "L1",
+    "elapsed": 12.1,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 1,
+      "total": 1,
+      "details": [
+        {
+          "gold_directions": [
+            "negative",
+            "positive",
+            "positive"
+          ],
+          "pred_direction": "negative",
+          "matches_found": 1,
+          "total_gold": 3,
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {},
+    "claim_support_score": 0.0,
+    "claim_support_detail": {},
+    "limitation_awareness": 0.0,
+    "limitation_detail": {},
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {},
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.8,
+    "status": "success"
+  },
+  {
+    "paper_id": "petersen2023_disruption_index",
+    "level": "L2",
+    "elapsed": 12.7,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 3,
+      "total": 3,
+      "details": [
+        {
+          "gold_claim": "disruption_index_CD declines over time negative descriptive",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "negative",
+            "positive",
+            "null"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "reference_list_length increases over time positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "negative",
+            "positive",
+            "null"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "self_citations increases over time positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "negative",
+            "positive",
+            "null"
+          ],
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 3,
+      "supported_claims": 3
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The analysis is based on descriptive statistics and does not include formal statistical testing.",
+        "The paper does not propose an alternative to the disruption index that accounts for citation inflation."
+      ],
+      "pred_limitations": [
+        "The study uses descriptive rather than inferential statistical methods, limiting the ability to esta",
+        "The disruption index is not directly compared to alternative measures of innovation or disruption.",
+        "The analysis does not account for potential field-specific variations in citation practices."
+      ],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.3333333333333333,
+    "hallucinated_detail": {
+      "total_predicted": 3,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.7833333333333334,
+    "status": "success"
+  },
+  {
+    "paper_id": "funk2017_dynamic_network",
+    "level": "L2",
+    "elapsed": 12.9,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 2,
+      "total": 2,
+      "details": [
+        {
+          "gold_claim": "CDt Index Higher for universities with federal funding positive p < 0.01",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "mCDt Index Higher for universities with commercial engagement positive p < 0.01",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive"
+          ],
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [
+        "p < 0.01",
+        "p < 0.01"
+      ],
+      "gold_significance_category": "significant",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": false
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The study focuses on university-related patents and may not generalize to other types of organizations.",
+        "The measurement of commercial engagement and federal funding may be subject to biases or incomplete data."
+      ],
+      "pred_limitations": [
+        "The study does not explicitly state the time window, which could affect the interpretation of trends",
+        "The sample is limited to university-related patents, which may not represent the broader innovation ",
+        "The CDt and mCDt indexes are novel and may not have been validated against other measures of technol",
+        "The study does not account for potential endogeneity between funding, commercial engagement, and inv"
+      ],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.7,
+    "status": "success"
+  },
+  {
+    "paper_id": "funk2017_dynamic_network",
+    "level": "L1",
+    "elapsed": 13.2,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 1,
+      "total": 1,
+      "details": [
+        {
+          "gold_directions": [
+            "positive",
+            "positive"
+          ],
+          "pred_direction": "positive",
+          "matches_found": 2,
+          "total_gold": 2,
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {},
+    "claim_support_score": 0.0,
+    "claim_support_detail": {},
+    "limitation_awareness": 0.0,
+    "limitation_detail": {},
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {},
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.8,
+    "status": "success"
+  },
+  {
+    "paper_id": "petersen2023_disruption_index",
+    "level": "L3",
+    "elapsed": 8.0,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 3,
+      "details": [
+        {
+          "gold_claim": "disruption_index_CD declines over time negative descriptive",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "reference_list_length increases over time positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "self_citations increases over time positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The analysis is based on descriptive statistics and does not include formal statistical testing.",
+        "The paper does not propose an alternative to the disruption index that accounts for citation inflation."
+      ],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 1.0,
+    "overall_score": 0.75,
+    "status": "success"
+  },
+  {
+    "paper_id": "leibel2023_disruption_index",
+    "level": "L1",
+    "elapsed": 18.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_directions": [
+            "positive",
+            "negative",
+            "negative"
+          ],
+          "pred_direction": "unknown",
+          "matches_found": 0,
+          "total_gold": 3,
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {},
+    "claim_support_score": 0.0,
+    "claim_support_detail": {},
+    "limitation_awareness": 0.0,
+    "limitation_detail": {},
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {},
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.4,
+    "status": "success"
+  },
+  {
+    "paper_id": "ke2023_network_based_normalized_impact",
+    "level": "L3",
+    "elapsed": 7.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 2,
+      "details": [
+        {
+          "gold_claim": "normalized citation count (ˆC) follows a universal distribution across disciplines and time positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "representation of high-impact papers diverse fields such as geosciences, radiology, and optics are identified as sources",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The method relies on the availability of comprehensive citation data, which may not be accessible for all fields or time periods.",
+        "The cocitation-based normalization assumes that cocited papers are topically related, which may not always be accurate."
+      ],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 1.0,
+    "overall_score": 0.75,
+    "status": "success"
+  },
+  {
+    "paper_id": "bikard2013_exploring_tradeoffs",
+    "level": "L3",
+    "elapsed": 7.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 5,
+      "details": [
+        {
+          "gold_claim": "citation_count 60% higher positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "fractional_citation increased positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "paper_output_per_author increased up to 4 coauthors positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "cross-departmental_collaboration higher quality papers at lower productivity cost positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "senior_coauthor low quality gain and high productivity loss negative descriptive",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive",
+        "descriptive",
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The study is limited to a single institution (MIT), which may not be representative of the broader scientific community.",
+        "The paper does not fully quantify the mechanisms of credit allocation in collaborative work."
+      ],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 1.0,
+    "overall_score": 0.65,
+    "status": "success"
+  },
+  {
+    "paper_id": "ke2023_network_based_normalized_impact",
+    "level": "L1",
+    "elapsed": 14.1,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 1,
+      "details": [
+        {
+          "gold_directions": [
+            "positive",
+            "positive"
+          ],
+          "pred_direction": "unknown",
+          "matches_found": 0,
+          "total_gold": 2,
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {},
+    "claim_support_score": 0.0,
+    "claim_support_detail": {},
+    "limitation_awareness": 0.0,
+    "limitation_detail": {},
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {},
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.4,
+    "status": "success"
+  },
+  {
+    "paper_id": "ke2023_network_based_normalized_impact",
+    "level": "L2",
+    "elapsed": 12.6,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 2,
+      "total": 2,
+      "details": [
+        {
+          "gold_claim": "normalized citation count (ˆC) follows a universal distribution across disciplines and time positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "representation of high-impact papers diverse fields such as geosciences, radiology, and optics are identified as sources",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive"
+          ],
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 3,
+      "supported_claims": 3
+    },
+    "limitation_awareness": 1.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The method relies on the availability of comprehensive citation data, which may not be accessible for all fields or time periods.",
+        "The cocitation-based normalization assumes that cocited papers are topically related, which may not always be accurate."
+      ],
+      "pred_limitations": [
+        "The study is descriptive and does not provide statistical significance testing.",
+        "The method relies on the availability of citation and cocitation data, which may not be complete or ",
+        "The normalization method assumes that cocited papers are a valid proxy for the local comparison grou"
+      ],
+      "matches_found": 2
+    },
+    "hallucinated_claim_rate": 0.3333333333333333,
+    "hallucinated_detail": {
+      "total_predicted": 3,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.9333333333333333,
+    "status": "success"
+  },
+  {
+    "paper_id": "park2023_disruptive",
+    "level": "L1",
+    "elapsed": 13.0,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 1,
+      "total": 1,
+      "details": [
+        {
+          "gold_directions": [
+            "negative",
+            "negative"
+          ],
+          "pred_direction": "negative",
+          "matches_found": 2,
+          "total_gold": 2,
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {},
+    "claim_support_score": 0.0,
+    "claim_support_detail": {},
+    "limitation_awareness": 0.0,
+    "limitation_detail": {},
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {},
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.8,
+    "status": "success"
+  },
+  {
+    "paper_id": "bikard2013_exploring_tradeoffs",
+    "level": "L2",
+    "elapsed": 15.0,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 5,
+      "total": 5,
+      "details": [
+        {
+          "gold_claim": "citation_count 60% higher positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive",
+            "negative",
+            "positive"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "fractional_citation increased positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive",
+            "negative",
+            "positive"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "paper_output_per_author increased up to 4 coauthors positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive",
+            "negative",
+            "positive"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "cross-departmental_collaboration higher quality papers at lower productivity cost positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive",
+            "negative",
+            "positive"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "senior_coauthor low quality gain and high productivity loss negative descriptive",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive",
+            "negative",
+            "positive"
+          ],
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive",
+        "descriptive",
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 5,
+      "supported_claims": 5
+    },
+    "limitation_awareness": 0.5,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The study is limited to a single institution (MIT), which may not be representative of the broader scientific community.",
+        "The paper does not fully quantify the mechanisms of credit allocation in collaborative work."
+      ],
+      "pred_limitations": [
+        "The study is limited to a single institution (MIT), which may not represent the broader scientific c",
+        "The use of descriptive statistics without inferential testing limits the ability to assess statistic",
+        "The paper does not account for unobserved variables that may influence collaboration and credit allo",
+        "The fixed-effects model may not fully capture the complexity of collaboration dynamics."
+      ],
+      "matches_found": 1
+    },
+    "hallucinated_claim_rate": 0.2,
+    "hallucinated_detail": {
+      "total_predicted": 5,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.885,
+    "status": "success"
+  },
+  {
+    "paper_id": "bikard2013_exploring_tradeoffs",
+    "level": "L1",
+    "elapsed": 15.5,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 1,
+      "total": 1,
+      "details": [
+        {
+          "gold_directions": [
+            "positive",
+            "positive",
+            "positive",
+            "positive",
+            "negative"
+          ],
+          "pred_direction": "positive",
+          "matches_found": 4,
+          "total_gold": 5,
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {},
+    "claim_support_score": 0.0,
+    "claim_support_detail": {},
+    "limitation_awareness": 0.0,
+    "limitation_detail": {},
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {},
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.8,
+    "status": "success"
+  },
+  {
+    "paper_id": "arts2021_natural_language_processing",
+    "level": "L3",
+    "elapsed": 7.2,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 3,
+      "details": [
+        {
+          "gold_claim": "new_keyword_combination_reuse highest discriminatory power positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "cosine_similarity improves over traditional metrics positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "correlation_with_traditional_metrics weak null descriptive",
+          "gold_direction": "null",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The paper does not provide a detailed analysis of the limitations of the NLP-based measures.",
+        "The validation is based on case-control studies and may not generalize to all patents."
+      ],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 1.0,
+    "overall_score": 0.75,
+    "status": "success"
+  },
+  {
+    "paper_id": "park2023_disruptive",
+    "level": "L3",
+    "elapsed": 9.4,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 2,
+      "details": [
+        {
+          "gold_claim": "average CD5 for papers decreased from 0.52 in 1945 to 0.04 in 2010 for 'social sciences' negative descriptive",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "unknown",
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "average CD5 for patents decreased from 0.30 in 1980 to 0.06 in 2010 for 'computers and communications' negative descript",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "unknown",
+            "unknown"
+          ],
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The study relies on citation data, which may not fully capture the impact or novelty of a paper or patent.",
+        "The CD5 index is a novel metric, and its interpretation may be subject to debate."
+      ],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 1.0,
+    "overall_score": 0.75,
+    "status": "success"
+  },
+  {
+    "paper_id": "arts2021_natural_language_processing",
+    "level": "L2",
+    "elapsed": 12.7,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 3,
+      "total": 3,
+      "details": [
+        {
+          "gold_claim": "new_keyword_combination_reuse highest discriminatory power positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "null"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "cosine_similarity improves over traditional metrics positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "null"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "correlation_with_traditional_metrics weak null descriptive",
+          "gold_direction": "null",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "null"
+          ],
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 3,
+      "supported_claims": 3
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The paper does not provide a detailed analysis of the limitations of the NLP-based measures.",
+        "The validation is based on case-control studies and may not generalize to all patents."
+      ],
+      "pred_limitations": [
+        "The study uses descriptive statistics and case-control designs, which limit the ability to infer cau",
+        "Partial coverage for patents before 1976 may affect the representativeness of the sample.",
+        "The weak correlation with traditional metrics may be due to differences in measurement scales or con",
+        "The study does not provide statistical significance testing for the observed effects."
+      ],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 3,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.8500000000000001,
+    "status": "success"
+  },
+  {
+    "paper_id": "park2023_disruptive",
+    "level": "L2",
+    "elapsed": 16.6,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 2,
+      "total": 2,
+      "details": [
+        {
+          "gold_claim": "average CD5 for papers decreased from 0.52 in 1945 to 0.04 in 2010 for 'social sciences' negative descriptive",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "negative",
+            "negative",
+            "null"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "average CD5 for patents decreased from 0.30 in 1980 to 0.06 in 2010 for 'computers and communications' negative descript",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "negative",
+            "negative",
+            "null"
+          ],
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 3,
+      "supported_claims": 3
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The study relies on citation data, which may not fully capture the impact or novelty of a paper or patent.",
+        "The CD5 index is a novel metric, and its interpretation may be subject to debate."
+      ],
+      "pred_limitations": [
+        "The study uses descriptive statistics and trend analysis, which do not establish causality.",
+        "The CD5 index is a specific measure of disruptiveness and may not capture all aspects of scientific ",
+        "The control variables (e.g., quality of science) are not directly measured but inferred, which may i",
+        "The sample is limited to a specific set of fields and time periods, which may not represent the broa"
+      ],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 3,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.8500000000000001,
+    "status": "success"
+  },
+  {
+    "paper_id": "schaper2025_frontier_scientists",
+    "level": "L3",
+    "elapsed": 8.3,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 4,
+      "details": [
+        {
+          "gold_claim": "technology impact Higher positive p < 0.01",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "technology hit probability Higher positive p < 0.01",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "private value Higher positive p < 0.01",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "claims breadth Broader positive p < 0.01",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown"
+          ],
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [
+        "p < 0.01",
+        "p < 0.01",
+        "p < 0.01",
+        "p < 0.01"
+      ],
+      "gold_significance_category": "significant",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": false
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 1,
+      "supported_claims": 1
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The study is limited to the biomedical industry and U.S. patents, so the findings may not generalize to other industries or countries.",
+        "The paper does not fully disentangle the causal mechanisms behind the impact premium of frontier-author patents."
+      ],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 1.0,
+    "hallucinated_detail": {
+      "total_predicted": 1,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 1.0,
+    "overall_score": 0.55,
+    "status": "success"
+  },
+  {
+    "paper_id": "gebhart2023_mathematical_framework",
+    "level": "L2",
+    "elapsed": 10.5,
+    "direction_accuracy": 0.5,
+    "direction_detail": {
+      "correct": 1,
+      "total": 2,
+      "details": [
+        {
+          "gold_claim": "centrality-based disruption measures higher discernment of future award-winning innovations positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "CD Index less discernment of future award-winning innovations compared to centrality-based measures negative descriptive",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "positive",
+            "positive"
+          ],
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The paper does not specify the exact datasets used for empirical validation.",
+        "The theoretical framework is not tested across a wide range of scientific domains."
+      ],
+      "pred_limitations": [
+        "The study does not provide statistical significance for the observed effects.",
+        "The sample scope and time window are not explicitly defined, limiting generalizability.",
+        "The control variable 'citation count' may not fully account for all confounding factors influencing "
+      ],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.7250000000000001,
+    "status": "success"
+  },
+  {
+    "paper_id": "gebhart2023_mathematical_framework",
+    "level": "L3",
+    "elapsed": 8.0,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 2,
+      "details": [
+        {
+          "gold_claim": "centrality-based disruption measures higher discernment of future award-winning innovations positive descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown",
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "CD Index less discernment of future award-winning innovations compared to centrality-based measures negative descriptive",
+          "gold_direction": "negative",
+          "pred_directions": [
+            "unknown",
+            "unknown"
+          ],
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The paper does not specify the exact datasets used for empirical validation.",
+        "The theoretical framework is not tested across a wide range of scientific domains."
+      ],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 1.0,
+    "overall_score": 0.75,
+    "status": "success"
+  },
+  {
+    "paper_id": "schaper2025_frontier_scientists",
+    "level": "L1",
+    "elapsed": 15.5,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 1,
+      "total": 1,
+      "details": [
+        {
+          "gold_directions": [
+            "positive",
+            "positive",
+            "positive",
+            "positive"
+          ],
+          "pred_direction": "positive",
+          "matches_found": 4,
+          "total_gold": 4,
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {},
+    "claim_support_score": 0.0,
+    "claim_support_detail": {},
+    "limitation_awareness": 0.0,
+    "limitation_detail": {},
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {},
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.8,
+    "status": "success"
+  },
+  {
+    "paper_id": "schaper2025_frontier_scientists",
+    "level": "L2",
+    "elapsed": 16.2,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 4,
+      "total": 4,
+      "details": [
+        {
+          "gold_claim": "technology impact Higher positive p < 0.01",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive",
+            "positive"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "technology hit probability Higher positive p < 0.01",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive",
+            "positive"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "private value Higher positive p < 0.01",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive",
+            "positive"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "claims breadth Broader positive p < 0.01",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive",
+            "positive"
+          ],
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {
+      "gold_significance": [
+        "p < 0.01",
+        "p < 0.01",
+        "p < 0.01",
+        "p < 0.01"
+      ],
+      "gold_significance_category": "significant",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": false
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 4,
+      "supported_claims": 4
+    },
+    "limitation_awareness": 0.5,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The study is limited to the biomedical industry and U.S. patents, so the findings may not generalize to other industries or countries.",
+        "The paper does not fully disentangle the causal mechanisms behind the impact premium of frontier-author patents."
+      ],
+      "pred_limitations": [
+        "The study is limited to the biomedical field and may not generalize to other industries.",
+        "The time window (1980-2009) may not reflect current trends in innovation and inventor impact.",
+        "The study relies on patent data and may not fully capture the long-term commercial or societal impac",
+        "The causal relationship between being a frontier scientist and producing impactful inventions is not"
+      ],
+      "matches_found": 1
+    },
+    "hallucinated_claim_rate": 0.25,
+    "hallucinated_detail": {
+      "total_predicted": 4,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.725,
+    "status": "success"
+  },
+  {
+    "paper_id": "gebhart2023_mathematical_framework",
+    "level": "L1",
+    "elapsed": 18.1,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 1,
+      "total": 1,
+      "details": [
+        {
+          "gold_directions": [
+            "positive",
+            "negative"
+          ],
+          "pred_direction": "negative",
+          "matches_found": 1,
+          "total_gold": 2,
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {},
+    "claim_support_score": 0.0,
+    "claim_support_detail": {},
+    "limitation_awareness": 0.0,
+    "limitation_detail": {},
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {},
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.8,
+    "status": "success"
+  },
+  {
+    "paper_id": "ke2023_sleeping_beauties",
+    "level": "L2",
+    "elapsed": 10.5,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 3,
+      "total": 3,
+      "details": [
+        {
+          "gold_claim": "beauty coefficient distribution Heterogeneous and continuous positive Descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "SB awakening time More than 50 years after publication positive Descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive"
+          ],
+          "match": true
+        },
+        {
+          "gold_claim": "SB phenomenon frequency Not exceptional positive Descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "positive",
+            "positive",
+            "positive"
+          ],
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 3,
+      "supported_claims": 3
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The study does not explicitly mention the specific bibliographic database used.",
+        "The analysis is descriptive and does not provide a causal explanation for the SB phenomenon."
+      ],
+      "pred_limitations": [
+        "The study uses descriptive statistics and does not include inferential methods to test hypotheses fo"
+      ],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {
+      "total_predicted": 3,
+      "hallucinated": 0
+    },
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.8500000000000001,
+    "status": "success"
+  },
+  {
+    "paper_id": "ke2023_sleeping_beauties",
+    "level": "L3",
+    "elapsed": 7.7,
+    "direction_accuracy": 0.0,
+    "direction_detail": {
+      "correct": 0,
+      "total": 3,
+      "details": [
+        {
+          "gold_claim": "beauty coefficient distribution Heterogeneous and continuous positive Descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown",
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "SB awakening time More than 50 years after publication positive Descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown",
+            "unknown"
+          ],
+          "match": false
+        },
+        {
+          "gold_claim": "SB phenomenon frequency Not exceptional positive Descriptive",
+          "gold_direction": "positive",
+          "pred_directions": [
+            "unknown",
+            "unknown"
+          ],
+          "match": false
+        }
+      ]
+    },
+    "significance_match": 1.0,
+    "significance_detail": {
+      "gold_significance": [
+        "descriptive",
+        "descriptive",
+        "descriptive"
+      ],
+      "gold_significance_category": "unknown",
+      "pred_significance": "unknown",
+      "pred_category": "unknown",
+      "match": true
+    },
+    "claim_support_score": 1.0,
+    "claim_support_detail": {
+      "total_claims": 2,
+      "supported_claims": 2
+    },
+    "limitation_awareness": 0.0,
+    "limitation_detail": {
+      "gold_limitations": [
+        "The study does not explicitly mention the specific bibliographic database used.",
+        "The analysis is descriptive and does not provide a causal explanation for the SB phenomenon."
+      ],
+      "pred_limitations": [],
+      "matches_found": 0
+    },
+    "hallucinated_claim_rate": 0.5,
+    "hallucinated_detail": {
+      "total_predicted": 2,
+      "hallucinated": 1
+    },
+    "uncertainty_recognition": 1.0,
+    "overall_score": 0.7,
+    "status": "success"
+  },
+  {
+    "paper_id": "ke2023_sleeping_beauties",
+    "level": "L1",
+    "elapsed": 17.4,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 1,
+      "total": 1,
+      "details": [
+        {
+          "gold_directions": [
+            "positive",
+            "positive",
+            "positive"
+          ],
+          "pred_direction": "positive",
+          "matches_found": 3,
+          "total_gold": 3,
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {},
+    "claim_support_score": 0.0,
+    "claim_support_detail": {},
+    "limitation_awareness": 0.0,
+    "limitation_detail": {},
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {},
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.8,
+    "status": "success"
+  },
+  {
+    "paper_id": "arts2021_natural_language_processing",
+    "level": "L1",
+    "elapsed": 35.3,
+    "direction_accuracy": 1.0,
+    "direction_detail": {
+      "correct": 1,
+      "total": 1,
+      "details": [
+        {
+          "gold_directions": [
+            "positive",
+            "positive",
+            "null"
+          ],
+          "pred_direction": "positive",
+          "matches_found": 2,
+          "total_gold": 3,
+          "match": true
+        }
+      ]
+    },
+    "significance_match": 0.0,
+    "significance_detail": {},
+    "claim_support_score": 0.0,
+    "claim_support_detail": {},
+    "limitation_awareness": 0.0,
+    "limitation_detail": {},
+    "hallucinated_claim_rate": 0.0,
+    "hallucinated_detail": {},
+    "uncertainty_recognition": 0.0,
+    "overall_score": 0.8,
+    "status": "success"
+  }
+]

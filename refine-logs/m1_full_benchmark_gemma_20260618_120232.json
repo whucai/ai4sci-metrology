@@ -1,0 +1,6129 @@
+{
+  "run_id": "20260618_120232",
+  "timestamp": "2026-06-18T12:02:32.975493",
+  "model": "gemma",
+  "n_papers": 115,
+  "elapsed_s": 3073.4,
+  "analysis": {
+    "test1_correlation": {
+      "pass": true,
+      "high_pairs": [
+        "executability/auditability"
+      ],
+      "correlations": {
+        "fidelity_executability": 0.5115,
+        "fidelity_numerical_accuracy": 0.4835,
+        "fidelity_claim_consistency": 0.6379,
+        "fidelity_auditability": 0.5115,
+        "executability_numerical_accuracy": 0.6558,
+        "executability_claim_consistency": 0.5511,
+        "executability_auditability": 1.0,
+        "numerical_accuracy_claim_consistency": 0.846,
+        "numerical_accuracy_auditability": 0.6558,
+        "claim_consistency_auditability": 0.5511
+      }
+    },
+    "test2_failure_patterns": {
+      "pass": true,
+      "unique_weakest": 2,
+      "non_uniform_papers": 112,
+      "patterns": {
+        "wu2019_disruption": {
+          "weakest": "model",
+          "value": 0.5,
+          "spread": 0.5
+        },
+        "ke2023_normalized_impact": {
+          "weakest": "model",
+          "value": 0.5,
+          "spread": 0.5
+        },
+        "arts2025_frontier_scientists": {
+          "weakest": "model",
+          "value": 0.5,
+          "spread": 0.5
+        },
+        "a_dynami_networ_c1d990c3": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "explor_tradeo_in_08dfb8db": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2306_01949": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "what_do_we_1c79e049": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "papers_and_patent_a110d105": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.7
+        },
+        "natura_langua_proces_875c1ca4": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2306_14364": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.831
+        },
+        "2308_16363": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "1505_06454": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2207_11116": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2303_15988": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2301_04369": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2405_03977": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2308_00405": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "enhanc_the_robust_a3393c93": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.887
+        },
+        "2502_10496": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2506_20225": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2507_17127": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2509_23645": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2403_18845": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2403_16851": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2410_13989": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2303_16613": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2309_15884": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2310_05926": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2307_12796": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.667
+        },
+        "2212_04972": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.667
+        },
+        "2205_01010": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2208_08221": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.75
+        },
+        "2201_09090": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2206_01767": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2108_12837": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.667
+        },
+        "2004_04165": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2502_04457": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2106_05027": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2101_07067": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2002_04347": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2005_11218": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2603_22151": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2512_23429": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2404_15176": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2409_02592": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2302_07843": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "1908_07576": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "1810_12737": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2602_05211": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2506_06753": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2505_21162": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2312_01295": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2207_14260": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2202_08822": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2208_06431": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.375
+        },
+        "2101_09520": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2206_11470": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2106_10700": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2104_05562": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "1804_03732": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "1602_07396": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2006_16737": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "1804_04105": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "1409_7889": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2501_15552": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2512_16943": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2407_14559": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2311_03834": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2105_06840": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2104_01955": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "1906_04619": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "1812_09241": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "1810_12647": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "1810_07812": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2603_19319": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2501_17456": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.667
+        },
+        "2207_13857": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2201_00531": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2202_06661": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2501_02429": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2502_17841": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2502_18427": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2511_04075": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2303_14732": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2511_05051": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.667
+        },
+        "2304_11079": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.667
+        },
+        "2203_06218": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2212_07811": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2209_11284": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2601_11507": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2604_24071": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2606_04716": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.667
+        },
+        "2602_10118": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2601_15172": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2601_21761": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2602_18940": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2604_16387": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.667
+        },
+        "2603_14919": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2605_12514": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2601_08156": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2604_01602": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2603_00399": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.667
+        },
+        "2410_09112": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2601_14949": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2510_19246": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2305_16490": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2012_05742": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2306_01949_1": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2406_15311": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.756
+        },
+        "2306_09911": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2503_23414": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        },
+        "2504_20081": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.875
+        }
+      }
+    },
+    "test3_dim_stats": {
+      "fidelity": {
+        "mean": 0.34,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.269
+      },
+      "executability": {
+        "mean": 0.957,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.203
+      },
+      "numerical_accuracy": {
+        "mean": 0.248,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.432
+      },
+      "claim_consistency": {
+        "mean": 0.259,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.267
+      },
+      "auditability": {
+        "mean": 0.979,
+        "min": 0.5,
+        "max": 1.0,
+        "std": 0.101
+      }
+    },
+    "test4_spurious": {
+      "total_flags": 0,
+      "flags": {
+        "wu2019_disruption": [],
+        "ke2023_normalized_impact": [],
+        "arts2025_frontier_scientists": [],
+        "a_dynami_networ_c1d990c3": [],
+        "explor_tradeo_in_08dfb8db": [],
+        "2306_01949": [],
+        "what_do_we_1c79e049": [],
+        "papers_and_patent_a110d105": [],
+        "natura_langua_proces_875c1ca4": [],
+        "2306_14364": [],
+        "2308_16363": [],
+        "1505_06454": [],
+        "2207_11116": [],
+        "2303_15988": [],
+        "2301_04369": [],
+        "2405_03977": [],
+        "2308_00405": [],
+        "enhanc_the_robust_a3393c93": [],
+        "2502_10496": [],
+        "2506_20225": [],
+        "2507_17127": [],
+        "2509_23645": [],
+        "2403_18845": [],
+        "2403_16851": [],
+        "2410_13989": [],
+        "2303_16613": [],
+        "2309_15884": [],
+        "2310_05926": [],
+        "2307_12796": [],
+        "2212_04972": [],
+        "2205_01010": [],
+        "2208_08221": [],
+        "2201_09090": [],
+        "2206_01767": [],
+        "2108_12837": [],
+        "2004_04165": [],
+        "2502_04457": [],
+        "2106_05027": [],
+        "2101_07067": [],
+        "2002_04347": [],
+        "2005_11218": [],
+        "2603_22151": [],
+        "2512_23429": [],
+        "2404_15176": [],
+        "2409_02592": [],
+        "2302_07843": [],
+        "1908_07576": [],
+        "1810_12737": [],
+        "2602_05211": [],
+        "2506_06753": [],
+        "2505_21162": [],
+        "2312_01295": [],
+        "2207_14260": [],
+        "2202_08822": [],
+        "2208_06431": [],
+        "2101_09520": [],
+        "2206_11470": [],
+        "2106_10700": [],
+        "2104_05562": [],
+        "1804_03732": [],
+        "1602_07396": [],
+        "2006_16737": [],
+        "1804_04105": [],
+        "1409_7889": [],
+        "2501_15552": [],
+        "2512_16943": [],
+        "2407_14559": [],
+        "2311_03834": [],
+        "2105_06840": [],
+        "2104_01955": [],
+        "1906_04619": [],
+        "1812_09241": [],
+        "1810_12647": [],
+        "1810_07812": [],
+        "2603_19319": [],
+        "2501_17456": [],
+        "2207_13857": [],
+        "2201_00531": [],
+        "2202_06661": [],
+        "2501_02429": [],
+        "2502_17841": [],
+        "2502_18427": [],
+        "2511_04075": [],
+        "2303_14732": [],
+        "2511_05051": [],
+        "2304_11079": [],
+        "2203_06218": [],
+        "2212_07811": [],
+        "2209_11284": [],
+        "2601_11507": [],
+        "2604_24071": [],
+        "2606_04716": [],
+        "2602_10118": [],
+        "2601_15172": [],
+        "2601_21761": [],
+        "2602_18940": [],
+        "2604_16387": [],
+        "2603_14919": [],
+        "2605_12514": [],
+        "2601_08156": [],
+        "2604_01602": [],
+        "2603_00399": [],
+        "2410_09112": [],
+        "2601_14949": [],
+        "2510_19246": [],
+        "2305_16490": [],
+        "2012_05742": [],
+        "2306_01949_1": [],
+        "2406_15311": [],
+        "2306_09911": [],
+        "2503_23414": [],
+        "2504_20081": []
+      }
+    },
+    "maturity_distribution": {
+      "L1(ds)": 1,
+      "L2": 76,
+      "L1(m)": 5,
+      "L3(m)": 21,
+      "L1": 8,
+      "L0": 1
+    }
+  },
+  "paper_profiles": {
+    "wu2019_disruption": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.6083333333333333,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.0,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 1.0,
+          "claim_consistency": 1.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 1.0,
+        "sample": 0.75,
+        "indicator": 0.9021,
+        "model": 0.5,
+        "result_table": 0.6,
+        "claim": 1.0
+      }
+    },
+    "ke2023_normalized_impact": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.6425,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.0,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 1.0,
+          "claim_consistency": 1.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 1.0,
+        "sample": 0.75,
+        "indicator": 0.9106,
+        "model": 0.5,
+        "result_table": 0.6,
+        "claim": 1.0
+      }
+    },
+    "arts2025_frontier_scientists": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.625,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 1.0,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 1.0,
+          "claim_consistency": 1.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 1.0,
+        "sample": 0.75,
+        "indicator": 0.9062,
+        "model": 0.5,
+        "result_table": 0.8,
+        "claim": 1.0
+      }
+    },
+    "a_dynami_networ_c1d990c3": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "explor_tradeo_in_08dfb8db": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 0.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 0.5
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.3,
+        "claim": 0.0
+      }
+    },
+    "2306_01949": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "what_do_we_1c79e049": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "papers_and_patent_a110d105": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.175,
+          "executability": 1.0,
+          "numerical_accuracy": 0.00017467248908298316,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.5,
+        "indicator": 0.5438,
+        "model": 0.5,
+        "result_table": 0.7,
+        "claim": 0.0
+      }
+    },
+    "natura_langua_proces_875c1ca4": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.14285714285714285,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.7143,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.7,
+        "claim": 0.0
+      }
+    },
+    "2306_14364": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.32499999999999996,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.0,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.5,
+        "indicator": 0.8313,
+        "model": 0.5,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2308_16363": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "1505_06454": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.75,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2207_11116": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2303_15988": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2301_04369": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2405_03977": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2308_00405": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "enhanc_the_robust_a3393c93": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5471428571428572,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.8868,
+        "model": 0.5,
+        "result_table": 0.7,
+        "claim": 0.0
+      }
+    },
+    "2502_10496": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2506_20225": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2507_17127": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2509_23645": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2403_18845": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2403_16851": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2410_13989": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2303_16613": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2309_15884": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2310_05926": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2307_12796": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 0.5
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.375,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2212_04972": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 0.5
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.375,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2205_01010": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2208_08221": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 0.5
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.75,
+        "indicator": 0.375,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2201_09090": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2206_01767": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2108_12837": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 0.5
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.375,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2004_04165": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2502_04457": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2106_05027": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2101_07067": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2002_04347": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2005_11218": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 0.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 0.5
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.375,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2603_22151": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2512_23429": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2404_15176": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2409_02592": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2302_07843": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "1908_07576": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "1810_12737": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2602_05211": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2506_06753": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2505_21162": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2312_01295": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2207_14260": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2202_08822": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2208_06431": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "auditability": 0.5
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 0.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 0.5
+        },
+        "indicator": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 0.5
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 0.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 0.5
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 0.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 0.5
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 0,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.1667,
+        "sample": 0.375,
+        "indicator": 0.375,
+        "model": 0.25,
+        "result_table": 0.3,
+        "claim": 0.0
+      }
+    },
+    "2101_09520": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2206_11470": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2106_10700": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2104_05562": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "1804_03732": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "1602_07396": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2006_16737": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "1804_04105": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "1409_7889": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2501_15552": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2512_16943": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2407_14559": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2311_03834": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2105_06840": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2104_01955": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 0.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 0.5
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.3,
+        "claim": 0.0
+      }
+    },
+    "1906_04619": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "1812_09241": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "1810_12647": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "1810_07812": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2603_19319": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2501_17456": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 0.5
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.375,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2207_13857": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2201_00531": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 0.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 0.5
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.3,
+        "claim": 0.0
+      }
+    },
+    "2202_06661": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 0.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 0.5
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.375,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2501_02429": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 0.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 0.5
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.375,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2502_17841": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2502_18427": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2511_04075": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2303_14732": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2511_05051": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 0.5
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.375,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2304_11079": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 0.5
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.375,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2203_06218": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2212_07811": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2209_11284": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2601_11507": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2604_24071": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 0.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 0.5
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 0.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 0.5
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.375,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.3,
+        "claim": 0.0
+      }
+    },
+    "2606_04716": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 0.5
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.375,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2602_10118": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2601_15172": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2601_21761": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2602_18940": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2604_16387": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 0.5
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.375,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2603_14919": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2605_12514": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2601_08156": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 3,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2604_01602": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2603_00399": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.0,
+          "executability": 0.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 0.5
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 0.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 0.5
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.375,
+        "model": 0.625,
+        "result_table": 0.3,
+        "claim": 0.0
+      }
+    },
+    "2410_09112": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2601_14949": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2510_19246": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2305_16490": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2012_05742": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2306_01949_1": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2406_15311": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.25,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.025,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.75,
+        "sample": 0.5,
+        "indicator": 0.7562,
+        "model": 0.5,
+        "result_table": 0.7,
+        "claim": 0.0
+      }
+    },
+    "2306_09911": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2503_23414": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    },
+    "2504_20081": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.875,
+        "model": 0.625,
+        "result_table": 0.6,
+        "claim": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+### 1. CONCEPTUAL_DISTINCTIONS
+novelty: The property of a paper that combines existing knowledge elements in new, atypical, or rare ways; often operationalized as the degree of uncommon recombination of references, keywords, or topics.
+originality: A broader concept that merges novelty with a degree of usefulness, surprise, or non-obviousness; an original work introduces novel combinations that also challenge existing paradigms or open new avenues.
+innovation: The process and outcome by which novel ideas are adopted, implemented, and generate impact; innovation extends beyond a paper’s content to its influence on subsequent research, technology, or practice.
+
+### 2. NOVELTY_TYPES
+- Combinatorial novelty: New, rare, or atypical combinations of existing knowledge components (e.g., references, keywords, MeSH terms).
+- Subject/topic novelty: Exploration of new or previously unconnected subject areas, often detected by shifts in word distributions or topic models.
+- Methodological novelty: Introduction of a new method, technique, or data source that differs from established practice in a field.
+- Theoretical/conceptual novelty: Proposal of new concepts, models, or frameworks that depart from prior theoretical foundations.
+- Temporal novelty: Appearing ahead of mainstream attention; content that is novel relative to the historical context of its publication time.
+- Structural novelty: Unusual positioning in citation or collaboration networks, such as bridging disconnected clusters.
+
+### 3. MEASUREMENT_APPROACHES
+CATEGORY: Reference-based approaches
+- Bibliographic coupling/co-citation atypicality (e.g., Uzzi et al. score)
+- Rare reference pair frequency (pairwise novelty index)
+- Reference-journal diversity and entropy-based novelty
+
+CATEGORY: Text/content-based approaches
+- Bag-of-words cosine distance from prior literature
+- Topic modeling divergence (e.g., Jensen–Shannon divergence between a paper’s topic distribution and the background corpus)
+- Semantic novelty via word embeddings (e.g., Word2Vec/SBERT similarity to prior papers)
+
+CATEGORY: Network-based approaches
+- Atypical edges in citation networks (e.g., link prediction error)
+- Community disruption index (measuring how much a paper bridges or breaks clusters)
+- Reference graph structural holes and betweenness centrality
+
+CATEGORY: Metadata/hybrid approaches
+- Novelty scores combining keywords, subject categories, and author publication history
+- Machine learning classifiers trained on multiple features (text, references, venue, etc.)
+- Bayesian surprise models that integrate prior knowledge distributions across multiple modalities
+
+### 4. VALIDATION_APPROACHES
+- Peer/expert evaluation of novelty (gold-standard panels)
+- Correlation with scientific awards and recognized breakthrough papers
+- Citation-based validation (e.g., delayed recognition, sleeping beauties)
+- Comparison against known landmark discoveries in a field
+- Survey-based perceptual studies with researchers
+- Predictive utility for future impact (e.g., high-impact papers, patents)
+- Cross-domain consistency checks on the measure’s behavior across disciplines
+
+### 5. KEY_CHALLENGES
+- Lack of a consensual, ground-truth definition of novelty
+- Domain-dependence: what is novel in one field may be routine in another
+- Difficulty of disentangling novelty from interdisciplinarity and basic recombination
+- Temporal granularity: novelty is time-sensitive but measurements are often static
+- Distinguishing novelty from impact, creativity, or quality
+- Data limitations: incomplete citation networks, lack of full-text access, and biases in databases
+- Computational scalability for large-scale, dynamic assessments
+- Validation bottleneck: expensive, small-scale expert evaluations cannot match large-scale bibliometric analyses
+
+### 6. DIFF_TABLE
+| Category | Data Type | Example Methods | Validation |
+|----------|-----------|-----------------|------------|
+| Reference-based | Citation/reference lists | Atypical co-citation frequency, Uzzi novelty score, journal diversity index | Correlation with expert-rated novel papers, delayed citation peaks, award-winning papers |
+| Text/content-based | Full-text, titles, abstracts | Bag-of-words cosine distance, topic divergence (e.g., JS divergence), SBERT semantic similarity | Human judgments of novelty, comparison with reviewer scores, survey studies |
+| Network-based | Citation networks, reference graphs | Link prediction error, disruption index (D), network centrality/structural holes | Known disruptive papers (e.g., Nobel Prize winning), expert validation |
+| Metadata/hybrid | Keywords, subject categories, author metadata, combined features | Machine learning classifiers, Bayesian surprise, multi-modal feature scoring | Predictive accuracy for breakthrough papers, cross-validation with gold-standard novelty lists |

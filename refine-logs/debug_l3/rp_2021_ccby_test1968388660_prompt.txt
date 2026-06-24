@@ -1,0 +1,690 @@
+## Methodology Paper (full text)
+
+Research Policy 50 (2021) 104144
+Available online 3 November 2020
+0048-7333/© 2020 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+Natural language processing to identify the creation and impact of new 
+technologies in patent text: Code, data, and new measures 
+Sam Arts a,*, Jianan Hou a, Juan Carlos Gomez b 
+a Department of management, strategy and innovation, Faculty of economics and business, KU Leuven, Korte Nieuwstraat 33, Antwerp 2000, Belgium 
+b Department of electronics engineering, University of Guanajuato campus irapuato-salamanca, Carretera Salamanca - Valle de Santiago, Salamanca, Mexico   
+A R T I C L E  I N F O   
+JEL codes: 
+O320 
+O330 
+O340 
+D830 
+Keywords: 
+Natural language processing 
+Patent 
+Novelty 
+Impact 
+Breakthrough 
+Award 
+A B S T R A C T   
+We develop natural language processing techniques to identify the creation and impact of new technologies in 
+the population of U.S. patents. We validate the new techniques and their improvement over traditional metrics 
+based on patent classification and citations in two case-control studies. First, we collect patents linked to awards 
+such as the Nobel prize and the National Inventor Hall of Fame. These patents likely cover radically new 
+technologies with a major impact on technological progress and patenting. Second, we identify patents granted 
+by the United States Patent and Trademark Office but simultaneously rejected by both the European and Jap­
+anese patent office. Such patents arguably lack novelty or cover small incremental advances over prior art and 
+should have little impact on technological progress. We provide open access to code, data, and new measures for 
+all utility patents granted by the USPTO up to May 2018 (see https://zenodo.org/record/3515985, DOI: 
+10.5281/zenodo.3515985).   
+1. Introduction 
+The creation of new technologies is vital for firm productivity and 
+economic growth (Romer, 1990). New technologies build on old 
+knowledge and technologies and serve themselves as prior art for future 
+generations (Weitzman, 1998). Despite the importance of technological 
+progress, scholars face difficulties to identify and measure the initial 
+creation of new technologies and the subsequent diffusion and impact of 
+these new technologies. Prior work predominantly relies on patent sta­
+tistics, which are broadly available across countries, industries, and time 
+(Griliches, 1990; Hall et al., 2001; Nagaoka et al., 2010). Yet, there is a 
+huge heterogeneity in the technical novelty and impact of patents. The 
+large majority of patents arguably cover small incremental advances 
+over old technologies and have little impact on technical progress 
+(Griliches, 1990; Lemley and Shapiro, 2005). Only a small minority of 
+patents introduce radically new technologies and extensively serve as 
+prior art for future generations (Trajtenberg, 1990; Scherer and Harhoff, 
+2000). To measure the technical novelty and impact of patents, prior 
+and current work has traditionally relied on patent classification and 
+citations1. But, this approach has important limitations. Patent citations 
+capture prior art but do not reflect the technical content of the patent 
+itself. Thus, patent citations arguably cannot accurately measure the 
+novelty of the technical content. Moreover, citations are sometimes an 
+incomplete and biased representation of prior art (Alcacer and Gittel­
+man, 2006; Lampe, 2012; Lei and Wright, 2017; Kuhn et al., 2020). In 
+contrast to citations, patent classification does reflect the subject matter 
+of the patent, but patent (sub)classes are usually too broad to capture the 
+detailed technical content of the invention and measure technical nov­
+elty (Thompson and Fox-Kean, 2005; Arts et al., 2018; Righi and Simcoe, 
+2019). Therefore, patent classification and citations presumably cannot 
+accurately identify the creation of new technologies – such as poly­
+merase chain reaction, radio-frequency identification, or lithium-ion 
+batteries – and the impact of these new technologies. 
+In this paper, we develop natural language processing (NLP) tech­
+niques to harness the technical content of patent documents. Inventors 
+have to fully disclose their invention in exchange for legal protection. 
+According to U.S. law, a patent must “contain a written description of 
+the invention … in such full, clear, concise, and exact terms as to enable 
+any person skilled in the art … to make and use the same, and shall set 
+forth the best mode contemplated by the inventor or joint inventor of 
+* Corresponding author. 
+E-mail addresses: sam.arts@kuleuven.be (S. Arts), jianan.hou@kuleuven.be (J. Hou), jc.gomez@ugto.mx (J.C. Gomez).   
+1 See for instance: Trajtenberg, 1990; Henderson et al., 1998; Dahlin and Behrens, 2005; Verhoeven et al., 2016; He and Luo, 2017 a,b; Funk and Owen-Smith, 
+2017; Arts and Fleming, 2018; Kneeland et al., 2020. 
+Contents lists available at ScienceDirect 
+Research Policy 
+journal homepage: www.elsevier.com/locate/respol 
+https://doi.org/10.1016/j.respol.2020.104144 
+Received 6 November 2019; Received in revised form 19 August 2020; Accepted 10 October 2020   
+Research Policy 50 (2021) 104144
+2
+carrying out the invention.”2 Prior work started to explore the use of 
+NLP to detect novelty in text documents3, and to identify new technol­
+ogies and trace the diffusion and impact of new technologies in patent 
+text4. But, this stream of research currently has a number of shortcom­
+ings which limit the adoption of text-based metrics by the broader 
+community. First, prior work provides no large scale validation of the 
+proposed text-based measures. Second, it remains to be tested whether 
+text-based metrics provide an improvement over the traditional metrics 
+based on patent classification and citations. Third, prior work does not 
+compare the performance of different text-based metrics so scholars do 
+not know which measures to adopt. Fourth, prior work does not provide 
+open access to the code, data, and new measures making replication and 
+follow-on research difficult. The current paper contributes to this stream 
+of research by addressing these shortcomings in turn. 
+To identify new technologies and measure patent novelty at the time 
+of filing, we detect unigrams (keywords), bigrams (two consecutive 
+words), trigrams (three consecutive words), and keyword combinations 
+appearing for the first time in the title, abstract, or claims of a patent, 
+and calculate the cosine similarity between the technical content of a 
+focal patent and all prior patents. To measure the diffusion and impact of 
+new technologies, we count the number of patents reusing the new 
+keywords, bigrams, trigrams, or keyword combinations and calculate 
+the cosine similarity between the content of a focal patent and all suc­
+ceeding patents. To validate these alternative text-based metrics and 
+their improvement over traditional measures based on patent classifi­
+cation and citations, we employ two case-control study designs. First, we 
+manually collect patents linked to prestigious awards such as the Nobel 
+Prize and the National Inventor Hall of Fame. These patents arguably 
+cover radically new technologies with a major impact on subsequent 
+technical progress and patenting. Second, we exploit the heterogeneity 
+in the examination process at different patent offices, and the notion that 
+the United States Patent and Trademark Office (USPTO) is perhaps 
+granting too many weak or invalid patents (Jaffe and Lerner, 2004). 
+Patent applications granted by the USPTO but simultaneously rejected 
+by both the European (EPO) and Japanese (JPO) patent office presum­
+ably lack novelty or cover only small incremental advancement over 
+prior art and should have little impact on technological progress. 
+Both case-control studies support the use of NLP to measure the 
+technical novelty and impact of patents, and illustrate the improvement 
+over traditional approaches based on patent classification and citations. 
+Interestingly, the new text-based measures only weakly correlate with 
+the traditional measures. We find that new keyword combinations and 
+their reuse by later patents show the strongest discriminatory power to 
+classify both patents linked to prestigious awards and rejected patents. 
+This new measure outperforms the other text-based metrics as well as 
+the traditional measures based on patent classification and citations. We 
+provide open access to data and new measures via https://zenodo.org/r 
+ecord/3515985 (DOI: 10.5281/zenodo.3515985). Python code is 
+available from https://github.com/sam-arts/respol_patents_code. 
+2. Identifying the creation and impact of new technologies 
+2.1. Data collection 
+We collect patent titles, abstracts and claims for all granted U.S. 
+utility patents from the USPTO, the patent claims research dataset 
+(Marco et al., 2016), and PATSTAT. We include all patents granted be­
+tween March 1969 and May 2018 (n=6,252,916). We only have partial 
+coverage of patents granted before 1976 (approximately 45%), and only 
+information on their titles and abstracts, but not their claims. They are 
+nonetheless included in order to establish a baseline dictionary. 
+For each patent, we concatenate title, abstract, and claims. Next, we 
+lowercase the text and tokenize it to words using the following regular 
+expression: [a-z0-9][a-z0-9-]*[a-z0-9]+|[a-z0-9]. We consider a word 
+as a sequence of letters and numbers that could be separated by hyphens 
+(“-“). Next, we remove words composed only by numbers, one-character 
+words, stop words from the Natural Language Toolkit (NLTK) in the 
+Python library5, and words appearing in only one patent. In addition to 
+natural stop words, we remove a manually compiled list of 32,255 very 
+common keywords. First, we compile a list with the most frequently 
+occurring keywords in patents. Next, we identify and exclude those 
+keywords that are unrelated to the technical content of patents, but keep 
+the frequently occurring technical keywords (e.g. internet, bluetooth, 
+dna, rfid, glyphosate). The excluded keywords include both very com­
+mon non-technical keywords (e.g. invention, discovery, claim, disclose, 
+describe, include, patent) and very common mistakenly combined words 
+which result from the tokenization process (e.g. comprisinga, 
+combinefirst). 
+Next, we apply stemming to each word using the SnowBall method 
+from the NLTK library. What remains is a collection of unique stemmed 
+keywords which represent the technical content of the patent. The entire 
+cleaned vocabulary contains 1,362,971 unique keywords and the 
+average and median number of unique keywords per patent granted 
+since 1976 is 61 and 56 respectively (stdev=29). As explained in Ap­
+pendix A, we will provide open access to the list of cleaned and stemmed 
+keywords for each U.S. patent granted up to May 2018. This dataset is an 
+improvement over a prior open access dataset because it includes patent 
+claims (and not just titles and abstracts), applies stemming to reduce 
+words to their root, removes frequently occurring non-technical terms, 
+and includes more recent patents (Arts et al., 2018). 
+2.2. Text-based measures 
+To measure technical novelty and impact, we develop different 
+alternative measures based on the keywords extracted from the title, 
+abstract, and claims of a patent. The analysis is restricted to patents filed 
+between 1980 and February 2018 (n=5,645,845), but patents filed 
+before 1980 are included to compile a baseline dictionary. 
+First, we calculate new_word as the number of unique keywords 
+(unigrams) of a patent that appear for the first time in the U.S. patent 
+database based on filing date. Thus, we identify the first patent using 
+stemmed keywords such as “cryoablat” (US5147355), “stereo­
+lithographi” (US4575330), “finfet” (US6413802), and “crispr-ca” 
+(US9951341). We also calculate new_word_reuse as the number of new 
+keywords introduced by the focal patent weighted by the number of 
+subsequent patents which reuse these particular keywords, which 
+arguably reflects the impact of the new technology on technical prog­
+ress. For instance, 644 patents reuse the keyword “stereolithographi” 
+2 See 35 U.S. Code § 112, available from https://www.law.cornell.edu/usc 
+ode/text/35/112  
+3 See for example: Allan et al., 2003; Li and Croft, 2008.  
+4 See for instance: Reitzig, 2004; Hasan, 2009; Gerken and Moehrle, 2012; 
+Kaplan and Vakili, 2015; Nanda et al., 2015; Packalen and Bhattacharya, 2015; 
+Bergeaud et al., 2017; Kelly et al., 2018; Krieger et al., 2018; Balsmeier et al., 
+2018; Ashtor, 2019; Watzinger and Schnitzer, 2019; Younge and Kuhn, 2019; 
+Arts and Veugelers, 2020; Teodoridis et al., 2020; Motohashi and Zhu, 2020; 
+Hain et al., 2020; de Rassenfosse et al., 2020; deGrazia et al., 2020. 
+5 Examples of stop words from the NLTK library include: the, am, been, does, 
+for, has. 
+S. Arts et al.                                                                                                                                                                                                                                      
+Research Policy 50 (2021) 104144
+3
+and 3,238 patents reuse the keyword “finfet”.6 For patent p, 
+new word reusep = ∑n
+i=1(1 +ui) with n equal to the number of new 
+keywords introduced by patent p and ui equal to the number of future 
+patents which reuse the new keyword i. Hence, new_word measures the 
+novelty of the patent at the time of filing and new_word_reuse measures 
+impact, i.e. how the technical novelty introduced by the focal patent 
+influences later patents. Overall, 1,039,112 new keywords are intro­
+duced since 1980, which are on average reused by eight patents 
+(median=2, stdev=278). 10% of all patents introduce at least one new 
+keyword. The average number of new keywords per patent is 0.18 
+(median=0, stdev=1.63). The average patent has 61 unique keywords 
+so the average and median share of new keywords per patent are 0.3% 
+and 0% respectively. 
+Second, we calculate new_bigram as the number of unique bigrams 
+(two consecutive words) of a patent that appear for the first time in the 
+U.S. patent database. For example, we identify the first patent using 
+bigrams such as “wireless network” (US4789983), “flash memori” 
+(US5053990), 
+“web 
+browser” 
+(US5701451), 
+or 
+“sim 
+card” 
+(US5353328). In line with new keywords, we also calculate new_­
+bigram_reuse as the number of new bigrams introduced by the focal 
+patent weighted by the number of subsequent patents which reuse these 
+particular bigrams, which arguably reflects the impact of the new 
+technology on technical progress. For instance, 18,977 patents reuse 
+bigram “flash memori” and 10,391 patents reuse bigram “web browser”. 
+Overall, 7,128,180 new bigrams are introduced since 1980, which are 
+on average reused by six patents (median=2, stdev=82). 43% of all 
+patents introduce at least one new bigram. The average number of new 
+bigrams per patent is 1.26 (median=0, stdev=4.69). 
+Third, we calculate new_trigram as the number of unique trigrams 
+(three consecutive words) of a patent that appear for the first time in the 
+U.S. patent database. Thus, we identify the first patent using trigrams 
+such as “graphic user interfac” (US4868785), “local area network” 
+(US4366565), or “nucleic acid sequenc” (US4469863). We also calculate 
+new_trigram_reuse as the number of new trigrams introduced by the focal 
+patent weighted by the number of subsequent patents which reuse these 
+particular trigrams. For instance, 27,660 patents reuse trigram “graphic 
+user interfac” and 17,107 patents reuse trigram “nucleic acid sequenc”. 
+11,119,812 new trigrams are introduced since 1980, which are on 
+average reused by three patents (median=1, stdev=45). 54% of all 
+patents introduce at least one new trigram. The average number of new 
+trigrams per patent is 1.97 (median=1, stdev=6.08). 
+Fourth, we compute new_word_comb as the number of unique pair­
+wise keyword combinations of a patent that appear for the first time. To 
+do so, we calculate all possible pairs between any of the keywords of a 
+patent. In contrast to bigrams and trigrams, it does not matter where the 
+keywords appear in the patent, nor the order in which they appear. 
+Patents introducing a new keyword are a subset of patents with new 
+keyword pairs because new keywords by definition result in new com­
+binations. For example, we identify the first patent using keyword 
+combinations such as “vascular stent” (US4580568), “inkjet printhead” 
+(US4677447), or “carbon nanotub” (US5346683). Similarly, we calcu­
+late new_word_comb_reuse as the number of new keyword combinations 
+weighted by the number of later patents which reuse these particular 
+keyword combinations, which presumably reflects the diffusion and 
+impact of the new technology. For instance, 2,062 patents reuse 
+“vascular stent” and 4,164 patents reuse “inkjet printhead”.7 Thus, 
+new_word_comb measures patent novelty at the time of filing and new_­
+word_comb_reuse measures impact, i.e. how the technical novelty intro­
+duced by the focal patent influences later patents. Overall, 
+approximately 670 million new keyword combinations are introduced 
+since 1980, which are on average reused by two later patents 
+(median=0, stdev=44). 80% of the patents introduce at least one new 
+keyword pair. The average and median number of new keyword pairs 
+per patent is respectively 119 and 16 (stdev=6,705). The high mean and 
+standard deviation are driven by very long patents. Some patent docu­
+ments cover more than 100 pages, thousands of unique stemmed key­
+words, and millions of pairwise keyword combinations. Notice that the 
+average patent has 61 unique keywords and 1,830 unique keyword 
+pairs, so that the average and median share of new keyword pairs per 
+patent are 6.5% and 0.9% respectively. 
+Finally, we calculate backward_cosine as the average cosine similarity 
+between a focal patent and all patents filed in the five years before the 
+focal patent.8 To do so, each patent is represented as a vector of 
+1,362,971 dimensions where each dimension corresponds to one 
+Table 1 
+Sample award patents.  
+Award 
+Period 
+#awards 
+#patents 
+#patents filed since 1980 
+Nobel Prize 
+1975-2018 
+305 
+80 
+59 
+Lasker Award 
+1975-2018 
+221 
+58 
+42 
+A.M. Turing Award 
+1975-2017 
+58 
+17 
+14 
+National Inventor Hall of Fame 
+1990-2018 
+130 
+112 
+60 
+National Medal of Technology and Innovation 
+1985-2014 
+226 
+76 
+42 
+Benjamin Franklin Medal 
+1998-2018 
+149 
+41 
+33 
+Bower Award 
+1990-2018 
+28 
+9 
+9   
+1,117 
+393 
+259 
+Notes: In case the same patent is linked to multiple awards, it is only included once and assigned to one award in the following order: Nobel Prize, Lasker Award, A.M. 
+Turing Award, National Inventor Hall of Fame, National Medal of Technology and Innovation, Benjamin Franklin Medal, Bower Award. The analysis is restricted to 
+patents filed since 1980 to have a sufficiently large baseline dictionary based on all patents filed before 1980. 
+6 As a robustness check, we find that patents reusing a new keyword are 
+indeed more likely to cite as prior art the patent which pioneered the particular 
+keyword. We randomly sample 10,000 new keywords and identify 75,449 
+patents reusing these keywords. These reusing patents are approximately 4.5 
+times more likely (4.1% versus 0.9%) to cite the patent which introduced the 
+keyword for the first time compared to a matched control group of similar 
+patents not reusing the keyword. Each reusing patent is matched to one control 
+patent based on technical content and approximate filing date. We calculate the 
+similarity between a reusing patent and all other patents filed in the same year 
+based on the overlap in unique stemmed keywords, and select the patent with 
+the highest Jaccard index but not reusing the particular keyword as control 
+(Arts et al., 2018). 
+7 As a robustness check, we find that patents reusing a new keyword com­
+bination are indeed more likely to cite the patent which pioneered the partic­
+ular keyword combination as prior art. We randomly sample 10,000 new 
+keyword combinations which were reused by at least one future patent and 
+identify 53,515 patents reusing these keyword combinations. These reusing 
+patents are approximately 6.6 times more likely (9.2% versus 1.4%) to cite the 
+patent which introduced the keyword combination for the first time compared 
+to a matched control group of patents not reusing the particular keyword 
+combination. Each reusing patent is matched to one control patent based on 
+technical content and approximate filing date (Arts et al., 2018).  
+8 We also calculated cosine similarity measures without using a moving time 
+window of five years, but this gave extremely small values with very little 
+variation across patents. 
+S. Arts et al.                                                                                                                                                                                                                                      
+Research Policy 50 (2021) 104144
+4
+keyword from the entire vocabulary and its value captures the frequency 
+of this keyword in the particular patent document. In contrast to new_­
+word, new_bigram, new_trigram, and new_word_comb which isolate n- 
+grams or keyword pairs, cosine similarity relies on the entire combina­
+tion of keywords of a patent and also takes into account the frequency of 
+a keyword in a patent.9 To calculate a measure of technical novelty, we 
+calculate 1-backward_cosine. More novel patents are arguably more dis­
+similar in content compared to prior patents. Next, we calculate for­
+ward_cosine as the average cosine similarity between the focal patent and 
+all patents filed in the five years after the focal patent. To generate an 
+impact measure, i.e. measuring how the new technology influences 
+subsequent technical progress, we calculate forward/backward_cosine by 
+dividing forward_cosine by backward_cosine. Thus, patents with the 
+highest forward/backward_cosine are dissimilar to prior patents and 
+similar to later patents. Patents which score among the highest (top 1%) 
+on forward/backward_cosine include Amazon’s one-click-buying patent 
+(US5960411) and Google’s patent for delivering, targeting, and 
+measuring advertising over networks (US5948061). Because the 
+average cosine similarity measures are very small, we standardize the 
+measures for ease of interpretation. 
+2.3. Traditional measures 
+Prior and current research traditionally relies on patent classification 
+and citation information to measure the technical novelty and impact of 
+a patent. We calculate the most commonly used measures and compare 
+their performance to our new text-based measures. 
+New_subclass_comb is the number of subclass pairs of a patent that 
+appear for the first time in the U.S. patent database based on filing date 
+(Fleming et al., 2007; Jung and Jeongsik, 2016; Verhoeven et al., 2016; 
+Arts and Fleming, 2018). New_subclass_comb_reuse is the number of new 
+subclass pairs of a patent weighted by the number of later patents which 
+reuse the particular subclass combinations (Fleming et al., 2007). 
+Similarly, new_cit_comb is the number of cited patent pairs which appear 
+for the first time in the patent database, and new_cit_comb_reuse is 
+calculated as the number of new cited patent pairs weighted by the 
+number of future patents citing the same two patents (Uzzi et al., 2013; 
+Arts and Fleming, 2018). Originality is calculated as one minus a Her­
+findahl index based on the share of cited patents from each primary 
+patent class (Trajtenberg et al., 1997; Hsu and Lim, 2013; Kaplan and 
+Vakili, 2015). Patents citing prior art from diverse fields are arguably 
+more original or novel (Hirshleifer et al., 2017). New_tech_origins counts 
+the number of new combinations between any of the patent classes of 
+the focal patent and any of the classes linked to patents cited by the focal 
+patent (Verhoeven et al., 2016)10. It reflects the extent to which a patent 
+sources knowledge from technology fields that were previously never 
+used. Forward_cit counts the number of patent citations received within 
+ten years, which reflects the impact of the patent independent from its 
+degree of novelty (Trajtenberg, 1990; Harhoff et al., 1999). Finally, 
+generality is calculated as one minus a Herfindahl index based on the 
+share of citing patents from each primary patent class (Jaffe et al., 1998; 
+Henderson et al., 1998). Patents cited by patents from different classes 
+arguably have a general purpose and broad impact across different 
+fields. 
+Table 2 
+Examples of awarded inventions.  
+Invention 
+Award 
+Award 
+year 
+Awardee 
+Patent 
+New words 
+New word 
+combinations 
+New bigrams 
+New trigams 
+Discovery of HIV 
+Nobel Prize 
+2008 
+Luc 
+Montagnier 
+US4839288 
+hiv-2 (584) 
+virus hiv-2 (403)   
+Chimeric 
+antibodies 
+Nobel Prize 
+2018 
+Gregory P. 
+Winter 
+US5565332  
+antigen-bind cdr3 
+(618) 
+scfv fragment 
+(278)  
+BRCA1 gene 
+locus 
+Lasker Award 
+2014 
+Mary-Claire 
+King 
+US5622829 
+brca1 (210) 
+cancer brca1 (153) 
+brca1 mutat 
+(16)  
+HIF-1 factor 
+Lasker Award 
+2016 
+Gregg L. 
+Semenza 
+US5882914 
+hif-1 (150) 
+acid hif-1 (88) 
+hypoxia induc 
+(185) 
+hypoxia induc 
+factor-1 (18) 
+Local area 
+network 
+A.M. Turing Award 
+2009 
+Charles P. 
+Thacker 
+US5088091 
+host-to-host (28) 
+configur downlink 
+(2557) 
+uplink port 
+(130) 
+discard data 
+packet (78) 
+Public-key 
+encryption 
+A.M. Turing Award 
+2015 
+Martin 
+Hellman 
+US4633036  
+authent public-key 
+(284)   
+Polymerase 
+chain reaction 
+National Inventor Hall 
+of Fame 
+1998 
+Kary B. Mullis 
+US4683202 
+helicas (533) 
+amplif primer (5249) 
+primer extens 
+(1017)  
+3D printing 
+National Inventor Hall 
+of Fame 
+2014 
+Charles Hull 
+US4575330 
+stereolithographi 
+(644) 
+surfac 
+stereolithographi 
+(407)   
+Metallocene 
+catalysis 
+National Medal of 
+Technology and 
+Innovation 
+2001 
+John A. Ewen 
+US4530914 
+zirconocen (156) 
+polyolefin 
+metallocen (1103) 
+multimod 
+molecular 
+(115) 
+multimod 
+molecular weight 
+(111) 
+FinFET 
+National Medal of 
+Technology and 
+Innovation 
+2014 
+Chenming Hu 
+US6413802 
+finfet (3238) 
+gate finfet (2632) 
+finfet transistor 
+(205)  
+Erbuim-doped 
+fiber 
+Benjamin Franklin 
+Medal 
+1998 
+Emmanuel 
+Desurvire 
+US4963832  
+amplifi erbium-dop 
+(678) 
+erbium-dop 
+fiber (514) 
+erbium-dop fiber 
+amplifi (330) 
+Lithium-ion 
+battery 
+Benjamin Franklin 
+Medal 
+2018 
+John 
+Goodenough 
+US5910382 
+lifepo4 (260) 
+batteri lifepo4 (210)   
+Transgenic 
+animals 
+Bower Award 
+1997 
+Ralph L. 
+Brinster 
+US4870009 
+transgen (18054) 
+cell transgen (15357) 
+transgen anim 
+(1426) 
+promot dna 
+sequenc (56) 
+DNA sequencing 
+Bower Award 
+2011 
+George Church 
+US4942124  
+multiplex dna (625) 
+strand molecul 
+(59) 
+singl strand 
+molecul (23) 
+Notes: The table includes for each award two examples of awarded inventions. For each awarded invention, the table displays the year of the award, the name of the 
+awardee, the corresponding patent, one new word, new word combination, new bigram, and/or new trigram of the patent. The numbers between brackets show the 
+total number of later patents which reuse these new words, new word combinations, new bigrams, and new trigrams. 
+9 We find similar results if we also account for keyword frequency in the 
+entire patent database by using tf–idf weights (term frequency–inverse docu­
+ment frequency). 
+10 In line with Verhoeven et al. (2016), we treat all patents introducing a new 
+combination in the same filing year as novel. 
+S. Arts et al.                                                                                                                                                                                                                                      
+Research Policy 50 (2021) 104144
+5
+While new_subclass_comb, new_cit_comb, originality, and new_­
+tech_origins reflect the novelty of a patent at the time of filing, new_s­
+ubclass_comb_reuse and new_cit_comb_reuse measure the extent to which 
+the technical novelty introduced by the focal patent influences technical 
+progress. Finally, forward_cit and generality measure the diffusion and 
+impact of a patent independent from its novelty. Because of the skew­
+ness of count variables, we use their logarithmic transformation after 
+adding one for variables with zero values. 
+3. Validation award patents 
+To validate the text-based measures, we manually collect patents 
+linked to prestigious awards (Carpenter et al., 1981). These patents 
+arguably cover radically new technologies with a major impact on tech­
+nical progress. Next, we use a case-control study design, matching each 
+award patent to a control patent based on technical content and filing 
+date. Finally, we test the ability of the different metrics to correctly classify 
+award and control patents. Our assumption is that award patents are more 
+likely to cover fundamentally new technologies with a significant impact 
+on technical progress and patenting compared to control patents. Prior 
+work indeed points out that the large majority of U.S. patents cover small 
+incremental advances over old technologies and have a rather small – if 
+any – impact on later patents (e.g. Griliches, 1990; Trajtenberg, 1990; 
+Scherer and Harhoff, 2000; Lemley and Shapiro, 2005). 
+3.1. Data 
+Award patents. We collect information on the following awards: 
+Nobel Prize (in physics, chemistry, and medicine), Lasker Award (often 
+referred to as America’s Nobel Prize), A.M. Turing Award (recognized as 
+the Nobel Prize of Computing), National Inventor Hall of Fame, National 
+Medal of Technology and Innovation, Benjamin Franklin Medal, and the 
+Bower Award1112. We manually match awards to patents except for the 
+National Inventor Hall of Fame which directly provides the corre­
+sponding patent numbers. The websites of the award gra
+
+[... paper truncated ...]
+
+ions—an analysis of quality 
+differences and citing practices in hybrid corn. Manage. Sci. 64 (4), 1926–1940. 
+Motohashi, K., Zhu, C., 2020. Technological competitiveness of China’s internet 
+platforms: comparison of Google and Baidu using patent text information. In: 
+Research Institute of Economy, Trade and Industry (RIETI) Discussion Paper Series 
+20-E-045. 
+Nagaoka, S., Motohashi, K., Goto, A., 2010. Patent statistics as an innovation indicator. 
+In: Handbook of the Economics of Innovation, Vol. 2, pp. 1083–1127. North- 
+Holland.  
+Nanda, R., Younge, K., Fleming, L., 2015. Innovation and entrepreneurship in renewable 
+energy. In: Jaffe, Adam B., Jones, Benjamin F. (Eds.), The Changing Frontier: 
+Rethinking Science and Innovation Policy, pp. 199–232. 
+OECD. (2019). Triadic patent families database, version February 2019. 
+Packalen, M., Bhattacharya, J., 2015. New Ideas in Invention (No. w20922). National 
+Bureau of Economic Research. 
+Picard, P.M., Potterie, B.V.P., 2013. Patent office governance and patent examination 
+quality. J. Public Econ. 104, 14–25. 
+Reitzig, M., 2004. Improving patent valuations for management purposes—validating 
+new indicators by analyzing application rationales. Res. policy 33 (6-7), 939–957. 
+Righi, C., Simcoe, T., 2019. Patent examiner specialization. Res. Policy 48 (1), 137–148. 
+Romer, P, 1990. Endogenous technological change. J. Polit. Econ. 98 (5), S71–S102. 
+Scherer, F.M., Harhoff, D., 2000. Technology policy for a world of skew-distributed 
+outcomes. Res. Policy 29 (4-5), 559–566. 
+Teodoridis, F., Lu, J., & Furman, J. L. (2020). Measuring the direction of innovation: 
+frontier tools in unassisted machine learning. Available at SSRN 3596233. 
+Thompson, P., Fox-Kean, M., 2005. Patent citations and the geography of knowledge 
+spillovers: a reassessment. Am. Econ. Rev. 450–460. 
+Trajtenberg, M., 1990. A penny for your quotes: Patent citations and the value of 
+innovations. Rand J. Econ. 21 (1), 172–187. 
+Trajtenberg, M., Henderson, R., Jaffe, A., 1997. University versus corporate patents: a 
+window on the basicness of invention. Econ. Innov. New Technol. 5 (1), 19–50. 
+Uzzi, B., Mukherjee, S., Stringer, M., Jones, B., 2013. Atypical combinations and 
+scientific impact. Science 342 (6157), 468. -47.  
+Verhoeven, D., Bakker, J., Veugelers, R., 2016. Measuring technological novelty with 
+patent-based indicators. Res. Policy 45 (3), 707–723. 
+Watzinger, M., Schnitzer, M., 2019. Standing on the shoulders of science. In: CEPR 
+Discussion Paper No. DP13766. 
+Weitzman, M.L., 1998. Recombinant growth. Q. J. Econ. 113 (2), 331–360. 
+Younge, K.A., & Kuhn, J.M. (2019). First movers and follow-on invention: evidence from 
+a vector space model of invention. Available at SSRN 3354530. 
+S. Arts et al.                                                                                                                                                                                                                                      
+
+
+## Task
+
+Data files provided:
+- References CSV at '/tmp/tmp1rqqoomz_refs.csv': papers cited BY test paper 1968388660
+- Citation network CSV at '/tmp/tmp61ws1oac_cites.csv': papers that cite test paper 1968388660 and their references
+
+The task: read the methodology paper below, then implement the Disruption Index (D) for test paper 1968388660
+(title: "String theory and noncommutative geometry").
+
+Your code must:
+  1. Load the data files using pandas
+  2. Compute the Disruption Index (D) described in the methodology paper
+  3. Print 'D_INDEX = <value>' (float), plus 'n_i = <value>', 'n_j = <value>' (integers)
+
+
+IMPORTANT: Output ONLY Python code in a ```python code block. Do NOT include explanations.
+The code must print results EXACTLY as specified above.

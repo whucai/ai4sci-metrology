@@ -1,0 +1,834 @@
+[
+  {
+    "paper_id": "PLoS_ONE_2002.04347v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Research_Policy_2603.14919v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.2,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "PNAS_2303.14732v3",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.3,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Research_Policy_2408.05587v3",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.3,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Ribeiro2026_GenderProductivityPrestige",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.0,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Science_1812.09241v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Science_1706.07976v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.3,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Science_2201.09090v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Science_2207.14260v2",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.9,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Science_2506.06753v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.4,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Scientometrics_2106.05027v2",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.9,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Science_2511.05051v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.5,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Scientometrics_2106.10700v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Scientometrics_2306.01949v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.8,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Scientometrics_2203.06218v2",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Scientometrics_2501.17456v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.9,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Scientometrics_2512.23429v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.5,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "abramo2017_stardom",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "Scientometrics_2603.19319v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 12.3,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "abramo2015_research_performance",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.0,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "ahmad2025_university_of_lagos",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 8.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_1409.7889v2",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.8,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "akella2023_reproducibility_signals",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.2,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2006.16737v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.4,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2012.05742v2",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2101.09520v2",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.3,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2201.00531v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.3,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2202.06661v2",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.1,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2202.08822v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.9,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2207.13857v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2209.11284v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2212.04972v2",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.8,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2304.11079v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 8.5,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2307.12796v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.8,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2404.15176v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.1,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2310.05926v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.1,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2406.15311v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2410.09112v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 8.9,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2503.02216v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.2,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2510.19246v2",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2601.08156v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 12.1,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2602.05211v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arXiv_2605.12514v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.5,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arroyomachado2020_science_wikipedia",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.2,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "arts2021_natural_language_processing",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.8,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "baccini2025_coara",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.2,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "bak_coleman2026_industry_influence",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.9,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "buruk2023_academic_writing",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.1,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "chandrasekaran2021_automating_transfer",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 12.1,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "fitzgerald2021_localization",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "deng2023_enhancing_disruption",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.5,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "fletcher2024_reproducibility",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.5,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "funk2017_dynamic_network",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "gebhart2023_mathematical_framework",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.4,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "galuez2023_technology_transfer",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "gim2025_interdisciplinary_synergy",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "hao2024_hlm_cite",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.9,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "ke2018_comparing_scientific_technological_impact",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.8,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "ke2023_network_based_normalized_impact",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.3,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "kong2025_citation_structural_diversity",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "kozlowski2023_uncited_articles",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.3,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "li2023_two_stage",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.1,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "leibel2023_disruption_index",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.5,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "lin2023_moprd",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.4,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "luo2024_hunting_room_temperature_superconductors",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "maddi2024_peer_review_reports",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.2,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "maddi2022_article_processing_charges",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.9,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "momeni2023_factors_oa",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "mryglod2014_is_your_epl_attractive",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.5,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "nikonova2022_measuring_difficulty",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "obadage2023_citations_reproducibility",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "okamura2022_scientometric_engineering",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.5,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "others_2410.13989v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.8,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "others_2502.04457v1",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.4,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "park2023_grants_interdisciplinary_advances",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.3,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "peng2026_structural_diversity",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 12.1,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "petersen2024_disruption_index",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.4,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "petersen2023_citation_inflation",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 12.5,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "rosendo2023_kheops",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "rudnicka2021_in_order_that",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 12.2,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "schaper2025_frontier_scientists",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.2,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "schueler2023_platform_research",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.9,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "shaikh2023_social_media_learning",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.3,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "shekar2022_novelty_based",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.2,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "shirouyeh2023_predicting_star_scientists",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.4,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "silvello2017_theory_practice_data_citation",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.3,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "slavov2022_eternalism",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.8,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "suebsombut2023_smart_farm",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.4,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "sun2023_ranking_mobility",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.9,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "tiyavorabun2022_badder_seeds",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.8,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "tohalino2021_predicting_grants",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.9,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "traag2025_citation_models",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.2,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "vasarhelyi2023_who_benefits",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.4,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "wagner2023_openness_impact",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "wu2025_large_language_models",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 12.0,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "wu2026_geographical_biases",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.6,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "xia2019_function_point",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 7.5,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "yadav2026_project_synapse",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.8,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "zhao2020_delayed_recognition",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "zhao2023_academic_industry_knowledge_proximity",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 9.9,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "zhao2023_effect_of_gender_diversity",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.7,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "zhao2025_novelty_measurements",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.1,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "zheng2025_male_female_retractions",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 10.1,
+    "status": "error",
+    "error": "Error code: 502"
+  },
+  {
+    "paper_id": "zheng2025_social_media_retraction",
+    "level": "L3",
+    "arm": "v2_fewshot",
+    "elapsed": 11.4,
+    "status": "error",
+    "error": "Error code: 502"
+  }
+]

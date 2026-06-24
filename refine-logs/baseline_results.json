@@ -1,0 +1,150 @@
+{
+  "task1_empty": {
+    "mean": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0
+  },
+  "task1_template": {
+    "mean": 0.23075528473632745,
+    "ci_low": 0.23017076656887087,
+    "ci_high": 0.23159256751673815
+  },
+  "task2_empty_L1": {
+    "mean": 0.008530805687203791,
+    "ci_low": 0.0031990521327014214,
+    "ci_high": 0.01386255924170616
+  },
+  "task2_template_L1": {
+    "mean": 0.3738037318417125,
+    "ci_low": 0.36255104240725744,
+    "ci_high": 0.3848873132613852
+  },
+  "task2_empty_L2": {
+    "mean": 0.2,
+    "ci_low": 0.2,
+    "ci_high": 0.2
+  },
+  "task2_template_L2": {
+    "mean": 0.7680805687203791,
+    "ci_low": 0.744691943127962,
+    "ci_high": 0.7888862559241705
+  },
+  "task2_empty_L3": {
+    "mean": 0.06499999999999999,
+    "ci_low": 0.06499999999999999,
+    "ci_high": 0.06499999999999999
+  },
+  "task2_template_L3": {
+    "mean": 0.503327804107425,
+    "ci_low": 0.4937709320695104,
+    "ci_high": 0.5126421800947868
+  },
+  "task2_always_uncertain_L1": {
+    "mean": 0.16391343092741845,
+    "ci_low": 0.15773062034993068,
+    "ci_high": 0.17117687038560722
+  },
+  "task2_always_uncertain_L2": {
+    "mean": 0.18021327014218008,
+    "ci_low": 0.1707345971563981,
+    "ci_high": 0.18909952606635075
+  },
+  "task2_always_uncertain_L3": {
+    "mean": 0.10400000000000001,
+    "ci_low": 0.10400000000000001,
+    "ci_high": 0.10400000000000001
+  },
+  "task2_always_confident_L1": {
+    "mean": 0.16129777476269214,
+    "ci_low": 0.15568710600820393,
+    "ci_high": 0.16789321910383367
+  },
+  "task2_always_confident_L2": {
+    "mean": 0.7489652448657188,
+    "ci_low": 0.727037914691943,
+    "ci_high": 0.7705055292259083
+  },
+  "task2_always_confident_L3": {
+    "mean": 0.08718799368088469,
+    "ci_low": 0.08257503949447079,
+    "ci_high": 0.09131121642969983
+  },
+  "paired_L1_qwen_vs_task2_empty": {
+    "mean_diff": 0.593179022788261,
+    "ci_low": 0.5648928827722797,
+    "ci_high": 0.6207242302849217,
+    "p_qwen_greater": 1.0
+  },
+  "paired_L1_qwen_vs_task2_template": {
+    "mean_diff": 0.22799917868012048,
+    "ci_low": 0.20249693922662815,
+    "ci_high": 0.25182963994142415,
+    "p_qwen_greater": 1.0
+  },
+  "paired_L1_qwen_vs_task2_always_uncertain": {
+    "mean_diff": 0.43774488917254173,
+    "ci_low": 0.4093173011165837,
+    "ci_high": 0.4651083126971911,
+    "p_qwen_greater": 1.0
+  },
+  "paired_L1_qwen_vs_task2_always_confident": {
+    "mean_diff": 0.4403855755398014,
+    "ci_low": 0.41211363585416916,
+    "ci_high": 0.4683811699290216,
+    "p_qwen_greater": 1.0
+  },
+  "paired_L2_qwen_vs_task2_empty": {
+    "mean_diff": 0.7068325434439178,
+    "ci_low": 0.6857661927330172,
+    "ci_high": 0.7260742496050552,
+    "p_qwen_greater": 1.0
+  },
+  "paired_L2_qwen_vs_task2_template": {
+    "mean_diff": 0.13875197472353873,
+    "ci_low": 0.12075039494470774,
+    "ci_high": 0.15776461295418642,
+    "p_qwen_greater": 1.0
+  },
+  "paired_L2_qwen_vs_task2_always_uncertain": {
+    "mean_diff": 0.7266192733017377,
+    "ci_low": 0.7064612954186413,
+    "ci_high": 0.7461927330173777,
+    "p_qwen_greater": 1.0
+  },
+  "paired_L2_qwen_vs_task2_always_confident": {
+    "mean_diff": 0.15786729857819906,
+    "ci_low": 0.14033175355450236,
+    "ci_high": 0.1757345971563981,
+    "p_qwen_greater": 1.0
+  },
+  "paired_L3_qwen_vs_task2_empty": {
+    "mean_diff": 0.5399004739336494,
+    "ci_low": 0.5052740916271722,
+    "ci_high": 0.5717756714060032,
+    "p_qwen_greater": 1.0
+  },
+  "paired_L3_qwen_vs_task2_template": {
+    "mean_diff": 0.10157266982622427,
+    "ci_low": 0.06949210110584515,
+    "ci_high": 0.1313420221169036,
+    "p_qwen_greater": 1.0
+  },
+  "paired_L3_qwen_vs_task2_always_uncertain": {
+    "mean_diff": 0.5009004739336493,
+    "ci_low": 0.46627409162717226,
+    "ci_high": 0.5327756714060032,
+    "p_qwen_greater": 1.0
+  },
+  "paired_L3_qwen_vs_task2_always_confident": {
+    "mean_diff": 0.5177124802527646,
+    "ci_low": 0.4832235387045814,
+    "ci_high": 0.5490434439178514,
+    "p_qwen_greater": 1.0
+  },
+  "qwen3_32b": {
+    "task1_overall": 0.479,
+    "task2_L1": 0.598,
+    "task2_L2": 0.907,
+    "task2_L3": 0.605
+  }
+}

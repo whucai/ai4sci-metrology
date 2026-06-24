@@ -1,0 +1,50 @@
+{
+  "paper": "Schaper, Arts, Veugelers (2025) — Frontier scientists for inventive performance",
+  "doi": "10.1016/j.respol.2025.105339",
+  "data": "SciSciNet (papers table, N=20603)",
+  "adaptation_notes": [
+    "Frontier paper = published in top-general journal (Nature/Science/Cell/PNAS/Lancet/JAMA/NEJM/BMJ) AND recent (last 3 years)",
+    "Patent forward citations → paper citation_count",
+    "Hit patent (top 5% class-year) → hit paper (top 5% journal-year)",
+    "Frontier SNPR → reference to paper in top journal within 3 years",
+    "Firm patent-stock decile → author_count decile (proxy for institutional scale)",
+    "Internal patent citation → same-journal citation",
+    "Private patent value ($) → log citation_count (no stock market data)",
+    "PPML for counts, OLS for binary outcomes (matching original paper)"
+  ],
+  "table2": {
+    "col1_author_vs_none": 0.9915129804318207,
+    "col2_frontier": 1.2601549631047437,
+    "col2_non_frontier": 0.9890740667519285,
+    "col2_frontier_exp": 3.525967839955748,
+    "col2_non_frontier_exp": 2.688743722185107,
+    "col3_frontier": 0.951321079561842,
+    "col3_top_old": 1.2542473793751325,
+    "col3_recent_only": -1.3293333526984454
+  },
+  "table3": {
+    "hit_frontier": -0.020444321334970962,
+    "hit_non_frontier": -0.013140112424319353,
+    "internal_frontier": -0.0124422832108115,
+    "internal_non_frontier": -0.01607326500545464,
+    "logcit_frontier": 0.9065107373388467,
+    "logcit_non_frontier": 0.25214768001634
+  },
+  "table5": {
+    "has_ref_frontier": 0.3049074865787362,
+    "has_ref_non_frontier": 0.10232792738067077,
+    "n_refs_frontier": 0.09173956114015694,
+    "n_refs_non_frontier": -0.08662163084451076,
+    "frontier_ref_frontier": -0.0006710994170107695,
+    "frontier_ref_non_frontier": 0.010879249000177331
+  },
+  "table6_ppml": {
+    "fa_fref": -1.8358503749800332e-16,
+    "fa_nonfref": 1.9504128627470483,
+    "fa_noref": 0.23939712177950018,
+    "nfa_fref": 3.2273404368094587,
+    "nfa_nonfref": 1.8999455861456556,
+    "noa_fref": 1.493040851935132,
+    "noa_nonfref": 0.991939123971924
+  }
+}

@@ -1,0 +1,2231 @@
+{
+  "selected_at": "2026-06-06 21:48:18",
+  "total_existing": 13,
+  "total_new": 97,
+  "target_total": 100,
+  "papers": [
+    {
+      "arxiv_id": "2503.02216v1",
+      "arxiv_id_clean": "2503.02216",
+      "title": "Hunting for Room Temperature Superconductors",
+      "authors": [
+        "Huiqian Luo"
+      ],
+      "year": 2025,
+      "summary": "Room temperature superconductivity, as one of the famous jewels on the crown of physics, has attracted continuous attention and unremitting efforts from numerous scientists. In recent years, more and more reports on room temperature superconductivity evoke many anticipations, but results remain controversial. Here, we introduce the characteristics of superconducting phenomena and propose 10 feasible paths to achieve room-temperature superconductivity in the future. This is an Editorial of The In",
+      "primary_category": "cond-mat.supr-con",
+      "categories": [
+        "cond-mat.supr-con",
+        "cond-mat.mtrl-sci",
+        "cond-mat.str-el"
+      ],
+      "journal_ref": "The Innovation Materials 3,100119 (2025)",
+      "doi": "10.59717/j.xinn-mater.2024.100119",
+      "published": "2025-03-04T02:48:48Z",
+      "source_label": "sci_sci_innovation",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2502.10496v1",
+      "arxiv_id_clean": "2502.10496",
+      "title": "Scientific literature cited in patents: A Technology Transfer indicator in Portuguese universities",
+      "authors": [
+        "Carmen Galvez"
+      ],
+      "year": 2025,
+      "summary": "The study aims to identify the process of transfer from science to technology that occurs in the main Portuguese public universities. The methodology was based on the analysis of the scientific literature cited in patents. Data was obtained from the Lens patent database. 10,514 scientific articles cited in patents were retrieved. A descriptive analysis of the data was performed. Science maps were created to visualize the main research trends. The results showed a valuable impact of academic rese",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Iberian Journal of Information Systems and Technologies, 2023",
+      "doi": "",
+      "published": "2025-02-14T17:03:13Z",
+      "source_label": "science_mapping",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2506.20225v2",
+      "arxiv_id_clean": "2506.20225",
+      "title": "The role of preprints in open science: Accelerating knowledge transfer from science to technology",
+      "authors": [
+        "Zhiqi Wang",
+        "Yue Chen",
+        "Chun Yang"
+      ],
+      "year": 2025,
+      "summary": "Preprints have become increasingly essential in the landscape of open science, facilitating not only the exchange of knowledge within the scientific community but also bridging the gap between science and technology. However, the impact of preprints on technological innovation, given their unreviewed nature, remains unclear. This study fills this gap by conducting a comprehensive scientometric analysis of patent citations to bioRxiv preprints submitted between 2013 and 2021, measuring and access",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "physics.soc-ph"
+      ],
+      "journal_ref": "Journal of Informetrics (2025)",
+      "doi": "10.1016/j.joi.2025.101663",
+      "published": "2025-06-25T08:13:05Z",
+      "source_label": "patent_science",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2507.17127v1",
+      "arxiv_id_clean": "2507.17127",
+      "title": "Do male leading authors retract more articles than female leading authors?",
+      "authors": [
+        "Er-Te Zheng",
+        "Hui-Zhen Fu",
+        "Mike Thelwall",
+        "Zhichao Fang"
+      ],
+      "year": 2025,
+      "summary": "Scientific retractions reflect issues within the scientific record, arising from human error or misconduct. Although gender differences in retraction rates have been previously observed in various contexts, no comprehensive study has explored this issue across all fields of science. This study examines gender disparities in scientific misconduct or errors, specifically focusing on differences in retraction rates between male and female first authors in relation to their research productivity. Us",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Journal of Informetrics (2025), 19(3), 101682",
+      "doi": "10.1016/j.joi.2025.101682",
+      "published": "2025-07-23T02:04:21Z",
+      "source_label": "retraction",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2509.23645v1",
+      "arxiv_id_clean": "2509.23645",
+      "title": "Similarity-Based Assessment of Computational Reproducibility in Jupyter Notebooks",
+      "authors": [
+        "A S M Shahadat Hossain",
+        "Colin Brown",
+        "David Koop",
+        "Tanu Malik"
+      ],
+      "year": 2025,
+      "summary": "Computational reproducibility refers to obtaining consistent results when rerunning an experiment. Jupyter Notebook, a web-based computational notebook application, facilitates running, publishing, and sharing computational experiments along with their results. However, rerunning a Jupyter Notebook may not always generate identical results due to various factors, such as randomness, changes in library versions, or variations in the computational environment. This paper introduces the Similarity-",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE",
+        "cs.DB"
+      ],
+      "journal_ref": "ACM Conference on Reproducibility and Replicability, 2025",
+      "doi": "10.1145/3736731.3746159",
+      "published": "2025-09-28T05:01:51Z",
+      "source_label": "reproducibility",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2403.18845v1",
+      "arxiv_id_clean": "2403.18845",
+      "title": "On The Peer Review Reports: Does Size Matter?",
+      "authors": [
+        "Abdelghani Maddi",
+        "Luis Miotti"
+      ],
+      "year": 2024,
+      "summary": "Amidst the ever-expanding realm of scientific production and the proliferation of predatory journals, the focus on peer review remains paramount for scientometricians and sociologists of science. Despite this attention, there is a notable scarcity of empirical investigations into the tangible impact of peer review on publication quality. This study aims to address this gap by conducting a comprehensive analysis of how peer review contributes to the quality of scholarly publications, as measured ",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Scientometrics (2024)",
+      "doi": "10.1007/s11192-024-04977-6",
+      "published": "2024-03-07T08:54:26Z",
+      "source_label": "peer_review",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2408.05587v3",
+      "arxiv_id_clean": "2408.05587",
+      "title": "COARA will not save science from the tyranny of administrative evaluation",
+      "authors": [
+        "Alberto Baccini"
+      ],
+      "year": 2024,
+      "summary": "The Coalition for Advancing Research Assessment (CoARA) agreement is a cornerstone in the ongoing efforts to reform research evaluation. CoARA advocates for administrative evaluations of research that rely on peer review, supported by responsible metrics, as beneficial for both science and society. Its principles can be critically examined through the lens of Philip Kitcher's concept of well-ordered science in a democratic society. From Kitcher's perspective, CoARA's approach faces two significa",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "physics.soc-ph"
+      ],
+      "journal_ref": "Research Evaluation 2025",
+      "doi": "10.1093/reseval/rvaf024",
+      "published": "2024-08-10T16:13:25Z",
+      "source_label": "research_evaluation",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2403.16851v3",
+      "arxiv_id_clean": "2403.16851",
+      "title": "Can social media provide early warning of retraction? Evidence from critical tweets identified by human annotation and large language models",
+      "authors": [
+        "Er-Te Zheng",
+        "Hui-Zhen Fu",
+        "Mike Thelwall",
+        "Zhichao Fang"
+      ],
+      "year": 2024,
+      "summary": "Timely detection of problematic research is essential for safeguarding scientific integrity. To explore whether social media commentary can serve as an early indicator of potentially problematic articles, this study analysed 3,815 tweets referencing 604 retracted articles and 3,373 tweets referencing 668 comparable non-retracted articles. Tweets critical of the articles were identified through both human annotation and large language models (LLMs). Human annotation revealed that 8.3% of retracte",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "journal_ref": "Journal of the Association for Information Science and Technology, 2025",
+      "doi": "10.1002/asi.70028",
+      "published": "2024-03-25T15:15:09Z",
+      "source_label": "retraction",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2410.13989v1",
+      "arxiv_id_clean": "2410.13989",
+      "title": "Reproducibility study of \"LICO: Explainable Models with Language-Image Consistency\"",
+      "authors": [
+        "Luan Fletcher",
+        "Robert van der Klis",
+        "Martin Sedláček",
+        "Stefan Vasilev",
+        "Christos Athanasiadis"
+      ],
+      "year": 2024,
+      "summary": "The growing reproducibility crisis in machine learning has brought forward a need for careful examination of research findings. This paper investigates the claims made by Lei et al. (2023) regarding their proposed method, LICO, for enhancing post-hoc interpretability techniques and improving image classification performance. LICO leverages natural language supervision from a vision-language model to enrich feature representations and guide the learning process. We conduct a comprehensive reprodu",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV"
+      ],
+      "journal_ref": "Transactions on Machine Learning Research 2024",
+      "doi": "",
+      "published": "2024-10-17T19:41:34Z",
+      "source_label": "reproducibility",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2303.16613v3",
+      "arxiv_id_clean": "2303.16613",
+      "title": "Data inaccuracy quantification and uncertainty propagation for bibliometric indicators",
+      "authors": [
+        "Paul Donner"
+      ],
+      "year": 2023,
+      "summary": "This study introduces an approach to estimate the uncertainty in bibliometric indicator values that is caused by data errors. This approach utilizes Bayesian regression models, estimated from empirical data samples, which are used to predict error-free data. Through direct Monte Carlo simulation - drawing many replicates of predicted data from the estimated regression models for the same input data - probability distributions for indicator values can be obtained, which provide the information on",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Research Evaluation, 2024, 33, rvae047",
+      "doi": "10.1093/reseval/rvae047",
+      "published": "2023-03-29T11:55:33Z",
+      "source_label": "research_evaluation",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2309.15884v2",
+      "arxiv_id_clean": "2309.15884",
+      "title": "The strain on scientific publishing",
+      "authors": [
+        "Mark A. Hanson",
+        "Pablo Gómez Barreiro",
+        "Paolo Crosetto",
+        "Dan Brockington"
+      ],
+      "year": 2023,
+      "summary": "Scientists are increasingly overwhelmed by the volume of articles being published. Total articles indexed in Scopus and Web of Science have grown exponentially in recent years; in 2022 the article total was approximately ~47% higher than in 2016, which has outpaced the limited growth - if any - in the number of practising scientists. Thus, publication workload per scientist (writing, reviewing, editing) has increased dramatically. We define this problem as the strain on scientific publishing. To",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "QSS, 1-21 (2024)",
+      "doi": "10.1162/qss_a_00327",
+      "published": "2023-09-27T13:16:03Z",
+      "source_label": "journal_impact",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2310.05926v1",
+      "arxiv_id_clean": "2310.05926",
+      "title": "The using of bibliometric analysis to classify trends and future directions on ''Smart Farm''",
+      "authors": [
+        "Paweena Suebsombut",
+        "Aicha Sekhari",
+        "Pradorn Sureepong",
+        "Pittawat Ueasangkomsate",
+        "Abdelaziz Bouras"
+      ],
+      "year": 2023,
+      "summary": "Climate change has affected the cultivation in all countries with extreme drought, flooding, higher temperature, and changes in the season thus leaving behind the uncontrolled production. Consequently, the smart farm has become part of the crucial trend that is needed for application in certain farm areas. The aims of smart farm are to control and to enhance food production and productivity, and to increase farmers' profits. The advantages in applying smart farm will improve the quality of produ",
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph",
+        "cs.DL"
+      ],
+      "journal_ref": "2017 International Conference on Digital Arts, Media and Technology (ICDAMT), Chiang Mai University, Mar 2017, Chiang Mai, Thailand. pp.136-141",
+      "doi": "10.1109/ICDAMT.2017.7904950",
+      "published": "2023-07-31T08:19:55Z",
+      "source_label": "science_mapping",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2307.12796v1",
+      "arxiv_id_clean": "2307.12796",
+      "title": "KheOps: Cost-effective Repeatability, Reproducibility, and Replicability of Edge-to-Cloud Experiments",
+      "authors": [
+        "Daniel Rosendo",
+        "Kate Keahey",
+        "Alexandru Costan",
+        "Matthieu Simonin",
+        "Patrick Valduriez",
+        "Gabriel Antoniu"
+      ],
+      "year": 2023,
+      "summary": "Distributed infrastructures for computation and analytics are now evolving towards an interconnected ecosystem allowing complex scientific workflows to be executed across hybrid systems spanning from IoT Edge devices to Clouds, and sometimes to supercomputers (the Computing Continuum). Understanding the performance trade-offs of large-scale workflows deployed on such complex Edge-to-Cloud Continuum is challenging. To achieve this, one needs to systematically perform experiments, to enable their ",
+      "primary_category": "cs.DC",
+      "categories": [
+        "cs.DC",
+        "cs.NI"
+      ],
+      "journal_ref": "ACM REP '23: ACM Conference on Reproducibility and Replicability, Jun 2023, Santa Cruz, California, United States. pp.62-73",
+      "doi": "10.1145/3589806.3600032",
+      "published": "2023-07-24T13:44:58Z",
+      "source_label": "reproducibility",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2212.04972v2",
+      "arxiv_id_clean": "2212.04972",
+      "title": "MOPRD: A multidisciplinary open peer review dataset",
+      "authors": [
+        "Jialiang Lin",
+        "Jiaxin Song",
+        "Zhangping Zhou",
+        "Yidong Chen",
+        "Xiaodong Shi"
+      ],
+      "year": 2022,
+      "summary": "Open peer review is a growing trend in academic publications. Public access to peer review data can benefit both the academic and publishing communities. It also serves as a great support to studies on review comment generation and further to the realization of automated scholarly paper review. However, most of the existing peer review datasets do not provide data that cover the whole peer review process. Apart from this, their data are not diversified enough as the data are mainly collected fro",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "journal_ref": "Neural Computing and Applications, Vol. 35, Issue 34, pp. 24191-24206 (2023)",
+      "doi": "10.1007/s00521-023-08891-5",
+      "published": "2022-12-09T16:35:14Z",
+      "source_label": "peer_review",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2205.01010v2",
+      "arxiv_id_clean": "2205.01010",
+      "title": "The effect of the rapid growth of covid-19 publications on citation indicators",
+      "authors": [
+        "Peter Sjögårde"
+      ],
+      "year": 2022,
+      "summary": "A concern has been raised that \"covidization\" of research would cause an overemphasizes on covid-19 and pandemics at the expense of other research. The rapid growth of publications related to the Covid-19 pandemic renders a vast amount of citations from this literature. This growth may affect bibliometric indicators. In this paper I explored how the growth of covid-19 publications influences bibliometric indicators commonly used in university rankings, research evaluation and research allocation",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Sjögårde, Peter. (2022, September 7). The effect of the rapid growth of covid-19 publications on citation indicators. 26th International Conference on Science, Technology and Innovation Indicators (STI 2022), Granada, Spain",
+      "doi": "10.5281/zenodo.7043186",
+      "published": "2022-05-02T16:17:55Z",
+      "source_label": "research_evaluation",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2208.08221v4",
+      "arxiv_id_clean": "2208.08221",
+      "title": "Which Factors are associated with Open Access Publishing? A Springer Nature Case Study",
+      "authors": [
+        "Fakhri Momeni",
+        "Stefan Dietze",
+        "Philipp Mayr",
+        "Kristin Biesenbender",
+        "Isabella Peters"
+      ],
+      "year": 2022,
+      "summary": "Open Access (OA) facilitates access to articles. But, authors or funders often must pay the publishing costs preventing authors who do not receive financial support from participating in OA publishing and citation advantage for OA articles. OA may exacerbate existing inequalities in the publication system rather than overcome them. To investigate this, we studied 522,411 articles published by Springer Nature. Employing correlation and regression analyses, we describe the relationship between aut",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.LG"
+      ],
+      "journal_ref": "Quantitative Science Studies 2023",
+      "doi": "10.1162/qss_a_00253",
+      "published": "2022-08-17T11:06:44Z",
+      "source_label": "journal_ranking",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2201.09090v1",
+      "arxiv_id_clean": "2201.09090",
+      "title": "Are We Standing on Unreliable Shoulders? The Effect of Retracted Papers Citations on Previous and Subsequent Published Papers: A Study of the Web of Science Database",
+      "authors": [
+        "Sepideh Fahimifar",
+        "Ali Ghorbi",
+        "Marcel Ausloos"
+      ],
+      "year": 2022,
+      "summary": "The present research attempts to identify the impact of retracted papers on previous or subsequent papers. We consider the 5693 retracted papers from 1975 to 2020 indexed in the Web of Science database based on bibliometric methods. We use HistCite, Excel, and SPSS software as technical means. The findings suggest a significant difference between the average number of retracted and unretracted papers when cited in retracted papers. Furthermore, there is a significant difference between the avera",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "physics.soc-ph"
+      ],
+      "journal_ref": "International Journal of Information Science and Management Vol. 20, No. 1, 2022, 319-333",
+      "doi": "",
+      "published": "2022-01-22T16:10:31Z",
+      "source_label": "retraction",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2206.01767v1",
+      "arxiv_id_clean": "2206.01767",
+      "title": "[Re] Badder Seeds: Reproducing the Evaluation of Lexical Methods for Bias Measurement",
+      "authors": [
+        "Jille van der Togt",
+        "Lea Tiyavorabun",
+        "Matteo Rosati",
+        "Giulio Starace"
+      ],
+      "year": 2022,
+      "summary": "Combating bias in NLP requires bias measurement. Bias measurement is almost always achieved by using lexicons of seed terms, i.e. sets of words specifying stereotypes or dimensions of interest. This reproducibility study focuses on the original authors' main claim that the rationale for the construction of these lexicons needs thorough checking before usage, as the seeds used for bias measurement can themselves exhibit biases. The study aims to evaluate the reproducibility of the quantitative an",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "journal_ref": "Rescience C, 8(2), #40; 2022",
+      "doi": "10.5281/zenodo.6574705",
+      "published": "2022-06-03T18:00:29Z",
+      "source_label": "reproducibility",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2108.12837v1",
+      "arxiv_id_clean": "2108.12837",
+      "title": "Retracted papers by Iranian authors: Causes, journals, time lags, affiliations, collaborations",
+      "authors": [
+        "Ali Ghorbi",
+        "Mohsen Fazeli-Varzaneh",
+        "Erfan Ghaderi-Azad",
+        "Marcel Ausloos",
+        "Marcin Kozak"
+      ],
+      "year": 2021,
+      "summary": "This study aims to analyze 343 retraction notices indexed in the Scopus database, published in 2001-2019, related to scientific articles (co-)written by at least one author affiliated with an Iranian institution. In order to determine reasons for retractions, we merged this database with the database from Retraction Watch. The data were analyzed using Excel 2016 and IBM-SPSS version 24.0, and visualized using VOSviewer software. Most of the retractions were due to fake peer review (95 retraction",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "physics.soc-ph"
+      ],
+      "journal_ref": "Scientometrics 126 (2021) 7351-7371",
+      "doi": "10.1007/s11192-021-04104-9",
+      "published": "2021-08-29T12:46:04Z",
+      "source_label": "retraction",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2004.04165v1",
+      "arxiv_id_clean": "2004.04165",
+      "title": "Distributed peer review enhanced with natural language processing and machine learning",
+      "authors": [
+        "Wolfgang E. Kerzendorf",
+        "Ferdinando Patat",
+        "Dominic Bordelon",
+        "Glenn van de Ven",
+        "Tyler A. Pritchard"
+      ],
+      "year": 2020,
+      "summary": "While ancient scientists often had patrons to fund their work, peer review of proposals for the allocation of resources is a foundation of modern science. A very common method is that proposals are evaluated by a small panel of experts (due to logistics and funding limitations) nominated by the grant-giving institutions. The expert panel process introduces several issues - most notably: 1) biases introduced in the selection of the panel. 2) experts have to read a very large number of proposals. ",
+      "primary_category": "astro-ph.IM",
+      "categories": [
+        "astro-ph.IM",
+        "physics.soc-ph"
+      ],
+      "journal_ref": "Nature Astronomy 2020",
+      "doi": "10.1038/s41550-020-1038-y",
+      "published": "2020-04-08T18:00:01Z",
+      "source_label": "peer_review",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2502.04457v1",
+      "arxiv_id_clean": "2502.04457",
+      "title": "\"In order that\" -- a data driven study of symptoms and causes of obsolescence",
+      "authors": [
+        "Karolina Rudnicka"
+      ],
+      "year": 2025,
+      "summary": "The paper is an empirical case study of grammatical obsolescence in progress. The main studied variable is the purpose subordinator in order that, which is shown to be steadily decreasing in the frequency of use starting from the beginning of the twentieth century. This work applies a data-driven approach for the investigation and description of obsolescence, recently developed by the Rudnicka (2019). The methodology combines philological analysis with statistical methods used on data acquired f",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CY"
+      ],
+      "journal_ref": "2021, Linguistics Vanguard 7 (1), 20200092: 1-11",
+      "doi": "10.1515/lingvan-2020-0092",
+      "published": "2025-02-06T19:03:45Z",
+      "source_label": "obsolescence",
+      "source_metric_type": "disruption_temporal",
+      "assigned_metric": "disruption_temporal"
+    },
+    {
+      "arxiv_id": "2106.05027v2",
+      "arxiv_id_clean": "2106.05027",
+      "title": "Scientometric engineering: Exploring citation dynamics via arXiv eprints",
+      "authors": [
+        "Keisuke Okamura"
+      ],
+      "year": 2021,
+      "summary": "Scholarly communications have been rapidly integrated into digitised and networked open ecosystems, where preprint servers have played a pivotal role in accelerating the knowledge transfer processes. However, quantitative evidence is scarce regarding how this paradigm shift beyond the traditional journal publication system has affected the dynamics of collective attention on science. To address this issue, we investigate the citation data of more than 1.5 million eprints on arXiv (https://arxiv.",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.CY",
+        "cs.SI",
+        "physics.soc-ph",
+        "stat.AP"
+      ],
+      "journal_ref": "Quantitative Science Studies (2022) 3 (1): 122-146",
+      "doi": "10.1162/qss_a_00174",
+      "published": "2021-06-09T12:38:44Z",
+      "source_label": "obsolescence",
+      "source_metric_type": "disruption_temporal",
+      "assigned_metric": "disruption_temporal"
+    },
+    {
+      "arxiv_id": "2101.07067v3",
+      "arxiv_id_clean": "2101.07067",
+      "title": "Data Obsolescence Detection in the Light of Newly Acquired Valid Observations",
+      "authors": [
+        "Salma Chaieb",
+        "Brahim Hnich",
+        "Ali Ben Mrad"
+      ],
+      "year": 2021,
+      "summary": "The information describing the conditions of a system or a person is constantly evolving and may become obsolete and contradict other information. A database, therefore, must be consistently updated upon the acquisition of new valid observations that contradict obsolete ones contained in the database. In this paper, we propose a novel approach for dealing with the information obsolescence problem. Our approach aims to detect, in real-time, contradictions between observations and then identify th",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "journal_ref": "Applied Intelligence, 1-23 (2022)",
+      "doi": "10.1007/s10489-022-03212-0",
+      "published": "2021-01-18T13:24:06Z",
+      "source_label": "obsolescence",
+      "source_metric_type": "disruption_temporal",
+      "assigned_metric": "disruption_temporal"
+    },
+    {
+      "arxiv_id": "2002.04347v1",
+      "arxiv_id_clean": "2002.04347",
+      "title": "Science through Wikipedia: A novel representation of open knowledge through co-citation networks",
+      "authors": [
+        "Wenceslao Arroyo-Machado",
+        "Daniel Torres-Salinas",
+        "Enrique Herrera-Viedma",
+        "Esteban Romero-Frías"
+      ],
+      "year": 2020,
+      "summary": "This study provides an overview of science from the Wikipedia perspective. A methodology has been established for the analysis of how Wikipedia editors regard science through their references to scientific papers. The method of co-citation has been adapted to this context in order to generate Pathfinder networks (PFNET) that highlight the most relevant scientific journals and categories, and their interactions in order to find out how scientific literature is consumed through this open encyclopa",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "PLOS ONE, 15(2), e0228713, 2020",
+      "doi": "10.1371/journal.pone.0228713",
+      "published": "2020-02-11T12:38:17Z",
+      "source_label": "obsolescence",
+      "source_metric_type": "disruption_temporal",
+      "assigned_metric": "disruption_temporal"
+    },
+    {
+      "arxiv_id": "2005.11218v1",
+      "arxiv_id_clean": "2005.11218",
+      "title": "Updating Weight Values for Function Point Counting",
+      "authors": [
+        "Wei Xia",
+        "Danny Ho",
+        "Luiz Fernando Capretz",
+        "Faheem Ahmed"
+      ],
+      "year": 2020,
+      "summary": "While software development productivity has grown rapidly, the weight values assigned to count standard Function Point (FP) created at IBM twenty-five years ago have never been updated. This obsolescence raises critical questions about the validity of the weight values; it also creates other problems such as ambiguous classification, crisp boundary, as well as subjective and locally defined weight values. All of these challenges reveal the need to calibrate FP in order to reflect both the specif",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "journal_ref": "International Journal of Hybrid Intelligent Systems, Volume 6, Number 1, pp. 1-14, 2009",
+      "doi": "10.3233/HIS-2009-0061",
+      "published": "2020-05-22T14:50:52Z",
+      "source_label": "obsolescence",
+      "source_metric_type": "disruption_temporal",
+      "assigned_metric": "disruption_temporal"
+    },
+    {
+      "arxiv_id": "2603.22151v1",
+      "arxiv_id_clean": "2603.22151",
+      "title": "Gender shapes the relationship between productivity and journal prestige in science",
+      "authors": [
+        "Vitor H. Ribeiro",
+        "Andre S. Sunahara",
+        "Golnaz Shahtahmassebi",
+        "Matjaz Perc",
+        "Haroldo V. Ribeiro"
+      ],
+      "year": 2026,
+      "summary": "Gender disparities in academia manifest and persist in various aspects of the scientific enterprise, yet their influence on the interplay between research productivity and journal prestige remains underexplored. Here we analyze the academic trajectories of over 6,000 elite Brazilian researchers by jointly tracking their annual productivity and the average prestige of the journals in which they publish. By projecting individual career years onto a standardized productivity-prestige plane and appl",
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph"
+      ],
+      "journal_ref": "Sci. Rep. 16, 10854 (2026)",
+      "doi": "10.1038/s41598-026-45844-z",
+      "published": "2026-03-23T16:17:01Z",
+      "source_label": "gender_diversity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "team_size_effect"
+    },
+    {
+      "arxiv_id": "2512.23429v1",
+      "arxiv_id_clean": "2512.23429",
+      "title": "The Effect of Gender Diversity on Scientific Team Impact: A Team Roles Perspective",
+      "authors": [
+        "Yi Zhao",
+        "Yongjun Zhu",
+        "Donghun Kim",
+        "Yuzhuo Wang",
+        "Heng Zhang",
+        "Chao Lu",
+        "Chengzhi Zhang"
+      ],
+      "year": 2025,
+      "summary": "The influence of gender diversity on the success of scientific teams is of great interest to academia. However, prior findings remain inconsistent, and most studies operationalize diversity in aggregate terms, overlooking internal role differentiation. This limitation obscures a more nuanced understanding of how gender diversity shapes team impact. In particular, the effect of gender diversity across different team roles remains poorly understood. To this end, we define a scientific team as all ",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CY",
+        "cs.DL"
+      ],
+      "journal_ref": "Journal of Informetrics, 2026",
+      "doi": "10.1016/j.joi.2025.101766",
+      "published": "2025-12-29T12:49:21Z",
+      "source_label": "gender_diversity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "team_size_effect"
+    },
+    {
+      "arxiv_id": "2404.15176v1",
+      "arxiv_id_clean": "2404.15176",
+      "title": "Voice Passing : a Non-Binary Voice Gender Prediction System for evaluating Transgender voice transition",
+      "authors": [
+        "David Doukhan",
+        "Simon Devauchelle",
+        "Lucile Girard-Monneron",
+        "Mía Chávez Ruz",
+        "V. Chaddouk",
+        "Isabelle Wagner",
+        "Albert Rilliard"
+      ],
+      "year": 2024,
+      "summary": "This paper presents a software allowing to describe voices using a continuous Voice Femininity Percentage (VFP). This system is intended for transgender speakers during their voice transition and for voice therapists supporting them in this process. A corpus of 41 French cis- and transgender speakers was recorded. A perceptual evaluation allowed 57 participants to estimate the VFP for each voice. Binary gender classification models were trained on external gender-balanced data and used on overla",
+      "primary_category": "eess.AS",
+      "categories": [
+        "eess.AS",
+        "cs.HC",
+        "cs.LG",
+        "cs.SD"
+      ],
+      "journal_ref": "Proc. INTERSPEECH 2023, 5207-5211",
+      "doi": "10.21437/Interspeech.2023-1835",
+      "published": "2024-04-23T16:15:39Z",
+      "source_label": "gender_diversity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "team_size_effect"
+    },
+    {
+      "arxiv_id": "2409.02592v2",
+      "arxiv_id_clean": "2409.02592",
+      "title": "Exploring Citation Diversity in Scholarly Literature: An Entropy-Based Approach",
+      "authors": [
+        "Suchismita Banerjee",
+        "Abhik Ghosh",
+        "Banasri Basu"
+      ],
+      "year": 2024,
+      "summary": "This study explores the citation diversity in scholarly literature, analyzing different patterns of citations observed within different countries and academic disciplines. We examine citation distributions across top institutions within certain countries and find that the higher end of the distribution follows a Power Law or Pareto Law pattern; the scaling exponent of the Pareto Law varies depending on the number of top institutions included in the analysis. By adopting a novel entropy-based div",
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph",
+        "cs.DL"
+      ],
+      "journal_ref": "Scientometrics 130, 2673-2704 (2025)",
+      "doi": "10.1007/s11192-025-05313-2",
+      "published": "2024-09-04T10:16:53Z",
+      "source_label": "gender_diversity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "team_size_effect"
+    },
+    {
+      "arxiv_id": "2302.07843v2",
+      "arxiv_id_clean": "2302.07843",
+      "title": "Quantifying gender imbalance in East Asian academia: Research career and citation practice",
+      "authors": [
+        "Kazuki Nakajima",
+        "Ruodan Liu",
+        "Kazuyuki Shudo",
+        "Naoki Masuda"
+      ],
+      "year": 2023,
+      "summary": "Gender imbalance in academia has been confirmed in terms of a variety of indicators, and its magnitude often varies from country to country. Europe and North America, which cover a large fraction of research workforce in the world, have been the main geographical regions for research on gender imbalance in academia. However, the academia in East Asia, which accounts for a substantial fraction of research, may be exposed to strong gender imbalance because Asia has been facing persistent and stron",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "physics.soc-ph"
+      ],
+      "journal_ref": "Journal of Informetrics, Volume 17, Issue 4, Article No. 101460, November 2023",
+      "doi": "10.1016/j.joi.2023.101460",
+      "published": "2023-02-15T18:30:19Z",
+      "source_label": "gender_diversity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "team_size_effect"
+    },
+    {
+      "arxiv_id": "1908.07576v1",
+      "arxiv_id_clean": "1908.07576",
+      "title": "The citation advantage of foreign language references for Chinese social science papers",
+      "authors": [
+        "Kaile Gong",
+        "Juan Xie",
+        "Ying Cheng",
+        "Vincent Larivière",
+        "Cassidy R. Sugimoto"
+      ],
+      "year": 2019,
+      "summary": "Contemporary scientific exchanges are international, yet language continues to be a persistent barrier to scientific communication, particularly for non-native English-speaking scholars. Since the ability to absorb knowledge has a strong impact on how researchers create new scientific knowledge, a comprehensive access to and understanding of both domestic and international scientific publications is essential for scientific performance. This study explores the effect of absorbed knowledge on res",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Scientometrics,2019,120(3):1439-1460",
+      "doi": "10.1007/s11192-019-03146-4",
+      "published": "2019-08-20T19:22:43Z",
+      "source_label": "gender_diversity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "team_size_effect"
+    },
+    {
+      "arxiv_id": "1810.12737v1",
+      "arxiv_id_clean": "1810.12737",
+      "title": "Should the research performance of scientists be distinguished by gender?",
+      "authors": [
+        "Giovanni Abramo",
+        "Tindaro Cicero",
+        "Ciriaco Andrea D'Angelo"
+      ],
+      "year": 2018,
+      "summary": "The literature on gender differences in research performance seems to suggest a gap between men and women, where the former outperform the latter. Whether one agrees with the different factors proposed to explain the phenomenon, it is worthwhile to verify if comparing the performance within each gender, rather than without distinction, gives significantly different ranking lists. If there were some structural factor that determined a penalty in performance of female researchers compared to their",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Abramo, G., Cicero, T., D'Angelo, C.A. (2015). Should the research performance of scientists be distinguished by gender? Journal of Informetrics, 9(1), 25-38",
+      "doi": "10.1016/j.joi.2014.11.002",
+      "published": "2018-10-30T13:54:47Z",
+      "source_label": "gender_diversity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "team_size_effect"
+    },
+    {
+      "arxiv_id": "1706.07976v1",
+      "arxiv_id_clean": "1706.07976",
+      "title": "Theory and Practice of Data Citation",
+      "authors": [
+        "Gianmaria Silvello"
+      ],
+      "year": 2017,
+      "summary": "Citations are the cornerstone of knowledge propagation and the primary means of assessing the quality of research, as well as directing investments in science. Science is increasingly becoming \"data-intensive\", where large volumes of data are collected and analyzed to discover complex patterns through simulations and experiments, and most scientific reference works have been replaced by online curated datasets. Yet, given a dataset, there is no quantitative, consistent and established way of kno",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Journal of the Association for Information Science and Technology, 2017",
+      "doi": "10.1002/asi.23917",
+      "published": "2017-06-24T15:59:29Z",
+      "source_label": "gender_diversity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "team_size_effect"
+    },
+    {
+      "arxiv_id": "2602.05211v1",
+      "arxiv_id_clean": "2602.05211",
+      "title": "Quantifying the Knowledge Proximity Between Academic and Industry Research: An Entity and Semantic Perspective",
+      "authors": [
+        "Hongye Zhao",
+        "Yi Zhao",
+        "Chengzhi Zhang"
+      ],
+      "year": 2026,
+      "summary": "The academia and industry are characterized by a reciprocal shaping and dynamic feedback mechanism. Despite distinct institutional logics, they have adapted closely in collaborative publishing and talent mobility, demonstrating tension between institutional divergence and intensive collaboration. Existing studies on their knowledge proximity mainly rely on macro indicators such as the number of collaborative papers or patents, lacking an analysis of knowledge units in the literature. This has le",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.DL"
+      ],
+      "journal_ref": "Technological Forecasting & Social Change, 2026",
+      "doi": "",
+      "published": "2026-02-05T02:12:47Z",
+      "source_label": "knowledge_flows",
+      "source_metric_type": "network_normalized_impact",
+      "assigned_metric": "network_normalized_impact"
+    },
+    {
+      "arxiv_id": "2506.06753v1",
+      "arxiv_id_clean": "2506.06753",
+      "title": "Influential scientists shape knowledge flows between science and IGO policy",
+      "authors": [
+        "Kimitaka Asatani",
+        "Yurie Iwata",
+        "Yuta Tomokiyo",
+        "Basil Mahfouz",
+        "Masaru Yarime",
+        "Ichiro Sakata"
+      ],
+      "year": 2025,
+      "summary": "Intergovernmental organizations (IGOs) increasingly rely on scientific evidence, yet the pathways through which scientific research enters policy remain opaque. By linking 230,737 scientific papers cited in IGO policy documents (2015-2023) to their authors and collaboration networks, we identify a small group of policy-influential scientists (PI-Sci) who dominate this knowledge flow. These scientists form tightly interconnected, internationally spanning co-authorship networks and achieve policy ",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Proc. Natl. Acad. Sci. U.S.A. 123(17), e2514861123 (2026)",
+      "doi": "10.1073/pnas.2514861123",
+      "published": "2025-06-07T10:50:00Z",
+      "source_label": "knowledge_diffusion",
+      "source_metric_type": "network_normalized_impact",
+      "assigned_metric": "network_normalized_impact"
+    },
+    {
+      "arxiv_id": "2505.21162v1",
+      "arxiv_id_clean": "2505.21162",
+      "title": "Leveraging GANs for citation intent classification and its impact on citation network analysis",
+      "authors": [
+        "Davi A. Bezerra",
+        "Filipi N. Silva",
+        "Diego R. Amancio"
+      ],
+      "year": 2025,
+      "summary": "Citations play a fundamental role in the scientific ecosystem, serving as a foundation for tracking the flow of knowledge, acknowledging prior work, and assessing scholarly influence. In scientometrics, they are also central to the construction of quantitative indicators. Not all citations, however, serve the same function: some provide background, others introduce methods, or compare results. Therefore, understanding citation intent allows for a more nuanced interpretation of scientific impact.",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.CL",
+        "cs.SI"
+      ],
+      "journal_ref": "Journal of Informetrics 20 (2) 101791, 2026",
+      "doi": "10.1016/j.joi.2026.101791",
+      "published": "2025-05-27T13:16:09Z",
+      "source_label": "citation_network",
+      "source_metric_type": "network_normalized_impact",
+      "assigned_metric": "network_normalized_impact"
+    },
+    {
+      "arxiv_id": "2312.01295v1",
+      "arxiv_id_clean": "2312.01295",
+      "title": "Two-stage dynamic creative optimization under sparse ambiguous samples for e-commerce advertising",
+      "authors": [
+        "Guandong Li",
+        "Xian Yang"
+      ],
+      "year": 2023,
+      "summary": "Ad creative is one of the main mediums for e-commerce advertising. In our approach we decouple this dynamic creative optimization into two stages, a cascaded structure that can trade off between effectiveness and efficiency. In the first stage, we train an automatic creative optimization architecture based on autoco to simulate complex interactions between creative elements. Although we obtained the ranking of different creatives under a sku, because we bucketed and merged historical data accord",
+      "primary_category": "cs.MM",
+      "categories": [
+        "cs.MM"
+      ],
+      "journal_ref": "23 Sep 2024 by SN Computer Science",
+      "doi": "",
+      "published": "2023-12-03T06:02:27Z",
+      "source_label": "knowledge_diffusion",
+      "source_metric_type": "network_normalized_impact",
+      "assigned_metric": "network_normalized_impact"
+    },
+    {
+      "arxiv_id": "2207.14260v2",
+      "arxiv_id_clean": "2207.14260",
+      "title": "The Concept of Decentralization Through Time and Disciplines: A Quantitative Exploration",
+      "authors": [
+        "Gabriele Di Bona",
+        "Alberto Bracci",
+        "Nicola Perra",
+        "Vito Latora",
+        "Andrea Baronchelli"
+      ],
+      "year": 2022,
+      "summary": "Decentralization is a pervasive concept found across disciplines, including Economics, Political Science, and Computer Science, where it is used in distinct yet interrelated ways. Here, we develop and publicly release a general pipeline to investigate the scholarly history of the term, analysing 425,144 academic publications that refer to (de)centralization. We find that the fraction of papers on the topic has been exponentially increasing since the 1950s. In 2021, 1 author in 154 mentioned (de)",
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph",
+        "cs.CY"
+      ],
+      "journal_ref": "EPJ Data Science 12, 42 (2023)",
+      "doi": "10.1140/epjds/s13688-023-00418-1",
+      "published": "2022-07-28T17:46:46Z",
+      "source_label": "knowledge_flows",
+      "source_metric_type": "network_normalized_impact",
+      "assigned_metric": "network_normalized_impact"
+    },
+    {
+      "arxiv_id": "2202.08822v1",
+      "arxiv_id_clean": "2202.08822",
+      "title": "Objectives of platform research: A co-citation and systematic literature review analysis",
+      "authors": [
+        "Fabian Schueler",
+        "Dimitri Petrik"
+      ],
+      "year": 2022,
+      "summary": "Business economics research on digital platforms often overlooks existing knowledge from other fields of research leading to conceptual ambiguity and inconsistent findings. To reduce these restrictions and foster the utilization of the extensive body of literature, we apply a mixed methods design to summarize the key findings of scientific platform research. Our bibliometric analysis identifies 14 platform-related research fields. Conducting a systematic qualitative content analysis, we identify",
+      "primary_category": "econ.GN",
+      "categories": [
+        "econ.GN"
+      ],
+      "journal_ref": "Management Digitaler Plattformen pp 1-33 (2021)",
+      "doi": "10.1007/978-3-658-31118-6_1",
+      "published": "2022-02-17T18:45:28Z",
+      "source_label": "cocitation",
+      "source_metric_type": "network_normalized_impact",
+      "assigned_metric": "network_normalized_impact"
+    },
+    {
+      "arxiv_id": "2208.06431v2",
+      "arxiv_id_clean": "2208.06431",
+      "title": "Similarity matrix average for aggregating multiplex networks",
+      "authors": [
+        "Federica Baccini",
+        "Lucio Barabesi",
+        "Eugenio Petrovich"
+      ],
+      "year": 2022,
+      "summary": "We introduce a methodology based on averaging similarity matrices with the aim of integrating the layers of a multiplex network into a single monoplex network. Multiplex networks are adopted for modelling a wide variety of real-world frameworks, such as multi-type relations in social, economic and biological structures. More specifically, multiplex networks are used when relations of different nature (layers) arise between a set of elements from a given population (nodes). A possible approach fo",
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph",
+        "cs.CG",
+        "physics.data-an",
+        "stat.ME"
+      ],
+      "journal_ref": "Journal of Physics: Complexity, 4(2), 025017 (2023)",
+      "doi": "10.1088/2632-072X/acda09",
+      "published": "2022-07-29T07:54:16Z",
+      "source_label": "cocitation",
+      "source_metric_type": "network_normalized_impact",
+      "assigned_metric": "network_normalized_impact"
+    },
+    {
+      "arxiv_id": "2101.09520v2",
+      "arxiv_id_clean": "2101.09520",
+      "title": "Is academia becoming more localised? The growth of regional knowledge networks within international research collaboration",
+      "authors": [
+        "John Fitzgerald",
+        "Sanna Ojanperä",
+        "Neave O'Clery"
+      ],
+      "year": 2021,
+      "summary": "It is well-established that the process of learning and capability building is core to economic development and structural transformation. Since knowledge is `sticky', a key component of this process is learning-by-doing, which can be achieved via a variety of mechanisms including international research collaboration. Uncovering significant inter-country research ties using Scopus co-authorship data, we show that within-region collaboration has increased over the past five decades relative to in",
+      "primary_category": "cs.SI",
+      "categories": [
+        "cs.SI"
+      ],
+      "journal_ref": "Appl Netw Sci 6, 38 (2021)",
+      "doi": "10.1007/s41109-021-00371-w",
+      "published": "2021-01-23T15:06:14Z",
+      "source_label": "knowledge_diffusion",
+      "source_metric_type": "network_normalized_impact",
+      "assigned_metric": "network_normalized_impact"
+    },
+    {
+      "arxiv_id": "2206.11470v2",
+      "arxiv_id_clean": "2206.11470",
+      "title": "Higher-order rich-club phenomenon in collaborative research grants",
+      "authors": [
+        "Kazuki Nakajima",
+        "Kazuyuki Shudo",
+        "Naoki Masuda"
+      ],
+      "year": 2022,
+      "summary": "Modern scientific work, including writing papers and submitting research grant proposals, increasingly involves researchers from different institutions. In grant collaborations, it is known that institutions involved in many collaborations tend to densely collaborate with each other, forming rich clubs. Here we investigate higher-order rich-club phenomena in collaborative research grants among institutions and their associations with research productivity. Using publicly available data from the ",
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph",
+        "cs.SI"
+      ],
+      "journal_ref": "Scientometrics, vol. 128, pp. 2429-2446, 2023",
+      "doi": "10.1007/s11192-022-04621-1",
+      "published": "2022-06-23T03:37:51Z",
+      "source_label": "funding_productivity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "frontier_author_impact"
+    },
+    {
+      "arxiv_id": "2106.10700v1",
+      "arxiv_id_clean": "2106.10700",
+      "title": "On predicting research grants productivity",
+      "authors": [
+        "Jorge A. V. Tohalino",
+        "Diego R. Amancio"
+      ],
+      "year": 2021,
+      "summary": "Understanding the reasons associated with successful proposals is of paramount importance to improve evaluation processes. In this context, we analyzed whether bibliometric features are able to predict the success of research grants. We extracted features aiming at characterizing the academic history of Brazilian researchers, including research topics, affiliations, number of publications and visibility. The extracted features were then used to predict grants productivity via machine learning in",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.LG"
+      ],
+      "journal_ref": "Journal of Informetrics 16(2), 101260, 2022",
+      "doi": "10.1016/j.joi.2022.101260",
+      "published": "2021-06-20T14:21:46Z",
+      "source_label": "funding_productivity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "frontier_author_impact"
+    },
+    {
+      "arxiv_id": "2104.05562v1",
+      "arxiv_id_clean": "2104.05562",
+      "title": "Can Author Collaboration Reveal Impact? The Case of h-index",
+      "authors": [
+        "Giannis Nikolentzos",
+        "George Panagopoulos",
+        "Iakovos Evdaimon",
+        "Michalis Vazirgiannis"
+      ],
+      "year": 2021,
+      "summary": "Scientific impact has been the center of extended debate regarding its accuracy and reliability. From hiring committees in academic institutions to governmental agencies that distribute funding, an author's scientific success as measured by the h-index is a vital point to their career. The objective of this work is to investigate whether the collaboration patterns of an author are good predictors of the author's future $h$-index. Although not directly related to each other, a more intense collab",
+      "primary_category": "cs.SI",
+      "categories": [
+        "cs.SI"
+      ],
+      "journal_ref": "Springer Dynamics of Research Impact, 2021",
+      "doi": "",
+      "published": "2021-04-12T15:30:03Z",
+      "source_label": "funding_productivity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "frontier_author_impact"
+    },
+    {
+      "arxiv_id": "1804.03732v3",
+      "arxiv_id_clean": "1804.03732",
+      "title": "Contest models highlight inherent inefficiencies of scientific funding competitions",
+      "authors": [
+        "Kevin Gross",
+        "Carl T. Bergstrom"
+      ],
+      "year": 2018,
+      "summary": "Scientific research funding is allocated largely through a system of soliciting and ranking competitive grant proposals. In these competitions, the proposals themselves are not the deliverables that the funder seeks, but instead are used by the funder to screen for the most promising research ideas. Consequently, some of the funding program's impact on science is squandered because applying researchers must spend time writing proposals instead of doing science. To what extent does the community'",
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph",
+        "stat.OT"
+      ],
+      "journal_ref": "PLoS Biology 17(1): e3000065",
+      "doi": "10.1371/journal.pbio.3000065",
+      "published": "2018-04-10T21:53:36Z",
+      "source_label": "funding_productivity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "frontier_author_impact"
+    },
+    {
+      "arxiv_id": "1602.07396v1",
+      "arxiv_id_clean": "1602.07396",
+      "title": "Concentration of research funding leads to decreasing marginal returns",
+      "authors": [
+        "Philippe Mongeon",
+        "Christine Brodeur",
+        "Catherine Beaudry",
+        "Vincent Lariviere"
+      ],
+      "year": 2016,
+      "summary": "In most countries, basic research is supported by research councils that select, after peer review, the individuals or teams that are to receive funding. Unfortunately, the number of grants these research councils can allocate is not infinite and, in most cases, a minority of the researchers receive the majority of the funds. However, evidence as to whether this is an optimal way of distributing available funds is mixed. The purpose of this study is to measure the relation between the amount of ",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Research Evaluation 25 (4): 396-404 (2016)",
+      "doi": "10.1093/reseval/rvw007",
+      "published": "2016-02-24T04:37:19Z",
+      "source_label": "funding_productivity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "frontier_author_impact"
+    },
+    {
+      "arxiv_id": "2006.16737v1",
+      "arxiv_id_clean": "2006.16737",
+      "title": "Delayed Recognition; the Co-citation Perspective",
+      "authors": [
+        "Wenxi Zhao",
+        "Dmitriy Korobskiy",
+        "George Chacko"
+      ],
+      "year": 2020,
+      "summary": "A Sleeping Beauty is a publication that is apparently unrecognized for some period of time before experiencing sudden recognition by citation. Various reasons, including resistance to new ideas, have been attributed to such delayed recognition. We examine this phenomenon in the special case of co-citations, which represent new ideas generated through the combination of existing ones. Using relatively stringent selection criteria derived from the work of others, we analyze a very large dataset of",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Frontiers in Research Metrics and Analytics (2021)",
+      "doi": "10.3389/frma.2020.577131",
+      "published": "2020-06-30T12:51:49Z",
+      "source_label": "delayed_recognition",
+      "source_metric_type": "sleeping_beauty",
+      "assigned_metric": "sleeping_beauty"
+    },
+    {
+      "arxiv_id": "1804.04105v2",
+      "arxiv_id_clean": "1804.04105",
+      "title": "Comparing scientific and technological impact of biomedical research",
+      "authors": [
+        "Qing Ke"
+      ],
+      "year": 2018,
+      "summary": "Traditionally, the number of citations that a scholarly paper receives from other papers is used as the proxy of its scientific impact. Yet citations can come from domains outside the scientific community, and one such example is through patented technologies---paper can be cited by patents, achieving technological impact. While the scientific impact of papers has been extensively studied, the technological aspect remains less known in the literature. Here we aim to fill this gap by presenting a",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "physics.soc-ph"
+      ],
+      "journal_ref": "Journal of Informetrics 12, 706-717 (2018)",
+      "doi": "10.1016/j.joi.2018.06.010",
+      "published": "2018-04-11T17:22:19Z",
+      "source_label": "delayed_recognition",
+      "source_metric_type": "sleeping_beauty",
+      "assigned_metric": "sleeping_beauty"
+    },
+    {
+      "arxiv_id": "1409.7889v2",
+      "arxiv_id_clean": "1409.7889",
+      "title": "Is your EPL attractive? Classification of publications through download statistics",
+      "authors": [
+        "Olesya Mryglod",
+        "Ralph Kenna",
+        "Yurij Holovatch"
+      ],
+      "year": 2014,
+      "summary": "Here we consider the download statistics of EPL publications. We find that papers in the journal are characterised by fast accumulations of downloads during the first couple of months after publication, followed by slower rates thereafter, behaviour which can be represented by a model with predictive power. We also find that individual papers can be classified in various ways, allowing us to compare categories for open-access and non-open-access papers. For example, for the latter publications, ",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "physics.soc-ph"
+      ],
+      "journal_ref": "Europhys. Lett. 108 (2014) 50011",
+      "doi": "10.1209/0295-5075/108/50011",
+      "published": "2014-09-28T10:20:19Z",
+      "source_label": "delayed_recognition",
+      "source_metric_type": "sleeping_beauty",
+      "assigned_metric": "sleeping_beauty"
+    },
+    {
+      "arxiv_id": "2501.15552v2",
+      "arxiv_id_clean": "2501.15552",
+      "title": "Community-centric modeling of citation dynamics explains collective citation patterns in science, law, and patents",
+      "authors": [
+        "Sadamori Kojaku",
+        "Robert Mahari",
+        "Sandro Claudio Lera",
+        "Esteban Moro",
+        "Alex Pentland",
+        "Yong-Yeol Ahn"
+      ],
+      "year": 2025,
+      "summary": "Many human knowledge systems, such as science, law, and invention, are built on documents and the citations that link them. Citations, while serving multiple purposes, primarily function as a way to explicitly document the use of prior work and thus have become central to the study of knowledge systems. Analyzing citation dynamics has revealed statistical patterns that shed light on knowledge production, recognition, and formalization, and has helped identify key mechanisms driving these pattern",
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph",
+        "cs.SI"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2025-01-26T14:59:57Z",
+      "source_label": "delayed_recognition",
+      "source_metric_type": "sleeping_beauty",
+      "assigned_metric": "sleeping_beauty"
+    },
+    {
+      "arxiv_id": "2512.16943v4",
+      "arxiv_id_clean": "2512.16943",
+      "title": "Forsaking your own: unveiling the delayed recognition of Garfield's work on the \"delayed recognition\" phenomenon",
+      "authors": [
+        "Tariq Ahmad Mir",
+        "Marcel Ausloos"
+      ],
+      "year": 2025,
+      "summary": "Delayed recognition (DR) implies that the full scholarly potential of certain scientific papers is recognized belatedly many years after their publication. Such papers are initially barely cited (sleep), and then suddenly, sometime in the future, their citation numbers burst (are awakened). After van Raan (2004a) called them \"Sleeping Beauties\" the DR phenomenon has drawn considerable attention. However, long before van Raan (2004a) Garfield studied the phenomenon in a series of articles from 19",
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2025-12-16T09:26:44Z",
+      "source_label": "delayed_recognition",
+      "source_metric_type": "sleeping_beauty",
+      "assigned_metric": "sleeping_beauty"
+    },
+    {
+      "arxiv_id": "2407.14559v1",
+      "arxiv_id_clean": "2407.14559",
+      "title": "Predicting Star Scientists in the Field of Artificial Intelligence: A Machine Learning Approach",
+      "authors": [
+        "Koosha Shirouyeh",
+        "Andrea Schiffauerova",
+        "Ashkan Ebadi"
+      ],
+      "year": 2024,
+      "summary": "Star scientists are highly influential researchers who have made significant contributions to their field, gained widespread recognition, and often attracted substantial research funding. They are critical for the advancement of science and innovation, and they have a significant influence on the transfer of knowledge and technology to industry. Identifying potential star scientists before their performance becomes outstanding is important for recruitment, collaboration, networking, or research ",
+      "primary_category": "cs.OH",
+      "categories": [
+        "cs.OH",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "journal_ref": "Shirouyeh, K., Schiffauerova, A., & Ebadi, A. (2025). Predicting Star Scientists in the Field of Artificial Intelligence: A Machine Learning Approach. Metrics, 2(4), 22",
+      "doi": "10.3390/metrics2040022",
+      "published": "2024-07-18T16:50:18Z",
+      "source_label": "career_trajectories",
+      "source_metric_type": "career_mobility",
+      "assigned_metric": "career_mobility"
+    },
+    {
+      "arxiv_id": "2311.03834v1",
+      "arxiv_id_clean": "2311.03834",
+      "title": "Universal productivity patterns in research careers",
+      "authors": [
+        "Andre S. Sunahara",
+        "Matjaz Perc",
+        "Haroldo V. Ribeiro"
+      ],
+      "year": 2023,
+      "summary": "A common expectation is that career productivity peaks rather early and then gradually declines with seniority. But whether this holds true is still an open question. Here we investigate the productivity trajectories of almost 8,500 scientists from over fifty disciplines using methods from time series analysis, dimensionality reduction, and network science, showing that there exist six universal productivity patterns in research. Based on clusters of productivity trajectories and network represe",
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph",
+        "cs.SI"
+      ],
+      "journal_ref": "Phys. Rev. Research 5, 043203 (2023)",
+      "doi": "10.1103/PhysRevResearch.5.043203",
+      "published": "2023-11-07T09:30:49Z",
+      "source_label": "career_trajectories",
+      "source_metric_type": "career_mobility",
+      "assigned_metric": "career_mobility"
+    },
+    {
+      "arxiv_id": "2105.06840v1",
+      "arxiv_id_clean": "2105.06840",
+      "title": "The academic wanderer: structure of collaboration network and relation with research performance",
+      "authors": [
+        "Pavlos Paraskevopoulos",
+        "Chiara Boldrini",
+        "Andrea Passarella",
+        "Marco Conti"
+      ],
+      "year": 2021,
+      "summary": "Thanks to the widespread availability of large-scale datasets on scholarly outputs, science itself has come under the microscope with the aim of capturing a quantitative understanding of its workings. In this study, we leverage well-established cognitive models coming from anthropology in order to characterise the personal network of collaborations between scientists, i.e., the network considered from the standpoint of each individual researcher (referred to as ego network), in terms of the cogn",
+      "primary_category": "cs.SI",
+      "categories": [
+        "cs.SI"
+      ],
+      "journal_ref": "Paraskevopoulos, P., Boldrini, C., Passarella, A. et al. The academic wanderer: structure of collaboration network and relation with research performance. Appl Netw Sci 6, 31 (2021)",
+      "doi": "10.1007/s41109-021-00369-4",
+      "published": "2021-05-14T14:08:38Z",
+      "source_label": "scientist_mobility",
+      "source_metric_type": "career_mobility",
+      "assigned_metric": "career_mobility"
+    },
+    {
+      "arxiv_id": "2104.01955v1",
+      "arxiv_id_clean": "2104.01955",
+      "title": "Automating Transfer Credit Assessment in Student Mobility -- A Natural Language Processing-based Approach",
+      "authors": [
+        "Dhivya Chandrasekaran",
+        "Vijay Mago"
+      ],
+      "year": 2021,
+      "summary": "Student mobility or academic mobility involves students moving between institutions during their post-secondary education, and one of the challenging tasks in this process is to assess the transfer credits to be offered to the incoming student. In general, this process involves domain experts comparing the learning outcomes of the courses, to decide on offering transfer credits to the incoming students. This manual implementation is not only labor-intensive but also influenced by undue bias and ",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "journal_ref": "CMC-Computers, Materials & Continua, Vol.73, No.2, pp. 2257-2274, 2022",
+      "doi": "10.32604/cmc.2022.027236",
+      "published": "2021-04-05T15:14:59Z",
+      "source_label": "scientist_mobility",
+      "source_metric_type": "career_mobility",
+      "assigned_metric": "career_mobility"
+    },
+    {
+      "arxiv_id": "1906.04619v1",
+      "arxiv_id_clean": "1906.04619",
+      "title": "Achieving competitive advantage in academia through early career coauthorship with top scientists",
+      "authors": [
+        "Weihua Li",
+        "Tomaso Aste",
+        "Fabio Caccioli",
+        "Giacomo Livan"
+      ],
+      "year": 2019,
+      "summary": "We quantify the long term impact that the coauthorship with established top-cited scientists has on the career of junior researchers in four different scientific disciplines. Through matched pair analysis, we find that junior researchers who coauthor work with top scientists enjoy a persistent competitive advantage throughout the rest of their careers with respect to peers with similar early career profiles. Such a competitive advantage materialises as a higher probability of repeatedly coauthor",
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph",
+        "cs.DL",
+        "cs.SI"
+      ],
+      "journal_ref": "Nature Communications 10, 5170 (2019)",
+      "doi": "10.1038/s41467-019-13130-4",
+      "published": "2019-06-11T14:21:20Z",
+      "source_label": "career_trajectories",
+      "source_metric_type": "career_mobility",
+      "assigned_metric": "career_mobility"
+    },
+    {
+      "arxiv_id": "1812.09241v1",
+      "arxiv_id_clean": "1812.09241",
+      "title": "Assessing the accuracy of the h and g indexes for measuring researchers' productivity",
+      "authors": [
+        "Giovanni Abramo",
+        "Ciriaco Andrea D'Angelo",
+        "Fulvio Viel"
+      ],
+      "year": 2018,
+      "summary": "Bibliometric indicators are increasingly used in support of decisions for recruitment, career advancement, rewarding and selective funding for scientists. Given the importance of the applications, bibliometricians are obligated to carry out empirical testing of the robustness of the indicators, in simulations of real contexts. In this work we compare the results of national-scale research assessments at the individual level, based on three different indexes: the h-index, g-index and \"fractional ",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Abramo, G., D'Angelo, C.A., Viel, F. (2013). Assessing the accuracy of the h- and g-indexes for measuring researchers' productivity. Journal of the American Society for Information Science and Technology, 64(6), 1224-1234",
+      "doi": "10.1002/asi.22828",
+      "published": "2018-12-20T12:16:07Z",
+      "source_label": "career_trajectories",
+      "source_metric_type": "career_mobility",
+      "assigned_metric": "career_mobility"
+    },
+    {
+      "arxiv_id": "1810.12647v1",
+      "arxiv_id_clean": "1810.12647",
+      "title": "How long do top scientists maintain their stardom? An analysis by region, gender and discipline: evidence from Italy",
+      "authors": [
+        "Giovanni Abramo",
+        "Ciriaco Andrea D'Angelo",
+        "Anastasiia Soldatenkova"
+      ],
+      "year": 2018,
+      "summary": "We investigate the question of how long top scientists retain their stardom. We observe the research performance of all Italian professors in the sciences over three consecutive four-year periods, between 2001 and 2012. The top scientists of the first period are identified on the basis of research productivity, and their performance is then tracked through time. The analyses demonstrate that more than a third of the nation's top scientists maintain this status over the three consecutive periods,",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Abramo, G., D'Angelo, C.A., Soldatenkova, A. (2017). How long do top scientists maintain their stardom? An analysis by region, gender and discipline: evidence from Italy. Scientometrics, 110(2), 867-877",
+      "doi": "10.1007/s11192-016-2193-x",
+      "published": "2018-10-30T10:54:38Z",
+      "source_label": "career_trajectories",
+      "source_metric_type": "career_mobility",
+      "assigned_metric": "career_mobility"
+    },
+    {
+      "arxiv_id": "1810.07812v1",
+      "arxiv_id_clean": "1810.07812",
+      "title": "Openness and Impact of Leading Scientific Countries",
+      "authors": [
+        "Caroline S. Wagner",
+        "Travis Whetsell",
+        "Jeroen Baas",
+        "Koen Jonkers"
+      ],
+      "year": 2018,
+      "summary": "The rapid rise of international collaboration over the past three decades, demonstrated in coauthorship of scientific articles, raises the question of whether countries benefit from cooperative science and how this might be measured. We develop and compare measures to ask this question. For all source publications in 2013, we obtained from Elsevier national level full and fractional paper counts as well as accompanying field-weighted citation counts. Then we collected information from Elsevier o",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "physics.soc-ph",
+        "stat.AP"
+      ],
+      "journal_ref": "Wagner, C. S., Whetsell, T., Baas, J., & Jonkers, K. (2018). Openness and impact of leading scientific countries. Frontiers in Research Metrics and Analytics, 3, 10",
+      "doi": "10.3389/frma.2018.00010",
+      "published": "2018-10-17T21:37:59Z",
+      "source_label": "scientist_mobility",
+      "source_metric_type": "career_mobility",
+      "assigned_metric": "career_mobility"
+    },
+    {
+      "arxiv_id": "2603.19319v1",
+      "arxiv_id_clean": "2603.19319",
+      "title": "Exploring Novelty Differences between Industry and Academia: A Knowledge Entity-centric Perspective",
+      "authors": [
+        "Hongye Zhao",
+        "Yi Zhao",
+        "Chengzhi Zhang"
+      ],
+      "year": 2026,
+      "summary": "Academia and industry each possess distinct advantages in advancing technological progress. Academia's core mission is to promote open dissemination of research results and drive disciplinary progress. The industry values knowledge appropriability and core competitiveness, yet actively engages in open practices like academic conferences and platform sharing, creating a knowledge strategy paradox. Highly novel and publicly accessible knowledge serves as the driving force behind technological adva",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.CL",
+        "cs.CY"
+      ],
+      "journal_ref": "Scientometrics, 2026",
+      "doi": "",
+      "published": "2026-03-16T14:41:51Z",
+      "source_label": "novelty_metrics",
+      "source_metric_type": "disruption",
+      "assigned_metric": "novelty_conventionality"
+    },
+    {
+      "arxiv_id": "2501.17456v1",
+      "arxiv_id_clean": "2501.17456",
+      "title": "A review on the novelty measurements of academic papers",
+      "authors": [
+        "Yi Zhao",
+        "Chengzhi Zhang"
+      ],
+      "year": 2025,
+      "summary": "Novelty evaluation is vital for the promotion and management of innovation. With the advancement of information techniques and the open data movement, some progress has been made in novelty measurements. Tracking and reviewing novelty measures provides a data-driven way to assess contributions, progress, and emerging directions in the science field. As academic papers serve as the primary medium for the dissemination, validation, and discussion of scientific knowledge, this review aims to offer ",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.CL"
+      ],
+      "journal_ref": "Scientometrics (2025)",
+      "doi": "10.1007/s11192-025-05234-0",
+      "published": "2025-01-29T07:33:36Z",
+      "source_label": "novelty_metrics",
+      "source_metric_type": "disruption",
+      "assigned_metric": "novelty_conventionality"
+    },
+    {
+      "arxiv_id": "2207.13857v1",
+      "arxiv_id_clean": "2207.13857",
+      "title": "Measuring Difficulty of Novelty Reaction",
+      "authors": [
+        "Ekaterina Nikonova",
+        "Cheng Xue",
+        "Vimukthini Pinto",
+        "Chathura Gamage",
+        "Peng Zhang",
+        "Jochen Renz"
+      ],
+      "year": 2022,
+      "summary": "Current AI systems are designed to solve close-world problems with the assumption that the underlying world is remaining more or less the same. However, when dealing with real-world problems such assumptions can be invalid as sudden and unexpected changes can occur. To effectively deploy AI-powered systems in the real world, AI systems should be able to deal with open-world novelty quickly. Inevitably, dealing with open-world novelty raises an important question of novelty difficulty. Knowing wh",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "journal_ref": "AAAI 2022, Designing Artificial Intelligence for Open Worlds",
+      "doi": "",
+      "published": "2022-07-28T02:16:07Z",
+      "source_label": "novelty_metrics",
+      "source_metric_type": "disruption",
+      "assigned_metric": "novelty_conventionality"
+    },
+    {
+      "arxiv_id": "2201.00531v1",
+      "arxiv_id_clean": "2201.00531",
+      "title": "Novelty-based Generalization Evaluation for Traffic Light Detection",
+      "authors": [
+        "Arvind Kumar Shekar",
+        "Laureen Lake",
+        "Liang Gou",
+        "Liu Ren"
+      ],
+      "year": 2022,
+      "summary": "The advent of Convolutional Neural Networks (CNNs) has led to their application in several domains. One noteworthy application is the perception system for autonomous driving that relies on the predictions from CNNs. Practitioners evaluate the generalization ability of such CNNs by calculating various metrics on an independent test dataset. A test dataset is often chosen based on only one precondition, i.e., its elements are not a part of the training data. Such a dataset may contain objects tha",
+      "primary_category": "cs.CV",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "journal_ref": "2021 20th IEEE International Conference on Machine Learning and Applications (ICMLA)",
+      "doi": "10.1109/ICMLA52953.2021.00032",
+      "published": "2022-01-03T09:23:56Z",
+      "source_label": "novelty_metrics",
+      "source_metric_type": "disruption",
+      "assigned_metric": "novelty_conventionality"
+    },
+    {
+      "arxiv_id": "2202.06661v2",
+      "arxiv_id_clean": "2202.06661",
+      "title": "Eternalism and the Problem of Hyperplanes",
+      "authors": [
+        "Matias Slavov"
+      ],
+      "year": 2022,
+      "summary": "Eternalism is the view that the past, the present and the future exist simpliciter. A typical argument in favor of this view leans on the relativity of simultaneity. The 'equally real with' relation is assumed to be transitive between spacelike separated events connected by hyperplanes of simultaneity. This reasoning is in tension with the conventionality of simultaneity. Conventionality indicates that, even within a specific frame, simultaneity is based on the choice of the synchronization para",
+      "primary_category": "physics.hist-ph",
+      "categories": [
+        "physics.hist-ph"
+      ],
+      "journal_ref": "Ratio 35 (2022) 91-103",
+      "doi": "10.1111/rati.12331",
+      "published": "2022-02-14T12:37:10Z",
+      "source_label": "conventionality",
+      "source_metric_type": "disruption",
+      "assigned_metric": "novelty_conventionality"
+    },
+    {
+      "arxiv_id": "2501.02429v1",
+      "arxiv_id_clean": "2501.02429",
+      "title": "Citation Structural Diversity: A Novel and Concise Metric Combining Structure and Semantics for Literature Evaluation",
+      "authors": [
+        "Mingyue Kong",
+        "Yinglong Zhang",
+        "Likun Sheng",
+        "Kaifeng Hong"
+      ],
+      "year": 2025,
+      "summary": "As academic research becomes increasingly diverse, traditional literature evaluation methods face significant limitations,particularly in capturing the complexity of academic dissemination and the multidimensional impacts of literature. To address these challenges, this paper introduces a novel literature evaluation model of citation structural diversity, with a focus on assessing its feasibility as an evaluation metric. By refining citation network and incorporating both ciation structural feat",
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR"
+      ],
+      "journal_ref": "Scientometrics 2025",
+      "doi": "10.1007/s11192-025-05356-5",
+      "published": "2025-01-05T03:24:37Z",
+      "source_label": "interdisciplinarity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "interdisciplinarity"
+    },
+    {
+      "arxiv_id": "2502.17841v3",
+      "arxiv_id_clean": "2502.17841",
+      "title": "Quantifying interdisciplinary synergy in higher STEM education",
+      "authors": [
+        "Gahyoun Gim",
+        "Jinhyuk Yun",
+        "Sang Hoon Lee"
+      ],
+      "year": 2025,
+      "summary": "We propose a framework to quantify and utilize interdisciplinarity in science and engineering curricula at the university-level higher education. We analyze interdisciplinary relations by standardizing large-scale official educational data in Korea using a cutting-edge large language model and constructing knowledge maps for disciplines of scientific education. We design and evaluate single-field and integrated dual-field curricula by adapting pedagogical theory and utilizing information theory-",
+      "primary_category": "physics.soc-ph",
+      "categories": [
+        "physics.soc-ph",
+        "cond-mat.stat-mech",
+        "cs.IT",
+        "physics.ed-ph"
+      ],
+      "journal_ref": "EPJ Data Sci. 14, 56 (2025)",
+      "doi": "10.1140/epjds/s13688-025-00566-6",
+      "published": "2025-02-25T04:41:56Z",
+      "source_label": "interdisciplinarity",
+      "source_metric_type": "disruption",
+      "assigned_metric": "interdisciplinarity"
+    },
+    {
+      "arxiv_id": "2502.18427v1",
+      "arxiv_id_clean": "2502.18427",
+      "title": "Is OpenAlex Suitable for Research Quality Evaluation and Which Citation Indicator is Best?",
+      "authors": [
+        "Mike Thelwall",
+        "Xiaorui Jiang"
+      ],
+      "year": 2025,
+      "summary": "This article compares (1) citation analysis with OpenAlex and Scopus, testing their citation counts, document type/coverage and subject classifications and (2) three citation-based indicators: raw counts, (field and year) Normalised Citation Scores (NCS) and Normalised Log-transformed Citation Scores (NLCS). Methods (1&2): The indicators calculated from 28.6 million articles were compared through 8,704 correlations on two gold standards for 97,816 UK Research Excellence Framework (REF) 2021 arti",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Thelwall, M., & Jiang, X. (2025). Is OpenAlex Suitable for Research Quality Evaluation and Which Citation Indicator is Best? Journal of the Association for Information Science and Technology",
+      "doi": "10.1002/asi.70020",
+      "published": "2025-02-25T18:21:30Z",
+      "source_label": "interdisciplinary_research",
+      "source_metric_type": "disruption",
+      "assigned_metric": "interdisciplinarity"
+    },
+    {
+      "arxiv_id": "2511.04075v1",
+      "arxiv_id_clean": "2511.04075",
+      "title": "Two Decades of Research at the University of Lagos (2004-2023): A Scientometric Analysis of Productivity, Collaboration, and Impact",
+      "authors": [
+        "Muneer Ahmad",
+        "Samuel Ibor Ubi"
+      ],
+      "year": 2025,
+      "summary": "This paper presents a scientometric analysis of research output from the University of Lagos, focusing on the two decades spanning 2004 to 2023. Using bibliometric data retrieved from the Web of Science, we examine trends in publication volume, collaboration patterns, citation impact, and the most prolific authors, departments, and research domains at the university. The study reveals a consistent increase in research productivity, with the highest publication output recorded in 2023. Health Sci",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.IR"
+      ],
+      "journal_ref": "Research & Reviews : Journal of Statistics; Volume 14 Issue 1; Pages 21-37, 2025",
+      "doi": "",
+      "published": "2025-11-06T05:26:17Z",
+      "source_label": "interdisciplinary_research",
+      "source_metric_type": "disruption",
+      "assigned_metric": "interdisciplinarity"
+    },
+    {
+      "arxiv_id": "2303.14732v3",
+      "arxiv_id_clean": "2303.14732",
+      "title": "Interdisciplinary Papers Supported by Disciplinary Grants Garner Deep and Broad Scientific Impact",
+      "authors": [
+        "Minsu Park",
+        "Suman Kalyan Maity",
+        "Stefan Wuchty",
+        "Dashun Wang"
+      ],
+      "year": 2023,
+      "summary": "Interdisciplinary research has emerged as a hotbed for innovation and a key approach to addressing complex societal challenges. The increasing dominance of grant-supported research in shaping scientific advances, coupled with growing interest in funding interdisciplinary work, raises fundamental questions about the effectiveness of interdisciplinary grants in fostering high-impact interdisciplinary research outcomes. Here, we quantify the interdisciplinarity of both research grants and publicati",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.SI",
+        "econ.GN"
+      ],
+      "journal_ref": "PNAS Nexus, 2026, pgag057",
+      "doi": "10.1093/pnasnexus/pgag057",
+      "published": "2023-03-26T14:27:13Z",
+      "source_label": "interdisciplinary_research",
+      "source_metric_type": "disruption",
+      "assigned_metric": "interdisciplinarity"
+    },
+    {
+      "arxiv_id": "2511.05051v1",
+      "arxiv_id_clean": "2511.05051",
+      "title": "The use of social media among library professionals and patrons: A review of literature",
+      "authors": [
+        "Abimbola Agboke",
+        "Felicia Nkatv Undie"
+      ],
+      "year": 2025,
+      "summary": "This paper focused on the utilization of social media by library professionals and library users. It provides an understanding of social media, the most popular social media platforms utilized in the libraries. It also mentions the reasons for the adoption of social media in libraries be it academic, public, school libraries and other types of libraries. This is a review paper on the use of social media among library professionals and patrons. The findings reveal the contributions of social medi",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.IR"
+      ],
+      "journal_ref": "International Journal of Academic Library and Information Science; Volume 8, Issue 4; PP 116-120; 2020",
+      "doi": "10.14662/IJALIS2020.140",
+      "published": "2025-11-07T07:49:15Z",
+      "source_label": "social_media_metrics",
+      "source_metric_type": "disruption",
+      "assigned_metric": "altmetrics"
+    },
+    {
+      "arxiv_id": "2304.11079v1",
+      "arxiv_id_clean": "2304.11079",
+      "title": "Academic Writing with GPT-3.5: Reflections on Practices, Efficacy and Transparency",
+      "authors": [
+        "Oğuz 'Oz' Buruk"
+      ],
+      "year": 2023,
+      "summary": "The debate around the use of GPT 3.5 has been a popular topic among academics since the release of ChatGPT. Whilst some have argued for the advantages of GPT 3.5 in enhancing academic writing, others have raised concerns such as plagiarism, the spread of false information, and ecological issues. The need for finding ways to use GPT 3.5 models transparently has been voiced, and suggestions have been made on social media as to how to use GPT 3.5 models in a smart way. Nevertheless, to date, there ",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "journal_ref": "2023 In Proceedings of the 26th International Academic Mindtrek Conference (Mindtrek 2023)",
+      "doi": "10.1145/3616961.3616992",
+      "published": "2023-02-12T22:05:08Z",
+      "source_label": "social_media_metrics",
+      "source_metric_type": "disruption",
+      "assigned_metric": "altmetrics"
+    },
+    {
+      "arxiv_id": "2203.06218v2",
+      "arxiv_id_clean": "2203.06218",
+      "title": "Article Processing Charges, Altmetrics and Citation Impact: Is there an economic rationale?",
+      "authors": [
+        "Abdelghani Maddi",
+        "David Sapinho"
+      ],
+      "year": 2022,
+      "summary": "The present study aims to analyze 1) the relationship between Citation Normalized Score of scientific publications and Article Processing Charges (APCs) of Gold Open Access (OA) publications 2) the determinants of APCs. To do so, we used APCs information provided by the OpenAPC database, citation scores of publications from the WoS database and, for Altmetrics, data from Altmetrics.com database, over the period from 2006 to 2019 for 83,752 articles published in 4751 journals belonging to 267 dis",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Scientometrics, In press",
+      "doi": "10.1007/s11192-022-04284-y",
+      "published": "2022-02-16T12:57:50Z",
+      "source_label": "altmetrics",
+      "source_metric_type": "disruption",
+      "assigned_metric": "altmetrics"
+    },
+    {
+      "arxiv_id": "2212.07811v1",
+      "arxiv_id_clean": "2212.07811",
+      "title": "Do altmetric scores reflect article quality? Evidence from the UK Research Excellence Framework 2021",
+      "authors": [
+        "Mike Thelwall",
+        "Kayvan Kousha",
+        "Mahshid Abdoli",
+        "Emma Stuart",
+        "Meiko Makita",
+        "Paul Wilson",
+        "Jonathan Levitt"
+      ],
+      "year": 2022,
+      "summary": "Altmetrics are web-based quantitative impact or attention indicators for academic articles that have been proposed to supplement citation counts. This article reports the first assessment of the extent to which mature altmetrics from Altmetric.com and Mendeley associate with journal article quality. It exploits expert norm-referenced peer review scores from the UK Research Excellence Framework 2021 for 67,030+ journal articles in all fields 2014-17/18, split into 34 Units of Assessment (UoAs). T",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "Journal of the Association for Information Science and Technology, 74(5), 582-593 (2023)",
+      "doi": "10.1108/10.1002/asi.24751",
+      "published": "2022-12-11T05:40:35Z",
+      "source_label": "altmetrics",
+      "source_metric_type": "disruption",
+      "assigned_metric": "altmetrics"
+    },
+    {
+      "arxiv_id": "2209.11284v1",
+      "arxiv_id_clean": "2209.11284",
+      "title": "The Impact of Social Media in Learning and Teaching: A Bibliometric-based Citation Analysis",
+      "authors": [
+        "Abdul Shaikh",
+        "Saqib Ali",
+        "Ramla Al-Maamari"
+      ],
+      "year": 2022,
+      "summary": "This paper presents the results of a systematic review of the literature on the impact of social media in learning and teaching through bibliometric based Citation analysis. The objective of the review was to map the evolution of the current literature and identify the leading sources of knowledge in terms of the most influential journals, authors, and articles. From a total of 50 top most relevant articles selected from the Scopus database, a detailed citation analysis was conducted. The study ",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.CY",
+        "cs.SI"
+      ],
+      "journal_ref": "2021",
+      "doi": "",
+      "published": "2022-09-22T19:32:31Z",
+      "source_label": "social_media_metrics",
+      "source_metric_type": "disruption",
+      "assigned_metric": "altmetrics"
+    },
+    {
+      "arxiv_id": "2601.11507v1",
+      "arxiv_id_clean": "2601.11507",
+      "title": "Industry Influence in High-Profile Social Media Research",
+      "authors": [
+        "Joseph Bak-Coleman",
+        "Jevin West",
+        "Cailin O'Connor",
+        "Carl T. Bergstrom"
+      ],
+      "year": 2026,
+      "summary": "To what extent is social media research independent from industry influence? Leveraging openly available data, we show that half of the research published in top journals has disclosable ties to industry in the form of prior funding, collaboration, or employment. However, the majority of these ties go undisclosed in the published research. These trends do not arise from broad scientific engagement with industry, but rather from a select group of scientists who maintain long-lasting relationships",
+      "primary_category": "cs.SI",
+      "categories": [
+        "cs.SI"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2026-01-16T18:43:21Z",
+      "source_label": "social_media_metrics",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2604.24071v1",
+      "arxiv_id_clean": "2604.24071",
+      "title": "PeeriScope: A Multi-Faceted Framework for Evaluating Peer Review Quality",
+      "authors": [
+        "Sajad Ebrahimi",
+        "Soroush Sadeghian",
+        "Ali Ghorbanpour",
+        "Negar Arabzadeh",
+        "Sara Salamat",
+        "Seyed Mohammad Hosseini",
+        "Hai Son Le",
+        "Mahdi Bashari",
+        "Ebrahim Bagheri"
+      ],
+      "year": 2026,
+      "summary": "The increasing scale and variability of peer review in scholarly venues has created an urgent need for systematic, interpretable, and extensible tools to assess review quality. We present PeeriScope, a modular platform that integrates structured features, rubric-guided large language model assessments, and supervised prediction to evaluate peer review quality along multiple dimensions. Designed for openness and integration, PeeriScope provides both a public interface and a documented API, suppor",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "journal_ref": "",
+      "doi": "10.1145/3774905.3793128",
+      "published": "2026-04-27T05:56:56Z",
+      "source_label": "peer_review",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2606.04716v1",
+      "arxiv_id_clean": "2606.04716",
+      "title": "The State of Peer Review in Empirical Software Engineering: A Community Survey on Review Load, Quality, and GenAI Use",
+      "authors": [
+        "Justus Bogner",
+        "Roberto Verdecchia"
+      ],
+      "year": 2026,
+      "summary": "The scientific peer review system has been slowly deteriorating over the last years, and not just within empirical software engineering (ESE) research. Increased submission numbers, high workload, and the rise of generative AI use with all its associated issues have made many cracks in the system more visible. To get a better understanding of the current state of peer review in the ESE community, we conducted a questionnaire survey, which accumulated 120 responses. We report on (i) the perceived",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2026-06-03T10:49:16Z",
+      "source_label": "peer_review",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2602.10118v1",
+      "arxiv_id_clean": "2602.10118",
+      "title": "Reviewing the Reviewer: Elevating Peer Review Quality through LLM-Guided Feedback",
+      "authors": [
+        "Sukannya Purkayastha",
+        "Qile Wan",
+        "Anne Lauscher",
+        "Lizhen Qu",
+        "Iryna Gurevych"
+      ],
+      "year": 2026,
+      "summary": "Peer review is central to scientific quality, yet reliance on simple heuristics -- lazy thinking -- has lowered standards. Prior work treats lazy thinking detection as a single-label task, but review segments may exhibit multiple issues, including broader clarity problems, or specificity issues. Turning detection into actionable improvements requires guideline-aware feedback, which is currently missing. We introduce an LLM-driven framework that decomposes reviews into argumentative segments, ide",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL",
+        "cs.CY"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2026-01-17T20:32:18Z",
+      "source_label": "peer_review",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2601.15172v1",
+      "arxiv_id_clean": "2601.15172",
+      "title": "Is Peer Review Really in Decline? Analyzing Review Quality across Venues and Time",
+      "authors": [
+        "Ilia Kuznetsov",
+        "Rohan Nayak",
+        "Alla Rozovskaya",
+        "Iryna Gurevych"
+      ],
+      "year": 2026,
+      "summary": "Peer review is at the heart of modern science. As submission numbers rise and research communities grow, the decline in review quality is a popular narrative and a common concern. Yet, is it true? Review quality is difficult to measure, and the ongoing evolution of reviewing practices makes it hard to compare reviews across venues and time. To address this, we introduce a new framework for evidence-based comparative study of review quality and apply it to major AI and machine learning conference",
+      "primary_category": "cs.CL",
+      "categories": [
+        "cs.CL"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2026-01-21T16:48:29Z",
+      "source_label": "peer_review",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2601.21761v1",
+      "arxiv_id_clean": "2601.21761",
+      "title": "Towards A Sustainable Future for Peer Review in Software Engineering",
+      "authors": [
+        "Esteban Parra",
+        "Sonia Haiduc",
+        "Preetha Chatterjee",
+        "Ramtin Ehsani",
+        "Polina Iaremchuk"
+      ],
+      "year": 2026,
+      "summary": "Peer review is the main mechanism by which the software engineering community assesses the quality of scientific results. However, the rapid growth of paper submissions in software engineering venues has outpaced the availability of qualified reviewers, creating a growing imbalance that risks constraining and negatively impacting the long-term growth of the Software Engineering (SE) research community. Our vision of the Future of the SE research landscape involves a more scalable, inclusive, and",
+      "primary_category": "cs.SE",
+      "categories": [
+        "cs.SE"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2026-01-29T14:14:44Z",
+      "source_label": "peer_review",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2602.18940v1",
+      "arxiv_id_clean": "2602.18940",
+      "title": "DREAM: Deep Research Evaluation with Agentic Metrics",
+      "authors": [
+        "Elad Ben Avraham",
+        "Changhao Li",
+        "Ron Dorfman",
+        "Roy Ganz",
+        "Oren Nuriel",
+        "Amir Dudai",
+        "Aviad Aberdam",
+        "Noah Flynn",
+        "Elman Mansimov",
+        "Adi Kalyanpur",
+        "Ron Litman"
+      ],
+      "year": 2026,
+      "summary": "Deep Research Agents generate analyst-grade reports, yet evaluating them remains challenging due to the absence of a single ground truth and the multidimensional nature of research quality. Recent benchmarks propose distinct methodologies, yet they suffer from the Mirage of Synthesis, where strong surface-level fluency and citation alignment can obscure underlying factual and reasoning defects. We characterize this gap by introducing a taxonomy across four verticals that exposes a critical capab",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2026-02-21T19:14:31Z",
+      "source_label": "research_evaluation",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2604.16387v1",
+      "arxiv_id_clean": "2604.16387",
+      "title": "Large language models for post-publication research evaluation: Evidence from expert recommendations and citation indicators",
+      "authors": [
+        "Mengjia Wu",
+        "Yi Zhang",
+        "Robin Haunschild",
+        "Lutz Bornmann"
+      ],
+      "year": 2026,
+      "summary": "Assessing the quality of scientific research is essential for scholarly communication, yet widely used approaches face limitations in scalability, subjectivity, and time delay. Recent advances in large language models (LLMs) offer new opportunities for automated research evaluation based on textual content. This study examines whether LLMs can support post-publication peer review tasks by benchmarking their outputs against expert judgments and citation-based indicators. Two evaluation tasks are ",
+      "primary_category": "cs.IR",
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.DL"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2026-03-27T11:32:18Z",
+      "source_label": "research_evaluation",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2603.14919v1",
+      "arxiv_id_clean": "2603.14919",
+      "title": "Which stylistic features fool ChatGPT research evaluations?",
+      "authors": [
+        "Kayvan Kousha",
+        "Mike Thelwall"
+      ],
+      "year": 2026,
+      "summary": "Large Language Models (LLMs) have the potential to be used to support research evaluation and have a moderate capability to estimate the research quality of a journal article from its title and abstract. This paper assesses whether there are language-related factors unrelated to the quality of the research that influence ChatGPT's scores. Using a dataset of 99,277 journal articles submitted to the UK-wide Research Excellence Framework (REF) 2021 assessments, we calculated several readability ind",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2026-03-16T07:25:46Z",
+      "source_label": "research_evaluation",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2605.12514v1",
+      "arxiv_id_clean": "2605.12514",
+      "title": "Structural Diversity Drives Disruptive Scientific Innovation",
+      "authors": [
+        "Yichun Peng",
+        "Saike He",
+        "Peijie Zhang",
+        "Kang Zhao",
+        "Yi Yang",
+        "Ning Zhang",
+        "Qingpeng Zhang",
+        "Daniel Dajun Zeng",
+        "Hao Peng"
+      ],
+      "year": 2026,
+      "summary": "Scientific innovation increasingly depends on collaboration, yet the organizational structure that fosters breakthrough ideas remains poorly understood. Existing metrics - such as team size or compositional diversity - capture readily observable characteristics but not the deeper architecture of collaboration. We introduce Structural Diversity (SD): the extent to which a team bridges multiple distinct knowledge communities within its prior collaboration network. Using a century-scale dataset of ",
+      "primary_category": "cs.SI",
+      "categories": [
+        "cs.SI",
+        "cs.CV",
+        "cs.CY",
+        "cs.DL",
+        "stat.AP"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2026-04-02T02:15:38Z",
+      "source_label": "sci_sci_innovation",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2601.08156v1",
+      "arxiv_id_clean": "2601.08156",
+      "title": "Project Synapse: A Hierarchical Multi-Agent Framework with Hybrid Memory for Autonomous Resolution of Last-Mile Delivery Disruptions",
+      "authors": [
+        "Arin Gopalan Yadav",
+        "Varad Dherange",
+        "Kumar Shivam"
+      ],
+      "year": 2026,
+      "summary": "This paper introduces Project Synapse, a novel agentic framework designed for the autonomous resolution of last-mile delivery disruptions. Synapse employs a hierarchical multi-agent architecture in which a central Resolution Supervisor agent performs strategic task decomposition and delegates subtasks to specialized worker agents responsible for tactical execution. The system is orchestrated using LangGraph to manage complex and cyclical workflows. To validate the framework, a benchmark dataset ",
+      "primary_category": "cs.AI",
+      "categories": [
+        "cs.AI"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2026-01-13T02:38:27Z",
+      "source_label": "sci_sci_innovation",
+      "source_metric_type": "disruption",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2604.01602v1",
+      "arxiv_id_clean": "2604.01602",
+      "title": "Persistent geographical biases in global scientific collaboration and citations",
+      "authors": [
+        "Leyan Wu",
+        "Yong Huang",
+        "Wei Lu",
+        "Akrati Saxena",
+        "Vincent Traag"
+      ],
+      "year": 2026,
+      "summary": "Scientific knowledge flows enable cumulative progress by connecting researchers across disciplines, institutions, and countries. Yet it remains unclear how geography and national structures continue to shape these exchanges in an increasingly connected world. Using a large-scale bibliometric dataset from OpenAlex, which covers 39.35 million publications across 95 countries and 3,794 cities between 2000 and 2022, we examine global knowledge diffusion through two complementary channels: co-authors",
+      "primary_category": "econ.GN",
+      "categories": [
+        "econ.GN"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2026-04-02T04:24:51Z",
+      "source_label": "knowledge_diffusion",
+      "source_metric_type": "network_normalized_impact",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2603.00399v2",
+      "arxiv_id_clean": "2603.00399",
+      "title": "A Data-Driven Analysis for Engineering Conferences: The Institute of Industrial and Systems Engineering (IISE) Annual Conference Proceedings (2002-2025)",
+      "authors": [
+        "H. Sinan Bank",
+        "Casey E. Eaton"
+      ],
+      "year": 2026,
+      "summary": "Charting the intellectual evolution of a scientific discipline is crucial for identifying its core contributions, challenges, and future directions. The IISE Annual Conference proceedings offer a rich longitudinal archive of the Industrial and Systems Engineering (ISE) community's development, but the sheer volume of scholarship produced over two decades makes a holistic analysis difficult. Traditional reviews often fail to capture the full scale of thematic shifts and complex collaboration netw",
+      "primary_category": "cs.DL",
+      "categories": [
+        "cs.DL",
+        "cs.CY",
+        "cs.SI"
+      ],
+      "journal_ref": "",
+      "doi": "",
+      "published": "2026-02-28T01:10:46Z",
+      "source_label": "knowledge_diffusion",
+      "source_metric_type": "network_normalized_impact",
+      "assigned_metric": "disruption"
+    },
+    {
+      "arxiv_id": "2410.09112v1",
+      "arxiv_id_clean": "2410.09112",
+      "title": "HLM-Cite: Hybrid Language Model Workflow for Text-based Scientific Citation Prediction",
+      "authors": [
+        "Qianyue Hao",
+        "Jingyang Fan",
+        "Fengli Xu",
+        "Jian Yuan",
+        "Yong Li"
+      ],
+      "year": 2024,
+      "primary_category": "cs.DL",
+      "journal_ref": "",
+      "doi": "",
+      "assigned_metric": "citation_count_prediction",
+      "source_label": "citation_prediction_extra"
+    },
+    {
+      "arxiv_id": "2601.14949v2",
+      "arxiv_id_clean": "2601.14949",
+      "title": "What Should I Cite? A RAG Benchmark for Academic Citation Prediction",
+      "authors": [
+        "Leqi Zheng",
+        "Jiajun Zhang",
+        "Canzhi Chen",
+        "Chaokun Wang",
+        "Hongwei Li",
+        "Yuying Li",
+        "Yaoxin Mao",
+        "Shannan Yan",
+        "Zixin Song",
+        "Zhiyuan Feng",
+        "Zhaolu Kang",
+        "Zirong Chen",
+        "Hang Zhang",
+        "Qiang Liu",
+        "Liang Wang",
+        "Ziyang Liu"
+      ],
+      "year": 2026,
+      "primary_category": "cs.IR",
+      "journal_ref": "WWW 2026",
+      "doi": "10.1145/3774904.3792075",
+      "assigned_metric": "citation_count_prediction",
+      "source_label": "citation_prediction_extra"
+    },
+    {
+      "arxiv_id": "2510.19246v2",
+      "arxiv_id_clean": "2510.19246",
+      "title": "From Newborn to Impact: Bias-Aware Citation Prediction",
+      "authors": [
+        "Mingfei Lu",
+        "Mengjia Wu",
+        "Jiawei Xu",
+        "Weikai Li",
+        "Feng Liu",
+        "Ying Ding",
+        "Yizhou Sun",
+        "Jie Lu",
+        "Yi Zhang"
+      ],
+      "year": 2025,
+      "primary_category": "cs.SI",
+      "journal_ref": "",
+      "doi": "",
+      "assigned_metric": "citation_count_prediction",
+      "source_label": "citation_prediction_extra"
+    },
+    {
+      "arxiv_id": "2305.16490v1",
+      "arxiv_id_clean": "2305.16490",
+      "title": "Prototype-Based Interpretability for Legal Citation Prediction",
+      "authors": [
+        "Chu Fei Luo",
+        "Rohan Bhambhoria",
+        "Samuel Dahan",
+        "Xiaodan Zhu"
+      ],
+      "year": 2023,
+      "primary_category": "cs.CL",
+      "journal_ref": "",
+      "doi": "",
+      "assigned_metric": "citation_count_prediction",
+      "source_label": "citation_prediction_extra"
+    },
+    {
+      "arxiv_id": "2012.05742v2",
+      "arxiv_id_clean": "2012.05742",
+      "title": "Longitudinal Citation Prediction using Temporal Graph Neural Networks",
+      "authors": [
+        "Andreas Nugaard Holm",
+        "Barbara Plank",
+        "Dustin Wright",
+        "Isabelle Augenstein"
+      ],
+      "year": 2020,
+      "primary_category": "cs.CL",
+      "journal_ref": "",
+      "doi": "",
+      "assigned_metric": "citation_count_prediction",
+      "source_label": "citation_prediction_extra"
+    },
+    {
+      "arxiv_id": "2306.01949v1",
+      "arxiv_id_clean": "2306.01949",
+      "title": "The disruption index is biased by citation inflation",
+      "authors": [
+        "Alexander M. Petersen",
+        "Felber Arroyave",
+        "Fabio Pammolli"
+      ],
+      "year": 2023,
+      "primary_category": "cs.DL",
+      "journal_ref": "Quantitative Science Studies (2024)",
+      "doi": "10.1162/qss_a_00333",
+      "assigned_metric": "citation_inflation",
+      "source_label": "citation_inflation_extra"
+    },
+    {
+      "arxiv_id": "2406.15311v1",
+      "arxiv_id_clean": "2406.15311",
+      "title": "The disruption index suffers from citation inflation and is confounded by shifts in scholarly citation practice",
+      "authors": [
+        "Alexander M. Petersen",
+        "Felber Arroyave",
+        "Fabio Pammolli"
+      ],
+      "year": 2024,
+      "primary_category": "cs.DL",
+      "journal_ref": "",
+      "doi": "",
+      "assigned_metric": "citation_inflation",
+      "source_label": "citation_inflation_extra"
+    },
+    {
+      "arxiv_id": "2306.09911v1",
+      "arxiv_id_clean": "2306.09911",
+      "title": "Uncited articles and their effect on the concentration of citations",
+      "authors": [
+        "Diego Kozlowski1",
+        "Jens Peter Andersen",
+        "Vincent Larivière"
+      ],
+      "year": 2023,
+      "primary_category": "cs.DL",
+      "journal_ref": "",
+      "doi": "10.1002/asi.24852",
+      "assigned_metric": "citation_inflation",
+      "source_label": "citation_inflation_extra"
+    },
+    {
+      "arxiv_id": "2503.23414v1",
+      "arxiv_id_clean": "2503.23414",
+      "title": "From Content Creation to Citation Inflation: A GenAI Case Study",
+      "authors": [
+        "Haitham S. Al-Sinani",
+        "Chris J. Mitchell"
+      ],
+      "year": 2025,
+      "primary_category": "cs.DL",
+      "journal_ref": "",
+      "doi": "",
+      "assigned_metric": "citation_inflation",
+      "source_label": "citation_inflation_extra"
+    },
+    {
+      "arxiv_id": "2504.20081v3",
+      "arxiv_id_clean": "2504.20081",
+      "title": "Billions at Stake: How Self-Citation Adjusted Metrics Can Transform Equitable Research Funding",
+      "authors": [
+        "Rahul Vishwakarma",
+        "Sinchan Banerjee"
+      ],
+      "year": 2025,
+      "primary_category": "cs.DL",
+      "journal_ref": "",
+      "doi": "",
+      "assigned_metric": "citation_inflation",
+      "source_label": "citation_inflation_extra"
+    }
+  ]
+}

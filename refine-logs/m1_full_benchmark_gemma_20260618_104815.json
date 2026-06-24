@@ -1,0 +1,183 @@
+{
+  "run_id": "20260618_104815",
+  "timestamp": "2026-06-18T10:48:15.507538",
+  "model": "gemma",
+  "n_papers": 2,
+  "elapsed_s": 59.0,
+  "analysis": {
+    "test1_correlation": {
+      "pass": true,
+      "high_pairs": [],
+      "correlations": {
+        "fidelity_executability": 0,
+        "fidelity_numerical_accuracy": 0,
+        "fidelity_claim_consistency": 0,
+        "fidelity_auditability": 0,
+        "executability_numerical_accuracy": 0,
+        "executability_claim_consistency": 0,
+        "executability_auditability": 0,
+        "numerical_accuracy_claim_consistency": 0,
+        "numerical_accuracy_auditability": 0,
+        "claim_consistency_auditability": 0
+      }
+    },
+    "test2_failure_patterns": {
+      "pass": false,
+      "unique_weakest": 1,
+      "non_uniform_papers": 2,
+      "patterns": {
+        "park2023_disruptive": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.7
+        },
+        "deng2023_robust_disruption": {
+          "weakest": "claim",
+          "value": 0.0,
+          "spread": 0.887
+        }
+      }
+    },
+    "test3_dim_stats": {
+      "fidelity": {
+        "mean": 0.269,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.378
+      },
+      "executability": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "std": 0.0
+      },
+      "numerical_accuracy": {
+        "mean": 0.125,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.331
+      },
+      "claim_consistency": {
+        "mean": 0.25,
+        "min": 0.0,
+        "max": 0.5,
+        "std": 0.25
+      },
+      "auditability": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "std": 0.0
+      }
+    },
+    "test4_spurious": {
+      "total_flags": 0,
+      "flags": {
+        "park2023_disruptive": [],
+        "deng2023_robust_disruption": []
+      }
+    },
+    "maturity_distribution": {
+      "L1": 1,
+      "L2": 1
+    }
+  },
+  "paper_profiles": {
+    "park2023_disruptive": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.175,
+          "executability": 1.0,
+          "numerical_accuracy": 0.00017467248908298316,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.5,
+        "indicator": 0.5438,
+        "model": 0.5,
+        "result_table": 0.7,
+        "claim": 0.0
+      }
+    },
+    "deng2023_robust_disruption": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 0.5,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.5471428571428572,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.5,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 0.0,
+          "claim_consistency": 0.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 0.6667,
+        "sample": 0.625,
+        "indicator": 0.8868,
+        "model": 0.5,
+        "result_table": 0.7,
+        "claim": 0.0
+      }
+    }
+  }
+}

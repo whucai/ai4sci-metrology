@@ -13,3 +13,13 @@ dist/
 build/
 sciscigpt_repo/
 .aris/tools
+
+# local LiteLLM proxy config — contains plaintext API keys
+.litellm/
+
+# ARIS / Claude skill installs — symlinks into ~/下载, not project content
+.agents/
+.claude/skills/
+
+# large benchmark PDFs — kept local, not tracked in git
+*.pdf

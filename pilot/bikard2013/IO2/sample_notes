@@ -1,0 +1,6 @@
+# Sample Notes — bikard2013
+
+Original N=661 MIT faculty, 5,964 scientist-years, 1976–2006, 7 departments, >20-author exclusion. PRIVATE DATA — not available.
+Provided DATA-SUB: 40,000 SciSciNet papers. Use author_count as collaboration (group size); citation_count_5y as quality.
+H1: collaboration → higher quality (β≈0.099, +10% citations/coauthor). H2: collaboration → fewer fractional pubs (β≈-0.069). H3: attributed citations.
+Expected direction: group-size coefficient POSITIVE on quality, NEGATIVE on fractional quantity.

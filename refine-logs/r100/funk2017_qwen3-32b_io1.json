@@ -1,0 +1,71 @@
+{
+  "paper": "funk2017",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782297165,
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 89.5,
+    "usage": {
+      "completion": 7369,
+      "prompt": 18797
+    },
+    "finish": "stop",
+    "n_content_chars": 10556
+  },
+  "llm_response_chars": 10556,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.2,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1165,
+    "stderr_chars": 1994
+  },
+  "stdout": "=== DESCRIPTIVE STATISTICS ===\n               CD5         mCD5           I5\ncount  1958.000000  1958.000000  2000.000000\nmean      0.111328     0.321352     2.398500\nstd       0.431868     1.133566     1.572875\nmin      -1.000000    -4.000000     0.000000\n25%      -0.142857    -0.200000     1.000000\n50%       0.000000     0.000000     2.000000\n75%       0.400000     1.000000     3.000000\nmax       1.000000     5.142857     9.000000\n\n=== KEY CORRELATIONS (CD5, mCD5, I5 vs Covariates) ===\n                    CD5      mCD5  ...  assignee_gov  num_inventors\nCD5            1.000000  0.867079  ...      0.021977       0.010265\nmCD5           0.867079  1.000000  ...      0.011024       0.008447\nI5             0.072671  0.200204  ...     -0.013424      -0.069757\ngov_interest  -0.029156 -0.048411  ...      0.044459       0.011370\nassignee_firm  0.013993  0.022764  ...      0.016568      -0.027893\nassignee_univ -0.036468 -0.035328  ...      0.052846       0.020577\nassignee_gov   0.021977  0.011024  ...      1.000000      -0.024722\nnum_inventors  0.010265  0.008447  ...     -0.024722       1.000000\n\n[8 rows x 8 columns]\n\n=== REGRESSION: OLS MODEL FOR CD5 ===\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 161, in <module>\n    ols_cd5 = sm.OLS(df['CD5_imp'], X).fit()\n              ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 924, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 749, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 203, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 270, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 95, in __init__\n    self.data = self._handle_data(endog, exog, missing, hasconst,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 135, in _handle_data\n    data = handle_data(endog, exog, missing, hasconst, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 675, in handle_data\n    return klass(endog, exog=exog, missing=missing, hasconst=hasconst,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 84, in __init__\n    self.endog, self.exog = self._convert_endog_exog(endog, exog)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 509, in _convert_endog_exog\n    raise ValueError(\"Pandas data cast to numpy dtype of object. \"\nValueError: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['nber', 'dataverse', 'uspto', 'patent']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['1977', '2005', 'utility patent']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['cdt', 'cd5', 'mcdt', 'mcd5', 'destabil', 'consolid']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'negative binomial', 'regression']"
+      },
+      "result": {
+        "score": 0.5,
+        "rationale": "partial: ['0.07']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['destabiliz', 'consolid', 'commercial engagement', 'federal']"
+      }
+    },
+    "overall_ecrf": 0.917
+  },
+  "status": "DONE",
+  "t_end": 1782297256
+}

@@ -1,0 +1,35 @@
+{
+  "A1_code_executability": {
+    "executable": true,
+    "exit_code": 0,
+    "has_traceback": false,
+    "has_import_error": false,
+    "has_timeout": false,
+    "elapsed": 7.09
+  },
+  "A2_intermediate_files": {
+    "sandbox_dir": ".",
+    "code_saved": true,
+    "code_length": 9444,
+    "stdout_length": 275
+  },
+  "A3_sample_traceability": {
+    "sample_size_reported": 82251,
+    "filters_parsed": true,
+    "data_source_identified": true
+  },
+  "A4_indicator_distribution": {
+    "D_mean": 0.00491,
+    "D_std": 0.056503,
+    "D_range_plausible": true
+  },
+  "A5_table_generation": {
+    "regression_table_in_stdout": false,
+    "diff_table_in_stdout": false
+  },
+  "A6_error_recovery": {
+    "errors_encountered": false,
+    "error_type": "none",
+    "stderr_snippet": ""
+  }
+}

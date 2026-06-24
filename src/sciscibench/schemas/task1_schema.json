@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sciscibench.org/schemas/task1_experiment_design.json",
+  "title": "Task 1: Experiment Design Reconstruction",
+  "description": "Structured output schema for experiment design reconstruction from idea + data description. Agent MUST output valid JSON conforming to this schema.",
+  "type": "object",
+  "required": [
+    "independent_variables",
+    "dependent_variables",
+    "control_variables",
+    "statistical_method",
+    "sample_scope"
+  ],
+  "properties": {
+    "independent_variables": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "definition"],
+        "properties": {
+          "name": {"type": "string"},
+          "type": {"type": "string", "enum": ["continuous", "categorical", "binary", "count"]},
+          "definition": {"type": "string", "description": "Precise formula or operational definition"},
+          "unit": {"type": "string"}
+        }
+      }
+    },
+    "dependent_variables": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "formula"],
+        "properties": {
+          "name": {"type": "string"},
+          "type": {"type": "string", "enum": ["continuous", "categorical", "binary", "count"]},
+          "formula": {"type": "string", "description": "Precise computational formula, e.g. D = 1 - Σ_i n_i / N"},
+          "unit": {"type": "string"}
+        }
+      }
+    },
+    "control_variables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "type"],
+        "properties": {
+          "name": {"type": "string"},
+          "type": {"type": "string", "enum": ["continuous", "categorical", "binary", "count"]},
+          "rationale": {"type": "string"}
+        }
+      }
+    },
+    "statistical_method": {
+      "type": "object",
+      "required": ["family", "specification"],
+      "properties": {
+        "family": {
+          "type": "string",
+          "enum": ["OLS", "logistic", "cox", "poisson", "negative_binomial", "fixed_effects", "random_effects", "quantile", "nonparametric_test", "descriptive", "network_metric", "other"]
+        },
+        "specification": {"type": "string", "description": "Model formula or test description, e.g. 'D ~ team_size + year_FE + field_FE'"},
+        "link_function": {"type": "string"},
+        "estimation": {"type": "string", "enum": ["OLS", "MLE", "GMM", "Bayesian", "bootstrap", "permutation"]}
+      }
+    },
+    "network_construction": {
+      "type": "object",
+      "properties": {
+        "node_type": {"type": "string", "enum": ["paper", "author", "institution", "journal", "patent", "field", "other", "none"]},
+        "edge_type": {"type": "string", "enum": ["citation", "coauthorship", "cocitation", "bibliographic_coupling", "funding", "other", "none"]},
+        "directed": {"type": "boolean"},
+        "weighted": {"type": "boolean"},
+        "temporal": {"type": "boolean"},
+        "construction_method": {"type": "string"}
+      }
+    },
+    "sample_scope": {
+      "type": "object",
+      "required": ["time_window"],
+      "properties": {
+        "time_window": {"type": "string", "description": "e.g. '1950-2010'"},
+        "fields": {"type": "array", "items": {"type": "string"}, "description": "Fields of study included; ['all'] if unrestricted"},
+        "filters": {"type": "array", "items": {"type": "string"}, "description": "Inclusion/exclusion criteria, e.g. 'min_citations >= 1', 'article only'"},
+        "data_source": {"type": "string", "description": "e.g. 'OpenAlex', 'SciSciNet', 'MAG'"}
+      }
+    },
+    "grouping_strategy": {
+      "type": "object",
+      "properties": {
+        "groups": {"type": "array", "items": {"type": "string"}},
+        "rationale": {"type": "string"},
+        "treatment": {"type": "string", "description": "How groups are assigned for causal comparison"}
+      }
+    },
+    "robustness_checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["method"],
+        "properties": {
+          "method": {"type": "string", "description": "e.g. 'alternative_D_index_variant', 'different_time_window', 'placebo_test'"},
+          "rationale": {"type": "string"},
+          "expected_outcome": {"type": "string"}
+        }
+      }
+    },
+    "expected_result_form": {
+      "type": "object",
+      "properties": {
+        "type": {"type": "string", "enum": ["regression_table", "correlation_matrix", "time_series_plot", "network_visualization", "distribution_plot", "descriptive_table", "other"]},
+        "key_quantities": {"type": "array", "items": {"type": "string"}, "description": "Coefficients, statistics, or values expected from analysis"}
+      }
+    }
+  }
+}

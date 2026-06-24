@@ -1,0 +1,95 @@
+{
+  "sample_N": 500,
+  "year_range": [
+    2016,
+    2016
+  ],
+  "indicators": {
+    "new_word": {
+      "mean": 8.268,
+      "median": 6.0,
+      "std": 9.7504,
+      "min": 0.0,
+      "max": 89.0,
+      "pct_nonzero": 93.6
+    },
+    "new_bigram": {
+      "mean": 131.708,
+      "median": 124.0,
+      "std": 53.8697,
+      "min": 15.0,
+      "max": 381.0,
+      "pct_nonzero": 100.0
+    },
+    "new_trigram": {
+      "mean": 163.53,
+      "median": 156.0,
+      "std": 62.8047,
+      "min": 31.0,
+      "max": 406.0,
+      "pct_nonzero": 100.0
+    },
+    "new_word_comb": {
+      "mean": 744.316,
+      "median": 673.0,
+      "std": 433.5423,
+      "min": 33.0,
+      "max": 2000.0,
+      "pct_nonzero": 100.0
+    },
+    "cosine_similarity": {
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "pct_nonzero": 0.0
+    },
+    "new_word_reuse": {
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "pct_nonzero": 0.0
+    },
+    "new_bigram_reuse": {
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "pct_nonzero": 0.0
+    },
+    "new_trigram_reuse": {
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "pct_nonzero": 0.0
+    },
+    "new_word_comb_reuse": {
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "pct_nonzero": 0.0
+    },
+    "cosine_similarity_impact": {
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "pct_nonzero": 0.0
+    }
+  },
+  "preprocessing": {
+    "mean_keywords_per_patent": 54.7,
+    "total_unique_keywords": 4134,
+    "total_unique_bigrams": 40368,
+    "total_unique_trigrams": 62519
+  }
+}

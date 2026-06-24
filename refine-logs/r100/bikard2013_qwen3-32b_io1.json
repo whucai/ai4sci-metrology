@@ -1,0 +1,71 @@
+{
+  "paper": "bikard2013",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782297326,
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 120.5,
+    "usage": {
+      "completion": 10085,
+      "prompt": 14847
+    },
+    "finish": "stop",
+    "n_content_chars": 8888
+  },
+  "llm_response_chars": 8888,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.41,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 2322,
+    "stderr_chars": 0
+  },
+  "stdout": "======================================================================\nQUANTITATIVE ANALYSIS REPRODUCTION RESULTS\n======================================================================\n\n--- H1: QUALITY MODEL (ln_avg_citations) ---\nRESULT coef_n_authors_mean_H1 = 0.1541\nRESULT pvalue_n_authors_mean_H1 = 0.0472\nRESULT R_squared_H1 = 0.3787\n\n--- H2: PRODUCTIVITY MODEL (frac_pubs) ---\nRESULT coef_n_authors_mean_H2 = -0.1229\nRESULT pvalue_n_authors_mean_H2 = 0.0000\nRESULT R_squared_H2 = 0.4921\n\n--- CREDIT ALLOCATION (Alpha Functions) ---\nRESULT mean_att_cites_alpha1 = 45.6498\nRESULT mean_att_cites_alpha_invN = 17.0918\nRESULT mean_att_cites_alpha_invsqrtN = 27.2296\nRESULT ratio_super_additive_vs_equal_split = 1.5931\n\n--- PAPER REPORTED VALUES (FOR COMPARISON) ---\nPAPER_REPORTED: Collaboration associated with >60% more citations per paper vs solo.\nPAPER_REPORTED: Up to 4 coauthors, collaboration associated with more papers per author.\nPAPER_REPORTED: Credit allocation sums to >1 (super-additive), supporting alpha(N) ~ 1/sqrt(N).\nPAPER_REPORTED: Cross-departmental collab yields higher quality at lower productivity cost.\nPAPER_REPORTED: Free-riding apparent when collaborating with senior same-dept scientists.\n\n======================================================================\nFINAL CONCLUSION / DIRECTION SUPPORTED\n======================================================================\nThe analysis tests the tradeoff between collaboration and credit allocation.\nH1 examines whether increased collaboration (n_authors_mean) predicts higher publication quality (ln_avg_citations).\nH2 examines whether increased collaboration predicts lower fractional productivity (frac_pubs).\nThe credit allocation analysis compares attribution under alpha(N)=1, 1/N, and 1/sqrt(N).\nBased on the model specifications and the paper's theoretical framework, the direction supported is:\nScientists strategically balance collaboration's quality benefits against coordination/credit costs.\nEmpirical evidence suggests collaboration yields significant citation advantages,\nand credit is likely allocated super-additively (sum > 1), mitigating the per-author dilution.\nThus, collaboration is net beneficial when cross-disciplinary and carefully managed,\nthough productivity costs and seniority-based free-riding can offset gains.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['mit', 'faculty', 'isi']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['1976', '2006']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['coauthor', 'collaboration', 'nauthors', 'credit']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'fixed effect', 'department-year', 'career', 'clustered']"
+      },
+      "result": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['collaboration', 'credit', 'tradeoff', 'free-rid']"
+      }
+    },
+    "overall_ecrf": 0.833
+  },
+  "status": "DONE",
+  "t_end": 1782297448
+}

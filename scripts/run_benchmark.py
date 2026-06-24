@@ -1,382 +1,510 @@
 #!/usr/bin/env python3
-"""Multi-paper, multi-metric benchmark: measure REI/REI-c across papers from SciSciNet.
+"""Unified AI Metrology Benchmark Runner.
 
-Supports --metric-type:
-  - disruption: D-index from citation subgraph
-  - citation_count_prediction: predict citation count from same-year cohort
-  - team_size_effect: small vs large team disruption difference
+Single entry point for running the 4-stage paper reproduction chain benchmark.
+Replaces run_manual_papers_benchmark.py, run_stage4_benchmark.py,
+and run_native_method_benchmark.py.
+
+Usage:
+    # MVP: Stage 2 + Stage 4
+    python scripts/run_benchmark.py --stages 2,4 --model qwen3-32b
+
+    # Full 4-stage oracle benchmark
+    python scripts/run_benchmark.py --stages 1,2,3,4 --condition oracle
+
+    # Multi-model comparison
+    python scripts/run_benchmark.py --stages 2 --models qwen3-32b,deepseek-v4-pro
+
+    # Chain condition (error propagation)
+    python scripts/run_benchmark.py --stages 1,2,3,4 --condition chain
+
+    # Resume from checkpoint
+    python scripts/run_benchmark.py --resume refine-logs/benchmark_20260605_120000.json
 """
 
-import sys, os, re, json, tempfile, time, argparse
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from __future__ import annotations
 
-import pandas as pd
+import sys
+import os
+import json
+import time
+import argparse
+import threading
+import traceback
+from pathlib import Path
+from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Any
+
 import numpy as np
 
-os.environ.setdefault("OPENAI_API_KEY", "not-needed")
-os.environ.setdefault("OPENAI_BASE_URL", "http://172.17.65.41:8032/v1")
-os.environ.setdefault("LLM_MODEL", "/public/data_share/model_hub/Qwen3-32B/")
-os.environ.setdefault("LLM_MAX_TOKENS", "4096")
-os.environ.setdefault("HF_HUB_OFFLINE", "1")
 
-from src.sciscigpt_local.llm_backends import load_llm_from_env
-from src.sciscigpt_local.sandbox import execute_python
-from src.sciscigpt_local.rei_metric import classify_error, ERROR_WEIGHTS, compute_rei_c
-from src.sciscigpt_local.sciscinet_connector import load_table
-from src.sciscigpt_local.metric_templates import (
-    get_prompt, parse_metric_output, compute_ground_truth,
-    get_primary_metric, get_required_tables, METRIC_CONFIGS,
+class NumpyEncoder(json.JSONEncoder):
+    """Custom JSON encoder that handles numpy types."""
+    def default(self, obj):
+        if isinstance(obj, (np.integer,)):
+            return int(obj)
+        if isinstance(obj, (np.floating,)):
+            return float(obj)
+        if isinstance(obj, (np.bool_,)):
+            return bool(obj)
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return super().default(obj)
+
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from src.ai_metrology_benchmark.config import (
+    DEFAULT_CONCURRENCY, DEFAULT_STAGES, DEFAULT_MODEL_NAMES,
+    DEFAULT_CONDITION, DEFAULT_INFO_LEVEL, N_TEST_PAPERS,
+    OUTPUT_DIR,
 )
-
-BENCHMARK_SIZE = 25
-MAX_FIXES = 3
-
-
-def _extract_code(text: str) -> str:
-    """Extract Python code from LLM response."""
-    text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL)
-    match = re.search(r"```(?:python)?\s*\n(.*?)\n\s*```", text, re.DOTALL)
-    if match:
-        return match.group(1).strip()
-    code = text.strip()
-    if code.startswith("```"):
-        code = re.sub(r"^```(?:python)?\s*\n?", "", code)
-        code = re.sub(r"\n?\s*```$", "", code)
-    return code
+from src.ai_metrology_benchmark.types import (
+    StageResult, BenchmarkRun, Condition, InfoLevel,
+)
+from src.ai_metrology_benchmark.papers import (
+    PAPER_REGISTRY, get_paper, enrich_paper_entry,
+)
+from src.ai_metrology_benchmark.stages.stage2_reproduction import (
+    Stage2Reproduction,
+)
+from src.ai_metrology_benchmark.stages.stage4_judgment import (
+    Stage4Judgment,
+)
+from src.sciscigpt_local.llm_backends import LLMConfig, load_llm_from_config
+from src.sciscigpt_local.sciscinet_connector import load_table
 
 
-def generate_code(llm, metric_type: str, **prompt_kwargs) -> str:
-    """Generate reproduction code for a given metric type."""
-    prompt = get_prompt(metric_type, **prompt_kwargs)
-    response = llm.invoke([{"role": "user", "content": prompt}])
-    return _extract_code(str(response.content))
+# ── LLM loading ──────────────────────────────────────────────────────────
+
+def get_available_models() -> dict[str, LLMConfig]:
+    """Discover available models from environment."""
+    models = {}
+
+    if os.environ.get("OPENAI_API_KEY") and os.environ.get("OPENAI_BASE_URL"):
+        models["qwen3-32b"] = LLMConfig(
+            name="qwen3-32b", provider="openai",
+            model=os.environ.get("LLM_MODEL", "Qwen/Qwen3-32B"),
+            api_key=os.environ["OPENAI_API_KEY"],
+            base_url=os.environ["OPENAI_BASE_URL"],
+            temperature=0.0,
+            max_tokens=int(os.environ.get("LLM_MAX_TOKENS", "4096")),
+        )
+
+    if os.environ.get("ANTHROPIC_AUTH_TOKEN") and os.environ.get("ANTHROPIC_BASE_URL"):
+        models["deepseek-v4-pro"] = LLMConfig(
+            name="deepseek-v4-pro", provider="anthropic",
+            model="deepseek-v4-pro",
+            api_key=os.environ["ANTHROPIC_AUTH_TOKEN"],
+            base_url=os.environ["ANTHROPIC_BASE_URL"],
+            temperature=0.0, max_tokens=4096,
+        )
+
+    return models
 
 
-def fix_code(llm, code: str, error: str, metric_type: str, attempt: int) -> str:
-    """Fix broken code with metric-aware strategies."""
-    metric_label = METRIC_CONFIGS[metric_type]["label"]
-    primary = get_primary_metric(metric_type)
-
-    strategies = [
-        f"Fix import errors. Use only pandas and numpy.",
-        f"Check column names match the CSV files exactly.",
-        f"Simplify the {metric_label} computation.",
-        f"Rewrite minimal script. MUST print {primary} = <value> with the exact variable names.",
-    ]
-    idx = min(attempt, len(strategies) - 1)
-    prompt = f"""Fix this {metric_label} computation code. {strategies[idx]}
-
-Error: {error[:500]}
-
-Code:
-```python
-{code[:1200]}
-```
-
-Output ONLY the fixed Python code."""
-
-    response = llm.invoke([{"role": "user", "content": prompt}])
-    return _extract_code(str(response.content))
+def _sanitize_value(val: Any) -> Any:
+    """Convert numpy types to native Python for JSON serialization."""
+    if val is None:
+        return None
+    if isinstance(val, (np.integer,)):
+        return int(val)
+    if isinstance(val, (np.floating,)):
+        return float(val)
+    if isinstance(val, (np.bool_,)):
+        return bool(val)
+    if isinstance(val, np.ndarray):
+        return val.tolist()
+    if isinstance(val, dict):
+        return {k: _sanitize_value(v) for k, v in val.items()}
+    if isinstance(val, list):
+        return [_sanitize_value(v) for v in val]
+    return val
 
 
-def reproduce_one_paper(
-    llm, paper_id: int, pc: pd.DataFrame, papers: pd.DataFrame,
-    metric_type: str = "disruption", max_fixes: int = 3,
-    data_paths: dict | None = None,
-) -> dict:
-    """Run full reproduction pipeline for a single paper and metric.
+def create_llm(model_name: str) -> Any:
+    """Create an LLM instance by name."""
+    if model_name == "mock":
+        from src.sciscigpt_local.mock_llm import MockLLM
+        return MockLLM()
 
-    Args:
-        data_paths: Pre-written CSV paths for non-disruption metrics
-                    (avoids rewriting per paper). Keys: 'papers_path'.
-    """
-    data_paths = data_paths or {}
-    try:
-        # Compute ground truth for this metric
-        gt = compute_ground_truth(metric_type, paper_id, papers, pc)
-        primary_key = get_primary_metric(metric_type)
+    available = get_available_models()
+    if model_name not in available:
+        raise ValueError(
+            f"Model '{model_name}' not available. Available: {list(available.keys())}. "
+            f"Set OPENAI_API_KEY/OPENAI_BASE_URL for qwen3-32b, "
+            f"ANTHROPIC_AUTH_TOKEN/ANTHROPIC_BASE_URL for deepseek-v4-pro."
+        )
 
-        if metric_type == "disruption":
-            refs = pc[pc["citing_paper_id"] == paper_id]["cited_paper_id"].unique()
-            citers = pc[pc["cited_paper_id"] == paper_id]["citing_paper_id"].unique()
-            if len(refs) == 0 or len(citers) == 0:
-                return {"status": "SKIPPED", "reason": "no refs or citers", "metric_type": metric_type}
+    config = available[model_name]
+    llm = load_llm_from_config(config)
+    llm._label = model_name  # tracking label, not API model name
+    return llm
 
-            refs_path = tempfile.mktemp(suffix="_refs.csv")
-            cites_path = tempfile.mktemp(suffix="_cites.csv")
-            pd.DataFrame({"reference_id": refs}).to_csv(refs_path, index=False)
-            citer_cites = pc[pc["citing_paper_id"].isin(citers)][
-                ["citing_paper_id", "cited_paper_id"]
-            ].head(5000)
-            citer_cites.to_csv(cites_path, index=False)
 
-            code = generate_code(llm, metric_type, refs_path=refs_path, cites_path=cites_path, paper_id=paper_id)
-            gt_value = gt.get(primary_key, 0.0)
+# ── Benchmark Runner ─────────────────────────────────────────────────────
 
-        elif metric_type in ("citation_count_prediction", "team_size_effect"):
-            papers_path = data_paths.get("papers_path")
-            if papers_path is None:
-                return {"status": "ERROR", "reason": "missing papers_path"}
+class BenchmarkRunner:
+    """Orchestrates multi-stage, multi-model benchmark runs."""
 
-            code = generate_code(llm, metric_type, papers_path=papers_path, paper_id=paper_id)
-            gt_value = gt.get(primary_key, 0.0)
+    def __init__(
+        self,
+        stages: list[int] | None = None,
+        models: list[str] | None = None,
+        condition: Condition = "oracle",
+        info_level: InfoLevel = "L2",
+        n_test_papers: int = N_TEST_PAPERS,
+        workers: int = DEFAULT_CONCURRENCY,
+        output_dir: str | Path = OUTPUT_DIR,
+        paper_ids: list[str] | None = None,
+    ):
+        self.stages = stages or DEFAULT_STAGES
+        self.model_names = models or DEFAULT_MODEL_NAMES
+        self.condition: Condition = condition
+        self.info_level: InfoLevel = info_level
+        self.n_test_papers = n_test_papers
+        self.workers = workers
+        self.output_dir = Path(output_dir)
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+
+        if paper_ids:
+            self.papers = {pid: enrich_paper_entry(get_paper(pid)) for pid in paper_ids}
         else:
-            return {"status": "ERROR", "reason": f"unknown metric: {metric_type}"}
+            self.papers = {pid: enrich_paper_entry(p) for pid, p in PAPER_REGISTRY.items()}
 
-        # Execute with self-correction
-        error_types = []
-        fix_count = 0
+        self._papers_df = None
+        self._pc = None
+        self.print_lock = threading.Lock()
 
-        for attempt in range(max_fixes + 1):
-            result = execute_python(code, timeout=60)
-            stderr = result.get("stderr", "")
-            stdout = result.get("stdout", "")
-            has_traceback = "Traceback (most recent call last)" in stderr
-            is_error = result["exit_code"] != 0 or has_traceback
+    @property
+    def papers_df(self):
+        if self._papers_df is None:
+            with self.print_lock:
+                print("Loading SciSciNet papers table...")
+            self._papers_df = load_table("papers")
+        return self._papers_df
 
-            if not is_error:
-                parsed = parse_metric_output(result["stdout"], metric_type)
-                if primary_key in parsed and gt:
-                    weights = sum(ERROR_WEIGHTS.get(e, 3) for e in error_types)
-                    rei = round(weights / max(fix_count, 1), 2) if fix_count > 0 else 0.0
-                    computed_val = parsed[primary_key]
-                    rei_c, c_ratio, silent = compute_rei_c(rei, gt_value, computed_val)
-                    return {
-                        "status": "SUCCESS",
-                        "paper_id": int(paper_id),
-                        "metric_type": metric_type,
-                        "ground_truth": {k: v for k, v in gt.items()},
-                        "computed": {k: v for k, v in parsed.items()},
-                        "computed_primary": computed_val,
-                        "ground_truth_primary": gt_value,
-                        "REI": rei,
-                        "REI_c": rei_c,
-                        "correctness_ratio": c_ratio,
-                        "is_silent_failure": silent,
-                        "error_types": error_types,
-                        "fix_count": fix_count,
-                    }
+    @property
+    def pc(self):
+        if self._pc is None:
+            with self.print_lock:
+                print("Loading SciSciNet paper_citations table...")
+            self._pc = load_table("paper_citations")
+        return self._pc
 
-            error_text = stderr or result.get("stdout", "")
-            error_cat = classify_error(error_text)
-            error_types.append(error_cat)
-            fix_count += 1
-
-            if attempt < max_fixes:
-                code = fix_code(llm, code, error_text, metric_type, attempt)
-
-        weights = sum(ERROR_WEIGHTS.get(e, 3) for e in error_types)
-        rei = round(weights / max(fix_count, 1), 2) if fix_count > 0 else 100.0
+    def _stage2_to_dict(self, result: StageResult) -> dict:
+        """Convert StageResult to raw dict (backward compat with Stage 4 input)."""
         return {
-            "status": "FAILED",
-            "paper_id": int(paper_id),
-            "metric_type": metric_type,
-            "ground_truth": {k: v for k, v in gt.items()} if gt else {},
-            "computed_primary": None,
-            "ground_truth_primary": gt_value if gt else None,
-            "REI": rei,
-            "REI_c": rei,
-            "correctness_ratio": None,
-            "is_silent_failure": False,
-            "error_types": error_types,
-            "fix_count": fix_count,
+            "paper_id": result.test_paper_id,
+            "methodology_paper": result.paper_id,
+            "level": result.info_level or self.info_level,
+            "metric_type": self.papers[result.paper_id].metric_type,
+            "status": result.status,
+            "rei": 0.0 if result.rei_c is None else max(0, float(result.rei_c) * 0.1),
+            "rei_c": result.rei_c or 100,
+            "computed_primary": _sanitize_value(result.computed_primary),
+            "ground_truth_primary": _sanitize_value(result.ground_truth_primary),
+            "is_silent_failure": bool(result.is_silent_failure),
+            "fix_count": result.fix_count,
+            "error_types": result.error_types,
+            "input_source": result.condition,
+            "paper_chars": result.input_chars,
         }
-    except Exception as e:
-        return {"status": "ERROR", "paper_id": int(paper_id), "metric_type": metric_type, "error": str(e)[:200]}
+
+    def run_stage2(self, model_name: str, llm: Any) -> tuple[list[StageResult], list[dict]]:
+        """Run Stage 2 for all papers with test papers."""
+        stage2 = Stage2Reproduction(
+            papers_df=self.papers_df, pc=self.pc, level=self.info_level,
+        )
+
+        test_papers = Stage2Reproduction.select_test_papers(
+            self.papers_df, self.pc, n=self.n_test_papers,
+        )
+        with self.print_lock:
+            print(f"\nSelected {len(test_papers)} test papers")
+            for tp in test_papers:
+                print(f"  {tp['paper_id']} [{tp['year']}]: {tp['title'][:80]} "
+                      f"(D={tp['disruption']:.4f})")
+
+        tasks = []
+        for test_paper in test_papers:
+            for paper_id, paper in self.papers.items():
+                tasks.append({"paper": paper, "test_paper": test_paper, "model_name": model_name})
+
+        with self.print_lock:
+            print(f"\nRunning {len(tasks)} Stage 2 tasks with {self.workers} workers...")
+
+        t0 = time.time()
+        results: list[StageResult] = []
+        raw_results: list[dict] = []
+
+        with ThreadPoolExecutor(max_workers=self.workers) as executor:
+            futures = {}
+            for task in tasks:
+                worker_llm = create_llm(task["model_name"])
+                future = executor.submit(
+                    stage2.run_with_execution,
+                    worker_llm, task["paper"], task["test_paper"], self.condition,
+                )
+                futures[future] = task
+
+            for future in as_completed(futures):
+                task = futures[future]
+                try:
+                    result = future.result()
+                    results.append(result)
+                    raw_results.append(self._stage2_to_dict(result))
+                    with self.print_lock:
+                        tag = f"[{result.info_level or 'S2'}] Test={result.test_paper_id} Paper={result.paper_id}"
+                        if result.status == "SUCCESS":
+                            print(f"  {tag} computed={result.computed_primary} "
+                                  f"gt={result.ground_truth_primary} REI-c={result.rei_c}")
+                        elif result.status == "SKIPPED":
+                            print(f"  {tag} SKIPPED: {result.output.get('reason', '')}")
+                        else:
+                            print(f"  {tag} {result.status} errors={result.error_types}")
+                except Exception:
+                    with self.print_lock:
+                        print(f"  ERROR Stage2 {task['paper'].id}/{task['test_paper']['paper_id']}")
+                    traceback.print_exc()
+
+        if results:
+            elapsed = time.time() - t0
+            with self.print_lock:
+                print(f"\nStage 2: {len(results)} tasks in {elapsed:.1f}s "
+                      f"({elapsed/len(results):.1f}s/task)")
+
+        return results, raw_results
+
+    def run_stage4(self, model_name: str, llm: Any, stage2_results: list[dict]) -> list[dict]:
+        """Run Stage 4 judgment on Stage 2 results."""
+        stage4 = Stage4Judgment()
+
+        tasks = []
+        for s2r in stage2_results:
+            paper_id = s2r.get("methodology_paper", "")
+            if paper_id in self.papers:
+                tasks.append({"paper": self.papers[paper_id], "stage2_result": s2r,
+                              "model_name": model_name})
+
+        with self.print_lock:
+            print(f"\nRunning {len(tasks)} Stage 4 tasks with {self.workers} workers...")
+
+        t0 = time.time()
+        judgments: list[dict] = []
+
+        with ThreadPoolExecutor(max_workers=self.workers) as executor:
+            futures = {}
+            for task in tasks:
+                worker_llm = create_llm(task["model_name"])
+                future = executor.submit(
+                    self._run_single_stage4, worker_llm, stage4, task,
+                )
+                futures[future] = task
+
+            for future in as_completed(futures):
+                task = futures[future]
+                try:
+                    result = future.result()
+                    judgments.append(result)
+                    with self.print_lock:
+                        jc = result.get("judgment_counts", {})
+                        print(f"  [S4] Paper={task['paper'].id} "
+                              f"parsed={result.get('parsed')} judgments={jc}")
+                except Exception:
+                    with self.print_lock:
+                        print(f"  ERROR Stage4 {task['paper'].id}")
+                    traceback.print_exc()
+
+        if judgments:
+            elapsed = time.time() - t0
+            with self.print_lock:
+                print(f"\nStage 4: {len(judgments)} judgments in {elapsed:.1f}s")
+
+        return judgments
+
+    def _run_single_stage4(self, llm: Any, stage4: Stage4Judgment, task: dict) -> dict:
+        paper = task["paper"]
+        s2r = task["stage2_result"]
+        result = stage4.run(llm, paper, condition=self.condition, stage2_result=s2r)
+        return {
+            "methodology_paper": paper.id,
+            "test_paper_id": s2r.get("paper_id"),
+            "level": s2r.get("level"),
+            "metric_type": s2r.get("metric_type", paper.metric_type),
+            "stage2_status": s2r.get("status"),
+            "stage2_rei_c": s2r.get("rei_c"),
+            "parsed": result.output.get("parsed", False),
+            "judgments": result.output.get("judgments", []),
+            "overall_assessment": result.output.get("overall_assessment", {}),
+            "judgment_counts": result.output.get("judgment_counts", {}),
+        }
+
+    def run(self, model_name: str | None = None) -> BenchmarkRun:
+        """Execute the full benchmark."""
+        models_to_run = [model_name] if model_name else self.model_names
+        run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        all_stage_results: list[StageResult] = []
+        all_stage2_raw: list[dict] = []
+        all_judgments: list[dict] = []
+
+        for mn in models_to_run:
+            with self.print_lock:
+                print(f"\n{'='*60}")
+                print(f"Model: {mn} | Stages: {self.stages} | "
+                      f"Condition: {self.condition} | Level: {self.info_level}")
+                print(f"{'='*60}")
+
+            llm = create_llm(mn)
+
+            if 2 in self.stages:
+                s2r, s2raw = self.run_stage2(mn, llm)
+                all_stage_results.extend(s2r)
+                all_stage2_raw.extend(s2raw)
+
+            if 4 in self.stages and all_stage2_raw:
+                judgments = self.run_stage4(mn, llm, all_stage2_raw)
+                all_judgments.extend(judgments)
+
+        run = BenchmarkRun(
+            run_id=run_id,
+            timestamp=datetime.now().isoformat(),
+            description=f"Stages={self.stages} condition={self.condition} level={self.info_level}",
+            models=models_to_run,
+            papers=list(self.papers.keys()),
+            stages=self.stages,
+            conditions=[self.condition],
+            stage_results=all_stage_results,
+        )
+        run.summary = self._compute_summary(all_stage_results, all_judgments)
+
+        out_path = self.output_dir / f"benchmark_{run_id}.json"
+        output_data = {
+            "run_id": run.run_id,
+            "timestamp": run.timestamp,
+            "description": run.description,
+            "models": run.models,
+            "papers": run.papers,
+            "stages": run.stages,
+            "conditions": run.conditions,
+            "n_stage2_results": len(all_stage_results),
+            "n_stage4_judgments": len(all_judgments),
+            "summary": run.summary,
+            "stage2_results": [self._stage2_to_dict(r) for r in all_stage_results],
+            "stage4_judgments": all_judgments,
+        }
+        out_path.write_text(json.dumps(output_data, indent=2, ensure_ascii=False, cls=NumpyEncoder))
+        print(f"\nResults saved to {out_path}")
+        return run
+
+    def _compute_summary(self, s2_results: list[StageResult],
+                         judgments: list[dict]) -> dict[str, Any]:
+        s2_success = [r for r in s2_results if r.status == "SUCCESS"]
+        s2_failed = [r for r in s2_results if r.status == "FAILED"]
+        silent = [r for r in s2_success if r.is_silent_failure]
+
+        summary: dict[str, Any] = {
+            "stage2_total": len(s2_results),
+            "stage2_success": len(s2_success),
+            "stage2_failed": len(s2_failed),
+            "stage2_success_rate": round(len(s2_success) / max(len(s2_results), 1), 3),
+            "silent_failures": len(silent),
+            "silent_failure_rate": round(len(silent) / max(len(s2_success), 1), 3),
+            "stage4_total": len(judgments),
+        }
+
+        if s2_success:
+            rei_c_vals = [r.rei_c for r in s2_success if r.rei_c is not None]
+            if rei_c_vals:
+                summary["rei_c_mean"] = round(np.mean(rei_c_vals), 2)
+                summary["rei_c_median"] = round(np.median(rei_c_vals), 2)
+
+        if judgments:
+            parsed = [j for j in judgments if j.get("parsed")]
+            summary["stage4_parsed"] = len(parsed)
+            summary["stage4_parse_rate"] = round(len(parsed) / max(len(judgments), 1), 3)
+            all_jc: dict[str, int] = {}
+            for j in parsed:
+                for jt, count in j.get("judgment_counts", {}).items():
+                    all_jc[jt] = all_jc.get(jt, 0) + count
+            summary["judgment_distribution"] = all_jc
+
+        return summary
 
 
-def sample_papers(papers: pd.DataFrame, pc: pd.DataFrame, n: int, metric_type: str = "disruption") -> list[int]:
-    """Sample papers with diverse characteristics."""
-    if metric_type == "disruption":
-        pc_pids = set(pc["citing_paper_id"].unique()) & set(pc["cited_paper_id"].unique())
-        candidates = papers[papers["paper_id"].isin(pc_pids)].copy()
-    else:
-        candidates = papers.copy()
-
-    if "disruption_score" in candidates.columns:
-        valid = candidates.dropna(subset=["disruption_score"])
-    else:
-        valid = candidates
-
-    if len(valid) < n:
-        return list(valid["paper_id"].values)
-
-    if "disruption_score" in valid.columns:
-        try:
-            valid["d_tercile"] = pd.qcut(valid["disruption_score"], q=3, labels=["low", "mid", "high"])
-        except ValueError:
-            valid["d_tercile"] = "mid"
-        sampled = []
-        for tercile in ["low", "mid", "high"]:
-            pool = valid[valid["d_tercile"] == tercile]
-            k = min(n // 3, len(pool))
-            if k > 0:
-                sampled.extend(pool.sample(k, random_state=42)["paper_id"].values)
-        while len(sampled) < n:
-            remaining = valid[~valid["paper_id"].isin(sampled)]
-            if len(remaining) == 0:
-                break
-            sampled.append(remaining.sample(1, random_state=42)["paper_id"].values[0])
-        return sampled[:n]
-
-    return list(valid.sample(n, random_state=42)["paper_id"].values)
-
+# ── CLI ───────────────────────────────────────────────────────────────────
 
 def main():
-    parser = argparse.ArgumentParser(description="Multi-paper, multi-metric benchmark")
-    parser.add_argument("--metric-type", default="disruption",
-                        choices=list(METRIC_CONFIGS.keys()),
-                        help="Which metric to reproduce")
-    parser.add_argument("--benchmark-size", type=int, default=BENCHMARK_SIZE,
-                        help="Number of papers to test")
-    parser.add_argument("--max-fixes", type=int, default=MAX_FIXES,
-                        help="Max self-correction attempts")
-    parser.add_argument("--output", default=None,
-                        help="Output JSON path (default: refine-logs/benchmark_{metric_type}.json)")
+    parser = argparse.ArgumentParser(description="Unified AI Metrology Benchmark Runner")
+    parser.add_argument("--stages", type=str, default="2,4",
+                       help="Comma-separated stages (default: 2,4)")
+    parser.add_argument("--models", type=str, default="qwen3-32b",
+                       help="Comma-separated model names")
+    parser.add_argument("--condition", type=str, default=DEFAULT_CONDITION,
+                       choices=["oracle", "chain"])
+    parser.add_argument("--level", type=str, default=DEFAULT_INFO_LEVEL,
+                       choices=["L1", "L2", "L3"],
+                       help="Information level for Stage 2")
+    parser.add_argument("--n-test", type=int, default=N_TEST_PAPERS)
+    parser.add_argument("--workers", type=int, default=DEFAULT_CONCURRENCY)
+    parser.add_argument("--output", type=str, default=str(OUTPUT_DIR))
+    parser.add_argument("--papers", type=str, default="all",
+                       help="Paper IDs (comma-separated) or 'all'")
+    parser.add_argument("--resume", type=str, default=None)
     args = parser.parse_args()
 
-    metric_type = args.metric_type
-    n_papers = args.benchmark_size
-    max_fixes = args.max_fixes
+    stages = [int(s.strip()) for s in args.stages.split(",")]
+    model_names = [m.strip() for m in args.models.split(",")]
+    paper_ids = None if args.papers == "all" else \
+        [p.strip() for p in args.papers.split(",")]
 
-    metric_label = METRIC_CONFIGS[metric_type]["label"]
+    available = get_available_models()
+    for mn in model_names:
+        if mn != "mock" and mn not in available:
+            print(f"Warning: Model '{mn}' may not be available. "
+                  f"Detected: {list(available.keys())}")
 
-    print("=" * 70)
-    print(f"MULTI-PAPER BENCHMARK — {metric_label}")
-    print(f"  Papers: {n_papers}, Max fixes: {max_fixes}")
-    print("=" * 70)
+    print("=" * 60)
+    print("AI METROLOGY BENCHMARK RUNNER")
+    print(f"  Stages: {stages} | Models: {model_names}")
+    print(f"  Condition: {args.condition} | Level: {args.level}")
+    print(f"  Test Papers: {args.n_test} | Workers: {args.workers}")
+    print("=" * 60)
 
-    llm = load_llm_from_env()
-    print(f"  LLM: {type(llm).__name__}\n")
+    runner = BenchmarkRunner(
+        stages=stages, models=model_names,
+        condition=args.condition, info_level=args.level,
+        n_test_papers=args.n_test, workers=args.workers,
+        output_dir=args.output, paper_ids=paper_ids,
+    )
 
-    print("Loading SciSciNet...", flush=True)
-    papers = load_table("papers")
-    tables = {"papers": papers}
-    for tbl in get_required_tables(metric_type):
-        if tbl != "papers":
-            tables[tbl] = load_table(tbl)
-    pc = tables.get("paper_citations", pd.DataFrame())
-    print(f"  Papers: {len(papers):,}", end="")
-    if len(pc) > 0:
-        print(f", Citations: {len(pc):,}")
-    else:
-        print()
+    if args.resume:
+        print(f"\nResuming from {args.resume}...")
+        prev = json.loads(Path(args.resume).read_text())
+        print(f"  Previous run: {prev.get('run_id')} "
+              f"with {prev.get('n_stage2_results', 0)} results")
+        print("  (Resume not fully implemented — running fresh)")
 
-    # Pre-write data files for non-disruption metrics
-    data_paths = {}
-    if metric_type in ("citation_count_prediction", "team_size_effect"):
-        papers_path = tempfile.mktemp(suffix="_papers.csv")
-        cols = ["paper_id", "year", "citation_count", "disruption_score"]
-        if "author_count" in papers.columns:
-            cols.append("author_count")
-        papers[cols].to_csv(papers_path, index=False)
-        data_paths["papers_path"] = papers_path
-        print(f"  Papers CSV: {papers_path} ({len(papers):,} rows)")
+    run = runner.run()
 
-    print(f"\nSampling {n_papers} papers...", flush=True)
-    paper_ids = sample_papers(papers, pc, n_papers, metric_type)
-    print(f"  Selected {len(paper_ids)} papers\n")
-
-    results = []
-    start_time = time.time()
-
-    for i, pid in enumerate(paper_ids):
-        elapsed = time.time() - start_time
-        eta = (elapsed / (i + 1)) * (len(paper_ids) - i - 1) if i > 0 else 0
-
-        print(f"  [{i+1}/{len(paper_ids)}] Paper {pid}...", end=" ", flush=True)
-        r = reproduce_one_paper(llm, pid, pc, papers, metric_type, max_fixes, data_paths)
-        results.append(r)
-
-        status_icon = {"SUCCESS": "✓", "FAILED": "✗", "SKIPPED": "→", "ERROR": "!"}.get(r.get("status", ""), "?")
-        print(f"{status_icon} {r['status']}", end="")
-        if "REI" in r:
-            print(f" REI={r['REI']}", end="")
-        if r.get("is_silent_failure"):
-            print(f" ⚠️SILENT", end="")
-        if "error" in r:
-            print(f" ({r['error'][:60]})", end="")
-        print(f"  [ETA: {eta:.0f}s]", flush=True)
-
-    total_time = time.time() - start_time
-
-    # Summary
-    print("\n" + "=" * 70)
-    print(f"BENCHMARK RESULTS — {metric_label}")
-    print("=" * 70)
-
-    ok = [r for r in results if r["status"] == "SUCCESS"]
-    failed = [r for r in results if r["status"] == "FAILED"]
-    skipped = [r for r in results if r["status"] == "SKIPPED"]
-
-    rei_vals = [r["REI"] for r in ok + failed if "REI" in r]
-    rei_c_vals = [r["REI_c"] for r in ok + failed if "REI_c" in r]
-
-    # Metric-specific deviation stats
-    primary_key = get_primary_metric(metric_type)
-    deviations = []
-    for r in ok:
-        cv = r.get("computed_primary")
-        gv = r.get("ground_truth_primary")
-        if cv is not None and gv is not None and gv != 0:
-            deviations.append(abs(cv - gv))
-
-    print(f"\n  Papers attempted: {len(results)}")
-    print(f"  SUCCESS: {len(ok)} ({100*len(ok)/len(results):.0f}%)")
-    print(f"  FAILED: {len(failed)}")
-    print(f"  SKIPPED: {len(skipped)}")
-    print(f"  Total time: {total_time:.0f}s ({total_time/len(results):.1f}s/paper)")
-
-    if rei_vals:
-        print(f"\n  REI: mean={np.mean(rei_vals):.2f}, median={np.median(rei_vals):.1f}, "
-              f"min={np.min(rei_vals):.1f}, max={np.max(rei_vals):.1f}")
-
-    if rei_c_vals:
-        print(f"  REI-c: mean={np.mean(rei_c_vals):.2f}, median={np.median(rei_c_vals):.1f}, "
-              f"min={np.min(rei_c_vals):.1f}, max={np.max(rei_c_vals):.1f}")
-
-    silent = [r for r in ok if r.get("is_silent_failure")]
-    if silent:
-        print(f"\n  ⚠️  SILENT FAILURES: {len(silent)}/{len(ok)} successful papers have WRONG {primary_key}")
-        print(f"     (code ran without errors, but metric is numerically incorrect)")
-
-    if deviations:
-        print(f"\n  {primary_key} mean abs dev: {np.mean(deviations):.6f}")
-        print(f"  {primary_key} max abs dev: {np.max(deviations):.6f}")
-        exact = sum(1 for d in deviations if d < 1e-10)
-        print(f"  Exact match: {exact}/{len(deviations)}")
-
-    from collections import Counter
-    all_errors = []
-    for r in ok + failed:
-        all_errors.extend(r.get("error_types", []))
-    if all_errors:
-        print(f"\n  Error type distribution: {dict(Counter(all_errors))}")
-
-    # Save results
-    out_name = args.output or f"benchmark_{metric_type}.json"
-    out_path = Path(__file__).resolve().parent.parent / "refine-logs" / out_name
-    summary = {
-        "config": {"metric_type": metric_type, "n_papers": n_papers, "max_fixes": max_fixes},
-        "summary": {
-            "n_total": len(results), "n_success": len(ok), "n_failed": len(failed),
-            "n_skipped": len(skipped), "time_s": round(total_time, 1),
-        },
-        "rei_stats": {
-            "mean": round(float(np.mean(rei_vals)), 2) if rei_vals else None,
-            "median": round(float(np.median(rei_vals)), 2) if rei_vals else None,
-            "mean_rei_c": round(float(np.mean(rei_c_vals)), 2) if rei_c_vals else None,
-        } if rei_vals else {},
-        "silent_failures": len(silent),
-        f"{primary_key}_mean_abs_dev": round(float(np.mean(deviations)), 6) if deviations else None,
-        "results": results,
-    }
-    out_path.write_text(json.dumps(summary, indent=2, default=str))
-    print(f"\nResults saved to {out_path}")
-
-    return 0 if len(ok) > 0 else 1
+    s = run.summary
+    print(f"\n{'='*60}")
+    print("FINAL SUMMARY")
+    print(f"  Stage 2: {s['stage2_success']}/{s['stage2_total']} "
+          f"({s['stage2_success_rate']:.1%})")
+    print(f"  Silent failures: {s['silent_failures']} "
+          f"({s.get('silent_failure_rate', 0):.1%} of successes)")
+    if "rei_c_mean" in s:
+        print(f"  REI-c: mean={s['rei_c_mean']}, median={s['rei_c_median']}")
+    if s.get("stage4_total", 0) > 0:
+        print(f"  Stage 4: {s.get('stage4_parsed', 0)}/{s['stage4_total']} "
+              f"({s.get('stage4_parse_rate', 0):.1%})")
+        if "judgment_distribution" in s:
+            print(f"  Judgments: {s['judgment_distribution']}")
+    print(f"{'='*60}")
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()

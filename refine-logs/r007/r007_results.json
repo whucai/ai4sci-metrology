@@ -1,0 +1,110 @@
+{
+  "experiment": "R007",
+  "paper": "Bentley2023 (Weighted CD, Advances in Complex Systems)",
+  "task_type": "strict",
+  "model": "deepseek-v4-pro",
+  "timestamp": "2026-06-17T12:15:40.841860",
+  "generation_time_s": 51.5,
+  "execution_success": true,
+  "section_compliance": {
+    "DATA_LOAD": true,
+    "DESCRIPTIVE": true,
+    "CD_BY_YEAR": true,
+    "RESULTS": true,
+    "DIFF_TABLE": true
+  },
+  "all_sections_found": true,
+  "diff_table": [
+    {
+      "metric": "sample_N",
+      "gold": 469855,
+      "agent": 469855,
+      "relative_error": 0.0,
+      "tolerance": "exact",
+      "pass": true
+    },
+    {
+      "metric": "uw_cd_1945",
+      "gold": 0.03597944,
+      "agent": 0.035979,
+      "relative_error": 1.223e-05,
+      "tolerance": "0.01",
+      "pass": true
+    },
+    {
+      "metric": "uw_cd_2010",
+      "gold": 0.00119062,
+      "agent": 0.001191,
+      "relative_error": 0.00031916,
+      "tolerance": "0.01",
+      "pass": true
+    },
+    {
+      "metric": "w_cd_1945",
+      "gold": 0.07698916,
+      "agent": 0.076989,
+      "relative_error": 2.08e-06,
+      "tolerance": "0.01",
+      "pass": true
+    },
+    {
+      "metric": "w_cd_2010",
+      "gold": -0.00093018,
+      "agent": -0.00093,
+      "relative_error": 0.00019351,
+      "tolerance": "0.01",
+      "pass": true
+    },
+    {
+      "metric": "uw_decline_pct",
+      "gold": 96.6908,
+      "agent": 96.7,
+      "relative_error": 9.515e-05,
+      "tolerance": "0.05",
+      "pass": true
+    },
+    {
+      "metric": "w_decline_pct",
+      "gold": 101.2082,
+      "agent": 101.2,
+      "relative_error": 8.102e-05,
+      "tolerance": "0.05",
+      "pass": true
+    },
+    {
+      "metric": "overall_w_cd",
+      "gold": 0.01437857,
+      "agent": 0.014379,
+      "relative_error": 2.991e-05,
+      "tolerance": "0.01",
+      "pass": true
+    },
+    {
+      "metric": "post1970_w_cd",
+      "gold": 0.01044947,
+      "agent": 0.010449,
+      "relative_error": 4.498e-05,
+      "tolerance": "0.01",
+      "pass": true
+    }
+  ],
+  "d3_score": 1.0,
+  "d3_pass": true,
+  "agent_metrics": {
+    "sample_n": 469855,
+    "years": 66,
+    "uw_decline": 96.7,
+    "w_decline": 101.2,
+    "sample_N": 469855,
+    "uw_cd_1945": 0.035979,
+    "uw_cd_2010": 0.001191,
+    "w_cd_1945": 0.076989,
+    "w_cd_2010": -0.00093,
+    "uw_decline_pct": 96.7,
+    "w_decline_pct": 101.2,
+    "overall_w_cd": 0.014379,
+    "post1970_w_cd": 0.010449,
+    "change_2000_2010": -0.003413
+  },
+  "spurious_flags": []
+}

@@ -1,0 +1,237 @@
+{
+  "run_id": "20260618_102345",
+  "timestamp": "2026-06-18T10:23:45.196607",
+  "model": "gemma",
+  "papers": [
+    "wu2019_disruption",
+    "ke2023_normalized_impact",
+    "arts2025_frontier_scientists"
+  ],
+  "elapsed_s": 106.8,
+  "analysis": {
+    "test1_correlation": {
+      "pass": false,
+      "high_pairs": 6,
+      "correlations": {
+        "fidelity_executability": -0.5,
+        "fidelity_numerical_accuracy": -0.5,
+        "fidelity_claim_consistency": -0.5,
+        "fidelity_auditability": -0.5,
+        "executability_numerical_accuracy": 1.0,
+        "executability_claim_consistency": 1.0,
+        "executability_auditability": 1.0,
+        "numerical_accuracy_claim_consistency": 1.0,
+        "numerical_accuracy_auditability": 1.0,
+        "claim_consistency_auditability": 1.0
+      }
+    },
+    "test2_failure_patterns": {
+      "pass": true,
+      "unique_weakest": 1,
+      "non_uniform_papers": 3,
+      "patterns": {
+        "wu2019_disruption": {
+          "weakest": "model",
+          "value": 0.5,
+          "spread": 0.5
+        },
+        "ke2023_normalized_impact": {
+          "weakest": "model",
+          "value": 0.55,
+          "spread": 0.45
+        },
+        "arts2025_frontier_scientists": {
+          "weakest": "model",
+          "value": 0.5,
+          "spread": 0.5
+        }
+      }
+    },
+    "test3_dim_stats": {
+      "fidelity": {
+        "mean": 0.7653,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.364
+      },
+      "executability": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "std": 0.0
+      },
+      "numerical_accuracy": {
+        "mean": 0.25,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.433
+      },
+      "claim_consistency": {
+        "mean": 0.6667,
+        "min": 0.0,
+        "max": 1.0,
+        "std": 0.4714
+      },
+      "auditability": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0,
+        "std": 0.0
+      }
+    },
+    "test4_spurious": {
+      "total_flags": 0,
+      "flags": {
+        "wu2019_disruption": [],
+        "ke2023_normalized_impact": [],
+        "arts2025_frontier_scientists": []
+      }
+    }
+  },
+  "paper_profiles": {
+    "wu2019_disruption": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.6083333333333333,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.0,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 1.0,
+          "claim_consistency": 1.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 1.0,
+        "sample": 0.75,
+        "indicator": 0.9021,
+        "model": 0.5,
+        "result_table": 0.6,
+        "claim": 1.0
+      }
+    },
+    "ke2023_normalized_impact": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.6425,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.2,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 0.0,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 1.0,
+          "claim_consistency": 1.0
+        }
+      },
+      "maturity": 2,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 1.0,
+        "sample": 0.75,
+        "indicator": 0.9106,
+        "model": 0.55,
+        "result_table": 0.6,
+        "claim": 1.0
+      }
+    },
+    "arts2025_frontier_scientists": {
+      "matrix": {
+        "data_source": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "auditability": 1.0
+        },
+        "sample": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "indicator": {
+          "fidelity": 0.325,
+          "executability": 1.0,
+          "numerical_accuracy": 1.0,
+          "auditability": 1.0
+        },
+        "model": {
+          "fidelity": 0.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "auditability": 1.0
+        },
+        "result_table": {
+          "fidelity": 1.0,
+          "executability": 1.0,
+          "numerical_accuracy": 0.0,
+          "claim_consistency": 1.0,
+          "auditability": 1.0
+        },
+        "claim": {
+          "fidelity": 1.0,
+          "claim_consistency": 1.0
+        }
+      },
+      "maturity": 1,
+      "spurious_flags": [],
+      "component_aggregates": {
+        "data_source": 1.0,
+        "sample": 0.75,
+        "indicator": 0.8313,
+        "model": 0.5,
+        "result_table": 0.8,
+        "claim": 1.0
+      }
+    }
+  }
+}

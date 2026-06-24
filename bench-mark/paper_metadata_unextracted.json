@@ -1,0 +1,1391 @@
+[
+  {
+    "path": "arXiv/2503.02216v1.pdf",
+    "subdir": "arXiv",
+    "title": "Hunting for Room Temperature Superconductors",
+    "doi": "10.59717/j.xinn-mater.2024.100119",
+    "arxiv_id": "2503.02216",
+    "pages": 0,
+    "chars": 12343,
+    "md_path": "arXiv/2503.02216v1.md",
+    "tags": [
+      "cond-mat.supr-con",
+      "cond-mat.mtrl-sci",
+      "cond-mat.str-el"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2502.10496v1.pdf",
+    "subdir": "arXiv",
+    "title": "Scientific literature cited in patents: A Technology Transfer indicator in Portuguese universities",
+    "doi": "",
+    "arxiv_id": "2502.10496",
+    "pages": 0,
+    "chars": 41058,
+    "md_path": "arXiv/2502.10496v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Scientometrics/2506.20225v2.pdf",
+    "subdir": "Scientometrics",
+    "title": "The role of preprints in open science: Accelerating knowledge transfer from science to technology",
+    "doi": "10.1016/j.joi.2025.101663",
+    "arxiv_id": "2506.20225",
+    "pages": 0,
+    "chars": 76073,
+    "md_path": "Scientometrics/2506.20225v2.md",
+    "tags": [
+      "cs.DL",
+      "physics.soc-ph"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Scientometrics/2507.17127v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "Do male leading authors retract more articles than female leading authors?",
+    "doi": "10.1016/j.joi.2025.101682",
+    "arxiv_id": "2507.17127",
+    "pages": 0,
+    "chars": 68894,
+    "md_path": "Scientometrics/2507.17127v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2509.23645v1.pdf",
+    "subdir": "arXiv",
+    "title": "Similarity-Based Assessment of Computational Reproducibility in Jupyter Notebooks",
+    "doi": "10.1145/3736731.3746159",
+    "arxiv_id": "2509.23645",
+    "pages": 0,
+    "chars": 61518,
+    "md_path": "arXiv/2509.23645v1.md",
+    "tags": [
+      "cs.SE",
+      "cs.DB"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Scientometrics/2403.18845v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "On The Peer Review Reports: Does Size Matter?",
+    "doi": "10.1007/s11192-024-04977-6",
+    "arxiv_id": "2403.18845",
+    "pages": 0,
+    "chars": 59420,
+    "md_path": "Scientometrics/2403.18845v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Research Policy/2408.05587v3.pdf",
+    "subdir": "Research Policy",
+    "title": "COARA will not save science from the tyranny of administrative evaluation",
+    "doi": "10.1093/reseval/rvaf024",
+    "arxiv_id": "2408.05587",
+    "pages": 0,
+    "chars": 67023,
+    "md_path": "Research Policy/2408.05587v3.md",
+    "tags": [
+      "cs.DL",
+      "physics.soc-ph"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Science/2403.16851v3.pdf",
+    "subdir": "Science",
+    "title": "Can social media provide early warning of retraction? Evidence from critical tweets identified by human annotation and large language models",
+    "doi": "10.1002/asi.70028",
+    "arxiv_id": "2403.16851",
+    "pages": 0,
+    "chars": 71142,
+    "md_path": "Science/2403.16851v3.md",
+    "tags": [
+      "cs.DL",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Research Policy/2303.16613v3.pdf",
+    "subdir": "Research Policy",
+    "title": "Data inaccuracy quantification and uncertainty propagation for bibliometric indicators",
+    "doi": "10.1093/reseval/rvae047",
+    "arxiv_id": "2303.16613",
+    "pages": 0,
+    "chars": 105954,
+    "md_path": "Research Policy/2303.16613v3.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2309.15884v2.pdf",
+    "subdir": "arXiv",
+    "title": "The strain on scientific publishing",
+    "doi": "10.1162/qss_a_00327",
+    "arxiv_id": "2309.15884",
+    "pages": 0,
+    "chars": 125759,
+    "md_path": "arXiv/2309.15884v2.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2310.05926v1.pdf",
+    "subdir": "arXiv",
+    "title": "The using of bibliometric analysis to classify trends and future directions on ''Smart Farm''",
+    "doi": "10.1109/ICDAMT.2017.7904950",
+    "arxiv_id": "2310.05926",
+    "pages": 0,
+    "chars": 31635,
+    "md_path": "arXiv/2310.05926v1.md",
+    "tags": [
+      "physics.soc-ph",
+      "cs.DL"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2307.12796v1.pdf",
+    "subdir": "arXiv",
+    "title": "KheOps: Cost-effective Repeatability, Reproducibility, and Replicability of Edge-to-Cloud Experiments",
+    "doi": "10.1145/3589806.3600032",
+    "arxiv_id": "2307.12796",
+    "pages": 0,
+    "chars": 65644,
+    "md_path": "arXiv/2307.12796v1.md",
+    "tags": [
+      "cs.DC",
+      "cs.NI"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2212.04972v2.pdf",
+    "subdir": "arXiv",
+    "title": "MOPRD: A multidisciplinary open peer review dataset",
+    "doi": "10.1007/s00521-023-08891-5",
+    "arxiv_id": "2212.04972",
+    "pages": 0,
+    "chars": 67567,
+    "md_path": "arXiv/2212.04972v2.md",
+    "tags": [
+      "cs.DL",
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Science/2205.01010v2.pdf",
+    "subdir": "Science",
+    "title": "The effect of the rapid growth of covid-19 publications on citation indicators",
+    "doi": "10.5281/zenodo.7043186",
+    "arxiv_id": "2205.01010",
+    "pages": 0,
+    "chars": 21698,
+    "md_path": "Science/2205.01010v2.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Scientometrics/2208.08221v4.pdf",
+    "subdir": "Scientometrics",
+    "title": "Which Factors are associated with Open Access Publishing? A Springer Nature Case Study",
+    "doi": "10.1162/qss_a_00253",
+    "arxiv_id": "2208.08221",
+    "pages": 0,
+    "chars": 62092,
+    "md_path": "Scientometrics/2208.08221v4.md",
+    "tags": [
+      "cs.DL",
+      "cs.LG"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Science/2201.09090v1.pdf",
+    "subdir": "Science",
+    "title": "Are We Standing on Unreliable Shoulders? The Effect of Retracted Papers Citations on Previous and Subsequent Published Papers: A Study of the Web of Science Database",
+    "doi": "",
+    "arxiv_id": "2201.09090",
+    "pages": 0,
+    "chars": 48618,
+    "md_path": "Science/2201.09090v1.md",
+    "tags": [
+      "cs.DL",
+      "physics.soc-ph"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Science/2206.01767v1.pdf",
+    "subdir": "Science",
+    "title": "[Re] Badder Seeds: Reproducing the Evaluation of Lexical Methods for Bias Measurement",
+    "doi": "10.5281/zenodo.6574705",
+    "arxiv_id": "2206.01767",
+    "pages": 0,
+    "chars": 46570,
+    "md_path": "Science/2206.01767v1.md",
+    "tags": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CY"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Scientometrics/2108.12837v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "Retracted papers by Iranian authors: Causes, journals, time lags, affiliations, collaborations",
+    "doi": "10.1007/s11192-021-04104-9",
+    "arxiv_id": "2108.12837",
+    "pages": 0,
+    "chars": 62247,
+    "md_path": "Scientometrics/2108.12837v1.md",
+    "tags": [
+      "cs.DL",
+      "physics.soc-ph"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Nature/2004.04165v1.pdf",
+    "subdir": "Nature",
+    "title": "Distributed peer review enhanced with natural language processing and machine learning",
+    "doi": "10.1038/s41550-020-1038-y",
+    "arxiv_id": "2004.04165",
+    "pages": 0,
+    "chars": 80836,
+    "md_path": "Nature/2004.04165v1.md",
+    "tags": [
+      "astro-ph.IM",
+      "physics.soc-ph"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Scientometrics/2106.05027v2.pdf",
+    "subdir": "Scientometrics",
+    "title": "Scientometric engineering: Exploring citation dynamics via arXiv eprints",
+    "doi": "10.1162/qss_a_00174",
+    "arxiv_id": "2106.05027",
+    "pages": 0,
+    "chars": 138425,
+    "md_path": "Scientometrics/2106.05027v2.md",
+    "tags": [
+      "cs.DL",
+      "cs.CY",
+      "cs.SI",
+      "physics.soc-ph",
+      "stat.AP"
+    ],
+    "metric_type": "disruption_temporal"
+  },
+  {
+    "path": "arXiv/2101.07067v3.pdf",
+    "subdir": "arXiv",
+    "title": "Data Obsolescence Detection in the Light of Newly Acquired Valid Observations",
+    "doi": "10.1007/s10489-022-03212-0",
+    "arxiv_id": "2101.07067",
+    "pages": 0,
+    "chars": 95406,
+    "md_path": "arXiv/2101.07067v3.md",
+    "tags": [
+      "cs.AI"
+    ],
+    "metric_type": "disruption_temporal"
+  },
+  {
+    "path": "PLoS ONE/2002.04347v1.pdf",
+    "subdir": "PLoS ONE",
+    "title": "Science through Wikipedia: A novel representation of open knowledge through co-citation networks",
+    "doi": "10.1371/journal.pone.0228713",
+    "arxiv_id": "2002.04347",
+    "pages": 0,
+    "chars": 62091,
+    "md_path": "PLoS ONE/2002.04347v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "disruption_temporal"
+  },
+  {
+    "path": "arXiv/2005.11218v1.pdf",
+    "subdir": "arXiv",
+    "title": "Updating Weight Values for Function Point Counting",
+    "doi": "10.3233/HIS-2009-0061",
+    "arxiv_id": "2005.11218",
+    "pages": 0,
+    "chars": 55468,
+    "md_path": "arXiv/2005.11218v1.md",
+    "tags": [
+      "cs.SE"
+    ],
+    "metric_type": "disruption_temporal"
+  },
+  {
+    "path": "Science/2603.22151v1.pdf",
+    "subdir": "Science",
+    "title": "Gender shapes the relationship between productivity and journal prestige in science",
+    "doi": "10.1038/s41598-026-45844-z",
+    "arxiv_id": "2603.22151",
+    "pages": 0,
+    "chars": 84372,
+    "md_path": "Science/2603.22151v1.md",
+    "tags": [
+      "physics.soc-ph"
+    ],
+    "metric_type": "team_size_effect"
+  },
+  {
+    "path": "Scientometrics/2512.23429v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "The Effect of Gender Diversity on Scientific Team Impact: A Team Roles Perspective",
+    "doi": "10.1016/j.joi.2025.101766",
+    "arxiv_id": "2512.23429",
+    "pages": 0,
+    "chars": 90728,
+    "md_path": "Scientometrics/2512.23429v1.md",
+    "tags": [
+      "cs.CL",
+      "cs.CY",
+      "cs.DL"
+    ],
+    "metric_type": "team_size_effect"
+  },
+  {
+    "path": "arXiv/2404.15176v1.pdf",
+    "subdir": "arXiv",
+    "title": "Voice Passing : a Non-Binary Voice Gender Prediction System for evaluating Transgender voice transition",
+    "doi": "10.21437/Interspeech.2023-1835",
+    "arxiv_id": "2404.15176",
+    "pages": 0,
+    "chars": 33525,
+    "md_path": "arXiv/2404.15176v1.md",
+    "tags": [
+      "eess.AS",
+      "cs.HC",
+      "cs.LG",
+      "cs.SD"
+    ],
+    "metric_type": "team_size_effect"
+  },
+  {
+    "path": "Scientometrics/2409.02592v2.pdf",
+    "subdir": "Scientometrics",
+    "title": "Exploring Citation Diversity in Scholarly Literature: An Entropy-Based Approach",
+    "doi": "10.1007/s11192-025-05313-2",
+    "arxiv_id": "2409.02592",
+    "pages": 0,
+    "chars": 81316,
+    "md_path": "Scientometrics/2409.02592v2.md",
+    "tags": [
+      "physics.soc-ph",
+      "cs.DL"
+    ],
+    "metric_type": "team_size_effect"
+  },
+  {
+    "path": "Scientometrics/2302.07843v2.pdf",
+    "subdir": "Scientometrics",
+    "title": "Quantifying gender imbalance in East Asian academia: Research career and citation practice",
+    "doi": "10.1016/j.joi.2023.101460",
+    "arxiv_id": "2302.07843",
+    "pages": 0,
+    "chars": 112819,
+    "md_path": "Scientometrics/2302.07843v2.md",
+    "tags": [
+      "cs.DL",
+      "physics.soc-ph"
+    ],
+    "metric_type": "team_size_effect"
+  },
+  {
+    "path": "Scientometrics/1908.07576v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "The citation advantage of foreign language references for Chinese social science papers",
+    "doi": "10.1007/s11192-019-03146-4",
+    "arxiv_id": "1908.07576",
+    "pages": 0,
+    "chars": 62903,
+    "md_path": "Scientometrics/1908.07576v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "team_size_effect"
+  },
+  {
+    "path": "Scientometrics/1810.12737v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "Should the research performance of scientists be distinguished by gender?",
+    "doi": "10.1016/j.joi.2014.11.002",
+    "arxiv_id": "1810.12737",
+    "pages": 0,
+    "chars": 58401,
+    "md_path": "Scientometrics/1810.12737v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "team_size_effect"
+  },
+  {
+    "path": "Science/1706.07976v1.pdf",
+    "subdir": "Science",
+    "title": "Theory and Practice of Data Citation",
+    "doi": "10.1002/asi.23917",
+    "arxiv_id": "1706.07976",
+    "pages": 0,
+    "chars": 99799,
+    "md_path": "Science/1706.07976v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "team_size_effect"
+  },
+  {
+    "path": "arXiv/2602.05211v1.pdf",
+    "subdir": "arXiv",
+    "title": "Quantifying the Knowledge Proximity Between Academic and Industry Research: An Entity and Semantic Perspective",
+    "doi": "",
+    "arxiv_id": "2602.05211",
+    "pages": 0,
+    "chars": 142552,
+    "md_path": "arXiv/2602.05211v1.md",
+    "tags": [
+      "cs.CL",
+      "cs.DL"
+    ],
+    "metric_type": "network_normalized_impact"
+  },
+  {
+    "path": "Science/2506.06753v1.pdf",
+    "subdir": "Science",
+    "title": "Influential scientists shape knowledge flows between science and IGO policy",
+    "doi": "10.1073/pnas.2514861123",
+    "arxiv_id": "2506.06753",
+    "pages": 0,
+    "chars": 94487,
+    "md_path": "Science/2506.06753v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "network_normalized_impact"
+  },
+  {
+    "path": "Scientometrics/2505.21162v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "Leveraging GANs for citation intent classification and its impact on citation network analysis",
+    "doi": "10.1016/j.joi.2026.101791",
+    "arxiv_id": "2505.21162",
+    "pages": 0,
+    "chars": 72658,
+    "md_path": "Scientometrics/2505.21162v1.md",
+    "tags": [
+      "cs.DL",
+      "cs.CL",
+      "cs.SI"
+    ],
+    "metric_type": "network_normalized_impact"
+  },
+  {
+    "path": "Science/2312.01295v1.pdf",
+    "subdir": "Science",
+    "title": "Two-stage dynamic creative optimization under sparse ambiguous samples for e-commerce advertising",
+    "doi": "",
+    "arxiv_id": "2312.01295",
+    "pages": 0,
+    "chars": 44870,
+    "md_path": "Science/2312.01295v1.md",
+    "tags": [
+      "cs.MM"
+    ],
+    "metric_type": "network_normalized_impact"
+  },
+  {
+    "path": "Science/2207.14260v2.pdf",
+    "subdir": "Science",
+    "title": "The Concept of Decentralization Through Time and Disciplines: A Quantitative Exploration",
+    "doi": "10.1140/epjds/s13688-023-00418-1",
+    "arxiv_id": "2207.14260",
+    "pages": 0,
+    "chars": 95182,
+    "md_path": "Science/2207.14260v2.md",
+    "tags": [
+      "physics.soc-ph",
+      "cs.CY"
+    ],
+    "metric_type": "network_normalized_impact"
+  },
+  {
+    "path": "arXiv/2202.08822v1.pdf",
+    "subdir": "arXiv",
+    "title": "Objectives of platform research: A co-citation and systematic literature review analysis",
+    "doi": "10.1007/978-3-658-31118-6_1",
+    "arxiv_id": "2202.08822",
+    "pages": 0,
+    "chars": 101520,
+    "md_path": "arXiv/2202.08822v1.md",
+    "tags": [
+      "econ.GN"
+    ],
+    "metric_type": "network_normalized_impact"
+  },
+  {
+    "path": "arXiv/2208.06431v2.pdf",
+    "subdir": "arXiv",
+    "title": "Similarity matrix average for aggregating multiplex networks",
+    "doi": "10.1088/2632-072X/acda09",
+    "arxiv_id": "2208.06431",
+    "pages": 0,
+    "chars": 51080,
+    "md_path": "arXiv/2208.06431v2.md",
+    "tags": [
+      "physics.soc-ph",
+      "cs.CG",
+      "physics.data-an",
+      "stat.ME"
+    ],
+    "metric_type": "network_normalized_impact"
+  },
+  {
+    "path": "arXiv/2101.09520v2.pdf",
+    "subdir": "arXiv",
+    "title": "Is academia becoming more localised? The growth of regional knowledge networks within international research collaboration",
+    "doi": "10.1007/s41109-021-00371-w",
+    "arxiv_id": "2101.09520",
+    "pages": 0,
+    "chars": 90064,
+    "md_path": "arXiv/2101.09520v2.md",
+    "tags": [
+      "cs.SI"
+    ],
+    "metric_type": "network_normalized_impact"
+  },
+  {
+    "path": "Scientometrics/2206.11470v2.pdf",
+    "subdir": "Scientometrics",
+    "title": "Higher-order rich-club phenomenon in collaborative research grants",
+    "doi": "10.1007/s11192-022-04621-1",
+    "arxiv_id": "2206.11470",
+    "pages": 0,
+    "chars": 64571,
+    "md_path": "Scientometrics/2206.11470v2.md",
+    "tags": [
+      "physics.soc-ph",
+      "cs.SI"
+    ],
+    "metric_type": "frontier_author_impact"
+  },
+  {
+    "path": "Scientometrics/2106.10700v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "On predicting research grants productivity",
+    "doi": "10.1016/j.joi.2022.101260",
+    "arxiv_id": "2106.10700",
+    "pages": 0,
+    "chars": 56390,
+    "md_path": "Scientometrics/2106.10700v1.md",
+    "tags": [
+      "cs.DL",
+      "cs.LG"
+    ],
+    "metric_type": "frontier_author_impact"
+  },
+  {
+    "path": "arXiv/2104.05562v1.pdf",
+    "subdir": "arXiv",
+    "title": "Can Author Collaboration Reveal Impact? The Case of h-index",
+    "doi": "",
+    "arxiv_id": "2104.05562",
+    "pages": 0,
+    "chars": 51879,
+    "md_path": "arXiv/2104.05562v1.md",
+    "tags": [
+      "cs.SI"
+    ],
+    "metric_type": "frontier_author_impact"
+  },
+  {
+    "path": "arXiv/1804.03732v3.pdf",
+    "subdir": "arXiv",
+    "title": "Contest models highlight inherent inefficiencies of scientific funding competitions",
+    "doi": "10.1371/journal.pbio.3000065",
+    "arxiv_id": "1804.03732",
+    "pages": 0,
+    "chars": 72972,
+    "md_path": "arXiv/1804.03732v3.md",
+    "tags": [
+      "physics.soc-ph",
+      "stat.OT"
+    ],
+    "metric_type": "frontier_author_impact"
+  },
+  {
+    "path": "Research Policy/1602.07396v1.pdf",
+    "subdir": "Research Policy",
+    "title": "Concentration of research funding leads to decreasing marginal returns",
+    "doi": "10.1093/reseval/rvw007",
+    "arxiv_id": "1602.07396",
+    "pages": 0,
+    "chars": 48298,
+    "md_path": "Research Policy/1602.07396v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "frontier_author_impact"
+  },
+  {
+    "path": "arXiv/2006.16737v1.pdf",
+    "subdir": "arXiv",
+    "title": "Delayed Recognition; the Co-citation Perspective",
+    "doi": "10.3389/frma.2020.577131",
+    "arxiv_id": "2006.16737",
+    "pages": 0,
+    "chars": 34345,
+    "md_path": "arXiv/2006.16737v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "sleeping_beauty"
+  },
+  {
+    "path": "Scientometrics/1804.04105v2.pdf",
+    "subdir": "Scientometrics",
+    "title": "Comparing scientific and technological impact of biomedical research",
+    "doi": "10.1016/j.joi.2018.06.010",
+    "arxiv_id": "1804.04105",
+    "pages": 0,
+    "chars": 52716,
+    "md_path": "Scientometrics/1804.04105v2.md",
+    "tags": [
+      "cs.DL",
+      "physics.soc-ph"
+    ],
+    "metric_type": "sleeping_beauty"
+  },
+  {
+    "path": "arXiv/1409.7889v2.pdf",
+    "subdir": "arXiv",
+    "title": "Is your EPL attractive? Classification of publications through download statistics",
+    "doi": "10.1209/0295-5075/108/50011",
+    "arxiv_id": "1409.7889",
+    "pages": 0,
+    "chars": 28958,
+    "md_path": "arXiv/1409.7889v2.md",
+    "tags": [
+      "cs.DL",
+      "physics.soc-ph"
+    ],
+    "metric_type": "sleeping_beauty"
+  },
+  {
+    "path": "Science/2501.15552v2.pdf",
+    "subdir": "Science",
+    "title": "Community-centric modeling of citation dynamics explains collective citation patterns in science, law, and patents",
+    "doi": "",
+    "arxiv_id": "2501.15552",
+    "pages": 0,
+    "chars": 88389,
+    "md_path": "Science/2501.15552v2.md",
+    "tags": [
+      "physics.soc-ph",
+      "cs.SI"
+    ],
+    "metric_type": "sleeping_beauty"
+  },
+  {
+    "path": "arXiv/2407.14559v1.pdf",
+    "subdir": "arXiv",
+    "title": "Predicting Star Scientists in the Field of Artificial Intelligence: A Machine Learning Approach",
+    "doi": "10.3390/metrics2040022",
+    "arxiv_id": "2407.14559",
+    "pages": 0,
+    "chars": 70958,
+    "md_path": "arXiv/2407.14559v1.md",
+    "tags": [
+      "cs.OH",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "metric_type": "career_mobility"
+  },
+  {
+    "path": "arXiv/2311.03834v1.pdf",
+    "subdir": "arXiv",
+    "title": "Universal productivity patterns in research careers",
+    "doi": "10.1103/PhysRevResearch.5.043203",
+    "arxiv_id": "2311.03834",
+    "pages": 0,
+    "chars": 110951,
+    "md_path": "arXiv/2311.03834v1.md",
+    "tags": [
+      "physics.soc-ph",
+      "cs.SI"
+    ],
+    "metric_type": "career_mobility"
+  },
+  {
+    "path": "arXiv/2105.06840v1.pdf",
+    "subdir": "arXiv",
+    "title": "The academic wanderer: structure of collaboration network and relation with research performance",
+    "doi": "10.1007/s41109-021-00369-4",
+    "arxiv_id": "2105.06840",
+    "pages": 0,
+    "chars": 918831,
+    "md_path": "arXiv/2105.06840v1.md",
+    "tags": [
+      "cs.SI"
+    ],
+    "metric_type": "career_mobility"
+  },
+  {
+    "path": "arXiv/2104.01955v1.pdf",
+    "subdir": "arXiv",
+    "title": "Automating Transfer Credit Assessment in Student Mobility -- A Natural Language Processing-based Approach",
+    "doi": "10.32604/cmc.2022.027236",
+    "arxiv_id": "2104.01955",
+    "pages": 0,
+    "chars": 50287,
+    "md_path": "arXiv/2104.01955v1.md",
+    "tags": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CY"
+    ],
+    "metric_type": "career_mobility"
+  },
+  {
+    "path": "Nature/1906.04619v1.pdf",
+    "subdir": "Nature",
+    "title": "Achieving competitive advantage in academia through early career coauthorship with top scientists",
+    "doi": "10.1038/s41467-019-13130-4",
+    "arxiv_id": "1906.04619",
+    "pages": 0,
+    "chars": 48157,
+    "md_path": "Nature/1906.04619v1.md",
+    "tags": [
+      "physics.soc-ph",
+      "cs.DL",
+      "cs.SI"
+    ],
+    "metric_type": "career_mobility"
+  },
+  {
+    "path": "Science/1812.09241v1.pdf",
+    "subdir": "Science",
+    "title": "Assessing the accuracy of the h and g indexes for measuring researchers' productivity",
+    "doi": "10.1002/asi.22828",
+    "arxiv_id": "1812.09241",
+    "pages": 0,
+    "chars": 51342,
+    "md_path": "Science/1812.09241v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "career_mobility"
+  },
+  {
+    "path": "Scientometrics/1810.12647v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "How long do top scientists maintain their stardom? An analysis by region, gender and discipline: evidence from Italy",
+    "doi": "10.1007/s11192-016-2193-x",
+    "arxiv_id": "1810.12647",
+    "pages": 0,
+    "chars": 34722,
+    "md_path": "Scientometrics/1810.12647v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "career_mobility"
+  },
+  {
+    "path": "arXiv/1810.07812v1.pdf",
+    "subdir": "arXiv",
+    "title": "Openness and Impact of Leading Scientific Countries",
+    "doi": "10.3389/frma.2018.00010",
+    "arxiv_id": "1810.07812",
+    "pages": 0,
+    "chars": 54970,
+    "md_path": "arXiv/1810.07812v1.md",
+    "tags": [
+      "cs.DL",
+      "physics.soc-ph",
+      "stat.AP"
+    ],
+    "metric_type": "career_mobility"
+  },
+  {
+    "path": "Scientometrics/2603.19319v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "Exploring Novelty Differences between Industry and Academia: A Knowledge Entity-centric Perspective",
+    "doi": "",
+    "arxiv_id": "2603.19319",
+    "pages": 0,
+    "chars": 96508,
+    "md_path": "Scientometrics/2603.19319v1.md",
+    "tags": [
+      "cs.DL",
+      "cs.CL",
+      "cs.CY"
+    ],
+    "metric_type": "novelty_conventionality"
+  },
+  {
+    "path": "Scientometrics/2501.17456v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "A review on the novelty measurements of academic papers",
+    "doi": "10.1007/s11192-025-05234-0",
+    "arxiv_id": "2501.17456",
+    "pages": 0,
+    "chars": 80295,
+    "md_path": "Scientometrics/2501.17456v1.md",
+    "tags": [
+      "cs.DL",
+      "cs.CL"
+    ],
+    "metric_type": "novelty_conventionality"
+  },
+  {
+    "path": "arXiv/2207.13857v1.pdf",
+    "subdir": "arXiv",
+    "title": "Measuring Difficulty of Novelty Reaction",
+    "doi": "",
+    "arxiv_id": "2207.13857",
+    "pages": 0,
+    "chars": 16206,
+    "md_path": "arXiv/2207.13857v1.md",
+    "tags": [
+      "cs.AI"
+    ],
+    "metric_type": "novelty_conventionality"
+  },
+  {
+    "path": "arXiv/2201.00531v1.pdf",
+    "subdir": "arXiv",
+    "title": "Novelty-based Generalization Evaluation for Traffic Light Detection",
+    "doi": "10.1109/ICMLA52953.2021.00032",
+    "arxiv_id": "2201.00531",
+    "pages": 0,
+    "chars": 36107,
+    "md_path": "arXiv/2201.00531v1.md",
+    "tags": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "metric_type": "novelty_conventionality"
+  },
+  {
+    "path": "arXiv/2202.06661v2.pdf",
+    "subdir": "arXiv",
+    "title": "Eternalism and the Problem of Hyperplanes",
+    "doi": "10.1111/rati.12331",
+    "arxiv_id": "2202.06661",
+    "pages": 0,
+    "chars": 45291,
+    "md_path": "arXiv/2202.06661v2.md",
+    "tags": [
+      "physics.hist-ph"
+    ],
+    "metric_type": "novelty_conventionality"
+  },
+  {
+    "path": "Scientometrics/2501.02429v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "Citation Structural Diversity: A Novel and Concise Metric Combining Structure and Semantics for Literature Evaluation",
+    "doi": "10.1007/s11192-025-05356-5",
+    "arxiv_id": "2501.02429",
+    "pages": 0,
+    "chars": 77373,
+    "md_path": "Scientometrics/2501.02429v1.md",
+    "tags": [
+      "cs.IR"
+    ],
+    "metric_type": "interdisciplinarity"
+  },
+  {
+    "path": "arXiv/2502.17841v3.pdf",
+    "subdir": "arXiv",
+    "title": "Quantifying interdisciplinary synergy in higher STEM education",
+    "doi": "10.1140/epjds/s13688-025-00566-6",
+    "arxiv_id": "2502.17841",
+    "pages": 0,
+    "chars": 66381,
+    "md_path": "arXiv/2502.17841v3.md",
+    "tags": [
+      "physics.soc-ph",
+      "cond-mat.stat-mech",
+      "cs.IT",
+      "physics.ed-ph"
+    ],
+    "metric_type": "interdisciplinarity"
+  },
+  {
+    "path": "Science/2502.18427v1.pdf",
+    "subdir": "Science",
+    "title": "Is OpenAlex Suitable for Research Quality Evaluation and Which Citation Indicator is Best?",
+    "doi": "10.1002/asi.70020",
+    "arxiv_id": "2502.18427",
+    "pages": 0,
+    "chars": 64587,
+    "md_path": "Science/2502.18427v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "interdisciplinarity"
+  },
+  {
+    "path": "arXiv/2511.04075v1.pdf",
+    "subdir": "arXiv",
+    "title": "Two Decades of Research at the University of Lagos (2004-2023): A Scientometric Analysis of Productivity, Collaboration, and Impact",
+    "doi": "",
+    "arxiv_id": "2511.04075",
+    "pages": 0,
+    "chars": 62780,
+    "md_path": "arXiv/2511.04075v1.md",
+    "tags": [
+      "cs.DL",
+      "cs.IR"
+    ],
+    "metric_type": "interdisciplinarity"
+  },
+  {
+    "path": "PNAS/2303.14732v3.pdf",
+    "subdir": "PNAS",
+    "title": "Interdisciplinary Papers Supported by Disciplinary Grants Garner Deep and Broad Scientific Impact",
+    "doi": "10.1093/pnasnexus/pgag057",
+    "arxiv_id": "2303.14732",
+    "pages": 0,
+    "chars": 160777,
+    "md_path": "PNAS/2303.14732v3.md",
+    "tags": [
+      "cs.DL",
+      "cs.SI",
+      "econ.GN"
+    ],
+    "metric_type": "interdisciplinarity"
+  },
+  {
+    "path": "Science/2511.05051v1.pdf",
+    "subdir": "Science",
+    "title": "The use of social media among library professionals and patrons: A review of literature",
+    "doi": "10.14662/IJALIS2020.140",
+    "arxiv_id": "2511.05051",
+    "pages": 0,
+    "chars": 23587,
+    "md_path": "Science/2511.05051v1.md",
+    "tags": [
+      "cs.DL",
+      "cs.IR"
+    ],
+    "metric_type": "altmetrics"
+  },
+  {
+    "path": "arXiv/2304.11079v1.pdf",
+    "subdir": "arXiv",
+    "title": "Academic Writing with GPT-3.5: Reflections on Practices, Efficacy and Transparency",
+    "doi": "10.1145/3616961.3616992",
+    "arxiv_id": "2304.11079",
+    "pages": 0,
+    "chars": 247626,
+    "md_path": "arXiv/2304.11079v1.md",
+    "tags": [
+      "cs.CL",
+      "cs.AI",
+      "cs.HC",
+      "cs.LG"
+    ],
+    "metric_type": "altmetrics"
+  },
+  {
+    "path": "Scientometrics/2203.06218v2.pdf",
+    "subdir": "Scientometrics",
+    "title": "Article Processing Charges, Altmetrics and Citation Impact: Is there an economic rationale?",
+    "doi": "10.1007/s11192-022-04284-y",
+    "arxiv_id": "2203.06218",
+    "pages": 0,
+    "chars": 46037,
+    "md_path": "Scientometrics/2203.06218v2.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "altmetrics"
+  },
+  {
+    "path": "Science/2212.07811v1.pdf",
+    "subdir": "Science",
+    "title": "Do altmetric scores reflect article quality? Evidence from the UK Research Excellence Framework 2021",
+    "doi": "10.1108/10.1002/asi.24751",
+    "arxiv_id": "2212.07811",
+    "pages": 0,
+    "chars": 38384,
+    "md_path": "Science/2212.07811v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "altmetrics"
+  },
+  {
+    "path": "arXiv/2209.11284v1.pdf",
+    "subdir": "arXiv",
+    "title": "The Impact of Social Media in Learning and Teaching: A Bibliometric-based Citation Analysis",
+    "doi": "",
+    "arxiv_id": "2209.11284",
+    "pages": 0,
+    "chars": 33372,
+    "md_path": "arXiv/2209.11284v1.md",
+    "tags": [
+      "cs.DL",
+      "cs.CY",
+      "cs.SI"
+    ],
+    "metric_type": "altmetrics"
+  },
+  {
+    "path": "arXiv/2601.11507v1.pdf",
+    "subdir": "arXiv",
+    "title": "Industry Influence in High-Profile Social Media Research",
+    "doi": "",
+    "arxiv_id": "2601.11507",
+    "pages": 0,
+    "chars": 39529,
+    "md_path": "arXiv/2601.11507v1.md",
+    "tags": [
+      "cs.SI"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2604.24071v1.pdf",
+    "subdir": "arXiv",
+    "title": "PeeriScope: A Multi-Faceted Framework for Evaluating Peer Review Quality",
+    "doi": "10.1145/3774905.3793128",
+    "arxiv_id": "2604.24071",
+    "pages": 0,
+    "chars": 27687,
+    "md_path": "arXiv/2604.24071v1.md",
+    "tags": [
+      "cs.CL"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2606.04716v1.pdf",
+    "subdir": "arXiv",
+    "title": "The State of Peer Review in Empirical Software Engineering: A Community Survey on Review Load, Quality, and GenAI Use",
+    "doi": "",
+    "arxiv_id": "2606.04716",
+    "pages": 0,
+    "chars": 45301,
+    "md_path": "arXiv/2606.04716v1.md",
+    "tags": [
+      "cs.SE"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2602.10118v1.pdf",
+    "subdir": "arXiv",
+    "title": "Reviewing the Reviewer: Elevating Peer Review Quality through LLM-Guided Feedback",
+    "doi": "",
+    "arxiv_id": "2602.10118",
+    "pages": 0,
+    "chars": 133921,
+    "md_path": "arXiv/2602.10118v1.md",
+    "tags": [
+      "cs.CL",
+      "cs.CY"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2601.15172v1.pdf",
+    "subdir": "arXiv",
+    "title": "Is Peer Review Really in Decline? Analyzing Review Quality across Venues and Time",
+    "doi": "",
+    "arxiv_id": "2601.15172",
+    "pages": 0,
+    "chars": 92752,
+    "md_path": "arXiv/2601.15172v1.md",
+    "tags": [
+      "cs.CL"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2601.21761v1.pdf",
+    "subdir": "arXiv",
+    "title": "Towards A Sustainable Future for Peer Review in Software Engineering",
+    "doi": "",
+    "arxiv_id": "2601.21761",
+    "pages": 0,
+    "chars": 27184,
+    "md_path": "arXiv/2601.21761v1.md",
+    "tags": [
+      "cs.SE"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Research Policy/2602.18940v1.pdf",
+    "subdir": "Research Policy",
+    "title": "DREAM: Deep Research Evaluation with Agentic Metrics",
+    "doi": "",
+    "arxiv_id": "2602.18940",
+    "pages": 0,
+    "chars": 105096,
+    "md_path": "Research Policy/2602.18940v1.md",
+    "tags": [
+      "cs.AI"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Research Policy/2604.16387v1.pdf",
+    "subdir": "Research Policy",
+    "title": "Large language models for post-publication research evaluation: Evidence from expert recommendations and citation indicators",
+    "doi": "",
+    "arxiv_id": "2604.16387",
+    "pages": 0,
+    "chars": 84529,
+    "md_path": "Research Policy/2604.16387v1.md",
+    "tags": [
+      "cs.IR",
+      "cs.AI",
+      "cs.DL"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "Research Policy/2603.14919v1.pdf",
+    "subdir": "Research Policy",
+    "title": "Which stylistic features fool ChatGPT research evaluations?",
+    "doi": "",
+    "arxiv_id": "2603.14919",
+    "pages": 0,
+    "chars": 43871,
+    "md_path": "Research Policy/2603.14919v1.md",
+    "tags": [
+      "cs.DL"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2605.12514v1.pdf",
+    "subdir": "arXiv",
+    "title": "Structural Diversity Drives Disruptive Scientific Innovation",
+    "doi": "",
+    "arxiv_id": "2605.12514",
+    "pages": 0,
+    "chars": 51415,
+    "md_path": "arXiv/2605.12514v1.md",
+    "tags": [
+      "cs.SI",
+      "cs.CV",
+      "cs.CY",
+      "cs.DL",
+      "stat.AP"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2601.08156v1.pdf",
+    "subdir": "arXiv",
+    "title": "Project Synapse: A Hierarchical Multi-Agent Framework with Hybrid Memory for Autonomous Resolution of Last-Mile Delivery Disruptions",
+    "doi": "",
+    "arxiv_id": "2601.08156",
+    "pages": 0,
+    "chars": 65812,
+    "md_path": "arXiv/2601.08156v1.md",
+    "tags": [
+      "cs.AI"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2603.00399v2.pdf",
+    "subdir": "arXiv",
+    "title": "A Data-Driven Analysis for Engineering Conferences: The Institute of Industrial and Systems Engineering (IISE) Annual Conference Proceedings (2002-2025)",
+    "doi": "",
+    "arxiv_id": "2603.00399",
+    "pages": 0,
+    "chars": 25926,
+    "md_path": "arXiv/2603.00399v2.md",
+    "tags": [
+      "cs.DL",
+      "cs.CY",
+      "cs.SI"
+    ],
+    "metric_type": "disruption"
+  },
+  {
+    "path": "arXiv/2410.09112v1.pdf",
+    "subdir": "arXiv",
+    "title": "HLM-Cite: Hybrid Language Model Workflow for Text-based Scientific Citation Prediction",
+    "doi": "",
+    "arxiv_id": "2410.09112",
+    "pages": 0,
+    "chars": 103571,
+    "md_path": "arXiv/2410.09112v1.md",
+    "tags": [],
+    "metric_type": "citation_count_prediction"
+  },
+  {
+    "path": "arXiv/2601.14949v2.pdf",
+    "subdir": "arXiv",
+    "title": "What Should I Cite? A RAG Benchmark for Academic Citation Prediction",
+    "doi": "10.1145/3774904.3792075",
+    "arxiv_id": "2601.14949",
+    "pages": 0,
+    "chars": 62652,
+    "md_path": "arXiv/2601.14949v2.md",
+    "tags": [],
+    "metric_type": "citation_count_prediction"
+  },
+  {
+    "path": "arXiv/2510.19246v2.pdf",
+    "subdir": "arXiv",
+    "title": "From Newborn to Impact: Bias-Aware Citation Prediction",
+    "doi": "",
+    "arxiv_id": "2510.19246",
+    "pages": 0,
+    "chars": 58560,
+    "md_path": "arXiv/2510.19246v2.md",
+    "tags": [],
+    "metric_type": "citation_count_prediction"
+  },
+  {
+    "path": "arXiv/2305.16490v1.pdf",
+    "subdir": "arXiv",
+    "title": "Prototype-Based Interpretability for Legal Citation Prediction",
+    "doi": "",
+    "arxiv_id": "2305.16490",
+    "pages": 0,
+    "chars": 56026,
+    "md_path": "arXiv/2305.16490v1.md",
+    "tags": [],
+    "metric_type": "citation_count_prediction"
+  },
+  {
+    "path": "arXiv/2012.05742v2.pdf",
+    "subdir": "arXiv",
+    "title": "Longitudinal Citation Prediction using Temporal Graph Neural Networks",
+    "doi": "",
+    "arxiv_id": "2012.05742",
+    "pages": 0,
+    "chars": 38555,
+    "md_path": "arXiv/2012.05742v2.md",
+    "tags": [],
+    "metric_type": "citation_count_prediction"
+  },
+  {
+    "path": "Scientometrics/2306.01949v1.pdf",
+    "subdir": "Scientometrics",
+    "title": "The disruption index is biased by citation inflation",
+    "doi": "10.1162/qss_a_00333",
+    "arxiv_id": "2306.01949",
+    "pages": 0,
+    "chars": 66287,
+    "md_path": "Scientometrics/2306.01949v1.md",
+    "tags": [],
+    "metric_type": "citation_inflation"
+  },
+  {
+    "path": "arXiv/2406.15311v1.pdf",
+    "subdir": "arXiv",
+    "title": "The disruption index suffers from citation inflation and is confounded by shifts in scholarly citation practice",
+    "doi": "",
+    "arxiv_id": "2406.15311",
+    "pages": 0,
+    "chars": 79198,
+    "md_path": "arXiv/2406.15311v1.md",
+    "tags": [],
+    "metric_type": "citation_inflation"
+  },
+  {
+    "path": "arXiv/2306.09911v1.pdf",
+    "subdir": "arXiv",
+    "title": "Uncited articles and their effect on the concentration of citations",
+    "doi": "10.1002/asi.24852",
+    "arxiv_id": "2306.09911",
+    "pages": 0,
+    "chars": 39542,
+    "md_path": "arXiv/2306.09911v1.md",
+    "tags": [],
+    "metric_type": "citation_inflation"
+  },
+  {
+    "path": "arXiv/2503.23414v1.pdf",
+    "subdir": "arXiv",
+    "title": "From Content Creation to Citation Inflation: A GenAI Case Study",
+    "doi": "",
+    "arxiv_id": "2503.23414",
+    "pages": 0,
+    "chars": 42441,
+    "md_path": "arXiv/2503.23414v1.md",
+    "tags": [],
+    "metric_type": "citation_inflation"
+  },
+  {
+    "path": "arXiv/2504.20081v3.pdf",
+    "subdir": "arXiv",
+    "title": "Billions at Stake: How Self-Citation Adjusted Metrics Can Transform Equitable Research Funding",
+    "doi": "",
+    "arxiv_id": "2504.20081",
+    "pages": 0,
+    "chars": 49448,
+    "md_path": "arXiv/2504.20081v3.md",
+    "tags": [],
+    "metric_type": "citation_inflation"
+  },
+  {
+    "path": "others/2410.13989v1.pdf",
+    "subdir": "others",
+    "title": "2410.13989v1",
+    "doi": "",
+    "arxiv_id": "2410.13989v1",
+    "pages": 0,
+    "chars": 0,
+    "md_path": "others/2410.13989v1.md"
+  },
+  {
+    "path": "others/2502.04457v1.pdf",
+    "subdir": "others",
+    "title": "2502.04457v1",
+    "doi": "",
+    "arxiv_id": "2502.04457v1",
+    "pages": 0,
+    "chars": 0,
+    "md_path": "others/2502.04457v1.md"
+  },
+  {
+    "path": "others/2512.16943v4.pdf",
+    "subdir": "others",
+    "title": "2512.16943v4",
+    "doi": "",
+    "arxiv_id": "2512.16943v4",
+    "pages": 0,
+    "chars": 0,
+    "md_path": "others/2512.16943v4.md"
+  }
+]
