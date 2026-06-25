@@ -38,7 +38,7 @@
 | Code | Meaning | Status |
 |------|---------|--------|
 | **C0** | Historical calibration evidence (retained R000–R007) | DONE |
-| **S1** | Study 1 — Construct validation / ECRF dimensionality (re-analysis) | IN PROGRESS (R110) |
+| **S1** | Study 1 — Construct validation / ECRF dimensionality (re-analysis) | DONE (R110) |
 | **P1** | Pilot IO manipulation (mini Study 2, 5 papers) | DONE — R103 all 4 gates PASS |
 | **S2** | Study 2 — Full IO → ECRF experiment | BLOCKED on R120/R121 |
 | **S3** | Study 3 — Trust calibration + audit (main contribution) | BLOCKED on R121 |
@@ -80,7 +80,7 @@
 
 | Run ID | Milestone | Study | Purpose | Split | Metrics | Priority | Status |
 |--------|-----------|-------|---------|-------|---------|----------|--------|
-| R110 | S1 | S1 | ECRF dimensionality re-analysis | C0 16 papers | Disagreement (>0.15), localization (>0.60), ρ-matrix (<0.75) | MUST | TODO |
+| R110 | S1 | S1 | ECRF dimensionality re-analysis | C0/M1 112 papers | Disagreement 10.7% (cond 11.3%), localization 83.3%, max\|ρ\|=0.488, PC1=48.2% (full-6) | MUST | DONE (S1 COMPLETE) — see `R110_REPORT.md` |
 
 ### Phase 2: Mini IO pilot (P1)
 
@@ -105,8 +105,8 @@ Pass rule: **≥3/4 gates** → scale to S2. Gate 1 is mandatory.
 
 | Run ID | Milestone | Purpose | Split | Metrics | Priority | Status |
 |--------|-----------|---------|-------|---------|----------|--------|
-| R120 | S2 | 20-paper full pool finalization + pre-annotation | 20 papers | Observability-stratified, pre-agent | MUST | TODO |
-| R121 | S2 | Layer 1 gold chain (full) | 2 annotators × 20 papers | 20 papers | Component-stratified α | MUST | TODO — blocks S3 |
+| R120 | S2 | 20-paper full pool finalization + pre-annotation | 20 papers | Observability-stratified, pre-agent | MUST | DONE (draft) — see `R120_FULL_POOL.md` (awaiting R121 verification) |
+| R121 | S2 | Layer 1 gold chain (full) | 2 annotators × 20 papers | 20 papers | Component-stratified α | MUST | IN PROGRESS (template ready) — see `R121_LAYER1_TEMPLATE.md`; blocks S3 |
 
 ### Phase 4: Full Study 2 (S2) — BLOCKED until R120 + R121 complete
 
@@ -162,27 +162,33 @@ If IO₁ → IO₃ monotonicity **fails** at the full-Study-2 level (R153), the 
 
 | Priority | Total | Done | TODO / Blocked | Notes |
 |----------|-------|------|----------------|-------|
-| MUST | 28 | 12 | 16 | Phase 0 (6) + Phase 2 (6) DONE; C0 (8) retained separately as calibration evidence |
+| MUST | 28 | 13 | 15 | Phase 0 (6) + Phase 1 R110 (1) + Phase 2 (6) DONE; C0 (8) retained separately |
 | HIGH | 4 | 0 | 4 | frontier (R150–R152) + figures (R160) |
-| **Active TODO** | **20** | — | 20 | MUST 16 + HIGH 4 |
+| **Active TODO** | **19** | — | 19 | MUST 15 + HIGH 4 |
 
-> **Mini Study 2 (P1) COMPLETE — all 4 R103 gates PASS.** G1 IO₁<IO₃ 4/5 papers (mean 0.497<0.713); G2 3 components IO-sensitive; G3 7 result≠component disagreements; G4 42 break candidates / 19 B₁ confirmed. IO→ECRF manipulation validated; green-light for S2 *preparation* (not yet execution — R120/R121 gate the full study).
+> **Study 1 (S1) COMPLETE** — R110 validated the ECRF construct on 112 papers: multi-dimensional (PC1=48.2%), distinct components (max|ρ|=0.488 non-deg), asymmetric difficulty (Claim 0.027 vs Indicator 0.822), trust inflation (10.7% non-deg, cond 11.3%), localizable failures (83.3%). See `R110_REPORT.md`.
 >
-> Breakdown of the 16 MUST-TODO: Phase 1 (R110) = 1 · Phase 3 (R120–R121) = 2 · Phase 4 (R122–R125, blocked) = 4 · Phase 5 (R130a/R130b/R131/R132/R133) = 5 · Phase 6 (R140/R141/R153) = 3 · Phase 7 (R161) = 1. Net = 16. (C0's 8 retained runs are not counted in the MUST 28.)
+> **Mini Study 2 (P1) COMPLETE — all 4 R103 gates PASS.** Green-light for S2 preparation.
+>
+> **R120 (20-paper pool draft) + R121 (Layer 1 template) READY** — await human annotator execution. R122–R125 remain blocked.
+>
+> Breakdown of the 15 MUST-TODO: Phase 3 R121 (R120 draft done) = 1 · Phase 4 (R122–R125, blocked) = 4 · Phase 5 (R130a/R130b/R131/R132/R133) = 5 · Phase 6 (R140/R141/R153) = 3 · Phase 7 (R161) = 1. Net = 14 under active count + R121 in-progress = 15. (C0's 8 retained runs are not counted in the MUST 28.)
 
 ## Blockers
 
-- ~~R095–R099 (pre-run validation + pilot gold chain) block R100–R102~~ — **RESOLVED (all DONE)**. R098 pilot gold chain was used to score R100–R103.
-- **R120 (20-paper full pool) + R121 (Layer 1 gold chain)** block Phase 4 (R122–R125) and Phase 5 (R130b/R132/R133). R121 human annotation is the critical path, not compute.
-- ~~R103 is the gate~~ — **PASSED**. IO manipulation is valid; the remaining gate is pool finalization + human gold annotation.
+- ~~R095–R099~~ — **RESOLVED**.
+- ~~R103~~ — **PASSED**.
+- ~~R110~~ — **DONE** (S1 construct validated).
+- **R121 (Layer 1 gold chain)** — template ready (`R121_LAYER1_TEMPLATE.md`); awaiting 2-annotator execution. **Critical path: blocks Phase 4 (R122–R125) and Phase 5 (R130b/R132/R133).** R120 pool draft done but its `VERIFY` flags must be resolved during R121 annotation.
+- R122–R125 **blocked** until R120 verified + R121 gold frozen (`r121_gold_v1.json`).
 
-## Next 3 runs to launch
+## Next runs to launch
 
-1. **R110** — Study 1 re-analysis on existing C0/M1 data (zero compute; ECRF dimensionality, component variance, ρ-matrix, disagreement + localization rates). Unblocks S1 construct-validation narrative.
-2. **R120** — 20-paper full pool finalization across SoS / IS-Innovation / Management-Strategy, observability-stratified (Low/Medium/High), with per-paper IO₁/IO₂/IO₃ feasibility + weak-component pre-annotation.
-3. **R121** — Layer 1 gold evidence-chain annotation (Data, Sample, Indicator, Model, Result, Claim) × 20 papers × 2 annotators; component-stratified α. **Critical path for S3.**
+1. **R121** — execute the Layer 1 gold-chain annotation (2 annotators × 20 papers × 6 components) using `R121_LAYER1_TEMPLATE.md`; resolve R120 `VERIFY` flags during annotation; freeze `r121_gold_v1.json`. **Critical path — human annotation, not compute.**
+2. (After R121 frozen) **R122–R124** — full Study 2 execution (20 papers × 3 IO × 2 models = 120 runs).
+3. (After R122–R124) **R125** — Study 2 analysis (monotonic ECRF, Component×IO mixed-effects, H1/H2).
 
-> R122–R125 (full Study 2 execution) remain **blocked** until R120 + R121 are complete. Do not launch.
+> R122–R125 remain **blocked** until R121 is complete. Do not launch.
 
 ## Archived (SciSciGPT / SciSciBench legacy)
 
