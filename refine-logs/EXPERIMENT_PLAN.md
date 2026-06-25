@@ -1,10 +1,10 @@
-# Experiment Plan: Evidence-Chain Theory of AI Reproduction Auditing (v7.2)
+# Experiment Plan: An AI-Agent Metrology of Computational Reproducibility (v8 — Scientometrics pivot)
 
-**Problem**: AI-generated scientific reproductions produce a misleading trust signal at the result level — agents can produce the right number through the wrong process. Organizations need to know which reproductions can be trusted.
-**Method Thesis**: AI reproduction fidelity is bounded by the **partial observability of the evidence chain** (IO → ECRF → TCE); result-level evaluation systematically inflates trust, and component-level auditing corrects it.
+**Problem**: Scientometrics has no instrument measuring whether a published computational analysis re-executes and reproduces its claimed results. The accessible evaluator signal — result-level numerical agreement — is a systematically biased reproducibility indicator: an agent can reproduce a number through the wrong process.
+**Method Thesis**: Reproduction fidelity is bounded by the **partial observability of the evidence chain** (IO → ECRF → RIB); the result-based indicator carries systematic measurement bias (False Reproduction Rate > 0), and component-level auditing corrects it. ECRF is a new scientometric variable linked to impact indicators.
 **Date**: 2026-06-24
 **Proposal**: refine-logs/FINAL_PROPOSAL.md
-**Target Venue**: ISR / MISQ / Management Science
+**Target Venue**: *Scientometrics* (Springer); alternates QSS / Journal of Informetrics
 
 ---
 
@@ -12,9 +12,10 @@
 
 | Claim | Why It Matters | Minimum Convincing Evidence | Linked Blocks |
 |-------|----------------|------------------------------|---------------|
-| **C1 (primary)** Result-level evaluation produces systematic trust inflation (TIR > 0), and component-level audit corrects it (TIR(R₁) > TIR(R₃)) | This is the paper's dominant contribution — a measurable governance failure + a correctable mechanism | TIR(R₁) > 0 with confidence interval not overlapping 0; TIR(R₁) > TIR(R₃), McNemar p<0.05; ≥5 human-confirmed evidence-break cases across ≥2 break types | B3, B5 |
-| **C2 (supporting)** The IO gradient causally determines reconstruction fidelity, and the effect is asymmetric across evidence-chain components | Establishes the *mechanism* behind C1 — why inflation arises and why component-level audit can localize it | Monotonic ECRF increase IO₁→IO₃; significant Component×IO interaction (mixed-effects); ≥2 components improve significantly | B2, B3 |
-| **Anti-claim to rule out (A1)**: "TIR is just noise / thresholding artifact" | If inflation is within scoring noise, the governance story collapses | Bootstrap CI on TIR; pre-registered thresholds; sensitivity at 0.10/0.15/0.20 disagreement cutoffs | B3, B4 |
+| **C1 (primary)** The result-based reproducibility indicator carries systematic measurement bias (FRR > 0), and component-level audit corrects it (FRR(R₁) > FRR(R₃)) | This is the paper's dominant contribution — a measurable measurement-validity failure + a correctable instrument | FRR(R₁) > 0 with confidence interval not overlapping 0; FRR(R₁) > FRR(R₃), McNemar p<0.05; ≥5 human-confirmed failure-mode cases across ≥2 modes (M₁–M₄) | B3, B5 |
+| **C2 (supporting)** The IO gradient causally determines reconstruction fidelity, and the effect is asymmetric across evidence-chain components | Establishes the *mechanism* behind C1 — why bias arises and why component-level audit can localize it | Monotonic ECRF increase IO₁→IO₃; significant Component×IO interaction (mixed-effects); ≥2 components improve significantly | B2, B3 |
+| **C3 (scientometric capstone)** Agent-measured ECRF is a scientometric variable correlated with established impact indicators | The field-facing payoff — a latent variable the field could not previously measure, linked to its existing constructs | ECRF (and component-ECRF) significantly associated with citations/CD-index/altmetrics/team size, controlling for field+year; effect direction consistent across deep-set + SciSciBench substrate | B7 |
+| **Anti-claim to rule out (A1)**: "FRR is just noise / thresholding artifact" | If bias is within scoring noise, the measurement-validity story collapses | Bootstrap CI on FRR; pre-registered thresholds; sensitivity at 0.10/0.15/0.20 disagreement cutoffs | B3, B4 |
 | **Anti-claim to rule out (A2)**: "Component audit only wins because it is a stricter gate, not because it localizes breaks" | If R₃ just lowers trust by being harsher, it adds no information beyond a stricter threshold on R₂ | R₃ localizes the break component in the majority of confirmed cases; R₃≠R₂-at-lower-threshold | B4, B5 |
 | **Anti-claim to rule out (A3)**: "The IO bound dissolves with frontier models" | If GPT-4o/Claude reproduce everything regardless of IO, the theory is model-specific | Frontier robustness subset shows the same IO pattern (attenuated but not eliminated) | B6 |
 | **Anti-claim to rule out (A4)**: "The whole effect is a prompt-engineering artifact of our agent harness" | Reviewers will attribute the IO gradient to implementation details, not theory | Fresh isolated workspace, randomized condition order, pre-registered seed, cross-harness robustness (ARIS vs. raw SciSciGPT graph) | B2 |
@@ -26,15 +27,15 @@
 - **Main paper must prove**:
   - ECRF is multi-dimensional and varies systematically (Study 1 — establishes the construct)
   - IO causally drives ECRF, asymmetrically across components (Study 2 — establishes the mechanism)
-  - Result-level trust inflation is real, measurable, mechanistically decomposable (B₁–B₄), and correctable by component audit (Study 3 — the main contribution)
+  - Result-indicator bias is real, measurable, mechanistically decomposable (M₁–M₄), and correctable by component audit (Study 3 — the main contribution)
 - **Appendix can support**:
   - Frontier-model robustness subset (attenuation pattern)
-  - Full per-paper evidence-chain heatmaps and break adjudication traces
+  - Full per-paper evidence-chain heatmaps and failure-mode adjudication traces
   - Inter-annotator α tables and adjudication protocols
 - **Experiments intentionally cut**:
   - SciSciBench full benchmark (→ one motivation paragraph: L3 true capability ~0.3–0.5 establishes the *need* for audit; not a benchmark paper)
   - retracted-paper-detection / paper-mill work (different project)
-  - ARIS/Codex/Claude engineering narrative (irrelevant to IS/management readers)
+  - ARIS/Codex/Claude engineering narrative (irrelevant to scientometrics readers)
   - Multi-model radar charts as a *headline* (kept only as robustness, not as model comparison contribution)
 
 ---
@@ -42,14 +43,14 @@
 ## Experiment Blocks
 
 ### Block 1: Main Anchor Result — STRICT reproduction pathway is achievable and measurable
-- **Claim tested**: The framework can measure faithful reproduction where it should exist (calibrates the "valid" end of the trust scale).
-- **Why this block exists**: Before claiming trust inflation, we must show the measurement instrument correctly recognizes genuine reproductions.
+- **Claim tested**: The framework can measure faithful reproduction where it should exist (calibrates the "valid" end of the validity scale).
+- **Why this block exists**: Before claiming result-indicator bias, we must show the measurement instrument correctly recognizes genuine reproductions.
 - **Dataset / split / task**: 3 STRICT papers (Petersen2024, Park2023, Bentley2023) — already DONE (R002/R004/R007).
 - **Compared systems**: DeepSeek-V4-Pro agent vs. gold numerical targets.
 - **Metrics**: D3 numerical accuracy (8/8, 6/6, 9/9 = 100%), sample-N exact, R² exact, significance match.
 - **Setup details**: C1 condition (paper only), single seed per paper, DeepSeek-V4-Pro via Anthropic-compatible path.
 - **Success criterion**: ≥3 STRICT papers at D3≥0.95 — **MET (3/3 at 1.00)**.
-- **Failure interpretation**: If STRICT failed, the framework could not anchor the "valid" pole, undermining the TIR metric.
+- **Failure interpretation**: If STRICT failed, the framework could not anchor the "valid" pole, undermining the FRR metric.
 - **Table / figure target**: Motivation paragraph + appendix calibration table.
 - **Priority**: DONE — evidence already in hand.
 
@@ -70,27 +71,27 @@
 - **Why this block exists**: Defends against "you over-engineered the audit to win" and A2 (stricter-gate confound).
 - **Dataset / split / task**: Same Study 2/3 runs, re-scored under four regimes (R₁ result-level / R₂ aggregate composite / R₃ task-contingent component audit / **R₃′ overbuilt** = all-6-components-must-pass regardless of task type).
 - **Compared systems**: R₃ vs R₃′(overbuilt) vs R₂-lowered-threshold.
-- **Metrics**: TIR under each regime; break-localization rate; trust deflation rate.
+- **Metrics**: FRR under each regime; failure-localization rate; over-rejection rate.
 - **Setup details**: Re-scoring only — no new agent runs.
-- **Success criterion**: R₃ (task-contingent) achieves lower TIR than R₁ *without* the excess trust deflation of R₃′; R₃ ≠ R₂-at-lower-threshold on localization (defends A2).
+- **Success criterion**: R₃ (task-contingent) achieves lower FRR than R₁ *without* the excess over-rejection of R₃′; R₃ ≠ R₂-at-lower-threshold on localization (defends A2).
 - **Failure interpretation**: If R₃′ beats R₃ meaningfully, task-contingency is unnecessary complexity → simplify. If R₂-at-lower-threshold matches R₃, the component structure adds nothing → theory weakened.
 - **Table / figure target**: Appendix ablation table.
 - **Priority**: MUST-RUN (defends simplicity + A2).
 
-### Block 4: Failure Analysis / Evidence Break Types (B₁–B₄) — the mechanism of inflation
-- **Claim tested**: Trust inflation is mechanistically decomposable into B₁–B₄, each with an automated detection rule that survives human adjudication.
-- **Why this block exists**: Makes "trust inflation" concrete and falsifiable rather than a residual statistic.
+### Block 4: Failure Analysis / Measurement Failure Modes (M₁–M₄) — the mechanism of result-indicator bias
+- **Claim tested**: Result-indicator bias is mechanistically decomposable into M₁–M₄, each with an automated detection rule that survives human adjudication.
+- **Why this block exists**: Makes "result-indicator bias" concrete and falsifiable rather than a residual statistic.
 - **Dataset / split / task**: All flagged cases from Study 2/3 runs + random sample of unflagged cases (recall estimation).
 - **Compared systems**: Automated screening rule → audit trace → human adjudication (two reviewers, resolve by discussion).
-- **Metrics**: Rule precision, rule recall, confirmed-break rate per B-type; ≥5 human-confirmed breaks across ≥2 types.
+- **Metrics**: Rule precision, rule recall, confirmed-break rate per B-type; ≥5 human-confirmed failure-mode cases across ≥2 types.
 - **Setup details**:
-  - **B₁ Substitution**: DSF or VMF low, RRF moderate.
-  - **B₂ Circularity**: regex scan for paper numerics in code **+ semantic code review** to exclude legitimate constants (years, sample sizes, thresholds).
-  - **B₃ Shopping**: ≥3 model variants with paper-proximity selection *without* theoretical/methodological justification.
-  - **B₄ Assertion**: claim-evidence traceability check, PRF low + CRS high.
-- **Success criterion**: ≥5 human-confirmed breaks; ≥2 break types confirmed; B₂/B₃ false-positive rate controlled by semantic review.
+  - **M₁ Substitution**: DSF or VMF low, RRF moderate.
+  - **M₂ Circularity**: regex scan for paper numerics in code **+ semantic code review** to exclude legitimate constants (years, sample sizes, thresholds).
+  - **M₃ Shopping**: ≥3 model variants with paper-proximity selection *without* theoretical/methodological justification.
+  - **M₄ Assertion**: claim-evidence traceability check, PRF low + CRS high.
+- **Success criterion**: ≥5 human-confirmed failure-mode cases; ≥2 modes confirmed; M₂/M₃ false-positive rate controlled by semantic review.
 - **Failure interpretation**: If <5 breaks confirm or false positives dominate, the B-typology is not empirically grounded → collapse to a single "process invalid" category.
-- **Table / figure target**: Main-paper Table 3 (break-type matrix with examples) + Figure (trust inflation decomposition).
+- **Table / figure target**: Main-paper Table 3 (failure-mode matrix with examples) + Figure (result-indicator bias decomposition).
 - **Priority**: MUST-RUN.
 
 ### Block 5: Frontier Necessity Check — does the IO bound survive frontier models?
@@ -98,24 +99,36 @@
 - **Why this block exists**: The paper's central construct is the *agent* in "generative agent auditing"; reviewers will demand evidence that stronger models do not trivially dissolve the bound (A3).
 - **Dataset / split / task**: 8–10 papers × 3 IO levels × 2 frontier models (GPT-4o, Claude Sonnet/Opus) = ~54 runs.
 - **Compared systems**: Frontier models vs. primary open-weight/low-cost models on the same IO gradient.
-- **Metrics**: ECRF slope across IO per model tier; TIR(R₁) per tier; break-localization consistency.
+- **Metrics**: ECRF slope across IO per model tier; FRR(R₁) per tier; failure-localization consistency.
 - **Setup details**: API access; same isolation protocol; pre-registered subset.
-- **Success criterion**: IO gradient direction consistent with primary pattern (attenuation allowed); TIR(R₁) > 0 for frontier tier.
+- **Success criterion**: IO gradient direction consistent with primary pattern (attenuation allowed); FRR(R₁) > 0 for frontier tier.
 - **Failure interpretation**: If frontier models reproduce at ceiling regardless of IO, scope the theory's claim explicitly to open-weight/mid-tier agents and reframe frontier as boundary condition (not failure — a clean scope statement).
 - **Table / figure target**: Appendix robustness table; one main-panel sentence.
 - **Priority**: HIGH (robustness, not blocking the core claim).
 
 ### Block 6: Two-Layer Human Validation — gold evidence chain + validity adjudication
-- **Claim tested**: The ECRF and TIR measurements are reliable against human ground truth.
-- **Why this block exists**: Without human labels, TIR is an insider metric and the whole governance story is unfalsifiable (the project's documented fatal weakness).
+- **Claim tested**: The ECRF and FRR measurements are reliable against human ground truth.
+- **Why this block exists**: Without human labels, FRR is an insider metric and the whole measurement-validity story is unfalsifiable (the project's documented fatal weakness).
 - **Dataset / split / task**: Layer 1 — 2 annotators per paper on the 20-paper pool; Layer 2 — validity adjudication on all flagged + sample of unflagged.
 - **Compared systems**: Component-stratified α targets: Data Source ≥0.75, Sample/Indicator/Model ≥0.67, Result ≥0.80, Claim ≥0.60.
 - **Metrics**: Inter-annotator α per component; rule precision/recall; confirmed-break rate.
 - **Setup details**: Pre-registered annotation protocol; adjudication by discussion; transparent reporting of below-target components.
 - **Success criterion**: ≥80% of components at or above target α; components below target reported transparently with adjudication.
-- **Failure interpretation**: If Claim α < 0.60 even after adjudication, restrict quantitative TIR claims to higher-α components and treat Claim qualitatively.
+- **Failure interpretation**: If Claim α < 0.60 even after adjudication, restrict quantitative FRR claims to higher-α components and treat Claim qualitatively.
 - **Table / figure target**: Methods section reliability table.
 - **Priority**: MUST-RUN (unblocks Study 3).
+
+### Block 7: Scientometric Linkage — ECRF as a new scientometric variable (Study 4, C3)
+- **Claim tested**: C3 — agent-measured ECRF correlates with established impact indicators (the field-facing capstone).
+- **Why this block exists**: This is the *scientometric* payoff that justifies the venue choice. No prior work could test "does execution-level reproducibility relate to impact?" because the IV did not exist. Without Block 7 the paper reads as a measurement-instrument paper; with it, ECRF enters the scientometric variable stack alongside citations/CD-index.
+- **Dataset / split / task**: 30-paper deep-stratified set (component-ECRF already measured in Blocks 2–3) + 115-paper SciSciBench substrate (L2/ECRF already measured). Join to OpenAlex/SciSciNet for citations, CD-disruption index (Park et al. 2023), altmetric attention, team size (Wu, Wang & Evans 2019).
+- **Compared systems**: OLS / mixed-effects regression of ECRF (and per-component ECRF) on impact indicators, controlling for field, year, team size.
+- **Metrics**: standardized β for ECRF → citations; ECRF × CD-index interaction (Hₛ₂: disruption trades off against reproducibility); component-ECRF predictive gain over result-match (Hₛ₃, ΔR²).
+- **Setup details**: impact data fetched post-reproduction (no leakage into agent); pre-registered Hₛ₁–Hₛ₃; exploratory + confirmatory split.
+- **Success criterion**: ECRF significantly associated with ≥1 impact indicator (p<0.05) with consistent direction across deep-set and SciSciBench substrate; component-ECRF adds predictive power over aggregate result-match.
+- **Failure interpretation**: If no association, ECRF is still a valid measurement instrument (Studies 1–3 stand) but lacks scientometric linkage — reframe Study 4 as a measurement-independence result and scope the scientometric claim. Not fatal to the paper.
+- **Table / figure target**: Main-paper Table 4 (ECRF ↔ impact regression) + Figure (component-ECRF vs CD-index).
+- **Priority**: HIGH (defines the venue fit; not blocking the core measurement-validity claim C1).
 
 ---
 
@@ -126,9 +139,10 @@
 | **M0 — Calibration** | Re-analyze M0/M1 (16 papers) under theory framing; confirm ECRF dimensionality | Study 1 analyses (no new runs) | Disagreement >0.15; localization >0.60 | ~0 GPU (re-analysis) | Low — most evidence exists |
 | **M1 — Mini Study 2 Pilot** | De-risk IO gradient + break detection before scaling | 5 papers × 3 IO × 2 models = 30 runs | (1) IO₁<IO₂<IO₃ monotonic; (2) Component×IO visible; (3) ≥1 break detected; (4) result≠component on ≥1 case | ~15 GPU-h + API | **Highest-risk assumption**: IO₂ manipulation cleanly isolates documentation from code |
 | **M2 — Study 2 Full** | Causal test of IO→ECRF (C2) | 120 primary runs + paper-pool finalization + Layer 1 annotation | Monotonic ECRF; significant Component×IO interaction | ~80 GPU-h + API | Paper-pool selection bias; mitigation = pre-agent annotation |
-| **M3 — Study 3** | Trust inflation + audit correction (C1, main contribution) | 3-regime re-scoring + B₁–B₄ adjudication + Layer 2 validity | TIR(R₁)>0; TIR(R₁)>TIR(R₃) p<0.05; ≥5 confirmed breaks | ~$200 API + human adjudication | False positives in B₂/B₃; mitigation = semantic review + justification requirement |
+| **M3 — Study 3** | Result-indicator bias + audit correction (C1, main contribution) | 3-regime re-scoring + M₁–M₄ adjudication + Layer 2 validity | FRR(R₁)>0; FRR(R₁)>FRR(R₃) p<0.05; ≥5 confirmed failure-mode cases | ~$200 API + human adjudication | False positives in M₂/M₃; mitigation = semantic review + justification requirement |
 | **M4 — Simplicity** | R₃ vs overbuilt R₃′ vs threshold-lowered R₂ | Re-scoring only | R₃ not dominated by simpler/stricter variants | ~0 compute | Low |
-| **M5 — Frontier Robustness** | A3 boundary check | 8–10 papers × 3 IO × 2 frontier models ≈54 runs | IO direction consistent; TIR(R₁)>0 for frontier | API | Frontier at ceiling → scope statement, not failure |
+| **M5 — Frontier Robustness** | A3 boundary check | 8–10 papers × 3 IO × 2 frontier models ≈54 runs | IO direction consistent; FRR(R₁)>0 for frontier | API | Frontier at ceiling → scope statement, not failure |
+| **M6 — Scientometric Linkage** | C3 — ECRF ↔ impact indicators | Join 30-paper deep set + 115-paper SciSciBench to OpenAlex/SciSciNet; regress ECRF on citations/CD-index/altmetrics/team size | ECRF significantly associated with ≥1 impact indicator, consistent direction across both sets | ~0 compute (OpenAlex/SciSciNet queries) | Confounded correlations; mitigation = field/year/team-size controls, pre-registered Hₛ₁–Hₛ₃ |
 
 ---
 
@@ -163,7 +177,7 @@ Models identified by capability tier; specific versions and access dates reporte
 
 ## Immediate Next Step: Mini Study 2 (5-Paper Pilot, M1)
 
-**Purpose**: Validate IO gradient and evidence-break detection before committing to full 120-run experiment.
+**Purpose**: Validate IO gradient and failure-mode detection before committing to full 120-run experiment.
 
 **Design**: 5 papers × 3 IO levels × 2 models = 30 runs.
 
@@ -172,7 +186,7 @@ Models identified by capability tier; specific versions and access dates reporte
 **Pass criteria (green-light for full Study 2)**:
 1. IO₁ < IO₂ < IO₃ monotonic ECRF increase observed
 2. Component × IO interaction visible (not flat across components)
-3. ≥1 evidence-break case detected (B₁–B₄)
+3. ≥1 failure-mode case detected (M₁–M₄)
 4. Result-level success ≠ component-level validity on ≥1 case
 
 **If mini Study 2 fails any criterion**: Re-examine IO level definitions, paper-pool composition, or model prompt design before scaling. Do not scale a broken manipulation.
@@ -197,9 +211,9 @@ Models identified by capability tier; specific versions and access dates reporte
 |------|------------|
 | Theory read as "just a framework" | Explicit constructs (IO, ECRF, TCE) with causal propositions P1–P4 → falsifiable hypotheses |
 | Evidence-break cases too few (<5) | Stratified sampling by observability variation; mini Study 2 de-risks before scaling |
-| B₂/B₃ false positives | Semantic code review + theoretical-justification requirement for shopping |
+| M₂/M₃ false positives | Semantic code review + theoretical-justification requirement for shopping |
 | Single-model-family concern (A3) | Frontier robustness subset (M5) |
-| Low α on Claim component | Pre-registered component-stratified α targets; transparent reporting; quantitative TIR restricted to high-α components |
+| Low α on Claim component | Pre-registered component-stratified α targets; transparent reporting; quantitative FRR restricted to high-α components |
 | IO₂ manipulation not clean | Mini Study 2 explicitly tests IO₂ isolation before scaling |
 | Prompt-engineering artifact (A4) | Fresh workspace, randomized order, pre-registered seed; cross-harness check if time permits |
 
