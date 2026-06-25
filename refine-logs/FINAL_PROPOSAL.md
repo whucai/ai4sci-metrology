@@ -1,7 +1,7 @@
 # Final Proposal: An AI-Agent Metrology of Computational Reproducibility
 
-**Date**: 2026-06-24 (v8 — Scientometrics pivot)
-**Target Venue**: *Scientometrics* (Springer); alternates QSS / Journal of Informetrics
+**Date**: 2026-06-24 (v8); **revised 2026-06-25 (v8.1)** — novelty re-run after ingesting RPC-Bench + FactReview (see `refine-logs/NOVELTY_ASSERTION_V8.md`).
+**Target Venue (open)**: *Scientometrics* (Springer) as default; higher-tier candidates under external review (NHB/SciAdv/PNAS; MISQ/MgmtSci/ISR; NeurIPS D&B/ICML). Core theory venue-agnostic.
 
 ---
 
@@ -21,7 +21,7 @@ Reproducibility is not bounded by model accuracy but by the **partial observabil
 |-----------|-------------------|----------------|-------|
 | **ECRF multi-dimensionality** | per-component reconstruction fidelity varies independently | disagreement rate, localization rate, component correlation | Study 1 |
 | **IO → ECRF (input sensitivity)** | IO causally drives ECRF, asymmetrically across components | monotonic ECRF IO₁→IO₃; Component×IO interaction | Study 2 |
-| **RIB / False Reproduction Rate** | result-level indicator over-reads true reproducibility | FRR(R₁) > 0; FRR(R₁) > FRR(R₃), McNemar p<0.05 | Study 3 |
+| **RIB / False Reproduction Rate** | result-level indicator over-reads true reproducibility | FRR(R₁) > 0; FRR(R₂) > FRR(R₃), McNemar p<0.05 — R₂ is FactReview-style claim-level audit | Study 3 |
 | **Scientometric linkage** | ECRF as a new scientometric variable correlated with impact | ECRF ↔ citations / CD-index / altmetrics / team size | Study 4 |
 
 ## Four Studies
@@ -30,7 +30,7 @@ Reproducibility is not bounded by model accuracy but by the **partial observabil
 |-------|------|--------|--------|
 | **Study 1**: Construct validation | establish ECRF dimensionality | 10–15 papers × 2 models, re-analyze M0/M1 | Re-analyze existing |
 | **Study 2**: IO → ECRF | input-sensitivity test of the instrument | 20 papers × 3 IO × 2 models = 120 runs + frontier subset | TODO |
-| **Study 3**: RIB + audit correction | **main measurement-validity result** | 3-regime comparison vs human labels; M₁–M₄ failure modes | TODO |
+| **Study 3**: RIB + audit correction | **main measurement-validity result** | 3-regime comparison vs human labels: R₁ result-level / **R₂ FactReview-style claim-level execution audit (closest-prior-art baseline)** / R₃ component-level; M₁–M₄ failure modes; killer = cases R₂ labels "Supported" but R₃ reveals M₁/M₂ | TODO |
 | **Study 4**: Scientometric linkage | **field-facing capstone** — ECRF as a scientometric variable | regress ECRF on citations/CD-index/altmetrics/team size over 30-paper deep set + 115-paper SciSciBench substrate | TODO |
 
 ## Key Innovation
@@ -46,17 +46,19 @@ The paper's strongest empirical claims: (1) the result-based reproducibility ind
 | Trust Calibration Error (TCE) | Result-Indicator Bias (RIB) | measurement-validity framing, not governance |
 | Trust Inflation Rate (TIR) | False Reproduction Rate (FRR) | diagnostic-indicator false-positive analogy |
 | Evidence break types B₁–B₄ | Measurement failure modes M₁–M₄ | indicator failure modes, not governance mechanisms |
-| Three evaluation regimes | Same (R₁/R₂/R₃) — unchanged | — |
+| Three evaluation regimes | R₁ result-level / **R₂ FactReview-style claim-level execution audit** / R₃ component-level | R₂ is the closest-prior-art baseline, not a strawman |
 | P1–P4 propositions | Trimmed to a measurement model | scientometrics is empirical/methodological, not theory-heavy |
 
-## Differentiators
+## Differentiators (vs. closest prior art — FactReview is #1)
 
-| Dimension | Our Work | Closest Competitor |
-|-----------|----------|-------------------|
-| Measured construct | ECRF — component-resolved reproduction fidelity | SRI (Hossain 2025): notebook-cell reproducibility, no agent, no paper-to-code |
+| Dimension | Our Work (ECRF) | Closest Competitor |
+|-----------|-----------------|--------------------|
+| **D1 Unit of analysis** | evidence-chain component (Data→Sample→Indicator→Model→Result→Claim) | **FactReview (Yue 2026)**: the *claim* → 4 statuses |
+| **D2 Information observability** | 3-level causal treatment (IO₁/IO₂/IO₃) | **FactReview**: binary code-on/off + post-hoc ablation (17% status change) |
+| **D3 Trust inflation (primary DV)** | RIB / FRR — result-vs-component gap | **FactReview**: no concept; "Partial" flags overbroad scope only |
+| **D4 Scientometric linkage** | ECRF ↔ citations/CD-index/altmetrics/team size | **FactReview / Theiler / SRI / Kapoor**: none have the IV |
 | Agent reproduces published paper | Yes, full evidence chain | Theiler 2026: domain-locked PHM, outputs benchmark not measurement |
-| Reproduction-as-measurement | FRR + M₁–M₄ failure modes | Kapoor 2022: human retrospective audit, no live agent reproduction |
-| Scientometric linkage | ECRF ↔ citations/CD-index/altmetrics | None — no prior work has the IV |
+| Reproduction-as-measurement | FRR + M₁–M₄ structural break taxonomy | Kapoor 2022: human retrospective audit; FactReview: pipeline failures only (B₁-invisible by construction) |
 | Human validation | 2-layer, component-stratified α, recall estimation | Most benchmarks: no human validation |
 
 ## Risks

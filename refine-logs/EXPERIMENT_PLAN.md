@@ -1,10 +1,10 @@
-# Experiment Plan: An AI-Agent Metrology of Computational Reproducibility (v8 — Scientometrics pivot)
+# Experiment Plan: An AI-Agent Metrology of Computational Reproducibility (v8.1)
 
 **Problem**: Scientometrics has no instrument measuring whether a published computational analysis re-executes and reproduces its claimed results. The accessible evaluator signal — result-level numerical agreement — is a systematically biased reproducibility indicator: an agent can reproduce a number through the wrong process.
 **Method Thesis**: Reproduction fidelity is bounded by the **partial observability of the evidence chain** (IO → ECRF → RIB); the result-based indicator carries systematic measurement bias (False Reproduction Rate > 0), and component-level auditing corrects it. ECRF is a new scientometric variable linked to impact indicators.
-**Date**: 2026-06-24
+**Date**: 2026-06-24 (v8); **revised 2026-06-25 (v8.1)** — novelty re-run after RPC-Bench + FactReview (`refine-logs/NOVELTY_ASSERTION_V8.md`). Key change: **R₂ re-specified as a FactReview-style claim-level execution audit** (closest-prior-art baseline), not a strawman aggregate composite.
 **Proposal**: refine-logs/FINAL_PROPOSAL.md
-**Target Venue**: *Scientometrics* (Springer); alternates QSS / Journal of Informetrics
+**Target Venue (open)**: *Scientometrics* default; higher-tier candidates under external review.
 
 ---
 
@@ -12,7 +12,7 @@
 
 | Claim | Why It Matters | Minimum Convincing Evidence | Linked Blocks |
 |-------|----------------|------------------------------|---------------|
-| **C1 (primary)** The result-based reproducibility indicator carries systematic measurement bias (FRR > 0), and component-level audit corrects it (FRR(R₁) > FRR(R₃)) | This is the paper's dominant contribution — a measurable measurement-validity failure + a correctable instrument | FRR(R₁) > 0 with confidence interval not overlapping 0; FRR(R₁) > FRR(R₃), McNemar p<0.05; ≥5 human-confirmed failure-mode cases across ≥2 modes (M₁–M₄) | B3, B5 |
+| **C1 (primary)** The result-based reproducibility indicator carries systematic measurement bias (FRR > 0), and component-level audit corrects it (FRR(R₂) > FRR(R₃)) — **even when R₂ is a FactReview-style claim-level execution audit** | This is the paper's dominant contribution — a measurable measurement-validity failure + a correctable instrument that beats the closest prior-art baseline | FRR(R₁) > 0 (CI not overlapping 0); **FRR(R₂) > FRR(R₃), McNemar p<0.05** where R₂ = FactReview-style manuscript+lit+code-execution+4-status-claim-verdict; ≥5 human-confirmed failure-mode cases across ≥2 modes (M₁–M₄), **including ≥1 case R₂ labels "Supported" but R₃ reveals M₁/M₂** | B3, B5 |
 | **C2 (supporting)** The IO gradient causally determines reconstruction fidelity, and the effect is asymmetric across evidence-chain components | Establishes the *mechanism* behind C1 — why bias arises and why component-level audit can localize it | Monotonic ECRF increase IO₁→IO₃; significant Component×IO interaction (mixed-effects); ≥2 components improve significantly | B2, B3 |
 | **C3 (scientometric capstone)** Agent-measured ECRF is a scientometric variable correlated with established impact indicators | The field-facing payoff — a latent variable the field could not previously measure, linked to its existing constructs | ECRF (and component-ECRF) significantly associated with citations/CD-index/altmetrics/team size, controlling for field+year; effect direction consistent across deep-set + SciSciBench substrate | B7 |
 | **Anti-claim to rule out (A1)**: "FRR is just noise / thresholding artifact" | If bias is within scoring noise, the measurement-validity story collapses | Bootstrap CI on FRR; pre-registered thresholds; sensitivity at 0.10/0.15/0.20 disagreement cutoffs | B3, B4 |
@@ -69,8 +69,8 @@
 ### Block 3: Simplicity / Elegance Check — task-contingent audit vs. overbuilt variants
 - **Claim tested**: The chosen R₃ design (task-contingent component audit) is not overbuilt; simpler variants are weaker, stricter variants add no information.
 - **Why this block exists**: Defends against "you over-engineered the audit to win" and A2 (stricter-gate confound).
-- **Dataset / split / task**: Same Study 2/3 runs, re-scored under four regimes (R₁ result-level / R₂ aggregate composite / R₃ task-contingent component audit / **R₃′ overbuilt** = all-6-components-must-pass regardless of task type).
-- **Compared systems**: R₃ vs R₃′(overbuilt) vs R₂-lowered-threshold.
+- **Dataset / split / task**: Same Study 2/3 runs, re-scored under four regimes (R₁ result-level / **R₂ FactReview-style claim-level execution audit** = manuscript+lit+code-execution+4-status verdicts (Supported/Partial/In-conflict/Inconclusive), K=3 wrapper-only repair, implemented to match Yue et al. 2026 / R₃ task-contingent component audit / **R₃′ overbuilt** = all-6-components-must-pass regardless of task type).
+- **Compared systems**: R₃ vs R₃′(overbuilt) vs R₂(FactReview-style)-lowered-threshold.
 - **Metrics**: FRR under each regime; failure-localization rate; over-rejection rate.
 - **Setup details**: Re-scoring only — no new agent runs.
 - **Success criterion**: R₃ (task-contingent) achieves lower FRR than R₁ *without* the excess over-rejection of R₃′; R₃ ≠ R₂-at-lower-threshold on localization (defends A2).
@@ -139,7 +139,7 @@
 | **M0 — Calibration** | Re-analyze M0/M1 (16 papers) under theory framing; confirm ECRF dimensionality | Study 1 analyses (no new runs) | Disagreement >0.15; localization >0.60 | ~0 GPU (re-analysis) | Low — most evidence exists |
 | **M1 — Mini Study 2 Pilot** | De-risk IO gradient + break detection before scaling | 5 papers × 3 IO × 2 models = 30 runs | (1) IO₁<IO₂<IO₃ monotonic; (2) Component×IO visible; (3) ≥1 break detected; (4) result≠component on ≥1 case | ~15 GPU-h + API | **Highest-risk assumption**: IO₂ manipulation cleanly isolates documentation from code |
 | **M2 — Study 2 Full** | Causal test of IO→ECRF (C2) | 120 primary runs + paper-pool finalization + Layer 1 annotation | Monotonic ECRF; significant Component×IO interaction | ~80 GPU-h + API | Paper-pool selection bias; mitigation = pre-agent annotation |
-| **M3 — Study 3** | Result-indicator bias + audit correction (C1, main contribution) | 3-regime re-scoring + M₁–M₄ adjudication + Layer 2 validity | FRR(R₁)>0; FRR(R₁)>FRR(R₃) p<0.05; ≥5 confirmed failure-mode cases | ~$200 API + human adjudication | False positives in M₂/M₃; mitigation = semantic review + justification requirement |
+| **M3 — Study 3** | Result-indicator bias + audit correction (C1, main contribution) | 3-regime re-scoring (R₁ / **R₂ FactReview-style claim-level execution audit** / R₃ component) + M₁–M₄ adjudication + Layer 2 validity | FRR(R₁)>0; **FRR(R₂)>FRR(R₃) p<0.05**; ≥5 confirmed failure-mode cases incl. ≥1 R₂="Supported" but R₃=M₁/M₂ | ~$200 API + human adjudication | False positives in M₂/M₃; mitigation = semantic review + justification requirement |
 | **M4 — Simplicity** | R₃ vs overbuilt R₃′ vs threshold-lowered R₂ | Re-scoring only | R₃ not dominated by simpler/stricter variants | ~0 compute | Low |
 | **M5 — Frontier Robustness** | A3 boundary check | 8–10 papers × 3 IO × 2 frontier models ≈54 runs | IO direction consistent; FRR(R₁)>0 for frontier | API | Frontier at ceiling → scope statement, not failure |
 | **M6 — Scientometric Linkage** | C3 — ECRF ↔ impact indicators | Join 30-paper deep set + 115-paper SciSciBench to OpenAlex/SciSciNet; regress ECRF on citations/CD-index/altmetrics/team size | ECRF significantly associated with ≥1 impact indicator, consistent direction across both sets | ~0 compute (OpenAlex/SciSciNet queries) | Confounded correlations; mitigation = field/year/team-size controls, pre-registered Hₛ₁–Hₛ₃ |

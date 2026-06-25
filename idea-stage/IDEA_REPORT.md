@@ -1,9 +1,9 @@
-# Idea Report (Scientometrics Pivot): An AI-Agent Metrology of Computational Reproducibility
+# Idea Report (v8.1): An AI-Agent Metrology of Computational Reproducibility
 
 **Direction**: Measuring the Reproducibility of Computational Science with Generative AI Agents
-**Date**: 2026-06-24 (v8 — Scientometrics pivot; supersedes v7 UTD/IS-governance framing, recoverable from git history)
-**Target Venue**: *Scientometrics* (Springer, ISSN 0138-9130) — with *Quantitative Science Studies* / *Journal of Informetrics* as alternates
-**Pipeline**: research-lit (59 papers ingested) → novelty-check → reframing
+**Date**: 2026-06-24 (v8); **revised 2026-06-25 (v8.1)** — novelty re-run after ingesting RPC-Bench + FactReview (see `refine-logs/NOVELTY_ASSERTION_V8.md`). Supersedes v7 UTD/IS-governance framing, recoverable from git history.
+**Target Venue (open)**: *Scientometrics* (Springer) remains a safe default — FactReview is a CS/ML tool, so Scientometrics readers won't see it as direct competition and the "new scientometric variable" angle is clean there. Given the four structural differentiators (D1–D4) and the FactReview-as-baseline contrast, the contribution is strong enough for higher-tier venues to be evaluated by external review: *Nature Human Behaviour* / *Science Advances* / *PNAS* (if Study 4 lands as a field-facing finding); *MISQ* / *Management Science* / *ISR* (if the trust-inflation/governance angle is re-emphasized); *NeurIPS D&B* / *ICML* (if the component-resolved benchmark + FactReview contrast is the headline). **No commitment yet** — the core theory (D1–D4, FactReview-as-R₂-baseline) is venue-agnostic.
+**Pipeline**: research-lit (60 papers ingested, +RPC-Bench +FactReview) → novelty re-run → reframing
 
 ---
 
@@ -111,13 +111,36 @@ R₃ is task-contingent: only components applicable to the task type must pass.
 
 ## 5. Novelty vs. Closest Prior Art
 
-| Axis | Closest verified prior work | Our differentiation |
-|------|-----------------------------|--------------------|
-| (a) Agent reproduces a *published computational paper* | Theiler et al. 2026 (arXiv 2605.28371) — paper-to-benchmark agent | Domain-locked to industrial PHM; outputs a normalized benchmark implementation, not a *measurement of where reproduction fails* |
-| (b) Component-level reproducibility metric | SRI / Hossain et al. 2025 (arXiv 2509.23645) — per-cell notebook reproducibility index | Measures *notebook reruns*, no AI agent, no paper-to-code step; components are notebook cells, not a paper's evidence/claim chain |
-| (c) Reproduction-as-measurement (not leaderboard) | Kapoor & Narayanan 2022 (arXiv 2207.07048) — leakage audit across ML-science | *Human* retrospective audit, not agent reproduction; no per-component failure map of a live reproduction attempt |
+> **Re-run 2026-06-25** after ingesting RPC-Bench (Chen et al. 2026, arXiv:2601.14289) and FactReview (Yue et al. 2026, arXiv:2604.04074), both post-dating the 2026-06-24 v8 check. FactReview is now the **closest prior work**: it executes released code to assign claim-level verdicts and shows execution evidence changes 17% of verdicts. The original "(a)+(b)+(c) no one combines" claim is partially breached; novelty is re-grounded on four **structural** differentiators (D1–D4) below. See `refine-logs/NOVELTY_ASSERTION_V8.md`.
 
-**No verified prior work combines (a)+(b)+(c).** The intersection — an AI agent that walks a paper's evidence chain and whose *output is a measurement of where the chain breaks*, then linked to scientometric impact — is genuinely novel. Existing agent benchmarks (PaperBench, ScienceAgentBench, SciCode, MLE-bench, MLAgentBench) are leaderboards measuring task success; they do not produce a component-resolved reproduction-fidelity metric nor treat reproduction as a measurement instrument.
+### 5.1 Closest-prior-art ranking
+
+| Rank | Work | What it does | Gap vs. ECRF |
+|------|------|--------------|--------------|
+| **1 (closest)** | **FactReview (Yue et al. 2026)** | Agent executes released code (K=3 wrapper repair) → 4-status claim verdicts; manuscript+lit+execution; 35 ML papers/463 claims; 17% verdict-change on removing execution | Claim-level not component-level; binary code-on/off + observational ablation; no trust-inflation concept; no scientometric link; B₁-invisible by construction |
+| 2 | Theiler et al. 2026 (arXiv 2605.28371) | Paper→benchmark agent, slot-binding interface, 16 PHM papers | Domain-locked to PHM; outputs a benchmark implementation, not a *measurement of where reproduction fails* |
+| 3 | SRI / Hossain et al. 2025 (arXiv 2509.23645) | Per-cell notebook reproducibility index | Notebook reruns, no AI agent, no paper→code; components are notebook cells, not an evidence chain |
+| 4 | Kapoor & Narayanan 2022 (arXiv 2207.07048) | Leakage audit across ML-science | *Human* retrospective audit, not agent reproduction; no live per-component failure map |
+| motivation | RPC-Bench (Chen et al. 2026) | 15K QA, 9-cat comprehension taxonomy; GPT-5 37.46% Informativeness | Comprehension only — **not a competitor**; establishes the comprehension ceiling motivating a reconstruction-level instrument |
+
+### 5.2 Four structural differentiators (the novelty core)
+
+| Axis | FactReview (claim-level) | ECRF (component-level) |
+|------|--------------------------|------------------------|
+| **D1 — Unit of analysis** | The *claim* → 4 statuses | The **evidence-chain component** (Data→Sample→Indicator→Model→Result→Claim); per-component fidelity that *localizes where* reproduction breaks |
+| **D2 — Information observability** | Code availability = **binary**; post-hoc source-removal ablation (observational) | IO = **3-level manipulated treatment** (IO₁ narrative / IO₂ structured-docs-no-code / IO₃ executable); causal identification |
+| **D3 — Trust inflation (primary DV)** | No concept; "Partial" flags overbroad scope only | **Result-vs-component validity gap** (RIB/FRR) — the gap between "numbers reproduced" and "components validly reconstructed" |
+| **D4 — Scientometric linkage** | None | **Study 4**: ECRF ↔ citations / CD-disruption / altmetrics / team size |
+
+**Plus B₁–B₄ structural break taxonomy** (Substitution / Circularity / Shopping / Assertion) vs FactReview's *pipeline* failures (env/runtime/metric/alignment). FactReview executes the *released* repo, so its agent never chooses data/sample — it is **structurally blind to B₁ (data/sample substitution)**, which is exactly where ECRF's killer cases live.
+
+### 5.3 Re-derived novelty statement
+
+No prior work treats AI paper reproduction as a **component-resolved measurement instrument** with (D1) a Data→Sample→Indicator→Model→Result→Claim unit of analysis, (D2) information observability as a causally manipulated 3-level treatment, (D3) trust inflation as the primary dependent variable, and (D4) a link from reproduction fidelity to scientometric impact. FactReview is the closest prior work; ECRF generalizes its binary code-on/off ablation into a 3-level causal IO ladder, shifts the unit from claim to component, introduces trust inflation as the primary DV (showing even FactReview-style claim audit inflates trust relative to component audit), and links fidelity to scientometric impact. Existing agent benchmarks (PaperBench, ScienceAgentBench, SciCode, MLE-bench, MLAgentBench) remain leaderboards measuring task success; none produce a component-resolved fidelity metric nor treat reproduction as a measurement instrument.
+
+### 5.4 Strongest empirical move — FactReview as Study-3 R₂ baseline
+
+Study 3 re-specifies R₂ as a **FactReview-style claim-level execution audit** (manuscript+lit+code-execution+4-status verdicts), not a strawman. **H4: TIR(R₂) > TIR(R₃)** — even execution-based claim audit inflates trust relative to component audit. Killer result: cases where FactReview would label "Supported" (numbers reproduce) but ECRF reveals B₁ (data-path substitution → coincidentally similar numbers) or B₂ (paper values hard-coded as outputs) — **invisible to FactReview by construction**. N=3–5 human-adjudicated cases are decisive.
 
 ---
 
@@ -149,7 +172,9 @@ R₃ is task-contingent: only components applicable to the task type must pass.
 
 ---
 
-## 8. Paper Structure (Scientometrics-style)
+## 8. Paper Structure
+
+> Venue is **open** (v8.1). The structure below is written in a scientometrics-measurement register but adapts to IS-governance (v7 lineage) or ML-benchmark venues by re-weighting §7 (Study 4) vs §6 (Study 3) vs the benchmark contribution.
 
 1. **Introduction** — reproducibility as the unmeasured layer in scientometrics; the AI-agent-as-instrument proposal
 2. **Background** — SciSci measurement tradition (Fortunato 2018; Liu 2023); reproducibility-as-metric literature (OSC 2015; Nosek 2021; Kapoor 2022); LLM-as-measurement-instrument stream (Thelwall 2025/2026; Bornmann 2024; de Winter 2024)
