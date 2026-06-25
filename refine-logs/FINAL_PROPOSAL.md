@@ -1,69 +1,71 @@
-# Final Proposal: Evidence-Chain Theory of AI Reproduction Auditing
+# Final Proposal: An AI-Agent Metrology of Computational Reproducibility
 
-**Date**: 2026-06-24 (v7.1 — 9 micro-adjustments applied)
-**Target Venue**: ISR / MISQ / Management Science
+**Date**: 2026-06-24 (v8 — Scientometrics pivot)
+**Target Venue**: *Scientometrics* (Springer); alternates QSS / Journal of Informetrics
 
 ---
 
 ## Problem Anchor
 
-Generative AI agents can execute computational research — finding data, writing code, running models, producing results. When they succeed, organizations face a governance question: **can these AI-generated reproductions be trusted?** The most accessible trust signal — result-level agreement — is systematically misleading. An agent can produce the right number through the wrong process, and conventional evaluation cannot tell the difference.
+Scientometrics measures science through citation networks — impact, disruptiveness, collaboration — but has **no instrument that measures whether a published computational analysis actually re-executes and reproduces its claimed results.** Existing reproducibility signals are proxies (data-availability badges, registered reports, code-on-GitHub flags) or rare, small-N human-replication campaigns. None produce a continuous, component-resolved reproduction-fidelity metric at scale. The most accessible evaluator signal — result-level numerical agreement — is systematically biased: an agent can reproduce a number through the wrong process.
 
-## Core Theory
+## Core Measurement Model
 
-AI reproduction is not limited by model accuracy, but by the **partial observability of the scientific evidence chain**. The evidence chain (Data → Sample → Indicator → Model → Result → Claim) is unevenly reconstructible — components vary in how completely they are specified in papers, and this variation directly determines whether an AI agent can faithfully reproduce them.
+Reproducibility is not bounded by model accuracy but by the **partial observability of the scientific evidence chain**. The evidence chain (Data → Sample → Indicator → Model → Result → Claim) is unevenly reconstructible; components vary in how completely the paper specifies them, and this variation directly determines whether an AI agent can faithfully reproduce each component.
 
-**Theoretical chain**: Information Observability (IO) → Evidence Chain Reconstruction Fidelity (ECRF) → Trust Calibration Error (TCE).
+**Measurement chain**: Information Observability (IO, input quality) → Evidence-Chain Reconstruction Fidelity (ECRF, measured construct) → Result-Indicator Bias (RIB, measurement-validity failure).
 
-## Propositions → Hypotheses
+## Constructs → Empirical Tests
 
-| Theory Proposition | Empirical Hypothesis | Study |
-|-------------------|---------------------|-------|
-| **P1 (Observability Bound)**: AI reproduction fidelity is bounded by IO | H1: ECRF increases from IO₁ to IO₃ | Study 2 |
-| **P2 (Asymmetric Reconstructability)**: IO effect varies across evidence-chain components | H2: Component × IO interaction is significant | Study 2 |
-| **P3 (Trust Inflation)**: Result-level evaluation produces systematic trust inflation | H3: Trust Inflation Rate(R₁) > 0 | Study 3 |
-| **P4 (Audit Correction)**: Component-level auditing reduces trust inflation | H4: TIR(R₁) > TIR(R₃) | Study 3 |
+| Construct | Operationalization | Empirical test | Study |
+|-----------|-------------------|----------------|-------|
+| **ECRF multi-dimensionality** | per-component reconstruction fidelity varies independently | disagreement rate, localization rate, component correlation | Study 1 |
+| **IO → ECRF (input sensitivity)** | IO causally drives ECRF, asymmetrically across components | monotonic ECRF IO₁→IO₃; Component×IO interaction | Study 2 |
+| **RIB / False Reproduction Rate** | result-level indicator over-reads true reproducibility | FRR(R₁) > 0; FRR(R₁) > FRR(R₃), McNemar p<0.05 | Study 3 |
+| **Scientometric linkage** | ECRF as a new scientometric variable correlated with impact | ECRF ↔ citations / CD-index / altmetrics / team size | Study 4 |
 
-## Three Studies
+## Four Studies
 
-| Study | Theoretical Role | Design | Status |
-|-------|-----------------|--------|--------|
-| **Study 1**: Construct Validation | Establish ECRF multi-dimensionality | 10-15 papers × 2 models, 3 task types | Re-analyze M0/M1 |
-| **Study 2**: IO → ECRF (P1, P2) | Causal test of core mechanism | 20 papers × 3 IO levels × 2 models = 120 runs + frontier subset | TODO |
-| **Study 3**: Trust Inflation + Audit (P3, P4) | **Main contribution** | 3-regime comparison against human labels | TODO |
+| Study | Role | Design | Status |
+|-------|------|--------|--------|
+| **Study 1**: Construct validation | establish ECRF dimensionality | 10–15 papers × 2 models, re-analyze M0/M1 | Re-analyze existing |
+| **Study 2**: IO → ECRF | input-sensitivity test of the instrument | 20 papers × 3 IO × 2 models = 120 runs + frontier subset | TODO |
+| **Study 3**: RIB + audit correction | **main measurement-validity result** | 3-regime comparison vs human labels; M₁–M₄ failure modes | TODO |
+| **Study 4**: Scientometric linkage | **field-facing capstone** — ECRF as a scientometric variable | regress ECRF on citations/CD-index/altmetrics/team size over 30-paper deep set + 115-paper SciSciBench substrate | TODO |
 
 ## Key Innovation
 
-This is NOT a benchmark paper, an evaluation system paper, or a model comparison paper. It is a **theory about why AI-generated scientific outputs create systematic trust inflation — and how component-level auditing corrects it.**
+This is NOT a benchmark leaderboard, an evaluation system, or a model comparison. It is a **reproducibility metrology**: a new measurement instrument (the AI-agent reproduction pipeline) that operationalizes an unmeasured latent construct — *execution-level reproduction fidelity* — at bibliometric scale, complementing the existing proxy chain (badges → data availability → registered reports → human replications).
 
-The paper's strongest empirical claim: result-level evaluation will systematically overestimate AI reproduction validity (Trust Inflation Rate > 0), and the magnitude is measurable (TIR), mechanistically explainable (B₁-B₄ evidence break types), and correctable (component-level audit → lower TIR).
+The paper's strongest empirical claims: (1) the result-based reproducibility indicator carries systematic measurement bias (False Reproduction Rate > 0), measurable (FRR), mechanistically decomposable (M₁–M₄), and correctable (component-level audit → lower FRR); (2) agent-measured ECRF correlates with established scientometric impact indicators — the first test of a hypothesis the field could not previously formulate because the independent variable did not exist.
 
-## Methodology Hardening (v7.1 Improvements)
+## Metric & Construct Renames (v7 → v8)
 
-1. **IO₂ tightened**: "structured documentation without executable code" — IO₂ adds structured semantic information (variable definitions, sample rules) while IO₃ adds executable evidence (original code)
-2. **R₃ task-contingent**: Not "all components pass" but "all task-critical components pass" — applicable components vary by task type
-3. **TIR as primary metric**: Trust Inflation Rate = P(Human says invalid | Regime says trust) — more intuitive than raw TCE difference
-4. **B₂/B₃ safeguards**: Semantic code review distinguishes legitimate constants from target leakage; specification shopping requires paper-proximity selection without theoretical justification
-5. **Stratified α targets**: Data Source ≥ 0.75, Sample/Indicator/Model ≥ 0.67, Result ≥ 0.80, Claim ≥ 0.60
-6. **Pre-agent selection**: Paper pool finalized and pre-annotated before any agent execution
-7. **Tier-based model naming**: Open-weight / Low-cost API / Commercial frontier A/B; specific versions in setup table
-8. **P→H mapping**: Theory section states propositions; empirical section derives hypotheses
+| v7 (UTD) | v8 (Scientometrics) | Rationale |
+|----------|---------------------|-----------|
+| Trust Calibration Error (TCE) | Result-Indicator Bias (RIB) | measurement-validity framing, not governance |
+| Trust Inflation Rate (TIR) | False Reproduction Rate (FRR) | diagnostic-indicator false-positive analogy |
+| Evidence break types B₁–B₄ | Measurement failure modes M₁–M₄ | indicator failure modes, not governance mechanisms |
+| Three evaluation regimes | Same (R₁/R₂/R₃) — unchanged | — |
+| P1–P4 propositions | Trimmed to a measurement model | scientometrics is empirical/methodological, not theory-heavy |
 
 ## Differentiators
 
 | Dimension | Our Work | Closest Competitor |
 |-----------|----------|-------------------|
-| Theoretical construct | IO → ECRF → TCE causal chain | CORE-Bench: difficulty levels (no theory) |
-| Governance metric | Trust Inflation Rate (measurable, decomposable) | No existing benchmark has governance metrics |
-| Evidence break mechanisms | B₁-B₄ with detection rules + safeguards | COBA: benchmark flaws (different domain) |
+| Measured construct | ECRF — component-resolved reproduction fidelity | SRI (Hossain 2025): notebook-cell reproducibility, no agent, no paper-to-code |
+| Agent reproduces published paper | Yes, full evidence chain | Theiler 2026: domain-locked PHM, outputs benchmark not measurement |
+| Reproduction-as-measurement | FRR + M₁–M₄ failure modes | Kapoor 2022: human retrospective audit, no live agent reproduction |
+| Scientometric linkage | ECRF ↔ citations/CD-index/altmetrics | None — no prior work has the IV |
 | Human validation | 2-layer, component-stratified α, recall estimation | Most benchmarks: no human validation |
 
 ## Risks
 
 | Risk | Mitigation |
 |------|------------|
-| Theory read as "just a framework" | Explicit constructs (IO, ECRF, TCE) with causal relationships |
-| Evidence break cases too few | Stratified sampling by observability variation |
-| B₂/B₃ false positives | Semantic code review + justification requirement |
-| Single-model-family concern | Frontier robustness subset |
-| Low α on Claim component | Transparent reporting, adjudication protocol |
+| Read as "just a benchmark" | Frame as measurement instrument + Study 4 scientometric linkage |
+| Failure-mode cases too few (<5) | Stratified sampling by observability variation; mini Study 2 de-risks |
+| M₂/M₃ false positives | Semantic code review + theoretical-justification requirement |
+| Study 4 correlations are confounded | Control for field, team size, year; report as exploratory + confirmatory; pre-register |
+| Frontier models at ceiling | Scope statement (open-weight/mid-tier boundary), not failure |
+| Low α on Claim component | Transparent reporting; restrict quantitative FRR to high-α components |
