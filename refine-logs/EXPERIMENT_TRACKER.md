@@ -2,7 +2,7 @@
 
 **Plan**: refine-logs/EXPERIMENT_PLAN.md (v7.2)
 **Theory**: IO → ECRF → TCE; propositions P1–P4; Studies 1–3
-**Updated**: 2026-06-24
+**Updated**: 2026-06-25
 
 ---
 
@@ -38,10 +38,10 @@
 | Code | Meaning | Status |
 |------|---------|--------|
 | **C0** | Historical calibration evidence (retained R000–R007) | DONE |
-| **S1** | Study 1 — Construct validation / ECRF dimensionality (re-analysis) | TODO |
-| **P1** | Pilot IO manipulation (mini Study 2, 5 papers) | TODO |
-| **S2** | Study 2 — Full IO → ECRF experiment | TODO |
-| **S3** | Study 3 — Trust calibration + audit (main contribution) | TODO |
+| **S1** | Study 1 — Construct validation / ECRF dimensionality (re-analysis) | IN PROGRESS (R110) |
+| **P1** | Pilot IO manipulation (mini Study 2, 5 papers) | DONE — R103 all 4 gates PASS |
+| **S2** | Study 2 — Full IO → ECRF experiment | BLOCKED on R120/R121 |
+| **S3** | Study 3 — Trust calibration + audit (main contribution) | BLOCKED on R121 |
 | **R**  | Robustness checks (simplicity, frontier, negative-result boundary) | TODO |
 
 > Note: the historical "M1 10-paper full benchmark" (Gemma, 2026-06-18) is **not** this P1. It lives under C0 as calibration evidence. Do not conflate.
@@ -108,14 +108,16 @@ Pass rule: **≥3/4 gates** → scale to S2. Gate 1 is mandatory.
 | R120 | S2 | 20-paper full pool finalization + pre-annotation | 20 papers | Observability-stratified, pre-agent | MUST | TODO |
 | R121 | S2 | Layer 1 gold chain (full) | 2 annotators × 20 papers | 20 papers | Component-stratified α | MUST | TODO — blocks S3 |
 
-### Phase 4: Full Study 2 (S2)
+### Phase 4: Full Study 2 (S2) — BLOCKED until R120 + R121 complete
+
+> **Do not launch R122–R125 yet.** Full Study 2 remains blocked until the 20-paper pool (R120) and Layer 1 gold chains (R121) are finalized. R103 green-light is necessary but not sufficient — the full pool and human gold annotation are the gating dependencies.
 
 | Run ID | Milestone | Study | Purpose | Split | Metrics | Priority | Status |
 |--------|-----------|-------|---------|-------|---------|----------|--------|
-| R122 | S2 | S2 | Study 2 full — IO₁ | 20 × IO₁ × 2 models (40) | Per-component ECRF | MUST | TODO |
-| R123 | S2 | S2 | Study 2 full — IO₂ | 20 × IO₂ × 2 models (40) | Per-component ECRF | MUST | TODO |
-| R124 | S2 | S2 | Study 2 full — IO₃ | 20 × IO₃ × 2 models (40) | Per-component ECRF | MUST | TODO |
-| R125 | S2 | S2 | Study 2 analysis | 120 runs | Monotonic ECRF, Component×IO mixed-effects (H1, H2) | MUST | TODO |
+| R122 | S2 | S2 | Study 2 full — IO₁ | 20 × IO₁ × 2 models (40) | Per-component ECRF | MUST | BLOCKED (R120/R121) |
+| R123 | S2 | S2 | Study 2 full — IO₂ | 20 × IO₂ × 2 models (40) | Per-component ECRF | MUST | BLOCKED (R120/R121) |
+| R124 | S2 | S2 | Study 2 full — IO₃ | 20 × IO₃ × 2 models (40) | Per-component ECRF | MUST | BLOCKED (R120/R121) |
+| R125 | S2 | S2 | Study 2 analysis | 120 runs | Monotonic ECRF, Component×IO mixed-effects (H1, H2) | MUST | BLOCKED (R120/R121) |
 
 ### Phase 5: Study 3 — main contribution (S3, C1)
 
@@ -158,27 +160,29 @@ If IO₁ → IO₃ monotonicity **fails** at the full-Study-2 level (R153), the 
 
 ## Summary (reconciled counts)
 
-| Priority | Total | Done | TODO | Notes |
-|----------|-------|------|------|-------|
-| MUST | 32 | 8 | 24 | includes Phase-0 pre-run (R095–R099), R130 a/b split, R153 boundary |
-| HIGH | 5 | 0 | 5 | frontier + figures |
-| **Active TODO** | **29** | — | 29 | MUST 24 + HIGH 5 |
+| Priority | Total | Done | TODO / Blocked | Notes |
+|----------|-------|------|----------------|-------|
+| MUST | 28 | 12 | 16 | Phase 0 (6) + Phase 2 (6) DONE; C0 (8) retained separately as calibration evidence |
+| HIGH | 4 | 0 | 4 | frontier (R150–R152) + figures (R160) |
+| **Active TODO** | **20** | — | 20 | MUST 16 + HIGH 4 |
 
-> Breakdown of the 24 MUST-TODO: Phase 0 (R095–R099) = 5 · Phase 1 (R110) = 1 · Phase 2 (R100–R103) = 4 · Phase 3 (R120–R121) = 2 · Phase 4 (R122–R125) = 4 · Phase 5 (R130a/R130b/R131/R132/R133) = 5 · Phase 6 (R140/R141/R153) = 3 · Phase 7 (R161) = 0 counted here → figures HIGH. Net = 24.
+> **Mini Study 2 (P1) COMPLETE — all 4 R103 gates PASS.** G1 IO₁<IO₃ 4/5 papers (mean 0.497<0.713); G2 3 components IO-sensitive; G3 7 result≠component disagreements; G4 42 break candidates / 19 B₁ confirmed. IO→ECRF manipulation validated; green-light for S2 *preparation* (not yet execution — R120/R121 gate the full study).
+>
+> Breakdown of the 16 MUST-TODO: Phase 1 (R110) = 1 · Phase 3 (R120–R121) = 2 · Phase 4 (R122–R125, blocked) = 4 · Phase 5 (R130a/R130b/R131/R132/R133) = 5 · Phase 6 (R140/R141/R153) = 3 · Phase 7 (R161) = 1. Net = 16. (C0's 8 retained runs are not counted in the MUST 28.)
 
 ## Blockers
 
-- **R095–R099** (pre-run validation + pilot gold chain) block R100–R102. **R098 pilot gold chain is required before any ECRF scoring** — without it, R103 has no trusted gold to score against.
-- **R121** (Layer 1 full annotation) blocks S3 (R130b/R133) — human annotation is the critical path, not compute.
-- **R103** is the gate: do not scale a broken IO manipulation.
+- ~~R095–R099 (pre-run validation + pilot gold chain) block R100–R102~~ — **RESOLVED (all DONE)**. R098 pilot gold chain was used to score R100–R103.
+- **R120 (20-paper full pool) + R121 (Layer 1 gold chain)** block Phase 4 (R122–R125) and Phase 5 (R130b/R132/R133). R121 human annotation is the critical path, not compute.
+- ~~R103 is the gate~~ — **PASSED**. IO manipulation is valid; the remaining gate is pool finalization + human gold annotation.
 
-## Next 3 runs to launch (revised)
+## Next 3 runs to launch
 
-1. **R110** — Study 1 re-analysis on existing C0 data (zero compute; unblocks calibration narrative immediately)
-2. **R099 → R098** — finalize 5 pilot papers (`PILOT_PAPERS.md`) + draft pilot gold chain (this turn)
-3. **R095–R097** — scoring codebook + IO package template + isolated-workspace test (prepares R100–R102)
+1. **R110** — Study 1 re-analysis on existing C0/M1 data (zero compute; ECRF dimensionality, component variance, ρ-matrix, disagreement + localization rates). Unblocks S1 construct-validation narrative.
+2. **R120** — 20-paper full pool finalization across SoS / IS-Innovation / Management-Strategy, observability-stratified (Low/Medium/High), with per-paper IO₁/IO₂/IO₃ feasibility + weak-component pre-annotation.
+3. **R121** — Layer 1 gold evidence-chain annotation (Data, Sample, Indicator, Model, Result, Claim) × 20 papers × 2 annotators; component-stratified α. **Critical path for S3.**
 
-> R120 (20-paper full pool) is **deliberately deferred** to Phase 3 — no full-pool pressure before the mini pilot passes.
+> R122–R125 (full Study 2 execution) remain **blocked** until R120 + R121 are complete. Do not launch.
 
 ## Archived (SciSciGPT / SciSciBench legacy)
 
