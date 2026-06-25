@@ -1,0 +1,21 @@
+# Memory Index
+
+- [Error detection pattern](error-detection-pattern.md) — never use substring matching on stderr for error detection
+- [Stratified benchmark bugfix](stratified-benchmark-bugfix.md) — 3-part bug fix for L2/L3 0% success rate (2026-06-03)
+- [Benchmark results 2026-06-04](benchmark-results-20260604.md) — 72-task concurrent benchmark: L1 92%, L2 100%, L3 75% with Qwen3-32B
+- [Benchmark results 2026-06-05 v2](benchmark-results-20260605-v2.md) — 120-task 7-metric per-paper benchmark: L1 98%, L2 100%, L3 68% overall (88%)
+- [Benchmark deep analysis 2026-06-05](benchmark-deep-analysis-20260605.md) — bimodal error distribution, 6-category L3 taxonomy, L3.5 ablation (0/8 proves extraction-synthesis not independent)
+- [Auto-save memory](auto-save-memory.md) — periodically save project memories during long sessions without waiting to be asked
+- [SciSciBench engineering defenses](sciscibench-engineering-defenses.md) — 3 critical defenses: forced JSON output for Task 1, 3-layer contamination defense, dual-track evaluation (2026-06-11)
+- [Benchmark redesign 2026-06-05](benchmark-redesign-20260605.md) — 4-stage paper reproduction chain framework, Phase 1 in progress
+- [Benchmark refactor 2026-06-06](benchmark-refactor-20260606.md) — Phases 1-4 complete, unified package+stages+runner+eval, smoke-tested
+- [First real LLM benchmark run](benchmark-first-real-llm-run-20260606.md) — Stage 2+4 with Qwen3-32B: 24 tasks, 95.8% success, REI-c mean=1.59, 2 bugs fixed
+- [Benchmark results 2026-06-12](benchmark-results-20260612.md) — Full 118-paper SciSciBench run: Task 1 F1=0.435, Task 2 score=0.654 with Qwen3-32B
+- [M1 runner 2026-06-18](m1-runner-20260618.md) — M1 Framework Validation runner built, smoke-tested on 3 pilot papers with Gemma
+- [M1 full benchmark 2026-06-18](m1-full-benchmark-20260618.md) — 10-paper M1 benchmark: 10/10 pass, context window fix for Gemma, maturity L0-L3(m)
+- [L3 scoring protocol revision 2026-06-24](l3-scoring-protocol-revision-20260624.md) — direction calibration matrix, graded claim support, rebalanced weights, rationale for write-up
+- [DeepSeek L3 benchmark 2026-06-24](deepseek-l3-benchmark-20260624.md) — 211 papers with DeepSeek V4 Pro + new scoring: overall=0.298, support_strength 100% weak
+- [LLM backend switching](llm-backend-switching.md) — DeepSeek (Anthropic path) vs Qwen3 (OpenAI path) auto-detection
+- [L3 experiment DeepSeek backend](l3-experiment-deepseek-backend.md) — vLLM server down, switched L3 experiment to DeepSeek-v4-pro; results not comparable to Qwen3-32B baseline
+- [Evidence-chain theory v7.2](evidence-chain-theory-v7.2.md) — UTD paper reframing: IO→ECRF→TCE theory, 4 propositions, 3 studies, mini Study 2 next (2026-06-24)
+- [Git sync policy](git-sync-policy.md) — work only on dev/benchmark-wiki-updates, periodic local commit, no PDFs/secrets/symlinks; GCP key stripped from history via filter-repo (2026-06-24), normal push OK
