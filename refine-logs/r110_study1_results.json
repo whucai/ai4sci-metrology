@@ -1,0 +1,271 @@
+{
+  "run": "R110",
+  "n_papers": 112,
+  "components": [
+    "data_source",
+    "sample",
+    "indicator",
+    "model",
+    "result_table",
+    "claim"
+  ],
+  "degenerate_components": [
+    "claim"
+  ],
+  "non_degenerate_components": [
+    "data_source",
+    "sample",
+    "indicator",
+    "model",
+    "result_table"
+  ],
+  "dimensionality": {
+    "n_papers": 112,
+    "n_components": 6,
+    "eigenvalues": [
+      0.0319,
+      0.0224,
+      0.0062,
+      0.0035,
+      0.0019,
+      0.0003
+    ],
+    "pve": [
+      0.4825,
+      0.3388,
+      0.0931,
+      0.0527,
+      0.028,
+      0.0049
+    ],
+    "cve": [
+      0.4825,
+      0.8212,
+      0.9144,
+      0.967,
+      0.9951,
+      1.0
+    ],
+    "pc1_pct": 0.4824657912190075,
+    "pc2_pct": 0.3387581810233627,
+    "kmo": 0.00043387252755863954,
+    "bartlett_chi2": 296.4503036898179,
+    "bartlett_dof": 15.0,
+    "bartlett_p": 0.0,
+    "unidimensional": false
+  },
+  "component_variance": {
+    "data_source": {
+      "mean": 0.6723,
+      "std": 0.0728,
+      "min": 0.1667,
+      "max": 1.0,
+      "cv": 0.1083
+    },
+    "sample": {
+      "mean": 0.6161,
+      "std": 0.0621,
+      "min": 0.375,
+      "max": 0.75,
+      "cv": 0.1009
+    },
+    "indicator": {
+      "mean": 0.8224,
+      "std": 0.1521,
+      "min": 0.375,
+      "max": 0.9106,
+      "cv": 0.185
+    },
+    "model": {
+      "mean": 0.6138,
+      "std": 0.0461,
+      "min": 0.25,
+      "max": 0.625,
+      "cv": 0.0751
+    },
+    "result_table": {
+      "mean": 0.5893,
+      "std": 0.074,
+      "min": 0.3,
+      "max": 0.8,
+      "cv": 0.1255
+    },
+    "claim": {
+      "mean": 0.0268,
+      "std": 0.1622,
+      "min": 0.0,
+      "max": 1.0,
+      "cv": 6.0548
+    }
+  },
+  "corr_matrix": {
+    "data_source": {
+      "data_source": 1.0,
+      "sample": 0.488,
+      "indicator": 0.248,
+      "model": 0.159,
+      "result_table": 0.396,
+      "claim": 0.75
+    },
+    "sample": {
+      "data_source": 0.488,
+      "sample": 1.0,
+      "indicator": 0.079,
+      "model": 0.26,
+      "result_table": 0.273,
+      "claim": 0.359
+    },
+    "indicator": {
+      "data_source": 0.248,
+      "sample": 0.079,
+      "indicator": 1.0,
+      "model": 0.219,
+      "result_table": 0.16,
+      "claim": 0.092
+    },
+    "model": {
+      "data_source": 0.159,
+      "sample": 0.26,
+      "indicator": 0.219,
+      "model": 1.0,
+      "result_table": 0.097,
+      "claim": -0.411
+    },
+    "result_table": {
+      "data_source": 0.396,
+      "sample": 0.273,
+      "indicator": 0.16,
+      "model": 0.097,
+      "result_table": 1.0,
+      "claim": 0.174
+    },
+    "claim": {
+      "data_source": 0.75,
+      "sample": 0.359,
+      "indicator": 0.092,
+      "model": -0.411,
+      "result_table": 0.174,
+      "claim": 1.0
+    }
+  },
+  "disagreement": {
+    "n": 112,
+    "result_trusted": 106,
+    "result_trusted_and_broken": 103,
+    "disagreement_rate": 0.9196428571428571,
+    "result_trusted_rate": 0.9464285714285714,
+    "conditional_inflation": 0.9716981132075472,
+    "reverse_disagreement": 0,
+    "thresholds": {
+      "high": 0.6,
+      "low": 0.5
+    },
+    "broken_cols": [
+      "data_source",
+      "sample",
+      "indicator",
+      "model",
+      "claim"
+    ]
+  },
+  "localization": {
+    "n_total": 112,
+    "n_failed": 109,
+    "n_localized": 109,
+    "localization_rate": 1.0,
+    "failure_rate": 0.9732142857142857,
+    "weakest_component_distribution": {
+      "Data": 0,
+      "Sample": 0,
+      "Indicator": 0,
+      "Model": 0,
+      "Result": 0,
+      "Claim": 109
+    },
+    "threshold": 0.5,
+    "gap": 0.15,
+    "cols": [
+      "data_source",
+      "sample",
+      "indicator",
+      "model",
+      "result_table",
+      "claim"
+    ]
+  },
+  "robustness": {
+    "degenerate": [
+      "claim"
+    ],
+    "non_degenerate": [
+      "data_source",
+      "sample",
+      "indicator",
+      "model",
+      "result_table"
+    ],
+    "pc1_pct": 0.6014930589409769,
+    "max_rho_full": 0.7496570134011291,
+    "max_rho_nd": 0.4880832314218307,
+    "disagreement_nd": 0.10714285714285714,
+    "conditional_inflation_nd": 0.11320754716981132,
+    "localization_nd": 0.8333333333333334,
+    "weakest_nd": {
+      "Data": 0,
+      "Sample": 3,
+      "Indicator": 9,
+      "Model": 0,
+      "Result": 3
+    }
+  },
+  "c0_anchor": {
+    "wu2019_disruption_C0r001": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.0,
+      "result_table": 0.0,
+      "claim": 0.0
+    },
+    "petersen2024_C0r002_STRICT": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "result_table": 1.0,
+      "claim": 1.0
+    },
+    "arts2021_C0r003_diag": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.9,
+      "result_table": 0.7,
+      "claim": 0.9
+    },
+    "park2023_C0r004_STRICT": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "result_table": 1.0,
+      "claim": 1.0
+    },
+    "zhao2025_C0r005_METHOD": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.98,
+      "result_table": NaN,
+      "claim": 0.98
+    },
+    "bentley2023_C0r007_STRICT": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "result_table": 1.0,
+      "claim": 1.0
+    }
+  }
+}
