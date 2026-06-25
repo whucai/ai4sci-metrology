@@ -1,0 +1,2309 @@
+{
+  "version": "v1-draft",
+  "date": "2026-06-25",
+  "frame": "v7.2 (IO → ECRF → TCE)",
+  "n_papers_stable": 19,
+  "n_slots_held": 1,
+  "annotation_status": "draft_primary — awaiting 2nd annotator + adjudication",
+  "fidelity_scale": {
+    "1.0": "FULL",
+    "0.5": "PARTIAL",
+    "0.0": "NONE"
+  },
+  "note": "gold_fidelity = gold-side CEILING (best reachable given observability), NOT agent achieved score. Fields marked 'pending' await human-annotator confirmation (R098 adjudication style). r121_gold_v1 is NOT FROZEN: slot #20 (Mgmt replacement) still pending; slot #9 filled with verified liu2018_hotstreaks.",
+  "stable_papers": [
+    {
+      "paper_id": "petersen2024",
+      "title": "The disruption index is biased by citation inflation",
+      "domain": "SoS",
+      "venue": "arXiv",
+      "year": 2023,
+      "task_type": "STRICT",
+      "observability_stratum": "Low",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "Web of Science + Microsoft Academic Graph",
+        "data_description": "Citation network for disruption-index computation",
+        "access": "public-substitute",
+        "provenance": "SciSciNet (local, N=469,855) substitutes WoS",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "WoS+MAG named; SciSciNet public substitute used in R002"
+      },
+      "sample": {
+        "N": 102550,
+        "time_window": "2011-2015 (subset)",
+        "unit_of_analysis": "paper",
+        "filter_rules": [
+          "ref_count 10-200",
+          "author_count 1-25",
+          "cit_5y 1-1000"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "N and window explicit; R002 reproduced exactly"
+      },
+      "indicator": {
+        "formula": "CDp = (Ni - Nj)/(Ni + Nj + Nk); |CDp,5| with citation-inflation decomposition",
+        "parameters": [
+          "5-year citation window",
+          "ln(rp), ln(kp), ln(cp5) transforms"
+        ],
+        "computation_steps": [
+          "build citation network",
+          "compute CDp per paper",
+          "regress on inflation terms"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "CDp formula explicit in paper"
+      },
+      "model": {
+        "spec_elements": [
+          "OLS",
+          "year FE",
+          "ln(rp)",
+          "ln(kp)",
+          "ln(cp5)"
+        ],
+        "estimator": "OLS",
+        "coefficients": {
+          "ln_rp": -0.002322,
+          "p": "<0.001"
+        },
+        "fixed_effects": [
+          "year"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "OLS spec explicit; R002 reproduced"
+      },
+      "result_table": {
+        "target_tables": [
+          "Table: regression coefs"
+        ],
+        "target_values": [
+          {
+            "label": "ln_rp_coef",
+            "value": -0.002322,
+            "tolerance": "exact"
+          },
+          {
+            "label": "sample_N",
+            "value": 102550,
+            "tolerance": "exact"
+          },
+          {
+            "label": "R2",
+            "value": 0.120403,
+            "tolerance": "exact"
+          }
+        ],
+        "expected_direction": "negative",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "R002 achieved D3=8/8 exact numerical identity"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "CD systematically declines over time due to citation inflation, not true decline in innovation"
+        ],
+        "claim_scope": "general",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Claim directly supported by negative coef"
+      },
+      "overall_gold_ecrf": 1.0,
+      "expected_breaks": {
+        "B1": {
+          "likely": false,
+          "component": "data_source",
+          "note": "SciSciNet substitute is sanctioned"
+        },
+        "B2": {
+          "likely": true,
+          "component": "result_table",
+          "note": "hard-code reported coefs"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—",
+          "note": "data available"
+        },
+        "B4": {
+          "likely": false,
+          "component": "claim",
+          "note": "claim-result distance small"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes",
+          "ceiling_components": [
+            "indicator",
+            "model",
+            "claim"
+          ]
+        },
+        "IO2": {
+          "feasible": "yes",
+          "ceiling_components": [
+            "all"
+          ]
+        },
+        "IO3": {
+          "feasible": "yes",
+          "ceiling_components": [
+            "all"
+          ]
+        },
+        "io_collapse": "none"
+      },
+      "notes": "Calibration anchor (Low floor). R002 D3=8/8. Carry-over from R098/C0."
+    },
+    {
+      "paper_id": "wu2019_teams",
+      "title": "Teams vs. disruption (Wu et al. 2019)",
+      "domain": "SoS",
+      "venue": "Nature",
+      "year": 2019,
+      "task_type": "STRICT",
+      "observability_stratum": "Low",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "Web of Science + Microsoft Academic Graph + USPTO + GitHub",
+        "data_description": "Citation + authorship network",
+        "access": "public-substitute",
+        "provenance": "SciSciNet local",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "SciSciNet/MAG public substitute"
+      },
+      "sample": {
+        "N": 30000000,
+        "time_window": "1954-2000s",
+        "unit_of_analysis": "team-paper",
+        "filter_rules": [
+          "complete citation data",
+          "team-size deciles"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "N explicit in paper"
+      },
+      "indicator": {
+        "formula": "CD = (Ni - Nj)/(Ni + Nj + Nk)",
+        "parameters": [
+          "team-size deciles",
+          "D-index by decile"
+        ],
+        "computation_steps": [
+          "build citation network",
+          "compute CD per paper",
+          "group by team size"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Disruption index CD explicit"
+      },
+      "model": {
+        "spec_elements": [
+          "OLS",
+          "year FE",
+          "team_size_deciles",
+          "mean_D_by_group"
+        ],
+        "estimator": "OLS",
+        "coefficients": {
+          "team_size_coef": -0.03,
+          "direction": "NEGATIVE (R001 reproduced coef=-0.0093)"
+        },
+        "fixed_effects": [
+          "year"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Spec describable; direction is the stress point (R001 direction NEGATIVE)"
+      },
+      "result_table": {
+        "target_tables": [
+          "Table: Mean D-index by team-size decile"
+        ],
+        "target_values": [
+          {
+            "label": "small_teams_D",
+            "value": 0.04,
+            "tolerance": "approx"
+          },
+          {
+            "label": "large_teams_D",
+            "value": -0.02,
+            "tolerance": "approx"
+          }
+        ],
+        "expected_direction": "negative",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Numerical targets exist but direction-negative is the known failure mode"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Large teams develop existing science",
+          "Small teams disrupt science"
+        ],
+        "claim_scope": "general",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.0,
+        "fidelity_rationale": "Claim-direction is the known component-localized FAILURE (R001)"
+      },
+      "overall_gold_ecrf": 0.667,
+      "expected_breaks": {
+        "B1": {
+          "likely": false,
+          "component": "—",
+          "note": "data public"
+        },
+        "B2": {
+          "likely": false,
+          "component": "—",
+          "note": "—"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—",
+          "note": "—"
+        },
+        "B4": {
+          "likely": true,
+          "component": "claim",
+          "note": "agent may assert disruption direction incorrectly"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes",
+          "ceiling_components": [
+            "indicator",
+            "model"
+          ]
+        },
+        "IO2": {
+          "feasible": "yes",
+          "ceiling_components": [
+            "all"
+          ]
+        },
+        "IO3": {
+          "feasible": "yes",
+          "ceiling_components": [
+            "all"
+          ]
+        },
+        "io_collapse": "none"
+      },
+      "notes": "Known component-localized failure (Model/Claim=0, Data/Sample/Indicator=1). R001 coef=-0.0093 (direction NEGATIVE). Motivates v7.2."
+    },
+    {
+      "paper_id": "park2023_disruptive",
+      "title": "Papers and patents are becoming less disruptive over time",
+      "domain": "SoS",
+      "venue": "Nature",
+      "year": 2023,
+      "task_type": "STRICT",
+      "observability_stratum": "Low",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "Microsoft Academic Graph + USPTO + SciSciNet",
+        "data_description": "Citation network 1945-2010",
+        "access": "public",
+        "provenance": "SciSciNet local",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "MAG/SciSciNet public"
+      },
+      "sample": {
+        "N": 469855,
+        "time_window": "1945-2010",
+        "unit_of_analysis": "paper",
+        "filter_rules": [
+          "require CD score",
+          "drop_na"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "N explicit; R004 reproduced"
+      },
+      "indicator": {
+        "formula": "CD5 = (Ni - Nj)/(Ni + Nj + Nk), 5-year window",
+        "parameters": [
+          "5-year citation window"
+        ],
+        "computation_steps": [
+          "compute CD5 per paper",
+          "groupby year mean"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "CD5 index explicit"
+      },
+      "model": {
+        "spec_elements": [
+          "descriptive",
+          "groupby year",
+          "mean CD5"
+        ],
+        "estimator": "descriptive",
+        "coefficients": {
+          "cd_1945_mean": 0.03598,
+          "cd_2010_mean": 0.00119
+        },
+        "fixed_effects": [],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Descriptive aggregation; R004 reproduced"
+      },
+      "result_table": {
+        "target_tables": [
+          "Fig: CD5 mean by year"
+        ],
+        "target_values": [
+          {
+            "label": "cd_1945_mean",
+            "value": 0.03597944,
+            "tolerance": "exact"
+          },
+          {
+            "label": "cd_2010_mean",
+            "value": 0.00119062,
+            "tolerance": "exact"
+          },
+          {
+            "label": "overall_mean",
+            "value": 0.005724,
+            "tolerance": "exact"
+          }
+        ],
+        "expected_direction": "negative",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "R004 achieved D3=6/6 exact"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Papers and patents are becoming less disruptive over time"
+        ],
+        "claim_scope": "general",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Claim supported by decline trend"
+      },
+      "overall_gold_ecrf": 1.0,
+      "expected_breaks": {
+        "B1": {
+          "likely": false,
+          "component": "—"
+        },
+        "B2": {
+          "likely": true,
+          "component": "result_table",
+          "note": "hard-code means"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes"
+        },
+        "IO2": {
+          "feasible": "yes"
+        },
+        "IO3": {
+          "feasible": "yes"
+        },
+        "io_collapse": "none"
+      },
+      "notes": "R004 D3=6/6. STRICT calibration."
+    },
+    {
+      "paper_id": "bentley2023_disruption",
+      "title": "Is disruption decreasing, or is it accelerating?",
+      "domain": "SoS",
+      "venue": "Advances in Complex Systems",
+      "year": 2023,
+      "task_type": "STRICT",
+      "observability_stratum": "Low",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "SciSciNet",
+        "data_description": "Citation network 1945-2010",
+        "access": "public",
+        "provenance": "SciSciNet local",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "SciSciNet public (same as Park2023)"
+      },
+      "sample": {
+        "N": 469855,
+        "time_window": "1945-2010",
+        "unit_of_analysis": "paper",
+        "filter_rules": [
+          "require CD score",
+          "require citations"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "N explicit; R007 reproduced"
+      },
+      "indicator": {
+        "formula": "mCD5(t) = Σ(cit_i * CD5_i) / Σ(cit_i)",
+        "parameters": [
+          "citation weighting"
+        ],
+        "computation_steps": [
+          "compute CD5",
+          "weight by citations",
+          "groupby year"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Citation-weighted mCD5 explicit"
+      },
+      "model": {
+        "spec_elements": [
+          "descriptive",
+          "citation-weighted",
+          "groupby year"
+        ],
+        "estimator": "descriptive",
+        "coefficients": {
+          "weighted_cd_1945": 0.07699,
+          "weighted_cd_2010": 0.00076
+        },
+        "fixed_effects": [],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Weighted descriptive; R007 reproduced"
+      },
+      "result_table": {
+        "target_tables": [
+          "Fig: weighted CD5 by year"
+        ],
+        "target_values": [
+          {
+            "label": "weighted_cd_1945_mean",
+            "value": 0.07698916,
+            "tolerance": "exact"
+          },
+          {
+            "label": "weighted_cd_2010_mean",
+            "value": 0.00076,
+            "tolerance": "approx"
+          }
+        ],
+        "expected_direction": "mixed",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "R007 achieved D3=9/9 exact"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "CD5 decline (Park2023) is partly an artifact of exponential growth; weighted CD flat/accelerating since 1970"
+        ],
+        "claim_scope": "general",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Weighted CD close to zero since ~1970, modest increase since 2000"
+      },
+      "overall_gold_ecrf": 1.0,
+      "expected_breaks": {
+        "B1": {
+          "likely": false,
+          "component": "—"
+        },
+        "B2": {
+          "likely": true,
+          "component": "result_table"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes"
+        },
+        "IO2": {
+          "feasible": "yes"
+        },
+        "IO3": {
+          "feasible": "yes"
+        },
+        "io_collapse": "none"
+      },
+      "notes": "R007 D3=9/9. STRICT calibration."
+    },
+    {
+      "paper_id": "arts2021",
+      "title": "Natural Language Processing to Identify the Structure of Innovation in Patent Claims",
+      "domain": "IS_Innovation",
+      "venue": "Research Policy",
+      "year": 2021,
+      "task_type": "METHOD",
+      "observability_stratum": "Medium",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "USPTO patent claims + PatentsView",
+        "data_description": "Patent claims for NLP-indicator extraction",
+        "access": "public",
+        "provenance": "USPTO",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "USPTO public"
+      },
+      "sample": {
+        "N": "unknown",
+        "time_window": "USPTO coverage",
+        "unit_of_analysis": "patent claim",
+        "filter_rules": [
+          "P1-P10 preprocessing steps"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "10-step preprocessing P1-P10 explicit"
+      },
+      "indicator": {
+        "formula": "I1-I5 novelty (5 formulas correct); I6-I9 reuse (bug); I5/I10 cosine-similarity",
+        "parameters": [
+          "n-gram window",
+          "cosine binary TF"
+        ],
+        "computation_steps": [
+          "tokenize",
+          "n-gram extract",
+          "cosine sim"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "10 indicators; known aggregation-formula bug at lines 233-236 (|set|+Σui vs |set|*(1+Σui))"
+      },
+      "model": {
+        "spec_elements": [
+          "descriptive aggregation"
+        ],
+        "estimator": "none",
+        "coefficients": {},
+        "fixed_effects": [],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "METHOD — descriptive aggregation, no regression"
+      },
+      "result_table": {
+        "target_tables": [
+          "Tables: indicator values"
+        ],
+        "target_values": [
+          {
+            "label": "cosine_match",
+            "value": "1-5%",
+            "tolerance": "approx"
+          }
+        ],
+        "expected_direction": "none",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Cosine indicators match within 1-5% (R003); reuse indicators have known bug"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "NLP indicators identify structure of innovation in patent claims; novelty vs reuse dimensions"
+        ],
+        "claim_scope": "descriptive",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance moderate (aggregation bug under-supports reuse claims)"
+      },
+      "overall_gold_ecrf": 0.75,
+      "expected_breaks": {
+        "B1": {
+          "likely": true,
+          "component": "indicator",
+          "note": "cosine-sim proxy"
+        },
+        "B2": {
+          "likely": true,
+          "component": "indicator",
+          "note": "formula hard-code"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes"
+        },
+        "IO2": {
+          "feasible": "yes"
+        },
+        "IO3": {
+          "feasible": "yes"
+        },
+        "io_collapse": "none"
+      },
+      "notes": "R003 component diagnosis; known localized break at Indicator. Carry-over from R098."
+    },
+    {
+      "paper_id": "funk2017",
+      "title": "A Dynamic Network Measure of Technological Change",
+      "domain": "IS_Innovation",
+      "venue": "PLoS ONE",
+      "year": 2017,
+      "task_type": "STRICT",
+      "observability_stratum": "High",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "NBER US Patent Citations + Patent Network Dataverse (Li et al.)",
+        "data_description": "Patent citation network",
+        "access": "public",
+        "provenance": "Dataverse",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "NBER + Dataverse public"
+      },
+      "sample": {
+        "N": "pending",
+        "time_window": "5-year citation window (CD5/mCD5)",
+        "unit_of_analysis": "patent",
+        "filter_rules": [
+          "14 NBER tech categories",
+          "university/federal/commercial subsets"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Exact N pending adjudicator (Table 1)"
+      },
+      "indicator": {
+        "formula": "CDt Eq.(1), range [-1,1], mean 0.07 SD 0.23; mCDt impact-weighted, mean 0.31 SD 1.75",
+        "parameters": [
+          "-2 correction in numerator (line 455)",
+          "impact weighting"
+        ],
+        "computation_steps": [
+          "build graph G(V1,V2,V3,E)",
+          "compute CDt",
+          "weight to mCDt"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "CDt/mCDt explicit; cdindex.info code public"
+      },
+      "model": {
+        "spec_elements": [
+          "OLS",
+          "NegBinom",
+          "commercial engagement",
+          "federal support"
+        ],
+        "estimator": "negative-binomial",
+        "coefficients": {
+          "CD5_impact_r": 0.03,
+          "p": "<0.001"
+        },
+        "fixed_effects": [],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "OLS + Negative Binomial"
+      },
+      "result_table": {
+        "target_tables": [
+          "Table 1/3"
+        ],
+        "target_values": [
+          {
+            "label": "CD5_impact_r",
+            "value": 0.03,
+            "tolerance": "approx"
+          }
+        ],
+        "expected_direction": "positive",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "R103 IO3=0.825; numerical targets in Table 1/3"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "CDt/mCDt measure technological change direction+magnitude; engagement & federal support positively related to disruption"
+        ],
+        "claim_scope": "general",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance small-moderate"
+      },
+      "overall_gold_ecrf": 0.833,
+      "expected_breaks": {
+        "B1": {
+          "likely": true,
+          "component": "sample",
+          "note": "Dataverse subset substitution"
+        },
+        "B2": {
+          "likely": true,
+          "component": "indicator",
+          "note": "hard-code reported index values"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes"
+        },
+        "IO2": {
+          "feasible": "yes"
+        },
+        "IO3": {
+          "feasible": "yes"
+        },
+        "io_collapse": "none"
+      },
+      "notes": "Cleanest IO3 anchor. R103: IO1 0.500 → IO3 0.825. Carry-over from R098."
+    },
+    {
+      "paper_id": "maddi2024",
+      "title": "On the Peer Review Reports: Does Size Matter?",
+      "domain": "Management_Strategy",
+      "venue": "Scientometrics (Springer)",
+      "year": 2024,
+      "task_type": "METHOD",
+      "observability_stratum": "Low",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "Publons (reviewer-report length) + Web of Science (citations)",
+        "data_description": "Matched Publons×WoS dataset",
+        "access": "private",
+        "provenance": "author data drop (Publons sunset 2022-23)",
+        "gold_fidelity": 0.0,
+        "fidelity_rationale": "Publons private/defunct; bespoke WoS-matched drop not public"
+      },
+      "sample": {
+        "N": 57482,
+        "time_window": "2009-2020 (adjudicator confirm)",
+        "unit_of_analysis": "publication",
+        "filter_rules": [
+          "IQR outlier removal on report length"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "N explicit but not reconstructable"
+      },
+      "indicator": {
+        "formula": "IV = reviewer-report word count; DV = citations received",
+        "parameters": [
+          "IQR outlier control"
+        ],
+        "computation_steps": [
+          "count words",
+          "IQR filter",
+          "match to WoS citations"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Report-length measure explicit"
+      },
+      "model": {
+        "spec_elements": [
+          "robust regression",
+          "OLS-family",
+          "confound controls"
+        ],
+        "estimator": "robust-regression",
+        "coefficients": {
+          "threshold": 947,
+          "direction": "positive"
+        },
+        "fixed_effects": [],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Robust regression spec describable"
+      },
+      "result_table": {
+        "target_tables": [
+          "regression tables"
+        ],
+        "target_values": [
+          {
+            "label": "threshold_words",
+            "value": 947,
+            "tolerance": "approx"
+          }
+        ],
+        "expected_direction": "positive",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Threshold (947 words) explicit; exact coefs pending"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Longer reviewer reports → more citations, with a 947-word threshold"
+        ],
+        "claim_scope": "sample-specific",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance small"
+      },
+      "overall_gold_ecrf": 0.583,
+      "expected_breaks": {
+        "B1": {
+          "likely": true,
+          "component": "data_source",
+          "note": "WoS-only / open-review proxy for Publons"
+        },
+        "B2": {
+          "likely": true,
+          "component": "result_table",
+          "note": "coefficient hard-code"
+        },
+        "B3": {
+          "likely": true,
+          "component": "data_source",
+          "note": "synthesis if no substitute corpus"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes",
+          "ceiling_components": [
+            "indicator",
+            "model",
+            "claim"
+          ]
+        },
+        "IO2": {
+          "feasible": "partial",
+          "ceiling_components": [
+            "indicator",
+            "model"
+          ],
+          "rationale": "sample not reconstructable"
+        },
+        "IO3": {
+          "feasible": "partial",
+          "ceiling_components": [
+            "indicator",
+            "model"
+          ],
+          "rationale": "collapses to IO2 — Publons defunct"
+        },
+        "io_collapse": "IO2_IO3"
+      },
+      "notes": "R103 confirmed flat 0.500/0.500/0.500 — negative-result boundary (R153 candidate). STRICT impossible; METHOD/DATA-SUB only."
+    },
+    {
+      "paper_id": "bikard2013",
+      "title": "Exploring Tradeoffs in the Organization of Scientific Work",
+      "domain": "Management_Strategy",
+      "venue": "Management Science",
+      "year": 2013,
+      "task_type": "DATA-SUB",
+      "observability_stratum": "High",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "Academic publications of 661 MIT faculty scientists",
+        "data_description": "30-year MIT faculty publication/citation records",
+        "access": "private",
+        "provenance": "MIT-internal",
+        "gold_fidelity": 0.0,
+        "fidelity_rationale": "MIT 661-faculty dataset private, no public substitute at faculty level"
+      },
+      "sample": {
+        "N": 661,
+        "time_window": "1976-2006",
+        "unit_of_analysis": "scientist-year",
+        "filter_rules": [
+          "MIT-internal disambiguation"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "N explicit but not reconstructable"
+      },
+      "indicator": {
+        "formula": "Co-authorship collaboration; credit-allocation fraction α; citation probability quartile regression",
+        "parameters": [
+          "credit fraction α"
+        ],
+        "computation_steps": [
+          "compute collaboration",
+          "compute credit",
+          "quartile regression"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Collaboration + credit measures explicit"
+      },
+      "model": {
+        "spec_elements": [
+          "individual FE",
+          "year FE",
+          "quartile regression"
+        ],
+        "estimator": "OLS-FE",
+        "coefficients": {
+          "collab_credit": "positive",
+          "coauthors_threshold": 4
+        },
+        "fixed_effects": [
+          "individual",
+          "year"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Individual + year FE regression explicit"
+      },
+      "result_table": {
+        "target_tables": [
+          "regression tables"
+        ],
+        "target_values": [
+          {
+            "label": "collab_credit_dir",
+            "value": "positive",
+            "tolerance": "direction"
+          },
+          {
+            "label": "coauthor_threshold",
+            "value": 4,
+            "tolerance": "approx"
+          }
+        ],
+        "expected_direction": "positive",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Directional results explicit; exact coefs pending"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Tradeoff between collaboration and reward at individual faculty level; credit not simply divided among authors"
+        ],
+        "claim_scope": "general",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance moderate — cross-institution generalization from single MIT sample"
+      },
+      "overall_gold_ecrf": 0.583,
+      "expected_breaks": {
+        "B1": {
+          "likely": true,
+          "component": "sample",
+          "note": "SciSciNet/institute proxy for MIT faculty — highest risk"
+        },
+        "B2": {
+          "likely": false,
+          "component": "—"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": true,
+          "component": "claim",
+          "note": "cross-institution claim stretch from single-institution data"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes",
+          "ceiling_components": [
+            "indicator",
+            "model",
+            "claim"
+          ]
+        },
+        "IO2": {
+          "feasible": "partial",
+          "ceiling_components": [
+            "indicator",
+            "model"
+          ],
+          "rationale": "sample not reconstructable"
+        },
+        "IO3": {
+          "feasible": "partial",
+          "ceiling_components": [
+            "indicator",
+            "model"
+          ],
+          "rationale": "no original code/data → IO3 collapses to IO2"
+        },
+        "io_collapse": "IO2_IO3"
+      },
+      "notes": "Highest break-probability paper. R103: IO1 0.500 → IO3 0.975 (large slope despite data absence — agent reconstructs with substitutes). Boundary case by design."
+    },
+    {
+      "paper_id": "ke2015_sleeping_beauties",
+      "title": "Defining and identifying Sleeping Beauties in science",
+      "domain": "SoS",
+      "venue": "PNAS",
+      "year": 2015,
+      "task_type": "METHOD",
+      "observability_stratum": "Medium",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "Web of Science + APS",
+        "data_description": "22M-paper citation corpus",
+        "access": "private",
+        "provenance": "Clarivate/APS licensed",
+        "gold_fidelity": 0.0,
+        "fidelity_rationale": "WoS+APS licensed, not public"
+      },
+      "sample": {
+        "N": 22000000,
+        "time_window": "1900-2013",
+        "unit_of_analysis": "paper",
+        "filter_rules": [
+          "citation-network construction"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Corpus described; N=22M papers"
+      },
+      "indicator": {
+        "formula": "Beckendorf Bcriterion ( Beautycriterion); citation-delay + sudden-awakening metrics",
+        "parameters": [
+          "awakening threshold"
+        ],
+        "computation_steps": [
+          "build citation network",
+          "detect delayed citation burst"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Sleeping-beauty Bcriterion parameterization; substitute SciSciNet needed"
+      },
+      "model": {
+        "spec_elements": [
+          "descriptive",
+          "top-100 ranking"
+        ],
+        "estimator": "descriptive",
+        "coefficients": {},
+        "fixed_effects": [],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "METHOD — descriptive + top-100 SB identification"
+      },
+      "result_table": {
+        "target_tables": [
+          "Top-100 Sleeping Beauties list"
+        ],
+        "target_values": [
+          {
+            "label": "top100_SB",
+            "value": "list",
+            "tolerance": "set-membership"
+          }
+        ],
+        "expected_direction": "none",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Top-100 SB lists at qke.github.io (result tables, not raw data)"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Sleeping Beauties (delayed-impact papers) are a real citation-dynamics phenomenon, identifiable via Bcriterion"
+        ],
+        "claim_scope": "descriptive",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance moderate"
+      },
+      "overall_gold_ecrf": 0.5,
+      "expected_breaks": {
+        "B1": {
+          "likely": true,
+          "component": "data_source",
+          "note": "SciSciNet/MAG substitute for WoS+APS"
+        },
+        "B2": {
+          "likely": false,
+          "component": "—"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes",
+          "ceiling_components": [
+            "indicator",
+            "claim"
+          ]
+        },
+        "IO2": {
+          "feasible": "partial",
+          "ceiling_components": [
+            "indicator",
+            "model"
+          ],
+          "rationale": "licensed data inaccessible"
+        },
+        "IO3": {
+          "feasible": "partial",
+          "ceiling_components": [
+            "indicator",
+            "model"
+          ],
+          "rationale": "substitute SciSciNet required → boundary"
+        },
+        "io_collapse": "IO2_IO3 (data-licensed)"
+      },
+      "notes": "Identity corrected from ke2023/Scientometrics. IO3 boundary (licensed data). Verification appendix."
+    },
+    {
+      "paper_id": "sun2023_ranking_mobility",
+      "title": "Ranking mobility and impact inequality in early academic careers",
+      "domain": "SoS",
+      "venue": "JASIST",
+      "year": 2023,
+      "task_type": "DATA-SUB",
+      "observability_stratum": "Medium",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "Public career-history dataset (MAG-derived)",
+        "data_description": "Author career trajectories",
+        "access": "public",
+        "provenance": "MAG/OpenAlex",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Public career-history data"
+      },
+      "sample": {
+        "N": "pending",
+        "time_window": "early-career window",
+        "unit_of_analysis": "author",
+        "filter_rules": [
+          "career reconstruction",
+          "ranking bins"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Career reconstruction describable"
+      },
+      "indicator": {
+        "formula": "Ranking mobility (transition rates between impact quantiles); inequality measures",
+        "parameters": [
+          "quantile bins"
+        ],
+        "computation_steps": [
+          "reconstruct careers",
+          "compute rankings",
+          "transition rates"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Ranking-mobility + impact-inequality metrics; exact params pending"
+      },
+      "model": {
+        "spec_elements": [
+          "descriptive",
+          "mobility indices"
+        ],
+        "estimator": "descriptive",
+        "coefficients": {},
+        "fixed_effects": [],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Spec describable; exact estimator pending"
+      },
+      "result_table": {
+        "target_tables": [
+          "Tables: mobility indices"
+        ],
+        "target_values": [
+          {
+            "label": "mobility_index",
+            "value": "pending",
+            "tolerance": "pending"
+          }
+        ],
+        "expected_direction": "mixed",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Mobility/inequality values pending"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Ranking mobility and impact inequality characterize early-career dynamics"
+        ],
+        "claim_scope": "descriptive",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance moderate"
+      },
+      "overall_gold_ecrf": 0.667,
+      "expected_breaks": {
+        "B1": {
+          "likely": true,
+          "component": "sample",
+          "note": "career reconstruction substitute"
+        },
+        "B2": {
+          "likely": false,
+          "component": "—"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": true,
+          "component": "claim",
+          "note": "generalization stretch"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes"
+        },
+        "IO2": {
+          "feasible": "yes"
+        },
+        "IO3": {
+          "feasible": "partial",
+          "rationale": "no original code; agent writes own"
+        },
+        "io_collapse": "none"
+      },
+      "notes": "DATA-SUB pathway; tests Sample-component. Numeric details pending annotator."
+    },
+    {
+      "paper_id": "deng2023_enhancing_disruption",
+      "title": "Enhancing the robustness of the disruption metric against noise",
+      "domain": "SoS",
+      "venue": "Scientometrics",
+      "year": 2023,
+      "task_type": "METHOD",
+      "observability_stratum": "Medium",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "Citation network (WoS/Scopus-class, licensed)",
+        "data_description": "Citation network for CD5 robustness testing",
+        "access": "private-substitute",
+        "provenance": "SciSciNet substitute (r008 pathway)",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Original citation network licensed; SciSciNet substitute"
+      },
+      "sample": {
+        "N": 469855,
+        "time_window": "1945-2010",
+        "unit_of_analysis": "paper",
+        "filter_rules": [
+          "require CD5"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "SciSciNet substitute usable"
+      },
+      "indicator": {
+        "formula": "CD5 recompute after edge-removal to hot-spot references; robustness delta",
+        "parameters": [
+          "hot-spot ref threshold"
+        ],
+        "computation_steps": [
+          "compute CD5",
+          "remove hot-spot edges",
+          "recompute CD5 delta"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Robustness-variant CD5 formulas; edge-removal hot-spot refs"
+      },
+      "model": {
+        "spec_elements": [
+          "descriptive",
+          "edge-removal ablation"
+        ],
+        "estimator": "descriptive",
+        "coefficients": {},
+        "fixed_effects": [],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "METHOD — robustness comparison"
+      },
+      "result_table": {
+        "target_tables": [
+          "Tables: CD5 robustness deltas"
+        ],
+        "target_values": [
+          {
+            "label": "robustness_delta",
+            "value": "pending",
+            "tolerance": "pending"
+          }
+        ],
+        "expected_direction": "mixed",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Robustness deltas pending"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Disruption metric can be made robust against citation noise via edge-removal"
+        ],
+        "claim_scope": "descriptive",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance moderate"
+      },
+      "overall_gold_ecrf": 0.667,
+      "expected_breaks": {
+        "B1": {
+          "likely": true,
+          "component": "data_source",
+          "note": "SciSciNet substitute"
+        },
+        "B2": {
+          "likely": false,
+          "component": "—"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes"
+        },
+        "IO2": {
+          "feasible": "yes"
+        },
+        "IO3": {
+          "feasible": "partial",
+          "rationale": "agent-written code on SciSciNet substitute; boundary"
+        },
+        "io_collapse": "none"
+      },
+      "notes": "IO3 demoted to boundary (data not actually public). Complements petersen2024 at Medium."
+    },
+    {
+      "paper_id": "schaper2025_frontier",
+      "title": "Not like the others: Frontier scientists for inventive performance",
+      "domain": "IS_Innovation",
+      "venue": "Research Policy",
+      "year": 2025,
+      "task_type": "DATA-SUB",
+      "observability_stratum": "Medium",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "PubMed + US biomedical patents (USPTO) + KU Leuven/ECOOM disambiguation + BvD Orbis",
+        "data_description": "Author-inventor linked career data",
+        "access": "partial",
+        "provenance": "PubMed/USPTO public; linkage private",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Raw feeds public (PubMed+USPTO); KU Leuven author-inventor linkage private"
+      },
+      "sample": {
+        "N": "pending",
+        "time_window": "biomedical careers",
+        "unit_of_analysis": "scientist",
+        "filter_rules": [
+          "author-inventor disambiguation"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Sample describable; linkage unreconstructable"
+      },
+      "indicator": {
+        "formula": "Inventive-performance indicator distinguishing frontier scientists",
+        "parameters": [
+          "frontier threshold"
+        ],
+        "computation_steps": [
+          "link authors to inventors",
+          "compute performance metric"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Frontier-scientist identification metrics; exact formula pending"
+      },
+      "model": {
+        "spec_elements": [
+          "regression",
+          "frontier-scientist IV"
+        ],
+        "estimator": "OLS",
+        "coefficients": {},
+        "fixed_effects": [],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Spec describable; pending"
+      },
+      "result_table": {
+        "target_tables": [
+          "Tables: frontier-scientist effects"
+        ],
+        "target_values": [
+          {
+            "label": "frontier_effect",
+            "value": "pending",
+            "tolerance": "pending"
+          }
+        ],
+        "expected_direction": "positive",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Frontier-performance coefficients pending"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Frontier scientists (inventive performers) differ systematically from peers"
+        ],
+        "claim_scope": "general",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance moderate"
+      },
+      "overall_gold_ecrf": 0.5,
+      "expected_breaks": {
+        "B1": {
+          "likely": true,
+          "component": "sample",
+          "note": "PatentsView/PATSTAT substitute for KU Leuven linkage"
+        },
+        "B2": {
+          "likely": false,
+          "component": "—"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": true,
+          "component": "claim",
+          "note": "generalization without proprietary linkage"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes"
+        },
+        "IO2": {
+          "feasible": "partial",
+          "rationale": "linkage unreconstructable"
+        },
+        "IO3": {
+          "feasible": "partial",
+          "rationale": "collapses without proprietary linkage"
+        },
+        "io_collapse": "IO2_IO3"
+      },
+      "notes": "Boundary case alongside bikard2013. R121 to fetch PDF to confirm if linkage released."
+    },
+    {
+      "paper_id": "galuez2023_technology_transfer",
+      "title": "Scientific literature cited in patents: A Technology Transfer analysis",
+      "domain": "IS_Innovation",
+      "venue": "PLoS ONE",
+      "year": 2023,
+      "task_type": "METHOD",
+      "observability_stratum": "Medium",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "USPTO patents + cited scientific literature",
+        "data_description": "Patent-to-paper citation links",
+        "access": "public",
+        "provenance": "USPTO",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "USPTO public"
+      },
+      "sample": {
+        "N": "pending",
+        "time_window": "USPTO coverage",
+        "unit_of_analysis": "patent-paper citation pair",
+        "filter_rules": [
+          "citation-link extraction"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "USPTO sample describable"
+      },
+      "indicator": {
+        "formula": "Technology-transfer indicator from patent-citation patterns",
+        "parameters": [
+          "classification threshold"
+        ],
+        "computation_steps": [
+          "extract patent citations",
+          "classify transfer type"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Tech-transfer classification metrics; exact formula pending"
+      },
+      "model": {
+        "spec_elements": [
+          "descriptive",
+          "classification"
+        ],
+        "estimator": "descriptive",
+        "coefficients": {},
+        "fixed_effects": [],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "METHOD — descriptive classification"
+      },
+      "result_table": {
+        "target_tables": [
+          "Tables: transfer-type rates"
+        ],
+        "target_values": [
+          {
+            "label": "transfer_rate",
+            "value": "pending",
+            "tolerance": "pending"
+          }
+        ],
+        "expected_direction": "none",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Classification rates pending"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Patent-cited scientific literature reveals technology-transfer patterns"
+        ],
+        "claim_scope": "descriptive",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance moderate"
+      },
+      "overall_gold_ecrf": 0.75,
+      "expected_breaks": {
+        "B1": {
+          "likely": true,
+          "component": "indicator",
+          "note": "classification proxy"
+        },
+        "B2": {
+          "likely": false,
+          "component": "—"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes"
+        },
+        "IO2": {
+          "feasible": "yes"
+        },
+        "IO3": {
+          "feasible": "partial",
+          "rationale": "no original code; agent writes own on USPTO"
+        },
+        "io_collapse": "none"
+      },
+      "notes": "IS METHOD; USPTO pipeline parallel to arts2021."
+    },
+    {
+      "paper_id": "vasarhelyi2023_who_benefits",
+      "title": "Who benefits from altmetrics? The effect of team gender composition",
+      "domain": "IS_Innovation",
+      "venue": "arXiv (JASIST unconfirmed)",
+      "year": 2023,
+      "task_type": "DATA-SUB",
+      "observability_stratum": "Medium",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "Altmetric.com + Web of Science",
+        "data_description": "Altmetrics + citation matched corpus",
+        "access": "api-gated",
+        "provenance": "Altmetric.com (license) + WoS (license)",
+        "gold_fidelity": 0.0,
+        "fidelity_rationale": "Altmetric.com API-gated + WoS licensed"
+      },
+      "sample": {
+        "N": "pending",
+        "time_window": "altmetrics coverage window",
+        "unit_of_analysis": "paper",
+        "filter_rules": [
+          "Coarsened Exact Matching on gender composition"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "CEM-matched sample describable; data inaccessible"
+      },
+      "indicator": {
+        "formula": "Team gender composition × online visibility → citation impact (CEM quasi-experimental)",
+        "parameters": [
+          "CEM coarsening bins"
+        ],
+        "computation_steps": [
+          "compute gender composition",
+          "CEM match",
+          "estimate treatment effect"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Gender-composition + online-visibility metrics; exact pending"
+      },
+      "model": {
+        "spec_elements": [
+          "Coarsened Exact Matching",
+          "treatment-effect estimation"
+        ],
+        "estimator": "CEM",
+        "coefficients": {},
+        "fixed_effects": [],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "CEM quasi-experimental design describable"
+      },
+      "result_table": {
+        "target_tables": [
+          "Tables: CEM treatment effects"
+        ],
+        "target_values": [
+          {
+            "label": "gender_treatment_effect",
+            "value": "pending",
+            "tolerance": "pending"
+          }
+        ],
+        "expected_direction": "mixed",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Gender-composition treatment effects pending"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Team gender composition affects who benefits from online visibility"
+        ],
+        "claim_scope": "sample-specific",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance moderate"
+      },
+      "overall_gold_ecrf": 0.417,
+      "expected_breaks": {
+        "B1": {
+          "likely": true,
+          "component": "data_source",
+          "note": "open altmetrics substitute for Altmetric.com"
+        },
+        "B2": {
+          "likely": true,
+          "component": "result_table",
+          "note": "coefficient hard-code"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes"
+        },
+        "IO2": {
+          "feasible": "partial",
+          "rationale": "CEM design describable but data inaccessible"
+        },
+        "IO3": {
+          "feasible": "partial",
+          "rationale": "substitute altmetrics corpus required → boundary"
+        },
+        "io_collapse": "IO2_IO3 (data-licensed)"
+      },
+      "notes": "IO3 demoted to boundary (Altmetric.com API-gated). Reclassified STRICT→DATA-SUB. Promote-to-High dropped."
+    },
+    {
+      "paper_id": "donner2024_data_inaccuracy",
+      "title": "Data inaccuracy quantification and uncertainty propagation for bibliometric indicators",
+      "domain": "Management_Strategy",
+      "venue": "Research Evaluation",
+      "year": 2024,
+      "task_type": "METHOD",
+      "observability_stratum": "Medium",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "Web of Science + citation-count-error dataset (Zenodo)",
+        "data_description": "Bibliometric indicators + citation-count errors",
+        "access": "partial",
+        "provenance": "Zenodo 10.5281/zenodo.13969973 (error CSV); WoS licensed",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Public Zenodo CSV (error column only, 1.8KB); full WoS licensed"
+      },
+      "sample": {
+        "N": "pending",
+        "time_window": "WoS coverage",
+        "unit_of_analysis": "paper",
+        "filter_rules": [
+          "citation-count error classification"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Error dataset public; sample describable"
+      },
+      "indicator": {
+        "formula": "Citation-count error distribution + Monte-Carlo uncertainty propagation to bibliometric indicators",
+        "parameters": [
+          "error model",
+          "MC iterations"
+        ],
+        "computation_steps": [
+          "estimate error distribution",
+          "propagate uncertainty via MC"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Inaccuracy quantification + uncertainty propagation; exact formulas pending"
+      },
+      "model": {
+        "spec_elements": [
+          "Bayesian regression",
+          "Monte-Carlo propagation"
+        ],
+        "estimator": "bayesian",
+        "coefficients": {},
+        "fixed_effects": [],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Bayesian regression + Monte-Carlo pipeline; pending"
+      },
+      "result_table": {
+        "target_tables": [
+          "Tables: uncertainty bounds"
+        ],
+        "target_values": [
+          {
+            "label": "uncertainty_bound",
+            "value": "pending",
+            "tolerance": "pending"
+          }
+        ],
+        "expected_direction": "mixed",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Uncertainty bounds pending"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Bibliometric indicators carry quantifiable uncertainty from citation-count errors"
+        ],
+        "claim_scope": "descriptive",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance moderate"
+      },
+      "overall_gold_ecrf": 0.583,
+      "expected_breaks": {
+        "B1": {
+          "likely": false,
+          "component": "—"
+        },
+        "B2": {
+          "likely": true,
+          "component": "model",
+          "note": "spec hard-code"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes"
+        },
+        "IO2": {
+          "feasible": "yes"
+        },
+        "IO3": {
+          "feasible": "partial",
+          "rationale": "public data minimal, no code"
+        },
+        "io_collapse": "none"
+      },
+      "notes": "Only VERIFY paper with any public original artifact (Zenodo CSV). IO3 partial."
+    },
+    {
+      "paper_id": "zheng2025_male_female_retractions",
+      "title": "Do male leading authors retract more articles than female?",
+      "domain": "Management_Strategy",
+      "venue": "2025",
+      "year": 2025,
+      "task_type": "DATA-SUB",
+      "observability_stratum": "Medium",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "Retraction Watch database",
+        "data_description": "Retracted-article records with author gender",
+        "access": "public",
+        "provenance": "Retraction Watch",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Retraction Watch public"
+      },
+      "sample": {
+        "N": "pending",
+        "time_window": "Retraction Watch coverage",
+        "unit_of_analysis": "article",
+        "filter_rules": [
+          "gender disambiguation",
+          "leading-author identification"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Retraction-Watch sample describable"
+      },
+      "indicator": {
+        "formula": "Male vs female leading-author retraction rates; gender-disambiguation pipeline",
+        "parameters": [
+          "gender inference method"
+        ],
+        "computation_steps": [
+          "infer author gender",
+          "compute retraction rates by gender"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Gender-disambiguation + retraction-rate metrics; exact pending"
+      },
+      "model": {
+        "spec_elements": [
+          "comparison",
+          "retraction-rate regression"
+        ],
+        "estimator": "logistic",
+        "coefficients": {},
+        "fixed_effects": [],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Spec describable; pending"
+      },
+      "result_table": {
+        "target_tables": [
+          "Tables: retraction rates by gender"
+        ],
+        "target_values": [
+          {
+            "label": "male_minus_female_rate",
+            "value": "pending",
+            "tolerance": "pending"
+          }
+        ],
+        "expected_direction": "positive",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Gender retraction-rate comparison pending"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Male leading authors retract more articles than female leading authors"
+        ],
+        "claim_scope": "general",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance moderate"
+      },
+      "overall_gold_ecrf": 0.667,
+      "expected_breaks": {
+        "B1": {
+          "likely": true,
+          "component": "sample",
+          "note": "gender-disambiguation substitute"
+        },
+        "B2": {
+          "likely": false,
+          "component": "—"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes"
+        },
+        "IO2": {
+          "feasible": "yes"
+        },
+        "IO3": {
+          "feasible": "partial",
+          "rationale": "no original code; agent writes own"
+        },
+        "io_collapse": "none"
+      },
+      "notes": "Mgmt DATA-SUB with public data (Retraction Watch). Tests Sample-component gender-disambiguation."
+    },
+    {
+      "paper_id": "gebhart2023_math_framework",
+      "title": "A Mathematical Framework for Citation Disruption",
+      "domain": "SoS",
+      "venue": "arXiv",
+      "year": 2023,
+      "task_type": "METHOD",
+      "observability_stratum": "High",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "American Physical Society bibliographic data (~630K papers) + Nobel laureate dataset (Li et al. 2019)",
+        "data_description": "Physics citation network + Nobel-prize papers",
+        "access": "partial",
+        "provenance": "APS restricted; Nobel dataset public (Scientific Data)",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "APS restricted-access; Nobel dataset (Li 2019) public"
+      },
+      "sample": {
+        "N": 630000,
+        "time_window": "1893-2019",
+        "unit_of_analysis": "paper",
+        "filter_rules": [
+          "APS physics",
+          "Nobel laureate subset"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "APS sample describable; Nobel set public"
+      },
+      "indicator": {
+        "formula": "Relates CD Index to betweenness centrality; B_k and Π_k disruption measures",
+        "parameters": [
+          "centrality window"
+        ],
+        "computation_steps": [
+          "build citation graph",
+          "compute betweenness",
+          "relate to CD"
+        ],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "CD-betweenness-centrality framework; B_k/Π_k measures"
+      },
+      "model": {
+        "spec_elements": [
+          "betweenness centrality",
+          "Nobel-discernment regression"
+        ],
+        "estimator": "OLS",
+        "coefficients": {},
+        "fixed_effects": [],
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Mathematical framework + empirical validation; pending"
+      },
+      "result_table": {
+        "target_tables": [
+          "Table: Nobel-discernment mean-rank comparison"
+        ],
+        "target_values": [
+          {
+            "label": "nobel_discernment_rank",
+            "value": "pending",
+            "tolerance": "approx"
+          }
+        ],
+        "expected_direction": "positive",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Nobel-discernment mean-rank numerical target exists (B_k/Π_k discern Nobel papers better than CD)"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Betweenness-centrality-based disruption measures outperform CD Index on Nobel discernment"
+        ],
+        "claim_scope": "sample-specific",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Centrality-based disruption measures discern Nobel prize-winning papers better than CD Index"
+      },
+      "overall_gold_ecrf": 0.583,
+      "expected_breaks": {
+        "B1": {
+          "likely": true,
+          "component": "data_source",
+          "note": "OpenAlex/SciSciNet substitute for APS"
+        },
+        "B2": {
+          "likely": false,
+          "component": "—"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": true,
+          "component": "claim",
+          "note": "centrality-disruption claim on substitute data"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "partial",
+          "rationale": "math framework + empirical target"
+        },
+        "IO2": {
+          "feasible": "partial"
+        },
+        "IO3": {
+          "feasible": "partial",
+          "rationale": "substitute OpenAlex/SciSciNet for APS"
+        },
+        "io_collapse": "none"
+      },
+      "notes": "NOT pure math — has empirical Nobel-discernment target. Kept as METHOD+empirical."
+    },
+    {
+      "paper_id": "obadage2024_citations_repro",
+      "title": "Can citations tell us about a paper's reproducibility? (ACM FAccT 2024)",
+      "domain": "IS_Innovation",
+      "venue": "ACM FAccT",
+      "year": 2024,
+      "task_type": "STRICT",
+      "observability_stratum": "High",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "ML Reproducibility Challenge 2022 papers + 41,244 citation contexts (Semantic Scholar)",
+        "data_description": "ML papers + citation contexts for reproducibility prediction",
+        "access": "public",
+        "provenance": "Zenodo 10.5281/zenodo.10895748; GitHub lamps-lab/ccair-ai-reproducibility",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Public (Zenodo + GitHub)"
+      },
+      "sample": {
+        "N": 41244,
+        "time_window": "MLRC 2022",
+        "unit_of_analysis": "citation context",
+        "filter_rules": [
+          "citation-context extraction via Semantic Scholar Graph API"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Public dataset; N explicit"
+      },
+      "indicator": {
+        "formula": "Citation-context features → reproducibility score (M1-M7 models)",
+        "parameters": [
+          "sentiment features",
+          "5-fold CV"
+        ],
+        "computation_steps": [
+          "extract citation contexts",
+          "compute sentiment features",
+          "train M1-M7"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Citation-context sentiment + reproducibility-score indicators; code public"
+      },
+      "model": {
+        "spec_elements": [
+          "M1-M5 baseline",
+          "M6/M7 5-fold CV",
+          "tensorflow/keras/torch/transformers"
+        ],
+        "estimator": "ML-classifier",
+        "coefficients": {},
+        "fixed_effects": [],
+        "pinned_requirements": "requirements.txt",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "ML pipeline M1-M7; code+notebooks public (MIT)"
+      },
+      "result_table": {
+        "target_tables": [
+          "Table 3: M1-M5",
+          "Table 4: M6/M7 5-fold CV"
+        ],
+        "target_values": [
+          {
+            "label": "M6_cv_score",
+            "value": "pending-exact-from-notebook",
+            "tolerance": "exact-via-notebook"
+          }
+        ],
+        "expected_direction": "positive",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Table 3 (M1-M5) + Table 4 (M6/M7) numerical targets; notebooks regenerate them"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Citation-context sentiment correlates with paper reproducibility"
+        ],
+        "claim_scope": "sample-specific",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Claim modest (correlation between citation sentiment and reproducibility)"
+      },
+      "overall_gold_ecrf": 1.0,
+      "expected_breaks": {
+        "B1": {
+          "likely": false,
+          "component": "—",
+          "note": "data+code public"
+        },
+        "B2": {
+          "likely": true,
+          "component": "result_table",
+          "note": "hard-code (low risk given notebooks)"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes"
+        },
+        "IO2": {
+          "feasible": "yes"
+        },
+        "IO3": {
+          "feasible": "yes",
+          "rationale": "public data + public code + notebooks"
+        },
+        "io_collapse": "none"
+      },
+      "notes": "Clean-IO3 STRICT anchor (6th). Upgraded from boundary. Identity corrected obadage2023→2024."
+    },
+    {
+      "paper_id": "liu2018_hotstreaks",
+      "title": "Hot Streaks in Artistic, Cultural, and Scientific Careers",
+      "domain": "SoS",
+      "venue": "Nature",
+      "year": 2018,
+      "task_type": "METHOD",
+      "observability_stratum": "High",
+      "annotator_id": "A/B",
+      "annotation_status": "draft_primary",
+      "data_source": {
+        "data_source": "Career histories: artists (artchive/artnet), directors (IMDb), scientists (Web of Science + APS)",
+        "data_description": "Career impact time-series across 3 domains",
+        "access": "public",
+        "provenance": "github.com/lu-liu/hotstreaks (code_bursts.py + data.zip)",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Public code + public data in lu-liu/hotstreaks repo (data.zip 85MB)"
+      },
+      "sample": {
+        "N": "pending-exact",
+        "time_window": "career-spanning",
+        "unit_of_analysis": "individual career",
+        "filter_rules": [
+          "per-domain split (artists/directors/scientists)"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Career histories public in repo"
+      },
+      "indicator": {
+        "formula": "Hot-streak model (random top-hit ordering) vs (b) right-trapezoid (c) isosceles-trapezoid (d) quadratic (e) tent (f) left-trapezoid; relative position P(Ñ) of top-3 hits within top-6",
+        "parameters": [
+          "top-k=6",
+          "KS p-value≥0.05 = pass"
+        ],
+        "computation_steps": [
+          "build career impact series",
+          "fit hot-streak + alternatives",
+          "KS test on P(Ñ)"
+        ],
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Hot-streak model + 5 alternative burst functions; KS-test comparison"
+      },
+      "model": {
+        "spec_elements": [
+          "hot-streak fitter",
+          "5 alternative burst functions",
+          "KS test"
+        ],
+        "estimator": "goodness-of-fit",
+        "coefficients": {},
+        "fixed_effects": [],
+        "pinned_requirements": "code_bursts.py",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "Model-fitting + KS goodness-of-fit; code public"
+      },
+      "result_table": {
+        "target_tables": [
+          "Fig: P(Ñ) distributions per domain + KS p-values"
+        ],
+        "target_values": [
+          {
+            "label": "hotstreak_ks_pass",
+            "value": "p>=0.05 (green) for all 3 domains",
+            "tolerance": "exact-via-code"
+          }
+        ],
+        "expected_direction": "none",
+        "gold_fidelity": 1.0,
+        "fidelity_rationale": "P(Ñ) distributions + KS p-values; notebooks/code regenerate"
+      },
+      "claim": {
+        "conclusion_claims": [
+          "Hot streaks are a real phenomenon across artistic, cultural, and scientific careers; the hot-streak model reproduces the randomness in top-hit ordering that alternative models cannot"
+        ],
+        "claim_scope": "general",
+        "uncertainty": "stated-qualifiers",
+        "gold_fidelity": 0.5,
+        "fidelity_rationale": "Claim-result distance small-moderate"
+      },
+      "overall_gold_ecrf": 0.917,
+      "expected_breaks": {
+        "B1": {
+          "likely": false,
+          "component": "—",
+          "note": "data+code public"
+        },
+        "B2": {
+          "likely": true,
+          "component": "result_table",
+          "note": "hard-code KS p-values (low risk given code)"
+        },
+        "B3": {
+          "likely": false,
+          "component": "—"
+        },
+        "B4": {
+          "likely": false,
+          "component": "—"
+        }
+      },
+      "io_feasibility": {
+        "IO1": {
+          "feasible": "yes",
+          "rationale": "model described in paper"
+        },
+        "IO2": {
+          "feasible": "yes"
+        },
+        "IO3": {
+          "feasible": "yes",
+          "rationale": "public data + public code (code_bursts.py + data.zip)"
+        },
+        "io_collapse": "none"
+      },
+      "notes": "Replacement for traag2025 (slot #9). VERIFIED clean IO3: lu-liu/hotstreaks repo contains code_bursts.py (14KB) + data.zip (85MB). SoS, METHOD with numerical KS targets."
+    }
+  ],
+  "held_replacement_slots": [
+    {
+      "slot": 20,
+      "old_slug": "zheng2025_social_media_retraction",
+      "reason": "all data licensed/API-gated (WoS+Altmetric+Twitter+RetractionWatch), no IO2/IO3 distinction",
+      "status": "HELD — replacement pending",
+      "candidates": [
+        {
+          "slug": "hossain2025_similarity_reproducibility",
+          "domain": "Management_Strategy",
+          "note": "UIC (Malik/Koop/Brown/Hossain) — artefact not confirmed (GitHub API rate-limited); needs author-GitHub check"
+        },
+        {
+          "fallback": "a Retraction-Watch-based Management paper with public data (parallel to zheng2025_male)"
+        }
+      ],
+      "blocker": "Mgmt-domain public-data+code paper must be confirmed before freeze"
+    }
+  ]
+}

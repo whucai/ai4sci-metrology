@@ -105,8 +105,8 @@ Pass rule: **≥3/4 gates** → scale to S2. Gate 1 is mandatory.
 
 | Run ID | Milestone | Purpose | Split | Metrics | Priority | Status |
 |--------|-----------|---------|-------|---------|----------|--------|
-| R120 | S2 | 20-paper full pool finalization + pre-annotation | 20 papers | Observability-stratified, pre-agent | MUST | DONE (draft) — see `R120_FULL_POOL.md` (awaiting R121 verification) |
-| R121 | S2 | Layer 1 gold chain (full) | 2 annotators × 20 papers | 20 papers | Component-stratified α | MUST | IN PROGRESS (template ready) — see `R121_LAYER1_TEMPLATE.md`; blocks S3 |
+| R120 | S2 | 20-paper full pool finalization + pre-annotation | 20 papers | Observability-stratified, pre-agent | MUST | DONE (verified) — 19/20 stable; slot #20 Mgmt replacement pending. See `R120_FULL_POOL.md` + appendix |
+| R121 | S2 | Layer 1 gold chain (full) | 2 annotators × 20 papers | 20 papers | Component-stratified α | MUST | IN PROGRESS — 19/20 drafted in `r121_gold_v1.json` (NOT frozen; slot #20 held). See `R121_READINESS_TABLE.md`; blocks S3 |
 
 ### Phase 4: Full Study 2 (S2) — BLOCKED until R120 + R121 complete
 

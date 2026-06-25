@@ -10,11 +10,11 @@
 
 ## Selection constraints (pool-level, post-verification 2026-06-25)
 
-- [~] Domain spread (18 stable + 2 pending): SoS 7 · IS/Innovation 6 · Management 5 — will restore 8/6/6 once #9 (SoS) and #20 (Mgmt) replacements are filled
-- [~] Observability-stratum spread (18 stable): Low 5 · Medium 8 · High 5 — target 5/8–9/6–7 once replacements land
-- [~] Task-type spread (18 stable): STRICT 6 · METHOD 7 · DATA-SUB 5 · CLAIM-ROBUST 0 — CLAIM-ROBUST dropped (obadage reclassified STRICT); replacements may restore
-- [x] ≥3 clean-IO₃ anchors (data + code public): Petersen2024, wu2019, park2023, bentley2023, funk2017, **obadage2024** (6 total)
-- [x] ≥3 data-unavailable boundary cases (IO₂/IO₃ collapse): maddi2024, bikard2013, schaper2025 (3; zheng_social replaced)
+- [~] Domain spread (19 stable + 1 pending): SoS 8 · IS/Innovation 6 · Management 5 — will restore 8/6/6 once #20 (Mgmt) replacement is filled
+- [~] Observability-stratum spread (19 stable): Low 5 · Medium 8 · High 6 — target met once #20 lands
+- [~] Task-type spread (19 stable): STRICT 6 · METHOD 8 · DATA-SUB 5 · CLAIM-ROBUST 0 — CLAIM-ROBUST dropped (obadage reclassified STRICT); #20 replacement may restore
+- [x] ≥3 clean-IO₃ anchors (data + code public): Petersen2024, wu2019, park2023, bentley2023, funk2017, obadage2024, **liu2018_hotstreaks** (7 total)
+- [x] ≥3 data-unavailable boundary cases (IO₂/IO₃ collapse): maddi2024, schaper2025, bikard2013 (3; zheng_social replaced)
 - [x] ≥2 known localized-break papers (from C0): Arts2021 (Indicator), Wu2019 (Model/Claim direction)
 - [x] All three primary models' weakness regimes represented (Claim-weak Gemma anchor carried via C0, not re-run)
 
@@ -34,7 +34,7 @@
 | 6 | arts2021 | IS | METHOD | Medium | ⚠️ USPTO multi-step | ❌ R003 | Indicator | B₁+B₂ | high |
 | 7 | ke2015_sleeping_beauties | SoS | METHOD | Medium | ❌ WoS+APS licensed | ❌ | Indicator | B₁ | med |
 | 8 | sun2023_ranking_mobility | SoS | DATA-SUB | Medium | ✅ public career | ❌ | Sample | B₁+B₄ | med |
-| 9 | *(slot pending — traag replaced)* | SoS | — | — | — | — | — | — | — |
+| 9 | liu2018_hotstreaks | SoS | METHOD | High | ✅ career data (repo) | ✅ lu-liu/hotstreaks | Result | B₂ | high |
 | 10 | deng2023_enhancing_disruption | SoS | METHOD | Medium | ⚠️ SciSciNet substitute | ❌ | Indicator | B₁ | med |
 | 11 | schaper2025_frontier | IS | DATA-SUB | Medium | ⚠️ partial (KU Leuven chain private) | ❌ | Sample | B₁+B₄ | med |
 | 12 | galuez2023_technology_transfer | IS | METHOD | Medium | ✅ USPTO | ❌ | Indicator | B₁ | med |
@@ -49,11 +49,11 @@
 
 **Legend**: Data/Code ✅=public ⚠️=partial/needs-verification ❌=unavailable/private. Break risk: B₁ Substitution · B₂ Circularity · B₃ Synthetic · B₄ Assertion. Conf = pre-annotation confidence (R121 confirms).
 
-**Verification status (2026-06-25)**: 18/20 papers verified stable; 2 slots pending replacement (#9 traag → structurally inapplicable review chapter; #20 zheng_social → all data licensed/API-gated, no IO₂/IO₃ distinction). See §"R120 Verification Appendix".
+**Verification status (2026-06-25)**: 19/20 papers verified stable; slot #9 filled with verified `liu2018_hotstreaks` (clean IO₃); slot #20 (Mgmt) still pending replacement (`zheng2025_social` replaced — all data licensed/API-gated). See §"R120 Verification Appendix".
 
-**Stratum tally (18 stable)**: Low 5 (#1–5) · Medium 8 (#6–8, #10–15) · High 5 (#16–19). Clean-IO₃ anchors: 6 (#1–4, #16, #18). Boundary (IO₂/IO₃ collapse): 3 (#5 maddi, #19 bikard, + replacements pending). Replacement slots will be filled to restore Low 5 / Medium 8–9 / High 6–7 balance.
+**Stratum tally (19 stable)**: Low 5 (#1–5) · Medium 8 (#6–8, #10–15) · High 6 (#9, #16–19). Clean-IO₃ anchors: 7 (#1–4, #9, #16, #18). Boundary (IO₂/IO₃ collapse): 3 (#5 maddi, #11 schaper, #19 bikard). Slot #20 will restore Mgmt/domain balance once a verified public-data Mgmt paper is selected.
 
-**R121 hold rule**: R121 gold-chain annotation proceeds only for the 18 stable papers. Slots #9 and #20 (and any replacements) are HELD until the final pool is confirmed.
+**R121 hold rule**: R121 gold-chain annotation proceeds for the 19 stable papers. Slot #20 is HELD until a verified Mgmt replacement is confirmed. `r121_gold_v1.json` is NOT frozen until slot #20 is filled.
 
 ---
 
@@ -115,8 +115,13 @@
 - Weak: Sample (career reconstruction) · Break: B₁ + B₄
 - Role: DATA-SUB pathway; tests Sample-component under data-substitution.
 
-### 9. *(SLOT PENDING — traag2025 REPLACED)*
-- **traag2025_citation_models** → identity corrected to **Traag 2022, Edward Elgar chapter "Science of science — Citation models and research evaluation"** (arXiv:2207.11116; NOT Annual Review 2025). It is a **conceptual/review chapter with no original empirical dataset and no code** → IO₃ is **structurally inapplicable** (no original code/data to recover; no IO₁→IO₃ observability distinction). **Replaced.** Replacement candidate under verification (SoS slot). R121 annotation HELD for this slot.
+### 9. liu2018_hotstreaks (REPLACEMENT — slot #9 filled, verified)
+- Domain: SoS · Venue: **Nature 2018** (arXiv:1712.01804) · Task: METHOD · Stratum: **High** (clean IO₃)
+- Data: ✅ career histories (artists/directors/scientists) public in repo (`data.zip` 85MB) · Code: ✅ `lu-liu/hotstreaks` repo (`code_bursts.py`)
+- IO₁ ✅ (model described) · IO₂ ✅ · IO₃ ✅ (public data + public code)
+- Weak: Result (KS p-values / P(Ñ) distributions) · Break: B₂ (hard-code KS p-values — low risk given code)
+- Role: **Clean-IO₃ SoS anchor** (replaces traag2025). Hot-streak model + 5 alternative burst functions; KS goodness-of-fit. Verified via codeload zip (code_bursts.py 14KB + data.zip 85MB present).
+- **traag2025_citation_models** (replaced) → identity corrected to Traag 2022, Edward Elgar chapter (arXiv:2207.11116; NOT Annual Review 2025). Conceptual/review chapter, no original empirical dataset/code → IO₃ structurally inapplicable. Replaced.
 
 ### 10. deng2023_enhancing_disruption
 - Domain: SoS · Venue: **Scientometrics 128(4):2429, 2023** (corrected from arXiv; closed access) · Task: METHOD · Stratum: **Medium**
@@ -205,7 +210,7 @@
 | 6 | arts2021 | ✅ | ✅ | ✅ | Medium |
 | 7 | ke2015_sleeping_beauties | ✅ | ⚠️ | ⚠️ | Medium |
 | 8 | sun2023_ranking_mobility | ✅ | ✅ | ⚠️ | Medium |
-| 9 | *(slot pending)* | — | — | — | — |
+| 9 | liu2018_hotstreaks | ✅ | ✅ | ✅ | High |
 | 10 | deng2023_enhancing_disruption | ✅ | ✅ | ⚠️ | Medium |
 | 11 | schaper2025_frontier | ✅ | ⚠️ | ⚠️ | Medium |
 | 12 | galuez2023_technology_transfer | ✅ | ✅ | ⚠️ | Medium |
@@ -218,7 +223,7 @@
 | 19 | bikard2013 | ✅ | ⚠️ | ⚠️ | High |
 | 20 | *(slot pending)* | — | — | — | — |
 
-> **IO₃ clean-executable count**: 6 (#1–4, #16, #18). 8 papers have IO₃=⚠️ (code not public → agent writes own, or partial data). 2 boundary papers (#5 maddi, #19 bikard) have IO₂/IO₃ collapse — pre-registered R153 boundary candidates. 2 slots (#9, #20) pending replacement.
+> **IO₃ clean-executable count**: 7 (#1–4, #9, #16, #18). 8 papers have IO₃=⚠️ (code not public → agent writes own, or partial data). 3 boundary papers (#5 maddi, #11 schaper, #19 bikard) have IO₂/IO₃ collapse — pre-registered R153 boundary candidates. Slot #20 pending replacement.
 
 ---
 
@@ -228,7 +233,7 @@
 2. **Data-availability VERIFY — RESOLVED**: #5 maddi2024 (Publons private/defunct → boundary), #11 schaper2025 (KU Leuven linkage private → partial), #20 zheng2025_social (all licensed/API-gated → replaced).
 3. **Task-type confirmation — RESOLVED**: #17 gebhart2023 (METHOD+empirical, kept), #18 obadage2024 (STRICT, upgraded to clean).
 4. **Identity corrections — RESOLVED**: ke2023→ke2015 (PNAS), traag2025→Traag 2022 (replaced), obadage2023→obadage2024 (FAccT).
-5. **Replacement slots OPEN**: #9 (SoS) and #20 (Mgmt) — candidates under verification; R121 annotation HELD for these two slots until confirmed.
+5. **Replacement slots**: #9 (SoS) **FILLED** with verified `liu2018_hotstreaks` (clean IO₃, `lu-liu/hotstreaks` repo has `code_bursts.py` + `data.zip`); #20 (Mgmt) **STILL OPEN** — `hossain2025_similarity_reproducibility` candidate unconfirmed (GitHub rate-limited), fallback = a Retraction-Watch public-data Mgmt paper. R121 annotation held for #20 only.
 
 ---
 
@@ -237,4 +242,33 @@
 - **Inter-annotator target**: 2 annotators × 18 stable papers × 6 components = 216 component-level gold labels (+ 2 replacement slots deferred). Target component-stratified α ≥ 0.70 (R161 reports).
 - **Adjudication rule**: disagreements >1 level (e.g., 0 vs 1) adjudicated by a third pass; ≤1 level averaged.
 - **Gold-chain format**: see `R121_LAYER1_TEMPLATE.md`.
-- **Freeze gate**: `r121_gold_v1.json` frozen only after the 2 replacement slots are filled and the 18 stable papers are annotated.
+- **Freeze gate**: `r121_gold_v1.json` frozen only after slot #20 (Mgmt replacement) is filled and the 20 papers are annotated. Slot #9 filled (liu2018_hotstreaks). Draft `r121_gold_v1.json` staged with 19 stable papers; NOT frozen.
+
+---
+
+## R120 Verification Appendix (2026-06-25)
+
+Web verification via Crossref / OpenAlex / arXiv / GitHub / Zenodo / OSF / Dataverse. Two parallel sub-agents; findings below.
+
+| old slug | corrected identity | venue / year | data availability | code availability | IO₃ status | action | evidence source |
+|---|---|---|---|---|---|---|---|
+| ke2023_sleeping_beauties | "Defining and identifying Sleeping Beauties in science" — Ke, Ferrara, Radicchi, Flammini | **PNAS 112(24):7426, 2015** (slug's "Scientometrics 2023" DOI is a phantom) | private/licensed (WoS + APS; not public) | none (author GitHub `qke` has no SB repo) | boundary | keep (downgrade IO₃, fix identity) | arXiv:1505.06454; DOI 10.1073/pnas.1424329112 |
+| traag2025_citation_models | "Science of science — Citation models and research evaluation" — Traag | **Edward Elgar chapter, 2022** (arXiv:2207.11116; NOT Annual Review 2025) | n/a (review/conceptual chapter — no original dataset) | none | **inapplicable** (no original code/data; no IO₁→IO₃ distinction) | **replace** | arXiv:2207.11116; DOI 10.4337/9781802207309.00072 |
+| deng2023_enhancing_disruption | "Enhancing the robustness of the disruption metric against noise" — Deng, Zeng | Scientometrics 128(4):2429, 2023 (closed) | licensed (no Data/Code Availability statement; SciSciNet is benchmark substitute) | none | boundary (downgrade from ⚠️→✅ assumed) | keep (downgrade IO₃) | DOI 10.1007/s11192-023-04644-2 |
+| vasarhelyi2023_who_benefits | "Who benefits from altmetrics?…" — Vásárhelyi, Horvát | arXiv:2308.00405, 2023 (JASIST unconfirmed) | api-gated + licensed (Altmetric.com API-key + WoS) | none | boundary (promote-to-High **dropped**) | keep (downgrade, reclassify DATA-SUB) | arXiv:2308.00405 |
+| donner2024_data_inaccuracy | "Data inaccuracy quantification…" — Donner | Research Evaluation 33(4), 2024 (arXiv:2303.16613) | partial (Zenodo CSV `10.5281/zenodo.13969973`, 1.8 KB error column only; WoS licensed) | none | partial | keep (tighten IO₃ to partial) | DOI 10.1093/reseval/rvae047; Zenodo 10.5281/zenodo.13969973 |
+| maddi2024 | "On the Peer Review Reports: Does Size Matter?" — Maddi, Miotti | **Scientometrics (Springer) 2024** (corrected from PeerJ) | private (Publons defunct; bespoke WoS-matched drop, not public) | none | boundary | keep (METHOD/DATA-SUB only, not STRICT) | DOI 10.1007/s11192-024-04977-6 |
+| schaper2025_frontier_scientists | "Not like the others: Frontier scientists…" — Schaper, Arts, Veugelers | Research Policy 54(10), 2025 (OA CC-BY) | partial (PubMed+USPTO public; KU Leuven author–inventor linkage private; Orbis paid) | none | partial (boundary if linkage unreleased) | keep (R121 to fetch PDF to confirm linkage) | DOI 10.1016/j.respol.2025.105339; Lirias 4262465 |
+| zheng2025_social_media_retraction | "Can social media provide early warning of retraction?…" — Zheng et al. | JASIST 2025 (arXiv:2403.16851) | private/api-gated (WoS + Altmetric.com licensed; Twitter/X non-recollectable; Retraction Watch under license) | none | boundary (no defensible IO₂/IO₃ distinction) | **replace** | DOI 10.1002/asi.70028; arXiv:2403.16851 |
+| gebhart2023_math_framework | "A Mathematical Framework for Citation Disruption" — Gebhart, Funk | arXiv:2308.16363, 2023 (no journal version) | partial (APS ~630K papers restricted-access; Nobel dataset Li 2019 public) — **NOT pure math** | none | partial (substitute OpenAlex/SciSciNet) | keep (METHOD+empirical, not excluded) | arXiv:2308.16363 |
+| obadage2023_citations_repro | "SHORT: Can citations tell us about a paper's reproducibility?…" — Obadage, Rajtmajer, Wu | **ACM FAccT 2024** (corrected from 2023) | public (Zenodo 10.5281/zenodo.10895748; GitHub `lamps-lab/ccair-ai-reproducibility/data`) | public (MIT repo + 9 notebooks, pinned reqs, artifact appendix) | **clean** | keep + **upgrade** (STRICT, clean IO₃) | DOI 10.1145/3641525.3663628; arXiv:2405.03977 |
+
+### Net pool change
+
+- **Clean-IO₃ anchors**: +2 (obadage2024, liu2018_hotstreaks) → 7 total (#1–4, #9, #16, #18).
+- **Replaced (2)**: traag2025 → **liu2018_hotstreaks** (SoS, clean IO₃, VERIFIED); zheng2025_social → **pending** (Mgmt slot #20 open, no verified public-data candidate yet).
+- **Identity fixes (3)**: ke2023→ke2015, traag2025→Traag 2022 (replaced), obadage2023→obadage2024.
+- **IO₃ downgrades (4)**: ke2015, deng2023, vasarhelyi2023 (all → boundary), donner2024 (→ partial). None of the 5 code-VERIFY papers has public code.
+- **Task-type reclassifications**: vasarhelyi2023 STRICT→DATA-SUB; obadage2024 CLAIM-ROBUST→STRICT; maddi2024 constrained to METHOD/DATA-SUB (STRICT impossible).
+- **Stable pool for R121**: 19/20 papers. Slot #20 (Mgmt) held pending verified replacement.
+
