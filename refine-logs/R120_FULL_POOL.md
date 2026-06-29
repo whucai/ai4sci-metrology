@@ -10,11 +10,11 @@
 
 ## Selection constraints (pool-level, post-verification 2026-06-25)
 
-- [~] Domain spread (19 stable + 1 pending): SoS 8 · IS/Innovation 6 · Management 5 — will restore 8/6/6 once #20 (Mgmt) replacement is filled
-- [~] Observability-stratum spread (19 stable): Low 5 · Medium 8 · High 6 — target met once #20 lands
-- [~] Task-type spread (19 stable): STRICT 6 · METHOD 8 · DATA-SUB 5 · CLAIM-ROBUST 0 — CLAIM-ROBUST dropped (obadage reclassified STRICT); #20 replacement may restore
-- [x] ≥3 clean-IO₃ anchors (data + code public): Petersen2024, wu2019, park2023, bentley2023, funk2017, obadage2024, **liu2018_hotstreaks** (7 total)
-- [x] ≥3 data-unavailable boundary cases (IO₂/IO₃ collapse): maddi2024, schaper2025, bikard2013 (3; zheng_social replaced)
+- [x] Domain spread: SoS 8 · IS/Innovation 6 · Management/Strategy 6
+- [x] Observability-stratum spread: Low 5 · Medium 8 · High 7
+- [~] Task-type spread: STRICT 6 · METHOD 9 · DATA-SUB 5 · CLAIM-ROBUST 0 — CLAIM-ROBUST dropped (obadage reclassified STRICT)
+- [x] ≥3 clean-IO₃ anchors (data + code public): Petersen2024, wu2019, park2023, bentley2023, funk2017, obadage2024, liu2018_hotstreaks, **arts2021_patent_nlp** (8 total)
+- [x] ≥3 data-unavailable boundary cases (IO₂/IO₃ collapse): maddi2024, schaper2025, bikard2013 (3)
 - [x] ≥2 known localized-break papers (from C0): Arts2021 (Indicator), Wu2019 (Model/Claim direction)
 - [x] All three primary models' weakness regimes represented (Claim-weak Gemma anchor carried via C0, not re-run)
 
@@ -45,15 +45,17 @@
 | 17 | gebhart2023_math_framework | SoS | METHOD | High | ⚠️ APS restricted (Nobel public) | ❌ | Model | B₄ | med |
 | 18 | obadage2024_citations_repro | IS | STRICT | High | ✅ public (Zenodo) | ✅ MIT repo+notebooks | Result | B₂ | high |
 | 19 | bikard2013 | Mgmt | DATA-SUB | High | ❌ MIT private | ❌ | Sample/Claim | B₁+B₄ | high |
-| 20 | *(slot pending — zheng_social replaced)* | Mgmt | — | — | — | — | — | — | — |
+| 20 | arts2021_patent_nlp | Mgmt | METHOD | High | ✅ USPTO (Zenodo) | ✅ sam-arts/respol_patents_code | Result | B₂ | high |
 
 **Legend**: Data/Code ✅=public ⚠️=partial/needs-verification ❌=unavailable/private. Break risk: B₁ Substitution · B₂ Circularity · B₃ Synthetic · B₄ Assertion. Conf = pre-annotation confidence (R121 confirms).
 
-**Verification status (2026-06-25)**: 19/20 papers verified stable; slot #9 filled with verified `liu2018_hotstreaks` (clean IO₃); slot #20 (Mgmt) still pending replacement (`zheng2025_social` replaced — all data licensed/API-gated). See §"R120 Verification Appendix".
+**Verification status (2026-06-29)**: 20/20 papers verified stable. Slot #9 = `liu2018_hotstreaks` (clean IO₃); slot #20 = `arts2021_patent_nlp` (clean IO₃ — Arts/Hou/Gomez 2021, USPTO + Zenodo data `10.5281/zenodo.3515985` + GitHub `sam-arts/respol_patents_code`). Pool STABLE. See §"R120 Verification Appendix".
 
-**Stratum tally (19 stable)**: Low 5 (#1–5) · Medium 8 (#6–8, #10–15) · High 6 (#9, #16–19). Clean-IO₃ anchors: 7 (#1–4, #9, #16, #18). Boundary (IO₂/IO₃ collapse): 3 (#5 maddi, #11 schaper, #19 bikard). Slot #20 will restore Mgmt/domain balance once a verified public-data Mgmt paper is selected.
+**Stratum tally (20 stable)**: Low 5 (#1–5) · Medium 8 (#6–8, #10–15) · High 7 (#9, #16–20). Clean-IO₃ anchors: 8 (#1–4, #9, #16, #18, #20). Boundary (IO₂/IO₃ collapse): 3 (#5 maddi, #11 schaper, #19 bikard).
 
-**R121 hold rule**: R121 gold-chain annotation proceeds for the 19 stable papers. Slot #20 is HELD until a verified Mgmt replacement is confirmed. `r121_gold_v1.json` is NOT frozen until slot #20 is filled.
+**R121 status**: gold v1 DRAFTED + frozen (pool composition) for all 20 papers; 2-annotator adjudication still required before R122 launch. See `R121_READINESS_TABLE.md`.
+
+> **Over-representation caveat**: 3 KU Leuven / Arts-group papers (#6 arts2021, #11 schaper2025, #20 arts2021_patent_nlp). #6 and #20 are both Arts-2021 Research-Policy NLP-patent papers but stress different ECRF components (#6 = claims-structure / Indicator bug, no code; #20 = novelty/impact/breakthrough with awards validation, public code). Flagged for write-up; not a pool blocker.
 
 ---
 
@@ -193,8 +195,14 @@
 - Weak: Sample/Claim · Break: B₁ + B₄
 - Role: Highest break-probability paper; R103: IO₁ 0.500 → IO₃ 0.975 (large slope despite data absence — agent reconstructs with substitutes).
 
-### 20. *(SLOT PENDING — zheng2025_social_media_retraction REPLACED)*
-- **zheng2025_social_media_retraction** → identity confirmed (Zheng et al., JASIST 2025, DOI 10.1002/asi.70028; arXiv:2403.16851). Data sources: WoS (licensed, CWTS) + Altmetric.com (licensed) + **Twitter/X API content non-recollectable** (post free-API shutdown) + Retraction Watch (under license, non-redistributable). **No public code, no data availability statement.** All data licensed/API-gated → **no defensible IO₂/IO₃ distinction** (IO₂ and IO₃ both collapse; no open substitute reconstructs the matched social-media×retraction corpus). **Replaced.** Replacement candidate under verification (Mgmt slot). R121 annotation HELD for this slot.
+### 20. arts2021_patent_nlp (REPLACEMENT — slot #20 filled, verified)
+- Domain: Mgmt/Strategy (KU Leuven, dept of management, strategy and innovation) · Venue: **Research Policy 50:104144, 2021** (CC-BY OA) · Task: METHOD · Stratum: **High** (clean IO₃)
+- Data: ✅ all USPTO utility patents granted to May 2018 — **Zenodo `10.5281/zenodo.3515985`** (static bulk, non-API) · Code: ✅ **`github.com/sam-arts/respol_patents_code`** (Python)
+- IO₁ ✅ (NLP method described) · IO₂ ✅ · IO₃ ✅ (public static data + public code)
+- Weak: Result (73% award-identification rate; case-control validation) · Break: B₂ (hard-code 73% rate — low risk given code)
+- Role: **Clean-IO₃ Mgmt/Strategy USPTO anchor** (replaces zheng2025_social). Validates NLP novelty/impact/breakthrough indicators vs classification+citation baselines on award-linked patents.
+- **zheng2025_social_media_retraction** (replaced) → all data licensed/API-gated (WoS+Altmetric+Twitter+RetractionWatch), no IO₂/IO₃ distinction. Replaced.
+- **Caveat**: 3rd KU Leuven/Arts paper; near-duplicate of #6 arts2021 but distinct load-bearing component (novelty/impact/breakthrough + public code vs claims-structure/Indicator bug + no code). Write-up caveat, not a blocker.
 
 ---
 
@@ -221,9 +229,9 @@
 | 17 | gebhart2023_math_framework | ⚠️ | ⚠️ | ⚠️ | High |
 | 18 | obadage2024_citations_repro | ✅ | ✅ | ✅ | High |
 | 19 | bikard2013 | ✅ | ⚠️ | ⚠️ | High |
-| 20 | *(slot pending)* | — | — | — | — |
+| 20 | arts2021_patent_nlp | ✅ | ✅ | ✅ | High |
 
-> **IO₃ clean-executable count**: 7 (#1–4, #9, #16, #18). 8 papers have IO₃=⚠️ (code not public → agent writes own, or partial data). 3 boundary papers (#5 maddi, #11 schaper, #19 bikard) have IO₂/IO₃ collapse — pre-registered R153 boundary candidates. Slot #20 pending replacement.
+> **IO₃ clean-executable count**: 8 (#1–4, #9, #16, #18, #20). 8 papers have IO₃=⚠️ (code not public → agent writes own, or partial data). 3 boundary papers (#5 maddi, #11 schaper, #19 bikard) have IO₂/IO₃ collapse — pre-registered R153 boundary candidates.
 
 ---
 
@@ -233,7 +241,7 @@
 2. **Data-availability VERIFY — RESOLVED**: #5 maddi2024 (Publons private/defunct → boundary), #11 schaper2025 (KU Leuven linkage private → partial), #20 zheng2025_social (all licensed/API-gated → replaced).
 3. **Task-type confirmation — RESOLVED**: #17 gebhart2023 (METHOD+empirical, kept), #18 obadage2024 (STRICT, upgraded to clean).
 4. **Identity corrections — RESOLVED**: ke2023→ke2015 (PNAS), traag2025→Traag 2022 (replaced), obadage2023→obadage2024 (FAccT).
-5. **Replacement slots**: #9 (SoS) **FILLED** with verified `liu2018_hotstreaks` (clean IO₃, `lu-liu/hotstreaks` repo has `code_bursts.py` + `data.zip`); #20 (Mgmt) **STILL OPEN** — `hossain2025_similarity_reproducibility` candidate unconfirmed (GitHub rate-limited), fallback = a Retraction-Watch public-data Mgmt paper. R121 annotation held for #20 only.
+5. **Replacement slots**: #9 (SoS) **FILLED** with `liu2018_hotstreaks` (clean IO₃); #20 (Mgmt) **FILLED** with `arts2021_patent_nlp` (clean IO₃ — USPTO + Zenodo + GitHub). Pool STABLE.
 
 ---
 
@@ -242,7 +250,7 @@
 - **Inter-annotator target**: 2 annotators × 18 stable papers × 6 components = 216 component-level gold labels (+ 2 replacement slots deferred). Target component-stratified α ≥ 0.70 (R161 reports).
 - **Adjudication rule**: disagreements >1 level (e.g., 0 vs 1) adjudicated by a third pass; ≤1 level averaged.
 - **Gold-chain format**: see `R121_LAYER1_TEMPLATE.md`.
-- **Freeze gate**: `r121_gold_v1.json` frozen only after slot #20 (Mgmt replacement) is filled and the 20 papers are annotated. Slot #9 filled (liu2018_hotstreaks). Draft `r121_gold_v1.json` staged with 19 stable papers; NOT frozen.
+- **Freeze gate**: `r121_gold_v1.json` pool composition FROZEN (20/20 slots filled, both replacements verified clean IO₃). 2-annotator adjudication (component-stratified α ≥ 0.70) still required before R122 launch.
 
 ---
 
@@ -262,13 +270,15 @@ Web verification via Crossref / OpenAlex / arXiv / GitHub / Zenodo / OSF / Datav
 | zheng2025_social_media_retraction | "Can social media provide early warning of retraction?…" — Zheng et al. | JASIST 2025 (arXiv:2403.16851) | private/api-gated (WoS + Altmetric.com licensed; Twitter/X non-recollectable; Retraction Watch under license) | none | boundary (no defensible IO₂/IO₃ distinction) | **replace** | DOI 10.1002/asi.70028; arXiv:2403.16851 |
 | gebhart2023_math_framework | "A Mathematical Framework for Citation Disruption" — Gebhart, Funk | arXiv:2308.16363, 2023 (no journal version) | partial (APS ~630K papers restricted-access; Nobel dataset Li 2019 public) — **NOT pure math** | none | partial (substitute OpenAlex/SciSciNet) | keep (METHOD+empirical, not excluded) | arXiv:2308.16363 |
 | obadage2023_citations_repro | "SHORT: Can citations tell us about a paper's reproducibility?…" — Obadage, Rajtmajer, Wu | **ACM FAccT 2024** (corrected from 2023) | public (Zenodo 10.5281/zenodo.10895748; GitHub `lamps-lab/ccair-ai-reproducibility/data`) | public (MIT repo + 9 notebooks, pinned reqs, artifact appendix) | **clean** | keep + **upgrade** (STRICT, clean IO₃) | DOI 10.1145/3641525.3663628; arXiv:2405.03977 |
+| *(new, slot #9)* liu2018_hotstreaks (replaces traag2025) | "Hot Streaks in Artistic, Cultural, and Scientific Careers" — Liu, Wang, Sinatra, Song, Barabási | Nature 2018 (arXiv:1712.01804) | public (career histories in repo `data.zip` 85MB) | public (`lu-liu/hotstreaks` repo, `code_bursts.py`) | **clean** | **add** (SoS, METHOD, clean IO₃) | arXiv:1712.01804; codeload zip verified |
+| *(new, slot #20)* arts2021_patent_nlp (replaces zheng2025_social) | "NLP to identify the creation and impact of new technologies in patent text: Code, data, and new measures" — Arts, Hou, Gomez | Research Policy 50:104144, 2021 (CC-BY) | public (USPTO utility patents to 2018-05; Zenodo 10.5281/zenodo.3515985, static bulk) | public (`sam-arts/respol_patents_code`, Python) | **clean** | **add** (Mgmt/Strategy, METHOD, clean IO₃) | DOI 10.1016/j.respol.2020.104144; Zenodo 10.5281/zenodo.3515985 |
 
 ### Net pool change
 
 - **Clean-IO₃ anchors**: +2 (obadage2024, liu2018_hotstreaks) → 7 total (#1–4, #9, #16, #18).
-- **Replaced (2)**: traag2025 → **liu2018_hotstreaks** (SoS, clean IO₃, VERIFIED); zheng2025_social → **pending** (Mgmt slot #20 open, no verified public-data candidate yet).
+- **Replaced (2)**: traag2025 → `liu2018_hotstreaks` (SoS, clean IO₃); zheng2025_social → `arts2021_patent_nlp` (Mgmt, clean IO₃ — USPTO Zenodo `10.5281/zenodo.3515985` + GitHub `sam-arts/respol_patents_code`).
 - **Identity fixes (3)**: ke2023→ke2015, traag2025→Traag 2022 (replaced), obadage2023→obadage2024.
 - **IO₃ downgrades (4)**: ke2015, deng2023, vasarhelyi2023 (all → boundary), donner2024 (→ partial). None of the 5 code-VERIFY papers has public code.
 - **Task-type reclassifications**: vasarhelyi2023 STRICT→DATA-SUB; obadage2024 CLAIM-ROBUST→STRICT; maddi2024 constrained to METHOD/DATA-SUB (STRICT impossible).
-- **Stable pool for R121**: 19/20 papers. Slot #20 (Mgmt) held pending verified replacement.
+- **Stable pool for R121**: 20/20 papers. Pool STABLE; `r121_gold_v1.json` frozen (pool composition); 2-annotator adjudication pending before R122.
 
