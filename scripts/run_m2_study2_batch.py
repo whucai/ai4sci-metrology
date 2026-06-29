@@ -32,25 +32,63 @@ from run_v72_pilot import run_one, MODELS
 GOLD_FROZEN = ROOT / "refine-logs" / "r121_gold_v1_frozen.json"
 OUT_DIR = Path(os.environ.get("R122_OUTPUT_DIR", str(ROOT / "refine-logs" / "r122")))
 
-# Direct vLLM (h100-1) — Qwen3.6-27B-FP8. LiteLLM proxy is down.
-VLLM_URL = os.environ.get("VLLM_URL", "http://172.17.65.41:8360/v1")
-VLLM_MODEL = os.environ.get("VLLM_MODEL", "qwen3.6-27b-fp8")
-DEEPSEEK_URL = os.environ.get("DEEPSEEK_URL", "https://api.deepseek.com/v1")
-DEEPSEEK_MODEL = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
+# Per-model vLLM backends (direct; LiteLLM proxy is down).
+# Qwen3.6-27B-FP8 is up on .41:8360 (and .42:8360). Gemma-4-31B-IT should be
+# on .43:8008 but is currently connection-refused — start that server to use it.
+BACKENDS = {
+    "qwen3-32b":   {"base_url": os.environ.get("QWEN3_URL", "http://172.17.65.41:8360/v1"),
+                    "model": os.environ.get("QWEN3_MODEL", "qwen3.6-27b-fp8")},
+    "gemma-4-31b": {"base_url": os.environ.get("GEMMA_URL", "http://172.17.65.43:8008/v1"),
+                    "model": os.environ.get("GEMMA_MODEL", "gemma-4-31b-it")},
+}
+# register gemma in MODELS if absent
+MODELS.setdefault("gemma-4-31b", {"proxy_model": "gemma-4-31b-it", "max_tokens": 16000, "temperature": 0.2})
 
 
-def reroute_backends() -> None:
-    """Point Qwen3 at direct vLLM; DeepSeek at the DeepSeek API (if key set)."""
-    pilot.PROXY = VLLM_URL
-    pilot.PROXY_KEY = os.environ.get("VLLM_KEY", "sk-vllm-local")
-    MODELS["qwen3-32b"]["proxy_model"] = VLLM_MODEL
-    if os.environ.get("DEEPSEEK_API_KEY"):
-        MODELS.setdefault("deepseek-v4-pro", {})
-        MODELS["deepseek-v4-pro"]["proxy_model"] = DEEPSEEK_MODEL
-        # DeepSeek needs its own base_url + key; pilot.call_llm uses one PROXY,
-        # so for DeepSeek we override PROXY too when that model is selected.
-    else:
-        print("[backend] DEEPSEEK_API_KEY not set — deepseek-v4-pro runs will be skipped.")
+def _probe(url: str) -> bool:
+    import urllib.request
+    try:
+        urllib.request.urlopen(url + "/models", timeout=4)
+        return True
+    except Exception:
+        return False
+
+
+def reroute_backends() -> list:
+    """Override pilot.call_llm with a per-model router. Returns list of live model keys."""
+    live = []
+    for k, b in BACKENDS.items():
+        if _probe(b["base_url"]):
+            live.append(k)
+        else:
+            print(f"[backend] {k} @ {b['base_url']} NOT reachable — skipping its runs.")
+    MODELS["qwen3-32b"]["proxy_model"] = BACKENDS["qwen3-32b"]["model"]
+    MODELS["gemma-4-31b"]["proxy_model"] = BACKENDS["gemma-4-31b"]["model"]
+
+    from openai import OpenAI
+
+    def call_llm(model_key: str, prompt: str) -> tuple:
+        b = BACKENDS[model_key]
+        cfg = MODELS[model_key]
+        client = OpenAI(base_url=b["base_url"], api_key="sk-vllm-local", timeout=600)
+        t0 = time.time()
+        resp = client.chat.completions.create(
+            model=cfg["proxy_model"],
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=cfg["max_tokens"],
+            temperature=cfg["temperature"],
+        )
+        msg = resp.choices[0].message
+        content = msg.content or ""
+        meta = {"model": cfg["proxy_model"], "base_url": b["base_url"],
+                "elapsed": round(time.time() - t0, 1),
+                "usage": {"completion": getattr(resp.usage, "completion_tokens", None),
+                          "prompt": getattr(resp.usage, "prompt_tokens", None)},
+                "finish": resp.choices[0].finish_reason, "n_content_chars": len(content)}
+        return content, meta
+
+    pilot.call_llm = call_llm  # monkeypatch the per-run engine's LLM call
+    return live
 
 
 def load_frozen_gold() -> dict:
@@ -86,7 +124,7 @@ def main():
     ap.add_argument("--dry-run", action="store_true", help="list what would run, then exit")
     args = ap.parse_args()
 
-    reroute_backends()
+    live_models = reroute_backends()
     gold = load_frozen_gold()
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -98,10 +136,12 @@ def main():
     elif args.full:
         papers = sorted(gold.keys()) if gold else sorted(pilot.PAPER_GOLD)
         ios = [args.io] if args.io else [1, 2, 3]
-        models = [m for m in MODELS if not (m == "deepseek-v4-pro" and not os.environ.get("DEEPSEEK_API_KEY"))]
+        models = [m for m in MODELS if m in live_models]
         runs = [(p, io, m) for p in papers for io in ios for m in models]
     else:
         ap.error("specify --smoke, --paper, or --full")
+    # filter smoke/single to live model
+    runs = [(p, io, m) for (p, io, m) in runs if m in live_models or not live_models]
 
     # Filter to ready runs
     ready, blocked = [], []
