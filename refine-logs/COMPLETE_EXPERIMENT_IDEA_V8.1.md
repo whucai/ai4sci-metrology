@@ -26,34 +26,42 @@ Four structural failure modes (B₁–B₄ / M₁–M₄): **M₁ Substitution**
 | Axis | FactReview (closest) | This work |
 |---|---|---|
 | D1 Unit of analysis | the *claim* (4 statuses) | the *evidence-chain component* (6 components, per-component fidelity) |
-| D2 Observability | binary code-on/off + post-hoc ablation | 3-level causal treatment (IO₁/IO₂/IO₃) |
+| D2 Observability | binary code-on/off + post-hoc ablation | 3-level input-sensitivity intervention (IO₁/IO₂/IO₃) |
 | D3 Trust inflation | no concept | FRR(result) vs FRR(component) = primary DV |
-| D4 Scientometric link | none | ECRF ↔ citations / CD-index / altmetrics / team size |
+| D4 Scientometric link | none | ECRF ↔ citations / CD-index / altmetrics / team size (exploratory) |
 
-**Why R₂ (FactReview-style) is M₁-invisible by construction:** R₂ executes the *released* repo; its agent never chooses data/sample, so it cannot witness substitution. ECRF's setting — agent reconstructs *from the paper* at IO₁/IO₂ — is precisely where M₁ lives. That structural asymmetry is the empirical wedge.
+**The empirical wedge (revised after review):** all regimes R₁/R₂/R₂₊/R₃ score the **same agent reproduction trace**. R₂₊ (FactReview + provenance + hard-code checks) is the "trivially extended" baseline. The wedge is that R₂/R₂₊ answer "did the agent's output match the claim?" while R₃ answers "did the agent reconstruct each *component* validly?" — a substitute data path or hard-coded value can make R₂/R₂₊="Supported" while R₃ flags the process invalid. **If R₂₊ catches most M₁/M₂ (FRR(R₂₊)≈FRR(R₃)), D1 falls back to the continuous per-component score** that enables Study 2 + localization + Study 4 (R₂₊ gives binary flags, not continuous scores).
 
 RPC-Bench (Chen et al. 2026) is motivation only: GPT-5 = 37.46% Informativeness on paper comprehension — the comprehension ceiling that motivates a reconstruction-level instrument.
+
+> **External review (2026-06-29, Codex gpt-5.5 xhigh, 3 rounds):** original design 5/10 (baseline-alignment flaw: R₂ on released repo vs R₃ on agent trace); revised same-trace design = **7/10 path, no fatal structural flaw remains**. See `RESEARCH_REVIEW.md`.
 
 ## 4. The four studies
 
 ### Study 1 — Construct validation: ECRF is multi-dimensional (Block 1, M0/M1 re-analysis)
 Show ECRF components vary semi-independently (disagreement rate, error-localization rate, component correlation). Re-analyze M0 (6 papers, 3 STRICT) + M1 (10-paper framework validation). *Status: largely done (R110).*
 
-### Study 2 — Input sensitivity: IO causally drives ECRF, asymmetrically (Block 2, C2)
-**20 papers × 3 IO × 2 models = 120 runs.** Hypotheses: monotonic ECRF IO₁→IO₃ (H1); significant Component×IO interaction — some components (Data, Result) steep, others (Model) flat or dipping (H2). Isolated Docker `--network none` workspaces, randomized condition order, pre-registered seeds. *Pilot (R100–R103) already passed all 4 green-light gates; full pool R120 finalized (19/20 + 1 Mgmt slot pending).*
+### Study 2 — Controlled input-sensitivity intervention (Block 2, C2)
+**20 papers × 3 IO × 2 models = 120 runs.** Hypotheses: monotonic ECRF IO₁→IO₃ (H1); significant Component×IO interaction — some components (Data, Result) steep, others (Model) flat or dipping (H2). Isolated Docker `--network none` workspaces, randomized condition order, pre-registered seeds. **Causal language limited to the within-paper randomized artifact package** (not "observability determines reproducibility" in the wild) — IO levels are experimenter-built, papers stratified by predicted slope, some IO₂/IO₃ collapse. *Pilot (R100–R103) passed all 4 green-light gates; full pool R120 finalized (19/20 + 1 Mgmt slot pending). **Gate: do not launch full Study 2 until R121 gold chains frozen.***
 
 ### Study 3 — MAIN: trust inflation + audit correction (Block 3a + 3 + 4 + 6, C1)
-The dominant contribution. Three regimes on the **same runs**:
-- **R₁** result-level (did numbers match?)
-- **R₂** FactReview-style claim-level execution audit — **faithfully replicated** (MinerU parse → schema-constrained claim extraction → Semantic Scholar lit + RefCopilot → Docker Run-Review-Fix K=3 wrapper-only → 4-status verdicts). Calibrated against FactReview's own 35-paper benchmark (must reproduce their 4.86/5 rubric + 17%-status-change ablation within tolerance before trusting R₂ on our pool).
-- **R₃** ECRF component-level audit (task-contingent).
+The dominant contribution. **Four regimes on the same agent reproduction trace** (revised after external review — the original R₂-on-released-repo vs R₃-on-agent-trace was a baseline-alignment flaw):
+- **R₁** result-level (did the agent's numbers match the paper's?)
+- **R₂** FactReview-style claim-level audit applied to the **agent's trace** (claim extraction → S2 lit + RefCopilot → execute the agent's code K=3 wrapper-only → 4-status verdict; no component-provenance scoring)
+- **R₂₊** R₂ + two trivial bolt-ons: data/sample provenance check + hard-coded-number scanner (the "FactReview extended" baseline reviewers demand)
+- **R₃** ECRF component-level audit of the same trace (task-contingent)
+- **Prior-art calibration cell (separate):** original FactReview on released repos of its 35-paper benchmark — must reproduce 4.86/5 + 17%-status-change within tolerance. NOT a head-to-head baseline.
 
-**Headline result:** FRR(R₁) > FRR(R₂) > FRR(R₃), each gap McNemar p<0.05.
-**Killer evidence:** ≥3 human-adjudicated cases where R₂ = "Supported" (released-code output matches the claimed number) but R₃ reveals M₁ (data-path substitution → coincidentally similar numbers) or M₂ (paper values hard-coded). These are invisible to R₂ by construction. Each case: automated rule → audit trace → two-reviewer adjudication.
-**Generalization asymmetry:** R₂ is Inconclusive at IO₁/IO₂ (no executable); R₃ still scores components. Report the coverage fraction where R₂ can't run but R₃ can.
+**Headline result:** FRR(R₁) > FRR(R₂) > FRR(R₂₊) > FRR(R₃), each adjacent gap McNemar p<0.05.
+**Killer evidence — "process-invalid supported" panel, split into two strata (not collapsed):**
+- **S-exact**: numeric match + R₃ invalid (M₂ hard-code populates; M₁-exact rare ~1–5%)
+- **S-directional**: directional/qualitative match + R₃ invalid (M₁ substitution ~10–25%)
+- **Fair-baseline rule (pre-register before scoring):** R₂ may call "Supported" only at the extracted claim's evidence-target granularity; numeric claims matched only by sign → "Partially-supported." Report Supported-exact vs Supported-directional separately; no post-hoc downgrading. Metric: P(R₂/R₂₊=Supported | R₃=invalid) + bootstrap CI + full denominator + blinded two-adjudicator. Target 5–8 cases across ≥2 papers/modes.
+**D1 fallback (pre-registered):** if FRR(R₂₊) ≈ FRR(R₃), reframe D1 as the **continuous per-component fidelity score** enabling Study 2's Component×IO + localization + Study 4's continuous-variable correlation (R₂₊ gives binary flags, not continuous scores). Carried by Study 2 + reliability + localization, NOT Study 4.
+**Generalization asymmetry:** R₂/R₂₊ Inconclusive at IO₁/IO₂ (no executable agent code); R₃ still scores. Report the coverage fraction where R₂/R₂₊ can't run but R₃ can.
 
-### Study 4 — Scientometric linkage (Block 7, C3, the field-facing capstone)
-Regress agent-measured ECRF (and component-ECRF) on citations / CD-disruption / altmetrics / team size over the 20-paper deep set + the 115-paper SciSciBench substrate (join to OpenAlex/SciSciNet). Controls: field, year, team size. Pre-registered Hₛ₁–Hₛ₃. **No prior execution-audit work (incl. FactReview) can test this** — the IV didn't exist.
+### Study 4 — Exploratory ecological validation (Block 7, C3, DEMOTED)
+Regress agent-measured ECRF (and component-ECRF) on citations / CD-disruption / altmetrics / team size over the 20-paper deep set + the 115-paper SciSciBench substrate (join to OpenAlex/SciSciNet). Controls: field, year, team size. Pre-registered Hₛ₁–Hₛ₃. **Exploratory, demoted after review**: observational, confounded (selection/fame/data-availability/age/team/venue/openness). Licenses "ECRF associated with impact," NOT "reproducibility predicts impact." Appendix for NeurIPS/ICML; modest main study only for Scientometrics. **No GPU spent until C1/C2 land.**
 
 ## 5. Paper pool (R120, finalized 2026-06-25)
 
@@ -63,20 +71,20 @@ Models (tiered): open-weight Qwen3-32B (local) / low-cost DeepSeek-V3/V4-Pro API
 
 ## 6. Run order
 
-M1 mini-pilot (done, R100–R103, 4 gates pass) → M2 Study 2 full (120 runs, gated on R121 Layer-1 gold chains, 2-annotator) → M3 Study 3 (R₁/R₂/R₃ re-scoring + M₁–M₄ adjudication + Layer-2 validity) → M4 simplicity (R₃ vs overbuilt R₃′ vs threshold-lowered R₂) → M5 frontier robustness → M6 Study 4 scientometric regression.
+M1 mini-pilot (done, R100–R103, 4 gates pass) → **freeze R121 gold chains (20/20, 2 annotators, per-component α/ICC)** → M2 Study 2 full (120 runs) → M3 Study 3 (same-trace R₁/R₂/R₂₊/R₃ re-scoring + S-exact/S-directional adjudication + Layer-2 validity) → repeat-seed stability (36 runs) → M4 simplicity (R₃ vs overbuilt R₃′ vs threshold-lowered R₂₊) → M5 frontier robustness (36 runs) → M6 Study 4 exploratory (appendix). See `RESEARCH_REVIEW.md` for the 17-item TODO + stop-the-presses gates.
 
 ## 7. What success looks like (the paper's Figure 1 + Table 3)
 
-- **Figure 1**: the IO→ECRF→RIB chain as a measurement model, with the 3-regime ladder R₁→R₂→R₃ showing FRR falling at each step and the R₂="Supported"/R₃=M₁ killer-case panel.
-- **Table 3**: FRR(R₁), FRR(R₂), FRR(R₃) + McNemar p + bootstrap CI; the killer-case list with component localization.
-- **Table 4 (Study 4)**: ECRF ↔ impact β, with component-ECRF ΔR² over result-match.
+- **Figure 1**: the IO→ECRF→RIB chain as a measurement model, with the **same-trace 4-regime ladder R₁→R₂→R₂₊→R₃** showing FRR falling at each step and the S-exact/S-directional killer-case panel.
+- **Table 3**: FRR(R₁/R₂/R₂₊/R₃) + McNemar p + bootstrap CI; the killer-case list (S-exact + S-directional) with component localization; R₂₊ ablation.
+- **Table 4 (Study 4, appendix for ML venues)**: ECRF ↔ impact β, exploratory.
 
 ## 8. What would falsify it
 
-- **FRR(R₂) ≈ FRR(R₃)** (no trust-inflation gap over claim-level audit) → C1 collapses to "result-level is biased, FactReview already fixes it"; contribution shrinks to D2 + D4. Pre-registered fallback.
-- **No R₂="Supported"/R₃=M₁-or-M₂ case** in 120 runs → the "invisible by construction" claim is theoretical only; weaken to "component audit localizes breaks (Block 4)" without the killer contrast.
+- **FRR(R₂₊) ≈ FRR(R₃)** (provenance + hard-code checks catch most M₁/M₂) → D1 *detection* advantage collapses; fall back to D1 = continuous per-component measurement (must then show reliability + Component×IO + localization + continuous-score-predicts-validity). If reliability also fails, paper reverts to negative pilot/method note.
+- **No S-exact/S-directional killer case** in 120 runs → "invisible by construction" becomes theoretical only; weaken to "component audit localizes breaks (Block 4)" without the killer contrast.
 - **IO gradient absent at frontier** (A3) → scope statement, not theory death.
-- **Study 4 null** → ECRF is still a valid measurement instrument; the scientometric capstone becomes "reproducibility is *not* correlated with impact" (itself a publishable finding).
+- **Study 4 null** → ECRF is still a valid instrument; "reproducibility not correlated with impact" is itself publishable.
 
 ## 9. Venue (open)
 
