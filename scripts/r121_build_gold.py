@@ -573,28 +573,54 @@ GOLD.append(paper(
                     "io_collapse": "none"},
     notes="Replacement for traag2025 (slot #9). VERIFIED clean IO3: lu-liu/hotstreaks repo contains code_bursts.py (14KB) + data.zip (85MB). SoS, METHOD with numerical KS targets."))
 
+# ===== SLOT #20 REPLACEMENT (VERIFIED) =====
+GOLD.append(paper(
+    "arts2021_patent_nlp", "Natural language processing to identify the creation and impact of new technologies in patent text: Code, data, and new measures",
+    "Management_Strategy", "Research Policy", 2021, "METHOD", "High", "A/B",
+    data=comp(1.0, "Public USPTO patent data on Zenodo (static, non-API)",
+              data_source="All USPTO utility patents granted up to May 2018",
+              data_description="Full-text US patent claims/descriptions for NLP novelty+impact+breakthrough indicators",
+              access="public", provenance="Zenodo 10.5281/zenodo.3515985 (static bulk)"),
+    sample=comp(1.0, "USPTO utility patents to May 2018; awards-linked validation subset",
+                N="all USPTO utility patents to 2018-05", time_window="USPTO coverage to 2018-05",
+                unit_of_analysis="patent", filter_rules=["utility patents", "award-linked case-control subset"]),
+    indicator=comp(1.0, "NLP novelty + impact + breakthrough indicators; code public",
+                   formula="NLP-based novelty/impact/breakthrough measures on patent text; validated vs classification+citation baselines",
+                   parameters=["n-gram/term extraction", "award case-control validation"],
+                   computation_steps=["extract patent text", "compute NLP novelty/impact", "validate vs awards"]),
+    model=comp(1.0, "Case-control validation; code public (sam-arts/respol_patents_code, Python)",
+               spec_elements=["case-control", "NLP indicators", "baseline comparison (classification+citations)"],
+               estimator="case-control", coefficients={"award_identification_rate": 0.73}, fixed_effects=[],
+               pinned_requirements="github.com/sam-arts/respol_patents_code"),
+    result=comp(1.0, "73% award identification rate + case-control validation targets; code regenerates",
+                target_tables=["Tables: case-control validation, indicator-vs-baseline"],
+                target_values=[{"label": "award_identification_rate", "value": 0.73, "tolerance": "exact-via-code"}],
+                expected_direction="positive"),
+    claim=comp(0.5, "Claim-result distance small-moderate",
+               conclusion_claims=["NLP on patent text identifies creation and impact of new technologies better than classification+citation baselines"],
+               claim_scope="general", uncertainty="stated-qualifiers"),
+    expected_breaks={"B1": {"likely": False, "component": "—", "note": "data+code public"},
+                     "B2": {"likely": True, "component": "result_table", "note": "hard-code 73% rate (low risk given code)"},
+                     "B3": {"likely": False, "component": "—"}, "B4": {"likely": False, "component": "—"}},
+    io_feasibility={"IO1": {"feasible": "yes", "rationale": "NLP method described in paper"},
+                    "IO2": {"feasible": "yes"}, "IO3": {"feasible": "yes", "rationale": "public static data (Zenodo) + public code (GitHub)"},
+                    "io_collapse": "none"},
+    notes="Replacement for zheng2025_social_media_retraction (slot #20). VERIFIED clean IO3: Zenodo 10.5281/zenodo.3515985 (static bulk USPTO data) + github.com/sam-arts/respol_patents_code (Python). USPTO-based, Mgmt/Strategy (KU Leuven dept of management, strategy and innovation). NOTE: 3rd KU Leuven/Arts paper (#6 arts2021, #11 schaper2025) — near-duplicate of #6 but distinct load-bearing component (novelty/impact/breakthrough vs claims-structure); write-up caveat."))
+
 # ===== HELD REPLACEMENT SLOT =====
-HELD = [
-    {"slot": 20, "old_slug": "zheng2025_social_media_retraction",
-     "reason": "all data licensed/API-gated (WoS+Altmetric+Twitter+RetractionWatch), no IO2/IO3 distinction",
-     "status": "HELD — replacement pending",
-     "candidates": [
-         {"slug": "hossain2025_similarity_reproducibility", "domain": "Management_Strategy",
-          "note": "UIC (Malik/Koop/Brown/Hossain) — artefact not confirmed (GitHub API rate-limited); needs author-GitHub check"},
-         {"fallback": "a Retraction-Watch-based Management paper with public data (parallel to zheng2025_male)"}],
-     "blocker": "Mgmt-domain public-data+code paper must be confirmed before freeze"},
-]
+HELD = []
 
 def main():
     doc = {
-        "version": "v1-draft",
-        "date": "2026-06-25",
+        "version": "v1-frozen",
+        "date": "2026-06-29",
         "frame": "v7.2 (IO → ECRF → TCE)",
         "n_papers_stable": len(GOLD),
         "n_slots_held": len(HELD),
-        "annotation_status": "draft_primary — awaiting 2nd annotator + adjudication",
+        "annotation_status": "draft_primary frozen — awaiting 2nd annotator (B) + adjudication for R121 completion; pool composition STABLE",
         "fidelity_scale": {"1.0": "FULL", "0.5": "PARTIAL", "0.0": "NONE"},
-        "note": "gold_fidelity = gold-side CEILING (best reachable given observability), NOT agent achieved score. Fields marked 'pending' await human-annotator confirmation (R098 adjudication style). r121_gold_v1 is NOT FROZEN: slot #20 (Mgmt replacement) still pending; slot #9 filled with verified liu2018_hotstreaks.",
+        "frozen": True,
+        "note": "gold_fidelity = gold-side CEILING (best reachable given observability), NOT agent achieved score. Fields marked 'pending' await human-annotator confirmation (R098 adjudication style). POOL STABLE: 20/20 slots filled (#9 liu2018_hotstreaks, #20 arts2021_patent_nlp, both verified clean IO3). 2-annotator adjudication still required before R122 launch (component-stratified α ≥ 0.70).",
         "stable_papers": GOLD,
         "held_replacement_slots": HELD,
     }
