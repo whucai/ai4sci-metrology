@@ -1,0 +1,36 @@
+{
+  "freeze_date": "2026-06-29",
+  "artifacts": {
+    "gold_v1_r3": {
+      "path": "refine-logs/r122_freeze/gold_v1_r3.json",
+      "sha256": "78efaa05f234c9fc37b2bc6be718f283486ae156bbef7e695f84ab38eaacd140",
+      "n_papers": 20
+    },
+    "ecrf_v2_scorer": {
+      "path": "refine-logs/r122_freeze/ecrf_v2_scorer.py",
+      "sha256": "c77d02ae79475a2f51c7d3350605181ce446c011161ea7a80b565b3f230fe59d"
+    },
+    "ecrf_v1_scorer": {
+      "path": "refine-logs/r122_freeze/ecrf_v1_scorer.py",
+      "sha256": "6697105a83f1e3a35be79d3ae58ecdfacf911eb082e237e39f4a6fb0063b5f40"
+    }
+  },
+  "v1_weights": {
+    "data_source": 0.1,
+    "sample": 0.15,
+    "indicator": 0.15,
+    "model": 0.1,
+    "result": 0.35,
+    "claim": 0.15,
+    "sum": 1.0
+  },
+  "v1_gates": {
+    "a_no_exec_result": "cap 0.60",
+    "b_result_zero": "cap 0.55",
+    "c_synthetic_data": "cap 0.50",
+    "d_claim_without_result": "cap 0.60",
+    "e_paper_reported_as_computed_B2": "cap 0.50"
+  },
+  "v2_recognition": "v1 weights+gates unchanged; recognition rules: data_source=file-load credit; sample=N+window; result=broader evidence + line classifier (PAPER_REPORTED/DATA_SUB/COMPUTED/SYNTHETIC)",
+  "immutability": "Gold chain, scorer, weights, and gates are FROZEN for R122-R124. Any correction during the run MUST go through a separate patch record (refine-logs/r122_freeze/patches/), not silent overwriting. Runs scored against the frozen reference."
+}
