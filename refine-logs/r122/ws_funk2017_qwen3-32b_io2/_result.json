@@ -1,0 +1,121 @@
+{
+  "paper": "funk2017",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722084,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.41:8360/v1",
+    "elapsed": 94.9,
+    "usage": {
+      "completion": 7784,
+      "prompt": 16349
+    },
+    "finish": "stop",
+    "n_content_chars": 14386
+  },
+  "llm_response_chars": 14386,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.55,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 419,
+    "stderr_chars": 495
+  },
+  "stdout": "Loading and inspecting data...\nLoaded data shape: (40000, 11)\nColumns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\nCould not automatically detect citation structure. Assuming patent-level with embedded citation lists or standard columns.\nComputing CD5, mCD5, I5 indexes...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 314, in <module>\n    main()\n  File \"/workspace/script.py\", line 232, in main\n    idx_df = compute_indexes(patent_df, citations_df, col_map)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 95, in compute_indexes\n    pred_map = {pid: set() for pid in patent_df[col_map['patent_id']]}\n                                                ~~~~~~~^^^^^^^^^^^^^\nKeyError: 'patent_id'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['nber', 'patent']"
+      },
+      "sample": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['cdt', 'cd5', 'mcdt', 'mcd5', 'destabil', 'consolid']"
+      },
+      "model": {
+        "score": 0.5,
+        "rationale": "partial: ['ols']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['0.07', '0.23', '0.31', '1.75']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['destabiliz', 'consolid', 'federal']"
+      }
+    },
+    "overall_ecrf": 0.75
+  },
+  "status": "DONE",
+  "t_end": 1782722179,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 1.0,
+      "B_round3": 0.5,
+      "final": 0.75,
+      "disagreement": 0.5,
+      "method": "mean (adjacent)"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

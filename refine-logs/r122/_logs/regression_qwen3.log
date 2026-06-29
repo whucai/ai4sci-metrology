@@ -1,0 +1,59 @@
+[backend] gemma-4-31b @ http://172.17.65.43:8008/v1 NOT reachable — skipping its runs.
+[plan] 15 ready, 45 blocked
+  BLOCKED arts2021_patent_nlp io1 qwen3-32b: no IO package at pilot/arts2021_patent_nlp
+  BLOCKED arts2021_patent_nlp io2 qwen3-32b: no IO package at pilot/arts2021_patent_nlp
+  BLOCKED arts2021_patent_nlp io3 qwen3-32b: no IO package at pilot/arts2021_patent_nlp
+  BLOCKED bentley2023_disruption io1 qwen3-32b: no IO package at pilot/bentley2023_disruption
+  BLOCKED bentley2023_disruption io2 qwen3-32b: no IO package at pilot/bentley2023_disruption
+  BLOCKED bentley2023_disruption io3 qwen3-32b: no IO package at pilot/bentley2023_disruption
+  BLOCKED deng2023_enhancing_disruption io1 qwen3-32b: no IO package at pilot/deng2023_enhancing_disruption
+  BLOCKED deng2023_enhancing_disruption io2 qwen3-32b: no IO package at pilot/deng2023_enhancing_disruption
+  BLOCKED deng2023_enhancing_disruption io3 qwen3-32b: no IO package at pilot/deng2023_enhancing_disruption
+  BLOCKED donner2024_data_inaccuracy io1 qwen3-32b: no IO package at pilot/donner2024_data_inaccuracy
+
+[1/15] arts2021 io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_arts2021_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.667
+
+[2/15] arts2021 io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_arts2021_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.417
+
+[3/15] arts2021 io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_arts2021_qwen3-32b_io3
+  status=DONE ecrf(v0)=0.583
+
+[4/15] bikard2013 io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_bikard2013_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.833
+
+[5/15] bikard2013 io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_bikard2013_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.667
+
+[6/15] bikard2013 io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_bikard2013_qwen3-32b_io3
+  status=DONE ecrf(v0)=0.667
+
+[7/15] funk2017 io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_funk2017_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.833
+
+[8/15] funk2017 io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_funk2017_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.75
+
+[9/15] funk2017 io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_funk2017_qwen3-32b_io3
+  status=DONE ecrf(v0)=0.583
+
+[10/15] maddi2024 io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_maddi2024_qwen3-32b_io1
+  status=DONE ecrf(v0)=1.0
+
+[11/15] maddi2024 io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_maddi2024_qwen3-32b_io2
+  status=DONE ecrf(v0)=1.0
+
+[12/15] maddi2024 io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_maddi2024_qwen3-32b_io3
+  status=DONE ecrf(v0)=0.917
+
+[13/15] petersen2024 io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_petersen2024_qwen3-32b_io1
+  status=EXEC_NONZERO ecrf(v0)=0.667
+
+[14/15] petersen2024 io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_petersen2024_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.583
+
+[15/15] petersen2024 io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_petersen2024_qwen3-32b_io3
+  status=DONE ecrf(v0)=0.75
+
+[done] 15 runs in 2106.3s -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122

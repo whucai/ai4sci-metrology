@@ -1,0 +1,19 @@
+# Sample Notes — Wu, Wang & Evans 2019 ("Large teams develop, small teams disrupt")
+
+## Sample
+- **This package's data**: `raw_data/sciscinet_sample.parquet` — 40,000 papers, a random sample drawn from SciSciNet (Lin et al. 2023).
+- **Original paper's data**: >65,000,000 papers, patents, and software products, 1954–2014, from Microsoft Academic Graph (MAG) + USPTO + OpenAlex.
+
+## Reproduction scope
+- The full 65M dataset is not available locally; this 40K sample is the reproduction substrate.
+- The sample is sufficient to reproduce the paper's DIRECTIONAL finding (small teams disrupt more than large teams) but NOT the exact magnitudes reported on 65M works.
+- Expect results labeled DATA_SUB (substitute sample) when comparing to the paper's 65M numbers.
+
+## Key thresholds (from the paper)
+- Team size: small teams (≤3 authors) vs large teams (≥10 authors, or ≥4 for the broader split).
+- Outcome: disruption_score (CD-index). Small teams → higher (more positive); large teams → lower (more consolidating/negative).
+- The paper also reports that large teams build on more recent/popular work; small teams reach deeper into the past.
+
+## Known gold values (paper-reported, for PAPER_REPORTED comparison)
+- Direction: small-team mean disruption_score > large-team mean disruption_score.
+- The paper reports the disruption gap holds across fields, time periods, and team-size definitions.

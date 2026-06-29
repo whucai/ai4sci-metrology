@@ -1,0 +1,119 @@
+{
+  "paper": "maddi2024",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722415,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.41:8360/v1",
+    "elapsed": 89.2,
+    "usage": {
+      "completion": 7230,
+      "prompt": 11488
+    },
+    "finish": "stop",
+    "n_content_chars": 6118
+  },
+  "llm_response_chars": 6118,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.0,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 854,
+    "stderr_chars": 1975
+  },
+  "stdout": "DATA_STATUS raw_data_available = False\nDATA_STATUS reference_code_available = False\nPAPER_REPORTED N_final = 57482\nPAPER_REPORTED threshold_significant_words = 947\nPAPER_REPORTED avg_report_words = 416.3\nPAPER_REPORTED median_report_words = 302\nPAPER_REPORTED excluded_iqr_outliers = 212\nPAPER_REPORTED excluded_influential_obs = 30\nPAPER_REPORTED oa_rate_publons = 0.391\nPAPER_REPORTED oa_rate_wos = 0.287\nPAPER_REPORTED funding_rate_publons = 0.737\nPAPER_REPORTED funding_rate_wos = 0.539\nPAPER_REPORTED discretization_bins = [0, 232, 535, 946, 1612, 2891]\nPAPER_REPORTED estimator = GLM/OLS on log(1+citations) with HC3 robust SE\n\nDATA UNAVAILABLE: Raw data files not found. Constructing documented synthetic stub to demonstrate the methodological pipeline.\nNOTE: All numerical outputs below are labeled SYNTHETIC. Exact reproduction is data-blocked.\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 76, in <module>\n    model_init = sm.OLS(y, X).fit()\n                 ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 924, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 749, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 203, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 270, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 95, in __init__\n    self.data = self._handle_data(endog, exog, missing, hasconst,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 135, in _handle_data\n    data = handle_data(endog, exog, missing, hasconst, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 675, in handle_data\n    return klass(endog, exog=exog, missing=missing, hasconst=hasconst,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 84, in __init__\n    self.endog, self.exog = self._convert_endog_exog(endog, exog)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 509, in _convert_endog_exog\n    raise ValueError(\"Pandas data cast to numpy dtype of object. \"\nValueError: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['publons', 'wos']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['57482', '2009', '947']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['reviewer', 'iqr', 'fisher']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['glm', 'log(1', 'log1p']"
+      },
+      "result": {
+        "score": 0.5,
+        "rationale": "partial: ['947']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['longer', 'threshold']"
+      }
+    },
+    "overall_ecrf": 0.917
+  },
+  "status": "DONE",
+  "t_end": 1782722505,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 0.0,
+      "B_round3": 0.0,
+      "final": 0.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 0.5,
+      "final": 0.75,
+      "disagreement": 0.5,
+      "method": "mean (adjacent)"
+    },
+    "indicator": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

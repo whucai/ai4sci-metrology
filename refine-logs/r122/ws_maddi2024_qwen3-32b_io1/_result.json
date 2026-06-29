@@ -1,0 +1,119 @@
+{
+  "paper": "maddi2024",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722231,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.41:8360/v1",
+    "elapsed": 98.5,
+    "usage": {
+      "completion": 8186,
+      "prompt": 17871
+    },
+    "finish": "stop",
+    "n_content_chars": 11003
+  },
+  "llm_response_chars": 11003,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.97,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 504
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 36, in <module>\n    'pub_year': np.random.choice(range(2009, 2021), size=N_INITIAL, p=[0.01, 0.02, 0.03, 0.04, 0.06, 0.08, 0.10, 0.12, 0.25, 0.25, 0.08, 0.06]),\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 975, in numpy.random.mtrand.RandomState.choice\nValueError: probabilities do not sum to 1\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['publons', 'web of science', 'wos']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['2009', '2020', '947']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['report length', 'reviewer', 'iqr']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['log(1', 'log1p']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['947', 'positive']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['longer', 'positive', 'threshold']"
+      }
+    },
+    "overall_ecrf": 1.0
+  },
+  "status": "DONE",
+  "t_end": 1782722331,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 0.0,
+      "B_round3": 0.0,
+      "final": 0.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 0.5,
+      "final": 0.75,
+      "disagreement": 0.5,
+      "method": "mean (adjacent)"
+    },
+    "indicator": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

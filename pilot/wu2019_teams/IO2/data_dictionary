@@ -1,0 +1,22 @@
+# Data Dictionary — sciscinet_sample.parquet (Wu, Wang & Evans 2019)
+
+Source: SciSciNet (Lin et al. 2023), 40,000-paper random sample.
+Original paper analyzes >65M papers, patents, and software products spanning 1954–2014;
+this sample is a stratified random subset for reproduction.
+
+| column | type | description |
+|---|---|---|
+| paper_id | str | unique paper identifier (SciSciNet) |
+| year | int | publication year |
+| author_count | int | number of authors on the paper |
+| institution_count | int | number of distinct institutions |
+| reference_count | int | number of references (citations made) |
+| citation_count | int | total citations received |
+| citation_count_5y | int | citations received within 5 years |
+| disruption_score | float | CD-disruption index in [-1, 1]; positive = disrupting, negative = consolidating |
+| novelty_score | float | novelty indicator |
+| conventionality_score | float | conventionality indicator |
+| doc_type | str | document type (paper / patent / software) |
+
+Key columns for Wu2019 reproduction: `author_count` (team size), `disruption_score` (the outcome).
+The paper's central claim: smaller teams tend to *disrupt* (higher disruption_score), larger teams tend to *develop* (lower/consolidating disruption_score).

@@ -1,0 +1,119 @@
+{
+  "paper": "funk2017",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782721991,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.41:8360/v1",
+    "elapsed": 91.5,
+    "usage": {
+      "completion": 7591,
+      "prompt": 18797
+    },
+    "finish": "stop",
+    "n_content_chars": 10994
+  },
+  "llm_response_chars": 10994,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.05,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1862,
+    "stderr_chars": 335
+  },
+  "stdout": "============================================================\nDESCRIPTIVE STATISTICS (Synthetic Placeholder)\n============================================================\n               CD5         mCD5           I5\ncount  4841.000000  4841.000000  5000.000000\nmean      0.431694     0.351946     2.515800\nstd       0.442765     0.422135     1.595199\nmin      -1.000000    -1.000000     0.000000\n25%       0.166667     0.062500     1.000000\n50%       0.500000     0.250000     2.000000\n75%       0.750000     0.562500     4.000000\nmax       1.000000     1.000000    10.000000\n\nKEY CORRELATIONS WITH CD5 INDEX\nRESULT corr_CD5_gov_interest = -0.0156\nRESULT corr_CD5_firm = -0.0176\nRESULT corr_CD5_university = -0.0123\nRESULT corr_CD5_impact_I5 = 0.1489\n\n============================================================\nPATENT-LEVEL REGRESSION RESULTS\n============================================================\n\n--- Model: Negative Binomial for Impact (I5) ---\nNB Model warning: model is missing required outcome variables\n\n--- Model: OLS for CD5 Index ---\nOLS CD5 warning: model is missing required outcome variables\n\n--- Model: OLS for mCD5 Index ---\nOLS mCD5 warning: model is missing required outcome variables\n\n============================================================\nCOMPARISON TO PAPER REPORTED DIRECTIONS\n============================================================\nPAPER_REPORTED: CD5 uncorrelated with impact (r \u2248 0.03)\nCOMPUTED:      CD5 correlation with impact = 0.1489\nPAPER_REPORTED: Firms produce more consolidating (negative CD5)\nCOMPUTED:      Firm correlation with CD5 = -0.0176\nPAPER_REPORTED: Universities/Gov produce more destabilizing (positive CD5)\nCOMPUTED:      University correlation with CD5 = -0.0123\nCOMPUTED:      Gov interest correlation with CD5 = -0.0156\nPAPER_REPORTED: Gov interest negatively associated with impact in some specs\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 200, in <module>\n    print(f\"COMPUTED:      Gov interest coef in I5 model = {nb_model.params['gov_interest']:.4f if 'nb_model' in locals() else 'N/A'}\")\n                                                            ^^^^^^^^\nNameError: name 'nb_model' is not defined\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['nber', 'uspto', 'patent']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['1977', '2005', 'utility patent']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['cdt', 'cd5', 'mcdt', 'mcd5', 'destabil', 'consolid']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'negative binomial', 'regression']"
+      },
+      "result": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['destabiliz', 'consolid', 'commercial engagement', 'federal']"
+      }
+    },
+    "overall_ecrf": 0.833
+  },
+  "status": "DONE",
+  "t_end": 1782722084,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 1.0,
+      "B_round3": 0.5,
+      "final": 0.75,
+      "disagreement": 0.5,
+      "method": "mean (adjacent)"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

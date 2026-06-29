@@ -1,0 +1,121 @@
+{
+  "paper": "bikard2013",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782721820,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.41:8360/v1",
+    "elapsed": 94.4,
+    "usage": {
+      "completion": 7661,
+      "prompt": 12125
+    },
+    "finish": "stop",
+    "n_content_chars": 11726
+  },
+  "llm_response_chars": 11726,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 11.82,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 130,
+    "stderr_chars": 558
+  },
+  "stdout": "Loaded 40000 records from /workspace/raw_data/sciscinet_sample.parquet\nWARNING: Column 'author_id' missing. Creating placeholder.\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 127, in <module>\n    sci_year['year_dummies'] = pd.get_dummies(sci_year['year'], drop_first=True)\n    ~~~~~~~~^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4301, in __setitem__\n    self._set_item_frame_value(key, value)\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4459, in _set_item_frame_value\n    raise ValueError(\nValueError: Cannot set a DataFrame with multiple columns to the single column year_dummies\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.5,
+        "rationale": "partial: ['faculty']"
+      },
+      "sample": {
+        "score": 0.5,
+        "rationale": "partial: ['1976']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['coauthor', 'collaboration', 'credit']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['ols', 'fixed effect']"
+      },
+      "result": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['collaboration', 'credit', 'tradeoff']"
+      }
+    },
+    "overall_ecrf": 0.667
+  },
+  "status": "DONE",
+  "t_end": 1782721926,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 0.0,
+      "B_round3": 0.0,
+      "final": 0.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 1.0,
+      "B_round3": 0.5,
+      "final": 0.75,
+      "disagreement": 0.5,
+      "method": "mean (adjacent)"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

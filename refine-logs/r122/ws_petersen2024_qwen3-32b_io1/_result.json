@@ -3,41 +3,36 @@
   "model": "qwen3-32b",
   "io": 1,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782720464,
+  "t_start": 1782722505,
   "io2_data_files": [],
   "io3_ref_code_files": [],
   "llm": {
     "model": "qwen3.6-27b-fp8",
-    "elapsed": 115.2,
+    "base_url": "http://172.17.65.41:8360/v1",
+    "elapsed": 145.2,
     "usage": {
-      "completion": 9556,
+      "completion": 11477,
       "prompt": 17904
     },
     "finish": "stop",
-    "n_content_chars": 13331
+    "n_content_chars": 13297
   },
-  "llm_response_chars": 13331,
+  "llm_response_chars": 13297,
   "code_parsed": true,
   "exec": {
-    "exit_code": 0,
-    "elapsed": 0.8,
-    "network_blocked": true,
-    "network_probe": {
-      "reachable": false,
-      "err": "OSError"
-    },
-    "files_written": [
-      "_audit_net.json",
-      "_audit_probe.py"
-    ],
-    "stdout_chars": 264,
-    "stderr_chars": 727
+    "exit_code": -1,
+    "elapsed": 600.1,
+    "network_blocked": null,
+    "network_probe": null,
+    "files_written": [],
+    "stdout_chars": 0,
+    "stderr_chars": 39
   },
-  "stdout": "============================================================\nREPRODUCING QUANTITATIVE ANALYSIS: PETERSEN ET AL. (2024)\n============================================================\n\n[1] EMPIRICAL REGRESSION ANALYSIS (Eq. 3)\n----------------------------------------\n",
-  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 221, in <module>\n    reg_coefs = run_regression(mag_stub)\n                ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 205, in run_regression\n    beta = np.linalg.lstsq(X, y, rcond=None)[0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/numpy/linalg/linalg.py\", line 2326, in lstsq\n    x, resids, rank, s = gufunc(a, b, rcond, signature=signature, extobj=extobj)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nnumpy.core._exceptions._UFuncInputCastingError: Cannot cast ufunc 'lstsq_n' input 0 from dtype('O') to dtype('float64') with casting rule 'same_kind'\n",
+  "stdout": "",
+  "stderr": "Isolated execution timed out after 600s",
   "isolation": {
-    "network_blocked": true,
-    "network_egress_ok": true
+    "network_blocked": null,
+    "network_egress_ok": false
   },
   "ecrf": {
     "components": {
@@ -59,7 +54,7 @@
       },
       "result": {
         "score": 0.0,
-        "rationale": "no gold signal matched"
+        "rationale": "no gold signal matched | execution failed/skipped \u2192 capped"
       },
       "claim": {
         "score": 1.0,
@@ -68,8 +63,8 @@
     },
     "overall_ecrf": 0.667
   },
-  "status": "DONE",
-  "t_end": 1782720580,
+  "status": "EXEC_NONZERO",
+  "t_end": 1782723250,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

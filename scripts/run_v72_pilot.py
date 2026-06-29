@@ -90,6 +90,15 @@ PAPER_GOLD = {
         "result": ["0.099", "-0.069", "0.099", "5.4", "9.6"],
         "claim": ["collaboration", "credit", "tradeoff", "free-rid"],
     },
+    "wu2019_teams": {
+        "domain": "SoS", "task": "STRICT",
+        "data_source": ["sciscinet", "microsoft academic", "mag", "uspto", "patent", "software", "openalex"],
+        "sample": ["65 million", "65,000,000", "1954", "2014", "40,000", "40000", "team size"],
+        "indicator": ["disruption", "cd", "destabiliz", "consolid", "disrupt"],
+        "model": ["mann", "whitney", "mean", "team size", "regression", "log"],
+        "result": ["positive", "higher", "small", "large"],
+        "claim": ["small teams", "disrupt", "large teams", "develop", "new ideas", "existing"],
+    },
 }
 
 
