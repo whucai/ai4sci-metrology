@@ -82,17 +82,27 @@ M1 mini-pilot (done, R100–R103, 4 gates pass) → **freeze R121 gold chains (2
 ## 8. What would falsify it
 
 - **FRR(R₂₊) ≈ FRR(R₃)** (provenance + hard-code checks catch most M₁/M₂) → D1 *detection* advantage collapses; fall back to D1 = continuous per-component measurement (must then show reliability + Component×IO + localization + continuous-score-predicts-validity). If reliability also fails, paper reverts to negative pilot/method note.
-- **No S-exact/S-directional killer case** in 120 runs → "invisible by construction" becomes theoretical only; weaken to "component audit localizes breaks (Block 4)" without the killer contrast.
+- **No S-exact/S-directional killer case** in 120 runs → "invisible by construction" becomes theoretical only; weaken to "component audit localizes breaks (Block 4)" without the killer contrast. Mitigations: seed with Arts2021/Wu2019, oversample High stratum, lean on M₂ + S-directional, expand to 72 extra traces + backup papers.
 - **IO gradient absent at frontier** (A3) → scope statement, not theory death.
+- **Capability confound dominates** (most low-IO failures are agent-capability, not observability) → IO construct weakened to "agent capability bounds reproduction, modulated by observability"; scope restriction, not theory death (Block 5b control).
 - **Study 4 null** → ECRF is still a valid instrument; "reproducibility not correlated with impact" is itself publishable.
 
-## 9. Venue (open)
+## 9. Limitations (the three the author flags)
 
-Scientometrics (Springer) is the safe default — FactReview is a CS/ML tool, not direct competition there; the "new scientometric variable" angle is clean. Given D1–D4 + the FactReview-as-baseline contrast, higher-tier candidates under external review: Nature Human Behaviour / Science Advances / PNAS (if Study 4 lands field-facing); MISQ / Management Science / ISR (v7 governance lineage); NeurIPS Datasets & Benchmarks / ICML (benchmark + contrast headline). Core theory D1–D4 is venue-agnostic.
+1. **Agent capability as error term.** At IO₁/IO₂, the agent may fail from reasoning/planning/coding limits rather than paper irreproducibility — blurring "agent can't" vs "paper not reproducible." Mitigation: Block 5b gold-spec ceiling condition + failure-type decomposition (info-missing / capability-fail / ambiguity); frontier subset (Block 5) for attenuation; a dedicated Limitations paragraph. The IO→ECRF slope is reported with and without capability-fail cases (sensitivity).
+2. **Gold-chain annotation subjectivity.** Data/Sample/Indicator boundaries are subjective; R121 is the load-bearing anchor. Mitigation: Block 6 codebook with explicit per-component boundary rules + worked examples; **independent-then-adjudicate** (α on independent labels, not consensus-by-construction); inter-pair reliability on a shared subset; publish the codebook; per-component α gating (low-α components → qualitative only).
+3. **Killer-case probability.** 120 runs may not yield 5–8 S-exact/S-directional cases if agent errors are mostly compile/hallucination (which yield Inconclusive, not "Supported"). Mitigation: the panel only needs Supported-but-invalid cases; seed with pre-confirmed breaks (Arts2021, Wu2019); oversample High stratum; lean on M₂ + S-directional; expand-trace fallback (72 extra + backup papers); pre-registered weakening to "localizes breaks" if still <5.
 
-## 10. Why this lands as a paper
+## 10. Venue (recommendation)
 
-It turns the closest competitor (FactReview) into the baseline, makes a *structural* not "deeper" contribution (component unit + causal IO + trust-inflation DV + scientometric link — four moves FactReview cannot make), has a pre-registered killer experiment with cases that are invisible to the baseline by construction, and delivers a field-facing capstone (Study 4) no prior execution-audit work can produce. Mini-pilot already passed all 4 green-light gates; the 20-paper pool is finalized.
+**Primary: NeurIPS Datasets & Benchmarks** (or ICML). The external reviewer wrote a NeurIPS D&B outline; ML audience values the FactReview contrast, the same-trace audit ladder, and measurement rigor. Study 4 demoted to appendix. The measurement-instrument framing is slightly unusual for D&B but D&B accepts metric/measurement contributions.
+**Fallback: Scientometrics (Springer).** If the ML framing feels too benchmark-adjacent, or if Study 4 lands and the field-facing angle is the hook — FactReview isn't competition there and the "new scientometric variable" angle is clean.
+**Long-shot: Nature Human Behaviour / Science Advances** — only if Study 4 produces a striking, defensible reproducibility↔impact finding (currently exploratory, so not the base case).
+Core theory D1–D4 is venue-agnostic; the choice is a framing decision once C1/C2 land. Note: D&B deadline (~Sept) sets the timeline pressure — R121 freeze + 120 runs must finish with margin.
+
+## 11. Why this lands as a paper
+
+It turns the closest competitor (FactReview) into a fair same-trace baseline, makes a *structural* contribution (component unit + IO input-sensitivity + trust-inflation DV + exploratory scientometric link — moves FactReview cannot make), has a pre-registered killer experiment with cases that are invisible to the baseline by construction, hardens the anchor (R121 gold chains with independent-annotation α) and the capability confound (gold-spec ceiling), and the mini-pilot already passed all 4 green-light gates.
 
 ---
 
