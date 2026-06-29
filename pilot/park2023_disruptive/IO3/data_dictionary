@@ -1,0 +1,5 @@
+# Data Dictionary — sciscinet_sample.parquet (Park, Leahey & Funk 2023)
+40,000-paper SciSciNet sample. Columns: paper_id, year, author_count,
+institution_count, reference_count, citation_count, citation_count_5y,
+disruption_score (CD-index, [-1,1]), novelty_score, conventionality_score, doc_type.
+Key cols for Park2023: year (trend), disruption_score (declining outcome), doc_type (papers vs patents).

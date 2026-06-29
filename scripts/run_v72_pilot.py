@@ -99,6 +99,24 @@ PAPER_GOLD = {
         "result": ["positive", "higher", "small", "large"],
         "claim": ["small teams", "disrupt", "large teams", "develop", "new ideas", "existing"],
     },
+    "park2023_disruptive": {
+        "domain": "SoS", "task": "STRICT",
+        "data_source": ["sciscinet", "web of science", "wos", "microsoft academic", "mag", "uspto", "patent", "openalex"],
+        "sample": ["millions", "1945", "2010", "40,000", "40000"],
+        "indicator": ["disruption", "cd", "destabiliz", "consolid", "disrupt"],
+        "model": ["spearman", "mean", "trend", "year"],
+        "result": ["decline", "negative", "lower", "less disruptive"],
+        "claim": ["less disruptive", "decline", "over time", "consolidating"],
+    },
+    "bentley2023_disruption": {
+        "domain": "SoS", "task": "STRICT",
+        "data_source": ["sciscinet", "web of science", "wos", "microsoft academic", "mag"],
+        "sample": ["1945", "2010", "40,000", "40000"],
+        "indicator": ["disruption", "cd5", "cd", "weighted", "unweighted", "citation-weighted"],
+        "model": ["spearman", "mean", "weighted", "year", "trend"],
+        "result": ["accelerating", "attenuates", "reverses", "different"],
+        "claim": ["citation-weighting", "artifact", "overstates", "accelerating", "decline"],
+    },
 }
 
 
