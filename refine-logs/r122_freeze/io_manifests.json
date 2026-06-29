@@ -1,0 +1,1307 @@
+{
+  "version": "v1-frozen",
+  "date": "2026-06-29",
+  "n_packages": 60,
+  "n_papers": 20,
+  "io_levels": [
+    1,
+    2,
+    3
+  ],
+  "immutability": "IO package definitions FROZEN for R122-R124. Contents declared per package; data_provided/ref_code_available flags are the contract the scorer uses. Any correction via patch record only.",
+  "packages": {
+    "petersen2024__io1": {
+      "paper_id": "petersen2024",
+      "io": 1,
+      "paper_md": "pilot/petersen2024/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "petersen2024__io2": {
+      "paper_id": "petersen2024",
+      "io": 2,
+      "paper_md": "pilot/petersen2024/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "SciSciNet shard"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "petersen2024__io3": {
+      "paper_id": "petersen2024",
+      "io": 3,
+      "paper_md": "pilot/petersen2024/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "SciSciNet shard"
+      },
+      "original_code": {
+        "provided": true,
+        "source": "r002/reproduce_final.py"
+      },
+      "data_provided": true,
+      "ref_code_available": true,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "wu2019_teams__io1": {
+      "paper_id": "wu2019_teams",
+      "io": 1,
+      "paper_md": "pilot/wu2019_teams/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "wu2019_teams__io2": {
+      "paper_id": "wu2019_teams",
+      "io": 2,
+      "paper_md": "pilot/wu2019_teams/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "SciSciNet shard"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "wu2019_teams__io3": {
+      "paper_id": "wu2019_teams",
+      "io": 3,
+      "paper_md": "pilot/wu2019_teams/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "SciSciNet shard"
+      },
+      "original_code": {
+        "provided": true,
+        "source": "r001/reproduce_final.py"
+      },
+      "data_provided": true,
+      "ref_code_available": true,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "park2023_disruptive__io1": {
+      "paper_id": "park2023_disruptive",
+      "io": 1,
+      "paper_md": "pilot/park2023_disruptive/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "park2023_disruptive__io2": {
+      "paper_id": "park2023_disruptive",
+      "io": 2,
+      "paper_md": "pilot/park2023_disruptive/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "SciSciNet shard"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "park2023_disruptive__io3": {
+      "paper_id": "park2023_disruptive",
+      "io": 3,
+      "paper_md": "pilot/park2023_disruptive/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "SciSciNet shard"
+      },
+      "original_code": {
+        "provided": true,
+        "source": "r004 reproduce"
+      },
+      "data_provided": true,
+      "ref_code_available": true,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "bentley2023_disruption__io1": {
+      "paper_id": "bentley2023_disruption",
+      "io": 1,
+      "paper_md": "pilot/bentley2023_disruption/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "bentley2023_disruption__io2": {
+      "paper_id": "bentley2023_disruption",
+      "io": 2,
+      "paper_md": "pilot/bentley2023_disruption/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "SciSciNet shard"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "bentley2023_disruption__io3": {
+      "paper_id": "bentley2023_disruption",
+      "io": 3,
+      "paper_md": "pilot/bentley2023_disruption/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "SciSciNet shard"
+      },
+      "original_code": {
+        "provided": true,
+        "source": "r007 reproduce"
+      },
+      "data_provided": true,
+      "ref_code_available": true,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "maddi2024__io1": {
+      "paper_id": "maddi2024",
+      "io": 1,
+      "paper_md": "pilot/maddi2024/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "private",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "maddi2024__io2": {
+      "paper_id": "maddi2024",
+      "io": 2,
+      "paper_md": "pilot/maddi2024/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "private",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "maddi2024__io3": {
+      "paper_id": "maddi2024",
+      "io": 3,
+      "paper_md": "pilot/maddi2024/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "private",
+      "io_collapse": true,
+      "assembled_on_disk": true
+    },
+    "arts2021__io1": {
+      "paper_id": "arts2021",
+      "io": 1,
+      "paper_md": "pilot/arts2021/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "arts2021__io2": {
+      "paper_id": "arts2021",
+      "io": 2,
+      "paper_md": "pilot/arts2021/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": true,
+      "raw_data": {
+        "provided": true,
+        "source": "USPTO patent_indicators.parquet"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "arts2021__io3": {
+      "paper_id": "arts2021",
+      "io": 3,
+      "paper_md": "pilot/arts2021/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": true,
+      "raw_data": {
+        "provided": true,
+        "source": "USPTO patent_indicators.parquet"
+      },
+      "original_code": {
+        "provided": true,
+        "source": "r003/reproduce_v0_fixed.py"
+      },
+      "data_provided": true,
+      "ref_code_available": true,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "funk2017__io1": {
+      "paper_id": "funk2017",
+      "io": 1,
+      "paper_md": "pilot/funk2017/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "funk2017__io2": {
+      "paper_id": "funk2017",
+      "io": 2,
+      "paper_md": "pilot/funk2017/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "Dataverse parquet"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "funk2017__io3": {
+      "paper_id": "funk2017",
+      "io": 3,
+      "paper_md": "pilot/funk2017/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "Dataverse parquet"
+      },
+      "original_code": {
+        "provided": true,
+        "source": "cdindex_ref.py + wheel"
+      },
+      "data_provided": true,
+      "ref_code_available": true,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "bikard2013__io1": {
+      "paper_id": "bikard2013",
+      "io": 1,
+      "paper_md": "pilot/bikard2013/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "private",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "bikard2013__io2": {
+      "paper_id": "bikard2013",
+      "io": 2,
+      "paper_md": "pilot/bikard2013/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "private",
+      "io_collapse": false,
+      "assembled_on_disk": true
+    },
+    "bikard2013__io3": {
+      "paper_id": "bikard2013",
+      "io": 3,
+      "paper_md": "pilot/bikard2013/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "private",
+      "io_collapse": true,
+      "assembled_on_disk": true
+    },
+    "ke2015_sleeping_beauties__io1": {
+      "paper_id": "ke2015_sleeping_beauties",
+      "io": 1,
+      "paper_md": "pilot/ke2015_sleeping_beauties/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "ke2015_sleeping_beauties__io2": {
+      "paper_id": "ke2015_sleeping_beauties",
+      "io": 2,
+      "paper_md": "pilot/ke2015_sleeping_beauties/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "SciSciNet substitute"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "ke2015_sleeping_beauties__io3": {
+      "paper_id": "ke2015_sleeping_beauties",
+      "io": 3,
+      "paper_md": "pilot/ke2015_sleeping_beauties/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "SciSciNet substitute"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "sun2023_ranking_mobility__io1": {
+      "paper_id": "sun2023_ranking_mobility",
+      "io": 1,
+      "paper_md": "pilot/sun2023_ranking_mobility/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "sun2023_ranking_mobility__io2": {
+      "paper_id": "sun2023_ranking_mobility",
+      "io": 2,
+      "paper_md": "pilot/sun2023_ranking_mobility/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "MAG/OpenAlex career"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "sun2023_ranking_mobility__io3": {
+      "paper_id": "sun2023_ranking_mobility",
+      "io": 3,
+      "paper_md": "pilot/sun2023_ranking_mobility/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "MAG/OpenAlex career"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "deng2023_enhancing_disruption__io1": {
+      "paper_id": "deng2023_enhancing_disruption",
+      "io": 1,
+      "paper_md": "pilot/deng2023_enhancing_disruption/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "deng2023_enhancing_disruption__io2": {
+      "paper_id": "deng2023_enhancing_disruption",
+      "io": 2,
+      "paper_md": "pilot/deng2023_enhancing_disruption/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "SciSciNet substitute"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "deng2023_enhancing_disruption__io3": {
+      "paper_id": "deng2023_enhancing_disruption",
+      "io": 3,
+      "paper_md": "pilot/deng2023_enhancing_disruption/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "SciSciNet substitute"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public-substitute",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "schaper2025_frontier__io1": {
+      "paper_id": "schaper2025_frontier",
+      "io": 1,
+      "paper_md": "pilot/schaper2025_frontier/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "partial",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "schaper2025_frontier__io2": {
+      "paper_id": "schaper2025_frontier",
+      "io": 2,
+      "paper_md": "pilot/schaper2025_frontier/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "PubMed+USPTO subset (linkage private)"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "partial",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "schaper2025_frontier__io3": {
+      "paper_id": "schaper2025_frontier",
+      "io": 3,
+      "paper_md": "pilot/schaper2025_frontier/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "PubMed+USPTO subset (linkage private)"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "partial",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "galuez2023_technology_transfer__io1": {
+      "paper_id": "galuez2023_technology_transfer",
+      "io": 1,
+      "paper_md": "pilot/galuez2023_technology_transfer/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "galuez2023_technology_transfer__io2": {
+      "paper_id": "galuez2023_technology_transfer",
+      "io": 2,
+      "paper_md": "pilot/galuez2023_technology_transfer/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": true,
+      "raw_data": {
+        "provided": true,
+        "source": "USPTO citation links"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "galuez2023_technology_transfer__io3": {
+      "paper_id": "galuez2023_technology_transfer",
+      "io": 3,
+      "paper_md": "pilot/galuez2023_technology_transfer/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": true,
+      "raw_data": {
+        "provided": true,
+        "source": "USPTO citation links"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "vasarhelyi2023_who_benefits__io1": {
+      "paper_id": "vasarhelyi2023_who_benefits",
+      "io": 1,
+      "paper_md": "pilot/vasarhelyi2023_who_benefits/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "api-gated",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "vasarhelyi2023_who_benefits__io2": {
+      "paper_id": "vasarhelyi2023_who_benefits",
+      "io": 2,
+      "paper_md": "pilot/vasarhelyi2023_who_benefits/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "api-gated",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "vasarhelyi2023_who_benefits__io3": {
+      "paper_id": "vasarhelyi2023_who_benefits",
+      "io": 3,
+      "paper_md": "pilot/vasarhelyi2023_who_benefits/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "api-gated",
+      "io_collapse": true,
+      "assembled_on_disk": false
+    },
+    "donner2024_data_inaccuracy__io1": {
+      "paper_id": "donner2024_data_inaccuracy",
+      "io": 1,
+      "paper_md": "pilot/donner2024_data_inaccuracy/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "partial",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "donner2024_data_inaccuracy__io2": {
+      "paper_id": "donner2024_data_inaccuracy",
+      "io": 2,
+      "paper_md": "pilot/donner2024_data_inaccuracy/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "Zenodo error CSV"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "partial",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "donner2024_data_inaccuracy__io3": {
+      "paper_id": "donner2024_data_inaccuracy",
+      "io": 3,
+      "paper_md": "pilot/donner2024_data_inaccuracy/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "Zenodo error CSV"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "partial",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "zheng2025_male_female_retractions__io1": {
+      "paper_id": "zheng2025_male_female_retractions",
+      "io": 1,
+      "paper_md": "pilot/zheng2025_male_female_retractions/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "zheng2025_male_female_retractions__io2": {
+      "paper_id": "zheng2025_male_female_retractions",
+      "io": 2,
+      "paper_md": "pilot/zheng2025_male_female_retractions/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "Retraction Watch CSV"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "zheng2025_male_female_retractions__io3": {
+      "paper_id": "zheng2025_male_female_retractions",
+      "io": 3,
+      "paper_md": "pilot/zheng2025_male_female_retractions/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "Retraction Watch CSV"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "gebhart2023_math_framework__io1": {
+      "paper_id": "gebhart2023_math_framework",
+      "io": 1,
+      "paper_md": "pilot/gebhart2023_math_framework/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "partial",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "gebhart2023_math_framework__io2": {
+      "paper_id": "gebhart2023_math_framework",
+      "io": 2,
+      "paper_md": "pilot/gebhart2023_math_framework/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "Nobel set (public) + OpenAlex substitute"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "partial",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "gebhart2023_math_framework__io3": {
+      "paper_id": "gebhart2023_math_framework",
+      "io": 3,
+      "paper_md": "pilot/gebhart2023_math_framework/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "Nobel set (public) + OpenAlex substitute"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "partial",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "obadage2024_citations_repro__io1": {
+      "paper_id": "obadage2024_citations_repro",
+      "io": 1,
+      "paper_md": "pilot/obadage2024_citations_repro/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "obadage2024_citations_repro__io2": {
+      "paper_id": "obadage2024_citations_repro",
+      "io": 2,
+      "paper_md": "pilot/obadage2024_citations_repro/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "Zenodo MLRC+contexts"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "obadage2024_citations_repro__io3": {
+      "paper_id": "obadage2024_citations_repro",
+      "io": 3,
+      "paper_md": "pilot/obadage2024_citations_repro/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "Zenodo MLRC+contexts"
+      },
+      "original_code": {
+        "provided": true,
+        "source": "github lamps-lab/ccair-ai-reproducibility"
+      },
+      "data_provided": true,
+      "ref_code_available": true,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "liu2018_hotstreaks__io1": {
+      "paper_id": "liu2018_hotstreaks",
+      "io": 1,
+      "paper_md": "pilot/liu2018_hotstreaks/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "liu2018_hotstreaks__io2": {
+      "paper_id": "liu2018_hotstreaks",
+      "io": 2,
+      "paper_md": "pilot/liu2018_hotstreaks/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "repo data.zip (careers)"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "liu2018_hotstreaks__io3": {
+      "paper_id": "liu2018_hotstreaks",
+      "io": 3,
+      "paper_md": "pilot/liu2018_hotstreaks/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": true,
+        "source": "repo data.zip (careers)"
+      },
+      "original_code": {
+        "provided": true,
+        "source": "github lu-liu/hotstreaks code_bursts.py"
+      },
+      "data_provided": true,
+      "ref_code_available": true,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "arts2021_patent_nlp__io1": {
+      "paper_id": "arts2021_patent_nlp",
+      "io": 1,
+      "paper_md": "pilot/arts2021_patent_nlp/IO1/paper.md (or bench-mark equivalent)",
+      "data_dictionary": false,
+      "sample_notes": false,
+      "indicator_defs": false,
+      "raw_data": {
+        "provided": false,
+        "source": null
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": false,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "arts2021_patent_nlp__io2": {
+      "paper_id": "arts2021_patent_nlp",
+      "io": 2,
+      "paper_md": "pilot/arts2021_patent_nlp/IO2/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": true,
+      "raw_data": {
+        "provided": true,
+        "source": "Zenodo USPTO bulk"
+      },
+      "original_code": {
+        "provided": false,
+        "source": null
+      },
+      "data_provided": true,
+      "ref_code_available": false,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    },
+    "arts2021_patent_nlp__io3": {
+      "paper_id": "arts2021_patent_nlp",
+      "io": 3,
+      "paper_md": "pilot/arts2021_patent_nlp/IO3/paper.md (or bench-mark equivalent)",
+      "data_dictionary": true,
+      "sample_notes": true,
+      "indicator_defs": true,
+      "raw_data": {
+        "provided": true,
+        "source": "Zenodo USPTO bulk"
+      },
+      "original_code": {
+        "provided": true,
+        "source": "github sam-arts/respol_patents_code"
+      },
+      "data_provided": true,
+      "ref_code_available": true,
+      "data_access": "public",
+      "io_collapse": false,
+      "assembled_on_disk": false
+    }
+  },
+  "assembly_status": {
+    "assembled_on_disk": [
+      "arts2021",
+      "bentley2023_disruption",
+      "bikard2013",
+      "funk2017",
+      "maddi2024",
+      "park2023_disruptive",
+      "petersen2024",
+      "wu2019_teams"
+    ],
+    "n_assembled": 8,
+    "n_pending_assembly": 12,
+    "pending": [
+      "arts2021_patent_nlp",
+      "deng2023_enhancing_disruption",
+      "donner2024_data_inaccuracy",
+      "galuez2023_technology_transfer",
+      "gebhart2023_math_framework",
+      "ke2015_sleeping_beauties",
+      "liu2018_hotstreaks",
+      "obadage2024_citations_repro",
+      "schaper2025_frontier",
+      "sun2023_ranking_mobility",
+      "vasarhelyi2023_who_benefits",
+      "zheng2025_male_female_retractions"
+    ]
+  },
+  "boundary_papers_IO3_collapse": [
+    "maddi2024",
+    "bikard2013",
+    "vasarhelyi2023_who_benefits"
+  ]
+}
