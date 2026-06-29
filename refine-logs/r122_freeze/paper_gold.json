@@ -1,0 +1,875 @@
+{
+  "petersen2024": {
+    "domain": "SoS",
+    "task": "STRICT",
+    "data_source": [
+      "sciscinet",
+      "web of science",
+      "wos",
+      "microsoft academic",
+      "mag"
+    ],
+    "sample": [
+      "469,855",
+      "469855",
+      "102,550",
+      "102550",
+      "2011",
+      "2015"
+    ],
+    "indicator": [
+      "disruption",
+      "(ni",
+      "n_j",
+      "n_i",
+      "cd",
+      "abs("
+    ],
+    "model": [
+      "ols",
+      "year fe",
+      "fixed effect",
+      "reference_count",
+      "ln_rp",
+      "ln_kp",
+      "citation_inflation"
+    ],
+    "result": [
+      "-0.002322",
+      "-0.00232",
+      "-0.0023",
+      "0.120403",
+      "0.1204"
+    ],
+    "claim": [
+      "citation inflation",
+      "biased",
+      "downward",
+      "negative",
+      "decline"
+    ]
+  },
+  "arts2021": {
+    "domain": "IS",
+    "task": "METHOD",
+    "data_source": [
+      "uspto",
+      "patent"
+    ],
+    "sample": [
+      "patent claim",
+      "preprocess"
+    ],
+    "indicator": [
+      "novelty",
+      "cosine",
+      "tf",
+      "n-gram",
+      "indicator"
+    ],
+    "model": [
+      "descriptive",
+      "aggregat"
+    ],
+    "result": [],
+    "claim": [
+      "structure of innovation",
+      "novelty",
+      "reuse"
+    ]
+  },
+  "funk2017": {
+    "domain": "Mgmt",
+    "task": "STRICT",
+    "data_source": [
+      "nber",
+      "dataverse",
+      "uspto",
+      "patent"
+    ],
+    "sample": [
+      "2.9 million",
+      "2,900,000",
+      "1977",
+      "2005",
+      "utility patent"
+    ],
+    "indicator": [
+      "cdt",
+      "cd5",
+      "mcdt",
+      "mcd5",
+      "n1",
+      "n3",
+      "destabil",
+      "consolid"
+    ],
+    "model": [
+      "ols",
+      "negative binomial",
+      "regression"
+    ],
+    "result": [
+      "0.07",
+      "0.23",
+      "0.31",
+      "1.75"
+    ],
+    "claim": [
+      "destabiliz",
+      "consolid",
+      "commercial engagement",
+      "federal"
+    ]
+  },
+  "maddi2024": {
+    "domain": "SoS",
+    "task": "STRICT-DS",
+    "data_source": [
+      "publons",
+      "web of science",
+      "wos"
+    ],
+    "sample": [
+      "57,482",
+      "57482",
+      "2009",
+      "2020",
+      "947"
+    ],
+    "indicator": [
+      "report length",
+      "word count",
+      "reviewer",
+      "iqr",
+      "fisher"
+    ],
+    "model": [
+      "glm",
+      "log(1",
+      "log1p",
+      "generalized linear",
+      "log-link",
+      "log_link"
+    ],
+    "result": [
+      "947",
+      "positive"
+    ],
+    "claim": [
+      "longer",
+      "more citations",
+      "positive",
+      "threshold"
+    ]
+  },
+  "bikard2013": {
+    "domain": "Mgmt",
+    "task": "DATA-SUB",
+    "data_source": [
+      "mit",
+      "661",
+      "faculty",
+      "isi"
+    ],
+    "sample": [
+      "661",
+      "5,964",
+      "5964",
+      "1976",
+      "2006",
+      "seven department"
+    ],
+    "indicator": [
+      "coauthor",
+      "collaboration",
+      "group size",
+      "nauthors",
+      "credit"
+    ],
+    "model": [
+      "ols",
+      "fixed effect",
+      "department-year",
+      "career",
+      "clustered"
+    ],
+    "result": [
+      "0.099",
+      "-0.069",
+      "0.099",
+      "5.4",
+      "9.6"
+    ],
+    "claim": [
+      "collaboration",
+      "credit",
+      "tradeoff",
+      "free-rid"
+    ]
+  },
+  "wu2019_teams": {
+    "data_source": [
+      "web",
+      "science",
+      "microsoft",
+      "academic",
+      "graph",
+      "uspto"
+    ],
+    "sample": [
+      "30000000",
+      "1954",
+      "2000",
+      "team",
+      "paper"
+    ],
+    "indicator": [],
+    "model": [
+      "ols",
+      "year fe",
+      "team_size_deciles",
+      "mean_d_by_group"
+    ],
+    "result": [
+      "0.04",
+      "-0.02",
+      "negative"
+    ],
+    "claim": [
+      "large",
+      "teams",
+      "develop",
+      "existing",
+      "science",
+      "small",
+      "disrupt"
+    ],
+    "domain": "SoS",
+    "task": "STRICT"
+  },
+  "park2023_disruptive": {
+    "data_source": [
+      "microsoft",
+      "academic",
+      "graph",
+      "uspto",
+      "sciscinet"
+    ],
+    "sample": [
+      "469855",
+      "1945",
+      "2010",
+      "paper"
+    ],
+    "indicator": [
+      "year",
+      "window"
+    ],
+    "model": [
+      "descriptive",
+      "groupby year",
+      "mean cd5"
+    ],
+    "result": [
+      "0.03597944",
+      "0.00119062",
+      "0.005724",
+      "negative"
+    ],
+    "claim": [
+      "papers",
+      "patents",
+      "becoming",
+      "less",
+      "disruptive",
+      "over",
+      "time"
+    ],
+    "domain": "SoS",
+    "task": "STRICT"
+  },
+  "bentley2023_disruption": {
+    "data_source": [
+      "sciscinet"
+    ],
+    "sample": [
+      "469855",
+      "1945",
+      "2010",
+      "paper"
+    ],
+    "indicator": [
+      "cit_i"
+    ],
+    "model": [
+      "descriptive",
+      "citation-weighted",
+      "groupby year"
+    ],
+    "result": [
+      "0.07698916",
+      "0.00076",
+      "mixed"
+    ],
+    "claim": [
+      "decline",
+      "park",
+      "partly",
+      "artifact",
+      "exponential",
+      "growth",
+      "weighted",
+      "flat"
+    ],
+    "domain": "SoS",
+    "task": "STRICT"
+  },
+  "ke2015_sleeping_beauties": {
+    "data_source": [
+      "web",
+      "science",
+      "aps"
+    ],
+    "sample": [
+      "22000000",
+      "1900",
+      "2013",
+      "paper"
+    ],
+    "indicator": [
+      "beckendorf",
+      "bcriterion",
+      "beautycriterion",
+      "citation",
+      "delay",
+      "sudden",
+      "awakening",
+      "metrics"
+    ],
+    "model": [
+      "descriptive",
+      "top-100 ranking"
+    ],
+    "result": [
+      "list"
+    ],
+    "claim": [
+      "sleeping",
+      "beauties",
+      "delayed",
+      "impact",
+      "papers",
+      "real",
+      "citation",
+      "dynamics"
+    ],
+    "domain": "SoS",
+    "task": "METHOD"
+  },
+  "sun2023_ranking_mobility": {
+    "data_source": [
+      "public",
+      "career",
+      "history",
+      "dataset",
+      "mag",
+      "derived"
+    ],
+    "sample": [
+      "pending",
+      "early",
+      "career",
+      "window",
+      "author"
+    ],
+    "indicator": [
+      "ranking",
+      "mobility",
+      "transition",
+      "rates",
+      "between",
+      "impact",
+      "quantiles",
+      "inequality"
+    ],
+    "model": [
+      "descriptive",
+      "mobility indices"
+    ],
+    "result": [
+      "pending",
+      "mixed"
+    ],
+    "claim": [
+      "ranking",
+      "mobility",
+      "impact",
+      "inequality",
+      "characterize",
+      "early",
+      "career",
+      "dynamics"
+    ],
+    "domain": "SoS",
+    "task": "DATA-SUB"
+  },
+  "deng2023_enhancing_disruption": {
+    "data_source": [
+      "citation",
+      "network",
+      "wos",
+      "scopus",
+      "class",
+      "licensed"
+    ],
+    "sample": [
+      "469855",
+      "1945",
+      "2010",
+      "paper"
+    ],
+    "indicator": [
+      "recompute",
+      "after",
+      "edge",
+      "removal",
+      "spot",
+      "references",
+      "robustness",
+      "delta"
+    ],
+    "model": [
+      "descriptive",
+      "edge-removal ablation"
+    ],
+    "result": [
+      "pending",
+      "mixed"
+    ],
+    "claim": [
+      "disruption",
+      "metric",
+      "made",
+      "robust",
+      "against",
+      "citation",
+      "noise",
+      "edge"
+    ],
+    "domain": "SoS",
+    "task": "METHOD"
+  },
+  "schaper2025_frontier": {
+    "data_source": [
+      "pubmed",
+      "biomedical",
+      "patents",
+      "uspto",
+      "leuven",
+      "ecoom"
+    ],
+    "sample": [
+      "pending",
+      "biomedical",
+      "careers",
+      "scientist"
+    ],
+    "indicator": [
+      "inventive",
+      "performance",
+      "indicator",
+      "distinguishing",
+      "frontier",
+      "scientists"
+    ],
+    "model": [
+      "regression",
+      "frontier-scientist iv",
+      "ols"
+    ],
+    "result": [
+      "pending",
+      "positive"
+    ],
+    "claim": [
+      "frontier",
+      "scientists",
+      "inventive",
+      "performers",
+      "differ",
+      "systematically",
+      "from",
+      "peers"
+    ],
+    "domain": "IS_Innovation",
+    "task": "DATA-SUB"
+  },
+  "galuez2023_technology_transfer": {
+    "data_source": [
+      "uspto",
+      "patents",
+      "cited",
+      "scientific",
+      "literature"
+    ],
+    "sample": [
+      "pending",
+      "uspto",
+      "coverage",
+      "patent",
+      "paper",
+      "citation"
+    ],
+    "indicator": [
+      "technology",
+      "transfer",
+      "indicator",
+      "from",
+      "patent",
+      "citation",
+      "patterns"
+    ],
+    "model": [
+      "descriptive",
+      "classification"
+    ],
+    "result": [
+      "pending"
+    ],
+    "claim": [
+      "patent",
+      "cited",
+      "scientific",
+      "literature",
+      "reveals",
+      "technology",
+      "transfer",
+      "patterns"
+    ],
+    "domain": "IS_Innovation",
+    "task": "METHOD"
+  },
+  "vasarhelyi2023_who_benefits": {
+    "data_source": [
+      "altmetric",
+      "com",
+      "web",
+      "science"
+    ],
+    "sample": [
+      "pending",
+      "altmetrics",
+      "coverage",
+      "window",
+      "paper"
+    ],
+    "indicator": [
+      "team",
+      "gender",
+      "composition",
+      "online",
+      "visibility",
+      "citation",
+      "impact",
+      "quasi"
+    ],
+    "model": [
+      "coarsened exact matching",
+      "treatment-effect estimation",
+      "cem"
+    ],
+    "result": [
+      "pending",
+      "mixed"
+    ],
+    "claim": [
+      "team",
+      "gender",
+      "composition",
+      "affects",
+      "benefits",
+      "from",
+      "online",
+      "visibility"
+    ],
+    "domain": "IS_Innovation",
+    "task": "DATA-SUB"
+  },
+  "donner2024_data_inaccuracy": {
+    "data_source": [
+      "web",
+      "science",
+      "citation",
+      "count",
+      "error",
+      "dataset"
+    ],
+    "sample": [
+      "pending",
+      "coverage",
+      "paper"
+    ],
+    "indicator": [
+      "citation",
+      "count",
+      "error",
+      "distribution",
+      "monte",
+      "carlo",
+      "uncertainty",
+      "propagation"
+    ],
+    "model": [
+      "bayesian regression",
+      "monte-carlo propagation",
+      "bayesian"
+    ],
+    "result": [
+      "pending",
+      "mixed"
+    ],
+    "claim": [
+      "bibliometric",
+      "indicators",
+      "carry",
+      "quantifiable",
+      "uncertainty",
+      "from",
+      "citation",
+      "count"
+    ],
+    "domain": "Management_Strategy",
+    "task": "METHOD"
+  },
+  "zheng2025_male_female_retractions": {
+    "data_source": [
+      "retraction",
+      "watch",
+      "database"
+    ],
+    "sample": [
+      "pending",
+      "retraction",
+      "watch",
+      "coverage",
+      "article"
+    ],
+    "indicator": [
+      "male",
+      "female",
+      "leading",
+      "author",
+      "retraction",
+      "rates",
+      "gender",
+      "disambiguation"
+    ],
+    "model": [
+      "comparison",
+      "retraction-rate regression",
+      "logistic"
+    ],
+    "result": [
+      "pending",
+      "positive"
+    ],
+    "claim": [
+      "male",
+      "leading",
+      "authors",
+      "retract",
+      "more",
+      "articles",
+      "than",
+      "female"
+    ],
+    "domain": "Management_Strategy",
+    "task": "DATA-SUB"
+  },
+  "gebhart2023_math_framework": {
+    "data_source": [
+      "american",
+      "physical",
+      "society",
+      "bibliographic",
+      "data",
+      "papers"
+    ],
+    "sample": [
+      "630000",
+      "1893",
+      "2019",
+      "paper"
+    ],
+    "indicator": [
+      "relates",
+      "index",
+      "betweenness",
+      "centrality",
+      "disruption",
+      "measures"
+    ],
+    "model": [
+      "betweenness centrality",
+      "nobel-discernment regression",
+      "ols"
+    ],
+    "result": [
+      "pending",
+      "positive"
+    ],
+    "claim": [
+      "betweenness",
+      "centrality",
+      "based",
+      "disruption",
+      "measures",
+      "outperform",
+      "index",
+      "nobel"
+    ],
+    "domain": "SoS",
+    "task": "METHOD"
+  },
+  "obadage2024_citations_repro": {
+    "data_source": [
+      "reproducibility",
+      "challenge",
+      "papers",
+      "citation",
+      "contexts",
+      "semantic"
+    ],
+    "sample": [
+      "41244",
+      "mlrc",
+      "2022",
+      "citation",
+      "context"
+    ],
+    "indicator": [
+      "citation",
+      "context",
+      "features",
+      "reproducibility",
+      "score",
+      "models"
+    ],
+    "model": [
+      "m1-m5 baseline",
+      "m6/m7 5-fold cv",
+      "tensorflow/keras/torch/transformers",
+      "ml-classifier"
+    ],
+    "result": [
+      "positive"
+    ],
+    "claim": [
+      "citation",
+      "context",
+      "sentiment",
+      "correlates",
+      "with",
+      "paper",
+      "reproducibility"
+    ],
+    "domain": "IS_Innovation",
+    "task": "STRICT"
+  },
+  "liu2018_hotstreaks": {
+    "data_source": [
+      "career",
+      "histories",
+      "artists",
+      "artchive",
+      "artnet",
+      "directors"
+    ],
+    "sample": [
+      "pending",
+      "exact",
+      "career",
+      "spanning",
+      "individual"
+    ],
+    "indicator": [
+      "streak",
+      "model",
+      "random",
+      "ordering",
+      "right",
+      "trapezoid",
+      "isosceles",
+      "quadratic"
+    ],
+    "model": [
+      "hot-streak fitter",
+      "5 alternative burst functions",
+      "ks test",
+      "goodness-of-fit"
+    ],
+    "result": [],
+    "claim": [
+      "streaks",
+      "real",
+      "phenomenon",
+      "across",
+      "artistic",
+      "cultural",
+      "scientific",
+      "careers"
+    ],
+    "domain": "SoS",
+    "task": "METHOD"
+  },
+  "arts2021_patent_nlp": {
+    "data_source": [
+      "all",
+      "uspto",
+      "utility",
+      "patents",
+      "granted",
+      "may"
+    ],
+    "sample": [
+      "uspto",
+      "utility",
+      "patents",
+      "2018",
+      "coverage",
+      "patent"
+    ],
+    "indicator": [
+      "based",
+      "novelty",
+      "impact",
+      "breakthrough",
+      "measures",
+      "patent",
+      "text",
+      "validated"
+    ],
+    "model": [
+      "case-control",
+      "nlp indicators",
+      "baseline comparison (classification+citations)"
+    ],
+    "result": [
+      "0.73",
+      "positive"
+    ],
+    "claim": [
+      "patent",
+      "text",
+      "identifies",
+      "creation",
+      "impact",
+      "technologies",
+      "better",
+      "than"
+    ],
+    "domain": "Management_Strategy",
+    "task": "METHOD"
+  }
+}
