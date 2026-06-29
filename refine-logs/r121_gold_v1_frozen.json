@@ -1,0 +1,1289 @@
+{
+  "version": "v1-frozen",
+  "date": "2026-06-29",
+  "frame": "v7.2 (IO -> ECRF -> TCE)",
+  "n_papers": 20,
+  "annotators": {
+    "A": "glm-5.2",
+    "B": "codex-gpt-5.2",
+    "adjudicator": "senior (Claude)"
+  },
+  "round1_original_agreement": {
+    "per_component": {
+      "data_source": {
+        "n": 20,
+        "observed_agreement_Po": 0.95,
+        "cohens_kappa": 0.907,
+        "krippendorff_alpha_ordinal": 0.981,
+        "n_disagree": 1,
+        "n_big_disagree": 0,
+        "meets_alpha_070": true,
+        "meets_alpha_060": true
+      },
+      "sample": {
+        "n": 20,
+        "observed_agreement_Po": 0.6,
+        "cohens_kappa": 0.2,
+        "krippendorff_alpha_ordinal": 0.594,
+        "n_disagree": 8,
+        "n_big_disagree": 0,
+        "meets_alpha_070": false,
+        "meets_alpha_060": false
+      },
+      "indicator": {
+        "n": 20,
+        "observed_agreement_Po": 0.95,
+        "cohens_kappa": 0.9,
+        "krippendorff_alpha_ordinal": 0.951,
+        "n_disagree": 1,
+        "n_big_disagree": 0,
+        "meets_alpha_070": true,
+        "meets_alpha_060": true
+      },
+      "model": {
+        "n": 20,
+        "observed_agreement_Po": 0.5,
+        "cohens_kappa": 0.174,
+        "krippendorff_alpha_ordinal": 0.492,
+        "n_disagree": 10,
+        "n_big_disagree": 0,
+        "meets_alpha_070": false,
+        "meets_alpha_060": false
+      },
+      "result_table": {
+        "n": 20,
+        "observed_agreement_Po": 0.75,
+        "cohens_kappa": 0.342,
+        "krippendorff_alpha_ordinal": 0.651,
+        "n_disagree": 5,
+        "n_big_disagree": 0,
+        "meets_alpha_070": false,
+        "meets_alpha_060": true
+      },
+      "claim": {
+        "n": 20,
+        "observed_agreement_Po": 0.2,
+        "cohens_kappa": 0.0,
+        "krippendorff_alpha_ordinal": 0.213,
+        "n_disagree": 16,
+        "n_big_disagree": 1,
+        "meets_alpha_070": false,
+        "meets_alpha_060": false
+      }
+    },
+    "overall": {
+      "n": 120,
+      "observed_agreement_Po": 0.658,
+      "cohens_kappa": 0.362,
+      "krippendorff_alpha_ordinal": 0.717,
+      "meets_alpha_070": true
+    },
+    "note": "Low alpha on Model/Result/Claim revealed a rubric ambiguity."
+  },
+  "round2_clarified_agreement": {
+    "per_component": {
+      "data_source": {
+        "n": 20,
+        "observed_agreement_Po": 0.95,
+        "cohens_kappa": 0.907,
+        "krippendorff_alpha_ordinal": 0.981,
+        "n_disagree": 1,
+        "n_big_disagree": 0,
+        "meets_alpha_070": true,
+        "meets_alpha_060": true
+      },
+      "sample": {
+        "n": 20,
+        "observed_agreement_Po": 0.6,
+        "cohens_kappa": 0.2,
+        "krippendorff_alpha_ordinal": 0.594,
+        "n_disagree": 8,
+        "n_big_disagree": 0,
+        "meets_alpha_070": false,
+        "meets_alpha_060": false
+      },
+      "indicator": {
+        "n": 20,
+        "observed_agreement_Po": 0.95,
+        "cohens_kappa": 0.9,
+        "krippendorff_alpha_ordinal": 0.951,
+        "n_disagree": 1,
+        "n_big_disagree": 0,
+        "meets_alpha_070": true,
+        "meets_alpha_060": true
+      },
+      "model": {
+        "n": 20,
+        "observed_agreement_Po": 0.75,
+        "cohens_kappa": 0.39,
+        "krippendorff_alpha_ordinal": 0.694,
+        "n_disagree": 5,
+        "n_big_disagree": 0,
+        "meets_alpha_070": false,
+        "meets_alpha_060": true
+      },
+      "result_table": {
+        "n": 20,
+        "observed_agreement_Po": 0.8,
+        "cohens_kappa": 0.548,
+        "krippendorff_alpha_ordinal": 0.795,
+        "n_disagree": 4,
+        "n_big_disagree": 0,
+        "meets_alpha_070": true,
+        "meets_alpha_060": true
+      },
+      "claim": {
+        "n": 20,
+        "observed_agreement_Po": 1.0,
+        "cohens_kappa": null,
+        "krippendorff_alpha_ordinal": 1.0,
+        "n_disagree": 0,
+        "n_big_disagree": 0,
+        "meets_alpha_070": true,
+        "meets_alpha_060": true
+      }
+    },
+    "overall": {
+      "n": 120,
+      "observed_agreement_Po": 0.842,
+      "cohens_kappa": 0.683,
+      "krippendorff_alpha_ordinal": 0.876,
+      "meets_alpha_070": true
+    },
+    "note": "After rubric clarification (Model=spec/code-independent; Result=exact-targets; Claim=stated), alpha lifts on Model/Result/Claim."
+  },
+  "codebook_clarification": [
+    "Model = model SPECIFICATION recoverable from paper (estimator, variables, FE, coefficients). CODE-INDEPENDENT.",
+    "Result = exact numerical targets recoverable (reported in paper OR via public code).",
+    "Claim = conclusion STATED in the paper. Claim-result distance is separate, not fidelity."
+  ],
+  "r122_gate": {
+    "round2_overall_alpha": 0.876,
+    "meets_overall_070": true,
+    "n_components_meeting_070": 4,
+    "n_components_meeting_060": 5,
+    "sample_alpha": 0.594,
+    "claim_alpha": 1.0,
+    "gate_rule": "overall>=0.70 AND >=4/6 components>=0.70 AND Sample/Claim>=0.60",
+    "gate_passes": false,
+    "gate_borderline": true,
+    "note": "Round-2 overall alpha=0.876; 4/6 components meet 0.70 (Data 0.981, Indicator 0.951, Result 0.795, Claim 1.0). Borderline: Sample=0.594 (just below 0.60 relaxation — N-pending ambiguity), Model=0.694 (just below 0.70). GATE BORDERLINE — Sample 0.594 just shy of 0.60; recommend one more Sample-rubric clarification (N-pending rule) before R122, but pool is frozen and overall alpha=0.876 is strong."
+  },
+  "ku_leuven_arts_caveat": {
+    "flagged_papers": [
+      "arts2021",
+      "schaper2025_frontier",
+      "arts2021_patent_nlp"
+    ],
+    "n": 3,
+    "note": "3 KU Leuven/Arts papers (#6, #11, #20). Near-duplicate of #6 but distinct load-bearing components. Robustness check R-robust-KU planned: re-run key analyses excluding/grouping these to confirm the IO->ECRF effect is not group-driven.",
+    "robustness_check_id": "R-robust-KU (planned)"
+  },
+  "schaper2025_soft_blocker": {
+    "status": "inconclusive (curl blocked: ScienceDirect Cloudflare, Lirias JS shell, Unpaywall unindexed)",
+    "io3_retained": "partial/boundary",
+    "action": "human annotator fetch PDF to confirm whether KU Leuven author-inventor linkage is released; if so Data upgrades partial->clean. Does not block R121."
+  },
+  "papers": [
+    {
+      "paper_id": "petersen2024",
+      "title": "The disruption index is biased by citation inflation",
+      "domain": "SoS",
+      "venue": "arXiv",
+      "year": 2023,
+      "task_type": "STRICT",
+      "observability_stratum": "Low",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "indicator": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 1.0
+    },
+    {
+      "paper_id": "wu2019_teams",
+      "title": "Teams vs. disruption (Wu et al. 2019)",
+      "domain": "SoS",
+      "venue": "Nature",
+      "year": 2019,
+      "task_type": "STRICT",
+      "observability_stratum": "Low",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "indicator": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 0.5,
+          "B_clarified": 1.0,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.875
+    },
+    {
+      "paper_id": "park2023_disruptive",
+      "title": "Papers and patents are becoming less disruptive over time",
+      "domain": "SoS",
+      "venue": "Nature",
+      "year": 2023,
+      "task_type": "STRICT",
+      "observability_stratum": "Low",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "indicator": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 1.0
+    },
+    {
+      "paper_id": "bentley2023_disruption",
+      "title": "Is disruption decreasing, or is it accelerating?",
+      "domain": "SoS",
+      "venue": "Advances in Complex Systems",
+      "year": 2023,
+      "task_type": "STRICT",
+      "observability_stratum": "Low",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "indicator": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 1.0,
+          "B_clarified": 0.5,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.958
+    },
+    {
+      "paper_id": "arts2021",
+      "title": "Natural Language Processing to Identify the Structure of Innovation in Patent Claims",
+      "domain": "IS_Innovation",
+      "venue": "Research Policy",
+      "year": 2021,
+      "task_type": "METHOD",
+      "observability_stratum": "Medium",
+      "ku_leuven_arts": true,
+      "components": {
+        "data_source": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 0.5,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "indicator": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.792
+    },
+    {
+      "paper_id": "funk2017",
+      "title": "A Dynamic Network Measure of Technological Change",
+      "domain": "IS_Innovation",
+      "venue": "PLoS ONE",
+      "year": 2017,
+      "task_type": "STRICT",
+      "observability_stratum": "High",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "indicator": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 1.0,
+          "B_clarified": 0.5,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.875
+    },
+    {
+      "paper_id": "maddi2024",
+      "title": "On the Peer Review Reports: Does Size Matter?",
+      "domain": "Management_Strategy",
+      "venue": "Scientometrics (Springer)",
+      "year": 2024,
+      "task_type": "METHOD",
+      "observability_stratum": "Low",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 0.0,
+          "B_clarified": 0.0,
+          "final": 0.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "indicator": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 0.5,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.625
+    },
+    {
+      "paper_id": "bikard2013",
+      "title": "Exploring Tradeoffs in the Organization of Scientific Work",
+      "domain": "Management_Strategy",
+      "venue": "Management Science",
+      "year": 2013,
+      "task_type": "DATA-SUB",
+      "observability_stratum": "High",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 0.0,
+          "B_clarified": 0.0,
+          "final": 0.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 0.5,
+          "B_clarified": 1.0,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "indicator": {
+          "A_clarified": 1.0,
+          "B_clarified": 0.5,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.667
+    },
+    {
+      "paper_id": "ke2015_sleeping_beauties",
+      "title": "Defining and identifying Sleeping Beauties in science",
+      "domain": "SoS",
+      "venue": "PNAS",
+      "year": 2015,
+      "task_type": "METHOD",
+      "observability_stratum": "Medium",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 0.0,
+          "B_clarified": 0.0,
+          "final": 0.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 0.5,
+          "B_clarified": 1.0,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "indicator": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.0,
+          "final": 0.25,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.583
+    },
+    {
+      "paper_id": "sun2023_ranking_mobility",
+      "title": "Ranking mobility and impact inequality in early academic careers",
+      "domain": "SoS",
+      "venue": "JASIST",
+      "year": 2023,
+      "task_type": "DATA-SUB",
+      "observability_stratum": "Medium",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 0.5,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "indicator": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 0.5,
+          "B_clarified": 1.0,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.75
+    },
+    {
+      "paper_id": "deng2023_enhancing_disruption",
+      "title": "Enhancing the robustness of the disruption metric against noise",
+      "domain": "SoS",
+      "venue": "Scientometrics",
+      "year": 2023,
+      "task_type": "METHOD",
+      "observability_stratum": "Medium",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 0.5,
+          "B_clarified": 1.0,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "indicator": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.792
+    },
+    {
+      "paper_id": "schaper2025_frontier",
+      "title": "Not like the others: Frontier scientists for inventive performance",
+      "domain": "IS_Innovation",
+      "venue": "Research Policy",
+      "year": 2025,
+      "task_type": "DATA-SUB",
+      "observability_stratum": "Medium",
+      "ku_leuven_arts": true,
+      "components": {
+        "data_source": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "indicator": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.583
+    },
+    {
+      "paper_id": "galuez2023_technology_transfer",
+      "title": "Scientific literature cited in patents: A Technology Transfer analysis",
+      "domain": "IS_Innovation",
+      "venue": "PLoS ONE",
+      "year": 2023,
+      "task_type": "METHOD",
+      "observability_stratum": "Medium",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 0.5,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "indicator": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.792
+    },
+    {
+      "paper_id": "vasarhelyi2023_who_benefits",
+      "title": "Who benefits from altmetrics? The effect of team gender composition",
+      "domain": "IS_Innovation",
+      "venue": "arXiv (JASIST unconfirmed)",
+      "year": 2023,
+      "task_type": "DATA-SUB",
+      "observability_stratum": "Medium",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 0.0,
+          "B_clarified": 0.0,
+          "final": 0.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "indicator": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 0.5,
+          "B_clarified": 1.0,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.542
+    },
+    {
+      "paper_id": "donner2024_data_inaccuracy",
+      "title": "Data inaccuracy quantification and uncertainty propagation for bibliometric indicators",
+      "domain": "Management_Strategy",
+      "venue": "Research Evaluation",
+      "year": 2024,
+      "task_type": "METHOD",
+      "observability_stratum": "Medium",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 0.5,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "indicator": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.625
+    },
+    {
+      "paper_id": "zheng2025_male_female_retractions",
+      "title": "Do male leading authors retract more articles than female?",
+      "domain": "Management_Strategy",
+      "venue": "2025",
+      "year": 2025,
+      "task_type": "DATA-SUB",
+      "observability_stratum": "Medium",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 0.5,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "indicator": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.708
+    },
+    {
+      "paper_id": "gebhart2023_math_framework",
+      "title": "A Mathematical Framework for Citation Disruption",
+      "domain": "SoS",
+      "venue": "arXiv",
+      "year": 2023,
+      "task_type": "METHOD",
+      "observability_stratum": "High",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "indicator": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 0.5,
+          "B_clarified": 1.0,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "result_table": {
+          "A_clarified": 0.5,
+          "B_clarified": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.708
+    },
+    {
+      "paper_id": "obadage2024_citations_repro",
+      "title": "Can citations tell us about a paper's reproducibility? (ACM FAccT 2024)",
+      "domain": "IS_Innovation",
+      "venue": "ACM FAccT",
+      "year": 2024,
+      "task_type": "STRICT",
+      "observability_stratum": "High",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "indicator": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 1.0,
+          "B_clarified": 0.5,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.958
+    },
+    {
+      "paper_id": "liu2018_hotstreaks",
+      "title": "Hot Streaks in Artistic, Cultural, and Scientific Careers",
+      "domain": "SoS",
+      "venue": "Nature",
+      "year": 2018,
+      "task_type": "METHOD",
+      "observability_stratum": "High",
+      "ku_leuven_arts": false,
+      "components": {
+        "data_source": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 0.5,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
+        },
+        "indicator": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 0.958
+    },
+    {
+      "paper_id": "arts2021_patent_nlp",
+      "title": "Natural language processing to identify the creation and impact of new technologies in patent text: Code, data, and new measures",
+      "domain": "Management_Strategy",
+      "venue": "Research Policy",
+      "year": 2021,
+      "task_type": "METHOD",
+      "observability_stratum": "High",
+      "ku_leuven_arts": true,
+      "components": {
+        "data_source": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "sample": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "indicator": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "model": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "result_table": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        },
+        "claim": {
+          "A_clarified": 1.0,
+          "B_clarified": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
+        }
+      },
+      "overall_gold_ecrf_frozen": 1.0
+    }
+  ]
+}
