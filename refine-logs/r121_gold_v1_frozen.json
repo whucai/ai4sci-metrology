@@ -1,5 +1,5 @@
 {
-  "version": "v1-frozen",
+  "version": "v1-frozen-r3",
   "date": "2026-06-29",
   "frame": "v7.2 (IO -> ECRF -> TCE)",
   "n_papers": 20,
@@ -8,79 +8,18 @@
     "B": "codex-gpt-5.2",
     "adjudicator": "senior (Claude)"
   },
-  "round1_original_agreement": {
-    "per_component": {
-      "data_source": {
-        "n": 20,
-        "observed_agreement_Po": 0.95,
-        "cohens_kappa": 0.907,
-        "krippendorff_alpha_ordinal": 0.981,
-        "n_disagree": 1,
-        "n_big_disagree": 0,
-        "meets_alpha_070": true,
-        "meets_alpha_060": true
-      },
-      "sample": {
-        "n": 20,
-        "observed_agreement_Po": 0.6,
-        "cohens_kappa": 0.2,
-        "krippendorff_alpha_ordinal": 0.594,
-        "n_disagree": 8,
-        "n_big_disagree": 0,
-        "meets_alpha_070": false,
-        "meets_alpha_060": false
-      },
-      "indicator": {
-        "n": 20,
-        "observed_agreement_Po": 0.95,
-        "cohens_kappa": 0.9,
-        "krippendorff_alpha_ordinal": 0.951,
-        "n_disagree": 1,
-        "n_big_disagree": 0,
-        "meets_alpha_070": true,
-        "meets_alpha_060": true
-      },
-      "model": {
-        "n": 20,
-        "observed_agreement_Po": 0.5,
-        "cohens_kappa": 0.174,
-        "krippendorff_alpha_ordinal": 0.492,
-        "n_disagree": 10,
-        "n_big_disagree": 0,
-        "meets_alpha_070": false,
-        "meets_alpha_060": false
-      },
-      "result_table": {
-        "n": 20,
-        "observed_agreement_Po": 0.75,
-        "cohens_kappa": 0.342,
-        "krippendorff_alpha_ordinal": 0.651,
-        "n_disagree": 5,
-        "n_big_disagree": 0,
-        "meets_alpha_070": false,
-        "meets_alpha_060": true
-      },
-      "claim": {
-        "n": 20,
-        "observed_agreement_Po": 0.2,
-        "cohens_kappa": 0.0,
-        "krippendorff_alpha_ordinal": 0.213,
-        "n_disagree": 16,
-        "n_big_disagree": 1,
-        "meets_alpha_070": false,
-        "meets_alpha_060": false
-      }
-    },
-    "overall": {
-      "n": 120,
-      "observed_agreement_Po": 0.658,
-      "cohens_kappa": 0.362,
-      "krippendorff_alpha_ordinal": 0.717,
-      "meets_alpha_070": true
-    },
-    "note": "Low alpha on Model/Result/Claim revealed a rubric ambiguity."
+  "round_history": {
+    "round1_original": "overall alpha=0.717; 2/6 meet 0.70. Revealed Model/Result/Claim rubric ambiguity.",
+    "round2_clarified_MRC": "overall alpha=0.876; 4/6 meet 0.70. Claim 0.213->1.000, Result 0.651->0.795, Model 0.492->0.694. Sample 0.594 borderline.",
+    "round3_clarified_SampleModel": "overall alpha=0.945; 6/6 meet 0.70. Sample 0.729, Model 1.0."
   },
-  "round2_clarified_agreement": {
+  "codebook_clarifications": [
+    "Model = model SPECIFICATION recoverable from paper (estimator + key variables + FE enumerated). CODE-INDEPENDENT. 0.5 if estimator named but some vars/FE pending.",
+    "Result = exact numerical targets recoverable (reported in paper OR via public code). 1.0 exact, 0.5 pending/approx, 0.0 none.",
+    "Claim = conclusion STATED in the paper. Claim-result distance is separate, not fidelity. 1.0 if stated.",
+    "Sample = paper STATES the sample (N stated or derivable, window, unit, filters). 'N pending' (annotator transcription status) does NOT reduce the ceiling. 0.5 only if N genuinely absent or sample genuinely partial."
+  ],
+  "agreement_round3": {
     "per_component": {
       "data_source": {
         "n": 20,
@@ -89,18 +28,16 @@
         "krippendorff_alpha_ordinal": 0.981,
         "n_disagree": 1,
         "n_big_disagree": 0,
-        "meets_alpha_070": true,
-        "meets_alpha_060": true
+        "meets_alpha_070": true
       },
       "sample": {
         "n": 20,
-        "observed_agreement_Po": 0.6,
-        "cohens_kappa": 0.2,
-        "krippendorff_alpha_ordinal": 0.594,
-        "n_disagree": 8,
+        "observed_agreement_Po": 0.9,
+        "cohens_kappa": 0.459,
+        "krippendorff_alpha_ordinal": 0.729,
+        "n_disagree": 2,
         "n_big_disagree": 0,
-        "meets_alpha_070": false,
-        "meets_alpha_060": false
+        "meets_alpha_070": true
       },
       "indicator": {
         "n": 20,
@@ -109,18 +46,16 @@
         "krippendorff_alpha_ordinal": 0.951,
         "n_disagree": 1,
         "n_big_disagree": 0,
-        "meets_alpha_070": true,
-        "meets_alpha_060": true
+        "meets_alpha_070": true
       },
       "model": {
         "n": 20,
-        "observed_agreement_Po": 0.75,
-        "cohens_kappa": 0.39,
-        "krippendorff_alpha_ordinal": 0.694,
-        "n_disagree": 5,
+        "observed_agreement_Po": 1.0,
+        "cohens_kappa": 1.0,
+        "krippendorff_alpha_ordinal": 1.0,
+        "n_disagree": 0,
         "n_big_disagree": 0,
-        "meets_alpha_070": false,
-        "meets_alpha_060": true
+        "meets_alpha_070": true
       },
       "result_table": {
         "n": 20,
@@ -129,8 +64,7 @@
         "krippendorff_alpha_ordinal": 0.795,
         "n_disagree": 4,
         "n_big_disagree": 0,
-        "meets_alpha_070": true,
-        "meets_alpha_060": true
+        "meets_alpha_070": true
       },
       "claim": {
         "n": 20,
@@ -139,35 +73,26 @@
         "krippendorff_alpha_ordinal": 1.0,
         "n_disagree": 0,
         "n_big_disagree": 0,
-        "meets_alpha_070": true,
-        "meets_alpha_060": true
+        "meets_alpha_070": true
       }
     },
     "overall": {
       "n": 120,
-      "observed_agreement_Po": 0.842,
-      "cohens_kappa": 0.683,
-      "krippendorff_alpha_ordinal": 0.876,
+      "observed_agreement_Po": 0.933,
+      "cohens_kappa": 0.852,
+      "krippendorff_alpha_ordinal": 0.945,
       "meets_alpha_070": true
-    },
-    "note": "After rubric clarification (Model=spec/code-independent; Result=exact-targets; Claim=stated), alpha lifts on Model/Result/Claim."
+    }
   },
-  "codebook_clarification": [
-    "Model = model SPECIFICATION recoverable from paper (estimator, variables, FE, coefficients). CODE-INDEPENDENT.",
-    "Result = exact numerical targets recoverable (reported in paper OR via public code).",
-    "Claim = conclusion STATED in the paper. Claim-result distance is separate, not fidelity."
-  ],
   "r122_gate": {
-    "round2_overall_alpha": 0.876,
+    "overall_alpha": 0.945,
     "meets_overall_070": true,
-    "n_components_meeting_070": 4,
-    "n_components_meeting_060": 5,
-    "sample_alpha": 0.594,
+    "n_components_meeting_070": 6,
+    "sample_alpha": 0.729,
     "claim_alpha": 1.0,
     "gate_rule": "overall>=0.70 AND >=4/6 components>=0.70 AND Sample/Claim>=0.60",
-    "gate_passes": false,
-    "gate_borderline": true,
-    "note": "Round-2 overall alpha=0.876; 4/6 components meet 0.70 (Data 0.981, Indicator 0.951, Result 0.795, Claim 1.0). Borderline: Sample=0.594 (just below 0.60 relaxation — N-pending ambiguity), Model=0.694 (just below 0.70). GATE BORDERLINE — Sample 0.594 just shy of 0.60; recommend one more Sample-rubric clarification (N-pending rule) before R122, but pool is frozen and overall alpha=0.876 is strong."
+    "gate_passes": true,
+    "note": "Round-3 overall alpha=0.945; 6/6 components meet 0.70. GATE PASSES — all thresholds cleared."
   },
   "ku_leuven_arts_caveat": {
     "flagged_papers": [
@@ -176,13 +101,13 @@
       "arts2021_patent_nlp"
     ],
     "n": 3,
-    "note": "3 KU Leuven/Arts papers (#6, #11, #20). Near-duplicate of #6 but distinct load-bearing components. Robustness check R-robust-KU planned: re-run key analyses excluding/grouping these to confirm the IO->ECRF effect is not group-driven.",
+    "note": "3 KU Leuven/Arts papers (#6, #11, #20). Near-duplicate of #6 but distinct load-bearing components. Robustness check R-robust-KU planned: re-run key analyses excluding/grouping these to confirm IO->ECRF effect not group-driven.",
     "robustness_check_id": "R-robust-KU (planned)"
   },
   "schaper2025_soft_blocker": {
     "status": "inconclusive (curl blocked: ScienceDirect Cloudflare, Lirias JS shell, Unpaywall unindexed)",
     "io3_retained": "partial/boundary",
-    "action": "human annotator fetch PDF to confirm whether KU Leuven author-inventor linkage is released; if so Data upgrades partial->clean. Does not block R121."
+    "action": "human annotator fetch PDF to confirm KU Leuven author-inventor linkage release; if so Data upgrades partial->clean. Does not block R121."
   },
   "papers": [
     {
@@ -196,43 +121,43 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "indicator": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
@@ -251,49 +176,49 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "indicator": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 0.5,
-          "B_clarified": 1.0,
-          "final": 0.75,
-          "disagreement": 0.5,
-          "method": "mean (adjacent)"
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         }
       },
-      "overall_gold_ecrf_frozen": 0.875
+      "overall_gold_ecrf_frozen": 0.917
     },
     {
       "paper_id": "park2023_disruptive",
@@ -306,43 +231,43 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "indicator": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
@@ -361,43 +286,43 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "indicator": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 1.0,
-          "B_clarified": 0.5,
+          "A_round3": 1.0,
+          "B_round3": 0.5,
           "final": 0.75,
           "disagreement": 0.5,
           "method": "mean (adjacent)"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
@@ -416,43 +341,43 @@
       "ku_leuven_arts": true,
       "components": {
         "data_source": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 0.5,
+          "A_round3": 1.0,
+          "B_round3": 0.5,
           "final": 0.75,
           "disagreement": 0.5,
           "method": "mean (adjacent)"
         },
         "indicator": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
@@ -471,49 +396,49 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
-          "final": 0.5,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "indicator": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 1.0,
-          "B_clarified": 0.5,
+          "A_round3": 1.0,
+          "B_round3": 0.5,
           "final": 0.75,
           "disagreement": 0.5,
           "method": "mean (adjacent)"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         }
       },
-      "overall_gold_ecrf_frozen": 0.875
+      "overall_gold_ecrf_frozen": 0.958
     },
     {
       "paper_id": "maddi2024",
@@ -526,43 +451,43 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 0.0,
-          "B_clarified": 0.0,
+          "A_round3": 0.0,
+          "B_round3": 0.0,
           "final": 0.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
-          "final": 0.5,
-          "disagreement": 0.0,
-          "method": "agree"
+          "A_round3": 1.0,
+          "B_round3": 0.5,
+          "final": 0.75,
+          "disagreement": 0.5,
+          "method": "mean (adjacent)"
         },
         "indicator": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 0.5,
-          "final": 0.75,
-          "disagreement": 0.5,
-          "method": "mean (adjacent)"
+          "A_round3": 0.5,
+          "B_round3": 0.5,
+          "final": 0.5,
+          "disagreement": 0.0,
+          "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
@@ -581,49 +506,49 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 0.0,
-          "B_clarified": 0.0,
+          "A_round3": 0.0,
+          "B_round3": 0.0,
           "final": 0.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 0.5,
-          "B_clarified": 1.0,
-          "final": 0.75,
-          "disagreement": 0.5,
-          "method": "mean (adjacent)"
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
         },
         "indicator": {
-          "A_clarified": 1.0,
-          "B_clarified": 0.5,
+          "A_round3": 1.0,
+          "B_round3": 0.5,
           "final": 0.75,
           "disagreement": 0.5,
           "method": "mean (adjacent)"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         }
       },
-      "overall_gold_ecrf_frozen": 0.667
+      "overall_gold_ecrf_frozen": 0.708
     },
     {
       "paper_id": "ke2015_sleeping_beauties",
@@ -636,49 +561,49 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 0.0,
-          "B_clarified": 0.0,
+          "A_round3": 0.0,
+          "B_round3": 0.0,
           "final": 0.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 0.5,
-          "B_clarified": 1.0,
-          "final": 0.75,
-          "disagreement": 0.5,
-          "method": "mean (adjacent)"
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
         },
         "indicator": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.0,
+          "A_round3": 0.5,
+          "B_round3": 0.0,
           "final": 0.25,
           "disagreement": 0.5,
           "method": "mean (adjacent)"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         }
       },
-      "overall_gold_ecrf_frozen": 0.583
+      "overall_gold_ecrf_frozen": 0.625
     },
     {
       "paper_id": "sun2023_ranking_mobility",
@@ -691,49 +616,49 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 0.5,
-          "final": 0.75,
-          "disagreement": 0.5,
-          "method": "mean (adjacent)"
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
         },
         "indicator": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 0.5,
-          "B_clarified": 1.0,
-          "final": 0.75,
-          "disagreement": 0.5,
-          "method": "mean (adjacent)"
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         }
       },
-      "overall_gold_ecrf_frozen": 0.75
+      "overall_gold_ecrf_frozen": 0.833
     },
     {
       "paper_id": "deng2023_enhancing_disruption",
@@ -746,43 +671,43 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 0.5,
-          "B_clarified": 1.0,
+          "A_round3": 0.5,
+          "B_round3": 1.0,
           "final": 0.75,
           "disagreement": 0.5,
           "method": "mean (adjacent)"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "indicator": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
@@ -801,43 +726,43 @@
       "ku_leuven_arts": true,
       "components": {
         "data_source": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "indicator": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
@@ -856,49 +781,49 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 0.5,
-          "final": 0.75,
-          "disagreement": 0.5,
-          "method": "mean (adjacent)"
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
         },
         "indicator": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         }
       },
-      "overall_gold_ecrf_frozen": 0.792
+      "overall_gold_ecrf_frozen": 0.833
     },
     {
       "paper_id": "vasarhelyi2023_who_benefits",
@@ -911,49 +836,49 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 0.0,
-          "B_clarified": 0.0,
+          "A_round3": 0.0,
+          "B_round3": 0.0,
           "final": 0.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
-          "final": 0.5,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "indicator": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 0.5,
-          "B_clarified": 1.0,
-          "final": 0.75,
-          "disagreement": 0.5,
-          "method": "mean (adjacent)"
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         }
       },
-      "overall_gold_ecrf_frozen": 0.542
+      "overall_gold_ecrf_frozen": 0.667
     },
     {
       "paper_id": "donner2024_data_inaccuracy",
@@ -966,49 +891,49 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 0.5,
-          "final": 0.75,
-          "disagreement": 0.5,
-          "method": "mean (adjacent)"
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
         },
         "indicator": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         }
       },
-      "overall_gold_ecrf_frozen": 0.625
+      "overall_gold_ecrf_frozen": 0.667
     },
     {
       "paper_id": "zheng2025_male_female_retractions",
@@ -1021,49 +946,49 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 0.5,
-          "final": 0.75,
-          "disagreement": 0.5,
-          "method": "mean (adjacent)"
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
         },
         "indicator": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
-          "final": 0.5,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         }
       },
-      "overall_gold_ecrf_frozen": 0.708
+      "overall_gold_ecrf_frozen": 0.833
     },
     {
       "paper_id": "gebhart2023_math_framework",
@@ -1076,49 +1001,49 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "indicator": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 0.5,
-          "B_clarified": 1.0,
-          "final": 0.75,
-          "disagreement": 0.5,
-          "method": "mean (adjacent)"
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
         },
         "result_table": {
-          "A_clarified": 0.5,
-          "B_clarified": 0.5,
+          "A_round3": 0.5,
+          "B_round3": 0.5,
           "final": 0.5,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         }
       },
-      "overall_gold_ecrf_frozen": 0.708
+      "overall_gold_ecrf_frozen": 0.75
     },
     {
       "paper_id": "obadage2024_citations_repro",
@@ -1131,43 +1056,43 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "indicator": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 1.0,
-          "B_clarified": 0.5,
+          "A_round3": 1.0,
+          "B_round3": 0.5,
           "final": 0.75,
           "disagreement": 0.5,
           "method": "mean (adjacent)"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
@@ -1186,49 +1111,49 @@
       "ku_leuven_arts": false,
       "components": {
         "data_source": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 0.5,
-          "final": 0.75,
-          "disagreement": 0.5,
-          "method": "mean (adjacent)"
+          "A_round3": 1.0,
+          "B_round3": 1.0,
+          "final": 1.0,
+          "disagreement": 0.0,
+          "method": "agree"
         },
         "indicator": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         }
       },
-      "overall_gold_ecrf_frozen": 0.958
+      "overall_gold_ecrf_frozen": 1.0
     },
     {
       "paper_id": "arts2021_patent_nlp",
@@ -1241,43 +1166,43 @@
       "ku_leuven_arts": true,
       "components": {
         "data_source": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "sample": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "indicator": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "model": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "result_table": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
         },
         "claim": {
-          "A_clarified": 1.0,
-          "B_clarified": 1.0,
+          "A_round3": 1.0,
+          "B_round3": 1.0,
           "final": 1.0,
           "disagreement": 0.0,
           "method": "agree"
