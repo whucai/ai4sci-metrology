@@ -1,0 +1,88 @@
+{
+  "run_id": "r13",
+  "paper": "park2023_disruptive",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722173,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/park2023_disruptive_qwen3-32b_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 120.7,
+    "usage": {
+      "completion": 10550,
+      "prompt": 891
+    },
+    "finish": "stop",
+    "n_content_chars": 5866
+  },
+  "llm_response_chars": 5866,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.56,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 2458,
+    "stderr_chars": 0
+  },
+  "stdout": "\n=== DATA_LOAD ===\nTotal papers loaded: 500000\nPapers after filter: 261312\nYear range: 1945 - 2010\n\n=== DESCRIPTIVE ===\nOverall mean CD: 0.017669\nOverall std CD: 0.010984\nYears covered: 66\n\n=== CD_BY_YEAR ===\n1945: mean=0.039968, N=3938\n1946: mean=0.038856, N=3842\n1947: mean=0.037754, N=3935\n1948: mean=0.036550, N=3955\n1949: mean=0.035433, N=3981\n1950: mean=0.034452, N=3919\n1951: mean=0.033573, N=3974\n1952: mean=0.032576, N=3925\n1953: mean=0.031400, N=4021\n1954: mean=0.030635, N=3967\n1955: mean=0.029645, N=4043\n1956: mean=0.028882, N=3927\n1957: mean=0.027976, N=3966\n1958: mean=0.027054, N=3925\n1959: mean=0.026152, N=3903\n1960: mean=0.025437, N=4048\n1961: mean=0.024685, N=3965\n1962: mean=0.024080, N=3961\n1963: mean=0.023395, N=4003\n1964: mean=0.022559, N=3959\n1965: mean=0.021989, N=3931\n1966: mean=0.021258, N=3896\n1967: mean=0.020632, N=3974\n1968: mean=0.020021, N=3918\n1969: mean=0.019521, N=3833\n1970: mean=0.018902, N=4063\n1971: mean=0.018434, N=3990\n1972: mean=0.017674, N=3910\n1973: mean=0.017296, N=3905\n1974: mean=0.016713, N=4053\n1975: mean=0.016278, N=4011\n1976: mean=0.015734, N=3877\n1977: mean=0.015292, N=4020\n1978: mean=0.014892, N=4005\n1979: mean=0.014263, N=3993\n1980: mean=0.014095, N=3989\n1981: mean=0.013459, N=3958\n1982: mean=0.013168, N=4013\n1983: mean=0.012787, N=3911\n1984: mean=0.012404, N=3909\n1985: mean=0.012038, N=4048\n1986: mean=0.011619, N=3887\n1987: mean=0.011396, N=3907\n1988: mean=0.011022, N=3986\n1989: mean=0.010619, N=3919\n1990: mean=0.010251, N=3893\n1991: mean=0.010160, N=3999\n1992: mean=0.009733, N=3966\n1993: mean=0.009410, N=3961\n1994: mean=0.009142, N=3997\n1995: mean=0.008965, N=4029\n1996: mean=0.008587, N=3992\n1997: mean=0.008475, N=4074\n1998: mean=0.008262, N=3949\n1999: mean=0.008023, N=3936\n2000: mean=0.007652, N=3938\n2001: mean=0.007358, N=4012\n2002: mean=0.007138, N=3949\n2003: mean=0.007111, N=4039\n2004: mean=0.006924, N=3881\n2005: mean=0.006780, N=3975\n2006: mean=0.006409, N=3936\n2007: mean=0.006237, N=3922\n2008: mean=0.006048, N=3829\n2009: mean=0.005849, N=4064\n2010: mean=0.005917, N=3908\n\n=== RESULTS ===\nSample N = 261312\nYears = 66\nCD 1945 = 0.039968\nCD 2010 = 0.005917\nDecline = 85.2%\n\n=== DIFF_TABLE ===\n| Metric | Value |\n| sample_N | 261312 |\n| years_count | 66 |\n| cd_1945_mean | 0.039968 |\n| cd_2010_mean | 0.005917 |\n| decline_pct | 85.2 |\n| overall_mean_cd | 0.017669 |\n\n=== CONCLUSION ===\nThe analysis supports the conclusion that papers are becoming less disruptive over time.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 0.5,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.825,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 76,
+      "SYNTHETIC": 2
+    },
+    "n_result_lines": 78
+  },
+  "status": "DONE",
+  "t_end": 1782722294
+}

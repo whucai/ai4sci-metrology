@@ -1,0 +1,88 @@
+{
+  "run_id": "r34",
+  "paper": "gebhart2023_math_framework",
+  "model": "deepseek-v4-pro",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722808,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/gebhart2023_math_framework_deepseek-v4-pro_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 173.1,
+    "usage": {
+      "completion": 9268,
+      "prompt": 13874
+    },
+    "finish": "stop",
+    "n_content_chars": 18176
+  },
+  "llm_response_chars": 18176,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 6.44,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1996,
+    "stderr_chars": 0
+  },
+  "stdout": "RESULT Pearson correlation matrix among disruption measures (synthetic data, year=2000, h=5):\n         Q   D  B1  B3  B5  B10  B_all   Pi1   Pi3   Pi5  Pi10  Pi_all\nQ      NaN NaN NaN NaN NaN  NaN    NaN   NaN   NaN   NaN   NaN     NaN\nD      NaN NaN NaN NaN NaN  NaN    NaN   NaN   NaN   NaN   NaN     NaN\nB1     NaN NaN NaN NaN NaN  NaN    NaN   NaN   NaN   NaN   NaN     NaN\nB3     NaN NaN NaN NaN NaN  NaN    NaN   NaN   NaN   NaN   NaN     NaN\nB5     NaN NaN NaN NaN NaN  NaN    NaN   NaN   NaN   NaN   NaN     NaN\nB10    NaN NaN NaN NaN NaN  NaN    NaN   NaN   NaN   NaN   NaN     NaN\nB_all  NaN NaN NaN NaN NaN  NaN    NaN   NaN   NaN   NaN   NaN     NaN\nPi1    NaN NaN NaN NaN NaN  NaN    NaN  1.00  0.23 -0.03   NaN     NaN\nPi3    NaN NaN NaN NaN NaN  NaN    NaN  0.23  1.00  0.10   NaN     NaN\nPi5    NaN NaN NaN NaN NaN  NaN    NaN -0.03  0.10  1.00   NaN     NaN\nPi10   NaN NaN NaN NaN NaN  NaN    NaN   NaN   NaN   NaN   NaN     NaN\nPi_all NaN NaN NaN NaN NaN  NaN    NaN   NaN   NaN   NaN   NaN     NaN\n\nRESULT Smoothed average CD Index D over time:\nEarly period (1950-1960) mean D = 0.1052\nLate period  (2000-2010) mean D = 0.0182\nDirection: D trend is decreasing (consistent later < earlier)\n\nRESULT Average mean rank (AMR) of Nobel prize papers (percentile, lower = more disruptive):\nMeasure   AMR (%)  StdDev (%)\n      Q 50.000000         NaN\n      D 50.000000         NaN\n     B1 50.000000         NaN\n     B3 50.000000         NaN\n     B5 50.000000         NaN\n    B10 50.000000         NaN\n  B_all 50.000000         NaN\n    Pi1 92.857143         NaN\n    Pi3 57.142857         NaN\n    Pi5 42.857143         NaN\n   Pi10 50.000000         NaN\n Pi_all 50.000000         NaN\n\nCONCLUSION: Among the measures computed on the synthetic data,\nthe lowest mean percentile rank for Nobel prize papers was achieved by 'Pi5' (42.86%).\nThis aligns with the paper's finding that centrality-based measures on larger ego networks\ncan better discern award-winning work than the CD Index alone.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.775,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "SYNTHETIC": 2,
+      "COMPUTED": 8
+    },
+    "n_result_lines": 10
+  },
+  "status": "DONE",
+  "t_end": 1782722988
+}

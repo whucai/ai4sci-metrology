@@ -1,0 +1,100 @@
+{
+  "run_id": "r40",
+  "paper": "arts2021_patent_nlp",
+  "model": "deepseek-v4-pro",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782723087,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/arts2021_patent_nlp_deepseek-v4-pro_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 146.1,
+    "usage": {
+      "completion": 8875,
+      "prompt": 15529
+    },
+    "finish": "stop",
+    "n_content_chars": 25929
+  },
+  "llm_response_chars": 25929,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.2,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 194
+  },
+  "stdout": "",
+  "stderr": "  File \"/workspace/script.py\", line 328\n    df['new_subclass_comb_reuse'] = df['subclasses'].apply(\n                                                          ^\nSyntaxError: '(' was never closed\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.55,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "SYNTHETIC": 6,
+      "COMPUTED": 6
+    },
+    "n_result_lines": 12
+  },
+  "status": "DONE",
+  "t_end": 1782723233
+}

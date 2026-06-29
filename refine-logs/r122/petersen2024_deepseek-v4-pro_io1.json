@@ -1,0 +1,87 @@
+{
+  "run_id": "r2",
+  "paper": "petersen2024",
+  "model": "deepseek-v4-pro",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782721620,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/petersen2024_deepseek-v4-pro_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 183.6,
+    "usage": {
+      "completion": 9785,
+      "prompt": 16271
+    },
+    "finish": "stop",
+    "n_content_chars": 19706
+  },
+  "llm_response_chars": 19706,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 326.12,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 5186,
+    "stderr_chars": 5000
+  },
+  "stdout": "Reproducing quantitative analysis of Petersen et al. (2024)\n\n============================================================\nPART 1: Empirical regression (MAG stub)\n============================================================\nDATA STUB: The real analysis uses Microsoft Academic Graph (MAG) data.\n  Required columns per publication: year, kp (coauthors), rp (references),\n  cp (citations in 5-year window), CD5 (disruption index).\n  For demonstration we generate a synthetic placeholder with the same schema.\n\nRegression results (synthetic placeholder data):\n==============================================================================\n                 coef    std err          t      P>|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst          0.0002      0.003      0.064      0.949      -0.005       0.006\nlog_kp         0.0040      0.000     10.241      0.000       0.003       0.005\nlog_rp        -0.0242      0.000    -52.202      0.000      -0.025      -0.023\nlog_cp         0.0007      0.000      2.104      0.035    4.52e-05       0.001\nyear_1991     -0.0060      0.002     -3.417      0.001      -0.010      -0.003\nyear_1992     -0.0115      0.002     -6.626      0.000      -0.015      -0.008\nyear_1993     -0.0157      0.002     -8.944      0.000      -0.019      -0.012\nyear_1994     -0.0184      0.002    -10.436      0.000      -0.022      -0.015\nyear_1995     -0.0268      0.002    -15.010      0.000      -0.030      -0.023\nyear_1996     -0.0292      0.002    -15.916      0.000      -0.033      -0.026\nyear_1997     -0.0358      0.002    -20.694      0.000      -0.039      -0.032\nyear_1998     -0.0395      0.002    -21.956      0.000      -0.043      -0.036\nyear_1999     -0.0496      0.002    -27.553      0.000      -0.053      -0.046\nyear_2000     -0.0517      0.002    -28.873      0.000      -0.055      -0.048\nyear_2001     -0.0561      0.002    -31.712      0.000      -0.060      -0.053\nyear_2002     -0.0610      0.002    -35.208      0.000      -0.064      -0.058\nyear_2003     -0.0658      0.002    -36.181      0.000      -0.069      -0.062\nyear_2004     -0.0693      0.002    -40.399      0.000      -0.073      -0.066\nyear_2005     -0.0761      0.002    -41.675      0.000      -0.080      -0.073\nyear_2006     -0.0815      0.002    -48.010      0.000      -0.085      -0.078\nyear_2007     -0.0863      0.002    -47.773      0.000      -0.090      -0.083\nyear_2008     -0.0910      0.002    -51.441      0.000      -0.094      -0.088\nyear_2009     -0.0971      0.002    -54.572      0.000      -0.101      -0.094\n==============================================================================\n\nRESULT coef_log_kp  = 0.00403\nRESULT coef_log_rp  = -0.02420\nRESULT coef_log_cp  = 0.00066\n\nMarginal effect: doubling references -> change in CD5 = -0.0168\nMarginal effect: 5x coauthors -> change in CD5 = 0.0065\n\nPAPER_REPORTED coef_log_rp : -0.025 ± 0.001\nPAPER_REPORTED coef_log_kp : +0.0039 ± 0.0008\nPAPER_REPORTED doubling rp effect : -0.017 (approx)\nPAPER_REPORTED 5x kp effect : +0.006 (approx)\n\nInterpretation: In the synthetic data, CD5 is negatively associated with\nlog(number of references) and positively associated with log(number of coauthors)\nafter controlling for year fixed effects, consistent with the paper's critique.\n\n============================================================\nPART 2: Computational generative network simulations\n============================================================\n\n--- Scenario (1): No CI, no redirection ---\nAverage CD5( 1) at t=25: 0.3218\nAverage CD5( 1) at t=50: nan\nTrend:  decreasing/stable\n\n--- Scenario (2): No CI, increasing redirection ---\nAverage CD5( 2) at t=25: 0.1707\nAverage CD5( 2) at t=50: nan\n\n--- Scenario (3): CI + increasing redirection (main case) ---\nAverage CD5( 3) at t=25: 0.8330\nAverage CD5( 3) at t=50: nan\n\nComparative trends (CD5) for selected years:\nYear    S1(no CI, β=0)   S2(no CI, β inc) S3(CI, β inc)\nt=10    -0.4783            -0.4964            0.8272            \nt=20    0.0433             -0.0015            0.7457            \nt=30    0.3566             0.2941             0.8309            \nt=40    0.6045             0.4327             0.7426            \nt=50    nan                nan                nan               \n\nAverage Rk(t) for Scenario (3) (extraneous citation ratio):\n  t=10: Rk=0.0000\n  t=20: Rk=0.0000\n  t=30: Rk=0.0000\n  t=40: Rk=0.0000\n  t=50: Rk=nan\n\nCorrelation demonstration: r(t) vs Rk(t) in Scenario (3)\n  t=10: r(t)=5.0, Rk(t)=0.0000\n  t=20: r(t)=7.0, Rk(t)=0.0000\n  t=30: r(t)=8.0, Rk(t)=0.0000\n  t=40: r(t)=10.0, Rk(t)=0.0000\n  t=50: r(t)=12.0, Rk(t)=nan\n\nInterpretation: The disruption index CD5 systematically decreases over time\nonly when citation inflation (gr>0) is present (Scenario 3).\nWhen reference list growth is turned off (gr=0, Scenarios 1,2) CD does not decline.\nThis confirms that citation inflation is the main driver of the observed decline.\n\n--- Scenario (5): Capped reference lists after T*=30 (CI until then) ---\nAverage CD5( 5) at t=25: 0.6926\nAverage CD5( 5) at t=50 (after cap): nan\nTrend after cap: CD5 should stabilize or increase.\n\nAll analyses complete.\n",
+  "stderr": "ork:  40%|████      | 20/50 [00:01<00:02, 13.58it/s]\nGenerating network:  46%|████▌     | 23/50 [00:01<00:02,  9.25it/s]\nGenerating network:  50%|█████     | 25/50 [00:02<00:03,  7.24it/s]\nGenerating network:  54%|█████▍    | 27/50 [00:03<00:04,  5.49it/s]\nGenerating network:  56%|█████▌    | 28/50 [00:03<00:04,  4.66it/s]\nGenerating network:  58%|█████▊    | 29/50 [00:04<00:05,  3.88it/s]\nGenerating network:  60%|██████    | 30/50 [00:05<00:09,  2.01it/s]\nGenerating network:  62%|██████▏   | 31/50 [00:07<00:14,  1.33it/s]\nGenerating network:  64%|██████▍   | 32/50 [00:09<00:18,  1.01s/it]\nGenerating network:  66%|██████▌   | 33/50 [00:11<00:21,  1.25s/it]\nGenerating network:  68%|██████▊   | 34/50 [00:13<00:23,  1.50s/it]\nGenerating network:  70%|███████   | 35/50 [00:15<00:26,  1.74s/it]\nGenerating network:  72%|███████▏  | 36/50 [00:18<00:27,  1.98s/it]\nGenerating network:  74%|███████▍  | 37/50 [00:21<00:28,  2.18s/it]\nGenerating network:  76%|███████▌  | 38/50 [00:24<00:28,  2.41s/it]\nGenerating network:  78%|███████▊  | 39/50 [00:27<00:29,  2.66s/it]\nGenerating network:  80%|████████  | 40/50 [00:30<00:29,  2.96s/it]\nGenerating network:  82%|████████▏ | 41/50 [00:34<00:29,  3.25s/it]\nGenerating network:  84%|████████▍ | 42/50 [00:39<00:28,  3.53s/it]\nGenerating network:  86%|████████▌ | 43/50 [00:43<00:26,  3.78s/it]\nGenerating network:  88%|████████▊ | 44/50 [00:48<00:24,  4.06s/it]\nGenerating network:  90%|█████████ | 45/50 [00:53<00:21,  4.35s/it]\nGenerating network:  92%|█████████▏| 46/50 [00:58<00:18,  4.66s/it]\nGenerating network:  94%|█████████▍| 47/50 [01:04<00:15,  5.03s/it]\nGenerating network:  96%|█████████▌| 48/50 [01:10<00:10,  5.47s/it]\nGenerating network:  98%|█████████▊| 49/50 [01:17<00:05,  5.86s/it]\nGenerating network: 100%|██████████| 50/50 [01:24<00:00,  6.26s/it]\n                                                                   \n\nComputing CD:   0%|          | 0/3899 [00:00<?, ?it/s]\n                                                      \n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.775,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 9
+    },
+    "n_result_lines": 9
+  },
+  "status": "DONE",
+  "t_end": 1782722130
+}

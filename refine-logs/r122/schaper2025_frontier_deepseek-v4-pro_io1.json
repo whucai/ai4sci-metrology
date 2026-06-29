@@ -1,0 +1,91 @@
+{
+  "run_id": "r24",
+  "paper": "schaper2025_frontier",
+  "model": "deepseek-v4-pro",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722560,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/schaper2025_frontier_deepseek-v4-pro_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 243.3,
+    "usage": {
+      "completion": 13964,
+      "prompt": 14410
+    },
+    "finish": "stop",
+    "n_content_chars": 27774
+  },
+  "llm_response_chars": 27774,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 4.54,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 489
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 278, in <module>\n    **{f\"decile_{d}_x_delta\": locals()[f\"decile_{d}_x_delta\"] for d in range(1, 11)}\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 278, in <dictcomp>\n    **{f\"decile_{d}_x_delta\": locals()[f\"decile_{d}_x_delta\"] for d in range(1, 11)}\n                              ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'decile_1_x_delta'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.95,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 5
+    },
+    "n_result_lines": 5
+  },
+  "status": "DONE",
+  "t_end": 1782722808
+}

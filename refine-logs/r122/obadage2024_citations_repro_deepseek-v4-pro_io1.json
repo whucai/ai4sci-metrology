@@ -1,0 +1,88 @@
+{
+  "run_id": "r36",
+  "paper": "obadage2024_citations_repro",
+  "model": "deepseek-v4-pro",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722966,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/obadage2024_citations_repro_deepseek-v4-pro_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 145.5,
+    "usage": {
+      "completion": 7740,
+      "prompt": 6391
+    },
+    "finish": "stop",
+    "n_content_chars": 11773
+  },
+  "llm_response_chars": 11773,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.34,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 2256,
+    "stderr_chars": 0
+  },
+  "stdout": "Created 41244 citation contexts (target 41244).\nGround truth contexts selected: 6746 (paper reports 1937).\nGround truth label distribution (full):\ntrue_sentiment\nneutral     4534\npositive    2100\nnegative     112\nName: count, dtype: int64\nBalanced GT size: 336 (paper: 69).\nSYNTHETIC_MODEL_F1_M6 = 0.727 (macro avg), precision = 0.734, recall = 0.726\nSYNTHETIC_MODEL_F1_M7 = 0.866 (macro avg), precision = 0.873, recall = 0.866\n\nOverall sentiment counts (all 41,244 contexts):\nM6:\n  positive = 11976, negative = 3209, neutral = 26059\nM7:\n  positive = 11542, negative = 2234, neutral = 27468\nPAPER_REPORTED M6: pos=15744, neg=2366, neu=23134\nPAPER_REPORTED M7: pos=10300, neg=1939, neu=29005\n\n=== Normalised citation counts (filtered Nneg >= 50) ===\n\nFor M6:\n  rs_score = 0.00: N'pos = 0.6371, N'neg = 0.3629, r = 1.756\n  rs_score = 0.20: N'pos = 0.7119, N'neg = 0.2881, r = 2.471\n  rs_score = 0.33: N'pos = 0.6986, N'neg = 0.3014, r = 2.318\n  rs_score = 0.50: N'pos = 0.7445, N'neg = 0.2555, r = 2.913\n  rs_score = 0.67: N'pos = 0.7564, N'neg = 0.2436, r = 3.106\n  rs_score = 0.80: N'pos = 0.8045, N'neg = 0.1955, r = 4.116\n  rs_score = 1.00: N'pos = 0.8148, N'neg = 0.1852, r = 4.400\n\nFor M7:\n  rs_score = 0.00: N'pos = 0.4992, N'neg = 0.5008, r = 0.997\n  rs_score = 0.20: N'pos = 0.6484, N'neg = 0.3516, r = 1.844\n  rs_score = 0.33: N'pos = 0.6787, N'neg = 0.3213, r = 2.113\n  rs_score = 0.50: N'pos = 0.7438, N'neg = 0.2562, r = 2.903\n  rs_score = 0.67: N'pos = 0.8129, N'neg = 0.1871, r = 4.345\n  rs_score = 0.80: N'pos = 0.8587, N'neg = 0.1413, r = 6.078\n  rs_score = 1.00: N'pos = 0.8791, N'neg = 0.1209, r = 7.274\n\nCorrelation (rs_score vs N'_pos) M6: 0.968\nCorrelation (rs_score vs N'_neg) M6: -0.968\nCorrelation (rs_score vs r)     M6: 0.966\n\nCorrelation (rs_score vs N'_pos) M7: 0.975\nCorrelation (rs_score vs N'_neg) M7: -0.975\nCorrelation (rs_score vs r)     M7: 0.974\n\n=== CONCLUSION ===\nBoth M6 and M7 show that the normalised fraction of positive citation contexts (N'_pos) increases with reproducibility score, while the fraction of negative contexts (N'_neg) decreases. The ratio r = N'_pos/N'_neg magnifies this trend. This supports the paper's claim that citation context sentiment can serve as a signal of reproducibility in ML papers.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.85,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "SYNTHETIC": 2,
+      "COMPUTED": 8
+    },
+    "n_result_lines": 10
+  },
+  "status": "DONE",
+  "t_end": 1782723112
+}

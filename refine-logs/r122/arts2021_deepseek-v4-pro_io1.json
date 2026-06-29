@@ -1,0 +1,100 @@
+{
+  "run_id": "r4",
+  "paper": "arts2021",
+  "model": "deepseek-v4-pro",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782721620,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/arts2021_deepseek-v4-pro_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 152.4,
+    "usage": {
+      "completion": 9201,
+      "prompt": 15524
+    },
+    "finish": "stop",
+    "n_content_chars": 19301
+  },
+  "llm_response_chars": 19301,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.06,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 345,
+    "stderr_chars": 2407
+  },
+  "stdout": "================================================================================\nREPRODUCTION ANALYSIS OF ARTS, HOU & GOMEZ (2021)\nNote: All results derived from synthetic placeholder data for illustration.\n================================================================================\n\n--- STUDY 1: AWARD PATENTS vs TEXT-MATCHED CONTROLS ---\n",
+  "stderr": "per.pxi\", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item\nKeyError: 'new_word_log'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/workspace/script.py\", line 311, in <module>\n    desc_award = compute_descriptives(df_award, \"is_award\")\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 289, in compute_descriptives\n    s1 = df.loc[mask1, col]\n         ~~~~~~^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexing.py\", line 1184, in __getitem__\n    return self._getitem_tuple(key)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexing.py\", line 1368, in _getitem_tuple\n    return self._getitem_lowerdim(tup)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexing.py\", line 1065, in _getitem_lowerdim\n    section = self._getitem_axis(key, axis=i)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexing.py\", line 1431, in _getitem_axis\n    return self._get_label(key, axis=axis)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexing.py\", line 1381, in _get_label\n    return self.obj.xs(label, axis=axis)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/generic.py\", line 4287, in xs\n    return self[key]\n           ~~~~^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4102, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3812, in get_loc\n    raise KeyError(key) from err\nKeyError: 'new_word_log'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.55,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "SYNTHETIC": 15,
+      "COMPUTED": 3
+    },
+    "n_result_lines": 18
+  },
+  "status": "DONE",
+  "t_end": 1782721774
+}

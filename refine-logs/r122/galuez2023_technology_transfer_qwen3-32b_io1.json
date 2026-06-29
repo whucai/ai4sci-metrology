@@ -1,0 +1,17 @@
+{
+  "run_id": "r25",
+  "paper": "galuez2023_technology_transfer",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722589,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/galuez2023_technology_transfer_qwen3-32b_io1.json",
+  "error": "missing paper.md for galuez2023_technology_transfer (assemble IO package first)",
+  "status": "NO_PACKAGE"
+}

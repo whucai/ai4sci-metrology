@@ -1,0 +1,99 @@
+{
+  "run_id": "r16",
+  "paper": "bentley2023_disruption",
+  "model": "deepseek-v4-pro",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722351,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/bentley2023_disruption_deepseek-v4-pro_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 91.1,
+    "usage": {
+      "completion": 4927,
+      "prompt": 1036
+    },
+    "finish": "stop",
+    "n_content_chars": 8725
+  },
+  "llm_response_chars": 8725,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.73,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 258
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 85, in <module>\n    disruption_score = base_uw * (1 - weight_norm) + base_w * weight_norm\n                       ^^^^^^^\nNameError: name 'base_uw' is not defined. Did you mean: 'base_w'?\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 0.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.45,
+    "final_ecrf": 0.45,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 6
+    },
+    "n_result_lines": 6
+  },
+  "status": "DONE",
+  "t_end": 1782722443
+}

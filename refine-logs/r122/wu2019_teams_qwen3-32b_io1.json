@@ -1,0 +1,87 @@
+{
+  "run_id": "r11",
+  "paper": "wu2019_teams",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722033,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/wu2019_teams_qwen3-32b_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 136.4,
+    "usage": {
+      "completion": 11139,
+      "prompt": 547
+    },
+    "finish": "stop",
+    "n_content_chars": 8642
+  },
+  "llm_response_chars": 8642,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 3.17,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 580,
+    "stderr_chars": 2091
+  },
+  "stdout": "Loading data (synthetic stub)...\nComputing Disruption Index...\n============================================================\nQUANTITATIVE ANALYSIS: TEAM SIZE vs DISRUPTION\n============================================================\n\n[RESULT] Descriptive Statistics:\n  Total Papers: 1500\n  Mean Team Size: 3.95\n  Mean D-index: -0.2922\n  Std D-index: 0.2644\n\n[RESULT] Raw Pearson Correlation (Team Size vs D-index): 0.1963\n\n[RESULT] Mean D-index by Team Size Bin:\n  Team Size 1: -0.4252\n  Team Size 2: -0.3579\n  Team Size 3: -0.3023\n  Team Size 4-5: -0.2849\n  Team Size 6+: -0.1961\n",
+  "stderr": " coef, pval = run_analysis(df)\n                 ^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 178, in run_analysis\n    model = sm.OLS(y, X).fit()\n            ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 924, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 749, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 203, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 270, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 95, in __init__\n    self.data = self._handle_data(endog, exog, missing, hasconst,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 135, in _handle_data\n    data = handle_data(endog, exog, missing, hasconst, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 675, in handle_data\n    return klass(endog, exog=exog, missing=missing, hasconst=hasconst,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 84, in __init__\n    self.endog, self.exog = self._convert_endog_exog(endog, exog)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 509, in _convert_endog_exog\n    raise ValueError(\"Pandas data cast to numpy dtype of object. \"\nValueError: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 0.0,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.75,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 4
+    },
+    "n_result_lines": 4
+  },
+  "status": "DONE",
+  "t_end": 1782722173
+}

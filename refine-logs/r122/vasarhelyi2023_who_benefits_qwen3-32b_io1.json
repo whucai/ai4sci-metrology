@@ -1,0 +1,92 @@
+{
+  "run_id": "r27",
+  "paper": "vasarhelyi2023_who_benefits",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722589,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/vasarhelyi2023_who_benefits_qwen3-32b_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 101.3,
+    "usage": {
+      "completion": 8269,
+      "prompt": 15851
+    },
+    "finish": "stop",
+    "n_content_chars": 13626
+  },
+  "llm_response_chars": 13626,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.88,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 605,
+    "stderr_chars": 1374
+  },
+  "stdout": "STUB: Synthetic dataset generated with documented schema.\nShape: (1200, 9)\n\nPREPROCESSING: Indicators computed.\nVisibility distribution:\nvisibility\n0    0.8975\n1    0.1025\nName: proportion, dtype: float64\n\n============================================================\nRUNNING CEM & OLS REGRESSIONS PER RESEARCH AREA\n============================================================\n\n--- Computer Science ---\nRESULT CEM_Matches_CS: Treated=41, Control=41\nRESULT CEM_L1_Overall_CS = 0.000 (PAPER_REPORTED: CS=0.724, SS=0.488)\nRESULT Model1_coef_visibility_CS = -0.4062 (p=0.0378)\nRESULT Model2_Gender_Effects_CS:\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3805, in get_loc\n    return self._engine.get_loc(casted_key)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"index.pyx\", line 167, in pandas._libs.index.IndexEngine.get_loc\n  File \"index.pyx\", line 196, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item\nKeyError: 'team_gender[T.FF]'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/workspace/script.py\", line 187, in <module>\n    coef = mod2.params[f'team_gender[T.{cat}]']\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/series.py\", line 1121, in __getitem__\n    return self._get_value(key)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/series.py\", line 1237, in _get_value\n    loc = self.index.get_loc(label)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3812, in get_loc\n    raise KeyError(key) from err\nKeyError: 'team_gender[T.FF]'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.95,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "SYNTHETIC": 1,
+      "COMPUTED": 6
+    },
+    "n_result_lines": 7
+  },
+  "status": "DONE",
+  "t_end": 1782722691
+}

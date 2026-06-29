@@ -1,0 +1,87 @@
+{
+  "run_id": "r28",
+  "paper": "vasarhelyi2023_who_benefits",
+  "model": "deepseek-v4-pro",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722630,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/vasarhelyi2023_who_benefits_deepseek-v4-pro_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 227.4,
+    "usage": {
+      "completion": 12420,
+      "prompt": 14673
+    },
+    "finish": "stop",
+    "n_content_chars": 21477
+  },
+  "llm_response_chars": 21477,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 108.06,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 9214,
+    "stderr_chars": 0
+  },
+  "stdout": "der labels)\n\n============================================================\nAREA: Computer Science\n  Articles before matching: 940 (treated: 146)\n  Matched articles: 292 (treated: 146)\n  Mean max_h_index: treated=4.800, control=4.720\n  Mean journal_impact_factor: treated=1.930, control=1.865\n  Mean team_size: treated=4.568, control=4.562\n\n  Model 1 (vis + controls):\n                           coef          pval  sig\nconst                  0.873747  2.906063e-19  ***\nhigh_visibility        0.360349  1.185514e-16  ***\nmax_h_index            0.102027  8.186617e-19  ***\njournal_impact_factor  0.139355  7.328443e-10  ***\nteam_size              0.006108  5.963778e-01     \n\n  Model 2 (vis + controls + gender):\n                           coef          pval  sig\nconst                  0.778462  2.322387e-16  ***\nhigh_visibility        0.362863  8.648700e-18  ***\nmax_h_index            0.099636  3.275236e-19  ***\njournal_impact_factor  0.144853  3.744310e-11  ***\nteam_size              0.010357  3.523354e-01     \ngend_FF                0.107347  1.069462e-01     \ngend_FM                0.265453  1.478624e-06  ***\ngend_MF                0.150660  1.457883e-02    *\n\n  Model 3 (vis + controls + gender + interactions):\n                           coef          pval  sig\nconst                  0.732162  1.883555e-14  ***\nhigh_visibility        0.427981  1.327061e-15  ***\nmax_h_index            0.097681  1.451272e-18  ***\njournal_impact_factor  0.145963  2.456574e-11  ***\nteam_size              0.014649  1.931353e-01     \ngend_FF                0.298009  3.355106e-03   **\ngend_FM                0.314154  5.822724e-05  ***\ngend_MF                0.207124  8.904794e-03   **\nhighvis_FF            -0.341079  1.233006e-02    *\nhighvis_FM            -0.091931  3.928323e-01     \nhighvis_MF            -0.118758  3.385281e-01     \n\n============================================================\nAREA: Engineering\n  Articles before matching: 4440 (treated: 627)\n  Matched articles: 1254 (treated: 627)\n  Mean max_h_index: treated=4.028, control=4.011\n  Mean journal_impact_factor: treated=1.595, control=1.591\n  Mean team_size: treated=4.571, control=4.574\n\n  Model 1 (vis + controls):\n                           coef          pval  sig\nconst                  0.619334  5.282311e-57  ***\nhigh_visibility        0.244702  8.641455e-35  ***\nmax_h_index            0.109285  6.534836e-98  ***\njournal_impact_factor  0.164473  1.574252e-65  ***\nteam_size              0.014331  8.735375e-03   **\n\n  Model 2 (vis + controls + gender):\n                           coef           pval  sig\nconst                  0.579854   3.330768e-50  ***\nhigh_visibility        0.241518   4.084922e-35  ***\nmax_h_index            0.110691  6.895873e-103  ***\njournal_impact_factor  0.166204   6.922965e-69  ***\nteam_size              0.015891   3.103207e-03   **\ngend_FF                0.246378   6.418588e-12  ***\ngend_FM               -0.013828   6.200284e-01     \ngend_MF                0.047488   7.346350e-02     \n\n  Model 3 (vis + controls + gender + interactions):\n                           coef           pval  sig\nconst                  0.594956   1.005405e-50  ***\nhigh_visibility        0.211716   5.039147e-18  ***\nmax_h_index            0.110830  5.002898e-103  ***\njournal_impact_factor  0.166191   9.265464e-69  ***\nteam_size              0.015671   3.540165e-03   **\ngend_FF                0.212409   3.649344e-05  ***\ngend_FM               -0.053380   1.692848e-01     \ngend_MF                0.005934   8.774214e-01     \nhighvis_FF             0.066608   3.483638e-01     \nhighvis_FM             0.081470   1.441399e-01     \nhighvis_MF             0.080199   1.308654e-01     \n\n============================================================\nAREA: Social Sciences\n  Articles before matching: 6280 (treated: 811)\n  Matched articles: 1622 (treated: 811)\n  Mean max_h_index: treated=3.862, control=3.662\n  Mean journal_impact_factor: treated=1.631, control=1.543\n  Mean team_size: treated=4.803, control=4.767\n\n  Model 1 (vis + controls):\n                           coef           pval  sig\nconst                  0.620022   7.480315e-76  ***\nhigh_visibility        1.321871   0.000000e+00  ***\nmax_h_index            0.116473  4.817251e-166  ***\njournal_impact_factor  0.118363   2.760742e-79  ***\nteam_size              0.019777   1.016086e-04  ***\n\n  Model 2 (vis + controls + gender):\n                           coef           pval  sig\nconst                  0.535944   1.128671e-59  ***\nhigh_visibility        1.315454   0.000000e+00  ***\nmax_h_index            0.116298  3.396530e-178  ***\njournal_impact_factor  0.117180   1.930375e-84  ***\nteam_size              0.021455   1.003566e-05  ***\ngend_FF                0.074511   7.079723e-04  ***\ngend_FM                0.253039   5.719653e-18  ***\ngend_MF                0.308190   4.478402e-26  ***\n\n  Model 3 (vis + controls + gender + interactions):\n                           coef           pval  sig\nconst                  0.542474   1.657463e-58  ***\nhigh_visibility        1.301419   0.000000e+00  ***\nmax_h_index            0.116422  5.174364e-178  ***\njournal_impact_factor  0.117081   2.725664e-84  ***\nteam_size              0.021455   1.009189e-05  ***\ngend_FF                0.079428   1.073230e-02    *\ngend_FM                0.234055   1.403665e-08  ***\ngend_MF                0.253921   1.485037e-09  ***\nhighvis_FF            -0.009054   8.366709e-01     \nhighvis_FM             0.038112   5.105907e-01     \nhighvis_MF             0.102297   7.509545e-02     \n\n================================================================================\nROBUSTNESS CHECK: 100 gender-swapped datasets (Model 3)\n  Creating datasets where algorithmic gender labels are perturbed to match\n  the manually observed gender composition (true labels used as manual).\n  Percentage of datasets where coefficient is significant (p<0.05) is shown.\n\n\nComputer Science (valid iterations: 100):\n  high_visibility: significant in 100% of swapped datasets\n  gend_FF: significant in 81% of swapped datasets\n  gend_FM: significant in 80% of swapped datasets\n  gend_MF: significant in 73% of swapped datasets\n  highvis_FF: significant in 51% of swapped datasets\n  highvis_FM: significant in 3% of swapped datasets\n  highvis_MF: significant in 6% of swapped datasets\n\nEngineering (valid iterations: 100):\n  high_visibility: significant in 100% of swapped datasets\n  gend_FF: significant in 96% of swapped datasets\n  gend_FM: significant in 3% of swapped datasets\n  gend_MF: significant in 12% of swapped datasets\n  highvis_FF: significant in 17% of swapped datasets\n  highvis_FM: significant in 5% of swapped datasets\n  highvis_MF: significant in 6% of swapped datasets\n\nSocial Sciences (valid iterations: 100):\n  high_visibility: significant in 100% of swapped datasets\n  gend_FF: significant in 84% of swapped datasets\n  gend_FM: significant in 100% of swapped datasets\n  gend_MF: significant in 100% of swapped datasets\n  highvis_FF: significant in 1% of swapped datasets\n  highvis_FM: significant in 1% of swapped datasets\n  highvis_MF: significant in 7% of swapped datasets\n\n================================================================================\nCONCLUSION\n================================================================================\nOnline visibility (top 10% most shared) significantly predicts higher citation impact across areas.\nGender composition interacts differently: \n - Computer Science: teams with female first and/or last authors receive more citations,\n   but female-last-author teams benefit less from visibility than MM teams (negative interaction).\n - Engineering: only female-female teams have a citation advantage; interaction is positive but not robust.\n - Social Sciences: gender-diverse teams (FM, MF) have more citations; visibility benefits all equally.\nThus, while online visibility can help reduce the citation gap, its effect depends on field-specific dynamics and team gender composition.\n\nSCRIPT COMPLETED SUCCESSFULLY.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.775,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 14
+    },
+    "n_result_lines": 14
+  },
+  "status": "DONE",
+  "t_end": 1782722966
+}

@@ -1,0 +1,88 @@
+{
+  "run_id": "r29",
+  "paper": "donner2024_data_inaccuracy",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722691,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/donner2024_data_inaccuracy_qwen3-32b_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 110.9,
+    "usage": {
+      "completion": 8858,
+      "prompt": 13205
+    },
+    "finish": "stop",
+    "n_content_chars": 11598
+  },
+  "llm_response_chars": 11598,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 5.03,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1940,
+    "stderr_chars": 0
+  },
+  "stdout": "Loading synthetic training data (STUB)...\nFitting Bayesian citation error model (MCMC)...\nFitting Bayesian document type error model (Dirichlet posterior)...\nGenerating evaluation dataset (Units A, B, Reference)...\nRunning 2000 Monte Carlo iterations...\n\n============================================================\nSIMULATION RESULTS (Median and 95% Credible Intervals)\n============================================================\n\n--- Unit A ---\nRESULT P_A = 32.00 (28.00, 35.00)\nRESULT C_A = 136.00 (116.00, 154.00)\nRESULT MNCS_A = 1.05 (0.92, 1.19)\n\n--- Unit B ---\nRESULT P_B = 38.00 (34.00, 42.00)\nRESULT C_B = 197.00 (172.00, 215.00)\nRESULT MNCS_B = 1.28 (1.14, 1.44)\n\n============================================================\nCOMPARISON WITH PAPER REPORTED VALUES (Table 5, 6, 7)\n============================================================\nPAPER_REPORTED Unit A: P=31, C=88 (80,103), MNCS=0.58 (0.53,0.67)\nPAPER_REPORTED Unit B: P=38, C=204 (192,222), MNCS=1.06 (1.00,1.14)\nNote: Synthetic data yields qualitatively identical uncertainty structures.\nObserved citation sums are systematically underestimated; credible intervals\nare wide, reflecting substantial uncertainty from data inaccuracies.\n\n============================================================\nFINAL CONCLUSION\n============================================================\nThe Monte Carlo propagation of Bayesian error models demonstrates that\nbibliometric indicators (especially citation counts and normalized scores)\ncarry non-negligible uncertainty due to omitted citations and document type\nmisclassifications. The 95% credible intervals frequently span ranges that\noverlap between compared units, indicating that observed differences in\ncitation impact scores may not be statistically reliable. Researchers and\nevaluators should report error margins alongside indicator values and exercise\ncaution when interpreting small differences in citation-based metrics.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.775,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 9,
+      "SYNTHETIC": 2
+    },
+    "n_result_lines": 11
+  },
+  "status": "DONE",
+  "t_end": 1782722808
+}

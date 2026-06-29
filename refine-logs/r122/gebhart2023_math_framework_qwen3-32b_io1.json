@@ -1,0 +1,99 @@
+{
+  "run_id": "r33",
+  "paper": "gebhart2023_math_framework",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722808,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/gebhart2023_math_framework_qwen3-32b_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 98.3,
+    "usage": {
+      "completion": 8166,
+      "prompt": 14796
+    },
+    "finish": "stop",
+    "n_content_chars": 9870
+  },
+  "llm_response_chars": 9870,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.94,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 101,
+    "stderr_chars": 1406
+  },
+  "stdout": "Loading synthetic citation network...\nComputing disruption and centrality measures for all papers...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 207, in <module>\n    main()\n  File \"/workspace/script.py\", line 150, in main\n    measures[f'betweenness_k{k}'].append(compute_betweenness_ego(G, pid, k))\n                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 100, in compute_betweenness_ego\n    bc = nx.betweenness_centrality(subG, v, normalized=False)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/networkx/utils/decorators.py\", line 789, in func\n    return argmap._lazy_compile(__wrapper)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<class 'networkx.utils.decorators.argmap'> compilation 13\", line 4, in argmap_betweenness_centrality_9\n  File \"/usr/local/lib/python3.11/site-packages/networkx/utils/backends.py\", line 633, in __call__\n    return self.orig_func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/networkx/algorithms/centrality/betweenness.py\", line 132, in betweenness_centrality\n    nodes = seed.sample(list(G.nodes()), k)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/random.py\", line 455, in sample\n    if not 0 <= k <= n:\n           ^^^^^^^^^^^\nTypeError: '<=' not supported between instances of 'int' and 'str'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.6,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "SYNTHETIC": 1
+    },
+    "n_result_lines": 1
+  },
+  "status": "DONE",
+  "t_end": 1782722907
+}

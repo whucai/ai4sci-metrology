@@ -1,0 +1,87 @@
+{
+  "run_id": "r15",
+  "paper": "bentley2023_disruption",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722331,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/bentley2023_disruption_qwen3-32b_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 151.6,
+    "usage": {
+      "completion": 13032,
+      "prompt": 1185
+    },
+    "finish": "stop",
+    "n_content_chars": 6748
+  },
+  "llm_response_chars": 6748,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.62,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 4232,
+    "stderr_chars": 464
+  },
+  "stdout": "\n=== DATA_LOAD ===\nTotal loaded: 20000\nAfter filter: 20000\nYear range: 1945 - 2010\n\n=== DESCRIPTIVE ===\nOverall unweighted mean CD: 0.048900\nOverall weighted mean CD: 0.048547\nPost-1970 weighted mean: 0.049811\nChange 2000-2010 (weighted): -0.013812\n\n=== CD_BY_YEAR ===\n1945: uw=0.058741, w=0.052237, N=292, cites=3184\n1946: uw=0.042982, w=0.039610, N=299, cites=3389\n1947: uw=0.051283, w=0.053931, N=315, cites=3487\n1948: uw=0.043347, w=0.043452, N=291, cites=3237\n1949: uw=0.036846, w=0.035818, N=275, cites=3026\n1950: uw=0.046772, w=0.042148, N=309, cites=3431\n1951: uw=0.053130, w=0.049027, N=283, cites=3161\n1952: uw=0.065746, w=0.068977, N=306, cites=3341\n1953: uw=0.055524, w=0.052948, N=301, cites=3352\n1954: uw=0.037239, w=0.039427, N=320, cites=3482\n1955: uw=0.055876, w=0.056787, N=264, cites=2926\n1956: uw=0.031304, w=0.028968, N=298, cites=3228\n1957: uw=0.039679, w=0.045568, N=343, cites=3751\n1958: uw=0.054263, w=0.052981, N=286, cites=3198\n1959: uw=0.038389, w=0.037611, N=343, cites=3717\n1960: uw=0.041287, w=0.038306, N=303, cites=3370\n1961: uw=0.053404, w=0.054370, N=357, cites=3955\n1962: uw=0.036863, w=0.042541, N=329, cites=3652\n1963: uw=0.038422, w=0.038814, N=331, cites=3682\n1964: uw=0.051902, w=0.053159, N=278, cites=3051\n1965: uw=0.037314, w=0.034648, N=332, cites=3649\n1966: uw=0.057779, w=0.055596, N=283, cites=3112\n1967: uw=0.045500, w=0.043071, N=300, cites=3444\n1968: uw=0.047653, w=0.048486, N=285, cites=3121\n1969: uw=0.053240, w=0.058142, N=304, cites=3306\n1970: uw=0.034065, w=0.031567, N=311, cites=3464\n1971: uw=0.041072, w=0.038919, N=283, cites=3086\n1972: uw=0.041537, w=0.041331, N=310, cites=3401\n1973: uw=0.051815, w=0.050810, N=300, cites=3350\n1974: uw=0.062778, w=0.064611, N=305, cites=3329\n1975: uw=0.044796, w=0.040439, N=280, cites=3020\n1976: uw=0.053057, w=0.054810, N=293, cites=3123\n1977: uw=0.042222, w=0.045161, N=305, cites=3296\n1978: uw=0.053282, w=0.050028, N=291, cites=3306\n1979: uw=0.029869, w=0.034745, N=282, cites=3034\n1980: uw=0.044357, w=0.045590, N=320, cites=3550\n1981: uw=0.055343, w=0.050490, N=290, cites=3124\n1982: uw=0.062805, w=0.065120, N=326, cites=3643\n1983: uw=0.049783, w=0.050966, N=296, cites=3228\n1984: uw=0.056704, w=0.055748, N=281, cites=3104\n1985: uw=0.050727, w=0.052970, N=278, cites=2976\n1986: uw=0.049597, w=0.053267, N=290, cites=3272\n1987: uw=0.045758, w=0.045427, N=269, cites=3052\n1988: uw=0.045914, w=0.050032, N=316, cites=3478\n1989: uw=0.046007, w=0.043472, N=302, cites=3310\n1990: uw=0.062822, w=0.064905, N=295, cites=3331\n1991: uw=0.064490, w=0.066256, N=314, cites=3488\n1992: uw=0.043859, w=0.039385, N=343, cites=3760\n1993: uw=0.049838, w=0.049732, N=287, cites=3194\n1994: uw=0.030953, w=0.031942, N=304, cites=3298\n1995: uw=0.039262, w=0.039688, N=326, cites=3587\n1996: uw=0.055697, w=0.056098, N=318, cites=3444\n1997: uw=0.057002, w=0.055023, N=297, cites=3242\n1998: uw=0.032099, w=0.031185, N=336, cites=3724\n1999: uw=0.055456, w=0.053748, N=285, cites=3140\n2000: uw=0.072115, w=0.063086, N=280, cites=3086\n2001: uw=0.062363, w=0.059388, N=306, cites=3346\n2002: uw=0.052127, w=0.052382, N=320, cites=3591\n2003: uw=0.048338, w=0.049832, N=316, cites=3511\n2004: uw=0.047933, w=0.047063, N=315, cites=3465\n2005: uw=0.053278, w=0.044502, N=285, cites=3104\n2006: uw=0.058644, w=0.059756, N=327, cites=3551\n2007: uw=0.047966, w=0.046942, N=317, cites=3543\n2008: uw=0.061520, w=0.061673, N=284, cites=3111\n2009: uw=0.058910, w=0.057164, N=290, cites=3103\n2010: uw=0.047311, w=0.049273, N=300, cites=3329\n\n=== RESULTS ===\nSample N = 20000\nYears = 66\nUW CD 1945 = 0.058741\nUW CD 2010 = 0.047311\nW CD 1945 = 0.052237\nW CD 2010 = 0.049273\nUW decline = 19.5%\nW decline = 5.7%\n\n=== DIFF_TABLE ===\n| Metric | Value |\n| sample_N | 20000 |\n| uw_cd_1945 | 0.058741 |\n| uw_cd_2010 | 0.047311 |\n| w_cd_1945 | 0.052237 |\n| w_cd_2010 | 0.049273 |\n| uw_decline_pct | 19.5 |\n| w_decline_pct | 5.7 |\n| overall_w_cd | 0.048547 |\n| post1970_w_cd | 0.049811 |\n| change_2000_2010 | -0.013812 |\n\n=== CONCLUSION ===\nThe analysis computes both unweighted and citation-weighted disruption indices.\nBased on the computed metrics, the script supports the investigation into whether\ndisruption is decreasing or accelerating, comparing the trends of UW vs W CD.\n",
+  "stderr": "/workspace/script.py:93: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.\n  w_means = grouped.apply(lambda x: np.average(x['disruption_score'], weights=x['citation_count']))\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 0.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.625,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 79
+    },
+    "n_result_lines": 79
+  },
+  "status": "DONE",
+  "t_end": 1782722484
+}

@@ -1,0 +1,17 @@
+{
+  "run_id": "r32",
+  "paper": "zheng2025_male_female_retractions",
+  "model": "deepseek-v4-pro",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722808,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/zheng2025_male_female_retractions_deepseek-v4-pro_io1.json",
+  "error": "missing paper.md for zheng2025_male_female_retractions (assemble IO package first)",
+  "status": "NO_PACKAGE"
+}

@@ -1,0 +1,96 @@
+{
+  "run_id": "r7",
+  "paper": "maddi2024",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782721774,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/maddi2024_qwen3-32b_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 116.0,
+    "usage": {
+      "completion": 8964,
+      "prompt": 17871
+    },
+    "finish": "stop",
+    "n_content_chars": 10768
+  },
+  "llm_response_chars": 10768,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.86,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 80,
+    "stderr_chars": 647
+  },
+  "stdout": "LOADING DATA: Generating synthetic placeholder dataset matching paper schema...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 54, in <module>\n    df = generate_synthetic_data()\n         ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 36, in generate_synthetic_data\n    'pub_year': np.random.choice(range(2010, 2021), n, p=[0.0444, 0.0582, 0.0681, 0.0813, 0.0926, 0.1014, 0.1094, 0.1291, 0.1363, 0.0925, 0.0419]),\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 975, in numpy.random.mtrand.RandomState.choice\nValueError: probabilities do not sum to 1\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.95,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "e paper-numbers-as-computed",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": true,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "SYNTHETIC": 1,
+      "COMPUTED": 2
+    },
+    "n_result_lines": 3
+  },
+  "status": "DONE",
+  "t_end": 1782721891
+}

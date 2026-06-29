@@ -1,0 +1,99 @@
+{
+  "run_id": "r3",
+  "paper": "arts2021",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782721620,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/arts2021_qwen3-32b_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 131.5,
+    "usage": {
+      "completion": 10700,
+      "prompt": 17234
+    },
+    "finish": "stop",
+    "n_content_chars": 19802
+  },
+  "llm_response_chars": 19802,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.25,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 335,
+    "stderr_chars": 1396
+  },
+  "stdout": "STUB DATA LOADED. Shape: (80, 9)\nColumns: ['patent_id', 'filing_year', 'text', 'primary_class', 'subclasses', 'backward_cites', 'forward_cites', 'is_award', 'is_granted']\n\n============================================================\nDESCRIPTIVE STATISTICS: AWARD vs CONTROL\n============================================================\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3805, in get_loc\n    return self._engine.get_loc(casted_key)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"index.pyx\", line 167, in pandas._libs.index.IndexEngine.get_loc\n  File \"index.pyx\", line 196, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item\nKeyError: 'log_new_tech_origins'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/workspace/script.py\", line 377, in <module>\n    award_stats = compute_group_stats(df, \"is_award\", all_measures)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 353, in compute_group_stats\n    g1 = df[df[group_col]==1][m]\n         ~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4102, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3812, in get_loc\n    raise KeyError(key) from err\nKeyError: 'log_new_tech_origins'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.55,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 4
+    },
+    "n_result_lines": 4
+  },
+  "status": "DONE",
+  "t_end": 1782721753
+}

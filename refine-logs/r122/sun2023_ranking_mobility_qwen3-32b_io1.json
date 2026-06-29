@@ -1,0 +1,17 @@
+{
+  "run_id": "r19",
+  "paper": "sun2023_ranking_mobility",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782722484,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/sun2023_ranking_mobility_qwen3-32b_io1.json",
+  "error": "missing paper.md for sun2023_ranking_mobility (assemble IO package first)",
+  "status": "NO_PACKAGE"
+}

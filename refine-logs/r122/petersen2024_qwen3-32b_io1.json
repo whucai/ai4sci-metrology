@@ -1,0 +1,100 @@
+{
+  "run_id": "r1",
+  "paper": "petersen2024",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782721620,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/petersen2024_qwen3-32b_io1.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 112.1,
+    "usage": {
+      "completion": 9186,
+      "prompt": 17904
+    },
+    "finish": "stop",
+    "n_content_chars": 14794
+  },
+  "llm_response_chars": 14794,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.0,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 236,
+    "stderr_chars": 802
+  },
+  "stdout": "============================================================\nREPRODUCING QUANTITATIVE ANALYSIS: PETERSEN ET AL. (2024)\n============================================================\n\n[1] EMPIRICAL REGRESSION (Eq. 3) ON SYNTHETIC MAG DATA\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 264, in <module>\n    coefs, marg_rp, marg_kp = run_regression(mag_stub)\n                              ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 238, in run_regression\n    beta, residuals, rank, s = np.linalg.lstsq(X_vals, y, rcond=None)\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/numpy/linalg/linalg.py\", line 2326, in lstsq\n    x, resids, rank, s = gufunc(a, b, rcond, signature=signature, extobj=extobj)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nnumpy.core._exceptions._UFuncInputCastingError: Cannot cast ufunc 'lstsq_n' input 0 from dtype('O') to dtype('float64') with casting rule 'same_kind'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.6,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "SYNTHETIC": 4,
+      "COMPUTED": 10
+    },
+    "n_result_lines": 14
+  },
+  "status": "DONE",
+  "t_end": 1782721734
+}
