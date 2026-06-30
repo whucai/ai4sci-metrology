@@ -3,25 +3,25 @@
   "model": "qwen3-32b",
   "io": 1,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782721991,
+  "t_start": 1782807831,
   "io2_data_files": [],
   "io3_ref_code_files": [],
   "llm": {
     "model": "qwen3.6-27b-fp8",
     "base_url": "http://172.17.65.41:8360/v1",
-    "elapsed": 91.5,
+    "elapsed": 133.7,
     "usage": {
-      "completion": 7591,
+      "completion": 11225,
       "prompt": 18797
     },
     "finish": "stop",
-    "n_content_chars": 10994
+    "n_content_chars": 12522
   },
-  "llm_response_chars": 10994,
+  "llm_response_chars": 12522,
   "code_parsed": true,
   "exec": {
     "exit_code": 0,
-    "elapsed": 1.05,
+    "elapsed": 1.38,
     "network_blocked": true,
     "network_probe": {
       "reachable": false,
@@ -31,11 +31,11 @@
       "_audit_net.json",
       "_audit_probe.py"
     ],
-    "stdout_chars": 1862,
-    "stderr_chars": 335
+    "stdout_chars": 112,
+    "stderr_chars": 832
   },
-  "stdout": "============================================================\nDESCRIPTIVE STATISTICS (Synthetic Placeholder)\n============================================================\n               CD5         mCD5           I5\ncount  4841.000000  4841.000000  5000.000000\nmean      0.431694     0.351946     2.515800\nstd       0.442765     0.422135     1.595199\nmin      -1.000000    -1.000000     0.000000\n25%       0.166667     0.062500     1.000000\n50%       0.500000     0.250000     2.000000\n75%       0.750000     0.562500     4.000000\nmax       1.000000     1.000000    10.000000\n\nKEY CORRELATIONS WITH CD5 INDEX\nRESULT corr_CD5_gov_interest = -0.0156\nRESULT corr_CD5_firm = -0.0176\nRESULT corr_CD5_university = -0.0123\nRESULT corr_CD5_impact_I5 = 0.1489\n\n============================================================\nPATENT-LEVEL REGRESSION RESULTS\n============================================================\n\n--- Model: Negative Binomial for Impact (I5) ---\nNB Model warning: model is missing required outcome variables\n\n--- Model: OLS for CD5 Index ---\nOLS CD5 warning: model is missing required outcome variables\n\n--- Model: OLS for mCD5 Index ---\nOLS mCD5 warning: model is missing required outcome variables\n\n============================================================\nCOMPARISON TO PAPER REPORTED DIRECTIONS\n============================================================\nPAPER_REPORTED: CD5 uncorrelated with impact (r \u2248 0.03)\nCOMPUTED:      CD5 correlation with impact = 0.1489\nPAPER_REPORTED: Firms produce more consolidating (negative CD5)\nCOMPUTED:      Firm correlation with CD5 = -0.0176\nPAPER_REPORTED: Universities/Gov produce more destabilizing (positive CD5)\nCOMPUTED:      University correlation with CD5 = -0.0123\nCOMPUTED:      Gov interest correlation with CD5 = -0.0156\nPAPER_REPORTED: Gov interest negatively associated with impact in some specs\n",
-  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 200, in <module>\n    print(f\"COMPUTED:      Gov interest coef in I5 model = {nb_model.params['gov_interest']:.4f if 'nb_model' in locals() else 'N/A'}\")\n                                                            ^^^^^^^^\nNameError: name 'nb_model' is not defined\n",
+  "stdout": "Initializing data stub and synthetic dataset...\nComputing CD5 and mCD5 indexes using paper's network formula...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 245, in <module>\n    main()\n  File \"/workspace/script.py\", line 158, in main\n    cd, mcd = calculate_cd_mcd(row['patent_id'], pred_ids, fwd_df, row['grant_year'], t=5)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 104, in calculate_cd_mcd\n    (forward_citations_df['citing_grant_year'] > grant_year) &\n     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4102, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/range.py\", line 417, in get_loc\n    raise KeyError(key)\nKeyError: 'citing_grant_year'\n",
   "isolation": {
     "network_blocked": true,
     "network_egress_ok": true
@@ -44,7 +44,7 @@
     "components": {
       "data_source": {
         "score": 1.0,
-        "rationale": "strong: ['nber', 'uspto', 'patent']"
+        "rationale": "strong: ['nber', 'dataverse', 'uspto', 'patent']"
       },
       "sample": {
         "score": 1.0,
@@ -59,18 +59,18 @@
         "rationale": "strong: ['ols', 'negative binomial', 'regression']"
       },
       "result": {
-        "score": 0.0,
-        "rationale": "no gold signal matched"
+        "score": 1.0,
+        "rationale": "strong: ['0.07', '0.23', '0.31', '1.75']"
       },
       "claim": {
         "score": 1.0,
-        "rationale": "strong: ['destabiliz', 'consolid', 'commercial engagement', 'federal']"
+        "rationale": "strong: ['destabiliz', 'consolid', 'federal']"
       }
     },
-    "overall_ecrf": 0.833
+    "overall_ecrf": 1.0
   },
   "status": "DONE",
-  "t_end": 1782722084,
+  "t_end": 1782807967,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

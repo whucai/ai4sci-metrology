@@ -1,0 +1,3 @@
+# Data Dictionary — gebhart2023_math_framework
+Raw data: APS restricted -> SciSciNet substitute (disruption_score to test CD properties).
+SciSciNet sample cols: paper_id, year, author_count, institution_count, reference_count, citation_count, citation_count_5y, disruption_score, novelty_score, conventionality_score, doc_type.

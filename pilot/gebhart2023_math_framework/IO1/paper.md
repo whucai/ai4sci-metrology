@@ -1,0 +1,11 @@
+# A Mathematical Framework for Citation Disruption
+
+arXiv:2308.16363.
+
+## Abstract
+Abstract: Many theories of scientific and technological progress imagine science as an iterative, developmental process periodically interrupted by innovations which disrupt and restructure the status quo. Due to the immense societal value created by these disruptive scientific and technological innovations, accurately operationalizing this perspective into quantifiable terms represents a key challenge for researchers seeking to understand the history and mechanisms underlying scientific and technological progress. Researchers have recently proposed a number of quantitative measures that seek to quantify the extent to which works in science and technology are disruptive with respect to their scientific context. While these disruption measures show promise in their ability to quantify potentially disruptive works of science and technology, their definitions are bespoke to the science of science and lack a broader theoretical framework, obscuring their interrelationships and limiting their adoption within broader network science paradigms. We propose a mathematical framework for conceptualizing and measuring disruptive scientific contributions within citation networks through the lens of network centrality, and formally relate the CD Index disruption measure and its variants to betweenness centrality. By reinterpreting disruption through the lens of centrality, we unify a number of existing citation-based disruption measures while simultaneously providing natural generalizations which enjoy empirical and computational efficiencies. We validate these theoretical observations by computing a variety of disruption measures on real citation data and find that computing these centrality-based disruption measures over ego networks of increasing radius results in better discernment of award-winning scientific innovations relative to conventional disruption metrics which rely on local citation context alone.
+
+## Thesis (structured stub)
+A mathematical framework for the citation disruption index (CD), deriving properties and dynamics. Gebhart & Funk 2023.
+
+> IO1/IO2 stub: full text not locally available; abstract + thesis + (IO2) data dictionary carry the method.

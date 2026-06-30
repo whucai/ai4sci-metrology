@@ -1,0 +1,121 @@
+{
+  "paper": "bentley2023_disruption",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807390,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.41:8360/v1",
+    "elapsed": 79.0,
+    "usage": {
+      "completion": 6785,
+      "prompt": 623
+    },
+    "finish": "stop",
+    "n_content_chars": 3547
+  },
+  "llm_response_chars": 3547,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.87,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1550,
+    "stderr_chars": 0
+  },
+  "stdout": "COLUMNS: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\nSHAPE: (40000, 11)\nMAPPED: year=year, disruption=disruption_score, citations=citation_count\n\n--- SAMPLE YEARLY DATA ---\n   year  unweighted_mean_cd  ...  total_citations  n_papers\n0  1980            0.008173  ...          14544.0     442.0\n1  1981            0.001990  ...          16398.0     460.0\n2  1982            0.006182  ...          19878.0     503.0\n3  1983            0.001955  ...          16179.0     474.0\n4  1984            0.012652  ...          22686.0     542.0\n\n[5 rows x 5 columns]\n    year  unweighted_mean_cd  ...  total_citations  n_papers\n31  2011            0.000368  ...          58695.0    1772.0\n32  2012            0.000814  ...          62468.0    1873.0\n33  2013            0.001223  ...          57960.0    1957.0\n34  2014            0.001321  ...          46808.0    1907.0\n35  2015            0.001727  ...          52782.0    1951.0\n\n[5 rows x 5 columns]\n\nRESULT UNWEIGHTED_TREND_SLOPE = -0.000214\nRESULT WEIGHTED_TREND_SLOPE = -0.000689\nPAPER_REPORTED UNWEIGHTED_TREND = declining\nPAPER_REPORTED WEIGHTED_TREND = reversing/attenuating or accelerating\n\nRESULT UNWEIGHTED_MEAN_1980 = 0.0082\nRESULT UNWEIGHTED_MEAN_2015 = 0.0017\nRESULT WEIGHTED_MEAN_1980 = 0.0138\nRESULT WEIGHTED_MEAN_2015 = -0.0079\n\n--- FINAL CONCLUSION ---\nCONCLUSION: Computed trends should be compared to paper's claim. Check RESULT slopes above.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.5,
+        "rationale": "partial: ['sciscinet']"
+      },
+      "sample": {
+        "score": 0.5,
+        "rationale": "partial: ['40000']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['disruption', 'cd5', 'cd', 'weighted', 'unweighted', 'citation-weighted']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['mean', 'weighted', 'year', 'trend']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['accelerating', 'attenuates', 'reverses']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['accelerating', 'decline']"
+      }
+    },
+    "overall_ecrf": 0.833
+  },
+  "status": "DONE",
+  "t_end": 1782807470,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 1.0,
+      "B_round3": 0.5,
+      "final": 0.75,
+      "disagreement": 0.5,
+      "method": "mean (adjacent)"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

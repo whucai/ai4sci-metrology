@@ -3,7 +3,7 @@
   "model": "qwen3-32b",
   "io": 2,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782721550,
+  "t_start": 1782807068,
   "io2_data_files": [
     "gold_sample.parquet",
     "patent_indicators.parquet"
@@ -12,15 +12,15 @@
   "llm": {
     "model": "qwen3.6-27b-fp8",
     "base_url": "http://172.17.65.41:8360/v1",
-    "elapsed": 92.4,
+    "elapsed": 149.4,
     "usage": {
-      "completion": 7633,
+      "completion": 12775,
       "prompt": 14657
     },
     "finish": "stop",
-    "n_content_chars": 8604
+    "n_content_chars": 12606
   },
-  "llm_response_chars": 8604,
+  "llm_response_chars": 12606,
   "code_parsed": true,
   "exec": {
     "exit_code": 0,
@@ -34,11 +34,11 @@
       "_audit_net.json",
       "_audit_probe.py"
     ],
-    "stdout_chars": 141,
-    "stderr_chars": 810
+    "stdout_chars": 3181,
+    "stderr_chars": 0
   },
-  "stdout": "Loading raw data...\n\n=== TABLE 3: DESCRIPTIVE STATISTICS (AWARD VS CONTROL) ===\n\n=== TABLE 4: LOGIT REGRESSIONS & CLASSIFICATION METRICS ===\n",
-  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 106, in <module>\n    X_base = df_analysis[controls].copy()\n             ~~~~~~~~~~~^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4108, in __getitem__\n    indexer = self.columns._get_indexer_strict(key, \"columns\")[1]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 6200, in _get_indexer_strict\n    self._raise_if_missing(keyarr, indexer, axis_name)\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 6252, in _raise_if_missing\n    raise KeyError(f\"{not_found} not in index\")\nKeyError: \"['num_words', 'backward_citations', 'num_classes', 'num_subclasses'] not in index\"\n",
+  "stdout": "Loading raw data...\nLoaded 0 patents after merge.\nSample composition: Awards=0, Controls=0\n\n============================================================\nTABLE 3: DESCRIPTIVE STATISTICS & T-TESTS (Award vs Control)\n============================================================\n\n============================================================\nTABLE 4: LOGIT REGRESSIONS (Univariate + Controls)\n============================================================\nWarning: Model fitting failed for new_word: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for new_word_reuse: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for new_bigram: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for new_bigram_reuse: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for new_trigram: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for new_trigram_reuse: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for new_word_comb: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for new_word_comb_reuse: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for 1-backward_cosine: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for forward/backward_cosine: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for new_subclass_comb: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for new_subclass_comb_reuse: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for new_cit_comb: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for new_cit_comb_reuse: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for originality: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for new_tech_origins: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for forward_cit: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\nWarning: Model fitting failed for generality: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\n\n============================================================\nFINAL CONCLUSION\n============================================================\nCONCLUSION: Insufficient data or column mapping issues prevented full model estimation. Please verify column names in the provided parquet files match the expected metric definitions.\n",
+  "stderr": "",
   "isolation": {
     "network_blocked": true,
     "network_egress_ok": true
@@ -55,7 +55,7 @@
       },
       "indicator": {
         "score": 1.0,
-        "rationale": "strong: ['cosine', 'indicator']"
+        "rationale": "strong: ['novelty', 'cosine', 'indicator']"
       },
       "model": {
         "score": 0.5,
@@ -66,14 +66,14 @@
         "rationale": "no gold signals for this component"
       },
       "claim": {
-        "score": 0.5,
-        "rationale": "partial: ['reuse']"
+        "score": 1.0,
+        "rationale": "strong: ['novelty', 'reuse']"
       }
     },
-    "overall_ecrf": 0.417
+    "overall_ecrf": 0.5
   },
   "status": "DONE",
-  "t_end": 1782721644,
+  "t_end": 1782807218,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

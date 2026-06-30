@@ -1,0 +1,85 @@
+
+
+```python
+import pandas as pd
+import numpy as np
+from scipy import stats
+import warnings
+warnings.filterwarnings('ignore')
+
+# Load data
+df = pd.read_parquet('/workspace/raw_data/sciscinet_sample.parquet')
+print("COLUMNS:", df.columns.tolist())
+print("SHAPE:", df.shape)
+
+# Identify columns robustly
+year_col = next((c for c in df.columns if 'year' in c.lower()), None)
+disruption_col = next((c for c in df.columns if 'disrupt' in c.lower() or 'cd5' in c.lower()), None)
+citation_col = next((c for c in df.columns if 'citation' in c.lower() or 'citat' in c.lower()), None)
+
+# Fallback to positional if needed
+if year_col is None: year_col = df.columns[0]
+if disruption_col is None: disruption_col = df.columns[1]
+if citation_col is None: citation_col = df.columns[2]
+
+print(f"MAPPED: year={year_col}, disruption={disruption_col}, citations={citation_col}")
+
+# Prepare data
+df = df[[year_col, disruption_col, citation_col]].copy()
+df.columns = ['year', 'disruption_score', 'citation_count']
+df = df.dropna()
+df = df[df['citation_count'] >= 0]
+
+# Compute yearly metrics per paper specification
+def compute_yearly_metrics(group):
+    unweighted = group['disruption_score'].mean()
+    total_cit = group['citation_count'].sum()
+    if total_cit > 0:
+        weighted = (group['citation_count'] * group['disruption_score']).sum() / total_cit
+    else:
+        weighted = np.nan
+    return pd.Series({
+        'unweighted_mean_cd': unweighted,
+        'citation_weighted_mean_cd': weighted,
+        'total_citations': total_cit,
+        'n_papers': len(group)
+    })
+
+yearly = df.groupby('year').apply(compute_yearly_metrics).reset_index().sort_values('year')
+
+# Print sample for verification
+print("\n--- SAMPLE YEARLY DATA ---")
+print(yearly.head())
+print(yearly.tail())
+
+# Trend analysis (linear regression)
+valid = yearly.dropna(subset=['unweighted_mean_cd', 'citation_weighted_mean_cd'])
+if len(valid) >= 2:
+    x = valid['year'].values
+    y_unw = valid['unweighted_mean_cd'].values
+    y_wt = valid['citation_weighted_mean_cd'].values
+    
+    slope_unw, _, _, _, _ = stats.linregress(x, y_unw)
+    slope_wt, _, _, _, _ = stats.linregress(x, y_wt)
+    
+    print("\nRESULT UNWEIGHTED_TREND_SLOPE = {:.6f}".format(slope_unw))
+    print("RESULT WEIGHTED_TREND_SLOPE = {:.6f}".format(slope_wt))
+    print("PAPER_REPORTED UNWEIGHTED_TREND = declining")
+    print("PAPER_REPORTED WEIGHTED_TREND = reversing/attenuating or accelerating")
+    
+    y_min, y_max = int(valid['year'].min()), int(valid['year'].max())
+    print("\nRESULT UNWEIGHTED_MEAN_{} = {:.4f}".format(y_min, valid[valid['year']==y_min]['unweighted_mean_cd'].values[0]))
+    print("RESULT UNWEIGHTED_MEAN_{} = {:.4f}".format(y_max, valid[valid['year']==y_max]['unweighted_mean_cd'].values[0]))
+    print("RESULT WEIGHTED_MEAN_{} = {:.4f}".format(y_min, valid[valid['year']==y_min]['citation_weighted_mean_cd'].values[0]))
+    print("RESULT WEIGHTED_MEAN_{} = {:.4f}".format(y_max, valid[valid['year']==y_max]['citation_weighted_mean_cd'].values[0]))
+else:
+    print("Insufficient data for trend analysis")
+
+# Final conclusion
+print("\n--- FINAL CONCLUSION ---")
+if len(valid) >= 2:
+    if slope_unw < 0 and slope_wt > slope_unw:
+        print("CONCLUSION: Citation-weighted disruption trend differs from unweighted trend. Weighting by citations attenuates or reverses the decline, supporting the claim that unweighted means overstate the decline in disruption.")
+    else:
+        print("CONCLUSION: Computed trends should be compared to paper's claim. Check RESULT slopes above.")
+```

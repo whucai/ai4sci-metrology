@@ -3,25 +3,25 @@
   "model": "qwen3-32b",
   "io": 1,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782721383,
+  "t_start": 1782806937,
   "io2_data_files": [],
   "io3_ref_code_files": [],
   "llm": {
     "model": "qwen3.6-27b-fp8",
     "base_url": "http://172.17.65.41:8360/v1",
-    "elapsed": 165.6,
+    "elapsed": 130.1,
     "usage": {
-      "completion": 13828,
+      "completion": 10660,
       "prompt": 17234
     },
     "finish": "stop",
-    "n_content_chars": 34393
+    "n_content_chars": 20243
   },
-  "llm_response_chars": 34393,
+  "llm_response_chars": 20243,
   "code_parsed": true,
   "exec": {
     "exit_code": 0,
-    "elapsed": 1.25,
+    "elapsed": 1.01,
     "network_blocked": true,
     "network_probe": {
       "reachable": false,
@@ -31,11 +31,11 @@
       "_audit_net.json",
       "_audit_probe.py"
     ],
-    "stdout_chars": 0,
-    "stderr_chars": 328
+    "stdout_chars": 23,
+    "stderr_chars": 346
   },
-  "stdout": "",
-  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 15, in <module>\n    from sklearn.metrics import precision_score, recall_score, roc_auc_score, cosine_similarity\nImportError: cannot import name 'cosine_similarity' from 'sklearn.metrics' (/usr/local/lib/python3.11/site-packages/sklearn/metrics/__init__.py)\n",
+  "stdout": "LOADING DATA (STUB)...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 388, in <module>\n    df = load_synthetic_patent_data()\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 71, in load_synthetic_patent_data\n    is_award[0:5] = True  # 5 award patents\n    ~~~~~~~~^^^^^\nTypeError: must assign iterable to extended slice\n",
   "isolation": {
     "network_blocked": true,
     "network_egress_ok": true
@@ -48,29 +48,29 @@
       },
       "sample": {
         "score": 0.5,
-        "rationale": "partial: ['preprocess']"
+        "rationale": "partial: ['patent claim']"
       },
       "indicator": {
         "score": 1.0,
-        "rationale": "strong: ['novelty', 'cosine', 'tf']"
+        "rationale": "strong: ['cosine', 'tf', 'n-gram']"
       },
       "model": {
-        "score": 0.5,
-        "rationale": "partial: ['descriptive']"
+        "score": 0.0,
+        "rationale": "no gold signal matched"
       },
       "result": {
         "score": 0.0,
         "rationale": "no gold signals for this component"
       },
       "claim": {
-        "score": 1.0,
-        "rationale": "strong: ['novelty', 'reuse']"
+        "score": 0.5,
+        "rationale": "partial: ['reuse']"
       }
     },
-    "overall_ecrf": 0.667
+    "overall_ecrf": 0.5
   },
   "status": "DONE",
-  "t_end": 1782721550,
+  "t_end": 1782807068,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

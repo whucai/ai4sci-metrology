@@ -3,7 +3,7 @@
   "model": "qwen3-32b",
   "io": 2,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782722084,
+  "t_start": 1782807967,
   "io2_data_files": [
     "sciscinet_sample.parquet"
   ],
@@ -11,19 +11,19 @@
   "llm": {
     "model": "qwen3.6-27b-fp8",
     "base_url": "http://172.17.65.41:8360/v1",
-    "elapsed": 94.9,
+    "elapsed": 121.7,
     "usage": {
-      "completion": 7784,
+      "completion": 10134,
       "prompt": 16349
     },
     "finish": "stop",
-    "n_content_chars": 14386
+    "n_content_chars": 6181
   },
-  "llm_response_chars": 14386,
+  "llm_response_chars": 6181,
   "code_parsed": true,
   "exec": {
     "exit_code": 0,
-    "elapsed": 0.55,
+    "elapsed": 0.64,
     "network_blocked": true,
     "network_probe": {
       "reachable": false,
@@ -33,11 +33,11 @@
       "_audit_net.json",
       "_audit_probe.py"
     ],
-    "stdout_chars": 419,
-    "stderr_chars": 495
+    "stdout_chars": 243,
+    "stderr_chars": 374
   },
-  "stdout": "Loading and inspecting data...\nLoaded data shape: (40000, 11)\nColumns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\nCould not automatically detect citation structure. Assuming patent-level with embedded citation lists or standard columns.\nComputing CD5, mCD5, I5 indexes...\n",
-  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 314, in <module>\n    main()\n  File \"/workspace/script.py\", line 232, in main\n    idx_df = compute_indexes(patent_df, citations_df, col_map)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 95, in compute_indexes\n    pred_map = {pid: set() for pid in patent_df[col_map['patent_id']]}\n                                                ~~~~~~~^^^^^^^^^^^^^\nKeyError: 'patent_id'\n",
+  "stdout": "Loaded dataset shape: (40000, 11)\nAvailable columns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 27, in <module>\n    df = df.dropna(subset=['citing', 'cited', 'grant_year'])\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 6670, in dropna\n    raise KeyError(np.array(subset)[check].tolist())\nKeyError: ['cited']\n",
   "isolation": {
     "network_blocked": true,
     "network_egress_ok": true
@@ -45,8 +45,8 @@
   "ecrf": {
     "components": {
       "data_source": {
-        "score": 1.0,
-        "rationale": "strong: ['nber', 'patent']"
+        "score": 0.5,
+        "rationale": "partial: ['patent']"
       },
       "sample": {
         "score": 0.0,
@@ -66,13 +66,13 @@
       },
       "claim": {
         "score": 1.0,
-        "rationale": "strong: ['destabiliz', 'consolid', 'federal']"
+        "rationale": "strong: ['destabiliz', 'consolid']"
       }
     },
-    "overall_ecrf": 0.75
+    "overall_ecrf": 0.667
   },
   "status": "DONE",
-  "t_end": 1782722179,
+  "t_end": 1782808089,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

@@ -1,0 +1,4 @@
+# Data Dictionary — sciscinet_sample.parquet (Bentley et al. 2023)
+40K SciSciNet sample. Cols: paper_id, year, author_count, institution_count,
+reference_count, citation_count, citation_count_5y, disruption_score, novelty_score,
+conventionality_score, doc_type. Key: year, disruption_score (CD5), citation_count (weight).
