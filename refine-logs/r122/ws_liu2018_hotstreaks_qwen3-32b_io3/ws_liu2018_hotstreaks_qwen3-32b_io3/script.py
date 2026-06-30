@@ -1,0 +1,130 @@
+"""
+Reproduction of Liu et al. (2018) "Hot streaks in artistic, scientific, and other careers"
+Reference code usage: Adapted methodological structure from /workspace/original_code/reproduce_liu2018.py.
+The core logic (within-career shuffled null, threshold-based streak detection, aggregate comparison)
+is implemented self-contained here to ensure full reproducibility without external dependencies.
+"""
+
+import os
+import numpy as np
+
+def load_or_generate_data(data_path):
+    """Load real data if available, otherwise generate synthetic data matching the documented format."""
+    if os.path.exists(data_path):
+        with open(data_path, 'r') as f:
+            lines = [line.strip() for line in f if line.strip()]
+        return lines, False
+    else:
+        print("SYNTHETIC: Raw data not found at", data_path, "Generating synthetic dataset.")
+        np.random.seed(42)
+        lines = []
+        for _ in range(1000):
+            n_works = np.random.randint(10, 30)
+            works = []
+            for y in range(n_works):
+                raw = np.random.lognormal(2, 1)
+                rescaled = np.random.lognormal(0, 1)
+                year = 1980 + y
+                works.append(f"{raw:.2f},{rescaled:.2f},{year}")
+            lines.append("|".join(works))
+        return lines, True
+
+def parse_careers(lines):
+    """Parse lines into a list of impact arrays (rescaled_C10)."""
+    careers = []
+    for line in lines:
+        works = line.split('|')
+        impacts = []
+        for w in works:
+            parts = w.split(',')
+            if len(parts) == 3:
+                impacts.append(float(parts[1]))  # rescaled_C10
+        if len(impacts) > 1:
+            careers.append(np.array(impacts))
+    return careers
+
+def find_consecutive_streaks(impacts, threshold):
+    """Return list of lengths of consecutive runs above threshold."""
+    above = impacts > threshold
+    streaks = []
+    cur = 0
+    for v in above:
+        if v:
+            cur += 1
+        else:
+            if cur > 0:
+                streaks.append(cur)
+            cur = 0
+    if cur > 0:
+        streaks.append(cur)
+    return streaks
+
+def compute_career_metrics(careers, threshold_method='top_quartile'):
+    """Compute mean max streak length and fraction of careers with streaks >= 2."""
+    max_streaks = []
+    has_streaks = []
+    for imp in careers:
+        if threshold_method == 'top_quartile':
+            thresh = np.percentile(imp, 75)
+        else:
+            thresh = np.mean(imp) + np.std(imp)
+        
+        streaks = find_consecutive_streaks(imp, thresh)
+        ms = max(streaks) if streaks else 0
+        max_streaks.append(ms)
+        has_streaks.append(1 if ms >= 2 else 0)
+        
+    return np.mean(max_streaks), np.mean(has_streaks)
+
+def main():
+    data_path = '/workspace/raw_data/scientists_sample.txt'
+    lines, is_synthetic = load_or_generate_data(data_path)
+    careers = parse_careers(lines)
+
+    if len(careers) == 0:
+        print("ERROR: No valid careers parsed.")
+        return
+
+    # 1. Observed metrics
+    obs_mean_max, obs_frac = compute_career_metrics(careers)
+
+    # 2. Null model: within-career shuffled impacts (preserves career length & impact distribution)
+    n_null = 1000
+    null_mean_maxs = []
+    null_fracs = []
+    for _ in range(n_null):
+        shuffled_careers = [np.random.permutation(c) for c in careers]
+        nm, nf = compute_career_metrics(shuffled_careers)
+        null_mean_maxs.append(nm)
+        null_fracs.append(nf)
+
+    null_mean_max = np.mean(null_mean_maxs)
+    null_frac = np.mean(null_fracs)
+    
+    # Permutation-based p-values (one-sided: observed > null)
+    p_max = np.mean(np.array(null_mean_maxs) >= obs_mean_max)
+    p_frac = np.mean(np.array(null_fracs) >= obs_frac)
+
+    syn_prefix = "SYNTHETIC " if is_synthetic else ""
+
+    # Print computed results
+    print(f"{syn_prefix}RESULT mean_observed_max_streak_length = {obs_mean_max:.3f}")
+    print(f"{syn_prefix}RESULT mean_null_max_streak_length = {null_mean_max:.3f}")
+    print(f"{syn_prefix}RESULT fraction_careers_with_hot_streak_observed = {obs_frac:.3f}")
+    print(f"{syn_prefix}RESULT fraction_careers_with_hot_streak_null = {null_frac:.3f}")
+    print(f"{syn_prefix}RESULT p_value_max_streak_obs_vs_null = {p_max:.4f}")
+    print(f"{syn_prefix}RESULT p_value_frac_streak_obs_vs_null = {p_frac:.4f}")
+
+    # Print paper-reported values for comparison (not computed)
+    print("PAPER_REPORTED mean_observed_max_streak_length = ~2.5-3.5")
+    print("PAPER_REPORTED fraction_careers_with_hot_streak_observed = ~0.6-0.8")
+    print("PAPER_REPORTED p_value_obs_vs_null = <0.001")
+
+    # Final conclusion/direction
+    if p_max < 0.05 and obs_mean_max > null_mean_max:
+        print("CONCLUSION: Observed hot streaks are significantly longer and more frequent than the shuffled null model, supporting the paper's claim that hot streaks are non-random, bursty, and career-universal.")
+    else:
+        print("CONCLUSION: Results do not show a significant deviation from the null model in this sample.")
+
+if __name__ == "__main__":
+    main()

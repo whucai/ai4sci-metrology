@@ -1,0 +1,11 @@
+# Data Dictionary — obadage2024 (Citation Contexts for AI Reproducibility)
+Source: github.com/lamps-lab/ccair-ai-reproducibility (Zenodo 10.5281/zenodo.10895748).
+Files:
+- citation_context_label_summary.json: per cited-paper (RS_xxx) counts of citation
+  contexts in each sentiment class (-2, -1, 0, 0.5, 1). 1=positive, -1/-2=negative.
+- citation_counts_for_cited_papers.json: per cited-paper {manual_count_after_2021,
+  manual_count_all_retrieved, citationCount}.
+- MLRC_2022_Accepted_ALL_in_one.csv: 45 ML Reproducibility Challenge 2022 accepted
+  papers (title, authors, re_article, re_details).
+Paper's claim: citation context sentiment correlates with reproducibility; citations
+can signal reproducibility of the cited ML paper.

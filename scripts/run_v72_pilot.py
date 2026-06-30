@@ -117,6 +117,24 @@ PAPER_GOLD = {
         "result": ["accelerating", "attenuates", "reverses", "different"],
         "claim": ["citation-weighting", "artifact", "overstates", "accelerating", "decline"],
     },
+    "obadage2024_citations_repro": {
+        "domain": "IS", "task": "STRICT",
+        "data_source": ["mlrc", "machine learning reproducibility challenge", "semantic scholar", "s2", "zenodo", "github", "lamps-lab"],
+        "sample": ["145", "41,244", "41244", "mlrc 2022", "citation context"],
+        "indicator": ["sentiment", "positive", "negative", "reproducibility", "citation context"],
+        "model": ["spearman", "distilbert", "classifier", "correlation", "sentiment analysis"],
+        "result": ["correlation", "positive", "signal", "rho"],
+        "claim": ["citations", "signal", "reproducibility", "sentiment", "correlate"],
+    },
+    "liu2018_hotstreaks": {
+        "domain": "SoS", "task": "STRICT",
+        "data_source": ["github", "lu-liu", "hotstreaks", "sciscinet", "web of science", "mag", "imdb", "auction"],
+        "sample": ["20,040", "20040", "1,000", "1000", "scientist", "artist", "director", "career"],
+        "indicator": ["hot streak", "impact", "c10", "rescaled", "consecutive", "burst"],
+        "model": ["shuffle", "null", "quartile", "mean", "longest run", "permutation"],
+        "result": ["non-random", "bursty", "consecutive", "observed", "null"],
+        "claim": ["hot streak", "non-random", "bursty", "high-impact", "career"],
+    },
 }
 
 

@@ -1,0 +1,5 @@
+# Sample Notes — obadage2024
+145 cited MLRC-2022 papers with 41,244 citation contexts. This package ships the
+per-paper sentiment summary (22 manually-labelled papers) + per-paper citation counts
++ the MLRC accepted-papers table. Reproduce the correlation between positive-sentiment
+ratio and citation count / reproducibility.
