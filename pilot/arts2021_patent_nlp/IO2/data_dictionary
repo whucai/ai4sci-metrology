@@ -1,0 +1,16 @@
+# Data Dictionary — arts2021_patent_nlp
+
+## Data source
+All USPTO utility patents granted up to May 2018 — Full-text US patent claims/descriptions for NLP novelty+impact+breakthrough indicators
+Access: public; Provenance: Zenodo 10.5281/zenodo.3515985 (static bulk)
+
+## Key variables
+- Unit of analysis: patent
+- Time window: USPTO coverage to 2018-05
+- Sample N: all USPTO utility patents to 2018-05
+- Filter rules: utility patents, award-linked case-control subset
+
+## Indicator definitions
+- Formula: NLP-based novelty/impact/breakthrough measures on patent text; validated vs classification+citation baselines
+- Parameters: n-gram/term extraction, award case-control validation
+- Computation steps: extract patent text, compute NLP novelty/impact, validate vs awards

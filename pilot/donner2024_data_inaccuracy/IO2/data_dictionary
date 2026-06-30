@@ -1,0 +1,16 @@
+# Data Dictionary — donner2024_data_inaccuracy
+
+## Data source
+Web of Science + citation-count-error dataset (Zenodo) — Bibliometric indicators + citation-count errors
+Access: partial; Provenance: Zenodo 10.5281/zenodo.13969973 (error CSV); WoS licensed
+
+## Key variables
+- Unit of analysis: paper
+- Time window: WoS coverage
+- Sample N: pending
+- Filter rules: citation-count error classification
+
+## Indicator definitions
+- Formula: Citation-count error distribution + Monte-Carlo uncertainty propagation to bibliometric indicators
+- Parameters: error model, MC iterations
+- Computation steps: estimate error distribution, propagate uncertainty via MC

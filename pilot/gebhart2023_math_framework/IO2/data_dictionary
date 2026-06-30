@@ -1,0 +1,16 @@
+# Data Dictionary — gebhart2023_math_framework
+
+## Data source
+American Physical Society bibliographic data (~630K papers) + Nobel laureate dataset (Li et al. 2019) — Physics citation network + Nobel-prize papers
+Access: partial; Provenance: APS restricted; Nobel dataset public (Scientific Data)
+
+## Key variables
+- Unit of analysis: paper
+- Time window: 1893-2019
+- Sample N: 630000
+- Filter rules: APS physics, Nobel laureate subset
+
+## Indicator definitions
+- Formula: Relates CD Index to betweenness centrality; B_k and Π_k disruption measures
+- Parameters: centrality window
+- Computation steps: build citation graph, compute betweenness, relate to CD

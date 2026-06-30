@@ -1,0 +1,282 @@
+{
+  "date": "2026-06-30",
+  "io": 2,
+  "n_papers": 20,
+  "packages": {
+    "petersen2024": {
+      "paper_id": "petersen2024",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [
+        "sciscinet_sample.parquet"
+      ],
+      "raw_data_sha256": {
+        "sciscinet_sample.parquet": "e327cab8c501e81b"
+      },
+      "data_source_type": "partial",
+      "assembled": true
+    },
+    "wu2019_teams": {
+      "paper_id": "wu2019_teams",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [
+        "sciscinet_sample.parquet"
+      ],
+      "raw_data_sha256": {
+        "sciscinet_sample.parquet": "e327cab8c501e81b"
+      },
+      "data_source_type": "sciscinet_substitute",
+      "assembled": true
+    },
+    "park2023_disruptive": {
+      "paper_id": "park2023_disruptive",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [
+        "sciscinet_sample.parquet"
+      ],
+      "raw_data_sha256": {
+        "sciscinet_sample.parquet": "e327cab8c501e81b"
+      },
+      "data_source_type": "sciscinet_substitute",
+      "assembled": true
+    },
+    "bentley2023_disruption": {
+      "paper_id": "bentley2023_disruption",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [
+        "sciscinet_sample.parquet"
+      ],
+      "raw_data_sha256": {
+        "sciscinet_sample.parquet": "e327cab8c501e81b"
+      },
+      "data_source_type": "sciscinet_substitute",
+      "assembled": true
+    },
+    "arts2021": {
+      "paper_id": "arts2021",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [
+        "gold_sample.parquet",
+        "patent_indicators.parquet"
+      ],
+      "raw_data_sha256": {
+        "gold_sample.parquet": "e501893075b11f5a",
+        "patent_indicators.parquet": "1b98a77fa2ed0dd9"
+      },
+      "data_source_type": "public",
+      "assembled": true
+    },
+    "funk2017": {
+      "paper_id": "funk2017",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [
+        "sciscinet_sample.parquet"
+      ],
+      "raw_data_sha256": {
+        "sciscinet_sample.parquet": "e327cab8c501e81b"
+      },
+      "data_source_type": "public",
+      "assembled": true
+    },
+    "maddi2024": {
+      "paper_id": "maddi2024",
+      "data_provided": false,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [],
+      "data_source_type": "boundary (no data)",
+      "assembled": true
+    },
+    "bikard2013": {
+      "paper_id": "bikard2013",
+      "data_provided": false,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [
+        "sciscinet_sample.parquet"
+      ],
+      "data_source_type": "boundary (no data)",
+      "assembled": true,
+      "raw_data_sha256": {
+        "sciscinet_sample.parquet": "e327cab8c501e81b"
+      }
+    },
+    "ke2015_sleeping_beauties": {
+      "paper_id": "ke2015_sleeping_beauties",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [
+        "sciscinet_sample.parquet"
+      ],
+      "raw_data_sha256": {
+        "sciscinet_sample.parquet": "e327cab8c501e81b"
+      },
+      "data_source_type": "sciscinet_substitute",
+      "assembled": true
+    },
+    "sun2023_ranking_mobility": {
+      "paper_id": "sun2023_ranking_mobility",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [
+        "sciscinet_sample.parquet"
+      ],
+      "raw_data_sha256": {
+        "sciscinet_sample.parquet": "e327cab8c501e81b"
+      },
+      "data_source_type": "sciscinet_substitute",
+      "assembled": true
+    },
+    "deng2023_enhancing_disruption": {
+      "status": "SKIP (R122 coverage gap)",
+      "assembled": false
+    },
+    "schaper2025_frontier": {
+      "paper_id": "schaper2025_frontier",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [],
+      "raw_data_sha256": {},
+      "data_source_type": "partial",
+      "assembled": true,
+      "download_pending": true,
+      "download_plan": "PubMed+USPTO public; KU Leuven linkage private (boundary). Subsample seed=42: 20K records + data dict documenting missing linkage. IO2 partial by design."
+    },
+    "galuez2023_technology_transfer": {
+      "status": "SKIP (R122 coverage gap)",
+      "assembled": false
+    },
+    "vasarhelyi2023_who_benefits": {
+      "paper_id": "vasarhelyi2023_who_benefits",
+      "data_provided": false,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [],
+      "data_source_type": "boundary (no data)",
+      "assembled": true
+    },
+    "donner2024_data_inaccuracy": {
+      "paper_id": "donner2024_data_inaccuracy",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [
+        "data_citerror.csv"
+      ],
+      "raw_data_sha256": {
+        "data_citerror.csv": "20405fcba9e9354a"
+      },
+      "data_source_type": "public",
+      "assembled": true
+    },
+    "zheng2025_male_female_retractions": {
+      "paper_id": "zheng2025_male_female_retractions",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [],
+      "raw_data_sha256": {},
+      "data_source_type": "public",
+      "assembled": true,
+      "download_pending": true,
+      "download_plan": "see sampling rules"
+    },
+    "gebhart2023_math_framework": {
+      "paper_id": "gebhart2023_math_framework",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [],
+      "raw_data_sha256": {},
+      "data_source_type": "partial",
+      "assembled": true,
+      "download_pending": true,
+      "download_plan": "APS restricted -> OpenAlex physics substitute. Subsample seed=42: 50K physics papers + FULL Nobel set (Li 2019 public). Gold ceiling (Nobel-discernment) testable on full Nobel set."
+    },
+    "obadage2024_citations_repro": {
+      "paper_id": "obadage2024_citations_repro",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [],
+      "raw_data_sha256": {},
+      "data_source_type": "public",
+      "assembled": true,
+      "download_pending": true,
+      "download_plan": "Zenodo 10.5281/zenodo.10895748 (MLRC2022 + 41,244 contexts). Subsample seed=42: 2,000 contexts stratified by reproducibility label + all MLRC papers. Size-driven; preserves label dist; gold ceiling (sentiment~reproducibility) testable on subset."
+    },
+    "liu2018_hotstreaks": {
+      "paper_id": "liu2018_hotstreaks",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [
+        "artists.txt",
+        "citation.zip",
+        "directors.txt",
+        "readme.txt",
+        "scientists_c10.txt"
+      ],
+      "raw_data_sha256": {
+        "artists.txt": "08f09f04602d10a9",
+        "citation.zip": "6ad825f549cdd919",
+        "directors.txt": "f07dad7aa070d325",
+        "readme.txt": "543c3354d7040584",
+        "scientists_c10.txt": "dc7a668068852b39"
+      },
+      "data_source_type": "public",
+      "assembled": true
+    },
+    "arts2021_patent_nlp": {
+      "paper_id": "arts2021_patent_nlp",
+      "data_provided": true,
+      "data_dictionary": true,
+      "sample_notes": true,
+      "raw_data_files": [],
+      "raw_data_sha256": {},
+      "data_source_type": "public",
+      "assembled": true,
+      "download_pending": true,
+      "download_plan": "Zenodo 10.5281/zenodo.3515985 (~5M USPTO patents). Subsample seed=42: 50K patents stratified year/tech-category + FULL award-linked validation subset. Size-driven; gold ceiling (73% award-identification) testable on full award subset."
+    }
+  },
+  "sciscinet_shared_shard": {
+    "file": "sciscinet_sample.parquet",
+    "size_bytes": 1550333,
+    "sha256": "e327cab8c501e81b",
+    "source": "SciSciNet shards 0-9 deterministic sample (built 2026-06-12)",
+    "shared_across": [
+      "wu2019_teams",
+      "park2023_disruptive",
+      "bentley2023_disruption",
+      "ke2015_sleeping_beauties",
+      "sun2023_ranking_mobility",
+      "deng2023_enhancing_disruption",
+      "petersen2024",
+      "funk2017",
+      "bikard2013"
+    ],
+    "sampling_rule": "deterministic (seed fixed at build); reused across all SoS papers for consistency"
+  },
+  "large_dataset_sampling_rules": {
+    "obadage2024_citations_repro": "Zenodo 10.5281/zenodo.10895748 (MLRC2022 + 41,244 contexts). Subsample seed=42: 2,000 contexts stratified by reproducibility label + all MLRC papers. Size-driven; preserves label dist; gold ceiling (sentiment~reproducibility) testable on subset.",
+    "arts2021_patent_nlp": "Zenodo 10.5281/zenodo.3515985 (~5M USPTO patents). Subsample seed=42: 50K patents stratified year/tech-category + FULL award-linked validation subset. Size-driven; gold ceiling (73% award-identification) testable on full award subset.",
+    "gebhart2023_math_framework": "APS restricted -> OpenAlex physics substitute. Subsample seed=42: 50K physics papers + FULL Nobel set (Li 2019 public). Gold ceiling (Nobel-discernment) testable on full Nobel set.",
+    "schaper2025_frontier": "PubMed+USPTO public; KU Leuven linkage private (boundary). Subsample seed=42: 20K records + data dict documenting missing linkage. IO2 partial by design."
+  },
+  "immutability": "IO2 definitions frozen in r122_freeze/io_manifests.json; data files match frozen data_provided flags. Subsampling size-driven, seed=42, source+hash recorded; no outcome-driven selection; gold ceiling unaltered."
+}

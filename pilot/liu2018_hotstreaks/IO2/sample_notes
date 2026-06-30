@@ -1,0 +1,6 @@
+# Sample Notes — liu2018_hotstreaks
+
+N = pending-exact; window = career-spanning; unit = individual career.
+Filters: per-domain split (artists/directors/scientists).
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

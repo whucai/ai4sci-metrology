@@ -1,0 +1,16 @@
+# Data Dictionary — ke2015_sleeping_beauties
+
+## Data source
+Web of Science + APS — 22M-paper citation corpus
+Access: private; Provenance: Clarivate/APS licensed
+
+## Key variables
+- Unit of analysis: paper
+- Time window: 1900-2013
+- Sample N: 22000000
+- Filter rules: citation-network construction
+
+## Indicator definitions
+- Formula: Beckendorf Bcriterion ( Beautycriterion); citation-delay + sudden-awakening metrics
+- Parameters: awakening threshold
+- Computation steps: build citation network, detect delayed citation burst

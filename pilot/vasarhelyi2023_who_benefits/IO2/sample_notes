@@ -1,0 +1,6 @@
+# Sample Notes — vasarhelyi2023_who_benefits
+
+N = pending; window = altmetrics coverage window; unit = paper.
+Filters: Coarsened Exact Matching on gender composition.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

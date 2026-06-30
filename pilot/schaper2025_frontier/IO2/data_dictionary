@@ -1,0 +1,16 @@
+# Data Dictionary — schaper2025_frontier
+
+## Data source
+PubMed + US biomedical patents (USPTO) + KU Leuven/ECOOM disambiguation + BvD Orbis — Author-inventor linked career data
+Access: partial; Provenance: PubMed/USPTO public; linkage private
+
+## Key variables
+- Unit of analysis: scientist
+- Time window: biomedical careers
+- Sample N: pending
+- Filter rules: author-inventor disambiguation
+
+## Indicator definitions
+- Formula: Inventive-performance indicator distinguishing frontier scientists
+- Parameters: frontier threshold
+- Computation steps: link authors to inventors, compute performance metric

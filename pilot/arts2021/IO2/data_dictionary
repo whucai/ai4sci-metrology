@@ -1,0 +1,16 @@
+# Data Dictionary — arts2021
+
+## Data source
+USPTO patent claims + PatentsView — Patent claims for NLP-indicator extraction
+Access: public; Provenance: USPTO
+
+## Key variables
+- Unit of analysis: patent claim
+- Time window: USPTO coverage
+- Sample N: unknown
+- Filter rules: P1-P10 preprocessing steps
+
+## Indicator definitions
+- Formula: I1-I5 novelty (5 formulas correct); I6-I9 reuse (bug); I5/I10 cosine-similarity
+- Parameters: n-gram window, cosine binary TF
+- Computation steps: tokenize, n-gram extract, cosine sim
