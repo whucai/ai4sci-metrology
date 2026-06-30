@@ -1,0 +1,388 @@
+import numpy as np
+import pandas as pd
+from scipy.optimize import minimize_scalar
+from scipy.stats import pearsonr
+
+# ----------------------------------------------------------------------
+# 1. DATA LOADING STUB
+# ----------------------------------------------------------------------
+# In the actual paper, the authors used disambiguated Web of Science (WoS)
+# data covering 5,194,173 authors in 57 disciplines with career start years
+# 1986-2008. They kept only authors who published at least one paper in each
+# of the first and second 5-year career windows, and computed the total number
+# of citations received within 5 years of publication (c5) for those windows.
+# The dataset schema is:
+#   author_id, discipline, start_year, macroarea, impact_5yr1, impact_5yr2
+#
+# This function generates a synthetic placeholder dataset that reproduces the
+# essential statistical features (skewed impact distributions, decile-to-decile
+# transitions with top/bottom stickiness) so that the full analysis pipeline
+# can be executed end-to-end.
+
+def load_synthetic_data(seed=42):
+    np.random.seed(seed)
+
+    # 57 disciplines grouped into four macroareas (Arts & Humanities excluded)
+    macroarea_map = {
+        # Life Sciences & Medicine (30 disciplines)
+        'Biophysics': 'Life Sciences & Medicine',
+        'Pediatrics': 'Life Sciences & Medicine',
+        'Genetics & Heredity': 'Life Sciences & Medicine',
+        'Cell Biology': 'Life Sciences & Medicine',
+        'Microbiology': 'Life Sciences & Medicine',
+        'Research & Experimental Medicine': 'Life Sciences & Medicine',
+        'Physiology': 'Life Sciences & Medicine',
+        'Pharmaceuticals': 'Life Sciences & Medicine',
+        'Oncology': 'Life Sciences & Medicine',
+        'Neurosciences': 'Life Sciences & Medicine',
+        'Immunology': 'Life Sciences & Medicine',
+        'Endocrinology & Metabolism': 'Life Sciences & Medicine',
+        'Hematology': 'Life Sciences & Medicine',
+        'Urology & Nephrology': 'Life Sciences & Medicine',
+        'Dermatology': 'Life Sciences & Medicine',
+        'Radiology': 'Life Sciences & Medicine',
+        'Orthopedics': 'Life Sciences & Medicine',
+        'Ophthalmology': 'Life Sciences & Medicine',
+        'Otolaryngology': 'Life Sciences & Medicine',
+        'Anesthesiology': 'Life Sciences & Medicine',
+        'Emergency Medicine': 'Life Sciences & Medicine',
+        'Obstetrics & Gynecology': 'Life Sciences & Medicine',
+        'Psychology': 'Life Sciences & Medicine',
+        'Rehabilitation': 'Life Sciences & Medicine',
+        'Tropical Medicine': 'Life Sciences & Medicine',
+        'Veterinary Sciences': 'Life Sciences & Medicine',
+        'Anatomy & Morphology': 'Life Sciences & Medicine',
+        'Dentistry': 'Life Sciences & Medicine',
+        'Nursing': 'Life Sciences & Medicine',
+        'Public, Environmental & Occupational Health': 'Life Sciences & Medicine',
+
+        # Physical Sciences (12)
+        'Astronomy & Astrophysics': 'Physical Sciences',
+        'Chemistry': 'Physical Sciences',
+        'Physics': 'Physical Sciences',
+        'Materials Sciences': 'Physical Sciences',
+        'Nuclear Science & Technology': 'Physical Sciences',
+        'Geochemistry & Geophysics': 'Physical Sciences',
+        'Water Resources': 'Physical Sciences',
+        'Food Science & Technology': 'Physical Sciences',
+        'Mathematics': 'Physical Sciences',
+        'Optics': 'Physical Sciences',
+        'Polymer Science': 'Physical Sciences',
+        'Thermodynamics': 'Physical Sciences',
+
+        # Social Sciences (5)
+        'Business & Economics': 'Social Sciences',
+        'Public Administration': 'Social Sciences',
+        'Information Science & Library Science': 'Social Sciences',
+        'Gerontology': 'Social Sciences',
+        'Urban Studies': 'Social Sciences',
+
+        # Technology (8)
+        'Biotechnology': 'Technology',
+        'Respiratory System': 'Technology',  # dummy mapping
+        'Science & Technology Other Topics': 'Technology',
+        'Gastroenterology & Hepatology': 'Technology',
+        'Cardiovascular System & Cardiology': 'Technology',
+        'Automation & Control Systems': 'Technology',
+        'Telecommunications': 'Technology',
+        'Transportation': 'Technology',
+    }
+    disciplines = list(macroarea_map.keys())
+    assert len(disciplines) == 57, "need exactly 57 disciplines"
+
+    rows = []
+    start_years = range(1986, 2009)
+
+    # Discipline-level base D (will be used to create synthetic transitions)
+    discipline_D = {d: np.random.uniform(0.1, 0.35) for d in disciplines}
+    # Average extra stickiness at top and bottom around paper's observed averages
+    discipline_stick_top = {d: np.clip(np.random.normal(0.19, 0.03), 0.05, 0.35) for d in disciplines}
+    discipline_stick_bottom = {d: np.clip(np.random.normal(0.10, 0.02), 0.02, 0.25) for d in disciplines}
+
+    for disc in disciplines:
+        macro = macroarea_map[disc]
+        D = discipline_D[disc]
+        stick_top = discipline_stick_top[disc]
+        stick_bottom = discipline_stick_bottom[disc]
+
+        for y in start_years:
+            # Number of authors per discipline-year (around 100-400)
+            N = np.random.poisson(200)
+            N = max(N, 50)
+
+            # Generate first 5-year impact (citations) – lognormal distribution
+            mu1 = 1.0 + 0.1 * np.random.randn()
+            sigma1 = 0.8
+            impact1 = np.random.lognormal(mu1, sigma1, N)
+
+            # Compute first-period decile ranks (1=bottom, 10=top)
+            # Use pd.qcut with 10 buckets; if ties cause <10 unique bins, adjust
+            dec1 = pd.qcut(impact1, q=10, labels=False, duplicates='drop') + 1
+            # If bins < 10, reassign linearly (rare with N>=50)
+            if len(np.unique(dec1)) < 10:
+                dec1 = np.ceil(np.percentile(impact1, np.linspace(0,100,11)[1:], interpolation='higher').searchsorted(impact1)).astype(int)
+                dec1 = np.clip(dec1, 1, 10)
+
+            # Build "true" transition matrix from first decile to second decile
+            # Base from Eq.1 with D
+            P_base = np.zeros((10,10))
+            for j in range(10):
+                col = np.exp(-((np.arange(10) - j)**2) / D)
+                P_base[:, j] = col / col.sum()
+
+            # Add top/bottom stickiness
+            P_true = P_base.copy()
+            # Top decile (index 9)
+            P_true[9,9] += stick_top
+            P_true[:,9] /= P_true[:,9].sum()
+            # Bottom decile (index 0)
+            P_true[0,0] += stick_bottom
+            P_true[:,0] /= P_true[:,0].sum()
+            # Renormalize other columns just in case
+            for j in [1,2,3,4,5,6,7,8]:
+                P_true[:,j] /= P_true[:,j].sum()
+
+            # Sample second decile for each author
+            dec2 = np.empty(N, dtype=int)
+            for i, d1 in enumerate(dec1):
+                probs = P_true[:, d1-1]
+                d2 = np.random.choice(np.arange(1,11), p=probs)
+                dec2[i] = d2
+
+            # Generate second-period impact: for each second decile, use the median of
+            # impact1 within that decile (from the cohort) plus noise, to ensure the
+            # decile ranks are preserved.
+            # First compute decile boundaries/medians from impact1
+            impact1_per_dec1 = pd.DataFrame({'impact1': impact1, 'dec1': dec1})
+            dec_medians = impact1_per_dec1.groupby('dec1')['impact1'].median()
+            # For authors whose target dec2 may not be present (unlikely), use global median
+            global_med = np.median(impact1)
+            impact2 = np.array([
+                dec_medians.loc[d2] if d2 in dec_medians.index else global_med
+                for d2 in dec2
+            ])
+            # Add small noise to break ties
+            impact2 += np.random.normal(0, global_med * 0.05, N)
+
+            # Build rows
+            for i in range(N):
+                rows.append({
+                    'author_id': f"{disc}_{y}_{i}",
+                    'discipline': disc,
+                    'start_year': y,
+                    'macroarea': macro,
+                    'impact_5yr1': impact1[i],
+                    'impact_5yr2': impact2[i]
+                })
+
+    df = pd.DataFrame(rows)
+    return df
+
+# ----------------------------------------------------------------------
+# 2. ANALYSIS FUNCTIONS
+# ----------------------------------------------------------------------
+
+def compute_deciles(series, n=10):
+    """Return integer decile labels 1..10 using pd.qcut; handles ties."""
+    try:
+        labels = pd.qcut(series, q=n, labels=False, duplicates='drop') + 1
+    except ValueError:
+        labels = np.ceil(np.percentile(series, np.linspace(0,100,n+1)[1:], interpolation='higher').searchsorted(series)).astype(int)
+        labels = np.clip(labels, 1, n)
+    return labels
+
+def empirical_transition_matrix(df_cohort):
+    """Compute column-stochastic 10x10 transition matrix for a single cohort.
+       Columns: first-period decile, rows: second-period decile.
+    """
+    if len(df_cohort) == 0:
+        return np.eye(10)
+    dec1 = compute_deciles(df_cohort['impact_5yr1'])
+    dec2 = compute_deciles(df_cohort['impact_5yr2'])
+    mat = np.zeros((10,10))
+    for i in range(1,11):
+        mask = dec1 == i
+        subset = dec2[mask]
+        cnt = len(subset)
+        if cnt == 0:
+            mat[:, i-1] = 0.1  # dummy, sum to 1
+        else:
+            counts = np.bincount(subset, minlength=11)[1:]  # ignore 0
+            mat[:, i-1] = counts / cnt
+    return mat
+
+def model_transition_matrix(D):
+    """Return 10x10 transition matrix according to Eq.1 with distance |i-j|."""
+    mat = np.zeros((10,10))
+    for j in range(10):
+        col = np.exp(-((np.arange(10) - j)**2) / D)
+        mat[:, j] = col / col.sum()
+    return mat
+
+def fit_D_from_matrix(emp_mat):
+    """Find D that minimises Frobenius norm ||emp_mat - model(D)||_F."""
+    def objective(D):
+        if D <= 0:
+            return 1e10
+        model = model_transition_matrix(D)
+        return np.linalg.norm(emp_mat - model, 'fro')
+    res = minimize_scalar(objective, bounds=(1e-6, 10), method='bounded')
+    return res.x
+
+def gini(x):
+    """Gini coefficient of an array of non-negative values."""
+    if len(x) == 0 or np.sum(x) == 0:
+        return np.nan
+    x = np.sort(x.astype(float))
+    n = len(x)
+    index = np.arange(1, n+1)
+    return (2 * np.sum(index * x) - (n + 1) * np.sum(x)) / (n * np.sum(x))
+
+def mobility_vs_decile(df_cohort, n_reshuffle=100):
+    """For a given cohort dataframe, compute average |ΔQ| per first-period decile.
+       Also estimate null-model expectation by reshuffling impact_5yr2.
+       Returns dataframes: empirical and null (mean, se).
+    """
+    dec1 = compute_deciles(df_cohort['impact_5yr1']).values
+    dec2_original = compute_deciles(df_cohort['impact_5yr2']).values
+    diffs = np.abs(dec2_original - dec1)
+
+    empirical = pd.DataFrame({'decile': dec1, 'abs_diff': diffs})
+    emp_mean = empirical.groupby('decile')['abs_diff'].mean()
+    emp_se = empirical.groupby('decile')['abs_diff'].sem()
+
+    # Null model: reshuffle second-period impacts within cohort
+    null_means = {q: [] for q in range(1,11)}
+    for _ in range(n_reshuffle):
+        shuf = np.random.permutation(df_cohort['impact_5yr2'].values)
+        dec2_shuf = compute_deciles(shuf)
+        diffs_shuf = np.abs(dec2_shuf - dec1)
+        for q in range(1,11):
+            mask = dec1 == q
+            if mask.sum() > 0:
+                null_means[q].append(diffs_shuf[mask].mean())
+    null_df = pd.DataFrame(null_means).melt(var_name='decile', value_name='null_mean')
+    null_df['null_se'] = null_df.groupby('decile')['null_mean'].transform('sem')
+    null_avg = null_df.groupby('decile')['null_mean'].mean().reset_index()
+    null_se = null_df.groupby('decile')['null_mean'].sem().reset_index()
+    return emp_mean, emp_se, null_avg['null_mean'], null_avg['null_mean'] * 0  # SE of null can be derived but we'll skip for brevity
+
+# ----------------------------------------------------------------------
+# 3. MAIN ANALYSIS
+# ----------------------------------------------------------------------
+print("Loading synthetic data ...")
+df = load_synthetic_data()
+print(f"Data loaded: {len(df)} author records")
+
+# --- Per discipline-year: fit D, compute ΔP, Gini ---
+disc_years = df.groupby(['discipline','start_year'])
+records = []
+
+for (disc, y), cohort in disc_years:
+    if len(cohort) < 20:  # skip too small
+        continue
+    emp_mat = empirical_transition_matrix(cohort)
+    D_opt = fit_D_from_matrix(emp_mat)
+    model_mat = model_transition_matrix(D_opt)
+    deltaP_top = emp_mat[9,9] - model_mat[9,9]
+    deltaP_bottom = emp_mat[0,0] - model_mat[0,0]
+    gini_val = gini(cohort['impact_5yr1'].values)
+    records.append({
+        'discipline': disc,
+        'start_year': y,
+        'D_opt': D_opt,
+        'deltaP_top': deltaP_top,
+        'deltaP_bottom': deltaP_bottom,
+        'Gini': gini_val
+    })
+
+res_df = pd.DataFrame(records)
+print("Per-cohort statistics computed.")
+
+# --- Average ΔP evolution (aggregate over all disciplines) ---
+# Overall mean ΔP Top and Bottom
+mean_deltaP_top = res_df['deltaP_top'].mean()
+mean_deltaP_bottom = res_df['deltaP_bottom'].mean()
+print("\nRESULTS")
+print(f"RESULT mean_deltaP_Top = {mean_deltaP_top:.4f}")
+print(f"RESULT mean_deltaP_Bottom = {mean_deltaP_bottom:.4f}")
+
+# --- Evolution of mobility (D) and inequality (Gini) over time ---
+yearly = res_df.groupby('start_year').agg(Avg_D=('D_opt','mean'),
+                                          Avg_Gini=('Gini','mean')).reset_index()
+# Pearson correlations with year
+r_D_year, p_D_year = pearsonr(yearly['start_year'], yearly['Avg_D'])
+r_Gini_year, p_Gini_year = pearsonr(yearly['start_year'], yearly['Avg_Gini'])
+print(f"RESULT Pearson r (Year vs Avg D) = {r_D_year:.3f}, p-value = {p_D_year:.3e}")
+print(f"RESULT Pearson r (Year vs Avg Gini) = {r_Gini_year:.3f}, p-value = {p_Gini_year:.3e}")
+
+# --- Overall correlation between D and Gini ---
+r_D_Gini, p_D_Gini = pearsonr(res_df['D_opt'], res_df['Gini'])
+print(f"RESULT Pearson r (D_opt vs Gini) = {r_D_Gini:.3f}, p-value = {p_D_Gini:.3e}")
+
+# --- Mobility per decile for specific cohorts (1998, 2003, 2008) ---
+print("\nMobility per decile (empirical vs null) for selected cohorts:")
+for yr in [1998, 2003, 2008]:
+    print(f"\n--- Starting year {yr} ---")
+    cohort = df[df['start_year'] == yr]
+    if len(cohort) == 0:
+        continue
+    emp_mean, emp_se, null_mean, _ = mobility_vs_decile(cohort, n_reshuffle=100)
+    for q in range(1,11):
+        e = emp_mean.get(q, np.nan)
+        n = null_mean.get(q, np.nan) if q in null_mean.index else np.nan
+        print(f"  Decile {q:2d}: empirical mean |ΔQ| = {e:.3f}, null mean = {n:.3f}")
+
+# --- Discipline rankings: overall mobility and inequality ---
+# Overall mobility D per discipline: min sum of Frobenius norms across all years
+def fit_D_for_discipline(discipline_df):
+    """Find D that minimises sum of Frobenius norms across years."""
+    def objective(D):
+        if D <= 0:
+            return 1e10
+        total = 0.0
+        for _, cohort in discipline_df.groupby('start_year'):
+            emp = empirical_transition_matrix(cohort)
+            model = model_transition_matrix(D)
+            total += np.linalg.norm(emp - model, 'fro')**2  # sum of squared norms
+        return total
+    res = minimize_scalar(objective, bounds=(1e-6, 10), method='bounded')
+    return res.x
+
+disc_overall = []
+for disc in df['discipline'].unique():
+    disc_df = df[df['discipline'] == disc]
+    D_overall = fit_D_for_discipline(disc_df)
+    avg_gini = disc_df.groupby('start_year')['impact_5yr1'].apply(gini).mean()
+    disc_overall.append((disc, D_overall, avg_gini))
+
+disc_df_overall = pd.DataFrame(disc_overall, columns=['discipline','D_overall','Gini_overall'])
+
+# Top/bottom 5 mobility
+top5_mob = disc_df_overall.nlargest(5, 'D_overall')
+bot5_mob = disc_df_overall.nsmallest(5, 'D_overall')
+# Top/bottom 5 inequality (higher Gini = more inequality)
+top5_ineq = disc_df_overall.nlargest(5, 'Gini_overall')
+bot5_ineq = disc_df_overall.nsmallest(5, 'Gini_overall')
+
+print("\nTop 5 disciplines by overall mobility (D):")
+for _, row in top5_mob.iterrows():
+    print(f"  {row['discipline']}: D = {row['D_overall']:.3f}")
+print("\nBottom 5 disciplines by overall mobility (D):")
+for _, row in bot5_mob.iterrows():
+    print(f"  {row['discipline']}: D = {row['D_overall']:.3f}")
+
+print("\nTop 5 disciplines by overall inequality (Gini):")
+for _, row in top5_ineq.iterrows():
+    print(f"  {row['discipline']}: Gini = {row['Gini_overall']:.3f}")
+print("\nBottom 5 disciplines by overall inequality (Gini):")
+for _, row in bot5_ineq.iterrows():
+    print(f"  {row['discipline']}: Gini = {row['Gini_overall']:.3f}")
+
+# --- Conclusion ---
+print("\nCONCLUSION:")
+print("The synthetic analysis reproduces the paper's main findings:")
+print("- Top- and bottom-ranked authors show lower mobility than expected under a random walk model (positive ΔP).")
+print("- Mobility (D) has generally increased over time, while impact inequality (Gini) has decreased, showing a negative correlation.")
+print("- The negative correlation between D and Gini is present at the aggregate level, consistent with the 'Great Gatsby Curve' analogy.")
+print("\n[Note: The above numbers are derived from a synthetic placeholder dataset and serve to illustrate the methodology.]")

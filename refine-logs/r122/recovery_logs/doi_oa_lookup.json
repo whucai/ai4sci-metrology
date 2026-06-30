@@ -1,0 +1,122 @@
+{
+  "sun2023_ranking_mobility": {
+    "crossref_top": [
+      {
+        "doi": "10.1073/pnas.2305196120",
+        "title": "Ranking mobility and impact inequality in early academic careers",
+        "venue": "Proceedings of the National Academy",
+        "year": 2023
+      },
+      {
+        "doi": "10.1108/s1479-362820140000011011",
+        "title": "The impact of mobility on the lives and careers of female and male academic",
+        "venue": "Academic Mobility",
+        "year": 2014
+      },
+      {
+        "doi": "10.4337/9781839102639.00035",
+        "title": "International staff mobility",
+        "venue": "Research Handbook on Academic Caree",
+        "year": 2022
+      }
+    ],
+    "unpaywall": {
+      "doi": "10.1073/pnas.2305196120",
+      "is_oa": true,
+      "oa_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10450398/pdf/pnas.202305196.pdf",
+      "oa_host": "repository",
+      "oa_license": "cc-by-nc-nd",
+      "locations": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10450398/pdf/pnas.202305196.pdf"
+      ]
+    }
+  },
+  "deng2023_enhancing_disruption": {
+    "crossref_top": [
+      {
+        "doi": "10.1007/s11192-023-04644-2",
+        "title": "Enhancing the robustness of the disruption metric against noise",
+        "venue": "Scientometrics",
+        "year": 2023
+      },
+      {
+        "doi": "10.1109/tfuzz.2024.3400898/mm1",
+        "title": "Intuitionistic Fuzzy Broad Learning System: Enhancing Robustness Against No",
+        "venue": "",
+        "year": null
+      },
+      {
+        "doi": "10.21203/rs.3.rs-6284804/v1",
+        "title": "Enhancing Blind Image Deblurring Robustness Against Impulse Noise via Adapt",
+        "venue": "",
+        "year": 2025
+      }
+    ],
+    "unpaywall": {
+      "doi": "10.1007/s11192-023-04644-2",
+      "is_oa": false,
+      "oa_url": null,
+      "oa_host": null,
+      "oa_license": null,
+      "locations": []
+    }
+  },
+  "galuez2023_technology_transfer": {
+    "crossref_top": [
+      {
+        "doi": "10.1787/888932891625",
+        "title": "Figure 3.8.1 Main sources of scientific documents cited in patents, selecte",
+        "venue": "",
+        "year": null
+      },
+      {
+        "doi": "10.1787/888933273972",
+        "title": "3.6.3 Affiliations of scientific authors cited in patents, 2007-13",
+        "venue": "",
+        "year": null
+      },
+      {
+        "doi": "10.1787/888933144859",
+        "title": "Figure 5.11. Main scientific fields cited in \u201cgreen\u201d patents by inventor co",
+        "venue": "",
+        "year": null
+      }
+    ],
+    "unpaywall": {
+      "doi": "10.1787/888932891625",
+      "err": "HTTP Error 404: Not Found"
+    }
+  },
+  "zheng2025_male_female_retractions": {
+    "crossref_top": [
+      {
+        "doi": "10.1016/j.joi.2025.101682",
+        "title": "Do male leading authors retract more articles than female leading authors?",
+        "venue": "Journal of Informetrics",
+        "year": 2025
+      },
+      {
+        "doi": "10.1038/d41586-018-07605-5",
+        "title": "Female authors draw more student readers than do male authors",
+        "venue": "Nature",
+        "year": 2018
+      },
+      {
+        "doi": "10.1126/science.z87syeh",
+        "title": "Far more authors use AI to write science papers than admit it, publisher re",
+        "venue": "AAAS Articles DO Group",
+        "year": 2025
+      }
+    ],
+    "unpaywall": {
+      "doi": "10.1016/j.joi.2025.101682",
+      "is_oa": true,
+      "oa_url": "https://arxiv.org/pdf/2507.17127",
+      "oa_host": "repository",
+      "oa_license": null,
+      "locations": [
+        "https://arxiv.org/pdf/2507.17127"
+      ]
+    }
+  }
+}

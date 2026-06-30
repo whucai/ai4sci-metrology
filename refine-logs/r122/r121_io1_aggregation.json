@@ -1,0 +1,20 @@
+{
+  "io": 1,
+  "n_runs": 4,
+  "n_done": 4,
+  "mean_ecrf": 0.5,
+  "by_paper": {
+    "sun2023_ranking_mobility": 0.5,
+    "zheng2025_male_female_retractions": 0.5
+  },
+  "by_model": {
+    "qwen3-32b": 0.5,
+    "deepseek-v4-pro": 0.5
+  },
+  "process_evidence_totals": {
+    "execution_succeeded": 4,
+    "real_data_used": 0,
+    "synthetic_generated": 4,
+    "ref_code_used": 0
+  }
+}

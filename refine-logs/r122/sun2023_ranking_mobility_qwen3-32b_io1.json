@@ -1,17 +1,99 @@
 {
-  "run_id": "r19",
+  "run_id": "r1",
   "paper": "sun2023_ranking_mobility",
   "model": "qwen3-32b",
   "io": 1,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782722484,
+  "t_start": 1782726912,
   "freeze": {
     "scorer": "ecrf_v2 frozen",
     "gold": "v1_r3",
     "data_provided": false,
     "ref_code_available": false
   },
-  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/sun2023_ranking_mobility_qwen3-32b_io1.json",
-  "error": "missing paper.md for sun2023_ranking_mobility (assemble IO package first)",
-  "status": "NO_PACKAGE"
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/sun2023_ranking_mobility_qwen3-32b_io1_r2.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 92.7,
+    "usage": {
+      "completion": 7459,
+      "prompt": 10176
+    },
+    "finish": "stop",
+    "n_content_chars": 12665
+  },
+  "llm_response_chars": 12665,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.88,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 539,
+    "stderr_chars": 662
+  },
+  "stdout": "LOADING & PREPARING DATA...\nDataset shape: (46005, 5)\nColumns: ['author_id', 'start_year', 'discipline', 'impact_1_5', 'impact_6_10']\nStart years: [1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008]\nDisciplines: ['Astronomy & Astrophysics', 'Biophysics', 'Business & Economics', 'Cell Biology', 'Chemistry', 'Microbiology', 'Nuclear Science & Technology', 'Pediatrics', 'Physics', 'Research & Experimental Medicine']\n\nCOMPUTING COHORT-LEVEL METRICS...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 155, in <module>\n    dec1 = assign_deciles(group[['impact_1_5']].assign(impact=group['impact_1_5']))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 83, in assign_deciles\n    deciles = (rank_pct * 10).ceil().clip(upper=10).astype(int)\n              ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/generic.py\", line 6299, in __getattr__\n    return object.__getattribute__(self, name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'Series' object has no attribute 'ceil'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.5,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 2
+    },
+    "n_result_lines": 2
+  },
+  "status": "DONE",
+  "t_end": 1782727006
 }

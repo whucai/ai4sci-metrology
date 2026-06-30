@@ -1,0 +1,7 @@
+R121: IO1 — 4 runs, concurrency=2
+[1/4] sun2023_ranking_mobility       qwen3-32b        DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+[2/4] sun2023_ranking_mobility       deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+[3/4] zheng2025_male_female_retractions qwen3-32b        DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+[4/4] zheng2025_male_female_retractions deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+
+IO1 done in 382s. mean ECRF=0.5. n_done=4/4. agg -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/r121_io1_aggregation.json

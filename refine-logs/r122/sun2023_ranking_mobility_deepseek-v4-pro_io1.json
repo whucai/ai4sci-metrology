@@ -1,17 +1,99 @@
 {
-  "run_id": "r20",
+  "run_id": "r2",
   "paper": "sun2023_ranking_mobility",
   "model": "deepseek-v4-pro",
   "io": 1,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782722484,
+  "t_start": 1782726912,
   "freeze": {
     "scorer": "ecrf_v2 frozen",
     "gold": "v1_r3",
     "data_provided": false,
     "ref_code_available": false
   },
-  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/sun2023_ranking_mobility_deepseek-v4-pro_io1.json",
-  "error": "missing paper.md for sun2023_ranking_mobility (assemble IO package first)",
-  "status": "NO_PACKAGE"
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r122/sun2023_ranking_mobility_deepseek-v4-pro_io1_r2.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 185.3,
+    "usage": {
+      "completion": 9872,
+      "prompt": 9383
+    },
+    "finish": "stop",
+    "n_content_chars": 17411
+  },
+  "llm_response_chars": 17411,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.82,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 27,
+    "stderr_chars": 356
+  },
+  "stdout": "Loading synthetic data ...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 274, in <module>\n    df = load_synthetic_data()\n         ^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 91, in load_synthetic_data\n    assert len(disciplines) == 57, \"need exactly 57 disciplines\"\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: need exactly 57 disciplines\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.5,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 5
+    },
+    "n_result_lines": 5
+  },
+  "status": "DONE",
+  "t_end": 1782727099
 }
