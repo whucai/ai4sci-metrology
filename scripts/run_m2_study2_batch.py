@@ -102,15 +102,16 @@ def load_frozen_gold() -> dict:
     return {p["paper_id"]: p for p in papers}
 
 
-def paper_has_inputs(pid: str) -> tuple[bool, str]:
-    """Check IO package + keyword gold exist for a paper."""
+def paper_has_inputs(pid: str, io: int = 1) -> tuple[bool, str]:
+    """Check IO package + keyword gold + the specific IO{io} dir exist for a paper."""
     io_pkg = ROOT / "pilot" / pid
-    has_pkg = io_pkg.exists()
-    has_kwgold = pid in pilot.PAPER_GOLD
-    if not has_pkg:
+    if not io_pkg.exists():
         return False, f"no IO package at pilot/{pid}"
-    if not has_kwgold:
+    if pid not in pilot.PAPER_GOLD:
         return False, f"no keyword gold in PAPER_GOLD (only {sorted(pilot.PAPER_GOLD)})"
+    # the specific IO level must have a paper.md (boundary papers may lack IO3)
+    if not (io_pkg / f"IO{io}" / "paper.md").exists():
+        return False, f"no IO{io}/paper.md (boundary paper — IO{io} not built)"
     return True, "ok"
 
 
@@ -151,7 +152,7 @@ def main():
     # Filter to ready runs
     ready, blocked = [], []
     for p, io, m in runs:
-        ok, why = paper_has_inputs(p)
+        ok, why = paper_has_inputs(p, io)
         # IO2/IO3 need the io{io} subdir in the pilot package; run_one checks internally.
         if ok or (io == 1 and (ROOT / "pilot" / p).exists()):
             ready.append((p, io, m))

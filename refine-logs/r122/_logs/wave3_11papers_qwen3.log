@@ -1,0 +1,22 @@
+[backend] gemma-4-31b @ http://172.17.65.43:8008/v1 NOT reachable — skipping its runs.
+[plan] 33 ready, 0 blocked
+
+[1/33] arts2021_patent_nlp io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_arts2021_patent_nlp_qwen3-32b_io1
+  status=LLM_FAIL ecrf(v0)=None
+
+[2/33] arts2021_patent_nlp io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_arts2021_patent_nlp_qwen3-32b_io2
+  status=LLM_FAIL ecrf(v0)=None
+
+[3/33] arts2021_patent_nlp io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_arts2021_patent_nlp_qwen3-32b_io3
+  status=LLM_FAIL ecrf(v0)=None
+
+[4/33] deng2023_enhancing_disruption io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_deng2023_enhancing_disruption_qwen3-32b_io1
+  status=LLM_FAIL ecrf(v0)=None
+
+[5/33] deng2023_enhancing_disruption io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_deng2023_enhancing_disruption_qwen3-32b_io2
+  status=LLM_FAIL ecrf(v0)=None
+
+[6/33] deng2023_enhancing_disruption io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_deng2023_enhancing_disruption_qwen3-32b_io3
+  ERROR: missing /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/pilot/deng2023_enhancing_disruption/IO3/paper.md
+
+[7/33] donner2024_data_inaccuracy io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_donner2024_data_inaccuracy_qwen3-32b_io1
