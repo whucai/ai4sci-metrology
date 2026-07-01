@@ -1,0 +1,7 @@
+# Data Dictionary — schaper2025_frontier
+
+## Data source
+PubMed (public) + USPTO biomedical patents (public) + KU Leuven/ECOOM author-inventor disambiguation linkage (PRIVATE — not available).
+
+## Boundary
+The author-inventor linkage is the load-bearing asset and is institutionally private. The provided PubMed sample + USPTO patents are the public raw feeds. A faithful reproduction CANNOT reconstruct the frontier-scientist identification without the linkage — IO2 is partial/boundary by design. Agent should label any substitute-based results as DATA_SUB.

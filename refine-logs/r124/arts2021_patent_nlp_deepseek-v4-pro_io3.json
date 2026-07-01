@@ -1,0 +1,84 @@
+{
+  "run_id": "r40",
+  "paper": "arts2021_patent_nlp",
+  "model": "deepseek-v4-pro",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782891329,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": true
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/arts2021_patent_nlp_deepseek-v4-pro_io3.json",
+  "io2_data_files": [
+    "patent_measures_50k.csv"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 126.5,
+    "usage": {
+      "completion": 9739,
+      "prompt": 12275
+    },
+    "finish": "stop",
+    "n_content_chars": 16946
+  },
+  "llm_response_chars": 16946,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.04,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 221,
+    "stderr_chars": 181
+  },
+  "stdout": "Data shape: (50000, 11)\nColumns: ['patent', 'new_word', 'new_word_reuse', 'new_bigram', 'new_bigram_reuse', 'new_trigram', 'new_trigram_reuse', 'new_word_comb', 'new_word_comb_reuse', 'backward_cosine', 'forward_cosine']\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 45, in <module>\n    raise ValueError(\"No award/control flag found.\")\nValueError: No award/control flag found.\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.775,
+    "final_ecrf": 0.775,
+    "caps_applied": []
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 10
+    },
+    "n_result_lines": 10
+  },
+  "status": "DONE",
+  "t_end": 1782891457
+}

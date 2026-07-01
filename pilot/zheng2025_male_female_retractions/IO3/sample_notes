@@ -1,0 +1,6 @@
+# Sample Notes — zheng2025_male_female_retractions
+
+N = pending; window = Retraction Watch coverage; unit = article.
+Filters: gender disambiguation, leading-author identification.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

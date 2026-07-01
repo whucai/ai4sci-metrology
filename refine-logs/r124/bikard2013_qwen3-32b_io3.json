@@ -1,0 +1,87 @@
+{
+  "run_id": "r9",
+  "paper": "bikard2013",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782890180,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/bikard2013_qwen3-32b_io3.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 99.9,
+    "usage": {
+      "completion": 6986,
+      "prompt": 11417
+    },
+    "finish": "stop",
+    "n_content_chars": 3502
+  },
+  "llm_response_chars": 3502,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.11,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 2031
+  },
+  "stdout": "",
+  "stderr": "t):\n  File \"/workspace/script.py\", line 42, in <module>\n    model_h1 = sm.OLS(df['log_citations'], X_base).fit(cov_type='HC1')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 924, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 749, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 203, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 270, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 95, in __init__\n    self.data = self._handle_data(endog, exog, missing, hasconst,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 135, in _handle_data\n    data = handle_data(endog, exog, missing, hasconst, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 675, in handle_data\n    return klass(endog, exog=exog, missing=missing, hasconst=hasconst,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 84, in __init__\n    self.endog, self.exog = self._convert_endog_exog(endog, exog)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 509, in _convert_endog_exog\n    raise ValueError(\"Pandas data cast to numpy dtype of object. \"\nValueError: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 0.5,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "partial sample evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.875,
+    "final_ecrf": 0.6,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {},
+    "n_result_lines": 0
+  },
+  "status": "DONE",
+  "t_end": 1782890281
+}

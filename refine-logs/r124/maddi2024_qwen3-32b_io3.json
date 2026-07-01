@@ -1,0 +1,95 @@
+{
+  "run_id": "r7",
+  "paper": "maddi2024",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782890150,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/maddi2024_qwen3-32b_io3.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 115.3,
+    "usage": {
+      "completion": 8042,
+      "prompt": 11488
+    },
+    "finish": "stop",
+    "n_content_chars": 6645
+  },
+  "llm_response_chars": 6645,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.29,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 781,
+    "stderr_chars": 2023
+  },
+  "stdout": "DATA STATUS: Raw data files not found in /workspace/raw_data/.\nDOCUMENTATION NOTE: Publons/WoS data is unavailable. Reproduction is data-blocked.\nACTION: Constructing a documented methodological stub per instructions.\n\n--- PAPER REPORTED VALUES ---\nRESULT PAPER_REPORTED_N = 57482\nRESULT PAPER_REPORTED_MEAN_REPORT_LENGTH = 416.3\nRESULT PAPER_REPORTED_MEDIAN_REPORT_LENGTH = 302\nRESULT PAPER_REPORTED_THRESHOLD_SIGNIFICANT = 947\nRESULT PAPER_REPORTED_CLASS_LT232 = 23532 (41%)\nRESULT PAPER_REPORTED_CLASS_232_535 = 18041 (31%)\nRESULT PAPER_REPORTED_CLASS_536_946 = 10123 (18%)\nRESULT PAPER_REPORTED_CLASS_947_1612 = 4532 (7.9%)\nRESULT PAPER_REPORTED_CLASS_GT1613 = 1254 (2.2%)\nRESULT PAPER_REPORTED_FINDING = Reports >= 947 words significantly positively associated with citations\n",
+  "stderr": "call last):\n  File \"/workspace/script.py\", line 97, in <module>\n    model = sm.OLS(df['log_citations'], X_reg).fit(cov_type='HC3')\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 924, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 749, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 203, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 270, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 95, in __init__\n    self.data = self._handle_data(endog, exog, missing, hasconst,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 135, in _handle_data\n    data = handle_data(endog, exog, missing, hasconst, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 675, in handle_data\n    return klass(endog, exog=exog, missing=missing, hasconst=hasconst,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 84, in __init__\n    self.endog, self.exog = self._convert_endog_exog(endog, exog)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 509, in _convert_endog_exog\n    raise ValueError(\"Pandas data cast to numpy dtype of object. \"\nValueError: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.9,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "e paper-numbers-as-computed",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": true,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "SYNTHETIC": 2
+    },
+    "n_result_lines": 2
+  },
+  "status": "DONE",
+  "t_end": 1782890267
+}

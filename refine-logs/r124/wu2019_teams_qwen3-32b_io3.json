@@ -1,0 +1,94 @@
+{
+  "run_id": "r11",
+  "paper": "wu2019_teams",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782890233,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": true
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/wu2019_teams_qwen3-32b_io3.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [
+    "reproduce.py",
+    "reproduce_final.py",
+    "reproduce_fix1.py",
+    "reproduce_fix2.py"
+  ],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 74.6,
+    "usage": {
+      "completion": 5598,
+      "prompt": 924
+    },
+    "finish": "stop",
+    "n_content_chars": 3876
+  },
+  "llm_response_chars": 3876,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.53,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 195,
+    "stderr_chars": 825
+  },
+  "stdout": "Loading raw data...\nLoaded 40000 records from /workspace/raw_data/sciscinet_sample.parquet\nSYNTHETIC: Missing columns ['team_size']. Generating placeholders.\nValid records after filtering: 40000\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 85, in <module>\n    main()\n  File \"/workspace/script.py\", line 59, in main\n    df['team_size_decile'] = pd.cut(df['team_size'], bins=percentiles, labels=False, include_lowest=True)\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/reshape/tile.py\", line 257, in cut\n    fac, bins = _bins_to_cuts(\n                ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/reshape/tile.py\", line 443, in _bins_to_cuts\n    raise ValueError(\nValueError: Bin edges must be unique: Index([1.0, 2.0, 3.0, 3.0, 3.0, 4.0, 4.0, 5.0, 5.0, 6.0, 16.0], dtype='float64').\nYou can drop duplicate edges by setting the 'duplicates' kwarg\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 0.0,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.8,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": true,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 1
+    },
+    "n_result_lines": 1
+  },
+  "status": "DONE",
+  "t_end": 1782890308
+}

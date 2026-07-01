@@ -1,0 +1,85 @@
+{
+  "run_id": "r39",
+  "paper": "arts2021_patent_nlp",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782891185,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": true
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/arts2021_patent_nlp_qwen3-32b_io3.json",
+  "io2_data_files": [
+    "patent_measures_50k.csv"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 132.3,
+    "usage": {
+      "completion": 9835,
+      "prompt": 13671
+    },
+    "finish": "stop",
+    "n_content_chars": 7948
+  },
+  "llm_response_chars": 7948,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 11.75,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 5045,
+    "stderr_chars": 0
+  },
+  "stdout": "RESULT PAPER_REPORTED_TABLE3_MEAN_AWARD_new_word = 0.470\nRESULT PAPER_REPORTED_TABLE3_MEAN_CONTROL_new_word = 0.280\nRESULT PAPER_REPORTED_TABLE3_COHENS_D_new_word = -0.339\nRESULT PAPER_REPORTED_TABLE3_MEAN_AWARD_new_word_comb_reuse = 7.001\nRESULT PAPER_REPORTED_TABLE3_MEAN_CONTROL_new_word_comb_reuse = 5.505\nRESULT PAPER_REPORTED_TABLE3_COHENS_D_new_word_comb_reuse = -0.672\nRESULT PAPER_REPORTED_TABLE4_COEF_new_word_comb_reuse = 0.738\nRESULT PAPER_REPORTED_TABLE4_PSEUDO_R2_new_word_comb_reuse = 0.19\nRESULT PAPER_REPORTED_TABLE4_AUC_new_word_comb_reuse = 0.79\nRESULT PAPER_REPORTED_TABLE4_MARGINAL_EFFECT_new_word_comb_reuse = 32\nRESULT COMPUTED_TABLE3_MEAN_AWARD_new_word = 0.1356\nRESULT COMPUTED_TABLE3_MEAN_CONTROL_new_word = 0.0589\nRESULT COMPUTED_TABLE3_T_STAT_new_word = 27.9876\nRESULT COMPUTED_TABLE3_COHENS_D_new_word = 0.2503\nRESULT COMPUTED_TABLE3_MEAN_AWARD_new_word_reuse = 0.3105\nRESULT COMPUTED_TABLE3_MEAN_CONTROL_new_word_reuse = 0.1109\nRESULT COMPUTED_TABLE3_T_STAT_new_word_reuse = 33.0948\nRESULT COMPUTED_TABLE3_COHENS_D_new_word_reuse = 0.2960\nRESULT COMPUTED_TABLE3_MEAN_AWARD_new_bigram = 0.7408\nRESULT COMPUTED_TABLE3_MEAN_CONTROL_new_bigram = 0.3467\nRESULT COMPUTED_TABLE3_T_STAT_new_bigram = 66.2060\nRESULT COMPUTED_TABLE3_COHENS_D_new_bigram = 0.5922\nRESULT COMPUTED_TABLE3_MEAN_AWARD_new_bigram_reuse = 1.4968\nRESULT COMPUTED_TABLE3_MEAN_CONTROL_new_bigram_reuse = 0.6041\nRESULT COMPUTED_TABLE3_T_STAT_new_bigram_reuse = 79.7200\nRESULT COMPUTED_TABLE3_COHENS_D_new_bigram_reuse = 0.7130\nRESULT COMPUTED_TABLE3_MEAN_AWARD_new_trigram = 0.9451\nRESULT COMPUTED_TABLE3_MEAN_CONTROL_new_trigram = 0.5530\nRESULT COMPUTED_TABLE3_T_STAT_new_trigram = 57.2432\nRESULT COMPUTED_TABLE3_COHENS_D_new_trigram = 0.5120\nRESULT COMPUTED_TABLE3_MEAN_AWARD_new_trigram_reuse = 1.6859\nRESULT COMPUTED_TABLE3_MEAN_CONTROL_new_trigram_reuse = 0.8961\nRESULT COMPUTED_TABLE3_T_STAT_new_trigram_reuse = 70.5003\nRESULT COMPUTED_TABLE3_COHENS_D_new_trigram_reuse = 0.6306\nRESULT COMPUTED_TABLE3_MEAN_AWARD_new_word_comb = 3.1610\nRESULT COMPUTED_TABLE3_MEAN_CONTROL_new_word_comb = 2.4338\nRESULT COMPUTED_TABLE3_T_STAT_new_word_comb = 42.0240\nRESULT COMPUTED_TABLE3_COHENS_D_new_word_comb = 0.3759\nRESULT COMPUTED_TABLE3_MEAN_AWARD_new_word_comb_reuse = 4.1543\nRESULT COMPUTED_TABLE3_MEAN_CONTROL_new_word_comb_reuse = 2.7770\nRESULT COMPUTED_TABLE3_T_STAT_new_word_comb_reuse = 68.9197\nRESULT COMPUTED_TABLE3_COHENS_D_new_word_comb_reuse = 0.6164\nRESULT COMPUTED_TABLE3_MEAN_AWARD_1-backward_cosine = 0.9650\nRESULT COMPUTED_TABLE3_MEAN_CONTROL_1-backward_cosine = 0.9683\nRESULT COMPUTED_TABLE3_T_STAT_1-backward_cosine = -28.8574\nRESULT COMPUTED_TABLE3_COHENS_D_1-backward_cosine = -0.2581\nRESULT COMPUTED_TABLE4_COEF_new_word = 0.8985\nRESULT COMPUTED_TABLE4_PSEUDO_R2_new_word = 0.0118\nRESULT COMPUTED_TABLE4_AUC_new_word = 0.5428\nRESULT COMPUTED_TABLE4_MARGINAL_EFFECT_new_word = 0.0874\nRESULT COMPUTED_TABLE4_COEF_new_word_reuse = 0.4985\nRESULT COMPUTED_TABLE4_PSEUDO_R2_new_word_reuse = 0.0166\nRESULT COMPUTED_TABLE4_AUC_new_word_reuse = 0.5439\nRESULT COMPUTED_TABLE4_MARGINAL_EFFECT_new_word_reuse = 0.1050\nRESULT COMPUTED_TABLE4_COEF_new_bigram = 0.9151\nRESULT COMPUTED_TABLE4_PSEUDO_R2_new_bigram = 0.0615\nRESULT COMPUTED_TABLE4_AUC_new_bigram = 0.6607\nRESULT COMPUTED_TABLE4_MARGINAL_EFFECT_new_bigram = 0.4976\nRESULT COMPUTED_TABLE4_COEF_new_bigram_reuse = 0.5790\nRESULT COMPUTED_TABLE4_PSEUDO_R2_new_bigram_reuse = 0.0871\nRESULT COMPUTED_TABLE4_AUC_new_bigram_reuse = 0.6767\nRESULT COMPUTED_TABLE4_MARGINAL_EFFECT_new_bigram_reuse = 0.6082\nRESULT COMPUTED_TABLE4_COEF_new_trigram = 0.6721\nRESULT COMPUTED_TABLE4_PSEUDO_R2_new_trigram = 0.0459\nRESULT COMPUTED_TABLE4_AUC_new_trigram = 0.6497\nRESULT COMPUTED_TABLE4_MARGINAL_EFFECT_new_trigram = 0.5034\nRESULT COMPUTED_TABLE4_COEF_new_trigram_reuse = 0.4967\nRESULT COMPUTED_TABLE4_PSEUDO_R2_new_trigram_reuse = 0.0679\nRESULT COMPUTED_TABLE4_AUC_new_trigram_reuse = 0.6681\nRESULT COMPUTED_TABLE4_MARGINAL_EFFECT_new_trigram_reuse = 0.6412\nRESULT COMPUTED_TABLE4_COEF_new_word_comb = 0.1925\nRESULT COMPUTED_TABLE4_PSEUDO_R2_new_word_comb = 0.0249\nRESULT COMPUTED_TABLE4_AUC_new_word_comb = 0.6087\nRESULT COMPUTED_TABLE4_MARGINAL_EFFECT_new_word_comb = 0.5386\nRESULT COMPUTED_TABLE4_COEF_new_word_comb_reuse = 0.2696\nRESULT COMPUTED_TABLE4_PSEUDO_R2_new_word_comb_reuse = 0.0647\nRESULT COMPUTED_TABLE4_AUC_new_word_comb_reuse = 0.6728\nRESULT COMPUTED_TABLE4_MARGINAL_EFFECT_new_word_comb_reuse = 0.9344\nRESULT COMPUTED_TABLE4_COEF_backward_cosine = -20.2253\nRESULT COMPUTED_TABLE4_PSEUDO_R2_backward_cosine = 0.0119\nRESULT COMPUTED_TABLE4_AUC_backward_cosine = 0.5674\nRESULT COMPUTED_TABLE4_MARGINAL_EFFECT_backward_cosine = -19.5501\nRESULT CONCLUSION = NLP-based text measures, particularly new keyword combinations and their reuse (new_word_comb_reuse), significantly outperform traditional citation and classification metrics in identifying high-impact, award-winning patents, confirming that patent text captures technical novelty and diffusion more accurately than metadata alone.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.9,
+    "final_ecrf": 0.9,
+    "caps_applied": []
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "PAPER_REPORTED": 14,
+      "COMPUTED": 32
+    },
+    "n_result_lines": 46
+  },
+  "status": "DONE",
+  "t_end": 1782891329
+}

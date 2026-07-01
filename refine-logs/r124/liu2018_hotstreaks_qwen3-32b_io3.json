@@ -1,0 +1,101 @@
+{
+  "run_id": "r37",
+  "paper": "liu2018_hotstreaks",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782890537,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": true
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/liu2018_hotstreaks_qwen3-32b_io3.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [
+    "code_bursts.py"
+  ],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 1319.7,
+    "usage": {
+      "completion": 9037,
+      "prompt": 12884
+    },
+    "finish": "stop",
+    "n_content_chars": 7749
+  },
+  "llm_response_chars": 7749,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.44,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 86,
+    "stderr_chars": 0
+  },
+  "stdout": "Loading raw data from /workspace/raw_data/...\nERROR: Could not load or generate data.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.55,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 1
+    },
+    "n_result_lines": 1
+  },
+  "status": "DONE",
+  "t_end": 1782891857
+}

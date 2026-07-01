@@ -1,0 +1,356 @@
+```python
+import pandas as pd
+import numpy as np
+import statsmodels.api as sm
+from statsmodels.genmod.families import links
+from sklearn.metrics import roc_auc_score, precision_recall_curve, auc
+from sklearn.preprocessing import StandardScaler
+from scipy import stats
+import warnings
+warnings.filterwarnings('ignore')
+
+# ----------------------------------------------------------------------
+# 1. Load data
+# ----------------------------------------------------------------------
+df = pd.read_csv('/workspace/raw_data/patent_measures_50k.csv')
+
+print("Data shape:", df.shape)
+print("Columns:", df.columns.tolist())
+
+# ----------------------------------------------------------------------
+# 2. Identify case-control subset and necessary filtering
+# ----------------------------------------------------------------------
+# The paper's analysis uses patents filed since 1980, matched award/control pairs
+# We expect columns like 'award_patent' (1/0) and maybe 'control_patent' or a group identifier.
+# If both flags exist, we create a single column 'is_award' and filter rows.
+if 'award_patent' in df.columns and 'control_patent' in df.columns:
+    # Build subset containing only award and control patents
+    df_cc = df[(df['award_patent']==1) | (df['control_patent']==1)].copy()
+    df_cc['award'] = df_cc['award_patent'].astype(int)  # 1 if award, 0 if control
+    # Remove duplicate patent_id? Each pair should have one award, one control.
+elif 'case_control' in df.columns:
+    # If the dataset already contains a flag
+    df_cc = df[df['case_control']==1].copy()
+    # We assume award is 1, control is 0 in some column, e.g., 'award'
+    if 'award' in df.columns:
+        pass
+    else:
+        raise ValueError("Cannot identify award/control status")
+else:
+    # Fallback: assume the dataset consists solely of the 518 case-control patents
+    # we need a column indicating award (1) or control (0). Look for columns like 'is_award'
+    if 'is_award' in df.columns:
+        df_cc = df.copy()
+        df_cc['award'] = df_cc['is_award']
+    else:
+        raise ValueError("No award/control flag found.")
+
+# Filter by filing year >= 1980
+if 'filing_year' in df_cc.columns:
+    df_cc = df_cc[df_cc['filing_year'] >= 1980].copy()
+
+print("Case-control subset shape:", df_cc.shape)
+print("Number of award patents:", df_cc['award'].sum())
+
+# ----------------------------------------------------------------------
+# 3. Compute required variables
+# ----------------------------------------------------------------------
+# Log transform count variables (add 1)
+count_vars = ['new_word','new_word_reuse','new_bigram','new_bigram_reuse',
+              'new_trigram','new_trigram_reuse','new_word_comb','new_word_comb_reuse',
+              'new_subclass_comb','new_subclass_comb_reuse',
+              'new_cit_comb','new_cit_comb_reuse',
+              'forward_cit']
+# Some variables may be missing; handle gracefully.
+for v in count_vars:
+    if v in df_cc.columns:
+        # Ensure it's numeric and apply log(1+x)
+        df_cc[v] = pd.to_numeric(df_cc[v], errors='coerce')
+        df_cc[v] = np.log1p(df_cc[v])
+    else:
+        print(f"Warning: variable {v} not found.")
+
+# Cosine similarity measures: 1 - backward_cosine and forward/backward_cosine
+# Standardize across all patents filed >=1980 (full df if available, else within cc)
+if 'backward_cosine' in df_cc.columns:
+    # Compute 1-backward_cosine
+    df_cc['one_minus_backward_cosine'] = 1 - df_cc['backward_cosine']
+else:
+    print("Warning: backward_cosine not found, cannot compute 1-backward_cosine")
+
+if 'forward_backward_cosine' in df_cc.columns:
+    df_cc['fwd_bwd_cosine'] = df_cc['forward_backward_cosine'].astype(float)
+elif 'forward_cosine' in df_cc.columns and 'backward_cosine' in df_cc.columns:
+    df_cc['fwd_bwd_cosine'] = df_cc['forward_cosine'] / df_cc['backward_cosine']
+else:
+    print("Warning: forward/backward cosine cannot be computed")
+
+# Standardize the cosine-based measures using the whole population of patents (or at least all >=1980)
+# Use full df if possible; otherwise use df_cc
+if 'filing_year' in df.columns:
+    df_all = df[df['filing_year'] >= 1980].copy()
+else:
+    df_all = df_cc.copy()
+
+# For 1-backward_cosine
+if 'backward_cosine' in df_all.columns:
+    df_all['one_minus_backward_cosine'] = 1 - df_all['backward_cosine']
+    scaler_bw = StandardScaler()
+    scaler_bw.fit(df_all[['one_minus_backward_cosine']])
+    df_cc['one_minus_backward_cosine_std'] = scaler_bw.transform(df_cc[['one_minus_backward_cosine']])
+else:
+    # if already standardized in the data
+    if 'one_minus_backward_cosine' in df_cc.columns:
+        df_cc['one_minus_backward_cosine_std'] = df_cc['one_minus_backward_cosine']
+
+# For forward/backward cosine
+if 'fwd_bwd_cosine' in df_all.columns:
+    scaler_fw = StandardScaler()
+    scaler_fw.fit(df_all[['fwd_bwd_cosine']])
+    df_cc['fwd_bwd_cosine_std'] = scaler_fw.transform(df_cc[['fwd_bwd_cosine']])
+else:
+    if 'fwd_bwd_cosine' in df_cc.columns:
+        df_cc['fwd_bwd_cosine_std'] = df_cc['fwd_bwd_cosine']
+
+# Other variables like originality, generality, new_tech_origins may already be in appropriate form.
+# new_tech_origins is a count, but the paper logs it? In Table 3, new_tech_origins is not log transformed (mean 0.039 vs 0.034). It's a continuous rate (?). We'll treat as is.
+# forward_cit already log1p transformed.
+
+# ----------------------------------------------------------------------
+# 4. Descriptive statistics (Table 3)
+# ----------------------------------------------------------------------
+# Compute means and std for award and control groups
+award = df_cc[df_cc['award']==1]
+control = df_cc[df_cc['award']==0]
+
+# Variables to report (corresponding to Table 3)
+vars_table3 = {
+    'new_word': 'New_word',
+    'new_word_reuse': 'New_word_reuse',
+    'new_bigram': 'New_bigram',
+    'new_bigram_reuse': 'New_bigram_reuse',
+    'new_trigram': 'New_trigram',
+    'new_trigram_reuse': 'New_trigram_reuse',
+    'new_word_comb': 'New_word_comb',
+    'new_word_comb_reuse': 'New_word_comb_reuse',
+    'one_minus_backward_cosine_std': '1-Backward_cosine',
+    'fwd_bwd_cosine_std': 'Forward/backward_cosine',
+    'new_subclass_comb': 'New_subclass_comb',
+    'new_subclass_comb_reuse': 'New_subclass_comb_reuse',
+    'new_cit_comb': 'New_cit_comb',
+    'new_cit_comb_reuse': 'New_cit_comb_reuse',
+    'originality': 'Originality',
+    'new_tech_origins': 'New_tech_origins',
+    'forward_cit': 'Forward_cit',
+    'generality': 'Generality'
+}
+
+# Paper reported values from Table 3 (as printed in paper)
+paper_values = {
+    'new_word': {'mean_award': 0.470, 'mean_control': 0.280, 'cohen_d': -0.339, 't': -3.854},
+    'new_word_reuse': {'mean_award': 1.482, 'mean_control': 0.641, 'cohen_d': -0.511, 't': -5.811},
+    'new_bigram': {'mean_award': 1.613, 'mean_control': 1.126, 'cohen_d': -0.543, 't': -6.183},
+    'new_bigram_reuse': {'mean_award': 3.504, 'mean_control': 2.459, 'cohen_d': -0.549, 't': -6.252},
+    'new_trigram': {'mean_award': 1.641, 'mean_control': 1.309, 'cohen_d': -0.379, 't': -4.309},
+    'new_trigram_reuse': {'mean_award': 3.086, 'mean_control': 2.530, 'cohen_d': -0.336, 't': -3.819},
+    'new_word_comb': {'mean_award': 4.837, 'mean_control': 3.932, 'cohen_d': -0.534, 't': -6.072},
+    'new_word_comb_reuse': {'mean_award': 7.001, 'mean_control': 5.505, 'cohen_d': -0.672, 't': -7.644},
+    'one_minus_backward_cosine_std': {'mean_award': 0.113, 'mean_control': -0.113, 'cohen_d': -0.227, 't': -2.587},
+    'fwd_bwd_cosine_std': {'mean_award': 0.018, 'mean_control': -0.018, 'cohen_d': -0.035, 't': -0.401},
+    'new_subclass_comb': {'mean_award': 1.140, 'mean_control': 0.782, 'cohen_d': -0.308, 't': -3.502},
+    'new_subclass_comb_reuse': {'mean_award': 2.084, 'mean_control': 1.304, 'cohen_d': -0.389, 't': -4.429},
+    'new_cit_comb': {'mean_award': 2.173, 'mean_control': 1.927, 'cohen_d': -0.130, 't': -1.485},
+    'new_cit_comb_reuse': {'mean_award': 2.928, 'mean_control': 2.426, 'cohen_d': -0.206, 't': -2.345},
+    'originality': {'mean_award': 0.363, 'mean_control': 0.311, 'cohen_d': -0.172, 't': -1.962},
+    'new_tech_origins': {'mean_award': 0.039, 'mean_control': 0.034, 'cohen_d': -0.026, 't': -0.295},
+    'forward_cit': {'mean_award': 3.046, 'mean_control': 2.208, 'cohen_d': -0.639, 't': -7.270},
+    'generality': {'mean_award': 0.645, 'mean_control': 0.535, 'cohen_d': -0.442, 't': -5.028}
+}
+
+print("\n--- Descriptive Statistics (Table 3 replication) ---")
+for col, name in vars_table3.items():
+    if col not in df_cc.columns:
+        continue
+    mean_a = award[col].mean()
+    mean_c = control[col].mean()
+    std_a = award[col].std()
+    std_c = control[col].std()
+    n_a = len(award)
+    n_c = len(control)
+    # pooled standard deviation for Cohen's d
+    pooled_std = np.sqrt(((n_a-1)*std_a**2 + (n_c-1)*std_c**2) / (n_a+n_c-2))
+    cohen_d = (mean_a - mean_c) / pooled_std
+    t_stat, p_val = stats.ttest_ind(award[col].dropna(), control[col].dropna(), equal_var=False)
+    
+    print(f"RESULT {name}_award_mean = {mean_a:.4f} ; PAPER_REPORTED = {paper_values[col]['mean_award']:.4f}")
+    print(f"RESULT {name}_control_mean = {mean_c:.4f} ; PAPER_REPORTED = {paper_values[col]['mean_control']:.4f}")
+    print(f"RESULT {name}_Cohen_d = {cohen_d:.4f} ; PAPER_REPORTED = {paper_values[col]['cohen_d']:.4f}")
+    print(f"RESULT {name}_t_statistic = {t_stat:.4f} ; PAPER_REPORTED = {paper_values[col]['t']:.4f}")
+    print(f"RESULT {name}_p_value = {p_val:.4f}")
+
+# ----------------------------------------------------------------------
+# 5. Prepare data for logistic regressions (Table 4)
+# ----------------------------------------------------------------------
+# Control variables: num_unique_keywords, num_backward_citations, num_patent_classes, num_patent_subclasses
+# Assume columns exist; if not, skip
+control_covariates = []
+for col in ['num_unique_keywords', 'num_backward_citations', 'num_patent_classes', 'num_patent_subclasses']:
+    if col in df_cc.columns:
+        control_covariates.append(col)
+    else:
+        print(f"Warning: control variable {col} not found, omitting from regression.")
+
+# Filing year dummies: we need to create dummies for each year from 1980 up to max year.
+# To avoid perfect separation, we'll drop one reference year (say 1980).
+if 'filing_year' in df_cc.columns:
+    df_cc['filing_year'] = df_cc['filing_year'].astype(int)
+    year_dummies = pd.get_dummies(df_cc['filing_year'], prefix='yr', drop_first=True)
+    # Keep only years that appear in both groups? Should be fine.
+    # align indices
+    df_cc = pd.concat([df_cc, year_dummies], axis=1)
+    year_cols = year_dummies.columns.tolist()
+else:
+    year_cols = []
+
+# Define lists of variables for different regressions
+novelty_text_vars = ['new_word', 'new_bigram', 'new_trigram', 'new_word_comb', 'one_minus_backward_cosine_std']
+novelty_trad_vars = ['new_subclass_comb', 'new_cit_comb', 'originality', 'new_tech_origins']
+impact_text_vars = ['new_word_reuse', 'new_bigram_reuse', 'new_trigram_reuse', 'new_word_comb_reuse', 'fwd_bwd_cosine_std']
+impact_trad_vars = ['new_subclass_comb_reuse', 'new_cit_comb_reuse', 'forward_cit', 'generality']
+
+# Full lists combining
+novelty_combined = novelty_text_vars + novelty_trad_vars
+impact_combined = impact_text_vars + impact_trad_vars
+
+# All individual measures from paper (in order)
+single_measures = {
+    'new_word': ['new_word'],
+    'new_word_reuse': ['new_word_reuse'],
+    'new_bigram': ['new_bigram'],
+    'new_bigram_reuse': ['new_bigram_reuse'],
+    'new_trigram': ['new_trigram'],
+    'new_trigram_reuse': ['new_trigram_reuse'],
+    'new_word_comb': ['new_word_comb'],
+    'new_word_comb_reuse': ['new_word_comb_reuse'],
+    'one_minus_backward_cosine_std': ['one_minus_backward_cosine_std'],
+    'fwd_bwd_cosine_std': ['fwd_bwd_cosine_std'],
+    'new_subclass_comb': ['new_subclass_comb'],
+    'new_subclass_comb_reuse': ['new_subclass_comb_reuse'],
+    'new_cit_comb': ['new_cit_comb'],
+    'new_cit_comb_reuse': ['new_cit_comb_reuse'],
+    'originality': ['originality'],
+    'new_tech_origins': ['new_tech_origins'],
+    'forward_cit': ['forward_cit'],
+    'generality': ['generality']
+}
+
+# Combined models
+combined_models = {
+    'text_novelty': novelty_text_vars,
+    'trad_novelty': novelty_trad_vars,
+    'all_novelty': novelty_combined,
+    'text_impact': impact_text_vars,
+    'trad_impact': impact_trad_vars,
+    'all_impact': impact_combined
+}
+
+# Model fitting function
+def fit_logit(X, y):
+    """
+    Fit logistic regression with robust SE, return results, predicted probs, and metrics.
+    """
+    X = sm.add_constant(X)
+    model = sm.Logit(y, X)
+    try:
+        result = model.fit(disp=0, cov_type='HC1')
+    except:
+        # fallback
+        result = model.fit(disp=0)
+    # Predicted probabilities (in-sample)
+    pred_prob = result.predict(X)
+    # Classification with threshold 0.5
+    pred_class = (pred_prob >= 0.5).astype(int)
+    # Metrics
+    from sklearn.metrics import precision_score, recall_score, roc_auc_score
+    precision = precision_score(y, pred_class, zero_division=0)
+    recall = recall_score(y, pred_class, zero_division=0)
+    auc_val = roc_auc_score(y, pred_prob)
+    # Pseudo R² (McFadden)
+    pr2 = result.prsquared
+    # Marginal effects (average)
+    margeff = result.get_margeff(at='overall', method='dydx')
+    # We want marginal effect for the first predictor (or each?). The table shows one number per model.
+    # They likely report marginal effect for the main variable of interest (first variable in each single model)
+    # For combined models, they might report something else; we'll output for the key variable.
+    # We'll extract marginal effect for the first column (excluding constant) and convert to percentage.
+    me_summary = margeff.summary()
+    # The first row in margeff is for variable at index 1 (after const)
+    # We'll take the first non-constant variable's marginal effect
+    var_name = margeff.margeff_coef.index[0]  # first variable (after const)
+    ame = margeff.margeff_coef[var_name]
+    marginal_effect_pct = ame * 100
+    return result, pred_prob, precision, recall, auc_val, pr2, marginal_effect_pct
+
+# Prepare dependent variable
+y = df_cc['award']
+
+# We'll store results for printing
+print("\n--- Logistic Regression Results (Table 4 replication) ---")
+
+# Run single measure models
+for label, var_list in single_measures.items():
+    if not all(v in df_cc.columns for v in var_list):
+        print(f"Skipping {label}: missing variables")
+        continue
+    X = df_cc[var_list + control_covariates + year_cols].dropna()
+    # Drop rows with missing in any
+    idx = X.index
+    y_sub = y.loc[idx]
+    if len(y_sub) < 10:
+        continue
+    res, pp, prec, rec, auc_val, pr2, me_pct = fit_logit(X, y_sub)
+    # Coefficient for the main variable
+    coef = res.params.get(var_list[0], np.nan)
+    se = res.bse.get(var_list[0], np.nan)
+    print(f"RESULT {label}_coefficient = {coef:.4f}")
+    print(f"RESULT {label}_marginal_effect_pct = {me_pct:.2f}")
+    print(f"RESULT {label}_precision = {prec:.4f}")
+    print(f"RESULT {label}_recall = {recall:.4f}")
+    print(f"RESULT {label}_AUC = {auc_val:.4f}")
+    print(f"RESULT {label}_pseudo_R2 = {pr2:.4f}")
+
+# Run combined models
+combined_labels_order = ['text_novelty', 'trad_novelty', 'all_novelty', 'text_impact', 'trad_impact', 'all_impact']
+for label in combined_labels_order:
+    var_list = combined_models[label]
+    if not all(v in df_cc.columns for v in var_list):
+        print(f"Skipping combined {label}: missing variables")
+        continue
+    X = df_cc[var_list + control_covariates + year_cols].dropna()
+    idx = X.index
+    y_sub = y.loc[idx]
+    res, pp, prec, rec, auc_val, pr2, me_pct = fit_logit(X, y_sub)
+    # For combined models, the paper likely reports a single marginal effect for the key variable?
+    # They report a series of coefficients. We'll print coefficients of all variables.
+    print(f"--- Combined model: {label} ---")
+    for var in var_list:
+        coef = res.params.get(var, np.nan)
+        se = res.bse.get(var, np.nan)
+        print(f"RESULT {label}_{var}_coeff = {coef:.4f} ; SE = {se:.4f}")
+    # Overall model metrics
+    print(f"RESULT {label}_AUC = {auc_val:.4f}")
+    print(f"RESULT {label}_pseudo_R2 = {pr2:.4f}")
+    print(f"RESULT {label}_precision = {prec:.4f}")
+    print(f"RESULT {label}_recall = {rec:.4f}")
+
+# ----------------------------------------------------------------------
+# 6. Correlation matrix (Appendix Table A.2)
+# ----------------------------------------------------------------------
+corr_vars = list(vars_table3.keys())
+corr_vars = [c for c in corr_vars if c in df_cc.columns]
+corr_matrix = df_cc[corr_vars].corr()
+print("\n--- Correlation Matrix (selected variables) ---")
+print(corr_matrix.to_string())
+
+print("\nAll results printed. Note: Computed values are based on the provided data sample; differences from paper-reported values are expected due to sample size/coverage.")
+```

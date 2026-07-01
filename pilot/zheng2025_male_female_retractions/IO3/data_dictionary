@@ -1,0 +1,16 @@
+# Data Dictionary — zheng2025_male_female_retractions
+
+## Data source
+Retraction Watch database — Retracted-article records with author gender
+Access: public; Provenance: Retraction Watch
+
+## Key variables
+- Unit of analysis: article
+- Time window: Retraction Watch coverage
+- Sample N: pending
+- Filter rules: gender disambiguation, leading-author identification
+
+## Indicator definitions
+- Formula: Male vs female leading-author retraction rates; gender-disambiguation pipeline
+- Parameters: gender inference method
+- Computation steps: infer author gender, compute retraction rates by gender

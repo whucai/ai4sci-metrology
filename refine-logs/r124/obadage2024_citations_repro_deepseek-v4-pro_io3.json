@@ -1,0 +1,98 @@
+{
+  "run_id": "r36",
+  "paper": "obadage2024_citations_repro",
+  "model": "deepseek-v4-pro",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782890367,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": true
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/obadage2024_citations_repro_deepseek-v4-pro_io3.json",
+  "io2_data_files": [
+    "1937_dataset_for_3_label_sentiment.csv",
+    "binary_test.csv",
+    "binary_train.csv",
+    "citation_context_counts_for_cited_papers.json",
+    "citation_context_label_summary.json",
+    "contexts_sample_2k.json"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 168.3,
+    "usage": {
+      "completion": 12965,
+      "prompt": 6791
+    },
+    "finish": "stop",
+    "n_content_chars": 17605
+  },
+  "llm_response_chars": 17605,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.68,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 148
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 6, in <module>\n    import torch\nModuleNotFoundError: No module named 'torch'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.9,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 6
+    },
+    "n_result_lines": 6
+  },
+  "status": "DONE",
+  "t_end": 1782890537
+}

@@ -1,0 +1,1713 @@
+Do male leading authors retract more articles than female
+leading authors?
+
+This is the preprint version of a paper that has been published in the Journal of Informetrics.
+Cite as: Zheng, E.-T., Fu, H.-Z., Thelwall, M., & Fang, Z. (2025). Do male leading authors
+retract more articles than female leading authors?. Journal of Informetrics, 19(3), 101682.
+https://doi.org/10.1016/j.joi.2025.101682
+
+Er-Te Zheng1, Hui-Zhen Fu2, Mike Thelwall1, Zhichao Fang3,4*
+*Corresponding author: z.fang@cwts.leidenuniv.nl
+1. School of Information, Journalism and Communication, The University of Sheffield,
+Sheffield, The UK.
+2. Department of Information Resources Management, Zhejiang University, Hangzhou, China.
+3. School of Information Resource Management, Renmin University of China, Beijing, China.
+4. Centre for Science and Technology Studies (CWTS), Leiden University, Leiden, The
+Netherlands.
+
+Highlights
+
+
+Male leading authors have a higher overall retraction rate than female leading
+authors.
+
+
+
+Gender disparities in retractions vary across retraction reasons and subject fields.
+
+
+
+Plagiarism and authorship issues are particularly more prevalent among male
+researchers.
+
+Abstract: Scientific retractions reflect issues within the scientific record, arising from
+human error or misconduct. Although gender differences in retraction rates have been
+previously observed in various contexts, no comprehensive study has explored this
+issue across all fields of science. This study examines gender disparities in scientific
+1
+
+misconduct or errors, specifically focusing on differences in retraction rates between
+male and female first authors in relation to their research productivity. Using a dataset
+comprising 11,622 retracted articles and 19,475,437 non-retracted articles from the Web
+of Science and Retraction Watch, we investigate gender differences in retraction rates
+from the perspectives of retraction reasons, subject fields, and countries. Our findings
+indicate that male first authors have higher retraction rates, particularly for scientific
+misconduct such as plagiarism, authorship disputes, ethical issues, duplication, and
+fabrication/falsification. No significant gender differences were found in retractions
+attributed to mistakes. Furthermore, male first authors experience significantly higher
+retraction rates in biomedical and health sciences, as well as in life and earth sciences,
+whereas female first authors have higher retraction rates in mathematics and computer
+science. Similar patterns are observed for corresponding authors. Understanding these
+gendered patterns of retraction may contribute to strategies aimed at reducing their
+prevalence.
+Keywords: Retraction; Gender disparity; Scientific misconduct; Research integrity;
+Scientometrics
+
+1. Introduction
+The reliability of scientific findings is intrinsically tied to the integrity of the research
+process, which requires researchers to present accurate and truthful representations of
+both the natural and social worlds (Bornmann, 2013). Research integrity has long been
+regarded not only as a fundamental principle of sound research practices but also as
+essential for maintaining public trust and confidence in science (Kreutzberg, 2004).
+However, numerous real-world examples reveal that researchers occasionally engage
+in misconduct that compromises the credibility of the scientific literature (Fanelli,
+2009).
+Scientific misconduct encompasses a wide range of unethical behaviors. As defined by
+Fanelli (2013), it involves “any omission or misrepresentation of the information
+necessary and sufficient to evaluate the validity and significance of research, at the level
+appropriate to the context in which the research is communicated”. Misconduct can
+manifest in various forms, including data fabrication or falsification, plagiarism, and
+disputes over authorship (Bornmann, 2013). Such misbehavior has long been a serious
+concern for both the scientific community and governmental bodies worldwide. The
+2
+
+primary consequence of these misbehaviors – problematic articles – can spread
+misinformation, waste resources, erode public trust in science, and in extreme cases,
+endanger public safety (Grieneisen & Zhang, 2012; Marcus, 2018).
+To mitigate these issues, retraction serves as a vital mechanism for correcting the
+scientific record (COPE Council, 2019). Articles may be retracted due to various forms
+of misconduct, or alternatively, by authors laudably acknowledging errors or other
+problems in one of their studies (Nath et al., 2006). Over the past few decades, the
+number of retracted articles has steadily increased (Van Noorden, 2023), probably due
+to the growing prevalence of scientific misconduct, increased data sharing, and more
+rigorous editorial practices aimed at addressing problematic publications (Brainard,
+2018). While this rise in retractions has raised concerns about the overall integrity of
+science, many scientists and editors view it as a positive sign, indicating that the
+scientific community is becoming increasingly vigilant and responsive to misconduct
+(Fanelli, 2013b; Van Noorden, 2011). For scientometric researchers, retractions offer
+concrete data for tracking scientific misconduct or errors, providing evidence of the
+self-correcting nature of science.
+1.1 Scientometric research on retracted articles
+Previous research on article retractions has primarily focused on two key areas: the
+bibliometric characterization of retracted articles and the measurement of their impact.
+Although the proportion of retracted articles remains relatively low, their absolute
+number has increased in recent years (Steen, 2011; Van Noorden, 2023). Many scholars
+believe that the true prevalence of problematic articles far exceeds the number of
+reported retractions (Fanelli, 2013b). The rate of retractions varies significantly across
+scientific disciplines (Grieneisen & Zhang, 2012; Lu et al., 2013), countries (Amos,
+2014; Khademizadeh et al., 2023), journals (Cokol et al., 2007; Fang & Casadevall,
+2011), and reasons (Fang et al., 2012; Steen, 2011). These findings have spurred further
+investigation into the risk factors associated with retractions, such as academic culture,
+financial incentives for publication, and national policies on misconduct (Fanelli et al.,
+2015, 2019). Additional research has shown that gold open access associates with faster
+retractions, and that intensive social media attention can increase the likelihood of
+retraction for misconduct-related research (Shema et al., 2019; Zheng et al., 2024).
+Regarding impact measurement, the retraction process generally leads to a marked and
+sustained decline in the annual number of citations received by retracted articles
+(Furman et al., 2012; Shuai et al., 2017). Despite this decline, citations and Mendeley
+3
+
+readership often continue to grow even after an article has been retracted (Bar-Ilan &
+Halevi, 2018; Budd et al., 1998). Moreover, a significant portion of post-retraction
+citations remain positive, regardless of the reasons for retraction (Bar-Ilan & Halevi,
+2017). Retracted articles also tend to attract substantial attention on social media
+platforms (Khan et al., 2022), often at levels surpassing the attention given to nonretracted articles (Dambanemuya et al., 2024; Peng et al., 2022; Serghiou et al., 2021).
+The sentiment of Twitter mentions related to retracted articles typically skews negative,
+both before and after retraction (Amiri et al., 2024), suggesting that social media may
+play a role in bringing attention to problematic publications (Haunschild & Bornmann,
+2021).
+1.2 Gender disparities in article retractions
+Gender disparities in scientific research have been well-documented across various
+dimensions, including research outputs (Huang et al., 2020), citations (King et al.,
+2017), funding (Larivière et al., 2011), and peer review (Lerback & Hanson, 2017).
+Some studies have shown that female researchers tend to publish fewer articles than
+their male counterparts in many disciplines and countries (Aksnes et al., 2011; Fox,
+2005), presumably due to part-time working and career gaps taken to manage the
+additional caregiving responsibilities that many have. On average, male researchers
+produce between 16.8% and 31.6% more research outputs than female researchers over
+a given period (Abramo et al., 2009; Huang et al., 2020; Larivière et al., 2011). Since
+academic productivity typically increases with career progression, and men are
+overrepresented in senior positions, the gender disparity in research outputs tends to
+widen over time (Bordons et al., 2003).
+While extensive research has been conducted on gender differences in research outputs,
+less attention has been paid to gender disparities in article retractions. Some studies
+suggest that men are more frequently associated with retracted articles than women,
+though these findings are often based on small datasets. For example, Decullier &
+Maisonneuve (2023) analyzed 113 retracted articles and found that 63% were authored
+by men. Similarly, Fang et al. (2013), in a study of 228 individuals involved in
+misconduct, reported that 65% were male. However, some researchers caution that a
+higher number of male-authored retractions does not necessarily indicate that men are
+more prone to misconduct. Instead, this disparity may reflect men’s overrepresentation
+in research outputs (Fanelli, 2013b; Kaatz et al., 2013).
+Empirical studies on gender and retractions have produced mixed results. For instance,
+4
+
+Fanelli et al., (2015), in an analysis of 661 retracted articles and 1,181 matched nonretracted controls, found no significant gender differences in retractions. Conversely,
+other research suggests that female researchers may be more susceptible to certain types
+of misconduct, such as some types of image duplications in biomedical research
+(Fanelli et al., 2019). These conflicting findings underscore the need for larger and more
+comprehensive studies to better understand the gender dynamics of scientific
+misconduct (Decullier & Maisonneuve, 2023).
+1.3 Objectives of the study
+Examining gender differences in retraction rates is essential for determining whether
+the retraction process is biased, potentially affecting male and female researchers
+differently. If articles authored by one gender are retracted more frequently for similar
+mistakes or misconduct, it may indicate systemic issues that require corrective action.
+Such an analysis ensures the retraction process remains equitable and upholds the
+integrity of scientific research.
+The study aims to investigate gender disparities in article retractions, with a particular
+focus on the relationships between gender and the incidence and reasons for scholarly
+article retractions. By analyzing a large dataset of retracted articles in relation to global
+research productivity by gender, the study seeks to provide insights into the role of
+gender in research integrity and the broader dynamics of scholarly publishing. The
+following research questions (RQs) guide the investigation:
+
+
+RQ1. Do male leading (i.e., first and corresponding) authors have a higher rate of
+article retractions compared to female leading authors, relative to their research
+productivity?
+
+
+
+RQ2. Do gender disparities in article retractions vary between publication years,
+retraction reasons, scientific disciplines, and countries?
+
+2. Data and methods
+2.1 Dataset of retracted and non-retracted articles
+In January 2025, we compiled a dataset of retracted articles published between 2008
+and 2023. This dataset was derived by selecting articles labeled as “retracted
+publication” from the Science Citation Index-Expanded (SCIE), the Social Sciences
+Citation Index (SSCI), and the Arts & Humanities Citation Index (A&HCI) within the
+5
+
+Web of Science (WoS) database. After manual verification, the dataset included 21,976
+retracted articles. Bibliometric information, such as article titles, publication venues,
+publication years, DOIs, and authorship details, was extracted from the in-house WoS
+database maintained by the Centre for Science and Technology Studies (CWTS) at
+Leiden University.
+Detailed information regarding retractions, particularly the reasons for retraction, was
+collected from the Retraction Watch database using DOIs of retracted articles. The
+Retraction Watch database is widely recognized as the most comprehensive repository
+for retracted articles (Brainard, 2018).
+To enable a comparison of gender disparities among authors of retracted articles within
+a global context, we also gathered data on all non-retracted articles (i.e., articles that
+had not been retracted during the data collection period) from the SCIE, SSCI, and
+A&HCI for the same time frame (2008-2023). This resulted in a control group of
+25,387,474 non-retracted articles. Bibliometric information for these articles was
+similarly retrieved from the CWTS in-house WoS database.
+2.2 Gender inference of authors
+To determine the gender of authors, we used a customized version of the WoS database
+with integrated gender identification, hosted by the CWTS at Leiden University. This
+version supports SQL-based queries and incorporates an author disambiguation
+algorithm (Caron & Eck, 2014), which is particularly well-suited for our analysis.
+Previous studies have demonstrated that this algorithm achieves a high level of
+precision (97%), although it may fail to capture some articles (recall = 90% to 91%)
+(Andersen & Nielsen, 2018; Caron & Eck, 2014), outperforming other similar author
+disambiguation approaches (Tekles & Bornmann, 2020).
+Based on the author disambiguation process, the gender database assigns gender in a
+binary manner (i.e., male or female), inferred using a combination of three sources:
+Gender API, Genderize.io, and Gender Guesser. The gender inference primarily relies
+on the author’s first name and the country of affiliation (Boekhout et al., 2021). 1
+Gender inference is only made when the accuracy of the identification is reported to be
+at least 90%. Consequently, the gender of some authors may be labeled as “unknown”
+in cases of gender-ambiguous names or insufficient data regarding a particular name in
+See more information about the gender estimation applied also in the Leiden Ranking at:
+https://www.leidenranking.com/information/indicators.
+1
+
+6
+
+a specific country (Madsen et al., 2022). This method of gender inference has been
+widely applied in gender-related studies (Andersen, 2023; Kozlowski et al., 2022;
+Madsen et al., 2022).
+For this study, we mainly focused on inferring the gender of the first author for each
+article, as the first author is typically responsible for the primary contribution to the
+research and is more likely to be held accountable for scientific misconduct (Decullier
+& Maisonneuve, 2023; Hussinger & Pellens, 2019; Larivière et al., 2016). We excluded
+articles where the first author’s gender could not be determined. As shown in Table 1,
+this process resulted in a dataset of 11,622 retracted articles (52.9% of the total retracted
+articles) and 19,475,437 non-retracted articles (76.7% of the total non-retracted articles)
+for further analysis.
+
+Table 1. Statistics of articles published (2008-2023) with inferred first author’s
+gender.
+Article type
+Retracted articles
+Non-retracted articles
+
+Number of articles with inferred gender
+Male (%)
+
+Female (%)
+
+Total articles with
+inferred gender (%)
+
+8,088 (36.8%)
+
+3,534 (16.1%)
+
+11,622 (52.9%)
+
+12,669,453 (49.9%)
+
+6,805,984 (26.8%)
+
+19,475,437 (76.7%)
+
+As with many previous studies, missing gender data remains an unavoidable challenge
+in gender-related research (see the statistics in Table A1 in the Appendix). Given that
+the corresponding author is responsible for the integrity of the manuscript content in
+some fields (Birnbaum et al., 2023), we conducted an additional analysis focusing on
+corresponding authors to further strengthen our findings and validate the results based
+on first-author data (see Section 3.6 and the Supplementary Materials).
+2.3 Classification of retraction reasons
+Retraction reasons are generally classified into two broad categories: misconduct and
+error (Feng et al., 2020; Resnik & Stewart Jr., 2012). Within these categories, more
+specific classifications have emerged, such as research misconduct, honest error, and
+publishing misconduct (Al-Hidabi & Teh, 2019; Hwang et al., 2023). Additional
+subcategories include issues like non-replicable findings, redundant publication, and
+unstated or unclear reasons (Wager & Williams, 2011). Furthermore, specific forms of
+misconduct, such as plagiarism and falsification, are often classified separately (Al7
+
+Hidabi & Teh, 2019; Xu & Hu, 2022).
+This study builds upon the classification frameworks for retraction reasons proposed
+by Tang et al. (2020) and Zhang et al. (2020). Drawing on their approaches, we refined
+and extended the classification based on the characteristics of our dataset and the scope
+of the research, resulting in nine distinct categories of retraction reasons, as outlined in
+Table A2 in the Appendix. It is important to note that the total number of retracted
+articles classified by different reasons exceeds the total number of retracted articles in
+our dataset, as 13.7% of the articles were retracted for multiple reasons. In our dataset,
+the most common retraction reason is “mistakes”, followed by “fabrication/falsification”
+and “duplication”. The average number of retraction reasons for articles retracted for
+multiple reasons is 2.10.
+2.4 The Leiden Ranking classification of subject fields
+For the disciplinary analysis, we adopted the Leiden Ranking classification (hereafter
+referred to as the LR classification, https://www.leidenranking.com/information/fields)
+to assign each retracted and non-retracted article to a specific subject field. The LR
+classification is a document-level system developed by Waltman and van Eck (2012).
+It organizes WoS-indexed publications – covering document types such as articles,
+reviews, letters, and proceedings papers – based on their direct citation relationships
+and clusters them into over 4,000 research areas using the Leiden algorithm (Traag et
+al., 2019). Each research area is then algorithmically linked to one of five primary
+subject fields (Table 2). The key advantage of the LR classification is its ability to assign
+each article to a specific subject field, which is particularly useful for articles published
+in multidisciplinary journals. It has been widely adopted in previous research related to
+disciplinary analysis (Didegah & Thelwall, 2018; Zahedi & Van Eck, 2018; L. Zhang
+et al., 2023). Table 2 lists the number of retracted and non-retracted articles in each
+subject field, along with the proportion of retracted articles relative to the total number
+of articles in each field.
+
+Table 2. Distribution of retracted and non-retracted articles across five subject fields.
+Subject field
+Biomedical and health
+sciences
+Physical sciences and
+
+Number of
+
+Number of non-
+
+Proportion of
+
+retracted articles
+
+retracted articles
+
+retracted articles
+
+6,196
+
+7,753,324
+
+7.99‱
+
+1,044
+
+3,005,331
+
+3.47‱
+
+8
+
+engineering
+Life and earth sciences
+Mathematics and
+computer science
+
+1,551
+
+1,753,800
+
+8.84‱
+
+2,143
+
+5,039,688
+
+4.25‱
+
+688
+
+1,923,294
+
+3.58‱
+
+Social sciences and
+humanities
+
+2.5 Indicators
+This study employs two indicators for the analysis: the retraction rate (RR), which
+measures the frequency of retractions for each gender, and the male/female retraction
+ratio (MFRR), which assesses gender disparities in retractions. The definitions and
+calculations of these indicators are outlined below:
+
+
+Retraction rate (RR): The RR for each gender is defined as the ratio of the number
+of retracted articles first-authored by a given gender to the total number of articles
+first-authored by that gender. The formula for calculating the RR is:
+𝑅𝑅 =
+
+𝑁𝑃𝑟𝑒𝑡𝑟𝑎𝑐𝑡𝑒𝑑
+𝑁𝑃𝑎𝑙𝑙
+
+where 𝑁𝑃𝑟𝑒𝑡𝑟𝑎𝑐𝑡𝑒𝑑 denotes the number of retracted articles first-authored by a
+specific gender, 𝑁𝑃𝑎𝑙𝑙 denotes the total number of articles first-authored by that
+gender, including both retracted and non-retracted articles. Confidence intervals for
+the RR were calculated using the Wilson Score interval.
+
+
+Male/female retraction ratio (MFRR): The MFRR is defined as the ratio of the
+retraction rate of male researchers to that of female researchers. The formula is:
+𝑅𝑅𝑚𝑎𝑙𝑒
+𝑅𝑅𝑓𝑒𝑚𝑎𝑙𝑒
+
+𝑀𝐹𝑅𝑅 =
+
+where 𝑅𝑅𝑚𝑎𝑙𝑒 denotes the retraction rate for male researchers, and 𝑅𝑅𝑓𝑒𝑚𝑎𝑙𝑒
+denotes the retraction rate for female researchers within the same set of articles.
+Previous research often compares gender disparities by examining the absolute
+number of retracted articles. However, this approach does not account for
+differences in the total number of publications between male and female
+researchers. The MFRR offers a more objective comparison of retraction rates
+between genders. An MFRR value greater than 1 indicates a higher retraction rate
+for men compared to women, whereas a value less than 1 suggests a higher
+retraction rate for women compared to men. When the MFRR equals 1, it signifies
+9
+
+identical retraction rates between genders. Confidence intervals for the MFRR
+were calculated using the Katz method (Katz et al., 1978).
+
+3. Results
+Based on our dataset, the overall retraction rate (RR) for male first authors between
+2008 and 2023 is 6.38 per ten thousand articles published (‱), while for females, it is
+5.19‱. This yields an MFRR of 1.23 (95% CI: 1.18, 1.28), indicating that male first
+authors generally have a higher retraction rate than females. In the following
+subsections, we investigate gender disparities in retractions across four dimensions:
+temporal trends, retraction reasons, disciplinary variations, and countries, along with a
+cross-analysis of disciplines and retraction reasons.
+3.1 Temporal trends in retractions by gender
+By aggregating articles by publication year, Figure 1 illustrates the temporal trends in
+gender disparities in retractions. Male first authors have consistently higher numbers of
+retractions (Figure 1a) and, in most years, higher retraction rates (Figure 1b) compared
+to their female counterparts. The gender disparities are further confirmed by the MFRR
+values (Figure 1c), which fluctuate between 1.0 and 1.5, remaining significantly greater
+than 1 during most of the examined period. This suggests that male first authors are
+proportionally associated with more retractions than female first authors.
+
+10
+
+Figure 1. (a) Annual number of retractions (NR) by gender; (b) Annual retraction rate
+(RR) by gender with 95% confidence intervals; (c) MFRR temporal trend with 95%
+confidence intervals.
+
+3.2 Retraction reasons by gender
+For nearly all retraction reasons, whether a single reason or multiple reasons, male first
+authors have significantly higher retraction rates (Figure 2). The only exception is for
+“mistakes”, where no significant gender difference is observed. Specifically, male first
+authors have much higher retraction rates for “plagiarism” (MFRR: 1.99) and
+“authorship issues” (MFRR: 1.73) compared to female first authors, although the
+overall retraction rates for these two reasons are relatively low. For retractions related
+to “duplication”, “fabrication/falsification”, and “ethical issues”, male first authors also
+have higher retraction rates, though the gender differences are smaller.
+
+11
+
+Figure 2. RR and MFRR by retraction reason for articles published between 2008 and
+2023. Error bars indicate 95% confidence intervals.
+
+Over the observed period, most categories of retraction reasons show an MFRR that
+remains close to 1 (Figure 3), indicating that, for the majority of retraction reasons
+(including multiple reasons), the annual retraction rates for male and female first
+authors do not differ substantially. However, for certain reasons, such as “plagiarism”
+and “duplication”, the MFRR exceeds 1 more frequently, suggesting that the retraction
+rates of male first authors are higher than those of female first authors in these specific
+cases. Although the differences in retraction rates across years and retraction reasons
+are not large, the cumulative effect of all causes results in a higher overall male
+retraction rate. This explains why, in most years, the MFRR for “single reason”
+retractions exceeds 1.
+
+12
+
+Figure 3. Annual MFRR by retraction reason for articles published between 2008 and
+2023. Shaded areas indicate 95% confidence intervals.
+
+3.3 Disciplinary variations of retractions by gender
+In the fields of biomedical and health sciences, life and earth sciences, and physical
+sciences and engineering, male first authors have significantly higher retraction rates
+compared to their female counterparts. In contrast, within the mathematics and
+computer science field, female first authors have significantly higher retraction rates.
+In social sciences and humanities, no significant differences in retraction rates are
+observed between male and female first authors (Figure 4).
+
+13
+
+Figure 4. RR and MFRR across subject fields. Error bars indicate 95% confidence
+intervals.
+
+3.4 Country variations of retractions by gender
+We examined the ten countries with the highest number of articles retracted by first
+authors. In half of these countries, no significant differences in retraction rates are
+observed between male and female first authors (Figure 5). However, significant gender
+disparities are observed in certain countries: for Iran, Pakistan, and the United States,
+male first authors have higher retraction rates, whereas for Italy and China, female first
+authors have higher retraction rates. For most countries, the proportion of first authors
+with unidentified gender was relatively low. However, for China, many Chinese names
+cannot be easily classified by gender based on their English transliterations, which
+introduced potential challenges for accurate gender classification. As a result, the
+findings for China remain subject to further validation.
+
+14
+
+Figure 5. RR and MFRR across countries. Error bars indicate 95% confidence
+intervals.
+
+3.5 Cross-analysis of disciplines and retraction reasons
+To gain a deeper understanding of the varying retraction rates between disciplines, we
+conducted a cross-analysis of the MFRR, segmented by both subject fields and reasons
+for retraction (Figure 6). While male first authors generally have higher retraction rates
+across most categories, the MFRR values and confidence intervals show considerable
+variations, likely influenced by smaller sample sizes in certain categories.
+In biomedical and health sciences and life and earth sciences, male first authors have
+higher retraction rates than their female counterparts for nearly all retraction reasons.
+In mathematics and computer science, female first authors have higher retraction rates
+for both single and multiple retraction reasons, as well as for mistakes,
+fabrication/falsification. No significant gender differences are observed for the other
+retraction reasons. In physical sciences and engineering, male first authors have higher
+retraction rates for single reason retractions, duplication, and plagiarism. Similarly, in
+social sciences and humanities, male first authors have higher retraction rates for
+duplication, plagiarism, and authorship issues.
+
+15
+
+16
+
+Figure 6. Cross-analysis of RR and MFRR by subject field and retraction reason.
+Error bars indicate 95% confidence intervals.
+
+3.6 Robustness check with corresponding authors
+Given the limitations in gender data availability, we performed additional analyses to
+assess the robustness of our findings. Specifically, we expanded our analysis to include
+corresponding authors, with detailed results provided in the Supplementary Materials.
+The key findings from this corresponding-author analysis are summarized as follows:
+
+
+Male corresponding authors have a higher overall retraction rate compared to
+female corresponding authors, with an MFRR of 1.20 (95% CI: 1.15, 1.25).
+
+
+
+For most retraction reasons – except for “mistakes” and “ethical issues” – male
+corresponding authors have higher retraction rates than female corresponding
+authors.
+
+
+
+In biomedical and health sciences and life and earth sciences, male corresponding
+authors have higher retraction rates. However, in mathematics and computer
+science, female corresponding authors have higher retraction rates. In physical
+sciences and engineering, no significant gender difference is found, while in social
+sciences and humanities, male corresponding authors show slightly higher
+retraction rates than their female counterparts.
+
+
+
+In half of the top ten countries with the highest number of retracted articles, no
+significant gender differences in the retraction rates of corresponding authors are
+observed. However, China has a higher retraction rate for female corresponding
+authors, while the United States, Iran, Pakistan, and Egypt have higher retraction
+rates for male corresponding authors.
+
+Overall, the main conclusions regarding the retraction rates of male and female
+researchers remain consistent between the first-author and corresponding-author
+analyses. This consistency provides further support for the robustness of our findings.
+
+4. Discussion
+This study used a dataset of retracted articles, along with global research productivity
+data from 2008 to 2023, to explore gender disparities in article retractions across
+17
+
+multiple dimensions.
+4.1. Higher retraction rates among male researchers
+Our findings, which reveal higher retraction rates for male researchers compared to
+female researchers, are consistent with previous studies that report a greater number of
+retracted articles authored by men (Decullier & Maisonneuve, 2023) and a higher
+incidence of male involvement in scientific misconduct cases (Fang et al., 2013).
+Importantly, the lack of significant gender differences in retractions due to “mistakes”
+suggests that the observed disparity is primarily driven by scientific misconduct.
+One potential explanation for the higher retraction rates among male researchers could
+be their greater propensity for engaging in scientific misconduct. Psychological studies
+on gender differences have demonstrated that men are generally more prone to risktaking behaviors in various contexts, such as in traffic situations (Konecni et al., 1976;
+Pawlowski et al., 2008) and financial decision-making (Charness & Gneezy, 2012).
+According to Parental Investment Theory (Trivers, 1972), this tendency may have
+evolutionary origins, as men are more inclined to engage in risky behaviors due to a
+belief in potential rewards and a reduced perception of risk, driven by their higher
+tolerance for both physical and social harm (Schumann & Ross, 2010). Consequently,
+male researchers may be more likely to commit misconduct, motivated by the
+anticipated benefits and a lower perceived risk of adverse consequences, as noted by
+Ameen et al. (1996).
+Another plausible reason for the gender disparity in retraction rates is that male
+researchers may simply be more likely to be detected for misconduct than female
+researchers (Fang et al., 2013; Kaatz et al., 2013). Not all instances of misconduct are
+detected (Fanelli, 2009), particularly those involving subtle forms like falsification
+(Smith, 2000), which are more challenging to identify. It is possible that the greater
+visibility of male misconduct is a contributing factor to the observed higher retraction
+rates among male researchers.
+4.2. Varying gender disparities between retraction reasons and disciplines
+While male researchers overall have higher retraction rates, gender disparities vary
+across retraction reasons and subject fields. For most retraction reasons, whether caused
+by a single factor or multiple factors, male researchers tend to have higher retraction
+rates, particularly for issues such as plagiarism and authorship disputes. This finding
+contrasts with the study by Fanelli et al. (2019), which found no significant gender
+18
+
+difference in image manipulation cases among first or last authors in PLoS One. This
+discrepancy between the studies may be attributed to differences in sample sizes, which
+could influence the statistical significance of such findings.
+Disciplinary analysis further reveals that while male researchers have higher retraction
+rates across most subject fields, female researchers have higher retraction rates in
+mathematics and computer science. These disciplinary differences in retraction rates
+suggest that certain forms of scientific misconduct may be more prevalent or detectable
+in particular fields. Gender disparities in misconduct also appear to vary by discipline,
+with distinct dynamics emerging in different scientific communities. This issue,
+however, has not been extensively explored in prior research, making our findings a
+valuable addition to the literature.
+4.3 Implications
+Previous studies examining gender differences in retractions have often relied on the
+absolute number of retracted articles (Decullier & Maisonneuve, 2023; Fang et al.,
+2013). However, since male researchers typically publish significantly more articles
+than their female counterparts (Abramo et al., 2009; Huang et al., 2020; Larivière et al.,
+2011), a higher number of retracted articles among male researchers does not
+necessarily indicate a greater propensity for misconduct. In contrast, this study
+addresses this limitation by accounting for the total number of publications and using
+the retraction rate (RR) and MFRR as comparative metrics. These indicators offer a
+more accurate assessment of gender differences in retraction risks, providing a
+methodological advancement over previous approaches.
+Our findings not only reveal gender disparities in retraction rates but also raise
+important questions about the underlying factors driving these differences. For instance,
+why do male and female researchers experience significantly different retraction risks
+across disciplines, countries, and retraction reasons? These variations may point to a
+deeper connection between academic culture, competitive pressures, gender role
+expectations, and research integrity. Understanding how these complex factors
+contribute to gender disparities in article retractions could provide valuable insights into
+the patterns of scientific misconduct. Future research could explore the impact of these
+variables to deepen our understanding of scientific integrity and the academic culture
+in which misconduct occurs.
+The cross-disciplinary gender differences in article retractions highlight the potential
+19
+
+role of academic cultures and evaluation standards, which may vary significantly
+between disciplines. These findings suggest that discipline-specific policies related to
+research integrity are essential. Our results could inform the development of more
+targeted interventions, including tailored evaluation mechanisms within specific fields.
+Moreover, the gender disparities observed across countries may reflect differences in
+ethical oversight, academic evaluation processes, and cultural expectations. These
+disparities indicate that some countries may have gender imbalances in areas such as
+research integrity training, publication ethics regulations, and academic reward systems,
+potentially making particular gender groups more vulnerable to research misconduct.
+4.4. Limitations
+This study has several limitations that should be acknowledged. First, we assessed
+gender disparities using the gender of the first and corresponding authors, as is common
+in previous studies (Decullier & Maisonneuve, 2023; Hussinger & Pellens, 2019;
+Larivière et al., 2016). However, this approach does not account for the possibility that
+other authors may have contributed to the misconduct leading to retraction. In
+collaborative research, the involvement of both male and female authors could
+influence the results. Future studies could benefit from using contributorship statements
+in articles or individual retraction statements to better attribute responsibility for
+retractions.
+Second, this study focuses on gender disparities in article retractions in relation to
+global research productivity but does not consider individual-level factors beyond
+gender and discipline. To gain a deeper understanding of the factors contributing to
+gender disparities, future research should investigate individual-level characteristics
+such as the academic rank of authors, as well as the integrity polices of their affiliated
+institutions or countries. These variables could provide further insight into the structural
+and personal factors that influence retraction rates.
+Third, the classification of retraction reasons can be multifaceted. While the
+classification used in this study – based on Retraction Watch data – captures the primary
+retraction reasons, some more fine-grained and less common reasons, such as fundingrelated issues, are not represented. Therefore, to ensure a sufficient number of cases
+within each category, we adopted a broader classification scheme.
+Lastly, although we were able to successfully identify the gender of both first and
+corresponding authors for approximately 50% to 80% of the retracted and non-retracted
+20
+
+articles, a substantial proportion of authors had undetermined gender. Notably, over 80%
+of the authors with unidentified gender were affiliated with institutions in China,
+underscoring the need for improved gender classification methods for Chinese names
+in future studies. We also acknowledge the presence of non-binary authors in academia.
+However, due to limitations in both data availability and algorithmic capability, we
+were unable to infer non-binary gender identities based on author names. These
+limitations highlight the need to complement bibliometric approaches with qualitative
+methods or case-based analyses in future gender-related misconduct research.
+
+5. Conclusions
+This study reveals that male leading authors generally have higher article retraction
+rates compared to female leading authors. However, these gender disparities in
+retraction rates vary across retraction reasons, subject fields, and countries. Specifically,
+male leading authors tend to have higher retraction rates for most types of misconduct,
+including
+
+plagiarism,
+
+authorship
+
+issues,
+
+ethical
+
+issues,
+
+duplication,
+
+and
+
+fabrication/falsification. Additionally, the gender gap in retraction rates differs by
+subject field. Male leading authors have significantly higher retraction rates in
+biomedical and health sciences, as well as life and earth sciences, whereas female
+leading authors have higher retraction rates in mathematics and computer science.
+The gender differences observed in misconduct types – such as the higher rates of
+plagiarism and authorship issues among male researchers – suggest distinct behavioral
+dynamics between male and female researchers. Understanding these differences could
+help identify the underlying motivations and gender-specific factors influencing
+scientific misconduct. Further research is needed to explore these dynamics in more
+detail and to better understand how gender and academic culture intersect in the context
+of research integrity.
+
+Declaration of competing interests
+The authors have no conflicts of interest to declare.
+
+Acknowledgements
+
+21
+
+This study is supported by the National Natural Science Foundation of China (No.
+72304274) and the Soft Science Research Program of the Zhejiang Provincial
+Department of Science and Technology (No. 2021C35040). Er-Te Zheng is financially
+supported by the GTA scholarship from the School of Information, Journalism and
+Communication of the University of Sheffield. Mike Thelwall is supported by the
+Fundação Calouste Gulbenkian European Media and Information Fund (No. 187003).
+The authors thank the three anonymous reviewers for their valuable suggestions.
+
+References
+Abramo, G., D’Angelo, C. A., & Caprasecca, A. (2009). Gender differences in research productivity: A
+bibliometric analysis of the Italian academic system. Scientometrics, 79(3), 517–539.
+https://doi.org/10.1007/s11192-007-2046-8
+Aksnes, D. W., Rorstad, K., Piro, F., & Sivertsen, G. (2011). Are female researchers less cited? A large‐
+scale study of Norwegian scientists. Journal of the American Society for Information Science
+and Technology. https://onlinelibrary.wiley.com/doi/full/10.1002/asi.21486
+Al-Hidabi, M., & Teh, P. (2019). Multiple publications: The main reason for the retraction of papers in
+computer science. In Advances in Information and Communication Networks (Vol. 886, pp.
+511–526). Springer International Publishing. https://core.ac.uk/reader/161698240
+Ameen, E. C., Guffey, D. M., & McMillan, J. J. (1996). Gender differences in determining the ethical
+sensitivity of future accounting professionals. Journal of Business Ethics, 15(5), 591–597.
+https://doi.org/10.1007/BF00381934
+Amiri, M., Yaghtin, M., & Sotudeh, H. (2024). How do tweeters feel about scientific misinformation: An
+infoveillance sentiment analysis of tweets on retraction notices and retracted papers.
+Scientometrics, 129(1), 261–287. https://doi.org/10.1007/s11192-023-04871-7
+Amos, K. A. (2014). The ethics of scholarly publishing: Exploring differences in plagiarism and duplicate
+22
+
+publication across nations. Journal of the Medical Library Association, 102(2), 87–91.
+https://doi.org/10.3163/1536-5050.102.2.005
+Andersen, J. P. (2023). Field-level differences in paper and author characteristics across all fields of
+science in web of science, 2000–2020. Quantitative Science Studies, 4(2), 394–422.
+https://doi.org/10.1162/qss_a_00246
+Andersen, J. P., & Nielsen, M. W. (2018). Google Scholar and Web of Science: Examining gender
+differences in citation coverage across five scientific disciplines. Journal of Informetrics, 12(3),
+950–959. https://doi.org/10.1016/j.joi.2018.07.010
+Bar-Ilan, J., & Halevi, G. (2017). Post retraction citations in context: A case study. Scientometrics, 113(1),
+547–565. https://doi.org/10.1007/s11192-017-2242-0
+Bar-Ilan, J., & Halevi, G. (2018). Temporal characteristics of retracted articles. Scientometrics, 116(3),
+1771–1783. https://doi.org/10.1007/s11192-018-2802-y
+Birnbaum, Y., Kitakaze, M., Grieve, D., & Uretsky, B. F. (2023). Who should be the corresponding author,
+what are their responsibilities, and what email address should they provide? Cardiovascular
+Drugs and Therapy, 37(6), 1039–1040. https://doi.org/10.1007/s10557-023-07486-5
+Boekhout, H., van der Weijden, I., & Waltman, L. (2021). Gender differences in scientific careers: A
+large-scale
+
+bibliometric
+
+analysis
+
+(No.
+
+arXiv:2106.12624).
+
+arXiv.
+
+https://arxiv.org/abs/2106.12624v1
+Bordons, M., Morillo, F., Fernández, M. T., & Gómez, I. (2003). One step further in the production of
+bibliometric indicators at the micro level: Differences by gender and professional category of
+scientists. Scientometrics, 57(2), 159–173. https://doi.org/10.1023/A:1024181400646
+Bornmann, L. (2013). Research misconduct—Definitions, manifestations and extent. Publications, 1(3),
+
+23
+
+Article 3. https://doi.org/10.3390/publications1030087
+Brainard,
+
+J.
+
+(2018).
+
+Rethinking
+
+retractions.
+
+Science,
+
+362(6413),
+
+390–393.
+
+https://doi.org/10.1126/science.362.6413.390
+Budd, J. M., Sievert, M., & Schultz, T. R. (1998). Phenomena of retraction: Reasons for retraction and
+citations to the publications. JAMA, 280(3), 296–297. https://doi.org/10.1001/jama.280.3.296
+Caron, E., & Eck, N. J. van. (2014). Large scale author name disambiguation using rule-based scoring
+and clustering. Proceedings of the Science and Technology Indicators Conference 2014, 79–86.
+https://www.semanticscholar.org/paper/Large-scale-author-name-disambiguation-using-andCaron-Eck/24598186ea68a201aaeea521336b727c99a2bb2b
+Charness, G., & Gneezy, U. (2012). Strong evidence for gender differences in risk taking. Journal of
+Economic Behavior & Organization, 83(1), 50–58. https://doi.org/10.1016/j.jebo.2011.06.007
+Cokol, M., Iossifov, I., Rodriguez‐Esteban, R., & Rzhetsky, A. (2007). How many scientific papers
+should be retracted? EMBO Reports, 8(5), 422–423. https://doi.org/10.1038/sj.embor.7400970
+COPE
+
+Council.
+
+(2019,
+
+November
+
+2).
+
+COPE
+
+retraction
+
+guidelines—English.
+
+https://doi.org/10.24318/cope.2019.1.4
+Dambanemuya, H. K., Abhari, R., Vincent, N., & Horvát, E.-Á. (2024). Online engagement with
+retracted articles: Who, when, and how? (No. arXiv:2203.04228; Version 3). arXiv.
+http://arxiv.org/abs/2203.04228
+Decullier, E., & Maisonneuve, H. (2023). Retraction according to gender: A descriptive study.
+Accountability in Research, 30(6), 356–361. https://doi.org/10.1080/08989621.2021.1988576
+Didegah, F., & Thelwall, M. (2018). Co-saved, co-tweeted, and co-cited networks. Journal of the
+Association
+
+for
+
+Information
+
+Science
+
+24
+
+and
+
+Technology,
+
+69(8),
+
+959–973.
+
+https://doi.org/10.1002/asi.24028
+Fanelli, D. (2009). How many scientists fabricate and falsify research? A systematic review and metaanalysis of survey data. PLOS ONE, 4(5), e5738. https://doi.org/10.1371/journal.pone.0005738
+Fanelli, D. (2013a). Redefine misconduct as distorted reporting. Nature, 494(7436), 149.
+https://doi.org/10.1038/494149a
+Fanelli, D. (2013b). Why growing retractions are (mostly) a good sign. PLOS Medicine, 10(12),
+e1001563. https://doi.org/10.1371/journal.pmed.1001563
+Fanelli, D., Costas, R., Fang, F. C., Casadevall, A., & Bik, E. M. (2019). Testing hypotheses on risk
+factors for scientific misconduct via matched-control analysis of papers containing problematic
+image
+
+duplications.
+
+Science
+
+and
+
+Engineering
+
+Ethics,
+
+25(3),
+
+771–789.
+
+https://doi.org/10.1007/s11948-018-0023-7
+Fanelli, D., Costas, R., & Larivière, V. (2015). Misconduct policies, academic culture and career stage,
+not gender or pressures to publish, affect scientific integrity. PLOS ONE, 10(6), e0127556.
+https://doi.org/10.1371/journal.pone.0127556
+Fang, F. C., Bennett, J. W., & Casadevall, A. (2013). Males are overrepresented among life science
+researchers
+
+committing
+
+scientific
+
+misconduct.
+
+mBio,
+
+4(1),
+
+10.1128/mbio.00640-12.
+
+https://doi.org/10.1128/mbio.00640-12
+Fang, F. C., & Casadevall, A. (2011). Retracted science and the retraction index. Infection and Immunity,
+79(10), 3855–3859. https://doi.org/10.1128/iai.05661-11
+Fang, F. C., Steen, R. G., & Casadevall, A. (2012). Misconduct accounts for the majority of retracted
+scientific publications. Proceedings of the National Academy of Sciences, 109(42), 17028–
+17033. https://doi.org/10.1073/pnas.1212247109
+
+25
+
+Feng, L., Yuan, J., & Yang, L. (2020). An observation framework for retracted publications in multiple
+dimensions. Scientometrics, 125(2), 1445–1457. https://doi.org/10.1007/s11192-020-03702-3
+Fox, M. F. (2005). Gender, family characteristics, and publication productivity among scientists. Social
+Studies of Science, 35(1), 131–150. https://doi.org/10.1177/0306312705046630
+Furman, J. L., Jensen, K., & Murray, F. (2012). Governing knowledge in the scientific community:
+Exploring the role of retractions in biomedicine. Research Policy, 41(2), 276–290.
+https://doi.org/10.1016/j.respol.2011.11.001
+Grieneisen, M. L., & Zhang, M. (2012). A comprehensive survey of retracted articles from the scholarly
+literature. PLOS ONE, 7(10), e44118. https://doi.org/10.1371/journal.pone.0044118
+Haunschild, R., & Bornmann, L. (2021). Can tweets be used to detect problems early with scientific
+papers? A case study of three retracted COVID-19/SARS-CoV-2 papers. Scientometrics, 126(6),
+5181–5199. https://doi.org/10.1007/s11192-021-03962-7
+Huang, J., Gates, A. J., Sinatra, R., & Barabási, A.-L. (2020). Historical comparison of gender inequality
+in scientific careers across countries and disciplines. Proceedings of the National Academy of
+Sciences, 117(9), 4609–4616. https://doi.org/10.1073/pnas.1914221117
+Hussinger, K., & Pellens, M. (2019). Scientific misconduct and accountability in teams. PLOS ONE,
+14(5), e0215962. https://doi.org/10.1371/journal.pone.0215962
+Hwang, S. Y., Yon, D. K., Lee, S. W., Kim, M. S., Kim, J. Y., Smith, L., Koyanagi, A., Solmi, M.,
+Carvalho, A. F., Kim, E., Shin, J. I., & Ioannidis, J. P. A. (2023). Causes for Retraction in the
+Biomedical Literature: A Systematic Review of Studies of Retraction Notices. Journal of
+Korean Medical Science, 38(41). https://doi.org/10.3346/jkms.2023.38.e333
+Kaatz, A., Vogelman, P. N., & Carnes, M. (2013). Are men more likely than women to commit scientific
+
+26
+
+misconduct?
+
+Maybe,
+
+maybe
+
+not.
+
+mBio,
+
+4(2),
+
+10.1128/mbio.00156-13.
+
+https://doi.org/10.1128/mbio.00156-13
+Katz, D., Baptista, J., Azen, S. P., & Pike, M. C. (1978). Obtaining confidence intervals for the risk ratio
+in cohort studies. Biometrics, 34(3), 469–474. https://doi.org/10.2307/2530610
+Khademizadeh, S., Danesh, F., Esmaeili, S., Lund, B., & Santos-d’Amorim, K. (2023). Evolution of
+retracted publications in the medical sciences: Citations analysis, bibliometrics, and altmetrics
+trends.
+
+Accountability
+
+in
+
+Research,
+
+0(0),
+
+1–16.
+
+https://doi.org/10.1080/08989621.2023.2223996
+Khan, H., Gupta, P., Zimba, O., & Gupta, L. (2022). Bibliometric and altmetric analysis of retracted
+articles
+
+on
+
+COVID-19.
+
+Journal
+
+of
+
+Korean
+
+Medical
+
+Science,
+
+37(6),
+
+e44.
+
+https://doi.org/10.3346/jkms.2022.37.e44
+King, M. M., Bergstrom, C. T., Correll, S. J., Jacquet, J., & West, J. D. (2017). Men set their own cites
+high:
+
+Gender
+
+and
+
+self-citation
+
+across
+
+fields
+
+and
+
+over
+
+time.
+
+Socius,
+
+3.
+
+https://doi.org/10.1177/2378023117738903
+Konecni, V., Ebbeson, E. B., & Konecni, D. K. (1976). Decision processes and risk taking in traffic:
+Driver response to the onset of yellow light. Journal of Applied Psychology, 61(3), 359–367.
+https://doi.org/10.1037/0021-9010.61.3.359
+Kozlowski, D., Larivière, V., Sugimoto, C. R., & Monroe-White, T. (2022). Intersectional inequalities in
+science. Proceedings of the National Academy of Sciences, 119(2), e2113067119.
+https://doi.org/10.1073/pnas.2113067119
+Kreutzberg, G. W. (2004). The rules of good science: Preventing scientific misconduct is the
+responsibility
+
+of
+
+all
+
+scientists.
+
+27
+
+EMBO
+
+Reports,
+
+5(4),
+
+330–332.
+
+https://doi.org/10.1038/sj.embor.7400136
+Larivière, V., Desrochers, N., Macaluso, B., Mongeon, P., Paul-Hus, A., & Sugimoto, C. R. (2016).
+Contributorship and division of labor in knowledge production. Social Studies of Science, 46(3),
+417–435.
+Larivière, V., Ni, C., Gingras, Y., Cronin, B., & Sugimoto, C. R. (2013). Global gender disparities in
+science. Nature, 504(7479), 211–213. https://doi.org/10.1038/504211a
+Larivière, V., Vignola-Gagné, E., Villeneuve, C., Gélinas, P., & Gingras, Y. (2011). Sex differences in
+research funding, productivity and impact: An analysis of Québec university professors.
+Scientometrics, 87(3), 483–498. https://doi.org/10.1007/s11192-011-0369-y
+Lerback, J., & Hanson, B. (2017). Journals invite too few women to referee. Nature, 541(7638), 455–
+457. https://doi.org/10.1038/541455a
+Lu, S. F., Jin, G. Z., Uzzi, B., & Jones, B. (2013). The retraction penalty: Evidence from the web of
+science. Scientific Reports, 3(1), 3146. https://doi.org/10.1038/srep03146
+Madsen, E. B., Nielsen, M. W., Bjørnholm, J., Jagsi, R., & Andersen, J. P. (2022). Meta-research: Authorlevel data confirm the widening gender gap in publishing rates during COVID-19. eLife, 11,
+e76559. https://doi.org/10.7554/eLife.76559
+Marcus, A. (2018). A scientist’s fraudulent studies put patients at risk. Science, 362(6413), 394–394.
+https://doi.org/10.1126/science.362.6413.394-a
+Nath, S. B., Marcus, S. C., & Druss, B. G. (2006). Retractions in the research literature: Misconduct or
+mistakes? Medical Journal of Australia, 185(3), 152–154. https://doi.org/10.5694/j.13265377.2006.tb00504.x
+Paul-Hus, A., Sugimoto, C. R., Haustein, S., & Larivière, V. (2015). Is there a gender gap in social media
+
+28
+
+metrics? 37–45.
+Pawlowski, B., Atwal, R., & Dunbar, R. I. M. (2008). Sex differences in everyday risk-taking behavior
+in
+
+humans.
+
+Evolutionary
+
+Psychology,
+
+6(1),
+
+29–42.
+
+https://doi.org/10.1177/147470490800600104
+Peng, H., Romero, D. M., & Horvát, E.-Á. (2022). Dynamics of cross-platform attention to retracted
+papers. Proceedings of the National Academy of Sciences, 119(25), e2119086119.
+https://doi.org/10.1073/pnas.2119086119
+Pinho-Gomes, A.-C., Hockham, C., & Woodward, M. (2023). Women’s representation as authors of
+retracted
+
+papers
+
+in
+
+the
+
+biomedical
+
+sciences.
+
+PLOS
+
+ONE,
+
+18(5),
+
+e0284403.
+
+https://doi.org/10.1371/journal.pone.0284403
+Resnik, D. B., & Stewart Jr., C. N. (2012). Misconduct versus Honest Error and Scientific Disagreement.
+Accountability in Research, 19(1), 56–63. https://doi.org/10.1080/08989621.2012.650948
+Ribeiro, M. D., Mena-Chalco, J., Rocha, K. de A., Pedrotti, M., Menezes, P., & Vasconcelos, S. M. R.
+(2023). Are female scientists underrepresented in self-retractions for honest error? Frontiers in
+Research Metrics and Analytics, 8. https://doi.org/10.3389/frma.2023.1064230
+Schumann, K., & Ross, M. (2010). Why women apologize more than men: Gender differences in
+thresholds for perceiving offensive behavior. Psychological Science, 21(11), 1649–1655.
+https://doi.org/10.1177/0956797610384150
+Serghiou, S., Marton, R. M., & Ioannidis, J. P. A. (2021). Media and social media attention to retracted
+articles
+
+according
+
+to
+
+Altmetric.
+
+PLOS
+
+ONE,
+
+16(5),
+
+e0248625.
+
+https://doi.org/10.1371/journal.pone.0248625
+Shema, H., Hahn, O., Mazarakis, A., & Peters, I. (2019). Retractions from altmetric and bibliometric
+
+29
+
+perspectives.
+
+Information
+
+-
+
+Wissenschaft
+
+&
+
+Praxis,
+
+70(2–3),
+
+98–110.
+
+https://doi.org/10.1515/iwp-2019-2006
+Shuai, X., Rollins, J., Moulinier, I., Custis, T., Edmunds, M., & Schilder, F. (2017). A multidimensional
+investigation of the effects of publication retraction on scholarly impact. Journal of the
+Association
+
+for
+
+Information
+
+Science
+
+and
+
+Technology,
+
+68(9),
+
+2225–2236.
+
+https://doi.org/10.1002/asi.23826
+Smith, R. (2000). What is research misconduct? (The COPE Report 2000, pp. 7–11).
+https://publicationethics.org/files/u7141/COPE2000pdfcomplete.pdf
+Steen, R. G. (2011). Retractions in the scientific literature: Is the incidence of research fraud increasing?
+Journal of Medical Ethics, 37(4), 249–253. https://doi.org/10.1136/jme.2010.040923
+Szymula, L., & Simova, T. (2023, September 18). A large scale perspective on open access publishing:
+Examining gender and scientific disciplines in 38 OECD countries. 27th International
+Conference
+
+on
+
+Science,
+
+Technology
+
+and
+
+Innovation
+
+Indicators
+
+(STI
+
+2023).
+
+https://doi.org/10.55835/6442b2f80dd9c5d18e7caff8
+Tang, L., Hu, G., Sui, Y., Yang, Y., & Cao, C. (2020). Retraction: The “other face” of research
+collaboration?
+
+Science
+
+and
+
+Engineering
+
+Ethics,
+
+26(3),
+
+1681–1708.
+
+https://doi.org/10.1007/s11948-020-00209-1
+Tekles, A., & Bornmann, L. (2020). Author name disambiguation of bibliometric data: A comparison of
+several
+
+unsupervised
+
+approaches.
+
+Quantitative
+
+Science
+
+Studies,
+
+1(4),
+
+1510–1528.
+
+https://doi.org/10.1162/qss_a_00081
+Traag, V. A., Waltman, L., & Van Eck, N. J. (2019). From Louvain to Leiden: Guaranteeing wellconnected communities. Scientific Reports, 9(1), 5233. https://doi.org/10.1038/s41598-019-
+
+30
+
+41695-z
+Trivers, R. (1972). Parental investment and sexual selection. In Sexual Selection and the Descent of Man
+(Bernard Campbell, pp. 136–179). https://roberttrivers.com/publications/
+Van Noorden, R. (2011). Science publishing: The trouble with retractions. Nature, 478(7367), 26–28.
+https://doi.org/10.1038/478026a
+Van Noorden, R. (2023). More than 10,000 research papers were retracted in 2023—A new record.
+Nature, 624(7992), 479–481. https://doi.org/10.1038/d41586-023-03974-8
+Wager, E., & Williams, P. (2011). Why and how do journals retract articles? An analysis of Medline
+retractions
+
+1988–2008.
+
+Journal
+
+of
+
+Medical
+
+Ethics,
+
+37(9),
+
+567–570.
+
+https://doi.org/10.1136/jme.2010.040964
+Waltman, L., & Van Eck, N. J. (2012). A new methodology for constructing a publication-level
+classification system of science. Journal of the American Society for Information Science and
+Technology, 63(12), 2378–2392. https://doi.org/10.1002/asi.22748
+Xu, S. (Brian), & Hu, G. (2022). A cross-disciplinary and severity-based study of author-related reasons
+for
+
+retraction.
+
+Accountability
+
+in
+
+Research,
+
+29(8),
+
+512–536.
+
+https://doi.org/10.1080/08989621.2021.1952870
+Zahedi, Z., & Van Eck, N. J. (2018). Exploring topics of interest of Mendeley users. Journal of Altmetrics,
+1(1), 5. https://doi.org/10.29024/joa.7
+Zhang, L., Gou, Z., Fang, Z., Sivertsen, G., & Huang, Y. (2023). Who tweets scientific publications? A
+large-scale study of tweeting audiences in all areas of research. Journal of the Association for
+Information Science and Technology, 74(13), 1485–1497. https://doi.org/10.1002/asi.24830
+Zhang, Q., Abraham, J., & Fu, H.-Z. (2020). Collaboration and its influence on retraction based on
+
+31
+
+retracted
+
+publications
+
+during
+
+1978–2017.
+
+Scientometrics,
+
+125(1),
+
+213–232.
+
+https://doi.org/10.1007/s11192-020-03636-w
+Zheng, E.-T., Fang, Z., & Fu, H.-Z. (2024). Is gold open access helpful for academic purification? A
+causal inference analysis based on retracted articles in biochemistry. Information Processing &
+Management, 61(3), 103640. https://doi.org/10.1016/j.ipm.2023.103640
+
+Appendix
+Table A1. Number of samples with unidentified gender data in previous scientometric studies.
+Sample
+
+Number of samples with
+
+size
+
+unidentified gender (percentage)
+
+Previous research
+
+Tool used
+
+Szymula & Simova (2023)
+
+Genderize.io
+
+949,533
+
+Pinho-Gomes et al. (2023)
+
+Gender API
+
+35,635
+
+Ribeiro et al. (2023)
+
+Genderize.io
+
+472
+
+122 (25.8%)
+
+1,028,382
+
+332,196 (32.3%)
+
+485,826 (51.2%)
+14,786 (41.5% for first authors);
+15,222 (42.7% for last authors)
+
+Methods
+Paul-Hus et al. (2015)
+
+developed
+
+by
+
+Larivière et al.
+(2013)
+
+32
+
+Table A2. Categorization of retraction reasons.
+No.
+
+Grouped reason
+
+Reasons recorded by Retraction Watch
+
+Number of retracted
+
+and/or
+
+“We received a report indicating the following: ‘the Panel of
+
+conclusions/methods/materials (general)/cell
+
+Investigation found no evidence of intentional fabrication.
+
+Error
+
+in
+
+image/data/text/results
+
+lines/tissues/analyses; Concerns/issues about
+1
+
+Mistakes
+
+of
+
+(general)/cell
+
+Fabrication/falsification
+
+3,395
+
+image/data/results/referencing/attributions;
+Contamination
+
+2
+
+(29.2%)
+
+reagents/materials
+
+lines/tissues;
+
+Unreliable
+
+4
+
+Duplication
+
+Plagiarism
+
+Ethical issues
+
+that there are additional errors in the publication. The Panel
+therefore cannot confirm that the results of the meta-analysis are
+
+data/image/results; Results not reproducible
+
+Internal Medicine 2020, p.931)
+
+Falsification/fabrication
+
+“Amgen requested the retraction as an outcome of an internal
+
+results/image/data;
+
+of
+Manipulation
+
+of
+
+3,238
+
+review where it was determined that one of the Amgen authors had
+
+results/images; Hoax publication; Paper mill;
+
+(27.9%)
+
+manipulated specific experimental data presented in Figures 1 and
+3” (Cell Metabolism 2015, p.532)
+
+Duplication
+
+of
+
+text/image/data/article;
+
+2,753
+
+Euphemisms for duplication; Salami slicing
+
+(23.7%)
+
+Plagiarism
+
+1,107
+
+of
+
+text/image/data/article;
+
+Euphemisms for plagiarism
+
+(9.5%)
+
+proceedings; Ethical violations; Lack of
+
+853
+
+ethical approval; Informed/patient consent-
+
+(7.3%)
+
+none/retracted;
+
+Infringement
+
+of
+
+“The Editor-in-Chief has retracted this article because several
+images in this article appear to overlap with those of a previously
+published article by different authors” (Oncogenesis 2023, p.15)
+“The authors have plagiarized part of a paper that had already
+appeared
+
+in
+
+Biomedicine
+
+&
+
+Pharmacotherapy”
+
+(Saudi
+
+Pharmaceutical Journal 2020, p.639)
+“The IRB found that the study included data from between one and
+
+Legal reasons/legal threats; Civil/criminal
+5
+
+However, due to flaws in the systematic review process, it is likely
+
+wholly valid and recommend the paper be retracted.’” (JAMA
+
+Sabotage of materials/methods
+3
+
+Illustrative examples from retraction notices
+
+articles (proportion)
+
+patient
+
+four therapy clients of the Maryland Psychotherapy Clinic and
+Research Laboratory (MPCRL) who either had not been asked to
+provide consent or had withdrawn consent for their data to be
+included in the research” (Dreaming 2023)
+
+33
+
+privacy; Lack of balance/bias issues; Conflict
+of interest; Copyright claims
+“Recently, these authors plausibly changed their forenames/first
+names to repeat similar misconducts… No person of that name is or
+6
+
+Authorship issues
+
+Forged authorship; Concerns/issues about
+
+709
+
+has been listed as a faculty member of that institution and that name
+
+authorship
+
+(6.1%)
+
+is affiliated with no other published paper than this one. It is our
+understanding that this author does not exist” (Marine Technology
+Society Journal 2022)
+
+7
+
+Single reason
+
+Articles with only one of retraction reasons
+
+9,178
+
+No.1-6.
+
+(79.0%)
+
+/
+“This article has been retracted by Hindawi following an
+investigation undertaken by the publisher. This investigation has
+uncovered evidence of one or more of the following indicators of
+
+Articles with multiple retraction reasons from
+8
+
+Multiple reasons
+
+systematic
+
+manipulation
+
+of
+
+the
+
+publication
+
+process:
+
+(1)
+
+No.2-6. (Note that “mistakes” refers only to
+
+1,595
+
+Discrepancies in scope; (2) Discrepancies in the description of the
+
+issues related to research mistakes and will
+
+(13.7%)
+
+research reported; (3) Discrepancies between the availability of data
+
+not appear alongside other retraction reasons)
+
+and the research described; (4) Inappropriate citations; (5)
+Incoherent, meaningless and/or irrelevant content included in the
+article; (6) Peer-review manipulation” (Contrast Media &
+Molecular Imaging 2023)
+
+9
+
+849
+
+Reasons uncategorizable or not available
+
+(7.3%)
+
+34
+
+“This article has been withdrawn at the request of the authors and
+editor. The Publisher apologizes for any inconvenience this may
+cause.” (Neurobiology of Aging 2015)
+
+Supplementary Materials
+We conducted the same analysis for corresponding authors as we did for first authors
+to assess whether the results would differ from the first-author analysis and would
+therefore depend on who was believed to be the leading author. As detailed in Table S1,
+this process resulted in a dataset of 12,110 retracted articles (55.1% of all retracted
+articles) and 20,059,091 non-retracted articles (79.0% of all non-retracted articles) with
+inferred gender of corresponding authors.
+
+Table S1. Statistics of articles published (2008-2023) with inferred corresponding
+author’s gender.
+Article type
+
+Number of articles with inferred gender
+
+Retracted articles
+Non-retracted articles
+
+Male (%)
+
+Female (%)
+
+Total articles with
+inferred gender (%)
+
+9,099 (41.4%)
+
+3,011 (13.7%)
+
+12,110 (55.1%)
+
+14,349,975 (56.5%)
+
+5,709,116 (22.5%)
+
+20,059,091 (79.0%)
+
+Based on our dataset, the overall retraction rate for male corresponding authors between
+2008 and 2023 is 6.34 per ten thousand articles published (‱), while for female
+corresponding authors, it is 5.27‱. This results in an MFRR of 1.20 (95% CI: 1.15,
+1.25), indicating that male corresponding authors also have a higher retraction rate than
+their female counterparts.
+Temporal trends in retractions by gender
+The annual number of retracted articles authored by male corresponding authors
+consistently exceeds that of female corresponding authors (Figure S1a), with a higher
+retraction rate observed for males (Figure S1b). The annual MFRR fluctuates between
+1.0 and 1.5, except in 2023, when it surpasses the average level (Figure S1c).
+
+35
+
+Figure S1. (a) Annual number of retractions (NR) identified by gender; (b) Annual
+retraction rate (RR) by gender with 95% confidence intervals; (c) MFRR temporal
+trend with 95% confidence intervals.
+
+Retraction reasons by gender
+For nearly all retraction reasons, except for “mistakes” and “ethical issues”, male
+corresponding authors have higher retraction rates (Figure S2). “Plagiarism” and
+“authorship issues” remain the most significant retraction reasons with the largest
+gender disparity, aligning with the findings for first authors.
+
+36
+
+Figure S2. RR and MFRR by retraction reason for articles published between 2008
+and 2023. Error bars indicate 95% confidence intervals.
+
+While gender differences in retraction rates for most retraction reasons are not
+statistically significant in most years, there are more years in which male corresponding
+authors have higher retraction rates (Figure S3). Consequently, when aggregating
+results across all years, male corresponding authors show significantly higher retraction
+rates for the majority of retraction reasons.
+
+37
+
+Figure S3. Annual MFRR by retraction reason for articles published between 2008
+and 2023. Shaded areas indicate 95% confidence intervals.
+
+Disciplinary variations of retractions by gender
+In biomedical and health sciences, as well as life and earth sciences, male corresponding
+authors have higher retraction rates. However, in mathematics and computer science,
+female corresponding authors have higher retraction rates (Figure S4). This pattern is
+similar to the findings for first authors. The results for other disciplines show slight
+differences: in physical sciences and engineering, no significant gender difference is
+observed in retraction rates, while in social sciences and humanities, male
+corresponding authors have slightly higher retraction rates than females. Overall, the
+38
+
+MFRR values for corresponding authors across various disciplines are highly consistent
+with those for first authors, reinforcing the robustness of the first-author analysis.
+
+Figure S4. RR and MFRR across subject fields. Error bars indicate 95% confidence
+intervals.
+
+Country variations of retractions by gender
+Among the ten countries with the highest number of retracted articles by corresponding
+authors, the top nine countries are the same as for first authors, with Egypt replacing
+Saudi Arabia in the tenth position. In half of these countries, no significant gender
+difference is observed in the retraction rates of corresponding authors (Figure S5).
+China has a higher retraction rate for female corresponding authors, while the United
+States, Iran, Pakistan, and Egypt show higher retraction rates for male corresponding
+authors.
+
+39
+
+Figure S5. RR and MFRR across countries. Error bars indicate 95% confidence
+intervals.
+
+Cross-analysis of disciplines and retraction reasons
+In biomedical and health sciences and life and earth sciences, male corresponding
+authors have higher retraction rates for the majority of retraction reasons (Figure S6).
+In contrast, in mathematics and computer science, female corresponding authors have
+higher retraction rates for most retraction reasons. In physical sciences and engineering,
+as well as social sciences and humanities, there is no significant gender difference in
+retraction rates for most retraction reasons. However, in physical sciences and
+engineering, male corresponding authors have a higher retraction rate for “plagiarism”,
+while in social sciences and humanities, male corresponding authors show higher
+retraction rates for “authorship issues”, “duplication”, and “plagiarism”.
+
+40
+
+41
+
+Figure S6. Cross-analysis of RR and MFRR by subject field and retraction reason.
+Error bars indicate 95% confidence intervals.
+
+42
+
+

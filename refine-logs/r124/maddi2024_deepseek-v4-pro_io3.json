@@ -1,0 +1,91 @@
+{
+  "run_id": "r8",
+  "paper": "maddi2024",
+  "model": "deepseek-v4-pro",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782890150,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/maddi2024_deepseek-v4-pro_io3.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 29.2,
+    "usage": {
+      "completion": 1832,
+      "prompt": 10389
+    },
+    "finish": "stop",
+    "n_content_chars": 4783
+  },
+  "llm_response_chars": 4783,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.33,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 2149,
+    "stderr_chars": 0
+  },
+  "stdout": "============================================================\nDATA UNAVAILABLE: The Publons/WoS dataset described in Maddi & Miotti (2024) is not provided.\nThe paper's numerical results cannot be reproduced from local files.\nBelow we report the key values as reported in the paper, labeled PAPER_REPORTED.\nNo synthetic data will be used to mimic the original analysis.\n============================================================\n\nPAPER_REPORTED: Sample size after filtering and outlier removal: 57,482 publications\nPAPER_REPORTED: Average reviewer report length: 416.3 words\nPAPER_REPORTED: Median reviewer report length: 302 words\nPAPER_REPORTED: Report length categories (Fisher discretization) and distribution:\n  <232 words      : 23,532 (41%)\n  232–535 words   : 18,041 (31%)\n  536–946 words   : 10,123 (18%)\n  947–1,612 words : 4,532 (7.9%)\n  1,613–2,891 words: 1,254 (2.2%)\nPAPER_REPORTED: Threshold for significant positive association: >= 947 words\nPAPER_REPORTED: Regression model – Generalized Linear Model with log(1+citations) as DV\nPAPER_REPORTED: Independent variable: discretized word count (reference: <232 words)\nPAPER_REPORTED: Control variables: journal impact factor, discipline, #funders, #countries, publication year, open access\nPAPER_REPORTED: The coefficients for [947,1612] and [1613,2891] word categories are positive and significant, indicating longer reports are associated with higher citation counts.\nPAPER_REPORTED: Diagnostic tests: VIF < 5, no multicollinearity; robust standard errors after heteroscedasticity detection.\nPAPER_REPORTED: After removal of 30 influential observations (Cook's D >0.02, Hat >0.01), N = 57,452 (approx.) for final model.\n\nCONCLUSION (from paper):\nThere is a statistically significant positive relationship between the length of reviewer reports\n(beginning at 947 words) and the citations received by publications. This supports the hypothesis\nthat longer reports reflect more thorough reviews, leading to higher quality and visibility.\nHowever, the authors caution about selection bias in the Publons dataset and suggest\nfurther research with random samples and open peer review data.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.95,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "e paper-numbers-as-computed",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": true,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "PAPER_REPORTED": 6
+    },
+    "n_result_lines": 6
+  },
+  "status": "DONE",
+  "t_end": 1782890180
+}

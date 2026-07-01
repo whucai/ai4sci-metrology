@@ -1,0 +1,441 @@
+{
+  "paper_id": "bentley2023_disruption",
+  "title": "Is disruption decreasing, or is it accelerating?",
+  "venue": "Advances in Complex Systems",
+  "year": 2023,
+  "task_type": "strict",
+  "data_source": "SciSciNet (same as Park2023), 10 shards",
+  "pre_computed_date": "2026-06-17",
+  "methodology": "Citation-weighted disruption index: mCD5(t) = Σ(cit_i * CD5_i) / Σ(cit_i). Tests whether CD5 decline (Park2023) is an artifact of exponential growth. Key claim: weighted CD close to zero since ~1970, modest increase since 2000.",
+  "filters": {
+    "year_range": [
+      1945,
+      2010
+    ],
+    "require_cd_score": true,
+    "require_citations": true
+  },
+  "gold_results": {
+    "sample_N": 469855,
+    "years_count": 66,
+    "unweighted": {
+      "cd_1945_mean": 0.03597944,
+      "cd_2010_mean": 0.00119062,
+      "decline_pct": 96.6908,
+      "overall_mean": 0.005724
+    },
+    "weighted": {
+      "cd_1945_mean": 0.07698916,
+      "cd_2010_mean": -0.00093018,
+      "decline_pct": 101.2082,
+      "overall_mean": 0.01437857,
+      "post_1970_mean": 0.01044947,
+      "change_2000_2010": -0.00341334
+    },
+    "yearly": {
+      "1945": {
+        "n": 193,
+        "mean_cd": 0.03597944,
+        "weighted_cd": 0.07698916,
+        "total_citations": 4357
+      },
+      "1946": {
+        "n": 202,
+        "mean_cd": 0.03914954,
+        "weighted_cd": 0.04865791,
+        "total_citations": 4532
+      },
+      "1947": {
+        "n": 266,
+        "mean_cd": 0.05884714,
+        "weighted_cd": 0.1061012,
+        "total_citations": 5794
+      },
+      "1948": {
+        "n": 302,
+        "mean_cd": 0.03237624,
+        "weighted_cd": 0.07351963,
+        "total_citations": 8690
+      },
+      "1949": {
+        "n": 344,
+        "mean_cd": 0.03462946,
+        "weighted_cd": 0.11559587,
+        "total_citations": 11157
+      },
+      "1950": {
+        "n": 464,
+        "mean_cd": 0.03267085,
+        "weighted_cd": 0.04753059,
+        "total_citations": 12131
+      },
+      "1951": {
+        "n": 478,
+        "mean_cd": 0.03822943,
+        "weighted_cd": 0.05922498,
+        "total_citations": 13975
+      },
+      "1952": {
+        "n": 475,
+        "mean_cd": 0.0375323,
+        "weighted_cd": 0.06548972,
+        "total_citations": 19946
+      },
+      "1953": {
+        "n": 565,
+        "mean_cd": 0.04035543,
+        "weighted_cd": 0.10140858,
+        "total_citations": 19786
+      },
+      "1954": {
+        "n": 555,
+        "mean_cd": 0.04091205,
+        "weighted_cd": 0.18948866,
+        "total_citations": 24260
+      },
+      "1955": {
+        "n": 664,
+        "mean_cd": 0.03610872,
+        "weighted_cd": 0.05770897,
+        "total_citations": 18892
+      },
+      "1956": {
+        "n": 656,
+        "mean_cd": 0.02803504,
+        "weighted_cd": 0.17447971,
+        "total_citations": 22227
+      },
+      "1957": {
+        "n": 770,
+        "mean_cd": 0.03021974,
+        "weighted_cd": 0.07886184,
+        "total_citations": 26367
+      },
+      "1958": {
+        "n": 875,
+        "mean_cd": 0.03765072,
+        "weighted_cd": 0.11752613,
+        "total_citations": 34674
+      },
+      "1959": {
+        "n": 939,
+        "mean_cd": 0.02443694,
+        "weighted_cd": 0.14966954,
+        "total_citations": 39368
+      },
+      "1960": {
+        "n": 1097,
+        "mean_cd": 0.03176006,
+        "weighted_cd": 0.23973346,
+        "total_citations": 42439
+      },
+      "1961": {
+        "n": 1246,
+        "mean_cd": 0.02944417,
+        "weighted_cd": 0.0834479,
+        "total_citations": 42233
+      },
+      "1962": {
+        "n": 1322,
+        "mean_cd": 0.0260042,
+        "weighted_cd": 0.06180456,
+        "total_citations": 42469
+      },
+      "1963": {
+        "n": 1529,
+        "mean_cd": 0.02709148,
+        "weighted_cd": 0.24099109,
+        "total_citations": 78833
+      },
+      "1964": {
+        "n": 1873,
+        "mean_cd": 0.02333256,
+        "weighted_cd": 0.04142805,
+        "total_citations": 66129
+      },
+      "1965": {
+        "n": 2137,
+        "mean_cd": 0.02192734,
+        "weighted_cd": 0.06043504,
+        "total_citations": 75834
+      },
+      "1966": {
+        "n": 2362,
+        "mean_cd": 0.02026658,
+        "weighted_cd": 0.06519506,
+        "total_citations": 78833
+      },
+      "1967": {
+        "n": 2604,
+        "mean_cd": 0.02053184,
+        "weighted_cd": 0.06591488,
+        "total_citations": 96262
+      },
+      "1968": {
+        "n": 2919,
+        "mean_cd": 0.01693986,
+        "weighted_cd": 0.04065194,
+        "total_citations": 103875
+      },
+      "1969": {
+        "n": 3131,
+        "mean_cd": 0.01637549,
+        "weighted_cd": 0.10081433,
+        "total_citations": 125625
+      },
+      "1970": {
+        "n": 3438,
+        "mean_cd": 0.01237388,
+        "weighted_cd": 0.05366854,
+        "total_citations": 127518
+      },
+      "1971": {
+        "n": 3847,
+        "mean_cd": 0.01401669,
+        "weighted_cd": 0.03794968,
+        "total_citations": 128693
+      },
+      "1972": {
+        "n": 3962,
+        "mean_cd": 0.01447916,
+        "weighted_cd": 0.04377818,
+        "total_citations": 139796
+      },
+      "1973": {
+        "n": 4324,
+        "mean_cd": 0.01219828,
+        "weighted_cd": 0.02191471,
+        "total_citations": 155318
+      },
+      "1974": {
+        "n": 4461,
+        "mean_cd": 0.01315561,
+        "weighted_cd": 0.02419524,
+        "total_citations": 169043
+      },
+      "1975": {
+        "n": 4385,
+        "mean_cd": 0.01222943,
+        "weighted_cd": 0.03736272,
+        "total_citations": 160005
+      },
+      "1976": {
+        "n": 4702,
+        "mean_cd": 0.00879726,
+        "weighted_cd": 0.02508749,
+        "total_citations": 159325
+      },
+      "1977": {
+        "n": 5015,
+        "mean_cd": 0.01039612,
+        "weighted_cd": 0.07627452,
+        "total_citations": 200962
+      },
+      "1978": {
+        "n": 5402,
+        "mean_cd": 0.01004603,
+        "weighted_cd": 0.02739801,
+        "total_citations": 188696
+      },
+      "1979": {
+        "n": 5530,
+        "mean_cd": 0.007985,
+        "weighted_cd": 0.05375431,
+        "total_citations": 219476
+      },
+      "1980": {
+        "n": 5923,
+        "mean_cd": 0.00700156,
+        "weighted_cd": 0.0231743,
+        "total_citations": 225234
+      },
+      "1981": {
+        "n": 6283,
+        "mean_cd": 0.00835835,
+        "weighted_cd": 0.03065362,
+        "total_citations": 245447
+      },
+      "1982": {
+        "n": 6413,
+        "mean_cd": 0.00735896,
+        "weighted_cd": 0.01662756,
+        "total_citations": 243310
+      },
+      "1983": {
+        "n": 6650,
+        "mean_cd": 0.00877308,
+        "weighted_cd": 0.0209211,
+        "total_citations": 243460
+      },
+      "1984": {
+        "n": 6948,
+        "mean_cd": 0.00818783,
+        "weighted_cd": 0.01925216,
+        "total_citations": 272185
+      },
+      "1985": {
+        "n": 7256,
+        "mean_cd": 0.00649098,
+        "weighted_cd": 0.01439752,
+        "total_citations": 290222
+      },
+      "1986": {
+        "n": 7855,
+        "mean_cd": 0.00638483,
+        "weighted_cd": 0.04478439,
+        "total_citations": 312526
+      },
+      "1987": {
+        "n": 8267,
+        "mean_cd": 0.00553146,
+        "weighted_cd": 0.10725469,
+        "total_citations": 389220
+      },
+      "1988": {
+        "n": 9742,
+        "mean_cd": 0.00520242,
+        "weighted_cd": 0.01181439,
+        "total_citations": 432144
+      },
+      "1989": {
+        "n": 10104,
+        "mean_cd": 0.00505461,
+        "weighted_cd": 0.02038642,
+        "total_citations": 423953
+      },
+      "1990": {
+        "n": 10433,
+        "mean_cd": 0.00512757,
+        "weighted_cd": 0.01700632,
+        "total_citations": 496769
+      },
+      "1991": {
+        "n": 10825,
+        "mean_cd": 0.00556771,
+        "weighted_cd": 0.01223625,
+        "total_citations": 477482
+      },
+      "1992": {
+        "n": 11029,
+        "mean_cd": 0.00475517,
+        "weighted_cd": 0.00823072,
+        "total_citations": 528662
+      },
+      "1993": {
+        "n": 10965,
+        "mean_cd": 0.00545702,
+        "weighted_cd": 0.00761784,
+        "total_citations": 501450
+      },
+      "1994": {
+        "n": 10975,
+        "mean_cd": 0.00584449,
+        "weighted_cd": 0.00693805,
+        "total_citations": 540981
+      },
+      "1995": {
+        "n": 11214,
+        "mean_cd": 0.00485492,
+        "weighted_cd": 0.00662343,
+        "total_citations": 588911
+      },
+      "1996": {
+        "n": 12151,
+        "mean_cd": 0.00490158,
+        "weighted_cd": 0.02939218,
+        "total_citations": 718890
+      },
+      "1997": {
+        "n": 12372,
+        "mean_cd": 0.00421483,
+        "weighted_cd": 0.0086255,
+        "total_citations": 692771
+      },
+      "1998": {
+        "n": 12565,
+        "mean_cd": 0.00377447,
+        "weighted_cd": 0.00777569,
+        "total_citations": 731652
+      },
+      "1999": {
+        "n": 13219,
+        "mean_cd": 0.00306739,
+        "weighted_cd": -0.00049829,
+        "total_citations": 805545
+      },
+      "2000": {
+        "n": 14133,
+        "mean_cd": 0.00415038,
+        "weighted_cd": 0.00248316,
+        "total_citations": 900775
+      },
+      "2001": {
+        "n": 14671,
+        "mean_cd": 0.00325196,
+        "weighted_cd": 0.00079402,
+        "total_citations": 946700
+      },
+      "2002": {
+        "n": 15709,
+        "mean_cd": 0.00277586,
+        "weighted_cd": 0.00130135,
+        "total_citations": 993520
+      },
+      "2003": {
+        "n": 16730,
+        "mean_cd": 0.00232767,
+        "weighted_cd": -0.00248471,
+        "total_citations": 1050878
+      },
+      "2004": {
+        "n": 17836,
+        "mean_cd": 0.00230383,
+        "weighted_cd": 0.00143095,
+        "total_citations": 1084836
+      },
+      "2005": {
+        "n": 18995,
+        "mean_cd": 0.00230602,
+        "weighted_cd": -0.0016375,
+        "total_citations": 1060333
+      },
+      "2006": {
+        "n": 20447,
+        "mean_cd": 0.0016278,
+        "weighted_cd": -0.00023521,
+        "total_citations": 1093765
+      },
+      "2007": {
+        "n": 20724,
+        "mean_cd": 0.00180825,
+        "weighted_cd": -0.00222478,
+        "total_citations": 1017252
+      },
+      "2008": {
+        "n": 21519,
+        "mean_cd": 0.00123537,
+        "weighted_cd": -0.00208339,
+        "total_citations": 999105
+      },
+      "2009": {
+        "n": 22259,
+        "mean_cd": 0.00110852,
+        "weighted_cd": 0.00129637,
+        "total_citations": 956073
+      },
+      "2010": {
+        "n": 22609,
+        "mean_cd": 0.00119062,
+        "weighted_cd": -0.00093018,
+        "total_citations": 923426
+      }
+    }
+  },
+  "key_claims": {
+    "weighted_cd_near_zero_post1970": false,
+    "modest_increase_since_2000": false,
+    "unweighted_decline_is_artifact": false
+  },
+  "arxiv_id": "2306.14364",
+  "md_path": "Advances in Complex Systems/2306.14364.md"
+}

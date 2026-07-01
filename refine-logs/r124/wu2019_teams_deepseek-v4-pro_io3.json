@@ -1,0 +1,89 @@
+{
+  "run_id": "r12",
+  "paper": "wu2019_teams",
+  "model": "deepseek-v4-pro",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782890257,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": true
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/wu2019_teams_deepseek-v4-pro_io3.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [
+    "reproduce.py",
+    "reproduce_final.py",
+    "reproduce_fix1.py",
+    "reproduce_fix2.py"
+  ],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 31.3,
+    "usage": {
+      "completion": 2003,
+      "prompt": 869
+    },
+    "finish": "stop",
+    "n_content_chars": 2520
+  },
+  "llm_response_chars": 2520,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.56,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 279,
+    "stderr_chars": 732
+  },
+  "stdout": "Columns in dataset: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\nUsing 'author_count' as team_size.\nSample size after cleaning: 40000\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 28, in <module>\n    df_clean['team_decile'] = pd.qcut(df_clean['team_size'], 10, labels=False) + 1  # labels 1-10\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/reshape/tile.py\", line 340, in qcut\n    fac, bins = _bins_to_cuts(\n                ^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/reshape/tile.py\", line 443, in _bins_to_cuts\n    raise ValueError(\nValueError: Bin edges must be unique: Index([1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 3.0, 4.0, 4.0, 6.0, 61.0], dtype='float64').\nYou can drop duplicate edges by setting the 'duplicates' kwarg\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 0.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.75,
+    "final_ecrf": 0.75,
+    "caps_applied": []
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 2
+    },
+    "n_result_lines": 2
+  },
+  "status": "DONE",
+  "t_end": 1782890289
+}

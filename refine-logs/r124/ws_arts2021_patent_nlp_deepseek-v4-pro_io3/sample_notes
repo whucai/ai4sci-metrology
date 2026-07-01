@@ -1,0 +1,6 @@
+# Sample Notes — arts2021_patent_nlp
+
+N = all USPTO utility patents to 2018-05; window = USPTO coverage to 2018-05; unit = patent.
+Filters: utility patents, award-linked case-control subset.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

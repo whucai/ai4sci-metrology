@@ -1,0 +1,6 @@
+# Sample Notes — gebhart2023_math_framework
+
+N = 630000; window = 1893-2019; unit = paper.
+Filters: APS physics, Nobel laureate subset.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

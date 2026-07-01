@@ -1,0 +1,27 @@
+{
+  "io": 3,
+  "n_runs": 40,
+  "n_done": 17,
+  "mean_ecrf": 0.64,
+  "by_paper": {
+    "maddi2024": 0.5,
+    "funk2017": 0.9,
+    "bikard2013": 0.55,
+    "wu2019_teams": 0.625,
+    "park2023_disruptive": 0.7,
+    "bentley2023_disruption": 0.675,
+    "obadage2024_citations_repro": 0.5,
+    "liu2018_hotstreaks": 0.5,
+    "arts2021_patent_nlp": 0.838
+  },
+  "by_model": {
+    "deepseek-v4-pro": 0.644,
+    "qwen3-32b": 0.634
+  },
+  "process_evidence_totals": {
+    "execution_succeeded": 17,
+    "real_data_used": 13,
+    "synthetic_generated": 7,
+    "ref_code_used": 3
+  }
+}

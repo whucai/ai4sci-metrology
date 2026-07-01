@@ -1,0 +1,83 @@
+import pandas as pd
+import numpy as np
+from scipy.stats import pearsonr
+from scipy.stats import norm
+import math
+
+# Load the raw data
+# Assumes the CSV contains columns: 'wos_citations' (observed WoS count) and 'missed_citations' (additional found)
+df = pd.read_csv('/workspace/raw_data/data_citerror.csv')
+
+# Verify columns
+print("Columns in dataset:", df.columns.tolist())
+
+# We assume the necessary columns exist; if not, adapt.
+# Extract the relevant columns
+wos = df['wos_citations']
+missed = df['missed_citations']
+true_cites = wos + missed
+
+# Basic counts
+N = len(df)
+total_wos = wos.sum()
+total_missed = missed.sum()
+total_true = true_cites.sum()
+
+# Percent of citations missed (as percentage of true total)
+pct_missed = 100.0 * total_missed / total_true
+
+# Averages
+avg_wos = wos.mean()
+avg_missed = missed.mean()
+avg_true = true_cites.mean()
+
+# Percent of papers with one or more missing citations
+pct_with_missed = 100.0 * (missed > 0).mean()
+
+# Pearson correlation between wos_citations and missed_citations
+r, p_value = pearsonr(wos, missed)
+
+# 95% confidence interval for Pearson r using Fisher z transformation
+n = N
+z = 0.5 * math.log((1 + r) / (1 - r))
+se = 1.0 / math.sqrt(n - 3)
+z_ci_lower = z - 1.96 * se
+z_ci_upper = z + 1.96 * se
+ci_lower = (math.exp(2 * z_ci_lower) - 1) / (math.exp(2 * z_ci_lower) + 1)
+ci_upper = (math.exp(2 * z_ci_upper) - 1) / (math.exp(2 * z_ci_upper) + 1)
+
+# ------------------------------
+# Print all key results as required
+print("=== Empirical citation error study results (data_citerror.csv) ===")
+print(f"RESULT sample_records = {N}")
+print(f"RESULT total_wos_citations = {total_wos}")
+print(f"RESULT total_missed_citations = {total_missed}")
+print(f"RESULT total_true_citations = {total_true}")
+print(f"RESULT percent_missed_citations = {pct_missed}")
+print(f"RESULT average_wos_citations_per_paper = {avg_wos}")
+print(f"RESULT average_missed_citations_per_paper = {avg_missed}")
+print(f"RESULT average_true_citations_per_paper = {avg_true}")
+print(f"RESULT percent_papers_with_missed = {pct_with_missed}")
+print(f"RESULT pearson_r_wos_missed = {r}")
+print(f"RESULT pearson_r_95CI = [{ci_lower}, {ci_upper}]")
+print(f"RESULT p_value_correlation = {p_value}")
+
+# Frequency table of missed citations (matching Table 2)
+freq_table = missed.value_counts().sort_index()
+print("\n=== Distribution of missed citations (frequency) ===")
+print("missed_citations\tfrequency")
+for missed_val, count in freq_table.items():
+    print(f"{missed_val}\t\t\t{count}")
+
+# Optional: compare with paper reported values
+print("\n=== Comparison with paper-reported values ===")
+print("PAPER_REPORTED total_wos_citations = 6120")
+print("PAPER_REPORTED total_missed_citations = 255")
+print("PAPER_REPORTED percent_missed_citations = 4.0")
+print("PAPER_REPORTED average_wos_citations_per_paper = 16.4")
+print("PAPER_REPORTED average_missed_citations_per_paper = 0.7")
+print("PAPER_REPORTED average_true_citations_per_paper = 17.1")
+print("PAPER_REPORTED percent_papers_with_missed = 29.4")
+print("PAPER_REPORTED pearson_r_wos_missed = 0.31")
+print("PAPER_REPORTED pearson_r_95CI = [0.22, 0.40]")
+print("PAPER_REPORTED distribution matches Table 2")
