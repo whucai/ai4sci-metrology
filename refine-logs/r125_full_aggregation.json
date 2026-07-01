@@ -1,0 +1,226 @@
+{
+  "n_runs": 105,
+  "n_papers": 18,
+  "by_io": {
+    "1": 0.499,
+    "2": 0.601,
+    "3": 0.591
+  },
+  "by_io_model": {
+    "IO1_qwen3-32b": 0.5,
+    "IO1_deepseek-v4-pro": 0.497,
+    "IO2_qwen3-32b": 0.604,
+    "IO2_deepseek-v4-pro": 0.597,
+    "IO3_qwen3-32b": 0.583,
+    "IO3_deepseek-v4-pro": 0.599
+  },
+  "monotonicity_io1_lt_io3": "11/18 papers",
+  "per_paper": {
+    "arts2021": {
+      "io1": 0.5,
+      "io2": 0.663,
+      "io3": 0.475,
+      "mono_io1_lt_io3": false
+    },
+    "arts2021_patent_nlp": {
+      "io1": 0.5,
+      "io2": 0.5,
+      "io3": 0.838,
+      "mono_io1_lt_io3": true
+    },
+    "bentley2023_disruption": {
+      "io1": 0.475,
+      "io2": 0.675,
+      "io3": 0.675,
+      "mono_io1_lt_io3": true
+    },
+    "bikard2013": {
+      "io1": 0.5,
+      "io2": 0.5,
+      "io3": 0.55,
+      "mono_io1_lt_io3": true
+    },
+    "donner2024_data_inaccuracy": {
+      "io1": 0.5,
+      "io2": 0.5,
+      "io3": 0.55,
+      "mono_io1_lt_io3": true
+    },
+    "funk2017": {
+      "io1": 0.5,
+      "io2": 0.6,
+      "io3": 0.9,
+      "mono_io1_lt_io3": true
+    },
+    "gebhart2023_math_framework": {
+      "io1": 0.5,
+      "io2": 0.55,
+      "io3": 0.775,
+      "mono_io1_lt_io3": true
+    },
+    "ke2015_sleeping_beauties": {
+      "io1": 0.5,
+      "io2": 0.9,
+      "io3": 0.5,
+      "mono_io1_lt_io3": false
+    },
+    "liu2018_hotstreaks": {
+      "io1": 0.5,
+      "io2": 0.5,
+      "io3": 0.5,
+      "mono_io1_lt_io3": false
+    },
+    "maddi2024": {
+      "io1": 0.5,
+      "io2": 0.5,
+      "io3": 0.5,
+      "mono_io1_lt_io3": false
+    },
+    "obadage2024_citations_repro": {
+      "io1": 0.5,
+      "io2": 0.75,
+      "io3": 0.5,
+      "mono_io1_lt_io3": false
+    },
+    "park2023_disruptive": {
+      "io1": 0.5,
+      "io2": 0.875,
+      "io3": 0.65,
+      "mono_io1_lt_io3": true
+    },
+    "petersen2024": {
+      "io1": 0.5,
+      "io2": 0.5,
+      "io3": 0.575,
+      "mono_io1_lt_io3": true
+    },
+    "schaper2025_frontier": {
+      "io1": 0.5,
+      "io2": 0.5,
+      "io3": 0.5,
+      "mono_io1_lt_io3": false
+    },
+    "sun2023_ranking_mobility": {
+      "io1": 0.5,
+      "io2": 0.525,
+      "io3": 0.525,
+      "mono_io1_lt_io3": true
+    },
+    "vasarhelyi2023_who_benefits": {
+      "io1": 0.5,
+      "io2": 0.5,
+      "io3": 0.5,
+      "mono_io1_lt_io3": false
+    },
+    "wu2019_teams": {
+      "io1": 0.5,
+      "io2": 0.7,
+      "io3": 0.625,
+      "mono_io1_lt_io3": true
+    },
+    "zheng2025_male_female_retractions": {
+      "io1": 0.5,
+      "io2": 0.575,
+      "io3": 0.575,
+      "mono_io1_lt_io3": true
+    }
+  },
+  "component_x_io_means": {
+    "data_source": {
+      "1": 0.5,
+      "2": 0.917,
+      "3": 0.868
+    },
+    "sample": {
+      "1": 0.986,
+      "2": 0.972,
+      "3": 0.941
+    },
+    "indicator": {
+      "1": 0.857,
+      "2": 0.847,
+      "3": 0.809
+    },
+    "model": {
+      "1": 0.6,
+      "2": 0.5,
+      "3": 0.441
+    },
+    "result": {
+      "1": 0.529,
+      "2": 0.556,
+      "3": 0.603
+    },
+    "claim": {
+      "1": 1.0,
+      "2": 0.986,
+      "3": 0.985
+    }
+  },
+  "component_io3_minus_io1_slope": {
+    "data_source": 0.368,
+    "sample": -0.045,
+    "indicator": -0.048,
+    "model": -0.159,
+    "result": 0.074,
+    "claim": -0.015
+  },
+  "mixed_effects": {
+    "summary": "mixed-model failed: cannot import name '_lazywhere' from 'scipy._lib._util' (/home/caile/.local/lib/python3.11/site-packages/scipy/_lib/_util.py)",
+    "interaction_terms": {}
+  },
+  "table1_3layer": {
+    "Layer 1 — code observability ≠ uptake": {
+      "code present + refcode used": {
+        "mechanism": "code present + refcode used",
+        "n": 4,
+        "mean_ecrf": 0.6,
+        "floor_break_rate": 0.25,
+        "synth_rate": 0.75
+      },
+      "code present + refcode NOT used": {
+        "mechanism": "code present + refcode not used",
+        "n": 30,
+        "mean_ecrf": 0.59,
+        "floor_break_rate": 0.5,
+        "synth_rate": 0.467
+      },
+      "interpretation": "Code observability does not guarantee code uptake; refcode_used runs have lower/similar ECRF and higher synth."
+    },
+    "Layer 2 — uptake (real data + no synthesis) drives floor-break": {
+      "real_data + synth=False": {
+        "mechanism": "real_data ∧ ¬synth",
+        "n": 15,
+        "mean_ecrf": 0.703,
+        "floor_break_rate": 1.0,
+        "synth_rate": 0.0
+      },
+      "real_data + synth=True": {
+        "mechanism": "real_data ∧ synth",
+        "n": 10,
+        "mean_ecrf": 0.495,
+        "floor_break_rate": 0.0,
+        "synth_rate": 1.0
+      },
+      "interpretation": "real_data ∧ ¬synth is necessary + ~sufficient for floor-break (100%); synth collapses to 0.50."
+    },
+    "Layer 3 — synthetic gate is structural (agentic shortcut collapse)": {
+      "synth=True overall": {
+        "mechanism": "synth=True",
+        "n": 17,
+        "mean_ecrf": 0.497,
+        "floor_break_rate": 0.0,
+        "synth_rate": 1.0
+      },
+      "synth=False overall": {
+        "mechanism": "synth=False",
+        "n": 17,
+        "mean_ecrf": 0.685,
+        "floor_break_rate": 0.941,
+        "synth_rate": 0.0
+      },
+      "interpretation": "synth=True ⇒ ECRF≈0.50 (gate c mechanical); this is an agentic failure mode, not noise."
+    }
+  },
+  "theorem_claim": "Proposition (Evidence-Chain Uptake). Let IO denote material observability (what evidence the agent is given), U denote agentic uptake (the agent incorporating real data into its execution chain and avoiding synthetic substitution), and F denote reconstruction fidelity (ECRF). Then: (i) IO is necessary but not sufficient for F; (ii) U mediates IO→F; specifically floor-break (F>0.50) is achieved iff (real_data_used ∧ ¬synth), and is independent of refcode_used; (iii) synth (synthetic substitution) is a structural agentic failure mode that collapses F to the 0.50 gate regardless of IO. Corollary: code availability (IO3 ref_code_available) does not guarantee code uptake (refcode_used), and code uptake does not guarantee grounding (¬synth). Evidence: R124, n=34 DONE IO3 runs — real_data∧¬synth: 100% break (mean 0.703); synth=True: 0% break (mean 0.497); refcode_used: 25% break (3/4 still synthesized)."
+}
