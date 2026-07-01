@@ -1,0 +1,86 @@
+{
+  "run_id": "r3",
+  "paper": "arts2021",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782806934,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/arts2021_qwen3-32b_io2.json",
+  "io2_data_files": [
+    "gold_sample.parquet",
+    "patent_indicators.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 149.4,
+    "usage": {
+      "completion": 12381,
+      "prompt": 14657
+    },
+    "finish": "stop",
+    "n_content_chars": 8995
+  },
+  "llm_response_chars": 8995,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.07,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 921,
+    "stderr_chars": 2882
+  },
+  "stdout": "Loading raw data...\nIdentified 1 indicators: ['backward_cosine']\nDATA_SUB: Dataset size is 0 (paper reports n=518). Results computed on provided raw data.\n\n============================================================\nQUANTITATIVE REPRODUCTION RESULTS\n============================================================\n\nRESULT backward_cosine_mean_award = nan\nRESULT backward_cosine_mean_control = nan\nRESULT backward_cosine_t_stat = nan\nRESULT backward_cosine_cohens_d = 0.000\nPAPER_REPORTED backward_cosine_mean_award = 0.113\nPAPER_REPORTED backward_cosine_mean_control = -0.113\nPAPER_REPORTED backward_cosine_t_stat = -2.587\nPAPER_REPORTED backward_cosine_cohens_d = -0.227\nRESULT backward_cosine_logit_fit_failed = zero-size array to reduction operation maximum which has no identity\n\n============================================================\nFINAL CONCLUSION\n============================================================\n",
+  "stderr": "1/site-packages/statsmodels/discrete/discrete_model.py\", line 475, in __init__\n    super().__init__(endog, exog, offset=offset, check_rank=check_rank,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/discrete/discrete_model.py\", line 185, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 270, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 95, in __init__\n    self.data = self._handle_data(endog, exog, missing, hasconst,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 135, in _handle_data\n    data = handle_data(endog, exog, missing, hasconst, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 675, in handle_data\n    return klass(endog, exog=exog, missing=missing, hasconst=hasconst,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 88, in __init__\n    self._handle_constant(hasconst)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 132, in _handle_constant\n    exog_max = np.max(self.exog, axis=0)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2810, in max\n    return _wrapreduction(a, np.maximum, 'max', axis, None, out,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 88, in _wrapreduction\n    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: zero-size array to reduction operation maximum which has no identity\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.775,
+    "final_ecrf": 0.775,
+    "caps_applied": []
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "DATA_SUB": 2,
+      "COMPUTED": 12
+    },
+    "n_result_lines": 14
+  },
+  "status": "DONE",
+  "t_end": 1782807084
+}

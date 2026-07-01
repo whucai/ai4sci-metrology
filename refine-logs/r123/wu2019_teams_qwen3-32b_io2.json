@@ -1,0 +1,87 @@
+{
+  "run_id": "r11",
+  "paper": "wu2019_teams",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807227,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/wu2019_teams_qwen3-32b_io2.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 114.3,
+    "usage": {
+      "completion": 9135,
+      "prompt": 615
+    },
+    "finish": "stop",
+    "n_content_chars": 4450
+  },
+  "llm_response_chars": 4450,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.87,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 1207
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3805, in get_loc\n    return self._engine.get_loc(casted_key)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"index.pyx\", line 167, in pandas._libs.index.IndexEngine.get_loc\n  File \"index.pyx\", line 196, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item\nKeyError: 'authors'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/workspace/script.py\", line 37, in <module>\n    df['authors_parsed'] = df[col_authors].apply(parse_list)\n                           ~~^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4102, in __getitem__\n    indexer = self.columns.get_loc(key)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3812, in get_loc\n    raise KeyError(key) from err\nKeyError: 'authors'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 0.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.75,
+    "final_ecrf": 0.6,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {},
+    "n_result_lines": 0
+  },
+  "status": "DONE",
+  "t_end": 1782807343
+}

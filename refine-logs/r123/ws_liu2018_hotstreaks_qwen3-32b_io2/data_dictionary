@@ -1,0 +1,16 @@
+# Data Dictionary — liu2018_hotstreaks
+
+## Data source
+Career histories: artists (artchive/artnet), directors (IMDb), scientists (Web of Science + APS) — Career impact time-series across 3 domains
+Access: public; Provenance: github.com/lu-liu/hotstreaks (code_bursts.py + data.zip)
+
+## Key variables
+- Unit of analysis: individual career
+- Time window: career-spanning
+- Sample N: pending-exact
+- Filter rules: per-domain split (artists/directors/scientists)
+
+## Indicator definitions
+- Formula: Hot-streak model (random top-hit ordering) vs (b) right-trapezoid (c) isosceles-trapezoid (d) quadratic (e) tent (f) left-trapezoid; relative position P(Ñ) of top-3 hits within top-6
+- Parameters: top-k=6, KS p-value≥0.05 = pass
+- Computation steps: build career impact series, fit hot-streak + alternatives, KS test on P(Ñ)

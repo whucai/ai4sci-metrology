@@ -1,0 +1,10 @@
+# Data Dictionary — maddi2024 (IO₂, no executable code)
+
+Original: Publons (reviewer-report word counts) matched to Web of Science (citations), 2009–2020, N=57,482.
+DATA STATUS: Publons access has changed since 2024; the raw data is NOT available in this package.
+No raw_data file is provided. You have only this documentation.
+
+Variables:
+  DV: log(1 + citations)  [Thelwall & Wilson 2014 GLM, log-link]
+  IV: reviewer-report word count, Fisher-discretized into 5 classes; 947-word threshold for significant positive effect
+  Controls: journal impact factor, discipline, #funders, #countries, publication year

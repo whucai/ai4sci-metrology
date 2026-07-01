@@ -1,0 +1,89 @@
+{
+  "run_id": "r2",
+  "paper": "petersen2024",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782806934,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/petersen2024_deepseek-v4-pro_io2.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 195.8,
+    "usage": {
+      "completion": 10610,
+      "prompt": 13371
+    },
+    "finish": "stop",
+    "n_content_chars": 16111
+  },
+  "llm_response_chars": 16111,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.98,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 521,
+    "stderr_chars": 309
+  },
+  "stdout": "======================================================================\nEMPIRICAL ANALYSIS (using sciscinet_sample.parquet)\n======================================================================\nDataset shape: (40000, 11)\nColumns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\nRequired columns not fully present. Cannot perform exact replication. Using DATA_SUB where possible.\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 46, in <module>\n    raise ValueError(\"Dataset missing columns required for CD computation. Provide Ni,Nj,Nk or raw citation links.\")\nValueError: Dataset missing columns required for CD computation. Provide Ni,Nj,Nk or raw citation links.\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.825,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 6
+    },
+    "n_result_lines": 6
+  },
+  "status": "DONE",
+  "t_end": 1782807131
+}

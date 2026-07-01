@@ -1,0 +1,85 @@
+{
+  "run_id": "r13",
+  "paper": "park2023_disruptive",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807256,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/park2023_disruptive_qwen3-32b_io2.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 89.4,
+    "usage": {
+      "completion": 7318,
+      "prompt": 959
+    },
+    "finish": "stop",
+    "n_content_chars": 3435
+  },
+  "llm_response_chars": 3435,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.55,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1993,
+    "stderr_chars": 0
+  },
+  "stdout": "\n=== DATA_LOAD ===\nTotal papers loaded: 40000\nPapers after filter: 30540\nYear range: 1980 - 2010\n\n=== DESCRIPTIVE ===\nOverall mean CD: 0.003829\nOverall std CD: 0.054338\nAll years: [1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010]\n\n=== CD_BY_YEAR ===\n1980: mean=0.008173, N=442\n1981: mean=0.001990, N=460\n1982: mean=0.006182, N=503\n1983: mean=0.001955, N=474\n1984: mean=0.012652, N=542\n1985: mean=0.010585, N=559\n1986: mean=0.003960, N=581\n1987: mean=0.003572, N=607\n1988: mean=0.010323, N=757\n1989: mean=0.008601, N=767\n1990: mean=0.003343, N=782\n1991: mean=0.005609, N=795\n1992: mean=0.007646, N=891\n1993: mean=0.005806, N=868\n1994: mean=0.010718, N=841\n1995: mean=0.006391, N=843\n1996: mean=0.007184, N=951\n1997: mean=0.003280, N=1013\n1998: mean=0.002768, N=1009\n1999: mean=-0.000517, N=1014\n2000: mean=0.003845, N=1095\n2001: mean=0.003462, N=1088\n2002: mean=0.005583, N=1197\n2003: mean=0.002234, N=1307\n2004: mean=0.002474, N=1339\n2005: mean=0.001803, N=1466\n2006: mean=0.002090, N=1558\n2007: mean=0.000850, N=1607\n2008: mean=0.001066, N=1684\n2009: mean=0.000415, N=1752\n2010: mean=0.000159, N=1748\n\n=== RESULTS ===\nSample N = 30540\nYears = 31\nCD 1945 = nan\nCD 2010 = 0.000159\nDecline = nan%\n\nRESULT sample_N = 30540\nRESULT years_count = 31\nRESULT cd_1945_mean = nan\nRESULT cd_2010_mean = 0.000159\nRESULT decline_pct = nan\nRESULT overall_mean_cd = 0.003829\n\nPAPER_REPORTED sample_N = 469855\nPAPER_REPORTED years_count = 66\nPAPER_REPORTED cd_1945_mean = 0.035979\nPAPER_REPORTED cd_2010_mean = 0.001191\nPAPER_REPORTED decline_pct = 96.7\nPAPER_REPORTED overall_mean_cd = 0.005724\n\n=== DIFF_TABLE ===\n| Metric | Value |\n| sample_N | 30540 |\n| years_count | 31 |\n| cd_1945_mean | nan |\n| cd_2010_mean | 0.000159 |\n| decline_pct | nan |\n| overall_mean_cd | 0.003829 |\n\n=== CONCLUSION ===\nThe analysis does not show a substantial decline in the mean CD index.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 0.5,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.875,
+    "final_ecrf": 0.875,
+    "caps_applied": []
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 39,
+      "PAPER_REPORTED": 4
+    },
+    "n_result_lines": 43
+  },
+  "status": "DONE",
+  "t_end": 1782807346
+}

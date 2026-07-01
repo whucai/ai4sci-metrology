@@ -1,0 +1,82 @@
+{
+  "run_id": "r32",
+  "paper": "zheng2025_male_female_retractions",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807708,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/zheng2025_male_female_retractions_deepseek-v4-pro_io2.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 63.9,
+    "usage": {
+      "completion": 3987,
+      "prompt": 12111
+    },
+    "finish": "stop",
+    "n_content_chars": 7930
+  },
+  "llm_response_chars": 7930,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.89,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 2262,
+    "stderr_chars": 0
+  },
+  "stdout": "============================================================\nRAW DATA NOT FOUND\n============================================================\nExpected file: /workspace/raw_data/retraction_data.csv\nNo reproduction possible – printing paper-reported values only.\n\nREQUIRED DATA:\n- Article-level file with columns:\n  * gender_first_author   : 'M' or 'F' (or 'unknown')\n  * retracted             : 1 for retracted, 0 for non-retracted\n  * publication_year      : 2008-2023\n  * retraction_reason     : string (e.g., 'plagiarism','mistakes', etc.)\n    (multiple reasons may be separated, handled accordingly)\n  * subject_field         : one of the 5 Leiden Ranking fields\n  * country_first_author  : standard country name/ISO code\n  * [optional] gender_corresponding_author\n\nAll results below marked as PAPER_REPORTED.\n\nRESULT PAPER_REPORTED overall_RR_male = 6.38 per 10,000\nRESULT PAPER_REPORTED overall_RR_female = 5.19 per 10,000\nRESULT PAPER_REPORTED overall_MFRR = 1.23 (95% CI: 1.18, 1.28)\nRESULT PAPER_REPORTED MFRR fluctuates between 1.0 and 1.5, mostly >1 (2008-2023).\nRESULT PAPER_REPORTED MFRR_plagiarism = 1.99\nRESULT PAPER_REPORTED MFRR_authorship_issues = 1.73\nRESULT PAPER_REPORTED MFRR_duplication ~ >1 (smaller)\nRESULT PAPER_REPORTED MFRR_fabrication_falsification ~ >1 (smaller)\nRESULT PAPER_REPORTED MFRR_ethical_issues ~ >1 (smaller)\nRESULT PAPER_REPORTED MFRR_mistakes = not significant\nRESULT PAPER_REPORTED Biomedical & health sciences: male > female\nRESULT PAPER_REPORTED Life & earth sciences: male > female\nRESULT PAPER_REPORTED Physical sciences & engineering: male > female\nRESULT PAPER_REPORTED Mathematics & computer science: female > male\nRESULT PAPER_REPORTED Social sciences & humanities: no significant difference\nRESULT PAPER_REPORTED Iran, Pakistan, USA: male higher retraction rate\nRESULT PAPER_REPORTED Italy, China: female higher retraction rate\nRESULT PAPER_REPORTED Other top 10 countries: no significant difference\nRESULT PAPER_REPORTED overall_MFRR_corresponding = 1.20 (95% CI: 1.15, 1.25)\nRESULT PAPER_REPORTED Consistency with first-author analysis: yes.\n\nCONCLUSION: Male leading authors generally have higher retraction rates than females.\nHowever, gender disparities vary by retraction reason, discipline, and country.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 0.5,
+      "indicator": 1.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "partial sample evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.65,
+    "final_ecrf": 0.65,
+    "caps_applied": []
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 1
+    },
+    "n_result_lines": 1
+  },
+  "status": "DONE",
+  "t_end": 1782807773
+}

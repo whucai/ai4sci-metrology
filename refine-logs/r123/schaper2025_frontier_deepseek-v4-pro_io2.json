@@ -1,0 +1,87 @@
+{
+  "run_id": "r24",
+  "paper": "schaper2025_frontier",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807519,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/schaper2025_frontier_deepseek-v4-pro_io2.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 102.0,
+    "usage": {
+      "completion": 5548,
+      "prompt": 11615
+    },
+    "finish": "stop",
+    "n_content_chars": 14091
+  },
+  "llm_response_chars": 14091,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.01,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 2913,
+    "stderr_chars": 0
+  },
+  "stdout": "======================================================================\nPAPER-REPORTED RESULTS (Schaper et al. 2025, Research Policy)\n======================================================================\n\n--- Table 2, Col. 2: Frontier‑author patents and forward citations ---\nPAPER_REPORTED FrontierAuthor coefficient = 0.260 (SE 0.018) ***\nPAPER_REPORTED NonFrontierAuthor coefficient = 0.129 (SE 0.009) ***\nPAPER_REPORTED Wald test for equality: chi2(2) = 323.41, p < 0.001\n\n--- Table 2, Col. 3: Splitting non‑frontier authors ---\nPAPER_REPORTED FrontierAuthor (top‑general, ≤3y) = 0.270 (SE 0.018) ***\nPAPER_REPORTED Author, top‑general, >3y = 0.217 (SE 0.014) ***\nPAPER_REPORTED Author, top‑field, ≤3y = 0.196 (SE 0.013) ***\nPAPER_REPORTED Author, top‑field, >3y = 0.132 (SE 0.015) ***\nPAPER_REPORTED Author, no top‑journal = 0.074 (SE 0.010) ***\n\n--- Table 3: Frontier‑author patents and alternative impact ---\nPAPER_REPORTED Hit patent [0/1] OLS: FrontierAuthor = 0.035 (0.002) ***\nPAPER_REPORTED Hit patent [0/1] OLS: NonFrontierAuthor = 0.018 (0.001) ***\nPAPER_REPORTED Internal PatCit10 [0/1]: FrontierAuthor = 0.030 (0.004) ***\nPAPER_REPORTED Internal PatCit10 [0/1]: NonFrontierAuthor = 0.018 (0.002) ***\nPAPER_REPORTED Ln($-value) OLS: FrontierAuthor = 0.459 (0.025) ***\nPAPER_REPORTED Ln($-value) OLS: NonFrontierAuthor = 0.067 (0.016) ***\n\n--- Table 4: Heterogeneous effects (summary from text) ---\nPAPER_REPORTED FrontierAuthor premium largest in young scaled‑up firms\nPAPER_REPORTED Internal frontier authors: increment ~2/3 larger than other frontier‑author patents\nPAPER_REPORTED Young large firms show highest premium for internal frontier authors\n\n--- Table 5: Likelihood of frontier SNPRs (summary from text) ---\nPAPER_REPORTED FrontierAuthor patents significantly more likely to reference any science (col.1)\nPAPER_REPORTED FrontierAuthor patents contain considerably more SNPRs on average (col.2)\nPAPER_REPORTED Conditional on SNPR count, FrontierAuthor patents >2x as likely to cite frontier science (col.3)\n\n--- Supplementary results (mentioned in text) ---\nPAPER_REPORTED FrontierAuthor premium holds within firms (Table SM8)\nPAPER_REPORTED Strongest in biotechnology fields (Table SM10)\nPAPER_REPORTED Frontier SNPR patents receive ~35% more citations than no‑SNPR patents (SM12‑14)\nPAPER_REPORTED Priority (first to cite) matters for private value but not for citation impact (SM14)\n\n======================================================================\nDATA LOADING AND MODEL IMPLEMENTATION\n======================================================================\n\n*** WARNING: Original data files not found in /workspace/raw_data/.\n*** All computational results are OMITTED. Only paper‑reported values are shown.\n*** No synthetic or substitute data is used.\n\nAnalysis script complete. No computational results could be generated.\nAll key findings are printed above as PAPER_REPORTED.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 1.0,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "PAPER_REPORTED": 14
+    },
+    "n_result_lines": 14
+  },
+  "status": "DONE",
+  "t_end": 1782807622
+}

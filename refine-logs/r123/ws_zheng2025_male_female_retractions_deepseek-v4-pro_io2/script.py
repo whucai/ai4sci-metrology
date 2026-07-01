@@ -1,0 +1,180 @@
+#!/usr/bin/env python3
+"""
+Reproduction script for:
+Zheng et al. (2025) "Do male leading authors retract more articles than female
+leading authors?" Journal of Informetrics, 19(3), 101682.
+https://doi.org/10.1016/j.joi.2025.101682
+
+This script attempts to load the required dataset from /workspace/raw_data/.
+If the data is not available (as is the case here), it prints the paper's
+reported results and documents the data needed for a full reproduction.
+"""
+
+import os
+import sys
+
+import numpy as np
+import pandas as pd
+from scipy.stats import norm
+
+# ----------------------------------------------------------------------
+#  Indicator functions
+# ----------------------------------------------------------------------
+def wilson_ci_proportion(numerator, denominator, alpha=0.05):
+    """
+    Wilson score confidence interval for a proportion.
+    Returns (p, lower_bound, upper_bound) as proportions [0,1].
+    """
+    if denominator == 0:
+        return np.nan, np.nan, np.nan
+    p = numerator / denominator
+    z = norm.ppf(1 - alpha / 2)  # e.g. 1.96 for 95% CI
+    denom = 1 + z**2 / denominator
+    centre = (p + z**2 / (2 * denominator)) / denom
+    se = z * np.sqrt((p * (1 - p) + z**2 / (4 * denominator)) / denominator) / denom
+    return p, max(0.0, centre - se), min(1.0, centre + se)
+
+
+def retraction_rate_per_10k(numerator, denominator):
+    """
+    Retraction rate per 10,000 articles (‱) with Wilson 95% CI.
+    Returns (RR, CI_lower, CI_upper) in ‱.
+    """
+    p, lo, hi = wilson_ci_proportion(numerator, denominator)
+    return p * 10000, lo * 10000, hi * 10000
+
+
+def mfrr_ci(rr_male, n_male, rr_female, n_female, alpha=0.05):
+    """
+    Male/Female Retraction Ratio (MFRR) and 95% CI using the Katz method.
+    rr_male, rr_female are proportions (retracted/total).
+    n_male, n_female are total article counts for each gender.
+    """
+    if rr_male == 0 or rr_female == 0:
+        return np.nan, np.nan, np.nan
+    mfrr = rr_male / rr_female
+    # Katz variance of log(RR)
+    var_log = (1 - rr_male) / (n_male * rr_male) + (1 - rr_female) / (n_female * rr_female)
+    z = norm.ppf(1 - alpha / 2)
+    lo = np.exp(np.log(mfrr) - z * np.sqrt(var_log))
+    hi = np.exp(np.log(mfrr) + z * np.sqrt(var_log))
+    return mfrr, lo, hi
+
+
+# ----------------------------------------------------------------------
+#  Data loading
+# ----------------------------------------------------------------------
+DATA_PATH = "/workspace/raw_data/retraction_data.csv"
+
+if not os.path.exists(DATA_PATH):
+    print("=" * 60)
+    print("RAW DATA NOT FOUND")
+    print("=" * 60)
+    print(f"Expected file: {DATA_PATH}")
+    print("No reproduction possible – printing paper-reported values only.\n")
+    print("REQUIRED DATA:")
+    print("- Article-level file with columns:")
+    print("  * gender_first_author   : 'M' or 'F' (or 'unknown')")
+    print("  * retracted             : 1 for retracted, 0 for non-retracted")
+    print("  * publication_year      : 2008-2023")
+    print("  * retraction_reason     : string (e.g., 'plagiarism','mistakes', etc.)")
+    print("    (multiple reasons may be separated, handled accordingly)")
+    print("  * subject_field         : one of the 5 Leiden Ranking fields")
+    print("  * country_first_author  : standard country name/ISO code")
+    print("  * [optional] gender_corresponding_author")
+    print()
+    print("All results below marked as PAPER_REPORTED.\n")
+
+    # ---------- print paper-reported key numbers ----------
+    # overall retraction rates (per 10k) and MFRR
+    print("RESULT PAPER_REPORTED overall_RR_male = 6.38 per 10,000")
+    print("RESULT PAPER_REPORTED overall_RR_female = 5.19 per 10,000")
+    print("RESULT PAPER_REPORTED overall_MFRR = 1.23 (95% CI: 1.18, 1.28)")
+
+    # Temporal trends (summary)
+    print("RESULT PAPER_REPORTED MFRR fluctuates between 1.0 and 1.5, mostly >1 (2008-2023).")
+    
+    # Retraction reasons
+    print("RESULT PAPER_REPORTED MFRR_plagiarism = 1.99")
+    print("RESULT PAPER_REPORTED MFRR_authorship_issues = 1.73")
+    print("RESULT PAPER_REPORTED MFRR_duplication ~ >1 (smaller)")
+    print("RESULT PAPER_REPORTED MFRR_fabrication_falsification ~ >1 (smaller)")
+    print("RESULT PAPER_REPORTED MFRR_ethical_issues ~ >1 (smaller)")
+    print("RESULT PAPER_REPORTED MFRR_mistakes = not significant")
+
+    # Subject fields
+    print("RESULT PAPER_REPORTED Biomedical & health sciences: male > female")
+    print("RESULT PAPER_REPORTED Life & earth sciences: male > female")
+    print("RESULT PAPER_REPORTED Physical sciences & engineering: male > female")
+    print("RESULT PAPER_REPORTED Mathematics & computer science: female > male")
+    print("RESULT PAPER_REPORTED Social sciences & humanities: no significant difference")
+
+    # Countries (top 10)
+    print("RESULT PAPER_REPORTED Iran, Pakistan, USA: male higher retraction rate")
+    print("RESULT PAPER_REPORTED Italy, China: female higher retraction rate")
+    print("RESULT PAPER_REPORTED Other top 10 countries: no significant difference")
+
+    # Corresponding author robustness
+    print("RESULT PAPER_REPORTED overall_MFRR_corresponding = 1.20 (95% CI: 1.15, 1.25)")
+    print("RESULT PAPER_REPORTED Consistency with first-author analysis: yes.")
+
+    print("\nCONCLUSION: Male leading authors generally have higher retraction rates than females.")
+    print("However, gender disparities vary by retraction reason, discipline, and country.")
+    sys.exit(0)
+
+# ----------------------------------------------------------------------
+#  If data exists – perform full reproduction
+# ----------------------------------------------------------------------
+df = pd.read_csv(DATA_PATH)
+
+# Basic cleaning: remove rows with unknown gender
+df = df[df['gender_first_author'].isin(['M', 'F'])].copy()
+
+# Overall counts
+male_retracted = (df['retracted'] == 1) & (df['gender_first_author'] == 'M')
+female_retracted = (df['retracted'] == 1) & (df['gender_first_author'] == 'F')
+
+n_male_ret = male_retracted.sum()
+n_female_ret = female_retracted.sum()
+n_male_all = (df['gender_first_author'] == 'M').sum()
+n_female_all = (df['gender_first_author'] == 'F').sum()
+
+# Overall retraction rates (‱)
+rr_male, rr_male_lo, rr_male_hi = retraction_rate_per_10k(n_male_ret, n_male_all)
+rr_female, rr_female_lo, rr_female_hi = retraction_rate_per_10k(n_female_ret, n_female_all)
+
+# MFRR
+p_male = n_male_ret / n_male_all
+p_female = n_female_ret / n_female_all
+mfrr, mfrr_lo, mfrr_hi = mfrr_ci(p_male, n_male_all, p_female, n_female_all)
+
+print("=" * 60)
+print("REPRODUCED RESULTS (DATA FOUND)")
+print("=" * 60)
+print(f"RR male   = {rr_male:.2f}‱ (95% CI: {rr_male_lo:.2f}, {rr_male_hi:.2f})")
+print(f"RR female = {rr_female:.2f}‱ (95% CI: {rr_female_lo:.2f}, {rr_female_hi:.2f})")
+print(f"MFRR = {mfrr:.2f} (95% CI: {mfrr_lo:.2f}, {mfrr_hi:.2f})")
+
+print("RESULT overall_RR_male = {:.2f}".format(rr_male))
+print("RESULT overall_RR_female = {:.2f}".format(rr_female))
+print("RESULT overall_MFRR = {:.2f} (95% CI: {:.2f}, {:.2f})".format(mfrr, mfrr_lo, mfrr_hi))
+
+# Additional analyses can be added here if the required columns exist.
+# For example, by year:
+if 'publication_year' in df.columns:
+    years = sorted(df['publication_year'].unique())
+    print("\nMFRR by year:")
+    for y in years:
+        sub = df[df['publication_year'] == y]
+        m_ret = (sub['gender_first_author'] == 'M') & (sub['retracted'] == 1)
+        f_ret = (sub['gender_first_author'] == 'F') & (sub['retracted'] == 1)
+        m_all = (sub['gender_first_author'] == 'M')
+        f_all = (sub['gender_first_author'] == 'F')
+        if m_all.sum() == 0 or f_all.sum() == 0:
+            continue
+        p_m = m_ret.sum() / m_all.sum()
+        p_f = f_ret.sum() / f_all.sum()
+        ratio, lo, hi = mfrr_ci(p_m, m_all.sum(), p_f, f_all.sum())
+        print(f"  Year {y}: MFRR = {ratio:.2f} (95% CI: {lo:.2f}, {hi:.2f})")
+
+print("\nCONCLUSION: Computed from provided dataset. (Check sign and CI direction.)")

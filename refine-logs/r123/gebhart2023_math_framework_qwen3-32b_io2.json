@@ -1,0 +1,97 @@
+{
+  "run_id": "r33",
+  "paper": "gebhart2023_math_framework",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807729,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/gebhart2023_math_framework_qwen3-32b_io2.json",
+  "io2_data_files": [
+    "openalex_physics_200.json"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 109.8,
+    "usage": {
+      "completion": 8660,
+      "prompt": 12061
+    },
+    "finish": "stop",
+    "n_content_chars": 5225
+  },
+  "llm_response_chars": 5225,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.23,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 3828,
+    "stderr_chars": 0
+  },
+  "stdout": "RESULT DATA_SUB Dataset_Size = 200\nRESULT DATA_SUB Avg_Citation_Count = 0.0000\nRESULT DATA_SUB Avg_CD_Index = 0.0000\nRESULT DATA_SUB Avg_Dnk = 0.0000\nRESULT DATA_SUB Avg_Betweenness_1hop = 0.0000\nRESULT DATA_SUB Avg_Pagerank_1hop = 10.0000\nRESULT DATA_SUB Avg_Betweenness_3hop = 0.0000\nRESULT DATA_SUB Avg_Pagerank_3hop = 10.0000\nRESULT DATA_SUB Avg_Betweenness_5hop = 0.0000\nRESULT DATA_SUB Avg_Pagerank_5hop = 10.0000\nRESULT DATA_SUB Avg_Betweenness_10hop = 0.0000\nRESULT DATA_SUB Avg_Pagerank_10hop = 10.0000\nRESULT DATA_SUB Correlation_Matrix = \n       Q   D  Dnk  B1  B3  B5  B10  Pi1  Pi3  Pi5  Pi10\nQ    NaN NaN  NaN NaN NaN NaN  NaN  NaN  NaN  NaN   NaN\nD    NaN NaN  NaN NaN NaN NaN  NaN  NaN  NaN  NaN   NaN\nDnk  NaN NaN  NaN NaN NaN NaN  NaN  NaN  NaN  NaN   NaN\nB1   NaN NaN  NaN NaN NaN NaN  NaN  NaN  NaN  NaN   NaN\nB3   NaN NaN  NaN NaN NaN NaN  NaN  NaN  NaN  NaN   NaN\nB5   NaN NaN  NaN NaN NaN NaN  NaN  NaN  NaN  NaN   NaN\nB10  NaN NaN  NaN NaN NaN NaN  NaN  NaN  NaN  NaN   NaN\nPi1  NaN NaN  NaN NaN NaN NaN  NaN  NaN  NaN  NaN   NaN\nPi3  NaN NaN  NaN NaN NaN NaN  NaN  NaN  NaN  NaN   NaN\nPi5  NaN NaN  NaN NaN NaN NaN  NaN  NaN  NaN  NaN   NaN\nPi10 NaN NaN  NaN NaN NaN NaN  NaN  NaN  NaN  NaN   NaN\nRESULT DATA_SUB Yearly_Avg_Disruption_Trend = \n        Q    D  Dnk   B1   Pi1\nyear                          \n1935  0.0  0.0  0.0  0.0  10.0\n1937  0.0  0.0  0.0  0.0  10.0\n1952  0.0  0.0  0.0  0.0  10.0\n1953  0.0  0.0  0.0  0.0  10.0\n1957  0.0  0.0  0.0  0.0  10.0\n1958  0.0  0.0  0.0  0.0  10.0\n1959  0.0  0.0  0.0  0.0  10.0\n1960  0.0  0.0  0.0  0.0  10.0\n1963  0.0  0.0  0.0  0.0  10.0\n1964  0.0  0.0  0.0  0.0  10.0\n1965  0.0  0.0  0.0  0.0  10.0\n1966  0.0  0.0  0.0  0.0  10.0\n1969  0.0  0.0  0.0  0.0  10.0\n1970  0.0  0.0  0.0  0.0  10.0\n1972  0.0  0.0  0.0  0.0  10.0\n1973  0.0  0.0  0.0  0.0  10.0\n1974  0.0  0.0  0.0  0.0  10.0\n1975  0.0  0.0  0.0  0.0  10.0\n1976  0.0  0.0  0.0  0.0  10.0\n1977  0.0  0.0  0.0  0.0  10.0\n1979  0.0  0.0  0.0  0.0  10.0\n1980  0.0  0.0  0.0  0.0  10.0\n1981  0.0  0.0  0.0  0.0  10.0\n1982  0.0  0.0  0.0  0.0  10.0\n1983  0.0  0.0  0.0  0.0  10.0\n1984  0.0  0.0  0.0  0.0  10.0\n1985  0.0  0.0  0.0  0.0  10.0\n1986  0.0  0.0  0.0  0.0  10.0\n1987  0.0  0.0  0.0  0.0  10.0\n1988  0.0  0.0  0.0  0.0  10.0\n1989  0.0  0.0  0.0  0.0  10.0\n1990  0.0  0.0  0.0  0.0  10.0\n1991  0.0  0.0  0.0  0.0  10.0\n1992  0.0  0.0  0.0  0.0  10.0\n1993  0.0  0.0  0.0  0.0  10.0\n1994  0.0  0.0  0.0  0.0  10.0\n1995  0.0  0.0  0.0  0.0  10.0\n1996  0.0  0.0  0.0  0.0  10.0\n1997  0.0  0.0  0.0  0.0  10.0\n1998  0.0  0.0  0.0  0.0  10.0\n1999  0.0  0.0  0.0  0.0  10.0\n2000  0.0  0.0  0.0  0.0  10.0\n2001  0.0  0.0  0.0  0.0  10.0\n2002  0.0  0.0  0.0  0.0  10.0\n2003  0.0  0.0  0.0  0.0  10.0\n2004  0.0  0.0  0.0  0.0  10.0\n2005  0.0  0.0  0.0  0.0  10.0\n2006  0.0  0.0  0.0  0.0  10.0\n2007  0.0  0.0  0.0  0.0  10.0\n2008  0.0  0.0  0.0  0.0  10.0\n2009  0.0  0.0  0.0  0.0  10.0\n2010  0.0  0.0  0.0  0.0  10.0\n2011  0.0  0.0  0.0  0.0  10.0\n2012  0.0  0.0  0.0  0.0  10.0\n2013  0.0  0.0  0.0  0.0  10.0\n2014  0.0  0.0  0.0  0.0  10.0\n2015  0.0  0.0  0.0  0.0  10.0\n2016  0.0  0.0  0.0  0.0  10.0\n2017  0.0  0.0  0.0  0.0  10.0\n2018  0.0  0.0  0.0  0.0  10.0\n2019  0.0  0.0  0.0  0.0  10.0\n2020  0.0  0.0  0.0  0.0  10.0\n2021  0.0  0.0  0.0  0.0  10.0\n2022  0.0  0.0  0.0  0.0  10.0\n2023  0.0  0.0  0.0  0.0  10.0\n2024  0.0  0.0  0.0  0.0  10.0\nRESULT DATA_SUB Conclusion = Centrality-based measures (Betweenness, PageRank) generalize the CD Index by capturing indirect citation flows over expanding k-hop neighborhoods. While the CD Index relies on local node-type counts and exhibits discontinuities near D=0, betweenness and pagerank provide continuous, path-sensitive metrics that better discern indirect influence and align with broader network science paradigms, as theorized in the paper.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.65,
+    "final_ecrf": 0.55,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 1
+    },
+    "n_result_lines": 1
+  },
+  "status": "DONE",
+  "t_end": 1782807840
+}

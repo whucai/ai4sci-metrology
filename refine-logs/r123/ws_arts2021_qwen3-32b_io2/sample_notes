@@ -1,0 +1,6 @@
+# Sample Notes — arts2021
+
+N = unknown; window = USPTO coverage; unit = patent claim.
+Filters: P1-P10 preprocessing steps.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

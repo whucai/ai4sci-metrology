@@ -1,0 +1,84 @@
+{
+  "run_id": "r18",
+  "paper": "ke2015_sleeping_beauties",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807397,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/ke2015_sleeping_beauties_deepseek-v4-pro_io2.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 114.6,
+    "usage": {
+      "completion": 6051,
+      "prompt": 12091
+    },
+    "finish": "stop",
+    "n_content_chars": 6862
+  },
+  "llm_response_chars": 6862,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.6,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1683,
+    "stderr_chars": 0
+  },
+  "stdout": "Loading dataset from /workspace/raw_data/sciscinet_sample.parquet ...\nDataset shape: (40000, 11)\nColumns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\nData types:\n paper_id                          int64\nyear                              Int64\nauthor_count                      Int64\ninstitution_count                 Int64\nreference_count                   Int64\ncitation_count                    Int64\ncitation_count_5y                 Int64\ndisruption_score                Float64\nnovelty_score                   Float64\nconventionality_score           Float64\ndoc_type                 string[python]\ndtype: object\n\nFirst 3 rows:\n{'paper_id': 1007094955, 'year': 1994, 'author_count': 4, 'institution_count': 3, 'reference_count': 9, 'citation_count': 1, 'citation_count_5y': 1, 'disruption_score': 0.0005083884087442, 'novelty_score': None, 'conventionality_score': None, 'doc_type': None}\n{'paper_id': 2095417707, 'year': 2008, 'author_count': 4, 'institution_count': 1, 'reference_count': 17, 'citation_count': 239, 'citation_count_5y': 92, 'disruption_score': 0.0034839737208839, 'novelty_score': -12.582748299132096, 'conventionality_score': 25.08967568998576, 'doc_type': 'Journal'}\n{'paper_id': 2024868452, 'year': 1980, 'author_count': 1, 'institution_count': 1, 'reference_count': 4, 'citation_count': 2, 'citation_count_5y': 1, 'disruption_score': 0.0, 'novelty_score': 67.01157435718775, 'conventionality_score': 250.20509266464367, 'doc_type': 'Journal'}\nERROR: Could not find a column with list/array of yearly citations.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.9,
+    "final_ecrf": 0.9,
+    "caps_applied": []
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 1
+    },
+    "n_result_lines": 1
+  },
+  "status": "DONE",
+  "t_end": 1782807512
+}

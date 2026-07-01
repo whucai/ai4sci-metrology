@@ -1,0 +1,17 @@
+# Data Dictionary — Petersen2024 (IO₂, no executable code)
+
+Source: SciSciNet (substitute for Clarivate Web of Science; same publication-citation universe).
+File: raw_data/sciscinet_sample.parquet
+
+| column | type | meaning |
+|--------|------|---------|
+| paper_id | str | unique paper identifier |
+| year | int | publication year (1980–2015) |
+| author_count | int | number of authors |
+| reference_count | int | number of references (proxy for citation inflation) |
+| citation_count_5y | float | forward citations within 5 years |
+| disruption_score | float | CD5 disruption index = (Ni - Nj)/(Ni+Nj+Nk); use abs() |
+| novelty_score | float | novelty score |
+| conventionality_score | float | conventionality |
+
+Note: disruption_score is Float64 and may be NaN — dropna and use abs(disruption_score) as |CDp,5|.

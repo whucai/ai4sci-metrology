@@ -1,0 +1,7 @@
+# Data Dictionary — gebhart2023_math_framework
+
+## Data source
+APS bibliographic data (~630K physics papers, 1893-2019) — RESTRICTED ACCESS. Substitute: OpenAlex physics subset (public, provided here). Nobel laureate dataset (Li et al. 2019, Scientific Data) — public, referenced but must be fetched separately.
+
+## Substitute note
+OpenAlex physics sample provided (200 works). The gold ceiling (Nobel-discernment: centrality-based measures outperform CD) is testable on any physics citation network + the Nobel set. Agent should label OpenAlex-based results as DATA_SUB.

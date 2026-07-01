@@ -1,0 +1,17 @@
+{
+  "run_id": "r21",
+  "paper": "deng2023_enhancing_disruption",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807512,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/deng2023_enhancing_disruption_qwen3-32b_io2.json",
+  "error": "missing paper.md for deng2023_enhancing_disruption (assemble IO package first)",
+  "status": "NO_PACKAGE"
+}

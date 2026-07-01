@@ -1,0 +1,86 @@
+
+
+```python
+import pandas as pd
+import numpy as np
+
+# Load data from provided raw_data directory
+df = pd.read_parquet("/workspace/raw_data/sciscinet_sample.parquet")
+
+# Apply mandatory filters: year between 1945 and 2010, disruption_score not null
+df_filtered = df[(df['year'] >= 1945) & (df['year'] <= 2010) & (df['disruption_score'].notna())].copy()
+
+# Compute overall descriptive statistics
+overall_mean_cd = df_filtered['disruption_score'].mean()
+overall_std_cd = df_filtered['disruption_score'].std()
+
+# Group by year and compute mean and count using pandas groupby
+cd_by_year = df_filtered.groupby('year')['disruption_score'].agg(['mean', 'count']).reset_index()
+cd_by_year.columns = ['year', 'mean_cd', 'N']
+cd_by_year = cd_by_year.sort_values('year')
+
+# Extract specific year values
+cd_1945 = cd_by_year.loc[cd_by_year['year'] == 1945, 'mean_cd'].values[0] if 1945 in cd_by_year['year'].values else np.nan
+cd_2010 = cd_by_year.loc[cd_by_year['year'] == 2010, 'mean_cd'].values[0] if 2010 in cd_by_year['year'].values else np.nan
+
+# Compute decline percentage
+decline_pct = ((cd_1945 - cd_2010) / cd_1945) * 100 if pd.notna(cd_1945) and cd_1945 != 0 else np.nan
+
+# === DATA_LOAD ===
+print("\n=== DATA_LOAD ===")
+print(f"Total papers loaded: {len(df)}")
+print(f"Papers after filter: {len(df_filtered)}")
+print(f"Year range: {int(df_filtered['year'].min())} - {int(df_filtered['year'].max())}")
+
+# === DESCRIPTIVE ===
+print("\n=== DESCRIPTIVE ===")
+print(f"Overall mean CD: {overall_mean_cd:.6f}")
+print(f"Overall std CD: {overall_std_cd:.6f}")
+print(f"All years: {sorted(df_filtered['year'].unique())}")
+
+# === CD_BY_YEAR ===
+print("\n=== CD_BY_YEAR ===")
+for _, row in cd_by_year.iterrows():
+    print(f"{int(row['year'])}: mean={row['mean_cd']:.6f}, N={int(row['N'])}")
+
+# === RESULTS ===
+print("\n=== RESULTS ===")
+print(f"Sample N = {len(df_filtered)}")
+print(f"Years = {len(cd_by_year)}")
+print(f"CD 1945 = {cd_1945:.6f}")
+print(f"CD 2010 = {cd_2010:.6f}")
+print(f"Decline = {decline_pct:.1f}%")
+
+# Key numerical results with required labels
+print("\nRESULT sample_N = " + str(len(df_filtered)))
+print("RESULT years_count = " + str(len(cd_by_year)))
+print("RESULT cd_1945_mean = " + f"{cd_1945:.6f}")
+print("RESULT cd_2010_mean = " + f"{cd_2010:.6f}")
+print("RESULT decline_pct = " + f"{decline_pct:.1f}")
+print("RESULT overall_mean_cd = " + f"{overall_mean_cd:.6f}")
+
+# Paper reported values for comparison
+print("\nPAPER_REPORTED sample_N = 469855")
+print("PAPER_REPORTED years_count = 66")
+print("PAPER_REPORTED cd_1945_mean = 0.035979")
+print("PAPER_REPORTED cd_2010_mean = 0.001191")
+print("PAPER_REPORTED decline_pct = 96.7")
+print("PAPER_REPORTED overall_mean_cd = 0.005724")
+
+# === DIFF_TABLE ===
+print("\n=== DIFF_TABLE ===")
+print("| Metric | Value |")
+print(f"| sample_N | {len(df_filtered)} |")
+print(f"| years_count | {len(cd_by_year)} |")
+print(f"| cd_1945_mean | {cd_1945:.6f} |")
+print(f"| cd_2010_mean | {cd_2010:.6f} |")
+print(f"| decline_pct | {decline_pct:.1f} |")
+print(f"| overall_mean_cd | {overall_mean_cd:.6f} |")
+
+# Final conclusion/direction
+print("\n=== CONCLUSION ===")
+if pd.notna(decline_pct) and decline_pct > 90:
+    print("The analysis confirms a substantial decline in the mean CD index from 1945 to 2010, consistent with the paper's finding that papers are becoming less disruptive over time.")
+else:
+    print("The analysis does not show a substantial decline in the mean CD index.")
+```

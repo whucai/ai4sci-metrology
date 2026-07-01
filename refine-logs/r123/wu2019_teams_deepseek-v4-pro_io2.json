@@ -1,0 +1,82 @@
+{
+  "run_id": "r12",
+  "paper": "wu2019_teams",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807235,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/wu2019_teams_deepseek-v4-pro_io2.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 104.4,
+    "usage": {
+      "completion": 5240,
+      "prompt": 580
+    },
+    "finish": "stop",
+    "n_content_chars": 6975
+  },
+  "llm_response_chars": 6975,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.03,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 698,
+    "stderr_chars": 0
+  },
+  "stdout": "Loaded data shape: (40000, 11)\nColumns present: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\nFirst 3 rows:\n      paper_id  year  ...  conventionality_score  doc_type\n0  1007094955  1994  ...                   <NA>      <NA>\n1  2095417707  2008  ...              25.089676   Journal\n2  2024868452  1980  ...             250.205093   Journal\n\n[3 rows x 11 columns]\nNo direct disruption column and no n_i/n_j/n_k available. Cannot compute disruption index.\nPlease provide a column with pre‑computed disruption (e.g., 'disruption') or the raw triad counts.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 0.0,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.8,
+    "final_ecrf": 0.8,
+    "caps_applied": []
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {},
+    "n_result_lines": 0
+  },
+  "status": "DONE",
+  "t_end": 1782807340
+}

@@ -1,0 +1,44 @@
+R122: IO2 — 40 runs, concurrency=4
+[1/40] petersen2024                   qwen3-32b        DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[2/40] arts2021                       qwen3-32b        DONE         ecrf=0.775 exec=True realdata=True synth=False refcode=False
+[3/40] arts2021                       deepseek-v4-pro  DONE         ecrf=0.55 exec=True realdata=True synth=False refcode=False
+[4/40] petersen2024                   deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[5/40] funk2017                       qwen3-32b        DONE         ecrf=0.6 exec=True realdata=True synth=False refcode=False
+[6/40] maddi2024                      qwen3-32b        DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+[7/40] funk2017                       deepseek-v4-pro  DONE         ecrf=0.6 exec=True realdata=True synth=False refcode=False
+[8/40] maddi2024                      deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=False synth=False refcode=False
+[9/40] bikard2013                     qwen3-32b        DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+[10/40] wu2019_teams                   deepseek-v4-pro  DONE         ecrf=0.8 exec=True realdata=True synth=False refcode=False
+[11/40] wu2019_teams                   qwen3-32b        DONE         ecrf=0.6 exec=True realdata=True synth=False refcode=False
+[12/40] park2023_disruptive            qwen3-32b        DONE         ecrf=0.875 exec=True realdata=True synth=False refcode=False
+[13/40] bentley2023_disruption         qwen3-32b        DONE         ecrf=0.675 exec=True realdata=True synth=False refcode=False
+[14/40] park2023_disruptive            deepseek-v4-pro  DONE         ecrf=0.875 exec=True realdata=True synth=False refcode=False
+[15/40] bentley2023_disruption         deepseek-v4-pro  DONE         ecrf=0.675 exec=True realdata=True synth=False refcode=False
+[16/40] ke2015_sleeping_beauties       qwen3-32b        DONE         ecrf=0.9 exec=True realdata=True synth=False refcode=False
+[17/40] ke2015_sleeping_beauties       deepseek-v4-pro  DONE         ecrf=0.9 exec=True realdata=True synth=False refcode=False
+[18/40] deng2023_enhancing_disruption  qwen3-32b        NO_PACKAGE   ecrf=None exec=None realdata=None synth=None refcode=None
+[19/40] deng2023_enhancing_disruption  deepseek-v4-pro  NO_PACKAGE   ecrf=None exec=None realdata=None synth=None refcode=None
+[20/40] sun2023_ranking_mobility       qwen3-32b        DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[21/40] bikard2013                     deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+[22/40] galuez2023_technology_transfer qwen3-32b        NO_PACKAGE   ecrf=None exec=None realdata=None synth=None refcode=None
+[23/40] galuez2023_technology_transfer deepseek-v4-pro  NO_PACKAGE   ecrf=None exec=None realdata=None synth=None refcode=None
+[24/40] sun2023_ranking_mobility       deepseek-v4-pro  DONE         ecrf=0.55 exec=True realdata=True synth=False refcode=False
+[25/40] schaper2025_frontier           qwen3-32b        DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[26/40] schaper2025_frontier           deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[27/40] vasarhelyi2023_who_benefits    qwen3-32b        DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+[28/40] vasarhelyi2023_who_benefits    deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+[29/40] donner2024_data_inaccuracy     qwen3-32b        DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[30/40] donner2024_data_inaccuracy     deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[31/40] zheng2025_male_female_retractions qwen3-32b        DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[32/40] zheng2025_male_female_retractions deepseek-v4-pro  DONE         ecrf=0.65 exec=True realdata=True synth=False refcode=False
+[33/40] gebhart2023_math_framework     qwen3-32b        DONE         ecrf=0.55 exec=True realdata=True synth=False refcode=False
+[34/40] obadage2024_citations_repro    qwen3-32b        DONE         ecrf=0.9 exec=True realdata=True synth=False refcode=False
+[35/40] obadage2024_citations_repro    deepseek-v4-pro  DONE         ecrf=0.6 exec=True realdata=True synth=False refcode=False
+[36/40] gebhart2023_math_framework     deepseek-v4-pro  DONE         ecrf=0.55 exec=True realdata=True synth=False refcode=False
+[37/40] liu2018_hotstreaks             deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[38/40] liu2018_hotstreaks             qwen3-32b        DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[39/40] arts2021_patent_nlp            qwen3-32b        DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[40/40] arts2021_patent_nlp            deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+
+IO2 done in 1075s. mean ECRF=0.601. n_done=36/40. agg -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/r122_io2_aggregation.json
+=== R123 IO2 FINISHED ===

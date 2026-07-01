@@ -1,0 +1,88 @@
+{
+  "run_id": "r28",
+  "paper": "vasarhelyi2023_who_benefits",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807606,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/vasarhelyi2023_who_benefits_deepseek-v4-pro_io2.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 100.2,
+    "usage": {
+      "completion": 5514,
+      "prompt": 11846
+    },
+    "finish": "stop",
+    "n_content_chars": 12848
+  },
+  "llm_response_chars": 12848,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.14,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 3280,
+    "stderr_chars": 1970
+  },
+  "stdout": "Checking for raw data files in /workspace/raw_data/\nDirectory does not exist.\n\n*** WARNING: Real data unavailable. Using SYNTHETIC data for demonstration only. ***\n\nSynthetic dataset created with 1500 articles\nSample distribution across areas:\narea\nComputer Science    500\nEngineering         500\nSocial Sciences     500\nName: count, dtype: int64\n\n============================================================\nPAPER-REPORTED VALUES (from text and tables)\n============================================================\n\nBaseline log(cit+1) difference (top 10% vs bottom 90%):\nPAPER_REPORTED Computer Science: 1.52 (24.38 raw citation difference)\nPAPER_REPORTED Engineering:       0.24 (9.54 raw citation difference)\nPAPER_REPORTED Social Sciences:   1.52 (48.19 raw citation difference)\n\nModel 1 (CEM controlled) SATT of online visibility on log(cit+1):\nPAPER_REPORTED Computer Science: 0.404\nPAPER_REPORTED Engineering:       0.216\nPAPER_REPORTED Social Sciences:   1.309\n\nModel 2 (adding team gender):\nPAPER_REPORTED - CS: all gender compositions sig. positive vs MM.\nPAPER_REPORTED - Eng: only FF significant.\nPAPER_REPORTED - SS: FM and MF significant.\n\nModel 3 (interactions):\nPAPER_REPORTED - CS: visibility effect significant; FF and MF interactions negative significant.\nPAPER_REPORTED - Eng: FF interaction positive in only 19% of gender-swapped datasets.\nPAPER_REPORTED - SS: gender-diverse teams (FM, MF) benefit; interactions not significant.\n\n============================================================\nSYNTHETIC DESCRIPTIVE STATISTICS (for illustration)\n============================================================\n\nArea: Computer Science (N=500)\n  FF: 32 (6.4%)\n  FM: 41 (8.2%)\n  MF: 53 (10.6%)\n  MM: 374 (74.8%)\n\nArea: Engineering (N=500)\n  FF: 44 (8.8%)\n  FM: 45 (9.0%)\n  MF: 56 (11.2%)\n  MM: 355 (71.0%)\n\nArea: Social Sciences (N=500)\n  FF: 123 (24.6%)\n  FM: 58 (11.6%)\n  MF: 52 (10.4%)\n  MM: 267 (53.4%)\n\n90th and 95th percentiles of shares and citations (SYNTHETIC):\n  Computer Science shares: 90%=13.62, 95%=29.05\n  Computer Science citations: 90%=58.74, 95%=90.03\n  Engineering shares: 90%=15.42, 95%=27.88\n  Engineering citations: 90%=42.40, 95%=73.45\n  Social Sciences shares: 90%=15.94, 95%=29.83\n  Social Sciences citations: 90%=46.50, 95%=76.08\n\n============================================================\nBASELINE OLS (no controls) on SYNTHETIC data\n============================================================\nSYNTHETIC Computer Science: coefficient = -0.155\nSYNTHETIC Engineering: coefficient = 0.186\nSYNTHETIC Social Sciences: coefficient = 0.070\n\n============================================================\nCEM MATCHING ON SYNTHETIC DATA\n============================================================\nComputer Science: matched 48 treated articles out of 50\nEngineering: matched 48 treated articles out of 50\nSocial Sciences: matched 48 treated articles out of 50\nTotal matched articles: 288\n\n============================================================\nREGRESSION MODELS ON CEM-MATCHED SYNTHETIC DATA\n============================================================\n\nModel 1 (visibility + controls):\nconst              2.461140\nhigh_visibility   -0.091281\nmax_h_index       -0.001306\nimpact_factor      0.000436\nteam_size         -0.020186\ndtype: float64\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 260, in <module>\n    model2 = sm.OLS(y, X2).fit()\n             ^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 924, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 749, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 203, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 270, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 95, in __init__\n    self.data = self._handle_data(endog, exog, missing, hasconst,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 135, in _handle_data\n    data = handle_data(endog, exog, missing, hasconst, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 675, in handle_data\n    return klass(endog, exog=exog, missing=missing, hasconst=hasconst,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 84, in __init__\n    self.endog, self.exog = self._convert_endog_exog(endog, exog)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 509, in _convert_endog_exog\n    raise ValueError(\"Pandas data cast to numpy dtype of object. \"\nValueError: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.775,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 4,
+      "SYNTHETIC": 3
+    },
+    "n_result_lines": 7
+  },
+  "status": "DONE",
+  "t_end": 1782807708
+}

@@ -1,0 +1,6 @@
+# Sample Notes — wu2019_teams
+
+N = 30000000; window = 1954-2000s; unit = team-paper.
+Filters: complete citation data, team-size deciles.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

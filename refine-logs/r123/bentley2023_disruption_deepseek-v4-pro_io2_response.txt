@@ -1,0 +1,175 @@
+```python
+import pandas as pd
+import numpy as np
+
+# ----------------------------------------------------------------------
+# Configuration
+DATA_PATH = "/workspace/raw_data/sciscinet_sample.parquet"
+MIN_YEAR = 1945
+MAX_YEAR = 2010
+
+# ----------------------------------------------------------------------
+# DATA LOADING & FILTERING
+print("=== DATA_LOAD ===")
+df = pd.read_parquet(DATA_PATH)
+total_loaded = len(df)
+print(f"Total loaded: {total_loaded}")
+
+# Year filter
+df = df[(df["year"] >= MIN_YEAR) & (df["year"] <= MAX_YEAR)]
+print(f"After year filter ({MIN_YEAR}-{MAX_YEAR}): {len(df)}")
+
+# Required columns: disruption_score, citation_count
+df = df.dropna(subset=["disruption_score"])
+df = df[df["citation_count"].notna() & (df["citation_count"] > 0)]
+filtered_len = len(df)
+print(f"After valid disruption_score & citation_count>0: {filtered_len}")
+
+year_min = int(df["year"].min())
+year_max = int(df["year"].max())
+n_years = df["year"].nunique()
+print(f"Year range: {year_min}-{year_max}")
+print(f"Number of papers: {filtered_len}\n")
+
+# ----------------------------------------------------------------------
+# DESCRIPTIVE STATISTICS
+print("=== DESCRIPTIVE ===")
+
+# Overall unweighted mean CD
+uw_overall = df["disruption_score"].mean()
+# Overall citation-weighted mean CD
+w_overall = np.average(df["disruption_score"], weights=df["citation_count"])
+
+print(f"Overall unweighted mean CD: {uw_overall:.6f}")
+print(f"Overall weighted mean CD: {w_overall:.6f}")
+
+# Post-1970 weighted mean
+post1970 = df[df["year"] >= 1970]
+if len(post1970) > 0:
+    w_post1970 = np.average(post1970["disruption_score"], weights=post1970["citation_count"])
+else:
+    w_post1970 = np.nan
+print(f"Post-1970 weighted mean CD: {w_post1970:.6f}")
+
+# Weighted CD change 2000-2010
+yr_2000 = df[df["year"] == 2000]
+yr_2010 = df[df["year"] == 2010]
+if not yr_2000.empty and not yr_2010.empty:
+    w_2000 = np.average(yr_2000["disruption_score"], weights=yr_2000["citation_count"])
+    w_2010 = np.average(yr_2010["disruption_score"], weights=yr_2010["citation_count"])
+    change_2000_2010 = w_2010 - w_2000
+else:
+    w_2000 = w_2010 = change_2000_2010 = None
+
+if w_2000 is not None:
+    print(f"Weighted CD 2000: {w_2000:.6f}")
+    print(f"Weighted CD 2010: {w_2010:.6f}")
+    print(f"Change 2000-2010 (w): {change_2000_2010:.6f}")
+else:
+    print("Year 2000 or 2010 missing – cannot compute change")
+print()
+
+# ----------------------------------------------------------------------
+# YEARLY AGGREGATES
+print("=== CD_BY_YEAR ===")
+# Unweighted mean, N, total citations per year
+yearly = df.groupby("year").agg(
+    uw_cd=("disruption_score", "mean"),
+    N=("disruption_score", "count"),
+    total_cites=("citation_count", "sum"),
+).reset_index()
+
+# Weighted mean per year
+yearly_w = df.groupby("year").apply(
+    lambda g: pd.Series({"w_cd": np.average(g["disruption_score"], weights=g["citation_count"])}),
+    include_groups=False,
+).reset_index()
+
+yearly = yearly.merge(yearly_w, on="year", how="left")
+
+# Print each year in required format
+for _, row in yearly.iterrows():
+    y = int(row["year"])
+    uw = row["uw_cd"]
+    w = row["w_cd"]
+    n = int(row["N"])
+    cites = int(row["total_cites"])
+    print(f"{y}: uw={uw:.6f}, w={w:.6f}, N={n}, cites={cites}")
+print()
+
+# ----------------------------------------------------------------------
+# KEY RESULTS
+print("=== RESULTS ===")
+print(f"Sample N = {filtered_len}")
+print(f"Years = {n_years}")
+
+# Retrieve 1945 & 2010 values
+y1945 = yearly[yearly["year"] == 1945]
+y2010 = yearly[yearly["year"] == 2010]
+if not y1945.empty and not y2010.empty:
+    uw_1945 = y1945["uw_cd"].values[0]
+    uw_2010 = y2010["uw_cd"].values[0]
+    w_1945 = y1945["w_cd"].values[0]
+    w_2010 = y2010["w_cd"].values[0]
+    # Decline percentages
+    uw_decline = (uw_1945 - uw_2010) / uw_1945 * 100 if uw_1945 != 0 else None
+    w_decline = (w_1945 - w_2010) / w_1945 * 100 if w_1945 != 0 else None
+else:
+    uw_1945 = uw_2010 = w_1945 = w_2010 = uw_decline = w_decline = None
+
+print(f"UW CD 1945 = {uw_1945:.6f}" if uw_1945 is not None else "UW CD 1945 = NA")
+print(f"UW CD 2010 = {uw_2010:.6f}" if uw_2010 is not None else "UW CD 2010 = NA")
+print(f"W CD 1945 = {w_1945:.6f}" if w_1945 is not None else "W CD 1945 = NA")
+print(f"W CD 2010 = {w_2010:.6f}" if w_2010 is not None else "W CD 2010 = NA")
+print(f"UW decline = {uw_decline:.1f}%" if uw_decline is not None else "UW decline = NA")
+print(f"W decline = {w_decline:.1f}%" if w_decline is not None else "W decline = NA")
+print()
+
+# ----------------------------------------------------------------------
+# DIFF TABLE
+print("=== DIFF_TABLE ===")
+print("| Metric | Value |")
+print(f"| sample_N | {filtered_len} |")
+if uw_1945 is not None:
+    print(f"| uw_cd_1945 | {uw_1945:.6f} |")
+    print(f"| uw_cd_2010 | {uw_2010:.6f} |")
+    print(f"| w_cd_1945 | {w_1945:.6f} |")
+    print(f"| w_cd_2010 | {w_2010:.6f} |")
+    print(f"| uw_decline_pct | {uw_decline:.1f} |")
+    print(f"| w_decline_pct | {w_decline:.1f} |")
+else:
+    print("| uw_cd_1945 | NA |")
+    print("| uw_cd_2010 | NA |")
+    print("| w_cd_1945 | NA |")
+    print("| w_cd_2010 | NA |")
+    print("| uw_decline_pct | NA |")
+    print("| w_decline_pct | NA |")
+print(f"| overall_w_cd | {w_overall:.6f} |")
+print(f"| post1970_w_cd | {w_post1970:.6f} |")
+if change_2000_2010 is not None:
+    print(f"| change_2000_2010 | {change_2000_2010:.6f} |")
+else:
+    print("| change_2000_2010 | NA |")
+print()
+
+# Paper-reported values for comparison (not computed)
+print("PAPER_REPORTED: sample_N=469855, uw_cd_1945=0.035979, uw_cd_2010=0.001191, "
+      "w_cd_1945=0.076989, w_cd_2010=-0.000930, uw_decline=96.7%, w_decline=101.2%")
+print("DATA_SUB: The above computed values are derived from the provided "
+      "'sciscinet_sample.parquet', not from the paper's original full dataset.\n")
+
+# ----------------------------------------------------------------------
+# CONCLUSION (based on this sample)
+print("=== CONCLUSION (DATA_SUB) ===")
+if uw_decline is not None and w_decline is not None:
+    if w_decline < uw_decline:
+        print("The citation-weighted decline is smaller than the unweighted decline, "
+              "supporting the paper's thesis that the raw disruption decline is partly an artefact.")
+    elif w_decline > uw_decline:
+        print("The citation-weighted decline is larger than the unweighted decline, "
+              "which does NOT support the paper's claim in this sample.")
+    else:
+        print("The weighted and unweighted declines are equal.")
+else:
+    print("Cannot evaluate decline trends due to missing 1945 or 2010 data.")
+```

@@ -1,0 +1,88 @@
+{
+  "run_id": "r8",
+  "paper": "maddi2024",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807131,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/maddi2024_deepseek-v4-pro_io2.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 102.7,
+    "usage": {
+      "completion": 5516,
+      "prompt": 12220
+    },
+    "finish": "stop",
+    "n_content_chars": 8195
+  },
+  "llm_response_chars": 8195,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.07,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1032,
+    "stderr_chars": 0
+  },
+  "stdout": "No raw data file found at /workspace/raw_data/publications.csv\nDATA_NOT_AVAILABLE: The reproduction cannot be performed without the original Publons–WoS merged dataset.\nPAPER_REPORTED descriptive statistics:\n  Total publications after cleaning: 57,482\n  Average review length (words): 416.3\n  Median review length (words): 302\n  Distribution of review length intervals (Table 2):\n    0–200 words: 21,007 (37.0%)\n    200–400 words: 13,946 (24.0%)\n    400–600 words: 9,052 (16.0%)\n    600–800 words: 5,252 (9.1%)\n    800–1000 words: 3,114 (5.4%)\n    1000–1200 words: 2,001 (3.5%)\n    1200–1400 words: 1,111 (1.9%)\n    1400–1600 words: 706 (1.2%)\n    1600–1800 words: 418 (0.7%)\n    1800–2000 words: 303 (0.5%)\n    2000–2200 words: 220 (0.4%)\n    2200–2400 words: 147 (0.3%)\n    2400–2600 words: 104 (0.2%)\n    2600–2883 words: 101 (0.2%)\nPAPER_REPORTED regression results (Figure 2):\n  The two highest length categories (947–1612 words, 1613–2891 words) have\n  positive and statistically significant coefficients on log(1+citations).\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.95,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "e paper-numbers-as-computed",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": true,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 4,
+      "PAPER_REPORTED": 1
+    },
+    "n_result_lines": 5
+  },
+  "status": "DONE",
+  "t_end": 1782807235
+}

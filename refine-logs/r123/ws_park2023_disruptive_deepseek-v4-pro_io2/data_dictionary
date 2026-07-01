@@ -1,0 +1,16 @@
+# Data Dictionary — park2023_disruptive
+
+## Data source
+Microsoft Academic Graph + USPTO + SciSciNet — Citation network 1945-2010
+Access: public; Provenance: SciSciNet local
+
+## Key variables
+- Unit of analysis: paper
+- Time window: 1945-2010
+- Sample N: 469855
+- Filter rules: require CD score, drop_na
+
+## Indicator definitions
+- Formula: CD5 = (Ni - Nj)/(Ni + Nj + Nk), 5-year window
+- Parameters: 5-year citation window
+- Computation steps: compute CD5 per paper, groupby year mean

@@ -1,0 +1,101 @@
+{
+  "run_id": "r1",
+  "paper": "petersen2024",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782806934,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/petersen2024_qwen3-32b_io2.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 100.3,
+    "usage": {
+      "completion": 8369,
+      "prompt": 14486
+    },
+    "finish": "stop",
+    "n_content_chars": 15163
+  },
+  "llm_response_chars": 15163,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.04,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 301,
+    "stderr_chars": 609
+  },
+  "stdout": "=== REPRODUCING PETERSEN ET AL. (2024) ===\nLoaded data shape: (40000, 11)\nColumns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\n\n--- EMPIRICAL ANALYSIS ---\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 349, in <module>\n    run_empirical_analysis(df, is_synthetic)\n  File \"/workspace/script.py\", line 136, in run_empirical_analysis\n    cd_df = compute_cd_metrics(df, cw=5)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 86, in compute_cd_metrics\n    papers = df.set_index('id')\n             ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 6122, in set_index\n    raise KeyError(f\"None of {missing} are in the columns\")\nKeyError: \"None of ['id'] are in the columns\"\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.65,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 2
+    },
+    "n_result_lines": 2
+  },
+  "status": "DONE",
+  "t_end": 1782807035
+}

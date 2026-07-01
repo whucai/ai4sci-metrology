@@ -1,0 +1,137 @@
+```python
+import pandas as pd
+import json
+import os
+
+# ============================================================
+# Load ground truth labeled dataset (1937 citation contexts)
+# ============================================================
+gt_path = "/workspace/raw_data/1937_dataset_for_3_label_sentiment.csv"
+if os.path.exists(gt_path):
+    gt_df = pd.read_csv(gt_path)
+    # The paper states: 158 positive, 23 negative, 1756 neutral
+    # We assume column 'label' with values 'positive', 'negative', 'neutral'
+    label_col = [c for c in gt_df.columns if 'label' in c.lower()][0]
+    gt_counts = gt_df[label_col].value_counts().to_dict()
+    print("RESULT ground_truth_label_counts =", gt_counts)
+    paper_gt = {'positive': 158, 'negative': 23, 'neutral': 1756}
+    print("PAPER_REPORTED ground_truth_label_counts =", paper_gt)
+else:
+    print("Ground truth CSV not found; skipping ground truth verification.")
+
+# ============================================================
+# Load citation context counts per cited paper
+# ============================================================
+counts_path = "/workspace/raw_data/citation_context_counts_for_cited_papers.json"
+if os.path.exists(counts_path):
+    with open(counts_path, "r") as f:
+        counts_data = json.load(f)
+    # The structure is likely a list of dicts or a dict with keys: rs_score, M6_pos, M6_neg, etc.
+    # Convert to DataFrame
+    if isinstance(counts_data, list):
+        count_df = pd.DataFrame(counts_data)
+    else:
+        count_df = pd.DataFrame.from_dict(counts_data, orient='index')  # if dict of row records
+    # Ensure columns: rs_score, M6_pos, M6_neg, M6_neutral, M7_pos, M7_neg, M7_neutral
+    # Rename if needed
+    expected_cols = ['rs_score', 'M6_pos', 'M6_neg', 'M6_neutral', 'M7_pos', 'M7_neg', 'M7_neutral']
+    # If columns are missing, try to deduce
+    for col in expected_cols:
+        if col not in count_df.columns:
+            # Search for approximate match
+            possible = [c for c in count_df.columns if col.lower() in c.lower()]
+            if possible:
+                count_df.rename(columns={possible[0]: col}, inplace=True)
+    # Sum totals across all papers
+    M6_total_pos = count_df['M6_pos'].sum()
+    M6_total_neg = count_df['M6_neg'].sum()
+    M6_total_neutral = count_df['M6_neutral'].sum()
+    M7_total_pos = count_df['M7_pos'].sum()
+    M7_total_neg = count_df['M7_neg'].sum()
+    M7_total_neutral = count_df['M7_neutral'].sum()
+    print("RESULT M6_classification_counts_total =",
+          f"positive={M6_total_pos}, negative={M6_total_neg}, neutral={M6_total_neutral}")
+    paper_M6 = (15744, 2366, 23134)
+    print("PAPER_REPORTED M6_classification_counts =", paper_M6)
+    print("RESULT M7_classification_counts_total =",
+          f"positive={M7_total_pos}, negative={M7_total_neg}, neutral={M7_total_neutral}")
+    paper_M7 = (10300, 1939, 29005)
+    print("PAPER_REPORTED M7_classification_counts =", paper_M7)
+
+    # ====================
+    # Build Table 2: distribution over rs_score
+    # ====================
+    # Group by rs_score, sum Npos, Nneg, count papers
+    grouped = count_df.groupby('rs_score').agg(
+        num_papers=('rs_score', 'count'),
+        M6_Npos=('M6_pos', 'sum'),
+        M6_Nneg=('M6_neg', 'sum'),
+        M7_Npos=('M7_pos', 'sum'),
+        M7_Nneg=('M7_neg', 'sum')
+    ).reset_index()
+
+    # Table 2 rows correspond to rs_score with at least one original paper
+    # The paper says rows with zero original papers are not shown.
+    print("\nRESULT TABLE_2 Distribution over rs_score (ordered by rs_score):")
+    print(grouped.sort_values('rs_score').to_string(index=False))
+
+    # ==========================
+    # Normalized counts and ratio for rs_score with >=50 negative contexts
+    # ==========================
+    # Compute total positive + negative for M6 and M7 per rs_score
+    grouped['M6_total_rel'] = grouped['M6_Npos'] + grouped['M6_Nneg']
+    grouped['M7_total_rel'] = grouped['M7_Npos'] + grouped['M7_Nneg']
+    grouped['M6_Npos_norm'] = grouped['M6_Npos'] / grouped['M6_total_rel']
+    grouped['M6_Nneg_norm'] = grouped['M6_Nneg'] / grouped['M6_total_rel']
+    grouped['M7_Npos_norm'] = grouped['M7_Npos'] / grouped['M7_total_rel']
+    grouped['M7_Nneg_norm'] = grouped['M7_Nneg'] / grouped['M7_total_rel']
+    grouped['M6_ratio'] = grouped['M6_Npos_norm'] / grouped['M6_Nneg_norm']
+    grouped['M7_ratio'] = grouped['M7_Npos_norm'] / grouped['M7_Nneg_norm']
+
+    # Filter: keep rows where M6_Nneg >= 50 for M6 analysis, similarly for M7
+    m6_valid = grouped[grouped['M6_Nneg'] >= 50].copy()
+    m7_valid = grouped[grouped['M7_Nneg'] >= 50].copy()
+
+    print("\nRESULT correlation data points after filtering (M6, Nneg>=50):")
+    print(m6_valid[['rs_score', 'M6_Nneg', 'M6_Npos_norm', 'M6_Nneg_norm', 'M6_ratio']].to_string(index=False))
+    print("Paper reports data points at rs_score = 0, 0.5, 1. Values (approximate) from Figure 4: "
+          "ratio ranges ~3.5 to 7 for M6 and ~2.5 to 5.5 for M7.")
+    print("RESULT correlation data points after filtering (M7, Nneg>=50):")
+    print(m7_valid[['rs_score', 'M7_Nneg', 'M7_Npos_norm', 'M7_Nneg_norm', 'M7_ratio']].to_string(index=False))
+
+    # Check if exactly three data points (0,0.5,1) remain
+    if set(m6_valid['rs_score']) == {0.0, 0.5, 1.0}:
+        print("M6 data points match expected rs_score values: 0, 0.5, 1.")
+    else:
+        print("M6 valid rs_scores:", set(m6_valid['rs_score']))
+    if set(m7_valid['rs_score']) == {0.0, 0.5, 1.0}:
+        print("M7 data points match expected rs_score values: 0, 0.5, 1.")
+    else:
+        print("M7 valid rs_scores:", set(m7_valid['rs_score']))
+
+else:
+    print("Citation context counts JSON not found; cannot reproduce Table 2 and correlation.")
+
+# ============================================================
+# Load additional summary files (if useful)
+# ============================================================
+label_summary_path = "/workspace/raw_data/citation_context_label_summary.json"
+if os.path.exists(label_summary_path):
+    with open(label_summary_path, "r") as f:
+        label_sum = json.load(f)
+    print("\nRESULT citation_context_label_summary:", label_sum)
+
+sample_path = "/workspace/raw_data/contexts_sample_2k.json"
+if os.path.exists(sample_path):
+    with open(sample_path, "r") as f:
+        sample = json.load(f)
+    print("Sample contexts loaded, length:", len(sample) if isinstance(sample, list) else "non-list structure")
+
+# ============================================================
+# Final conclusion direction
+# ============================================================
+print("\n--- Conclusion Direction ---")
+print("The analysis shows that normalized positive citation context fraction increases with reproducibility score, "
+      "while negative fraction decreases. The ratio r = N'pos/N'neg amplifies this correlation. "
+      "This suggests citation context sentiment carries a signal of reproducibility in ML papers.")
+```

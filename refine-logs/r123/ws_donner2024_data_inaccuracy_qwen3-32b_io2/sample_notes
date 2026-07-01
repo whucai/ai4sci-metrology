@@ -1,0 +1,6 @@
+# Sample Notes — donner2024_data_inaccuracy
+
+N = pending; window = WoS coverage; unit = paper.
+Filters: citation-count error classification.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

@@ -1,0 +1,36 @@
+{
+  "io": 2,
+  "n_runs": 40,
+  "n_done": 36,
+  "mean_ecrf": 0.601,
+  "by_paper": {
+    "petersen2024": 0.5,
+    "arts2021": 0.663,
+    "funk2017": 0.6,
+    "maddi2024": 0.5,
+    "bikard2013": 0.5,
+    "wu2019_teams": 0.7,
+    "park2023_disruptive": 0.875,
+    "bentley2023_disruption": 0.675,
+    "ke2015_sleeping_beauties": 0.9,
+    "sun2023_ranking_mobility": 0.525,
+    "schaper2025_frontier": 0.5,
+    "vasarhelyi2023_who_benefits": 0.5,
+    "donner2024_data_inaccuracy": 0.5,
+    "zheng2025_male_female_retractions": 0.575,
+    "gebhart2023_math_framework": 0.55,
+    "obadage2024_citations_repro": 0.75,
+    "liu2018_hotstreaks": 0.5,
+    "arts2021_patent_nlp": 0.5
+  },
+  "by_model": {
+    "qwen3-32b": 0.604,
+    "deepseek-v4-pro": 0.597
+  },
+  "process_evidence_totals": {
+    "execution_succeeded": 36,
+    "real_data_used": 30,
+    "synthetic_generated": 17,
+    "ref_code_used": 0
+  }
+}

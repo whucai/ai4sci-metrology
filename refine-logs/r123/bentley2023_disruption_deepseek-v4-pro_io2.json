@@ -1,0 +1,85 @@
+{
+  "run_id": "r16",
+  "paper": "bentley2023_disruption",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807346,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/bentley2023_disruption_deepseek-v4-pro_io2.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 80.1,
+    "usage": {
+      "completion": 5638,
+      "prompt": 1101
+    },
+    "finish": "stop",
+    "n_content_chars": 6584
+  },
+  "llm_response_chars": 6584,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.59,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 2784,
+    "stderr_chars": 0
+  },
+  "stdout": "=== DATA_LOAD ===\nTotal loaded: 40000\nAfter year filter (1945-2010): 30540\nAfter valid disruption_score & citation_count>0: 30540\nYear range: 1980-2010\nNumber of papers: 30540\n\n=== DESCRIPTIVE ===\nOverall unweighted mean CD: 0.003829\nOverall weighted mean CD: 0.014286\nPost-1970 weighted mean CD: 0.014286\nWeighted CD 2000: 0.003189\nWeighted CD 2010: -0.004106\nChange 2000-2010 (w): -0.007296\n\n=== CD_BY_YEAR ===\n1980: uw=0.008173, w=0.013751, N=442, cites=14544\n1981: uw=0.001990, w=0.007772, N=460, cites=16398\n1982: uw=0.006182, w=0.002250, N=503, cites=19878\n1983: uw=0.001955, w=0.013396, N=474, cites=16179\n1984: uw=0.012652, w=0.026407, N=542, cites=22686\n1985: uw=0.010585, w=0.015839, N=559, cites=21969\n1986: uw=0.003960, w=0.001337, N=581, cites=20535\n1987: uw=0.003572, w=0.010034, N=607, cites=27874\n1988: uw=0.010323, w=0.023914, N=757, cites=29503\n1989: uw=0.008601, w=0.002157, N=767, cites=28323\n1990: uw=0.003343, w=0.008116, N=782, cites=37652\n1991: uw=0.005609, w=0.011582, N=795, cites=33533\n1992: uw=0.007646, w=0.007605, N=891, cites=41038\n1993: uw=0.005806, w=0.000519, N=868, cites=38076\n1994: uw=0.010718, w=0.029146, N=841, cites=47999\n1995: uw=0.006391, w=0.030919, N=843, cites=64231\n1996: uw=0.007184, w=0.199899, N=951, cites=82492\n1997: uw=0.003280, w=0.004919, N=1013, cites=61212\n1998: uw=0.002768, w=0.005612, N=1009, cites=64365\n1999: uw=-0.000517, w=-0.004775, N=1014, cites=57938\n2000: uw=0.003845, w=0.003189, N=1095, cites=70925\n2001: uw=0.003462, w=0.004146, N=1088, cites=64345\n2002: uw=0.005583, w=0.000815, N=1197, cites=69054\n2003: uw=0.002234, w=0.001720, N=1307, cites=80730\n2004: uw=0.002474, w=-0.001712, N=1339, cites=89193\n2005: uw=0.001803, w=-0.001424, N=1466, cites=85797\n2006: uw=0.002090, w=0.000000, N=1558, cites=80951\n2007: uw=0.000850, w=-0.003993, N=1607, cites=75448\n2008: uw=0.001066, w=-0.010442, N=1684, cites=77289\n2009: uw=0.000415, w=-0.003367, N=1752, cites=76655\n2010: uw=0.000159, w=-0.004106, N=1748, cites=69219\n\n=== RESULTS ===\nSample N = 30540\nYears = 31\nUW CD 1945 = NA\nUW CD 2010 = NA\nW CD 1945 = NA\nW CD 2010 = NA\nUW decline = NA\nW decline = NA\n\n=== DIFF_TABLE ===\n| Metric | Value |\n| sample_N | 30540 |\n| uw_cd_1945 | NA |\n| uw_cd_2010 | NA |\n| w_cd_1945 | NA |\n| w_cd_2010 | NA |\n| uw_decline_pct | NA |\n| w_decline_pct | NA |\n| overall_w_cd | 0.014286 |\n| post1970_w_cd | 0.014286 |\n| change_2000_2010 | -0.007296 |\n\nPAPER_REPORTED: sample_N=469855, uw_cd_1945=0.035979, uw_cd_2010=0.001191, w_cd_1945=0.076989, w_cd_2010=-0.000930, uw_decline=96.7%, w_decline=101.2%\nDATA_SUB: The above computed values are derived from the provided 'sciscinet_sample.parquet', not from the paper's original full dataset.\n\n=== CONCLUSION (DATA_SUB) ===\nCannot evaluate decline trends due to missing 1945 or 2010 data.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 0.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.675,
+    "final_ecrf": 0.675,
+    "caps_applied": []
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 45,
+      "PAPER_REPORTED": 2
+    },
+    "n_result_lines": 47
+  },
+  "status": "DONE",
+  "t_end": 1782807426
+}

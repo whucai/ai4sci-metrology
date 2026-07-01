@@ -1,0 +1,88 @@
+{
+  "run_id": "r10",
+  "paper": "bikard2013",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807169,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/bikard2013_deepseek-v4-pro_io2.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 126.4,
+    "usage": {
+      "completion": 7080,
+      "prompt": 11604
+    },
+    "finish": "stop",
+    "n_content_chars": 15304
+  },
+  "llm_response_chars": 15304,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 262.73,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 2150,
+    "stderr_chars": 0
+  },
+  "stdout": "NOTE: Original data not found. Creating synthetic dataset for demonstration.\nSynthetic dataset: 5690 scientist-years, 661 scientists.\nlinearmodels not installed; falling back to OLS with dummies (may be slow).\n\n--- Regression Results (SYNTHETIC) ---\nH1: log(avg citations) ~ collaboration fraction\n0.4422968309846774\ncoeff = 0.4423, p-value = 0.0000\nPAPER_REPORTED: over 60% more citations for collaborative vs solo work. (SYNTHETIC coefficient should be positive and circa log(1.6)~0.47)\n\nH2: log(fractional publications) ~ collaboration fraction\ncoeff = -0.9833, p-value = 0.0000\nPAPER_REPORTED: Up to 4 coauthors, collaboration is associated with more papers per author. (SYNTHETIC may show small or positive coefficient)\n\nH3 (α=1/N): log(attributed citations) ~ collaboration fraction\ncoeff = -1.6720, p-value = 0.0000\n\nH3 (α=1/sqrt(N)): log(attributed citations) ~ collaboration fraction\ncoeff = -0.6082, p-value = 0.0000\n\nH3 (α=1, full credit): log(attributed citations) ~ collaboration fraction\ncoeff = 0.4432, p-value = 0.0000\n\nH3 (α=1/N^0.6, synthetic truth): log(attributed citations) ~ collaboration fraction\ncoeff = -0.8257, p-value = 0.0000\nPAPER_REPORTED: credit sharing sums to more than 1, i.e., scientists behave as if they receive a share greater than equal division.\n\nQuality vs cross-dept and senior collaboration (SYNTHETIC):\nIntercept                       3.211391\nC(scientist_id)[T.S0002]        0.308477\nC(scientist_id)[T.S0003]       -0.305741\nC(scientist_id)[T.S0004]       -0.374869\nC(scientist_id)[T.S0005]        0.131596\n                                  ...   \nC(dept_year)[T.Physics_2004]    0.199085\nC(dept_year)[T.Physics_2005]    0.082239\nC(dept_year)[T.Physics_2006]    0.189783\nfrac_cross                      0.356685\nfrac_senior                    -0.010770\nLength: 879, dtype: float64\nPAPER_REPORTED: cross-dept collab -> higher quality; senior collab -> lower quality gain (free-riding).\n\n--- Summary of synthetic dataset ---\nNumber of scientists: 661\nTotal scientist-years: 5690\nTotal publications (papers): 19535\nAll displayed regression results are based on SYNTHETIC data and serve only as illustration.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.775,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 11,
+      "PAPER_REPORTED": 2
+    },
+    "n_result_lines": 13
+  },
+  "status": "DONE",
+  "t_end": 1782807558
+}

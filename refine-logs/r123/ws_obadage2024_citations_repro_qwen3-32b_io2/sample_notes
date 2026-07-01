@@ -1,0 +1,6 @@
+# Sample Notes — obadage2024_citations_repro
+
+N = 41244; window = MLRC 2022; unit = citation context.
+Filters: citation-context extraction via Semantic Scholar Graph API.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

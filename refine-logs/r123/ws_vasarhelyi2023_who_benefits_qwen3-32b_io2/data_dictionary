@@ -1,0 +1,16 @@
+# Data Dictionary — vasarhelyi2023_who_benefits
+
+## Data source
+Altmetric.com + Web of Science — Altmetrics + citation matched corpus
+Access: api-gated; Provenance: Altmetric.com (license) + WoS (license)
+
+## Key variables
+- Unit of analysis: paper
+- Time window: altmetrics coverage window
+- Sample N: pending
+- Filter rules: Coarsened Exact Matching on gender composition
+
+## Indicator definitions
+- Formula: Team gender composition × online visibility → citation impact (CEM quasi-experimental)
+- Parameters: CEM coarsening bins
+- Computation steps: compute gender composition, CEM match, estimate treatment effect

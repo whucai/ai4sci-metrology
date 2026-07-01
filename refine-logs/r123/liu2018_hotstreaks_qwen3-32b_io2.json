@@ -1,0 +1,100 @@
+{
+  "run_id": "r37",
+  "paper": "liu2018_hotstreaks",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807840,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/liu2018_hotstreaks_qwen3-32b_io2.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 93.4,
+    "usage": {
+      "completion": 7449,
+      "prompt": 13678
+    },
+    "finish": "stop",
+    "n_content_chars": 12602
+  },
+  "llm_response_chars": 12602,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.78,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 560,
+    "stderr_chars": 311
+  },
+  "stdout": "============================================================\nREPRODUCTION SCRIPT: Hot Streaks in Creative Careers\nDATA STATUS: SYNTHETIC (Original raw data unavailable)\n============================================================\nReal raw data detected. Loading...\nNOTE: No raw data provided. Generating SYNTHETIC dataset for method validation.\n\n--- Analyzing ARTISTS ---\nRESULT DATA_SUB artists_frac_with_streak = 1.000\nRESULT DATA_SUB artists_frac_one_streak = 1.000\nRESULT DATA_SUB artists_median_tau_H = 8.00\nRESULT DATA_SUB artists_median_tau_H_T = 0.241\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 259, in <module>\n    print(f\"RESULT DATA_SUB {dom}_gamma_H_gamma0_slope = {corr_slope:.3f}\")\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: unsupported format string passed to numpy.ndarray.__format__\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.55,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "SYNTHETIC": 2,
+      "COMPUTED": 4
+    },
+    "n_result_lines": 6
+  },
+  "status": "DONE",
+  "t_end": 1782807935
+}

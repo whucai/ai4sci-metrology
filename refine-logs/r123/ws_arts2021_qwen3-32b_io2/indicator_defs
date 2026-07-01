@@ -1,0 +1,16 @@
+# Indicator Definitions — Arts2021 (IO₂, no executable code)
+
+10 NLP patent-novelty/impact indicators. Provided: raw_data/patent_indicators.parquet (500 patents, precomputed indicator values).
+
+Novelty indicators (I1–I5):
+  I1 new_word = # new 1-grams not seen in prior art
+  I2 new_bigram = # new 2-grams
+  I3 new_trigram = # new 3-grams
+  I4 new_word_comb = # new combinations of existing words
+  I5 cosine_similarity = novelty via embedding cosine (match gold within 1–5%)
+
+Reuse indicators (I6–I9): aggregation formula |set| + Σui (NOTE: paper text has a bug at lines 233–236 writing |set|*(1+Σui); the correct form is |set|+Σui).
+  I6 new_word_reuse, I7 new_bigram_reuse, I8 new_trigram_reuse, I9 new_combos_reuse
+  I10 backward_cosine (reuse via cosine).
+
+Task: reproduce the indicator computation and verify against the provided parquet. METHOD task (no single numerical target).

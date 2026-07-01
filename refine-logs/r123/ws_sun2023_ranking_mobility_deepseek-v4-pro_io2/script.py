@@ -1,0 +1,227 @@
+import pandas as pd
+import numpy as np
+from scipy.optimize import minimize_scalar
+from scipy.stats import pearsonr
+
+# ==============================
+# Load data
+# ==============================
+df = pd.read_parquet('/workspace/raw_data/sciscinet_sample.parquet')
+
+# Expected columns: 'author_id', 'discipline', 'start_year', 'c5_first_5yr', 'c5_second_5yr'
+# If columns are named differently, adapt here.
+# For safety: print columns to inspect (but we can't see output in final script; assume they exist)
+print("Columns found:", df.columns.tolist())
+
+# Filter to years 1986-2008
+df = df[(df['start_year'] >= 1986) & (df['start_year'] <= 2008)]
+
+# ==============================
+# Helper functions
+# ==============================
+def gini(x):
+    """Gini coefficient of array x."""
+    x = np.array(x, dtype=float)
+    if np.sum(x) == 0 or len(x) < 2:
+        return np.nan
+    x = np.sort(x)
+    n = len(x)
+    index = np.arange(1, n + 1)
+    return (2 * np.sum(index * x) - (n + 1) * np.sum(x)) / (n * np.sum(x))
+
+def transition_matrix_model(D):
+    """Return 10x10 column-stochastic transition matrix for deciles 1..10."""
+    deciles = np.arange(1, 11)
+    Delta = np.abs(np.subtract.outer(deciles, deciles))  # |i-j|
+    P = np.exp(-Delta**2 / D)
+    P = P / P.sum(axis=0, keepdims=True)  # column normalisation
+    return P
+
+def compute_empirical_tm(group):
+    """
+    group: DataFrame with columns 'first_decile' and 'second_decile' for one cohort.
+    Returns 10x10 column-stochastic matrix.
+    """
+    # Build count matrix
+    count = np.zeros((10, 10), dtype=int)
+    for _, row in group.iterrows():
+        i = int(row['second_decile']) - 1  # second decile as row index
+        j = int(row['first_decile']) - 1   # first decile as column index
+        count[i, j] += 1
+    # Normalize columns
+    col_sums = count.sum(axis=0, keepdims=True)
+    col_sums[col_sums == 0] = 1  # avoid division by zero (shouldn't happen)
+    P_emp = count / col_sums
+    return P_emp
+
+# ==============================
+# Compute deciles per cohort
+# ==============================
+# For each discipline and start_year, compute decile ranks for c5_first_5yr (first 5yr) and c5_second_5yr (second 5yr)
+# Use pd.qcut with 10 quantiles, labels 1..10
+def assign_deciles(group, col):
+    """Assign decile ranks within group based on column col."""
+    try:
+        group['decile'] = pd.qcut(group[col], q=10, labels=False, duplicates='drop') + 1
+    except ValueError:
+        # If qcut fails (e.g., not enough distinct values), assign NaN
+        group['decile'] = np.nan
+    return group
+
+# Group by discipline and start_year, compute first and second deciles
+df = df.groupby(['discipline', 'start_year'], group_keys=False).apply(
+    lambda grp: assign_deciles(grp.copy(), 'c5_first_5yr')
+).rename(columns={'decile': 'first_decile'})
+
+df = df.groupby(['discipline', 'start_year'], group_keys=False).apply(
+    lambda grp: assign_deciles(grp.copy(), 'c5_second_5yr')
+).rename(columns={'decile': 'second_decile'})
+
+# Drop rows where decile assignment failed
+df = df.dropna(subset=['first_decile', 'second_decile'])
+
+# ==============================
+# Compute metrics for each cohort
+# ==============================
+results = []  # to store discipline, start_year, D_opt, Gini, ΔP_top, ΔP_bottom
+
+disciplines = df['discipline'].unique()
+
+for disc in disciplines:
+    disc_df = df[df['discipline'] == disc]
+    years = disc_df['start_year'].unique()
+    for yr in sorted(years):
+        cohort = disc_df[disc_df['start_year'] == yr]
+        n_authors = len(cohort)
+        if n_authors < 100:   # skip too small cohorts for reliable decile analysis
+            continue
+
+        # Empirical transition matrix
+        P_emp = compute_empirical_tm(cohort)
+
+        # Optimize D: Frobenius norm
+        def f(D):
+            P_mod = transition_matrix_model(D)
+            return np.linalg.norm(P_emp - P_mod, 'fro')
+
+        res = minimize_scalar(f, bounds=(0.01, 5.0), method='bounded')
+        if not res.success:
+            continue
+        D_opt = res.x
+
+        # ΔP for top (decile 10) and bottom (decile 1)
+        P_mod = transition_matrix_model(D_opt)
+        ΔP_top = P_emp[9, 9] - P_mod[9, 9]
+        ΔP_bottom = P_emp[0, 0] - P_mod[0, 0]
+
+        # Gini coefficient for c5_first_5yr
+        gini_val = gini(cohort['c5_first_5yr'].values)
+
+        results.append({
+            'discipline': disc,
+            'start_year': yr,
+            'D_opt': D_opt,
+            'Gini': gini_val,
+            'ΔP_top': ΔP_top,
+            'ΔP_bottom': ΔP_bottom,
+            'P_emp': P_emp  # store for later discipline-level calibration
+        })
+
+res_df = pd.DataFrame(results)
+
+# ==============================
+# Aggregate results
+# ==============================
+if len(res_df) > 0:
+    # Overall mean ΔP_top and ΔP_bottom (across all cohorts and disciplines)
+    mean_dP_top = res_df['ΔP_top'].mean()
+    mean_dP_bottom = res_df['ΔP_bottom'].mean()
+    print(f"RESULT (DATA_SUB) Overall mean ΔP for Top 10% = {mean_dP_top:.3f}")
+    print(f"RESULT (DATA_SUB) Overall mean ΔP for Bottom 10% = {mean_dP_bottom:.3f}")
+    # Paper reported: 0.19 (Top) and 0.10 (Bottom)
+    print("PAPER_REPORTED (approx): ΔP_Top = 0.19, ΔP_Bottom = 0.10")
+
+    # Temporal correlations
+    # Aggregate average D and Gini per year over disciplines
+    yearly = res_df.groupby('start_year').agg(
+        mean_D=('D_opt', 'mean'),
+        mean_Gini=('Gini', 'mean'),
+        n=('D_opt', 'count')
+    ).reset_index()
+    # Pearson correlation between mean_D and year
+    r_D, p_D = pearsonr(yearly['start_year'], yearly['mean_D'])
+    print(f"RESULT (DATA_SUB) Pearson r (mobility D vs year) = {r_D:.3f}, p = {p_D:.3e}")
+    r_G, p_G = pearsonr(yearly['start_year'], yearly['mean_Gini'])
+    print(f"RESULT (DATA_SUB) Pearson r (Gini vs year) = {r_G:.3f}, p = {p_G:.3e}")
+    # Paper reports: mobility increases over time (positive r), Gini decreases (negative r)
+    # Correlation between D and Gini across all discipline-year points
+    r_dgini, p_dgini = pearsonr(res_df['D_opt'], res_df['Gini'])
+    print(f"RESULT (DATA_SUB) Pearson r (D_opt vs Gini) = {r_dgini:.3f}, p = {p_dgini:.3e}")
+
+    # ==============================
+    # Discipline-level overall mobility and inequality (Table 1)
+    # ==============================
+    # Overall mobility: find single D per discipline that minimises sum of Frobenius norms over all years
+    disc_overall = []
+    for disc in disciplines:
+        disc_data = res_df[res_df['discipline'] == disc]
+        if len(disc_data) < 2:  # need at least a few years
+            continue
+        # Sum of norms function
+        def total_norm(D):
+            norm_sum = 0.0
+            for _, row in disc_data.iterrows():
+                P_emp = row['P_emp']
+                P_mod = transition_matrix_model(D)
+                norm_sum += np.linalg.norm(P_emp - P_mod, 'fro')
+            return norm_sum
+        res_d = minimize_scalar(total_norm, bounds=(0.01, 5.0), method='bounded')
+        if not res_d.success:
+            continue
+        D_disc = res_d.x
+        # overall inequality: mean Gini over years
+        mean_gini = disc_data['Gini'].mean()
+        disc_overall.append({
+            'discipline': disc,
+            'overall_D': D_disc,
+            'mean_Gini': mean_gini
+        })
+
+    disc_df = pd.DataFrame(disc_overall)
+    if len(disc_df) >= 10:
+        # Top/bottom 5 mobility
+        top_mobility = disc_df.nlargest(5, 'overall_D')
+        bottom_mobility = disc_df.nsmallest(5, 'overall_D')
+        print("RESULT (DATA_SUB) Top 5 disciplines by overall mobility (largest D):")
+        for i, r in top_mobility.iterrows():
+            print(f"  {r['discipline']}: D={r['overall_D']:.3f}")
+        print("RESULT (DATA_SUB) Bottom 5 disciplines by overall mobility (smallest D):")
+        for i, r in bottom_mobility.iterrows():
+            print(f"  {r['discipline']}: D={r['overall_D']:.3f}")
+
+        # Top/bottom 5 inequality (lowest inequality = low Gini)
+        top_inequality = disc_df.nlargest(5, 'mean_Gini')   # highest inequality
+        bottom_inequality = disc_df.nsmallest(5, 'mean_Gini') # lowest inequality
+        print("RESULT (DATA_SUB) Top 5 disciplines by overall inequality (highest mean Gini):")
+        for i, r in top_inequality.iterrows():
+            print(f"  {r['discipline']}: mean Gini = {r['mean_Gini']:.3f}")
+        print("RESULT (DATA_SUB) Bottom 5 disciplines by overall inequality (lowest mean Gini):")
+        for i, r in bottom_inequality.iterrows():
+            print(f"  {r['discipline']}: mean Gini = {r['mean_Gini']:.3f}")
+    else:
+        print("Not enough disciplines to compute top/bottom 5 rankings.")
+
+    # ==============================
+    # Check D values for specific disciplines in year 2000 (Fig 1)
+    # ==============================
+    test_disciplines = ['Biotechnology', 'Materials Sciences', 'Business & Economics', 'Chemistry']
+    for disc in test_disciplines:
+        sub = res_df[(res_df['discipline'] == disc) & (res_df['start_year'] == 2000)]
+        if not sub.empty:
+            d_val = sub.iloc[0]['D_opt']
+            print(f"RESULT (DATA_SUB) D for {disc} (cohort 2000) = {d_val:.3f}")
+        else:
+            print(f"RESULT (DATA_SUB) D for {disc} (cohort 2000) not available in sample.")
+    print("PAPER_REPORTED D values (cohort 2000): Biotechnology=0.35, Materials Sciences=0.23, Business & Economics=0.20, Chemistry=0.18")
+else:
+    print("No valid cohorts found. Check data format.")

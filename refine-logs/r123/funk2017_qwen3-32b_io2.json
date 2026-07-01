@@ -1,0 +1,89 @@
+{
+  "run_id": "r5",
+  "paper": "funk2017",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807035,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/funk2017_qwen3-32b_io2.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 124.4,
+    "usage": {
+      "completion": 10380,
+      "prompt": 16349
+    },
+    "finish": "stop",
+    "n_content_chars": 6107
+  },
+  "llm_response_chars": 6107,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.7,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 368,
+    "stderr_chars": 548
+  },
+  "stdout": "Loaded dataset shape: (40000, 11)\nAvailable columns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\nWARNING: Could not auto-map columns. Missing: ['patent_id', 'grant_year', 'cited_patent_id']. Assuming standard names exist.\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 154, in <module>\n    main()\n  File \"/workspace/script.py\", line 41, in main\n    df = df.dropna(subset=['patent_id', 'grant_year', 'cited_patent_id', 'citation_year'])\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 6670, in dropna\n    raise KeyError(np.array(subset)[check].tolist())\nKeyError: ['patent_id', 'grant_year', 'cited_patent_id', 'citation_year']\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.9,
+    "final_ecrf": 0.6,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "PAPER_REPORTED": 3
+    },
+    "n_result_lines": 3
+  },
+  "status": "DONE",
+  "t_end": 1782807160
+}

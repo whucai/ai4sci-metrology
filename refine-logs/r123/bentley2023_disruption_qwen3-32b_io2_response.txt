@@ -1,0 +1,120 @@
+
+
+```python
+import pandas as pd
+import numpy as np
+
+# === DATA_LOAD ===
+print("\n=== DATA_LOAD ===")
+df = pd.read_parquet("/workspace/raw_data/sciscinet_sample.parquet")
+total_loaded = len(df)
+print(f"Total loaded = {total_loaded}")
+
+# Apply mandatory filters (C2)
+df = df[(df['year'] >= 1945) & (df['year'] <= 2010)]
+df = df[df['disruption_score'].notna()]
+df = df[df['citation_count'].notna() & (df['citation_count'] > 0)]
+
+after_filter = len(df)
+year_min = int(df['year'].min())
+year_max = int(df['year'].max())
+print(f"After filter = {after_filter}")
+print(f"Year range = {year_min}-{year_max}")
+
+# === AGGREGATION ===
+grouped = df.groupby('year')
+
+# Unweighted mean CD per year
+uw_means = grouped['disruption_score'].mean()
+
+# Weighted mean CD per year: sum(citation_count * disruption_score) / sum(citation_count)
+w_means = grouped.apply(lambda x: np.average(x['disruption_score'], weights=x['citation_count']))
+
+# N and total citations per year
+n_per_year = grouped.size()
+cites_per_year = grouped['citation_count'].sum()
+
+# === DESCRIPTIVE ===
+print("\n=== DESCRIPTIVE ===")
+overall_uw_cd = df['disruption_score'].mean()
+overall_w_cd = np.average(df['disruption_score'], weights=df['citation_count'])
+print(f"Overall UW CD = {overall_uw_cd:.6f}")
+print(f"Overall W CD = {overall_w_cd:.6f}")
+
+post1970 = df[df['year'] > 1970]
+post1970_w_cd = np.average(post1970['disruption_score'], weights=post1970['citation_count'])
+print(f"Post-1970 W CD = {post1970_w_cd:.6f}")
+
+change_2000_2010 = w_means.get(2010, 0) - w_means.get(2000, 0)
+print(f"Change 2000-2010 = {change_2000_2010:.6f}")
+
+# === CD_BY_YEAR ===
+print("\n=== CD_BY_YEAR ===")
+for year in sorted(uw_means.index):
+    uw = uw_means[year]
+    w = w_means[year]
+    n = int(n_per_year[year])
+    cites = int(cites_per_year[year])
+    print(f"{year}: uw={uw:.6f}, w={w:.6f}, N={n}, cites={cites}")
+
+# === RESULTS ===
+print("\n=== RESULTS ===")
+sample_n = after_filter
+years = len(uw_means)
+uw_cd_1945 = uw_means.get(1945, 0)
+uw_cd_2010 = uw_means.get(2010, 0)
+w_cd_1945 = w_means.get(1945, 0)
+w_cd_2010 = w_means.get(2010, 0)
+
+uw_decline = (1 - uw_cd_2010 / uw_cd_1945) * 100 if uw_cd_1945 != 0 else 0
+w_decline = (1 - w_cd_2010 / w_cd_1945) * 100 if w_cd_1945 != 0 else 0
+
+print(f"RESULT sample_N = {sample_n}")
+print(f"PAPER_REPORTED sample_N = 469855")
+print(f"RESULT years = {years}")
+print(f"PAPER_REPORTED years = 66")
+print(f"RESULT uw_cd_1945 = {uw_cd_1945:.6f}")
+print(f"PAPER_REPORTED uw_cd_1945 = 0.035979")
+print(f"RESULT uw_cd_2010 = {uw_cd_2010:.6f}")
+print(f"PAPER_REPORTED uw_cd_2010 = 0.001191")
+print(f"RESULT w_cd_1945 = {w_cd_1945:.6f}")
+print(f"PAPER_REPORTED w_cd_1945 = 0.076989")
+print(f"RESULT w_cd_2010 = {w_cd_2010:.6f}")
+print(f"PAPER_REPORTED w_cd_2010 = -0.000930")
+print(f"RESULT uw_decline_pct = {uw_decline:.1f}")
+print(f"PAPER_REPORTED uw_decline_pct = 96.7")
+print(f"RESULT w_decline_pct = {w_decline:.1f}")
+print(f"PAPER_REPORTED w_decline_pct = 101.2")
+print(f"RESULT overall_w_cd = {overall_w_cd:.6f}")
+print(f"PAPER_REPORTED overall_w_cd = 0.014379")
+print(f"RESULT post1970_w_cd = {post1970_w_cd:.6f}")
+print(f"PAPER_REPORTED post1970_w_cd = 0.010449")
+print(f"RESULT change_2000_2010 = {change_2000_2010:.6f}")
+print(f"PAPER_REPORTED change_2000_2010 = -0.003413")
+
+# === DIFF_TABLE ===
+print("\n=== DIFF_TABLE ===")
+print("| Metric | Value |")
+print(f"| sample_N | {sample_n} |")
+print(f"| uw_cd_1945 | {uw_cd_1945:.6f} |")
+print(f"| uw_cd_2010 | {uw_cd_2010:.6f} |")
+print(f"| w_cd_1945 | {w_cd_1945:.6f} |")
+print(f"| w_cd_2010 | {w_cd_2010:.6f} |")
+print(f"| uw_decline_pct | {uw_decline:.1f} |")
+print(f"| w_decline_pct | {w_decline:.1f} |")
+print(f"| overall_w_cd | {overall_w_cd:.6f} |")
+print(f"| post1970_w_cd | {post1970_w_cd:.6f} |")
+print(f"| change_2000_2010 | {change_2000_2010:.6f} |")
+
+# === CONCLUSION ===
+print("\n=== CONCLUSION ===")
+if uw_decline > 0 and w_decline > 100:
+    print("CONCLUSION: Both unweighted and citation-weighted CD5 show decline from 1945-2010. "
+          "The weighted measure shows >100% decline (crossing into negative territory), "
+          "suggesting that when accounting for citation impact, disruption has not just decreased "
+          "but reversed direction in recent years. This supports the paper's argument that "
+          "the reported CD5 decline is not merely an artifact of exponential growth, but reflects "
+          "a genuine shift in the nature of scientific impact.")
+else:
+    print("CONCLUSION: Results indicate trends in disruption scores over the study period.")
+```

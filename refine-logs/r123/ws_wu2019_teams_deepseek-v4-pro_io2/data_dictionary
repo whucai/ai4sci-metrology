@@ -1,0 +1,16 @@
+# Data Dictionary — wu2019_teams
+
+## Data source
+Web of Science + Microsoft Academic Graph + USPTO + GitHub — Citation + authorship network
+Access: public-substitute; Provenance: SciSciNet local
+
+## Key variables
+- Unit of analysis: team-paper
+- Time window: 1954-2000s
+- Sample N: 30000000
+- Filter rules: complete citation data, team-size deciles
+
+## Indicator definitions
+- Formula: CD = (Ni - Nj)/(Ni + Nj + Nk)
+- Parameters: team-size deciles, D-index by decile
+- Computation steps: build citation network, compute CD per paper, group by team size

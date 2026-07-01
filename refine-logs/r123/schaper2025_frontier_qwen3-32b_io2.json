@@ -1,0 +1,87 @@
+{
+  "run_id": "r23",
+  "paper": "schaper2025_frontier",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807512,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/schaper2025_frontier_qwen3-32b_io2.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 104.2,
+    "usage": {
+      "completion": 8863,
+      "prompt": 12375
+    },
+    "finish": "stop",
+    "n_content_chars": 11017
+  },
+  "llm_response_chars": 11017,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 2.3,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 460,
+    "stderr_chars": 1760
+  },
+  "stdout": "=== REPRODUCTION SCRIPT: Schaper et al. (2025) ===\nChecking /workspace/raw_data/ for original dataset...\nNO raw data file is provided. Generating SYNTHETIC dataset to demonstrate methodology.\nAll results below are labeled DATA_SUB (synthetic) and compared to PAPER_REPORTED values.\n\nSYNTHETIC DATA GENERATED. Shape: (50000, 15)\nGroup shares: {'non_frontier': 0.52156, 'no_author': 0.40886, 'frontier': 0.06958}\n\n--- Running Econometric Models (Eq. 1 & 2) ---\n\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 131, in <module>\n    model_ppml = sm.GLM(y_cit, X_cit, family=sm.families.Poisson()).fit(cov_type='robust')\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/genmod/generalized_linear_model.py\", line 326, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 270, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 95, in __init__\n    self.data = self._handle_data(endog, exog, missing, hasconst,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 135, in _handle_data\n    data = handle_data(endog, exog, missing, hasconst, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 675, in handle_data\n    return klass(endog, exog=exog, missing=missing, hasconst=hasconst,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 84, in __init__\n    self.endog, self.exog = self._convert_endog_exog(endog, exog)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 509, in _convert_endog_exog\n    raise ValueError(\"Pandas data cast to numpy dtype of object. \"\nValueError: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 0.5,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.7,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 1
+    },
+    "n_result_lines": 1
+  },
+  "status": "DONE",
+  "t_end": 1782807619
+}

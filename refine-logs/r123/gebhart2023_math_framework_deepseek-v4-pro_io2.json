@@ -1,0 +1,97 @@
+{
+  "run_id": "r34",
+  "paper": "gebhart2023_math_framework",
+  "model": "deepseek-v4-pro",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782807745,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r123/gebhart2023_math_framework_deepseek-v4-pro_io2.json",
+  "io2_data_files": [
+    "openalex_physics_200.json"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 128.5,
+    "usage": {
+      "completion": 6828,
+      "prompt": 11472
+    },
+    "finish": "stop",
+    "n_content_chars": 11401
+  },
+  "llm_response_chars": 11401,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.65,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 231,
+    "stderr_chars": 893
+  },
+  "stdout": "Loading raw data from /workspace/raw_data/openalex_physics_200.json\nGraph built: 0 nodes, 0 edges\nComputing disruption measures...\nNumber of papers with non-zero in/out degree: 0\n\nComputing Pearson correlation matrix (DATA_SUB)...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 229, in <module>\n    corr_df = df[corr_measures].dropna()\n              ~~^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4108, in __getitem__\n    indexer = self.columns._get_indexer_strict(key, \"columns\")[1]\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 6200, in _get_indexer_strict\n    self._raise_if_missing(keyarr, indexer, axis_name)\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 6249, in _raise_if_missing\n    raise KeyError(f\"None of [{key}] are in the [{axis_name}]\")\nKeyError: \"None of [Index(['D', 'Q', 'Pi1', 'Pi3', 'Pi5', 'Pi10', 'B1', 'B3', 'B5', 'B10', 'B_all',\\n       'Pi_all'],\\n      dtype='object')] are in the [columns]\"\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.65,
+    "final_ecrf": 0.55,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 1
+    },
+    "n_result_lines": 1
+  },
+  "status": "DONE",
+  "t_end": 1782807874
+}
