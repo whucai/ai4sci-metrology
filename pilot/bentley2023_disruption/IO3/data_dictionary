@@ -1,0 +1,16 @@
+# Data Dictionary — bentley2023_disruption
+
+## Data source
+SciSciNet — Citation network 1945-2010
+Access: public; Provenance: SciSciNet local
+
+## Key variables
+- Unit of analysis: paper
+- Time window: 1945-2010
+- Sample N: 469855
+- Filter rules: require CD score, require citations
+
+## Indicator definitions
+- Formula: mCD5(t) = Σ(cit_i * CD5_i) / Σ(cit_i)
+- Parameters: citation weighting
+- Computation steps: compute CD5, weight by citations, groupby year

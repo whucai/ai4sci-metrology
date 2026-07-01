@@ -1,0 +1,6 @@
+# Sample Notes — bentley2023_disruption
+
+N = 469855; window = 1945-2010; unit = paper.
+Filters: require CD score, require citations.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

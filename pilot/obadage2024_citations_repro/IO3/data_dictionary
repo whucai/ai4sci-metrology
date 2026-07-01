@@ -1,0 +1,16 @@
+# Data Dictionary — obadage2024_citations_repro
+
+## Data source
+ML Reproducibility Challenge 2022 papers + 41,244 citation contexts (Semantic Scholar) — ML papers + citation contexts for reproducibility prediction
+Access: public; Provenance: Zenodo 10.5281/zenodo.10895748; GitHub lamps-lab/ccair-ai-reproducibility
+
+## Key variables
+- Unit of analysis: citation context
+- Time window: MLRC 2022
+- Sample N: 41244
+- Filter rules: citation-context extraction via Semantic Scholar Graph API
+
+## Indicator definitions
+- Formula: Citation-context features → reproducibility score (M1-M7 models)
+- Parameters: sentiment features, 5-fold CV
+- Computation steps: extract citation contexts, compute sentiment features, train M1-M7
