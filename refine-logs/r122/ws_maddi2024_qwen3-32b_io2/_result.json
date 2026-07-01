@@ -3,25 +3,25 @@
   "model": "qwen3-32b",
   "io": 2,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782722331,
+  "t_start": 1782808530,
   "io2_data_files": [],
   "io3_ref_code_files": [],
   "llm": {
     "model": "qwen3.6-27b-fp8",
     "base_url": "http://172.17.65.41:8360/v1",
-    "elapsed": 82.8,
+    "elapsed": 73.5,
     "usage": {
-      "completion": 6928,
+      "completion": 6074,
       "prompt": 14235
     },
     "finish": "stop",
-    "n_content_chars": 7694
+    "n_content_chars": 8800
   },
-  "llm_response_chars": 7694,
+  "llm_response_chars": 8800,
   "code_parsed": true,
   "exec": {
     "exit_code": 0,
-    "elapsed": 0.93,
+    "elapsed": 1.02,
     "network_blocked": true,
     "network_probe": {
       "reachable": false,
@@ -31,11 +31,11 @@
       "_audit_net.json",
       "_audit_probe.py"
     ],
-    "stdout_chars": 326,
-    "stderr_chars": 1795
+    "stdout_chars": 0,
+    "stderr_chars": 486
   },
-  "stdout": "Attempting to load raw data from /workspace/raw_data/...\nNOTE: \nExpected CSV columns: ut, year, oa (0/1), n_funders, n_countries, discipline (1-14), \njif (impact factor), review_length (words), citations.\n\nWARNING: Raw data not found. Generating SYNTHETIC dataset matching paper specifications.\nRESULT DATA_SOURCE = SYNTHETIC\n",
-  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 20, in <module>\n    df = pd.read_csv(\"/workspace/raw_data/publons_wos_data.csv\")\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/io/parsers/readers.py\", line 1026, in read_csv\n    return _read(filepath_or_buffer, kwds)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/io/parsers/readers.py\", line 620, in _read\n    parser = TextFileReader(filepath_or_buffer, **kwds)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/io/parsers/readers.py\", line 1620, in __init__\n    self._engine = self._make_engine(f, self.engine)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/io/parsers/readers.py\", line 1880, in _make_engine\n    self.handles = get_handle(\n                   ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/io/common.py\", line 873, in get_handle\n    handle = open(\n             ^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/workspace/raw_data/publons_wos_data.csv'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/workspace/script.py\", line 28, in <module>\n    years = np.random.choice(range(2009, 2021), N_init, p=[0.013, 0.016, 0.023, 0.030, 0.045, 0.061, 0.082, 0.102, 0.247, 0.322, 0.052, 0.069])\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 975, in numpy.random.mtrand.RandomState.choice\nValueError: probabilities do not sum to 1\n",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 22, in <module>\n    'year': np.random.choice(range(2009, 2021), size=N_INITIAL, p=[0.01, 0.02, 0.03, 0.04, 0.06, 0.08, 0.10, 0.12, 0.15, 0.25, 0.14]),\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 968, in numpy.random.mtrand.RandomState.choice\nValueError: 'a' and 'p' must have same size\n",
   "isolation": {
     "network_blocked": true,
     "network_egress_ok": true
@@ -52,11 +52,11 @@
       },
       "indicator": {
         "score": 1.0,
-        "rationale": "strong: ['reviewer', 'iqr', 'fisher']"
+        "rationale": "strong: ['iqr', 'fisher']"
       },
       "model": {
         "score": 1.0,
-        "rationale": "strong: ['glm', 'log1p']"
+        "rationale": "strong: ['glm', 'log(1', 'log1p']"
       },
       "result": {
         "score": 1.0,
@@ -64,13 +64,13 @@
       },
       "claim": {
         "score": 1.0,
-        "rationale": "strong: ['longer', 'positive', 'threshold']"
+        "rationale": "strong: ['positive', 'threshold']"
       }
     },
     "overall_ecrf": 1.0
   },
   "status": "DONE",
-  "t_end": 1782722415,
+  "t_end": 1782808605,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

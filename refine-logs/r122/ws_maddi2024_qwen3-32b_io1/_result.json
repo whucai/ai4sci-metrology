@@ -3,25 +3,25 @@
   "model": "qwen3-32b",
   "io": 1,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782722231,
+  "t_start": 1782808393,
   "io2_data_files": [],
   "io3_ref_code_files": [],
   "llm": {
     "model": "qwen3.6-27b-fp8",
     "base_url": "http://172.17.65.41:8360/v1",
-    "elapsed": 98.5,
+    "elapsed": 136.2,
     "usage": {
-      "completion": 8186,
+      "completion": 11446,
       "prompt": 17871
     },
     "finish": "stop",
-    "n_content_chars": 11003
+    "n_content_chars": 8389
   },
-  "llm_response_chars": 11003,
+  "llm_response_chars": 8389,
   "code_parsed": true,
   "exec": {
     "exit_code": 0,
-    "elapsed": 0.97,
+    "elapsed": 1.0,
     "network_blocked": true,
     "network_probe": {
       "reachable": false,
@@ -32,10 +32,10 @@
       "_audit_probe.py"
     ],
     "stdout_chars": 0,
-    "stderr_chars": 504
+    "stderr_chars": 412
   },
   "stdout": "",
-  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 36, in <module>\n    'pub_year': np.random.choice(range(2009, 2021), size=N_INITIAL, p=[0.01, 0.02, 0.03, 0.04, 0.06, 0.08, 0.10, 0.12, 0.25, 0.25, 0.08, 0.06]),\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 975, in numpy.random.mtrand.RandomState.choice\nValueError: probabilities do not sum to 1\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 34, in <module>\n    'pub_year': np.random.choice(range(2010, 2021), N, p=[0.0444, 0.0582, 0.0681, 0.0813, 0.0926, \n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 975, in numpy.random.mtrand.RandomState.choice\nValueError: probabilities do not sum to 1\n",
   "isolation": {
     "network_blocked": true,
     "network_egress_ok": true
@@ -52,11 +52,11 @@
       },
       "indicator": {
         "score": 1.0,
-        "rationale": "strong: ['report length', 'reviewer', 'iqr']"
+        "rationale": "strong: ['word count', 'reviewer', 'iqr', 'fisher']"
       },
       "model": {
-        "score": 1.0,
-        "rationale": "strong: ['log(1', 'log1p']"
+        "score": 0.5,
+        "rationale": "partial: ['log1p']"
       },
       "result": {
         "score": 1.0,
@@ -67,10 +67,10 @@
         "rationale": "strong: ['longer', 'positive', 'threshold']"
       }
     },
-    "overall_ecrf": 1.0
+    "overall_ecrf": 0.917
   },
   "status": "DONE",
-  "t_end": 1782722331,
+  "t_end": 1782808530,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

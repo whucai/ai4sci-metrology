@@ -1,0 +1,4 @@
+# Sample Notes — Park et al. 2023
+40K SciSciNet random sample (DATA_SUB for the original millions-of-works dataset, 1945-2010).
+Sufficient to reproduce the directional decline of mean disruption_score over year.
+Original: papers (WoS/OpenAlex/MAG) + patents (USPTO), 1945-2010.

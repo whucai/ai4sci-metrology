@@ -48,3 +48,57 @@
   status=DONE ecrf(v0)=0.417
 
 [13/30] liu2018_hotstreaks io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_liu2018_hotstreaks_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.917
+
+[14/30] liu2018_hotstreaks io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_liu2018_hotstreaks_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.917
+
+[15/30] liu2018_hotstreaks io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_liu2018_hotstreaks_qwen3-32b_io3
+  status=DONE ecrf(v0)=0.833
+
+[16/30] maddi2024 io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_maddi2024_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.917
+
+[17/30] maddi2024 io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_maddi2024_qwen3-32b_io2
+  status=DONE ecrf(v0)=1.0
+
+[18/30] maddi2024 io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_maddi2024_qwen3-32b_io3
+  status=DONE ecrf(v0)=1.0
+
+[19/30] obadage2024_citations_repro io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_obadage2024_citations_repro_qwen3-32b_io1
+  status=DONE ecrf(v0)=1.0
+
+[20/30] obadage2024_citations_repro io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_obadage2024_citations_repro_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.75
+
+[21/30] obadage2024_citations_repro io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_obadage2024_citations_repro_qwen3-32b_io3
+  status=DONE ecrf(v0)=0.75
+
+[22/30] park2023_disruptive io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_park2023_disruptive_qwen3-32b_io1
+  status=DONE ecrf(v0)=1.0
+
+[23/30] park2023_disruptive io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_park2023_disruptive_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.833
+
+[24/30] park2023_disruptive io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_park2023_disruptive_qwen3-32b_io3
+  status=DONE ecrf(v0)=0.917
+
+[25/30] petersen2024 io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_petersen2024_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.667
+
+[26/30] petersen2024 io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_petersen2024_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.583
+
+[27/30] petersen2024 io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_petersen2024_qwen3-32b_io3
+  status=DONE ecrf(v0)=0.75
+
+[28/30] wu2019_teams io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_wu2019_teams_qwen3-32b_io1
+  status=EXEC_NONZERO ecrf(v0)=0.792
+
+[29/30] wu2019_teams io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_wu2019_teams_qwen3-32b_io2
+  status=LLM_FAIL ecrf(v0)=None
+
+[30/30] wu2019_teams io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_wu2019_teams_qwen3-32b_io3
+  status=LLM_FAIL ecrf(v0)=None
+
+[done] 30 runs in 6391.9s -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122

@@ -3,36 +3,42 @@
   "model": "qwen3-32b",
   "io": 1,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782722505,
+  "t_start": 1782809334,
   "io2_data_files": [],
   "io3_ref_code_files": [],
   "llm": {
     "model": "qwen3.6-27b-fp8",
     "base_url": "http://172.17.65.41:8360/v1",
-    "elapsed": 145.2,
+    "elapsed": 107.2,
     "usage": {
-      "completion": 11477,
+      "completion": 8832,
       "prompt": 17904
     },
     "finish": "stop",
-    "n_content_chars": 13297
+    "n_content_chars": 13879
   },
-  "llm_response_chars": 13297,
+  "llm_response_chars": 13879,
   "code_parsed": true,
   "exec": {
-    "exit_code": -1,
-    "elapsed": 600.1,
-    "network_blocked": null,
-    "network_probe": null,
-    "files_written": [],
-    "stdout_chars": 0,
-    "stderr_chars": 39
+    "exit_code": 0,
+    "elapsed": 1.14,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 429,
+    "stderr_chars": 658
   },
-  "stdout": "",
-  "stderr": "Isolated execution timed out after 600s",
+  "stdout": "============================================================\nREPRODUCTION: Petersen et al. (2024) - Disruption Index Bias\n============================================================\n\n[1] DATA LOADING (STUB + SYNTHETIC PLACEHOLDER)\n    Loaded synthetic MAG placeholder: 50000 papers, years 1990-2009\n    Schema: ['paper_id', 'year', 'coauthors', 'references', 'citations_5yr', 'Ni', 'Nj', 'Nk']\n\n[2] EMPIRICAL REGRESSION (Eq. 3)\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 275, in <module>\n    reg_results = run_regression(df_mag)\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 231, in run_regression\n    beta = np.linalg.solve(XtX, Xty)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/numpy/linalg/linalg.py\", line 409, in solve\n    r = gufunc(a, b, signature=signature, extobj=extobj)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nnumpy.core._exceptions._UFuncInputCastingError: Cannot cast ufunc 'solve1' input 0 from dtype('O') to dtype('float64') with casting rule 'same_kind'\n",
   "isolation": {
-    "network_blocked": null,
-    "network_egress_ok": false
+    "network_blocked": true,
+    "network_egress_ok": true
   },
   "ecrf": {
     "components": {
@@ -50,11 +56,11 @@
       },
       "model": {
         "score": 1.0,
-        "rationale": "strong: ['ols', 'fixed effect', 'ln_rp', 'ln_kp']"
+        "rationale": "strong: ['ols', 'year fe', 'fixed effect', 'ln_rp', 'ln_kp']"
       },
       "result": {
         "score": 0.0,
-        "rationale": "no gold signal matched | execution failed/skipped \u2192 capped"
+        "rationale": "no gold signal matched"
       },
       "claim": {
         "score": 1.0,
@@ -63,8 +69,8 @@
     },
     "overall_ecrf": 0.667
   },
-  "status": "EXEC_NONZERO",
-  "t_end": 1782723250,
+  "status": "DONE",
+  "t_end": 1782809442,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

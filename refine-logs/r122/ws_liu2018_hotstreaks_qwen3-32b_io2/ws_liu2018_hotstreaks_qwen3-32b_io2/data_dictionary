@@ -1,0 +1,6 @@
+# Data Dictionary — liu2018_hotstreaks
+Source: github.com/lu-liu/hotstreaks (Liu et al. 2018, Nature).
+File: scientists_sample.txt — 1,000-scientist subsample of scientists_c10.txt (20,040 full).
+Format: one career per line; works split by '|'; each work = raw_C10, rescaled_C10, year.
+rescaled_C10 = per-work citation impact (higher = more impactful).
+readme.txt describes the full dataset (artists/directors/scientists + citation.zip).

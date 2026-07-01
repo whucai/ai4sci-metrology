@@ -189,7 +189,7 @@ PAPER_GOLD = {
         "result": ["novelty", "impact", "citation", "award", "breakthrough"],
         "claim": ["nlp", "patent", "novelty", "impact", "new technology"],
     },
-    "schaper2025_frontier_scientists": {
+    "schaper2025_frontier": {
         "domain": "IS", "task": "DATA-SUB",
         "data_source": ["pubmed", "uspto", "ku leuven", "sciscinet"],
         "sample": ["frontier", "scientist", "career"],

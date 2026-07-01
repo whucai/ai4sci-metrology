@@ -1,0 +1,119 @@
+{
+  "paper": "liu2018_hotstreaks",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782808226,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.41:8360/v1",
+    "elapsed": 97.6,
+    "usage": {
+      "completion": 8316,
+      "prompt": 709
+    },
+    "finish": "stop",
+    "n_content_chars": 7603
+  },
+  "llm_response_chars": 7603,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.59,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 302,
+    "stderr_chars": 620
+  },
+  "stdout": "NOTE: Raw data not found at /workspace/raw_data/scientists_c10.txt\nREQUIRED DATA: scientists_c10.txt (or artists.txt / directors.txt)\nFORMAT: Each line represents one career. Works are separated by '|'.\nEach work tuple: (raw_C10, rescaled_C10, year).\nGENERATING SYNTHETIC DATA FOR METHOD VALIDATION...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 179, in <module>\n    main()\n  File \"/workspace/script.py\", line 150, in main\n    df, source = load_or_generate_data()\n                 ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 51, in load_or_generate_data\n    years = np.sort(np.random.choice(range(1980, 2020), n_works, replace=False))\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 1001, in numpy.random.mtrand.RandomState.choice\nValueError: Cannot take a larger sample than population when 'replace=False'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.5,
+        "rationale": "partial: ['mag']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['scientist', 'artist', 'director', 'career']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['hot streak', 'impact', 'c10', 'rescaled', 'consecutive', 'burst']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['shuffle', 'null', 'quartile', 'mean', 'permutation']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['non-random', 'bursty', 'consecutive', 'observed', 'null']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['hot streak', 'non-random', 'bursty', 'high-impact', 'career']"
+      }
+    },
+    "overall_ecrf": 0.917
+  },
+  "status": "DONE",
+  "t_end": 1782808324,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

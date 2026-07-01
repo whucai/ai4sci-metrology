@@ -118,9 +118,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--smoke", action="store_true", help="1 run: petersen2024 qwen3-32b io1")
     ap.add_argument("--paper")
+    ap.add_argument("--papers", help="comma-separated paper slugs to include (with --full)")
     ap.add_argument("--io", type=int, choices=[1, 2, 3])
     ap.add_argument("--model", choices=list(MODELS))
     ap.add_argument("--full", action="store_true", help="all ready (paper x io x model) combos")
+    ap.add_argument("--skip-existing", action="store_true", help="skip runs whose _result.json already exists and is DONE")
     ap.add_argument("--dry-run", action="store_true", help="list what would run, then exit")
     args = ap.parse_args()
 
@@ -135,6 +137,9 @@ def main():
         runs = [(args.paper, args.io or 1, args.model or "qwen3-32b")]
     elif args.full:
         papers = sorted(gold.keys()) if gold else sorted(pilot.PAPER_GOLD)
+        if args.papers:
+            want = {p.strip() for p in args.papers.split(",")}
+            papers = [p for p in papers if p in want]
         ios = [args.io] if args.io else [1, 2, 3]
         models = [m for m in MODELS if m in live_models]
         runs = [(p, io, m) for p in papers for io in ios for m in models]
@@ -152,6 +157,20 @@ def main():
             ready.append((p, io, m))
         else:
             blocked.append((p, io, m, why))
+
+    # Skip existing DONE runs if requested
+    if args.skip_existing:
+        fresh = []
+        for p, io, m in ready:
+            out = OUT_DIR / f"ws_{p}_{m}_io{io}" / "_result.json"
+            if out.exists():
+                try:
+                    if json.loads(out.read_text()).get("status") == "DONE":
+                        continue
+                except Exception:
+                    pass
+            fresh.append((p, io, m))
+        ready = fresh
 
     print(f"[plan] {len(ready)} ready, {len(blocked)} blocked")
     for b in blocked[:10]:

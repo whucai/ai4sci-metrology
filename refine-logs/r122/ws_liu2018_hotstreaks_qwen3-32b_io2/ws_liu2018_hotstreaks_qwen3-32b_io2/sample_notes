@@ -1,0 +1,4 @@
+# Sample Notes — liu2018 hot streaks
+1,000-scientist subsample (DATA_SUB for the full 20,040). Sufficient to reproduce the
+directional finding: careers contain non-random consecutive high-impact runs (hot streaks)
+vs a within-career shuffled null.

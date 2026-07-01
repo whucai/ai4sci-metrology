@@ -3,7 +3,7 @@
   "model": "qwen3-32b",
   "io": 3,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782723415,
+  "t_start": 1782809547,
   "io2_data_files": [
     "sciscinet_sample.parquet"
   ],
@@ -13,19 +13,19 @@
   "llm": {
     "model": "qwen3.6-27b-fp8",
     "base_url": "http://172.17.65.41:8360/v1",
-    "elapsed": 74.1,
+    "elapsed": 48.4,
     "usage": {
-      "completion": 5986,
+      "completion": 4025,
       "prompt": 13514
     },
     "finish": "stop",
-    "n_content_chars": 2518
+    "n_content_chars": 2732
   },
-  "llm_response_chars": 2518,
+  "llm_response_chars": 2732,
   "code_parsed": true,
   "exec": {
     "exit_code": 0,
-    "elapsed": 0.82,
+    "elapsed": 0.89,
     "network_blocked": true,
     "network_probe": {
       "reachable": false,
@@ -60,7 +60,7 @@
       },
       "model": {
         "score": 1.0,
-        "rationale": "strong: ['ols', 'fixed effect', 'reference_count', 'ln_rp', 'ln_kp']"
+        "rationale": "strong: ['ols', 'year fe', 'fixed effect', 'reference_count', 'ln_rp', 'ln_kp']"
       },
       "result": {
         "score": 1.0,
@@ -68,13 +68,13 @@
       },
       "claim": {
         "score": 1.0,
-        "rationale": "strong: ['citation inflation', 'negative', 'decline']"
+        "rationale": "strong: ['citation inflation', 'negative']"
       }
     },
     "overall_ecrf": 0.75
   },
   "status": "DONE",
-  "t_end": 1782723490,
+  "t_end": 1782809597,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

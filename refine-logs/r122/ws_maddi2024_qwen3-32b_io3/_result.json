@@ -3,25 +3,25 @@
   "model": "qwen3-32b",
   "io": 3,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782722415,
+  "t_start": 1782808605,
   "io2_data_files": [],
   "io3_ref_code_files": [],
   "llm": {
     "model": "qwen3.6-27b-fp8",
     "base_url": "http://172.17.65.41:8360/v1",
-    "elapsed": 89.2,
+    "elapsed": 40.8,
     "usage": {
-      "completion": 7230,
+      "completion": 3434,
       "prompt": 11488
     },
     "finish": "stop",
-    "n_content_chars": 6118
+    "n_content_chars": 3661
   },
-  "llm_response_chars": 6118,
+  "llm_response_chars": 3661,
   "code_parsed": true,
   "exec": {
     "exit_code": 0,
-    "elapsed": 1.0,
+    "elapsed": 0.3,
     "network_blocked": true,
     "network_probe": {
       "reachable": false,
@@ -31,11 +31,11 @@
       "_audit_net.json",
       "_audit_probe.py"
     ],
-    "stdout_chars": 854,
-    "stderr_chars": 1975
+    "stdout_chars": 2522,
+    "stderr_chars": 0
   },
-  "stdout": "DATA_STATUS raw_data_available = False\nDATA_STATUS reference_code_available = False\nPAPER_REPORTED N_final = 57482\nPAPER_REPORTED threshold_significant_words = 947\nPAPER_REPORTED avg_report_words = 416.3\nPAPER_REPORTED median_report_words = 302\nPAPER_REPORTED excluded_iqr_outliers = 212\nPAPER_REPORTED excluded_influential_obs = 30\nPAPER_REPORTED oa_rate_publons = 0.391\nPAPER_REPORTED oa_rate_wos = 0.287\nPAPER_REPORTED funding_rate_publons = 0.737\nPAPER_REPORTED funding_rate_wos = 0.539\nPAPER_REPORTED discretization_bins = [0, 232, 535, 946, 1612, 2891]\nPAPER_REPORTED estimator = GLM/OLS on log(1+citations) with HC3 robust SE\n\nDATA UNAVAILABLE: Raw data files not found. Constructing documented synthetic stub to demonstrate the methodological pipeline.\nNOTE: All numerical outputs below are labeled SYNTHETIC. Exact reproduction is data-blocked.\n",
-  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 76, in <module>\n    model_init = sm.OLS(y, X).fit()\n                 ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 924, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 749, in __init__\n    super().__init__(endog, exog, missing=missing,\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/regression/linear_model.py\", line 203, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 270, in __init__\n    super().__init__(endog, exog, **kwargs)\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 95, in __init__\n    self.data = self._handle_data(endog, exog, missing, hasconst,\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/model.py\", line 135, in _handle_data\n    data = handle_data(endog, exog, missing, hasconst, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 675, in handle_data\n    return klass(endog, exog=exog, missing=missing, hasconst=hasconst,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 84, in __init__\n    self.endog, self.exog = self._convert_endog_exog(endog, exog)\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/base/data.py\", line 509, in _convert_endog_exog\n    raise ValueError(\"Pandas data cast to numpy dtype of object. \"\nValueError: Pandas data cast to numpy dtype of object. Check input data with np.asarray(data).\n",
+  "stdout": "=== REPRODUCTION STATUS ===\nRESULT reproduction_status = DATA_BLOCKED\nRESULT data_needed = ['Publons reviewer report word counts', 'WoS citation counts', 'Journal impact factors', 'Funding info', 'Country info', 'Discipline codes', 'Publication years', 'Open access status']\n\n=== PAPER REPORTED VALUES ===\nPAPER_REPORTED N_initial_matched = 61197\nPAPER_REPORTED N_after_year_filter = 57694\nPAPER_REPORTED N_after_outlier_removal = 57482\nPAPER_REPORTED outlier_threshold_words = 13671\nPAPER_REPORTED N_excluded_influential = 30\nPAPER_REPORTED DV_transform = log(1 + citations)\nPAPER_REPORTED IV_discretization_method = Fisher\nPAPER_REPORTED IV_classes = ['<232', '232-535', '536-946', '947-1612', '1613-2891']\nPAPER_REPORTED significant_threshold_words = 947\nPAPER_REPORTED significant_intervals = ['[947, 1612]', '[1613, 2891]']\nPAPER_REPORTED estimator = GLM_robust_standard_errors\nPAPER_REPORTED adjustment_method = Raking_Ratio\n\n=== ANALYTICAL PIPELINE (STUB) ===\n  1. Load Publons data (UT, word_count) and WoS data (citations, IF, OA, funders, countries, discipline, year).\n  2. Merge on UT. Keep 1 random report per publication if multiple exist.\n  3. Filter: year >= 2009, citable documents, complete metadata. -> N=57,694\n  4. Outlier removal: IQR * 5 on word_count. Max allowed = 13,671. Remove 212 obs. -> N=57,482\n  5. Raking Ratio adjustment: Weight sample to match WoS population margins (year, OA, funders, countries, discipline, IF class).\n  6. Discretize word_count using Fisher method into 5 classes.\n  7. Fit GLM: DV = log(1+citations), IV = discretized word_count, Controls = IF, OA, log(funders), log(countries), discipline, year.\n  8. Diagnostics: VIF < 5, Cook's D < 0.02, Hat < 0.01. Remove 30 influential obs.\n  9. Refit with robust standard errors (Breusch-Pagan test indicated heteroscedasticity).\n  10. Extract coefficients for word_count classes. Check significance.\n\n=== CONCLUSION / DIRECTION ===\nRESULT conclusion = Reproduction is data-blocked due to unavailability of the original Publons/WoS matched dataset. The paper reports a statistically significant positive association between reviewer report length (>=947 words) and citation impact, after controlling for journal impact, OA status, funding, collaboration, discipline, and year, using a raking-adjusted GLM with robust standard errors.\nRESULT direction = To fully reproduce, obtain the matched Publons-WoS dataset (N=57,482) and implement the raking ratio weighting, Fisher discretization, and robust GLM pipeline outlined above.\n",
+  "stderr": "",
   "isolation": {
     "network_blocked": true,
     "network_egress_ok": true
@@ -48,29 +48,29 @@
       },
       "sample": {
         "score": 1.0,
-        "rationale": "strong: ['57482', '2009', '947']"
+        "rationale": "strong: ['57,482', '57482', '2009', '947']"
       },
       "indicator": {
         "score": 1.0,
-        "rationale": "strong: ['reviewer', 'iqr', 'fisher']"
+        "rationale": "strong: ['report length', 'word count', 'reviewer', 'iqr', 'fisher']"
       },
       "model": {
         "score": 1.0,
-        "rationale": "strong: ['glm', 'log(1', 'log1p']"
+        "rationale": "strong: ['glm', 'log(1']"
       },
       "result": {
-        "score": 0.5,
-        "rationale": "partial: ['947']"
+        "score": 1.0,
+        "rationale": "strong: ['947', 'positive']"
       },
       "claim": {
         "score": 1.0,
-        "rationale": "strong: ['longer', 'threshold']"
+        "rationale": "strong: ['positive', 'threshold']"
       }
     },
-    "overall_ecrf": 0.917
+    "overall_ecrf": 1.0
   },
   "status": "DONE",
-  "t_end": 1782722505,
+  "t_end": 1782808646,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

@@ -1,0 +1,113 @@
+{
+  "paper": "wu2019_teams",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782809597,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.41:8360/v1",
+    "elapsed": 123.4,
+    "usage": {
+      "completion": 9740,
+      "prompt": 14959
+    },
+    "finish": "stop",
+    "n_content_chars": 8178
+  },
+  "llm_response_chars": 8178,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": -1,
+    "elapsed": 600.06,
+    "network_blocked": null,
+    "network_probe": null,
+    "files_written": [],
+    "stdout_chars": 0,
+    "stderr_chars": 39
+  },
+  "stdout": "",
+  "stderr": "Isolated execution timed out after 600s",
+  "isolation": {
+    "network_blocked": null,
+    "network_egress_ok": false
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.5,
+        "rationale": "partial: ['patent']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['1954', '2014', 'team size']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['disruption', 'disrupt']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['mean', 'team size', 'regression', 'log']"
+      },
+      "result": {
+        "score": 0.25,
+        "rationale": "strong: ['positive', 'small', 'large'] | execution failed/skipped \u2192 capped"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['small teams', 'disrupt', 'large teams', 'develop']"
+      }
+    },
+    "overall_ecrf": 0.792
+  },
+  "status": "EXEC_NONZERO",
+  "t_end": 1782810320,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}
