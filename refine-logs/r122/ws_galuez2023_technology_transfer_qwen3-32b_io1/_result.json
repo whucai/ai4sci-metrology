@@ -1,0 +1,119 @@
+{
+  "paper": "galuez2023_technology_transfer",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782891488,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 171.0,
+    "usage": {
+      "completion": 13314,
+      "prompt": 328
+    },
+    "finish": "stop",
+    "n_content_chars": 7309
+  },
+  "llm_response_chars": 7309,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.62,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 869,
+    "stderr_chars": 0
+  },
+  "stdout": "==================================================\nQUANTITATIVE ANALYSIS RESULTS\n==================================================\nRESULT total_patents = 8\nRESULT tech_transfer_patents = 4\nRESULT tech_transfer_rate = 0.5000\n\nYearly Breakdown:\n      total  tech_transfer  rate\nyear                            \n2020      2              1   0.5\n2021      2              1   0.5\n2022      2              1   0.5\n2023      2              1   0.5\n\n==================================================\nCONCLUSION\n==================================================\nThe analysis measures technology transfer by identifying patents\nthat link University inventors with Company assignees.\nThe calculated rate represents the proportion of patents\nindicating such institutional linkage.\n\nNOTE: The provided paper text is a stub. No PAPER_REPORTED\nvalues are available for comparison.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['uspto', 'patent']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['technology transfer', 'patent', 'institution']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['technology transfer', 'linkage']"
+      },
+      "model": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['transfer', 'linkage']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['technology transfer', 'patent', 'linkage']"
+      }
+    },
+    "overall_ecrf": 0.833
+  },
+  "status": "DONE",
+  "t_end": 1782891660,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

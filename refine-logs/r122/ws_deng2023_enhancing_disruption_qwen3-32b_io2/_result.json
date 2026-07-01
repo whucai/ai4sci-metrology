@@ -3,13 +3,26 @@
   "model": "qwen3-32b",
   "io": 2,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782886269,
+  "t_start": 1782891070,
   "io2_data_files": [
     "sciscinet_sample.parquet"
   ],
   "io3_ref_code_files": [],
-  "error": "LLM call failed: Request timed out.",
-  "status": "LLM_FAIL",
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 215.9,
+    "usage": {
+      "completion": 16000,
+      "prompt": 409
+    },
+    "finish": "length",
+    "n_content_chars": 0
+  },
+  "llm_response_chars": 0,
+  "code_parsed": false,
+  "error": "no code block parsed from response",
+  "status": "NO_CODE",
   "r122_batch": true,
   "gold_target": {
     "data_source": {

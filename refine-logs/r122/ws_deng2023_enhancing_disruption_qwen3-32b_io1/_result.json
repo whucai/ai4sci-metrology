@@ -3,11 +3,74 @@
   "model": "qwen3-32b",
   "io": 1,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782884467,
+  "t_start": 1782890958,
   "io2_data_files": [],
   "io3_ref_code_files": [],
-  "error": "LLM call failed: Request timed out.",
-  "status": "LLM_FAIL",
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 110.6,
+    "usage": {
+      "completion": 8368,
+      "prompt": 341
+    },
+    "finish": "stop",
+    "n_content_chars": 5842
+  },
+  "llm_response_chars": 5842,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.78,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 703,
+    "stderr_chars": 0
+  },
+  "stdout": "=== Reproducing Analysis: deng2023_enhancing_disruption ===\nNOTE: Paper text provided is a stub. Formulas are implemented as placeholders.\nLoading synthetic data...\nCalculating standard CD metric...\nCalculating enhanced CD metric...\nRESULT mean_cd_clean = 0.5098\nRESULT mean_enhanced_clean = 0.7621\nInjecting citation noise...\nCalculating metrics on noisy data...\nRESULT mean_cd_noisy = 0.4788\nRESULT mean_enhanced_noisy = 0.6862\nRESULT correlation_cd_clean_noisy = 0.6204\nRESULT correlation_enhanced_clean_noisy = 0.5216\nRESULT mean_abs_diff_cd = 0.1941\nRESULT mean_abs_diff_enhanced = 0.1586\n\n--- CONCLUSION ---\nThe analysis does not clearly support the robustness enhancement in this synthetic stub.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['disruption', 'noise', 'robustness']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['disruption', 'cd', 'robustness', 'noise']"
+      },
+      "model": {
+        "score": 0.5,
+        "rationale": "partial: ['robustness']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['robust', 'noise']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['robustness', 'disruption', 'noise']"
+      }
+    },
+    "overall_ecrf": 0.75
+  },
+  "status": "DONE",
+  "t_end": 1782891069,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

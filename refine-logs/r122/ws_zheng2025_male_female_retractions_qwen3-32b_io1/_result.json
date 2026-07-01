@@ -1,0 +1,119 @@
+{
+  "paper": "zheng2025_male_female_retractions",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782892926,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 55.3,
+    "usage": {
+      "completion": 4356,
+      "prompt": 322
+    },
+    "finish": "stop",
+    "n_content_chars": 14453
+  },
+  "llm_response_chars": 14453,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.86,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1740,
+    "stderr_chars": 2144
+  },
+  "stdout": "======================================================================\nDATA LOADING STUB\n======================================================================\nNOTE: Original dataset not available. Using synthetic placeholder data.\nExpected schema documented in code comments above.\n\nSynthetic dataset shape: (10000, 9)\nColumns: ['paper_id', 'author_gender', 'is_retracted', 'publication_year', 'retraction_year', 'time_to_retraction', 'field', 'journal_impact_factor', 'n_authors']\nGender distribution:\nauthor_gender\nmale      6603\nfemale    3397\nName: count, dtype: int64\nRetraction rate: 0.0009 (9 retractions)\n\n======================================================================\nANALYSIS 1: Descriptive Statistics - Retraction Rates by Gender\n======================================================================\n\nRetraction rates by gender:\nauthor_gender  n_papers  n_retracted  retraction_rate\n       female      3397            2         0.000589\n         male      6603            7         0.001060\n\nRESULT male_retraction_rate = 0.001060\nRESULT female_retraction_rate = 0.000589\nRESULT rate_ratio_male_to_female = 1.8006\n\n======================================================================\nANALYSIS 2: Statistical Test - Difference in Retraction Rates\n======================================================================\n\nTwo-proportion z-test:\n  Male: 7/6603 = 0.001060\n  Female: 2/3397 = 0.000589\n  Difference: 0.000471\nRESULT z_statistic = 0.7445\nRESULT p_value_two_tailed = 0.456585\nRESULT significant_at_0.05 = False\n\n======================================================================\nANALYSIS 3: Logistic Regression - Retraction Predictors\n======================================================================\n",
+  "stderr": "ent call last):\n  File \"/workspace/script.py\", line 211, in <module>\n    result = minimize(log_loss, w0, args=(X_aug, y), method='L-BFGS-B',\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/scipy/optimize/_minimize.py\", line 713, in minimize\n    res = _minimize_lbfgsb(fun, x0, args, jac, bounds,\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/scipy/optimize/_lbfgsb_py.py\", line 347, in _minimize_lbfgsb\n    sf = _prepare_scalar_function(fun, x0, jac=jac, args=args, epsilon=eps,\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/scipy/optimize/_optimize.py\", line 288, in _prepare_scalar_function\n    sf = ScalarFunction(fun, x0, args, grad, hess,\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/scipy/optimize/_differentiable_functions.py\", line 166, in __init__\n    self._update_fun()\n  File \"/usr/local/lib/python3.11/site-packages/scipy/optimize/_differentiable_functions.py\", line 262, in _update_fun\n    self._update_fun_impl()\n  File \"/usr/local/lib/python3.11/site-packages/scipy/optimize/_differentiable_functions.py\", line 163, in update_fun\n    self.f = fun_wrapped(self.x)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/scipy/optimize/_differentiable_functions.py\", line 145, in fun_wrapped\n    fx = fun(np.copy(x), *args)\n         ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 200, in log_loss\n    return -np.mean(y * np.log(sigmoid(z) + 1e-10) + (1 - y) * np.log(1 - sigmoid(z) + 1e-10))\n                               ^^^^^^^^^^\n  File \"/workspace/script.py\", line 196, in sigmoid\n    return 1 / (1 + np.exp(-np.clip(z, -500, 500)))\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: loop of ufunc does not support argument 0 of type float which has no callable exp method\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.5,
+        "rationale": "partial: ['retraction watch']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['retraction', 'male', 'female', 'gender']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['retraction', 'gender', 'rate']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['regression', 'comparison']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['gender', 'retraction']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['gender', 'retraction']"
+      }
+    },
+    "overall_ecrf": 0.917
+  },
+  "status": "DONE",
+  "t_end": 1782892982,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

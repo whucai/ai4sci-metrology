@@ -1,0 +1,85 @@
+[backend] gemma-4-31b @ http://172.17.65.43:8008/v1 NOT reachable — skipping its runs.
+[plan] 24 ready, 9 blocked
+  BLOCKED deng2023_enhancing_disruption io3 qwen3-32b: no IO3/paper.md (boundary paper — IO3 not built)
+  BLOCKED donner2024_data_inaccuracy io3 qwen3-32b: no IO3/paper.md (boundary paper — IO3 not built)
+  BLOCKED galuez2023_technology_transfer io3 qwen3-32b: no IO3/paper.md (boundary paper — IO3 not built)
+  BLOCKED gebhart2023_math_framework io3 qwen3-32b: no IO3/paper.md (boundary paper — IO3 not built)
+  BLOCKED ke2015_sleeping_beauties io3 qwen3-32b: no IO3/paper.md (boundary paper — IO3 not built)
+  BLOCKED schaper2025_frontier io3 qwen3-32b: no IO3/paper.md (boundary paper — IO3 not built)
+  BLOCKED sun2023_ranking_mobility io3 qwen3-32b: no IO3/paper.md (boundary paper — IO3 not built)
+  BLOCKED vasarhelyi2023_who_benefits io3 qwen3-32b: no IO3/paper.md (boundary paper — IO3 not built)
+  BLOCKED zheng2025_male_female_retractions io3 qwen3-32b: no IO3/paper.md (boundary paper — IO3 not built)
+
+[1/24] arts2021_patent_nlp io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_arts2021_patent_nlp_qwen3-32b_io1
+  status=DONE ecrf(v0)=1.0
+
+[2/24] arts2021_patent_nlp io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_arts2021_patent_nlp_qwen3-32b_io2
+  status=DONE ecrf(v0)=1.0
+
+[3/24] arts2021_patent_nlp io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_arts2021_patent_nlp_qwen3-32b_io3
+  status=DONE ecrf(v0)=1.0
+
+[4/24] deng2023_enhancing_disruption io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_deng2023_enhancing_disruption_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.75
+
+[5/24] deng2023_enhancing_disruption io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_deng2023_enhancing_disruption_qwen3-32b_io2
+  status=NO_CODE ecrf(v0)=None
+
+[6/24] donner2024_data_inaccuracy io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_donner2024_data_inaccuracy_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.833
+
+[7/24] donner2024_data_inaccuracy io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_donner2024_data_inaccuracy_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.75
+
+[8/24] galuez2023_technology_transfer io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_galuez2023_technology_transfer_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.833
+
+[9/24] galuez2023_technology_transfer io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_galuez2023_technology_transfer_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.917
+
+[10/24] gebhart2023_math_framework io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_gebhart2023_math_framework_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.667
+
+[11/24] gebhart2023_math_framework io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_gebhart2023_math_framework_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.75
+
+[12/24] ke2015_sleeping_beauties io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_ke2015_sleeping_beauties_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.833
+
+[13/24] ke2015_sleeping_beauties io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_ke2015_sleeping_beauties_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.833
+
+[14/24] schaper2025_frontier io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_schaper2025_frontier_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.833
+
+[15/24] schaper2025_frontier io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_schaper2025_frontier_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.833
+
+[16/24] sun2023_ranking_mobility io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_sun2023_ranking_mobility_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.917
+
+[17/24] sun2023_ranking_mobility io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_sun2023_ranking_mobility_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.667
+
+[18/24] vasarhelyi2023_who_benefits io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_vasarhelyi2023_who_benefits_qwen3-32b_io1
+  status=DONE ecrf(v0)=1.0
+
+[19/24] vasarhelyi2023_who_benefits io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_vasarhelyi2023_who_benefits_qwen3-32b_io2
+  status=DONE ecrf(v0)=1.0
+
+[20/24] wu2019_teams io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_wu2019_teams_qwen3-32b_io1
+  status=DONE ecrf(v0)=1.0
+
+[21/24] wu2019_teams io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_wu2019_teams_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.833
+
+[22/24] wu2019_teams io3 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_wu2019_teams_qwen3-32b_io3
+  status=DONE ecrf(v0)=0.833
+
+[23/24] zheng2025_male_female_retractions io1 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_zheng2025_male_female_retractions_qwen3-32b_io1
+  status=DONE ecrf(v0)=0.917
+
+[24/24] zheng2025_male_female_retractions io2 qwen3-32b -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122/ws_zheng2025_male_female_retractions_qwen3-32b_io2
+  status=DONE ecrf(v0)=0.75
+
+[done] 24 runs in 2378.7s -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/.claude/worktrees/v8-dev/refine-logs/r122

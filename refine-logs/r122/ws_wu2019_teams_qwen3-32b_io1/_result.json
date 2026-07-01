@@ -3,42 +3,48 @@
   "model": "qwen3-32b",
   "io": 1,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782809597,
+  "t_start": 1782892624,
   "io2_data_files": [],
   "io3_ref_code_files": [],
   "llm": {
     "model": "qwen3.6-27b-fp8",
-    "base_url": "http://172.17.65.41:8360/v1",
-    "elapsed": 123.4,
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 131.3,
     "usage": {
-      "completion": 9740,
+      "completion": 9848,
       "prompt": 14959
     },
     "finish": "stop",
-    "n_content_chars": 8178
+    "n_content_chars": 7811
   },
-  "llm_response_chars": 8178,
+  "llm_response_chars": 7811,
   "code_parsed": true,
   "exec": {
-    "exit_code": -1,
-    "elapsed": 600.06,
-    "network_blocked": null,
-    "network_probe": null,
-    "files_written": [],
+    "exit_code": 0,
+    "elapsed": 0.84,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
     "stdout_chars": 0,
-    "stderr_chars": 39
+    "stderr_chars": 326
   },
   "stdout": "",
-  "stderr": "Isolated execution timed out after 600s",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 33, in <module>\n    team_size = np.random.choice(range(1, 16), size=N, \n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"numpy/random/mtrand.pyx\", line 975, in numpy.random.mtrand.RandomState.choice\nValueError: probabilities do not sum to 1\n",
   "isolation": {
-    "network_blocked": null,
-    "network_egress_ok": false
+    "network_blocked": true,
+    "network_egress_ok": true
   },
   "ecrf": {
     "components": {
       "data_source": {
-        "score": 0.5,
-        "rationale": "partial: ['patent']"
+        "score": 1.0,
+        "rationale": "strong: ['uspto', 'patent']"
       },
       "sample": {
         "score": 1.0,
@@ -50,21 +56,21 @@
       },
       "model": {
         "score": 1.0,
-        "rationale": "strong: ['mean', 'team size', 'regression', 'log']"
+        "rationale": "strong: ['mean', 'team size', 'regression']"
       },
       "result": {
-        "score": 0.25,
-        "rationale": "strong: ['positive', 'small', 'large'] | execution failed/skipped \u2192 capped"
+        "score": 1.0,
+        "rationale": "strong: ['positive', 'small', 'large']"
       },
       "claim": {
         "score": 1.0,
-        "rationale": "strong: ['small teams', 'disrupt', 'large teams', 'develop']"
+        "rationale": "strong: ['small teams', 'disrupt', 'large teams', 'develop', 'existing']"
       }
     },
-    "overall_ecrf": 0.792
+    "overall_ecrf": 1.0
   },
-  "status": "EXEC_NONZERO",
-  "t_end": 1782810320,
+  "status": "DONE",
+  "t_end": 1782892756,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

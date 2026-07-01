@@ -1,0 +1,119 @@
+{
+  "paper": "vasarhelyi2023_who_benefits",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782892462,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 77.5,
+    "usage": {
+      "completion": 6338,
+      "prompt": 584
+    },
+    "finish": "stop",
+    "n_content_chars": 10162
+  },
+  "llm_response_chars": 10162,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.9,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 2401,
+    "stderr_chars": 0
+  },
+  "stdout": "CEM applied: 1500 -> 1500 observations retained\n\n============================================================\nQUANTITATIVE RESULTS (CEM-Weighted Regression)\n============================================================\n\n--- Research Area: CS ---\nRESULT coef_altmetrics_CS = 0.0613 (SE=0.0014, p=0.0000)\nRESULT coef_gender_prop_CS = 0.9322 (SE=0.1521, p=0.0000)\nRESULT coef_interaction_CS = 0.0293 (SE=0.0090, p=0.0012)\nRESULT R_squared_CS = 0.8167\n\n--- Research Area: ENG ---\nRESULT coef_altmetrics_ENG = 0.0436 (SE=0.0015, p=0.0000)\nRESULT coef_gender_prop_ENG = 0.2535 (SE=0.1600, p=0.1136)\nRESULT coef_interaction_ENG = -0.0200 (SE=0.0095, p=0.0361)\nRESULT R_squared_ENG = 0.7378\n\n--- Research Area: SS ---\nRESULT coef_altmetrics_SS = 0.0438 (SE=0.0018, p=0.0000)\nRESULT coef_gender_prop_SS = -0.2842 (SE=0.1789, p=0.1129)\nRESULT coef_interaction_SS = -0.0221 (SE=0.0130, p=0.0910)\nRESULT R_squared_SS = 0.7813\n\n============================================================\nANALYSIS CONCLUSION\n============================================================\n1. Online visibility (altmetrics) shows a positive main effect on citations across all analyzed research areas, consistent with the paper's thesis.\n2. The interaction between team gender composition and online visibility varies by discipline:\n   - CS: Interaction coefficient is positive (0.0293), indicating that the citation benefit of online visibility increases with higher female representation on the team.\n   - ENG: Interaction coefficient is negative (-0.0200), indicating that the citation benefit of online visibility decreases with higher female representation on the team.\n   - SS: Interaction coefficient is negative (-0.0221), indicating that the citation benefit of online visibility decreases with higher female representation on the team.\n\nDIRECTION SUPPORTED:\nTeam gender composition moderates the link between online visibility and citation impact. Altmetrics generally boost citations, but the magnitude and direction of this boost depend on the research area's gender dynamics, suggesting that online dissemination does not uniformly close the gender citation gap.\n\nNOTE: PAPER_REPORTED findings state that online visibility positively affects citations across areas, while team gender composition interacts differently with visibility in these research areas. The synthetic reproduction aligns with this directional claim.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['altmetric', 'web of science']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['team', 'gender', 'online visibility']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['altmetric', 'citation', 'gender']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['regression', 'ols', 'interaction']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['gender', 'moderat', 'altmetric', 'citation']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['gender', 'team', 'altmetric', 'benefit']"
+      }
+    },
+    "overall_ecrf": 1.0
+  },
+  "status": "DONE",
+  "t_end": 1782892541,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 0.0,
+      "B_round3": 0.0,
+      "final": 0.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

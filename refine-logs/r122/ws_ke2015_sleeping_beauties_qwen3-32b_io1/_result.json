@@ -1,0 +1,119 @@
+{
+  "paper": "ke2015_sleeping_beauties",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782891908,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 90.3,
+    "usage": {
+      "completion": 6949,
+      "prompt": 644
+    },
+    "finish": "stop",
+    "n_content_chars": 6984
+  },
+  "llm_response_chars": 6984,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.65,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 62,
+    "stderr_chars": 1035
+  },
+  "stdout": "DATA STUB LOADED: 7141 annual citation records for 300 papers\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 106, in <module>\n    df = df.merge(expected_df, on=[\"field\", \"age\"], how=\"left\")\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 10832, in merge\n    return merge(\n           ^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/reshape/merge.py\", line 170, in merge\n    op = _MergeOperation(\n         ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/reshape/merge.py\", line 794, in __init__\n    ) = self._get_merge_keys()\n        ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/reshape/merge.py\", line 1310, in _get_merge_keys\n    left_keys.append(left._get_label_or_level_values(lk))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/generic.py\", line 1911, in _get_label_or_level_values\n    raise KeyError(key)\nKeyError: 'age'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.5,
+        "rationale": "partial: ['web of science']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['sleeping beauty', 'delayed', 'citation']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['sleeping beauty', 'delayed recognition', 'awaken']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['mean', 'distribution']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['delayed', 'awaken']"
+      },
+      "claim": {
+        "score": 0.5,
+        "rationale": "partial: ['sleeping beauties']"
+      }
+    },
+    "overall_ecrf": 0.833
+  },
+  "status": "DONE",
+  "t_end": 1782891999,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 0.0,
+      "B_round3": 0.0,
+      "final": 0.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.0,
+      "final": 0.25,
+      "disagreement": 0.5,
+      "method": "mean (adjacent)"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

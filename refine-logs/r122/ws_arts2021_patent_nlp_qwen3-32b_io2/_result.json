@@ -3,11 +3,74 @@
   "model": "qwen3-32b",
   "io": 2,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782880864,
+  "t_start": 1782890778,
   "io2_data_files": [],
   "io3_ref_code_files": [],
-  "error": "LLM call failed: Request timed out.",
-  "status": "LLM_FAIL",
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 68.7,
+    "usage": {
+      "completion": 5041,
+      "prompt": 626
+    },
+    "finish": "stop",
+    "n_content_chars": 7491
+  },
+  "llm_response_chars": 7491,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.37,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 312,
+    "stderr_chars": 1028
+  },
+  "stdout": "NO raw data provided. Documenting requirements:\n  - claim_full_till2018.csv (USPTO claims)\n  - patent_title_abstract_till_2018.csv (titles/abstracts)\n  - Citation network & award/breakthrough labels\nGenerating SYNTHETIC dataset to demonstrate the full computational pipeline.\nComputing NLP novelty indicators...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 113, in <module>\n    sim = cosine_similarity(tfidf_matrix[i], mean_cited)[0, 0]\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/sklearn/utils/_param_validation.py\", line 213, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/sklearn/metrics/pairwise.py\", line 1679, in cosine_similarity\n    X, Y = check_pairwise_arrays(X, Y)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/sklearn/metrics/pairwise.py\", line 194, in check_pairwise_arrays\n    Y = check_array(\n        ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/sklearn/utils/validation.py\", line 841, in check_array\n    raise TypeError(\nTypeError: np.matrix is not supported. Please convert to a numpy array with np.asarray. For more information see: https://numpy.org/doc/stable/reference/generated/numpy.matrix.html\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['uspto', 'patent', 'zenodo', 'claim']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['patent', 'claim', 'title', 'abstract', 'till2018']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['new word', 'new word combination', 'n-gram', 'backward cosine', 'novelty']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['nlp', 'cosine', 'classification', 'baseline']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['novelty', 'impact', 'citation', 'award', 'breakthrough']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['nlp', 'patent', 'novelty', 'impact']"
+      }
+    },
+    "overall_ecrf": 1.0
+  },
+  "status": "DONE",
+  "t_end": 1782890848,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

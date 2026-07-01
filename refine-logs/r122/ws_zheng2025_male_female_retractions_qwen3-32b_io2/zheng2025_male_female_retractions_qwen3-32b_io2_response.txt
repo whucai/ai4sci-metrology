@@ -1,0 +1,155 @@
+
+
+```python
+import pandas as pd
+import numpy as np
+from scipy import stats
+import warnings
+import os
+
+warnings.filterwarnings('ignore')
+
+# =============================================================================
+# 1. DATA LOADING & SCHEMA INSPECTION
+# =============================================================================
+DATA_PATH = '/workspace/raw_data/sciscinet_sample.parquet'
+USE_SYNTHETIC = False
+
+if os.path.exists(DATA_PATH):
+    try:
+        df = pd.read_parquet(DATA_PATH)
+        print(f"DATA LOADED: {DATA_PATH}")
+        print(f"SHAPE: {df.shape}")
+        print(f"COLUMNS: {list(df.columns)}")
+    except Exception as e:
+        print(f"ERROR loading parquet: {e}")
+        df = None
+else:
+    print(f"ERROR: {DATA_PATH} not found.")
+    df = None
+
+# =============================================================================
+# 2. COLUMN MAPPING & FALLBACK TO SYNTHETIC DATA
+# =============================================================================
+def find_col(df, keywords):
+    if df is None: return None
+    for kw in keywords:
+        matches = [c for c in df.columns if kw.lower() in c.lower()]
+        if matches: return matches[0]
+    return None
+
+gender_col = find_col(df, ['gender', 'sex', 'author_gender', 'author_sex'])
+retract_col = find_col(df, ['retract', 'retraction', 'is_retracted', 'retracted'])
+pub_date_col = find_col(df, ['pub_date', 'publication_date', 'date', 'year'])
+retract_date_col = find_col(df, ['retract_date', 'retraction_date', 'date_retracted'])
+
+# Validate required columns
+if df is None or gender_col is None or retract_col is None:
+    print("WARNING: Required columns (gender, retraction status) not found in raw data.")
+    print("GENERATING SYNTHETIC DATASET FOR REPRODUCTION DEMONSTRATION.")
+    USE_SYNTHETIC = True
+    
+    np.random.seed(2025)
+    n = 15000
+    df = pd.DataFrame({
+        'gender': np.random.choice(['Male', 'Female'], n, p=[0.68, 0.32]),
+        'is_retracted': np.random.choice([0, 1], n, p=[0.962, 0.038]),
+        'publication_date': pd.date_range('2005-01-01', periods=n, freq='D'),
+        'retraction_date': pd.NaT
+    })
+    # Assign realistic time-to-retraction for retracted papers
+    mask = df['is_retracted'] == 1
+    df.loc[mask, 'retraction_date'] = df.loc[mask, 'publication_date'] + pd.to_timedelta(
+        np.random.exponential(scale=365*2.5, size=mask.sum()), unit='D'
+    )
+    gender_col, retract_col = 'gender', 'is_retracted'
+    pub_date_col, retract_date_col = 'publication_date', 'retraction_date'
+
+# =============================================================================
+# 3. DATA PREPARATION & CLEANING
+# =============================================================================
+df_analysis = df[[gender_col, retract_col, pub_date_col, retract_date_col]].copy()
+df_analysis.columns = ['gender', 'is_retracted', 'pub_date', 'retract_date']
+
+# Standardize gender
+df_analysis['gender'] = df_analysis['gender'].astype(str).str.strip().str.lower()
+df_analysis['gender'] = df_analysis['gender'].replace({
+    'm': 'male', 'f': 'female', 'male': 'male', 'female': 'female',
+    'man': 'male', 'woman': 'female'
+})
+df_analysis = df_analysis[df_analysis['gender'].isin(['male', 'female'])].copy()
+
+# Ensure binary retraction flag
+df_analysis['is_retracted'] = pd.to_numeric(df_analysis['is_retracted'], errors='coerce').fillna(0).astype(int)
+
+# Parse dates safely
+df_analysis['pub_date'] = pd.to_datetime(df_analysis['pub_date'], errors='coerce')
+df_analysis['retract_date'] = pd.to_datetime(df_analysis['retract_date'], errors='coerce')
+
+# =============================================================================
+# 4. INDICATOR COMPUTATION & STATISTICAL TESTS
+# =============================================================================
+# 4.1 Retraction Rates
+rates = df_analysis.groupby('gender')['is_retracted'].mean()
+male_rate = rates.get('male', np.nan)
+female_rate = rates.get('female', np.nan)
+
+# Odds Ratio
+try:
+    male_odds = male_rate / (1 - male_rate) if male_rate < 1 else np.inf
+    female_odds = female_rate / (1 - female_rate) if female_rate < 1 else np.inf
+    odds_ratio = male_odds / female_odds
+except ZeroDivisionError:
+    odds_ratio = np.nan
+
+# Chi-Square Test for Rate Difference
+contingency = pd.crosstab(df_analysis['gender'], df_analysis['is_retracted'])
+chi2_stat, chi2_p, dof, expected = stats.chi2_contingency(contingency)
+
+# 4.2 Timing Analysis (Time to Retraction)
+df_retracted = df_analysis[df_analysis['is_retracted'] == 1].copy()
+df_retracted['time_to_retract_days'] = (df_retracted['retract_date'] - df_retracted['pub_date']).dt.days
+df_retracted = df_retracted.dropna(subset=['time_to_retract_days'])
+
+male_times = df_retracted[df_retracted['gender'] == 'male']['time_to_retract_days']
+female_times = df_retracted[df_retracted['gender'] == 'female']['time_to_retract_days']
+
+# Mann-Whitney U Test (non-parametric, robust for skewed time-to-event data)
+if len(male_times) > 1 and len(female_times) > 1:
+    u_stat, u_p = stats.mannwhitneyu(male_times, female_times, alternative='two-sided')
+    median_male_time = male_times.median()
+    median_female_time = female_times.median()
+else:
+    u_stat, u_p = np.nan, np.nan
+    median_male_time, median_female_time = np.nan, np.nan
+
+# =============================================================================
+# 5. OUTPUT RESULTS (STRICT LABELING FORMAT)
+# =============================================================================
+prefix = "DATA_SUB " if USE_SYNTHETIC else ""
+
+print(f"{prefix}RESULT male_retraction_rate = {male_rate:.5f}")
+print(f"{prefix}RESULT female_retraction_rate = {female_rate:.5f}")
+print(f"{prefix}RESULT odds_ratio_male_vs_female = {odds_ratio:.4f}")
+print(f"{prefix}RESULT chi2_statistic = {chi2_stat:.4f}")
+print(f"{prefix}RESULT chi2_p_value = {chi2_p:.4e}")
+print(f"{prefix}RESULT median_time_to_retract_male_days = {median_male_time:.2f}")
+print(f"{prefix}RESULT median_time_to_retract_female_days = {median_female_time:.2f}")
+print(f"{prefix}RESULT mannwhitney_u_statistic = {u_stat:.4f}")
+print(f"{prefix}RESULT mannwhitney_u_p_value = {u_p:.4e}")
+
+# Paper-reported values (stub paper has no numerical results)
+print("PAPER_REPORTED male_retraction_rate = N/A (stub thesis)")
+print("PAPER_REPORTED female_retraction_rate = N/A (stub thesis)")
+print("PAPER_REPORTED timing_difference = N/A (stub thesis)")
+
+# =============================================================================
+# 6. CONCLUSION
+# =============================================================================
+if USE_SYNTHETIC:
+    print("CONCLUSION = Analysis executed on SYNTHETIC data due to missing schema in raw file. Results are illustrative placeholders and do not represent empirical findings.")
+else:
+    rate_sig = "significant" if chi2_p < 0.05 else "non-significant"
+    time_sig = "significant" if u_p < 0.05 else "non-significant"
+    print(f"CONCLUSION = Gender difference in retraction rates is {rate_sig} (p={chi2_p:.2e}). Gender difference in time-to-retraction is {time_sig} (p={u_p:.2e}). Direction: {'Male > Female' if male_rate > female_rate else 'Female > Male'} in retraction rate; {'Male > Female' if median_male_time > median_female_time else 'Female > Male'} in median days to retraction.")
+```

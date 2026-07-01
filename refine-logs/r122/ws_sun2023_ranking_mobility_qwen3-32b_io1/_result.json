@@ -1,0 +1,119 @@
+{
+  "paper": "sun2023_ranking_mobility",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782892281,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 104.2,
+    "usage": {
+      "completion": 7605,
+      "prompt": 693
+    },
+    "finish": "stop",
+    "n_content_chars": 14873
+  },
+  "llm_response_chars": 14873,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.33,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 391,
+    "stderr_chars": 971
+  },
+  "stdout": "LOADING DATA (STUB SYNTHETIC)...\n  Loaded 12415 works across 200 careers.\n\nPREPROCESSING & HIT DETECTION...\n  Identified 1157 hits across all careers.\n\nFITTING NULL MODEL (Exponential inter-hit intervals)...\n  Null model rate (lambda) = 0.3843 hits/year\n  Mean inter-hit interval = 2.60 years\n\nDETECTING HOT STREAKS...\n  Detected 170 hot streaks total.\n\nCOMPUTING QUANTITATIVE INDICATORS...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 255, in <module>\n    results = analyze_hot_streak_properties(df, hit_df, streaks, rate)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 211, in analyze_hot_streak_properties\n    pred_sa = train['impact'].mean() if not has_streak_in_test else np.mean([r['impact'] for r in streaks if streaks[0]['career_id']==cid])\n                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 211, in <listcomp>\n    pred_sa = train['impact'].mean() if not has_streak_in_test else np.mean([r['impact'] for r in streaks if streaks[0]['career_id']==cid])\n                                                                                                             ~~~~~~~~~~^^^^^^^^^^^^^\nTypeError: list indices must be integers or slices, not str\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['mag', 'imdb', 'career']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['career', 'artist', 'scientist']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['hot streak', 'impact']"
+      },
+      "model": {
+        "score": 0.5,
+        "rationale": "partial: ['null']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['non-random', 'bursty', 'hot streak']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['hot streak', 'universal', 'non-random']"
+      }
+    },
+    "overall_ecrf": 0.917
+  },
+  "status": "DONE",
+  "t_end": 1782892387,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

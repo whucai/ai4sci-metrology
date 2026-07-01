@@ -1,0 +1,121 @@
+{
+  "paper": "galuez2023_technology_transfer",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782891660,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 61.7,
+    "usage": {
+      "completion": 4808,
+      "prompt": 396
+    },
+    "finish": "stop",
+    "n_content_chars": 3796
+  },
+  "llm_response_chars": 3796,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.67,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1186,
+    "stderr_chars": 0
+  },
+  "stdout": "DEBUG: Loaded 40000 records. Columns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\nRESULT DATA_SUB TOTAL_RECORDS = 40000\nRESULT DATA_SUB INSTITUTIONAL_LINKAGES = 40000\nRESULT DATA_SUB TECH_TRANSFER_RATE = 1.0000\nRESULT DATA_SUB LINKAGE_CONCENTRATION_HHI = 0.6056\nRESULT DATA_SUB MEAN_LINKAGE_SCORE = 1991278450.1600\nRESULT DATA_SUB STD_LINKAGE_SCORE = 407306462.8073\nPAPER_REPORTED TECH_TRANSFER_RATE = N/A (stub paper; full text unavailable)\nPAPER_REPORTED MODEL_SPEC = N/A (stub paper; full text unavailable)\nCONCLUSION: The sciscinet_sample.parquet dataset yields a technology transfer rate of 100.00% and an institutional linkage concentration (HHI) of 0.6056. Due to the stub nature of the Galuez (2023) paper, these metrics are computed as standard descriptive proxies (DATA_SUB). To fully reproduce the original analysis, the complete methodology, exact indicator definitions, and original dataset from the full thesis are required. Next steps: obtain full text, map exact column names, and implement the specified econometric model.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['patent', 'sciscinet']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['technology transfer', 'patent', 'institution']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['technology transfer', 'linkage', 'citation']"
+      },
+      "model": {
+        "score": 0.5,
+        "rationale": "partial: ['descriptive']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['transfer', 'linkage']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['technology transfer', 'patent', 'linkage']"
+      }
+    },
+    "overall_ecrf": 0.917
+  },
+  "status": "DONE",
+  "t_end": 1782891723,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

@@ -1,0 +1,351 @@
+"""
+Reproduction script for: zheng2025_male_female_retractions
+Title: Gender differences in retraction rates and timing
+Authors: Zheng 2025
+
+NOTE: The provided paper text is a stub with no available methodology, data,
+formulas, or results. This script implements a standard analytical framework
+for studying gender differences in retraction rates and timing, with clearly
+marked STUBs for the missing data and methodology.
+"""
+
+import numpy as np
+import pandas as pd
+from scipy import stats
+from scipy.optimize import minimize
+import warnings
+warnings.filterwarnings('ignore')
+
+# =============================================================================
+# DATA STUB
+# =============================================================================
+# The paper does not provide access to the underlying dataset.
+# Based on the thesis "Gender differences in retraction rates and timing",
+# the required dataset would typically include:
+#
+# EXPECTED DATA SOURCE:
+#   - Retraction Watch database or Crossref retraction metadata
+#   - Author gender inferred from names (e.g., Genderize API) or self-reported
+#   - Publication metadata (year, journal, field)
+#
+# EXPECTED SCHEMA:
+#   - paper_id: unique identifier for each publication
+#   - author_gender: 'male', 'female', or 'unknown' (primary/corresponding author)
+#   - is_retracted: binary (1 = retracted, 0 = not retracted)
+#   - publication_year: year the paper was published
+#   - retraction_year: year the paper was retracted (NaN if not retracted)
+#   - time_to_retraction: years between publication and retraction (NaN if not retracted)
+#   - field: academic discipline (e.g., 'medicine', 'biology', 'psychology', 'physics')
+#   - journal_impact_factor: continuous or categorical journal quality measure
+#   - n_authors: number of co-authors on the paper
+#
+# Below we construct a synthetic placeholder dataset with this schema.
+
+def generate_synthetic_data(n_papers=10000, seed=42):
+    """Generate synthetic publication data for gender retraction analysis."""
+    np.random.seed(seed)
+    
+    # Gender distribution (roughly reflecting real-world STEM authorship)
+    genders = np.random.choice(['male', 'female'], size=n_papers, p=[0.65, 0.35])
+    
+    # Base retraction rate ~0.1% (realistic for scientific literature)
+    # We introduce a small gender difference for demonstration
+    base_rate = 0.001
+    male_rate = base_rate * 1.0
+    female_rate = base_rate * 0.85  # Hypothetical 15% lower rate for females
+    
+    is_retracted = np.array([
+        1 if np.random.random() < (male_rate if g == 'male' else female_rate) else 0
+        for g in genders
+    ])
+    
+    publication_year = np.random.randint(1990, 2024, size=n_papers)
+    
+    # Time to retraction (only for retracted papers)
+    retraction_year = np.full(n_papers, np.nan)
+    time_to_retraction = np.full(n_papers, np.nan)
+    
+    for i in range(n_papers):
+        if is_retracted[i] == 1:
+            # Retracted papers typically retracted within 1-10 years
+            ttr = np.random.exponential(scale=3.0) + 0.5
+            ttr = min(ttr, 15.0)  # Cap at 15 years
+            time_to_retraction[i] = ttr
+            retraction_year[i] = publication_year[i] + ttr
+    
+    fields = np.random.choice(
+        ['medicine', 'biology', 'psychology', 'physics', 'chemistry', 'engineering'],
+        size=n_papers,
+        p=[0.25, 0.20, 0.15, 0.15, 0.15, 0.10]
+    )
+    
+    journal_impact_factor = np.random.lognormal(mean=1.5, sigma=0.8, size=n_papers)
+    n_authors = np.random.poisson(lam=4, size=n_papers) + 1
+    
+    df = pd.DataFrame({
+        'paper_id': [f'PAPER_{i:05d}' for i in range(n_papers)],
+        'author_gender': genders,
+        'is_retracted': is_retracted,
+        'publication_year': publication_year,
+        'retraction_year': retraction_year,
+        'time_to_retraction': time_to_retraction,
+        'field': fields,
+        'journal_impact_factor': journal_impact_factor,
+        'n_authors': n_authors
+    })
+    
+    return df
+
+print("=" * 70)
+print("DATA LOADING STUB")
+print("=" * 70)
+print("NOTE: Original dataset not available. Using synthetic placeholder data.")
+print("Expected schema documented in code comments above.")
+print()
+
+df = generate_synthetic_data(n_papers=10000, seed=42)
+print(f"Synthetic dataset shape: {df.shape}")
+print(f"Columns: {list(df.columns)}")
+print(f"Gender distribution:\n{df['author_gender'].value_counts()}")
+print(f"Retraction rate: {df['is_retracted'].mean():.4f} ({df['is_retracted'].sum()} retractions)")
+print()
+
+# =============================================================================
+# ANALYSIS 1: DESCRIPTIVE STATISTICS - RETRACTION RATES BY GENDER
+# =============================================================================
+print("=" * 70)
+print("ANALYSIS 1: Descriptive Statistics - Retraction Rates by Gender")
+print("=" * 70)
+
+# Group by gender
+gender_stats = df.groupby('author_gender').agg(
+    n_papers=('paper_id', 'count'),
+    n_retracted=('is_retracted', 'sum'),
+    retraction_rate=('is_retracted', 'mean')
+).reset_index()
+
+print("\nRetraction rates by gender:")
+print(gender_stats.to_string(index=False))
+
+male_rate = gender_stats.loc[gender_stats['author_gender'] == 'male', 'retraction_rate'].values[0]
+female_rate = gender_stats.loc[gender_stats['author_gender'] == 'female', 'retraction_rate'].values[0]
+
+print(f"\nRESULT male_retraction_rate = {male_rate:.6f}")
+print(f"RESULT female_retraction_rate = {female_rate:.6f}")
+print(f"RESULT rate_ratio_male_to_female = {male_rate / female_rate:.4f}")
+
+# =============================================================================
+# ANALYSIS 2: STATISTICAL TEST - DIFFERENCE IN RETRACTION RATES
+# =============================================================================
+print("\n" + "=" * 70)
+print("ANALYSIS 2: Statistical Test - Difference in Retraction Rates")
+print("=" * 70)
+
+# Two-proportion z-test
+male_data = df[df['author_gender'] == 'male']
+female_data = df[df['author_gender'] == 'female']
+
+n_male = len(male_data)
+n_female = len(female_data)
+x_male = male_data['is_retracted'].sum()
+x_female = female_data['is_retracted'].sum()
+
+p_male = x_male / n_male
+p_female = x_female / n_female
+p_pooled = (x_male + x_female) / (n_male + n_female)
+
+se = np.sqrt(p_pooled * (1 - p_pooled) * (1/n_male + 1/n_female))
+z_stat = (p_male - p_female) / se
+p_value = 2 * (1 - stats.norm.cdf(abs(z_stat)))
+
+print(f"\nTwo-proportion z-test:")
+print(f"  Male: {x_male}/{n_male} = {p_male:.6f}")
+print(f"  Female: {x_female}/{n_female} = {p_female:.6f}")
+print(f"  Difference: {p_male - p_female:.6f}")
+print(f"RESULT z_statistic = {z_stat:.4f}")
+print(f"RESULT p_value_two_tailed = {p_value:.6f}")
+print(f"RESULT significant_at_0.05 = {p_value < 0.05}")
+
+# =============================================================================
+# ANALYSIS 3: LOGISTIC REGRESSION - RETRACTION PREDICTORS
+# =============================================================================
+print("\n" + "=" * 70)
+print("ANALYSIS 3: Logistic Regression - Retraction Predictors")
+print("=" * 70)
+
+# Prepare features
+df_model = df.copy()
+df_model['is_female'] = (df_model['author_gender'] == 'female').astype(int)
+df_model['ln_impact_factor'] = np.log(df_model['journal_impact_factor'])
+df_model['ln_n_authors'] = np.log(df_model['n_authors'])
+df_model['year_centered'] = df_model['publication_year'] - df_model['publication_year'].mean()
+
+# One-hot encode fields
+field_dummies = pd.get_dummies(df_model['field'], prefix='field', drop_first=True)
+df_model = pd.concat([df_model, field_dummies], axis=1)
+
+# Features for logistic regression
+feature_cols = ['is_female', 'ln_impact_factor', 'ln_n_authors', 'year_centered'] + \
+               [c for c in field_dummies.columns]
+
+X = df_model[feature_cols].values
+y = df_model['is_retracted'].values
+
+# Logistic regression via gradient descent
+def sigmoid(z):
+    return 1 / (1 + np.exp(-np.clip(z, -500, 500)))
+
+def log_loss(w, X, y):
+    z = X @ w
+    return -np.mean(y * np.log(sigmoid(z) + 1e-10) + (1 - y) * np.log(1 - sigmoid(z) + 1e-10))
+
+def log_loss_grad(w, X, y):
+    z = X @ w
+    pred = sigmoid(z)
+    return X.T @ (pred - y) / len(y)
+
+# Add intercept
+X_aug = np.column_stack([np.ones(len(X)), X])
+w0 = np.zeros(X_aug.shape[1])
+
+result = minimize(log_loss, w0, args=(X_aug, y), method='L-BFGS-B',
+                  jac=log_loss_grad, options={'maxiter': 1000})
+
+coefficients = result.x
+feature_names_with_intercept = ['intercept'] + feature_cols
+
+print("\nLogistic Regression Coefficients:")
+coef_df = pd.DataFrame({
+    'feature': feature_names_with_intercept,
+    'coefficient': coefficients,
+    'odds_ratio': np.exp(coefficients)
+})
+print(coef_df.to_string(index=False))
+
+# Extract key coefficient
+coef_is_female = coefficients[1]  # is_female is first feature after intercept
+se_is_female = np.sqrt(1 / (X_aug.T @ np.diag(sigmoid(X_aug @ coefficients)) @ X_aug))[1]
+z_coef = coef_is_female / se_is_female
+p_coef = 2 * (1 - stats.norm.cdf(abs(z_coef)))
+
+print(f"\nRESULT coef_is_female = {coef_is_female:.6f}")
+print(f"RESULT se_is_female = {se_is_female:.6f}")
+print(f"RESULT odds_ratio_female_vs_male = {np.exp(coef_is_female):.4f}")
+print(f"RESULT p_value_coef_female = {p_coef:.6f}")
+
+# =============================================================================
+# ANALYSIS 4: TIMING ANALYSIS - TIME TO RETRACTION BY GENDER
+# =============================================================================
+print("\n" + "=" * 70)
+print("ANALYSIS 4: Timing Analysis - Time to Retraction by Gender")
+print("=" * 70)
+
+# Filter to retracted papers only
+retracted = df[df['is_retracted'] == 1].copy()
+
+if len(retracted) > 0:
+    male_ttr = retracted[retracted['author_gender'] == 'male']['time_to_retraction'].dropna()
+    female_ttr = retracted[retracted['author_gender'] == 'female']['time_to_retraction'].dropna()
+    
+    print(f"\nTime to retraction statistics:")
+    print(f"  Male: n={len(male_ttr)}, mean={male_ttr.mean():.2f} years, median={male_ttr.median():.2f} years")
+    print(f"  Female: n={len(female_ttr)}, mean={female_ttr.mean():.2f} years, median={female_ttr.median():.2f} years")
+    
+    print(f"\nRESULT mean_ttr_male = {male_ttr.mean():.4f}")
+    print(f"RESULT mean_ttr_female = {female_ttr.mean():.4f}")
+    print(f"RESULT mean_ttr_difference_male_minus_female = {male_ttr.mean() - female_ttr.mean():.4f}")
+    
+    # Mann-Whitney U test for timing difference
+    if len(male_ttr) > 0 and len(female_ttr) > 0:
+        u_stat, p_ttr = stats.mannwhitneyu(male_ttr, female_ttr, alternative='two-sided')
+        print(f"\nMann-Whitney U test for time to retraction:")
+        print(f"RESULT u_statistic = {u_stat:.2f}")
+        print(f"RESULT p_value_ttr = {p_ttr:.6f}")
+        print(f"RESULT significant_ttr_at_0.05 = {p_ttr < 0.05}")
+    else:
+        print("Insufficient retracted papers for timing comparison.")
+else:
+    print("No retracted papers in synthetic dataset for timing analysis.")
+
+# =============================================================================
+# ANALYSIS 5: FIELD-STRATIFIED ANALYSIS
+# =============================================================================
+print("\n" + "=" * 70)
+print("ANALYSIS 5: Field-Stratified Retraction Rates")
+print("=" * 70)
+
+field_gender_stats = df.groupby(['field', 'author_gender']).agg(
+    n_papers=('paper_id', 'count'),
+    n_retracted=('is_retracted', 'sum'),
+    retraction_rate=('is_retracted', 'mean')
+).reset_index()
+
+print("\nRetraction rates by field and gender:")
+print(field_gender_stats.to_string(index=False))
+
+# =============================================================================
+# ANALYSIS 6: YEAR-TRENDS IN RETRACTION RATES BY GENDER
+# =============================================================================
+print("\n" + "=" * 70)
+print("ANALYSIS 6: Year Trends in Retraction Rates by Gender")
+print("=" * 70)
+
+# Bin years into decades
+df['decade'] = (df['publication_year'] // 10) * 10
+
+decade_gender_stats = df.groupby(['decade', 'author_gender']).agg(
+    n_papers=('paper_id', 'count'),
+    n_retracted=('is_retracted', 'sum'),
+    retraction_rate=('is_retracted', 'mean')
+).reset_index()
+
+print("\nRetraction rates by decade and gender:")
+print(decade_gender_stats.to_string(index=False))
+
+# =============================================================================
+# FINAL SUMMARY AND CONCLUSION
+# =============================================================================
+print("\n" + "=" * 70)
+print("FINAL SUMMARY")
+print("=" * 70)
+
+print(f"\nKey Results:")
+print(f"  Male retraction rate: {male_rate:.6f}")
+print(f"  Female retraction rate: {female_rate:.6f}")
+print(f"  Rate ratio (male/female): {male_rate / female_rate:.4f}")
+print(f"  Logistic regression coef (female): {coef_is_female:.6f}")
+print(f"  Odds ratio (female vs male): {np.exp(coef_is_female):.4f}")
+print(f"  P-value for gender effect: {p_coef:.6f}")
+
+if len(retracted) > 0 and len(male_ttr) > 0 and len(female_ttr) > 0:
+    print(f"  Mean time to retraction (male): {male_ttr.mean():.4f} years")
+    print(f"  Mean time to retraction (female): {female_ttr.mean():.4f} years")
+    print(f"  P-value for timing difference: {p_ttr:.6f}")
+
+print(f"\n" + "=" * 70)
+print("CONCLUSION")
+print("=" * 70)
+
+# Determine direction of effect
+if p_coef < 0.05:
+    if coef_is_female < 0:
+        direction = "Female authors have a statistically significantly LOWER retraction rate than male authors."
+    else:
+        direction = "Female authors have a statistically significantly HIGHER retraction rate than male authors."
+else:
+    direction = "No statistically significant gender difference in retraction rates was detected."
+
+print(f"\n{direction}")
+print(f"\nNote: This analysis is based on synthetic placeholder data because the")
+print(f"original dataset and methodology from Zheng 2025 were not available.")
+print(f"The analytical framework implemented includes:")
+print(f"  1. Descriptive retraction rates by gender")
+print(f"  2. Two-proportion z-test for rate differences")
+print(f"  3. Logistic regression controlling for covariates")
+print(f"  4. Time-to-retraction analysis by gender")
+print(f"  5. Field-stratified analysis")
+print(f"  6. Temporal trends by decade")
+print(f"\nTo reproduce the actual paper results, replace the synthetic data")
+print(f"with the original dataset and adjust the model specification to match")
+print(f"the paper's methodology once it becomes available.")
+print("=" * 70)

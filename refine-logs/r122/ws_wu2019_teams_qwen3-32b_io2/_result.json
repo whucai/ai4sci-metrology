@@ -3,13 +3,76 @@
   "model": "qwen3-32b",
   "io": 2,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782810320,
+  "t_start": 1782892756,
   "io2_data_files": [
     "sciscinet_sample.parquet"
   ],
   "io3_ref_code_files": [],
-  "error": "LLM call failed: Request timed out.",
-  "status": "LLM_FAIL",
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 100.9,
+    "usage": {
+      "completion": 7629,
+      "prompt": 12831
+    },
+    "finish": "stop",
+    "n_content_chars": 7750
+  },
+  "llm_response_chars": 7750,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.93,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 338
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 41, in <module>\n    df = df.dropna(subset=required_cols)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 6670, in dropna\n    raise KeyError(np.array(subset)[check].tolist())\nKeyError: ['team_size']\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.5,
+        "rationale": "partial: ['sciscinet']"
+      },
+      "sample": {
+        "score": 0.5,
+        "rationale": "partial: ['team size']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['disruption', 'disrupt']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['mean', 'team size', 'regression']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['higher', 'small', 'large']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['disrupt', 'develop']"
+      }
+    },
+    "overall_ecrf": 0.833
+  },
+  "status": "DONE",
+  "t_end": 1782892858,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

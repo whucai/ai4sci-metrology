@@ -1,0 +1,3 @@
+# Data Dictionary — sun2023_ranking_mobility
+Raw data: Career impact sequences (reuse hotstreaks-style data; SciSciNet for citation trajectory).
+SciSciNet sample cols: paper_id, year, author_count, institution_count, reference_count, citation_count, citation_count_5y, disruption_score, novelty_score, conventionality_score, doc_type.

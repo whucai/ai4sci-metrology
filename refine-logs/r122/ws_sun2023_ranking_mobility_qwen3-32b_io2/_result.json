@@ -1,0 +1,121 @@
+{
+  "paper": "sun2023_ranking_mobility",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782892387,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 74.8,
+    "usage": {
+      "completion": 5809,
+      "prompt": 761
+    },
+    "finish": "stop",
+    "n_content_chars": 7940
+  },
+  "llm_response_chars": 7940,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.85,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 104,
+    "stderr_chars": 264
+  },
+  "stdout": "Loading and preparing data...\nLoaded 40000 works for 40000 authors.\nDetecting hot streaks per career...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 178, in <module>\n    main()\n  File \"/workspace/script.py\", line 138, in main\n    raise ValueError(\"No valid careers found after filtering.\")\nValueError: No valid careers found after filtering.\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['sciscinet', 'career']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['career', 'scientist']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['hot streak', 'impact']"
+      },
+      "model": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "result": {
+        "score": 0.5,
+        "rationale": "partial: ['hot streak']"
+      },
+      "claim": {
+        "score": 0.5,
+        "rationale": "partial: ['hot streak']"
+      }
+    },
+    "overall_ecrf": 0.667
+  },
+  "status": "DONE",
+  "t_end": 1782892462,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

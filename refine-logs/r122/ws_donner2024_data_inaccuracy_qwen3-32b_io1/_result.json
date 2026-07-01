@@ -1,0 +1,119 @@
+{
+  "paper": "donner2024_data_inaccuracy",
+  "model": "qwen3-32b",
+  "io": 1,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782891286,
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 122.6,
+    "usage": {
+      "completion": 9128,
+      "prompt": 566
+    },
+    "finish": "stop",
+    "n_content_chars": 8641
+  },
+  "llm_response_chars": 8641,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 5.81,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1484,
+    "stderr_chars": 0
+  },
+  "stdout": "======================================================================\nQUANTITATIVE ANALYSIS REPRODUCTION: DONNER ET AL. 2024\n======================================================================\nRESULT coef_alpha_N = 2.9606\nRESULT coef_beta_N  = 0.9365\nRESULT coef_sigma_N = 3.2649\nRESULT coef_alpha_C = 1.5929\nRESULT coef_beta_C  = 0.9942\nRESULT coef_sigma_C = 17.6030\n----------------------------------------------------------------------\nRESULT point_estimate_indicator = 2.9343\nRESULT mc_mean_indicator        = 2.9659\nRESULT mc_median_indicator      = 2.9488\nRESULT mc_95ci_indicator        = [2.1633, 3.8585]\nRESULT margin_of_error          = 0.8476\nRESULT relative_uncertainty_pct = 28.58%\n======================================================================\n\nCONCLUSION:\nThe Monte Carlo propagation of Bayesian regression uncertainty demonstrates\nthat the average citation impact score carries a substantial margin of error\ndue to inaccuracies in base bibliometric quantities (publication and citation\ncounts). Even when accounting for only two error categories, the resulting\nuncertainty intervals are wide. This supports the paper's conclusion that\naverage citation impact scores of research groups must be used very cautiously,\nas they often exhibit large error margins stemming from data inaccuracies.\nFull uncertainty quantification would require modeling additional error types,\nfurther widening these intervals and reinforcing the need for cautious interpretation.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.0,
+        "rationale": "no gold signal matched"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['bibliometric', 'inaccuracy', 'error']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['inaccuracy', 'uncertainty']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['uncertainty propagation', 'simulation']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['inaccuracy', 'uncertainty']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['data inaccuracy', 'uncertainty', 'bibliometric']"
+      }
+    },
+    "overall_ecrf": 0.833
+  },
+  "status": "DONE",
+  "t_end": 1782891414,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}

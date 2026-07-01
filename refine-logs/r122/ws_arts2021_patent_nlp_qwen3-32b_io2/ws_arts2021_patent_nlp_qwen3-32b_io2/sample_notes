@@ -1,0 +1,4 @@
+# Sample Notes — arts2021_patent_nlp
+IO3 = reference code (5 NLP novelty metrics) + data dictionary; raw patent data is on Zenodo
+(too large to mount). Agent studies the code and documents how it would reproduce on the full data.
+This is a code-public/data-external boundary case within IO3.

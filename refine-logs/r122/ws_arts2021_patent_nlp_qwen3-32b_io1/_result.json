@@ -3,11 +3,74 @@
   "model": "qwen3-32b",
   "io": 1,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782879062,
+  "t_start": 1782890689,
   "io2_data_files": [],
   "io3_ref_code_files": [],
-  "error": "LLM call failed: Request timed out.",
-  "status": "LLM_FAIL",
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 87.9,
+    "usage": {
+      "completion": 6355,
+      "prompt": 568
+    },
+    "finish": "stop",
+    "n_content_chars": 10577
+  },
+  "llm_response_chars": 10577,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.31,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 227,
+    "stderr_chars": 550
+  },
+  "stdout": "Loading synthetic placeholder data (STUB)...\nDataset shape: (300, 8)\nSchema: ['patent_id', 'year', 'text', 'backward_citations', 'ipc_classes', 'novelty_proxy', 'forward_citations', 'is_award']\n\nMetrics computed successfully.\n\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 197, in <module>\n    df[\"year_dummies\"] = pd.get_dummies(df[\"year\"], prefix=\"year\").astype(int)\n    ~~^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4301, in __setitem__\n    self._set_item_frame_value(key, value)\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4459, in _set_item_frame_value\n    raise ValueError(\nValueError: Cannot set a DataFrame with multiple columns to the single column year_dummies\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['patent', 'zenodo', 'claim']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['patent', 'claim', 'title', 'abstract', 'till2018']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['new word', 'backward cosine', 'novelty']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['nlp', 'cosine', 'classification']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['novelty', 'impact', 'citation', 'award', 'breakthrough']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['nlp', 'patent', 'novelty', 'impact']"
+      }
+    },
+    "overall_ecrf": 1.0
+  },
+  "status": "DONE",
+  "t_end": 1782890778,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

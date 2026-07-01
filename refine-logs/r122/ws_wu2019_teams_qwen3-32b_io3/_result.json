@@ -3,15 +3,78 @@
   "model": "qwen3-32b",
   "io": 3,
   "image": "sciscigpt-ds:0.1",
-  "t_start": 1782812122,
+  "t_start": 1782892858,
   "io2_data_files": [
     "sciscinet_sample.parquet"
   ],
   "io3_ref_code_files": [
     "reproduce_wu2019.py"
   ],
-  "error": "LLM call failed: Error code: 502",
-  "status": "LLM_FAIL",
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 66.6,
+    "usage": {
+      "completion": 5228,
+      "prompt": 12576
+    },
+    "finish": "stop",
+    "n_content_chars": 3615
+  },
+  "llm_response_chars": 3615,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.89,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 1078
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 51, in <module>\n    model = LinearRegression().fit(X, y)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/sklearn/base.py\", line 1473, in wrapper\n    return fit_method(estimator, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/sklearn/linear_model/_base.py\", line 609, in fit\n    X, y = self._validate_data(\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/sklearn/base.py\", line 650, in _validate_data\n    X, y = check_X_y(X, y, **check_params)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/sklearn/utils/validation.py\", line 1301, in check_X_y\n    X = check_array(\n        ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/sklearn/utils/validation.py\", line 1087, in check_array\n    raise ValueError(\nValueError: Found array with 0 sample(s) (shape=(0, 1)) while a minimum of 1 is required by LinearRegression.\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 0.5,
+        "rationale": "partial: ['sciscinet']"
+      },
+      "sample": {
+        "score": 0.5,
+        "rationale": "partial: ['team size']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['disruption', 'disrupt']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['mean', 'team size', 'regression', 'log']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['small', 'large']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['small teams', 'disrupt', 'large teams', 'develop', 'existing']"
+      }
+    },
+    "overall_ecrf": 0.833
+  },
+  "status": "DONE",
+  "t_end": 1782892926,
   "r122_batch": true,
   "gold_target": {
     "data_source": {

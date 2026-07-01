@@ -1,0 +1,5 @@
+# Data Dictionary — arts2021_patent_nlp
+USPTO patent data (Zenodo 10.5281/zenodo.3515985): claim_full_till2018.csv (patent claims),
+patent_title_abstract_till_2018.csv (titles+abstracts). Columns: patent_id, claim/abstract text, year, class.
+Reference code computes: new_word, new_word_comb, new_bigram, new_trigram, backward_cosine novelty metrics.
+RAW DATA NOT in sandbox (too large, external on Zenodo) — agent studies/adapts reference code.

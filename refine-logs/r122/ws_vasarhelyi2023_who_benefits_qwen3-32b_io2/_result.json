@@ -1,0 +1,121 @@
+{
+  "paper": "vasarhelyi2023_who_benefits",
+  "model": "qwen3-32b",
+  "io": 2,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782892541,
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3.6-27b-fp8",
+    "base_url": "http://172.17.65.42:8360/v1",
+    "elapsed": 81.8,
+    "usage": {
+      "completion": 6679,
+      "prompt": 652
+    },
+    "finish": "stop",
+    "n_content_chars": 8887
+  },
+  "llm_response_chars": 8887,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.16,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 239,
+    "stderr_chars": 2009
+  },
+  "stdout": "Loaded raw data: 40000 rows, 11 columns\nColumns: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\n",
+  "stderr": " (most recent call last):\n  File \"/workspace/script.py\", line 116, in <module>\n    df_matched, weights = coarsened_exact_matching(df, 'gender_comp', cem_covariates, bins=4)\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/script.py\", line 110, in coarsened_exact_matching\n    df_matched['cem_weight'] = N_total / stratum_sizes[df_matched['stratum']]\n    ~~~~~~~~~~^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4311, in __setitem__\n    self._set_item(key, value)\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 4524, in _set_item\n    value, refs = self._sanitize_column(value)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 5263, in _sanitize_column\n    return _reindex_for_setitem(value, self.index)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 12692, in _reindex_for_setitem\n    raise err\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 12687, in _reindex_for_setitem\n    reindexed_value = value.reindex(index)._values\n                      ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/series.py\", line 5153, in reindex\n    return super().reindex(\n           ^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/generic.py\", line 5610, in reindex\n    return self._reindex_axes(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/generic.py\", line 5633, in _reindex_axes\n    new_index, indexer = ax.reindex(\n                         ^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 4429, in reindex\n    raise ValueError(\"cannot reindex on an axis with duplicate labels\")\nValueError: cannot reindex on an axis with duplicate labels\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_ok": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": {
+        "score": 1.0,
+        "rationale": "strong: ['altmetric', 'sciscinet']"
+      },
+      "sample": {
+        "score": 1.0,
+        "rationale": "strong: ['team', 'gender', 'online visibility']"
+      },
+      "indicator": {
+        "score": 1.0,
+        "rationale": "strong: ['altmetric', 'citation', 'gender']"
+      },
+      "model": {
+        "score": 1.0,
+        "rationale": "strong: ['regression', 'ols', 'interaction']"
+      },
+      "result": {
+        "score": 1.0,
+        "rationale": "strong: ['gender', 'moderat', 'altmetric', 'citation']"
+      },
+      "claim": {
+        "score": 1.0,
+        "rationale": "strong: ['gender', 'team', 'altmetric', 'benefit']"
+      }
+    },
+    "overall_ecrf": 1.0
+  },
+  "status": "DONE",
+  "t_end": 1782892624,
+  "r122_batch": true,
+  "gold_target": {
+    "data_source": {
+      "A_round3": 0.0,
+      "B_round3": 0.0,
+      "final": 0.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "sample": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "indicator": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "model": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "result_table": {
+      "A_round3": 0.5,
+      "B_round3": 0.5,
+      "final": 0.5,
+      "disagreement": 0.0,
+      "method": "agree"
+    },
+    "claim": {
+      "A_round3": 1.0,
+      "B_round3": 1.0,
+      "final": 1.0,
+      "disagreement": 0.0,
+      "method": "agree"
+    }
+  }
+}
