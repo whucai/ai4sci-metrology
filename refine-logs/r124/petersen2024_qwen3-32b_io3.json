@@ -1,0 +1,91 @@
+{
+  "run_id": "r11",
+  "paper": "petersen2024",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782894561,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": true
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/petersen2024_qwen3-32b_io3.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [
+    "reproduce_final.py"
+  ],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 75.6,
+    "usage": {
+      "completion": 4679,
+      "prompt": 13514
+    },
+    "finish": "stop",
+    "n_content_chars": 2567
+  },
+  "llm_response_chars": 2567,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.03,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 2289
+  },
+  "stdout": "",
+  "stderr": "atsmodels/base/model.py\", line 203, in from_formula\n    tmp = handle_formula_data(data, None, formula, depth=eval_env,\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/formula/formulatools.py\", line 63, in handle_formula_data\n    result = dmatrices(formula, Y, depth, return_type='dataframe',\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/highlevel.py\", line 317, in dmatrices\n    (lhs, rhs) = _do_highlevel_design(\n                 ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/highlevel.py\", line 162, in _do_highlevel_design\n    design_infos = _try_incr_builders(\n                   ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/highlevel.py\", line 56, in _try_incr_builders\n    return design_matrix_builders(\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/build.py\", line 746, in design_matrix_builders\n    (num_column_counts, cat_levels_contrasts) = _examine_factor_types(\n                                                ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/build.py\", line 495, in _examine_factor_types\n    done = cat_sniffers[factor].sniff(value)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/categorical.py\", line 207, in sniff\n    if hasattr(data, \"dtype\") and safe_issubdtype(data.dtype, np.bool_):\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/util.py\", line 821, in safe_issubdtype\n    return np.issubdtype(dt1, dt2)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/numpy/core/numerictypes.py\", line 417, in issubdtype\n    arg1 = dtype(arg1).type\n           ^^^^^^^^^^^\nTypeError: Cannot interpret 'Int64Dtype()' as a data type\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 0.5,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "partial sample evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.925,
+    "final_ecrf": 0.6,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "PAPER_REPORTED": 2
+    },
+    "n_result_lines": 2
+  },
+  "status": "DONE",
+  "t_end": 1782894638
+}

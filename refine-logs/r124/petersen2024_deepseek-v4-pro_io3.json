@@ -1,0 +1,99 @@
+{
+  "run_id": "r12",
+  "paper": "petersen2024",
+  "model": "deepseek-v4-pro",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782894591,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": true
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/petersen2024_deepseek-v4-pro_io3.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [
+    "reproduce_final.py"
+  ],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 72.3,
+    "usage": {
+      "completion": 5272,
+      "prompt": 12538
+    },
+    "finish": "stop",
+    "n_content_chars": 4013
+  },
+  "llm_response_chars": 4013,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.11,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 60,
+    "stderr_chars": 2233
+  },
+  "stdout": "Raw data shape: (40000, 11)\nFiltered data shape: (7298, 11)\n",
+  "stderr": "atsmodels/base/model.py\", line 203, in from_formula\n    tmp = handle_formula_data(data, None, formula, depth=eval_env,\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/formula/formulatools.py\", line 63, in handle_formula_data\n    result = dmatrices(formula, Y, depth, return_type='dataframe',\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/highlevel.py\", line 317, in dmatrices\n    (lhs, rhs) = _do_highlevel_design(\n                 ^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/highlevel.py\", line 162, in _do_highlevel_design\n    design_infos = _try_incr_builders(\n                   ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/highlevel.py\", line 56, in _try_incr_builders\n    return design_matrix_builders(\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/build.py\", line 746, in design_matrix_builders\n    (num_column_counts, cat_levels_contrasts) = _examine_factor_types(\n                                                ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/build.py\", line 495, in _examine_factor_types\n    done = cat_sniffers[factor].sniff(value)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/categorical.py\", line 207, in sniff\n    if hasattr(data, \"dtype\") and safe_issubdtype(data.dtype, np.bool_):\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/patsy/util.py\", line 821, in safe_issubdtype\n    return np.issubdtype(dt1, dt2)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/numpy/core/numerictypes.py\", line 417, in issubdtype\n    arg1 = dtype(arg1).type\n           ^^^^^^^^^^^\nTypeError: Cannot interpret 'Int64Dtype()' as a data type\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.65,
+    "final_ecrf": 0.55,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "PAPER_REPORTED": 3
+    },
+    "n_result_lines": 3
+  },
+  "status": "DONE",
+  "t_end": 1782894664
+}

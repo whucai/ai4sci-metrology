@@ -1,0 +1,101 @@
+```python
+#!/usr/bin/env python3
+"""
+Reproduce the CD index time-trend analysis from Park et al. (2023)
+Using SciSciNet data via sciscinet_connector, with fallback to local parquet.
+"""
+
+import numpy as np
+import pandas as pd
+import sys
+
+# ---- Data loading ----
+# Mandatory: try to use the SciSciNet connector. If unavailable, load raw parquet.
+try:
+    from src.sciscigpt_local.sciscinet_connector import load_papers_sample
+    print("[INFO] Using SciSciNet connector load_papers_sample(n_shards=10)")
+    df = load_papers_sample(n_shards=10)
+    LOAD_METHOD = "sciscinet_connector"
+except ImportError:
+    print("[WARNING] sciscinet_connector not found. Falling back to raw_data/sciscinet_sample.parquet")
+    df = pd.read_parquet("/workspace/raw_data/sciscinet_sample.parquet")
+    LOAD_METHOD = "parquet"
+
+# ---- Filters ----
+# C2: year 1945-2010, disruption_score not null, no other filters
+initial_count = len(df)
+df = df[(df["year"] >= 1945) & (df["year"] <= 2010)]
+df = df.dropna(subset=["disruption_score"])
+n_papers = len(df)
+year_min = int(df["year"].min())
+year_max = int(df["year"].max())
+
+print("\n=== DATA_LOAD ===")
+print(f"Total papers loaded: {initial_count}")
+print(f"Papers after filter: {n_papers}")
+print(f"Year range: {year_min} - {year_max}")
+
+# ---- Descriptive ----
+overall_mean = df["disruption_score"].mean()
+overall_std = df["disruption_score"].std()
+
+print("\n=== DESCRIPTIVE ===")
+print(f"Overall mean CD: {overall_mean:.6f}")
+print(f"Overall std CD: {overall_std:.6f}")
+print(f"All years: {year_min}-{year_max}")
+
+# ---- Group by year ----
+year_groups = df.groupby("year")["disruption_score"]
+year_mean = year_groups.mean()
+year_count = year_groups.count()
+
+print("\n=== CD_BY_YEAR ===")
+for yr in sorted(year_mean.index):
+    mean_cd = year_mean.loc[yr]
+    n_pubs = year_count.loc[yr]
+    print(f"{yr}: mean={mean_cd:.6f}, N={n_pubs}")
+
+# ---- Results ----
+cd_1945 = year_mean.loc[1945]
+cd_2010 = year_mean.loc[2010]
+decline_pct = (cd_1945 - cd_2010) / cd_1945 * 100
+years_count = year_mean.shape[0]
+
+print("\n=== RESULTS ===")
+print(f"Sample N = {n_papers}")
+print(f"Years = {years_count}")
+print(f"CD 1945 = {cd_1945:.6f}")
+print(f"CD 2010 = {cd_2010:.6f}")
+print(f"Decline = {decline_pct:.1f}%")
+
+# ---- Diff table ----
+print("\n=== DIFF_TABLE ===")
+print("| Metric | Value |")
+print("| sample_N | {} |".format(n_papers))
+print("| years_count | {} |".format(years_count))
+print("| cd_1945_mean | {:.6f} |".format(cd_1945))
+print("| cd_2010_mean | {:.6f} |".format(cd_2010))
+print("| decline_pct | {:.1f} |".format(decline_pct))
+print("| overall_mean_cd | {:.6f} |".format(overall_mean))
+
+# ---- Key results with PAPER_REPORTED for comparison ----
+print("\n=== KEY_RESULTS ===")
+print(f"RESULT sample_N = {n_papers}")
+print(f"PAPER_REPORTED sample_N = 469855")
+print(f"RESULT years_count = {years_count}")
+print(f"PAPER_REPORTED years_count = 66")
+print(f"RESULT cd_1945 = {cd_1945:.6f}")
+print(f"PAPER_REPORTED cd_1945 = 0.035979")
+print(f"RESULT cd_2010 = {cd_2010:.6f}")
+print(f"PAPER_REPORTED cd_2010 = 0.001191")
+print(f"RESULT decline_pct = {decline_pct:.1f}")
+print(f"PAPER_REPORTED decline_pct = 96.7")
+print(f"RESULT overall_mean_cd = {overall_mean:.6f}")
+print(f"PAPER_REPORTED overall_mean_cd = 0.005724")
+
+print("\n=== CONCLUSION ===")
+if abs(cd_1945 - 0.035979) < 1e-4 and abs(cd_2010 - 0.001191) < 1e-4:
+    print("Reproduction successful: CD indices and decline match Park et al. (2023).")
+else:
+    print("Warning: Computed values differ slightly from paper. Check data version.")
+```

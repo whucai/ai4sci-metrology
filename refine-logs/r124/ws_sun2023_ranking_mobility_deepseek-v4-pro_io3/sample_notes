@@ -1,0 +1,6 @@
+# Sample Notes — sun2023_ranking_mobility
+
+N = pending; window = early-career window; unit = author.
+Filters: career reconstruction, ranking bins.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

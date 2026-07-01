@@ -1,0 +1,6 @@
+# Sample Notes — park2023_disruptive
+
+N = 469855; window = 1945-2010; unit = paper.
+Filters: require CD score, drop_na.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

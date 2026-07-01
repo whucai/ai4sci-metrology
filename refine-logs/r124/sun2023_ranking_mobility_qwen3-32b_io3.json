@@ -1,0 +1,97 @@
+{
+  "run_id": "r15",
+  "paper": "sun2023_ranking_mobility",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782894803,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/sun2023_ranking_mobility_qwen3-32b_io3.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 95.0,
+    "usage": {
+      "completion": 7448,
+      "prompt": 10477
+    },
+    "finish": "stop",
+    "n_content_chars": 10221
+  },
+  "llm_response_chars": 10221,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 5.29,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 260,
+    "stderr_chars": 946
+  },
+  "stdout": "Loading raw data...\nNOTE: Author ID column not found. Using paper_id as proxy for author-level analysis.\nReconstructing careers and filtering cohorts...\nComputing decile rankings and transition matrices...\nFitting random walk model to estimate mobility (D)...\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 115, in <module>\n    for year, group in impact_agg.groupby('career_start'):\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/frame.py\", line 9183, in groupby\n    return DataFrameGroupBy(\n           ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/groupby/groupby.py\", line 1329, in __init__\n    grouper, exclusions, obj = get_grouper(\n                               ^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/groupby/grouper.py\", line 1033, in get_grouper\n    obj._check_label_or_level_ambiguity(gpr, axis=axis)\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/generic.py\", line 1868, in _check_label_or_level_ambiguity\n    raise ValueError(msg)\nValueError: 'career_start' is both an index level and a column label, which is ambiguous.\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.55,
+    "final_ecrf": 0.55,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 3
+    },
+    "n_result_lines": 3
+  },
+  "status": "DONE",
+  "t_end": 1782894903
+}

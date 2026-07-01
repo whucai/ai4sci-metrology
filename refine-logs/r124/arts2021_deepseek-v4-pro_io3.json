@@ -1,0 +1,104 @@
+{
+  "run_id": "r2",
+  "paper": "arts2021",
+  "model": "deepseek-v4-pro",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782893532,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": true
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/arts2021_deepseek-v4-pro_io3.json",
+  "io2_data_files": [
+    "gold_sample.parquet",
+    "patent_indicators.parquet"
+  ],
+  "io3_ref_code_files": [
+    "reproduce_v0_fixed.py"
+  ],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 151.4,
+    "usage": {
+      "completion": 6099,
+      "prompt": 12501
+    },
+    "finish": "stop",
+    "n_content_chars": 8616
+  },
+  "llm_response_chars": 8616,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.02,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 22,
+    "stderr_chars": 434
+  },
+  "stdout": "Data shape: (300, 14)\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 17, in <module>\n    assert gold.award.notna().sum() == 518, \"Unexpected number of rows\"\n           ^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/generic.py\", line 6299, in __getattr__\n    return object.__getattribute__(self, name)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'DataFrame' object has no attribute 'award'\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 0.5,
+      "model": 0.5,
+      "claim": 0.5,
+      "result": 0.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "no result evidence"
+    },
+    "weighted": 0.45,
+    "final_ecrf": 0.45,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ],
+      [
+        "b result=0",
+        0.55
+      ],
+      [
+        "c synthetic-substitute",
+        0.5
+      ],
+      [
+        "d claim>0 result=0",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 13
+    },
+    "n_result_lines": 13
+  },
+  "status": "DONE",
+  "t_end": 1782893685
+}

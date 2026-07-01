@@ -1,0 +1,92 @@
+{
+  "run_id": "r9",
+  "paper": "park2023_disruptive",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782894408,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": true
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/park2023_disruptive_qwen3-32b_io3.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [
+    "reproduce_v0_llm.py"
+  ],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 99.3,
+    "usage": {
+      "completion": 7793,
+      "prompt": 1248
+    },
+    "finish": "stop",
+    "n_content_chars": 2947
+  },
+  "llm_response_chars": 2947,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.76,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 0,
+    "stderr_chars": 469
+  },
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 23, in <module>\n    cd_1945 = year_stats.loc[year_stats['year'] == 1945, 'mean_cd'].values[0]\n              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/arrays/masked.py\", line 187, in __getitem__\n    newmask = self._mask[item]\n              ~~~~~~~~~~^^^^^^\nIndexError: index 0 is out of bounds for axis 0 with size 0\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 0.5,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.875,
+    "final_ecrf": 0.6,
+    "caps_applied": [
+      [
+        "a no-exec-result",
+        0.6
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "PAPER_REPORTED": 2,
+      "COMPUTED": 1
+    },
+    "n_result_lines": 3
+  },
+  "status": "DONE",
+  "t_end": 1782894508
+}

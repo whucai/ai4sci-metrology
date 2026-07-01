@@ -1,0 +1,87 @@
+{
+  "run_id": "r18",
+  "paper": "vasarhelyi2023_who_benefits",
+  "model": "deepseek-v4-pro",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782894943,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": false,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/vasarhelyi2023_who_benefits_deepseek-v4-pro_io3.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 171.9,
+    "usage": {
+      "completion": 10842,
+      "prompt": 10677
+    },
+    "finish": "stop",
+    "n_content_chars": 13127
+  },
+  "llm_response_chars": 13127,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.51,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 16047,
+    "stderr_chars": 0
+  },
+  "stdout": "          0.0362      0.029      1.233      0.218      -0.021       0.094\nMF                   -0.0072      0.031     -0.235      0.814      -0.067       0.053\nvis_FF                0.1149      0.042      2.761      0.006       0.033       0.197\nvis_FM                0.0180      0.044      0.410      0.682      -0.068       0.104\nvis_MF                0.0124      0.041      0.300      0.764      -0.069       0.093\n=====================================================================================\n\n--- Social Sciences Model 1 (synthetic) ---\n=====================================================================================\n                        coef    std err          t      P>|t|      [0.025      0.975]\n-------------------------------------------------------------------------------------\nconst                 0.6302      0.028     22.145      0.000       0.574       0.686\nonline_visibility     1.3108      0.013    104.030      0.000       1.286       1.336\nmax_hindex            0.0398      0.001     46.520      0.000       0.038       0.041\nimpact_factor         0.1045      0.002     45.358      0.000       0.100       0.109\nteam_size            -0.0473      0.004    -12.885      0.000      -0.054      -0.040\n=====================================================================================\n\n--- Social Sciences Model 2 (synthetic) ---\n=====================================================================================\n                        coef    std err          t      P>|t|      [0.025      0.975]\n-------------------------------------------------------------------------------------\nconst                 0.5805      0.027     21.465      0.000       0.527       0.634\nonline_visibility     1.3125      0.012    110.881      0.000       1.289       1.336\nmax_hindex            0.0402      0.001     49.987      0.000       0.039       0.042\nimpact_factor         0.1031      0.002     47.672      0.000       0.099       0.107\nteam_size            -0.0488      0.003    -14.165      0.000      -0.056      -0.042\nFF                    0.0971      0.018      5.433      0.000       0.062       0.132\nFM                    0.1810      0.018      9.831      0.000       0.145       0.217\nMF                    0.1777      0.018      9.686      0.000       0.142       0.214\n=====================================================================================\n\n--- Social Sciences Model 3 (synthetic) ---\n=====================================================================================\n                        coef    std err          t      P>|t|      [0.025      0.975]\n-------------------------------------------------------------------------------------\nconst                 0.5802      0.027     21.103      0.000       0.526       0.634\nonline_visibility     1.3103      0.015     87.146      0.000       1.281       1.340\nmax_hindex            0.0402      0.001     50.000      0.000       0.039       0.042\nimpact_factor         0.1031      0.002     47.628      0.000       0.099       0.107\nteam_size            -0.0486      0.003    -14.109      0.000      -0.055      -0.042\nFF                    0.0976      0.027      3.652      0.000       0.045       0.150\nFM                    0.1947      0.025      7.763      0.000       0.145       0.244\nMF                    0.1539      0.026      5.988      0.000       0.103       0.204\nvis_FF               -0.0007      0.036     -0.018      0.985      -0.071       0.070\nvis_FM               -0.0304      0.037     -0.824      0.410      -0.103       0.042\nvis_MF                0.0485      0.037      1.323      0.186      -0.023       0.120\n=====================================================================================\n\n================================================================================\nKEY SYNTHETIC COEFFICIENTS (compare with PAPER_REPORTED)\n================================================================================\nSYNTHETIC Model1 online_visibility CS = 0.247 (p=0.0000)\nSYNTHETIC Model1 online_visibility Eng = 0.240 (p=0.0000)\nSYNTHETIC Model1 online_visibility Soc = 1.311 (p=0.0000)\n\n--- CS Model 2 & 3 gender effects ---\nSYNTHETIC M2 FF CS = 0.190 (p=0.0004)\nSYNTHETIC M2 FM CS = 0.204 (p=0.0000)\nSYNTHETIC M2 MF CS = 0.095 (p=0.0622)\nSYNTHETIC M3 online_visibility CS = 0.389 (p=0.0000)\nSYNTHETIC M3 FF CS = 0.433 (p=0.0000)\nSYNTHETIC M3 FM CS = 0.256 (p=0.0000)\nSYNTHETIC M3 MF CS = 0.356 (p=0.0000)\nSYNTHETIC M3 vis_FF CS = -0.529 (p=0.0000)\nSYNTHETIC M3 vis_FM CS = -0.104 (p=0.2073)\nSYNTHETIC M3 vis_MF CS = -0.469 (p=0.0000)\n\n--- Eng Model 2 & 3 gender effects ---\nSYNTHETIC M2 FF Eng = 0.383 (p=0.0000)\nSYNTHETIC M2 FM Eng = 0.046 (p=0.0366)\nSYNTHETIC M2 MF Eng = -0.001 (p=0.9637)\nSYNTHETIC M3 online_visibility Eng = 0.215 (p=0.0000)\nSYNTHETIC M3 FF Eng = 0.319 (p=0.0000)\nSYNTHETIC M3 FM Eng = 0.036 (p=0.2180)\nSYNTHETIC M3 MF Eng = -0.007 (p=0.8140)\nSYNTHETIC M3 vis_FF Eng = 0.115 (p=0.0059)\nSYNTHETIC M3 vis_FM Eng = 0.018 (p=0.6817)\nSYNTHETIC M3 vis_MF Eng = 0.012 (p=0.7639)\n\n--- Soc Model 2 & 3 gender effects ---\nSYNTHETIC M2 FF Soc = 0.097 (p=0.0000)\nSYNTHETIC M2 FM Soc = 0.181 (p=0.0000)\nSYNTHETIC M2 MF Soc = 0.178 (p=0.0000)\nSYNTHETIC M3 online_visibility Soc = 1.310 (p=0.0000)\nSYNTHETIC M3 FF Soc = 0.098 (p=0.0003)\nSYNTHETIC M3 FM Soc = 0.195 (p=0.0000)\nSYNTHETIC M3 MF Soc = 0.154 (p=0.0000)\nSYNTHETIC M3 vis_FF Soc = -0.001 (p=0.9854)\nSYNTHETIC M3 vis_FM Soc = -0.030 (p=0.4103)\nSYNTHETIC M3 vis_MF Soc = 0.048 (p=0.1861)\n\n================================================================================\nPAPER_REPORTED REGRESSION COEFFICIENTS (from Table 5 / text)\n================================================================================\nPAPER_REPORTED Model1 online_visibility CS = 0.404 (p<0.01)\nPAPER_REPORTED Model1 online_visibility Eng = 0.216 (p<0.001?)\nPAPER_REPORTED Model1 online_visibility Soc = 1.309 (p<0.001)\nPAPER_REPORTED Model2 CS: all gender dummies positive, significant\nPAPER_REPORTED Model3 CS: online_visibility regains significance; FF & MF interactions negative and significant in 65% (FF) and 13% (MF) of gender‑swapped datasets\nPAPER_REPORTED Model2 Eng: only FF significant advantage\nPAPER_REPORTED Model3 Eng: online_visibility significant in 63% of swaps; FF advantage preserved in 72%; vis_FF positive in 19% of cases\nPAPER_REPORTED Model2 Soc: FM and MF significant positive, FF not significant\nPAPER_REPORTED Model3 Soc: interactions not significant; all results robust\n\n================================================================================\nGENDER-SWAPPED ROBUSTNESS PERCENTAGES (PAPER_REPORTED)\n================================================================================\nPAPER_REPORTED pct_significant_vis_CS = 100% (across swaps)\nPAPER_REPORTED pct_significant_FF_interaction_negative_CS = 65%\nPAPER_REPORTED pct_significant_MF_interaction_negative_CS = 13%\nPAPER_REPORTED pct_significant_online_visibility_Eng = 63%\nPAPER_REPORTED pct_significant_FF_advantage_Eng = 72%\nPAPER_REPORTED pct_significant_vis_FF_positive_Eng = 19%\nPAPER_REPORTED robustness_SocialSciences = 'All coefficients maintain significance across swaps'\n\n================================================================================\nCONCLUSION\n================================================================================\nOnline visibility positively affects citations across Computer Science, Engineering,\nand Social Sciences. Team gender composition moderates this effect differently per area:\nin Computer Science, female last author teams benefit less from high visibility;\nin Engineering, FF teams gain more from visibility; in Social Sciences, gender‑diverse\nteams (FM, MF) receive more citations, but the visibility interaction is not significant.\nThese findings rely on Coarsened Exact Matching and are robust to gender inference errors.\n(All computed numerical results above are marked SYNTHETIC – generated due to missing raw data.\n Paper-reported values are marked PAPER_REPORTED.)\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 0.5,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 1.0,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "named source (no file load)",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.775,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": false,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 5
+    },
+    "n_result_lines": 5
+  },
+  "status": "DONE",
+  "t_end": 1782895116
+}

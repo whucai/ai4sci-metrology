@@ -1,0 +1,455 @@
+{
+  "n_runs": 34,
+  "n_papers": 18,
+  "conditions": [
+    {
+      "condition": "1. has code + refcode used",
+      "n": 4,
+      "mean_ecrf": 0.6,
+      "floor_break_rate": 0.25,
+      "real_data_rate": 1.0,
+      "synth_rate": 0.75
+    },
+    {
+      "condition": "2. has code + refcode NOT used",
+      "n": 14,
+      "mean_ecrf": 0.648,
+      "floor_break_rate": 0.714,
+      "real_data_rate": 1.0,
+      "synth_rate": 0.286
+    },
+    {
+      "condition": "3. no code + real data used",
+      "n": 7,
+      "mean_ecrf": 0.575,
+      "floor_break_rate": 0.571,
+      "real_data_rate": 1.0,
+      "synth_rate": 0.429
+    },
+    {
+      "condition": "4. real data used + synth false",
+      "n": 15,
+      "mean_ecrf": 0.703,
+      "floor_break_rate": 1.0,
+      "real_data_rate": 1.0,
+      "synth_rate": 0.0
+    },
+    {
+      "condition": "5. real data used + synth true",
+      "n": 10,
+      "mean_ecrf": 0.495,
+      "floor_break_rate": 0.0,
+      "real_data_rate": 1.0,
+      "synth_rate": 1.0
+    },
+    {
+      "condition": "6. synth true overall",
+      "n": 17,
+      "mean_ecrf": 0.497,
+      "floor_break_rate": 0.0,
+      "real_data_rate": 0.588,
+      "synth_rate": 1.0
+    }
+  ],
+  "category_counts": {
+    "SGF persistence / counterexample": 7,
+    "ambiguous SGF break (refcode not used)": 15,
+    "SGF persistence (no break)": 11,
+    "clean SGF break": 1
+  },
+  "ITT": {
+    "treat_n": 18,
+    "ctrl_n": 16,
+    "treat_break": 0.611,
+    "ctrl_break": 0.312
+  },
+  "per_protocol": {
+    "used_n": 4,
+    "notused_n": 30,
+    "used_break": 0.25,
+    "notused_break": 0.5
+  },
+  "verdict_per_paper": {
+    "arts2021": {
+      "has_code": true,
+      "category": "SGF persistence / counterexample",
+      "per_model": [
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.45,
+          "category": "SGF persistence / counterexample",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": true
+        },
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.5,
+          "category": "SGF persistence / counterexample",
+          "refcode_used": true,
+          "real_data_used": true,
+          "synth": true
+        }
+      ]
+    },
+    "arts2021_patent_nlp": {
+      "has_code": true,
+      "category": "ambiguous SGF break (refcode not used)",
+      "per_model": [
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.775,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        },
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.9,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        }
+      ]
+    },
+    "bentley2023_disruption": {
+      "has_code": true,
+      "category": "ambiguous SGF break (refcode not used)",
+      "per_model": [
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.675,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.675,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        }
+      ]
+    },
+    "bikard2013": {
+      "has_code": false,
+      "category": "ambiguous SGF break (refcode not used)",
+      "per_model": [
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.6,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": false,
+          "synth": false
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.5,
+          "category": "SGF persistence (no break)",
+          "refcode_used": false,
+          "real_data_used": false,
+          "synth": false
+        }
+      ]
+    },
+    "donner2024_data_inaccuracy": {
+      "has_code": false,
+      "category": "ambiguous SGF break (refcode not used)",
+      "per_model": [
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.55,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        }
+      ]
+    },
+    "funk2017": {
+      "has_code": true,
+      "category": "ambiguous SGF break (refcode not used)",
+      "per_model": [
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.9,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        },
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.9,
+          "category": "clean SGF break",
+          "refcode_used": true,
+          "real_data_used": true,
+          "synth": false
+        }
+      ]
+    },
+    "gebhart2023_math_framework": {
+      "has_code": false,
+      "category": "ambiguous SGF break (refcode not used)",
+      "per_model": [
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.775,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        }
+      ]
+    },
+    "ke2015_sleeping_beauties": {
+      "has_code": false,
+      "category": "SGF persistence (no break)",
+      "per_model": [
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.5,
+          "category": "SGF persistence (no break)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": true
+        },
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.5,
+          "category": "SGF persistence (no break)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": true
+        }
+      ]
+    },
+    "liu2018_hotstreaks": {
+      "has_code": true,
+      "category": "SGF persistence / counterexample",
+      "per_model": [
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.5,
+          "category": "SGF persistence / counterexample",
+          "refcode_used": true,
+          "real_data_used": true,
+          "synth": true
+        },
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.5,
+          "category": "SGF persistence / counterexample",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": true
+        }
+      ]
+    },
+    "maddi2024": {
+      "has_code": false,
+      "category": "SGF persistence (no break)",
+      "per_model": [
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.5,
+          "category": "SGF persistence (no break)",
+          "refcode_used": false,
+          "real_data_used": false,
+          "synth": true
+        },
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.5,
+          "category": "SGF persistence (no break)",
+          "refcode_used": false,
+          "real_data_used": false,
+          "synth": true
+        }
+      ]
+    },
+    "obadage2024_citations_repro": {
+      "has_code": true,
+      "category": "SGF persistence / counterexample",
+      "per_model": [
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.5,
+          "category": "SGF persistence / counterexample",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": true
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.5,
+          "category": "SGF persistence / counterexample",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": true
+        }
+      ]
+    },
+    "park2023_disruptive": {
+      "has_code": true,
+      "category": "ambiguous SGF break (refcode not used)",
+      "per_model": [
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.7,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        },
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.6,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        }
+      ]
+    },
+    "petersen2024": {
+      "has_code": true,
+      "category": "ambiguous SGF break (refcode not used)",
+      "per_model": [
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.6,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.55,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        }
+      ]
+    },
+    "schaper2025_frontier": {
+      "has_code": false,
+      "category": "SGF persistence (no break)",
+      "per_model": [
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.5,
+          "category": "SGF persistence (no break)",
+          "refcode_used": false,
+          "real_data_used": false,
+          "synth": true
+        },
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.5,
+          "category": "SGF persistence (no break)",
+          "refcode_used": false,
+          "real_data_used": false,
+          "synth": true
+        }
+      ]
+    },
+    "sun2023_ranking_mobility": {
+      "has_code": false,
+      "category": "ambiguous SGF break (refcode not used)",
+      "per_model": [
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.55,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.5,
+          "category": "SGF persistence (no break)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": true
+        }
+      ]
+    },
+    "vasarhelyi2023_who_benefits": {
+      "has_code": false,
+      "category": "SGF persistence (no break)",
+      "per_model": [
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.5,
+          "category": "SGF persistence (no break)",
+          "refcode_used": false,
+          "real_data_used": false,
+          "synth": true
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.5,
+          "category": "SGF persistence (no break)",
+          "refcode_used": false,
+          "real_data_used": false,
+          "synth": true
+        }
+      ]
+    },
+    "wu2019_teams": {
+      "has_code": true,
+      "category": "ambiguous SGF break (refcode not used)",
+      "per_model": [
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.75,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        },
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.5,
+          "category": "SGF persistence / counterexample",
+          "refcode_used": true,
+          "real_data_used": true,
+          "synth": true
+        }
+      ]
+    },
+    "zheng2025_male_female_retractions": {
+      "has_code": false,
+      "category": "ambiguous SGF break (refcode not used)",
+      "per_model": [
+        {
+          "model": "deepseek-v4-pro",
+          "ecrf": 0.65,
+          "category": "ambiguous SGF break (refcode not used)",
+          "refcode_used": false,
+          "real_data_used": true,
+          "synth": false
+        },
+        {
+          "model": "qwen3-32b",
+          "ecrf": 0.5,
+          "category": "SGF persistence (no break)",
+          "refcode_used": false,
+          "real_data_used": false,
+          "synth": true
+        }
+      ]
+    }
+  },
+  "locked_theoretical_statement": "The IO3 rerun does not provide clean support for the simple code-availability hypothesis. Instead, the emerging evidence suggests a stronger uptake mechanism: executable evidence improves reconstruction only when the agent grounds its workflow in real data and avoids synthetic substitution. Code availability alone is insufficient. Mechanism: IO -> material availability; agent uptake -> evidence use; ECRF -> reconstruction fidelity."
+}

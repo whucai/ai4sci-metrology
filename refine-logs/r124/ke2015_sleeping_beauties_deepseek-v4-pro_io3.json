@@ -1,0 +1,91 @@
+{
+  "run_id": "r8",
+  "paper": "ke2015_sleeping_beauties",
+  "model": "deepseek-v4-pro",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782894261,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/ke2015_sleeping_beauties_deepseek-v4-pro_io3.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 146.2,
+    "usage": {
+      "completion": 8437,
+      "prompt": 10742
+    },
+    "finish": "stop",
+    "n_content_chars": 6418
+  },
+  "llm_response_chars": 6418,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.06,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 665,
+    "stderr_chars": 0
+  },
+  "stdout": "Loaded 40000 records.\nColumns present: ['paper_id', 'year', 'author_count', 'institution_count', 'reference_count', 'citation_count', 'citation_count_5y', 'disruption_score', 'novelty_score', 'conventionality_score', 'doc_type']\n\nBeauty coefficient column not found in dataset.\nCannot reproduce the paper's main quantitative results without computed B values.\nProceeding with SYNTHETIC placeholder analysis for demonstration.\n\nSYNTHETIC RESULT fraction_negative_B = 0.5334 (53.34%)\nPAPER_REPORTED APS: 4.68%, WoS: 6.56%\nSYNTHETIC Power-law fit on synthetic shifted B values (for illustration only).\nPAPER_REPORTED alpha = 2.35, Bm = 22.27\nEND OF SYNTHETIC ANALYSIS\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 0.5,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.825,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "PAPER_REPORTED": 1,
+      "COMPUTED": 5,
+      "SYNTHETIC": 1
+    },
+    "n_result_lines": 7
+  },
+  "status": "DONE",
+  "t_end": 1782894408
+}

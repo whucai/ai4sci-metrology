@@ -1,0 +1,6 @@
+# Sample Notes — schaper2025_frontier
+
+N = pending; window = biomedical careers; unit = scientist.
+Filters: author-inventor disambiguation.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

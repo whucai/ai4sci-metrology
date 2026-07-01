@@ -1,0 +1,6 @@
+# Sample Notes — ke2015_sleeping_beauties
+
+N = 22000000; window = 1900-2013; unit = paper.
+Filters: citation-network construction.
+Data file: sciscinet_sample.parquet (SciSciNet substitute shard, shared across SoS papers).
+Columns: paper_id, year, disruption_score, reference_count, author_count, citation_count_5y, team_size, etc.

@@ -1,2 +1,23 @@
 R123: IO3 — 20 runs, concurrency=4
 [1/20] donner2024_data_inaccuracy     deepseek-v4-pro  DONE         ecrf=0.55 exec=True realdata=True synth=False refcode=False
+[2/20] arts2021                       deepseek-v4-pro  DONE         ecrf=0.45 exec=True realdata=True synth=True refcode=False
+[3/20] gebhart2023_math_framework     deepseek-v4-pro  DONE         ecrf=0.775 exec=True realdata=True synth=False refcode=False
+[4/20] arts2021                       qwen3-32b        DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=True
+[5/20] ke2015_sleeping_beauties       deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[6/20] park2023_disruptive            qwen3-32b        DONE         ecrf=0.6 exec=True realdata=True synth=False refcode=False
+[7/20] park2023_disruptive            deepseek-v4-pro  DONE         ecrf=0.875 exec=True realdata=True synth=False refcode=False
+[8/20] ke2015_sleeping_beauties       qwen3-32b        DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[9/20] petersen2024                   qwen3-32b        DONE         ecrf=0.6 exec=True realdata=True synth=False refcode=False
+[10/20] petersen2024                   deepseek-v4-pro  DONE         ecrf=0.55 exec=True realdata=True synth=False refcode=False
+[11/20] gebhart2023_math_framework     qwen3-32b        LLM_FAIL     ecrf=None exec=None realdata=None synth=None refcode=None
+[12/20] schaper2025_frontier           deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+[13/20] sun2023_ranking_mobility       qwen3-32b        DONE         ecrf=0.55 exec=True realdata=True synth=False refcode=False
+[14/20] sun2023_ranking_mobility       deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=True synth=True refcode=False
+[15/20] vasarhelyi2023_who_benefits    deepseek-v4-pro  DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+[16/20] zheng2025_male_female_retractions qwen3-32b        DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+[17/20] zheng2025_male_female_retractions deepseek-v4-pro  DONE         ecrf=0.65 exec=True realdata=True synth=False refcode=False
+[18/20] donner2024_data_inaccuracy     qwen3-32b        LLM_FAIL     ecrf=None exec=None realdata=None synth=None refcode=None
+[19/20] schaper2025_frontier           qwen3-32b        DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+[20/20] vasarhelyi2023_who_benefits    qwen3-32b        DONE         ecrf=0.5 exec=True realdata=False synth=True refcode=False
+
+IO3 done in 2665s. mean ECRF=0.561. n_done=18/20. agg -> /mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/r123_io3_aggregation.json

@@ -1,0 +1,80 @@
+{
+  "run_id": "r20",
+  "paper": "zheng2025_male_female_retractions",
+  "model": "deepseek-v4-pro",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782895219,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/zheng2025_male_female_retractions_deepseek-v4-pro_io3.json",
+  "io2_data_files": [],
+  "io3_ref_code_files": [],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 31.6,
+    "usage": {
+      "completion": 2337,
+      "prompt": 10660
+    },
+    "finish": "stop",
+    "n_content_chars": 3555
+  },
+  "llm_response_chars": 3555,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.27,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 2579,
+    "stderr_chars": 0
+  },
+  "stdout": "INFO: Found 0 file(s) in /workspace/raw_data: []\n-------- PAPER-REPORTED KEY RESULTS --------\nRESULT overall_male_RR = 6.38‱ (PAPER_REPORTED)\nRESULT overall_female_RR = 5.19‱ (PAPER_REPORTED)\nRESULT overall_MFRR = 1.23 (95% CI: 1.18, 1.28) (PAPER_REPORTED)\nRESULT MFRR_plagiarism = 1.99 (PAPER_REPORTED)\nRESULT MFRR_authorship_issues = 1.73 (PAPER_REPORTED)\nRESULT MFRR_duplication = higher for males (PAPER_REPORTED, exact value not given in text)\nRESULT MFRR_fabrication_falsification = higher for males (PAPER_REPORTED, exact value not given)\nRESULT MFRR_ethical_issues = higher for males (PAPER_REPORTED, exact value not given)\nRESULT MFRR_mistakes = no significant gender difference (PAPER_REPORTED)\nRESULT discipline_biomedical_health = male first authors significantly higher retraction rates (PAPER_REPORTED)\nRESULT discipline_life_earth = male first authors significantly higher (PAPER_REPORTED)\nRESULT discipline_physical_engineering = male first authors significantly higher (PAPER_REPORTED)\nRESULT discipline_math_computer = female first authors significantly higher (PAPER_REPORTED)\nRESULT discipline_social_humanities = no significant gender difference (PAPER_REPORTED)\nRESULT country_Iran = male first authors higher retraction rate (PAPER_REPORTED)\nRESULT country_Pakistan = male first authors higher retraction rate (PAPER_REPORTED)\nRESULT country_United_States = male first authors higher retraction rate (PAPER_REPORTED)\nRESULT country_Italy = female first authors higher retraction rate (PAPER_REPORTED)\nRESULT country_China = female first authors higher retraction rate (PAPER_REPORTED)\nRESULT top10_other_countries = no significant gender difference (PAPER_REPORTED)\nRESULT corresponding_author_MFRR = 1.20 (95% CI: 1.15, 1.25) (PAPER_REPORTED)\nRESULT corresponding_author_biomed_health = male higher (PAPER_REPORTED)\nRESULT corresponding_author_life_earth = male higher (PAPER_REPORTED)\nRESULT corresponding_author_math_computer = female higher (PAPER_REPORTED)\nRESULT corresponding_author_physical_engineering = no significant difference (PAPER_REPORTED)\nRESULT corresponding_author_social_humanities = male slightly higher (PAPER_REPORTED)\n-------- FINAL CONCLUSION --------\nCONCLUSION: Male leading authors have higher overall retraction rates than females,\nwith disparities varying across retraction reasons, disciplines, and countries.\nThe gender gap is mainly driven by misconduct (plagiarism, authorship issues, etc.)\nand differs by field: males higher in biomedical, life, and physical sciences;\nfemales higher in mathematics and computer science.\n",
+  "stderr": "",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 0.5,
+      "indicator": 1.0,
+      "model": 0.0,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "partial sample evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.65,
+    "final_ecrf": 0.65,
+    "caps_applied": []
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {},
+    "n_result_lines": 0
+  },
+  "status": "DONE",
+  "t_end": 1782895251
+}

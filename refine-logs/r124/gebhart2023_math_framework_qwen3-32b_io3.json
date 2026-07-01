@@ -1,0 +1,21 @@
+{
+  "run_id": "r5",
+  "paper": "gebhart2023_math_framework",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782893591,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": false
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/gebhart2023_math_framework_qwen3-32b_io3.json",
+  "io2_data_files": [
+    "openalex_physics_200.json"
+  ],
+  "io3_ref_code_files": [],
+  "error": "LLM fail: Error code: 502 - {'error': {'message': 'litellm.BadGatewayError: BadGatewayError: OpenAIException - Error code: 502. Received Model Group=qwen3-32b\\nAvailable Model Group Fallbacks=None', 'type': None, 'param': None, 'code': '502'}}",
+  "status": "LLM_FAIL"
+}

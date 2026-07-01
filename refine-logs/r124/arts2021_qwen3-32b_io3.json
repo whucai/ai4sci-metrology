@@ -1,0 +1,92 @@
+{
+  "run_id": "r1",
+  "paper": "arts2021",
+  "model": "qwen3-32b",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782893532,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": true
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/arts2021_qwen3-32b_io3.json",
+  "io2_data_files": [
+    "gold_sample.parquet",
+    "patent_indicators.parquet"
+  ],
+  "io3_ref_code_files": [
+    "reproduce_v0_fixed.py"
+  ],
+  "llm": {
+    "model": "qwen3-32b",
+    "elapsed": 727.6,
+    "usage": {
+      "completion": 10089,
+      "prompt": 13877
+    },
+    "finish": "stop",
+    "n_content_chars": 6283
+  },
+  "llm_response_chars": 6283,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 1.18,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 2943,
+    "stderr_chars": 829
+  },
+  "stdout": "Loading raw data...\nLoaded 0 patents. Mapped indicators: ['new_word', 'new_word_reuse', 'new_bigram', 'new_bigram_reuse', 'new_trigram', 'new_trigram_reuse', 'new_word_comb', 'new_word_comb_reuse', 'backward_cosine']\n\n--- REPRODUCING TABLE 3: DESCRIPTIVE STATISTICS ---\nRESULT new_word_mean_award = nan\nRESULT new_word_mean_control = nan\nRESULT new_word_t_stat = nan\nRESULT new_word_p_value = nan\nRESULT new_word_cohens_d = 0.000\nPAPER_REPORTED new_word_t_stat = see Table 3\nPAPER_REPORTED new_word_cohens_d = see Table 3\nRESULT new_word_reuse_mean_award = nan\nRESULT new_word_reuse_mean_control = nan\nRESULT new_word_reuse_t_stat = nan\nRESULT new_word_reuse_p_value = nan\nRESULT new_word_reuse_cohens_d = 0.000\nPAPER_REPORTED new_word_reuse_t_stat = see Table 3\nPAPER_REPORTED new_word_reuse_cohens_d = see Table 3\nRESULT new_bigram_mean_award = nan\nRESULT new_bigram_mean_control = nan\nRESULT new_bigram_t_stat = nan\nRESULT new_bigram_p_value = nan\nRESULT new_bigram_cohens_d = 0.000\nPAPER_REPORTED new_bigram_t_stat = see Table 3\nPAPER_REPORTED new_bigram_cohens_d = see Table 3\nRESULT new_bigram_reuse_mean_award = nan\nRESULT new_bigram_reuse_mean_control = nan\nRESULT new_bigram_reuse_t_stat = nan\nRESULT new_bigram_reuse_p_value = nan\nRESULT new_bigram_reuse_cohens_d = 0.000\nPAPER_REPORTED new_bigram_reuse_t_stat = see Table 3\nPAPER_REPORTED new_bigram_reuse_cohens_d = see Table 3\nRESULT new_trigram_mean_award = nan\nRESULT new_trigram_mean_control = nan\nRESULT new_trigram_t_stat = nan\nRESULT new_trigram_p_value = nan\nRESULT new_trigram_cohens_d = 0.000\nPAPER_REPORTED new_trigram_t_stat = see Table 3\nPAPER_REPORTED new_trigram_cohens_d = see Table 3\nRESULT new_trigram_reuse_mean_award = nan\nRESULT new_trigram_reuse_mean_control = nan\nRESULT new_trigram_reuse_t_stat = nan\nRESULT new_trigram_reuse_p_value = nan\nRESULT new_trigram_reuse_cohens_d = 0.000\nPAPER_REPORTED new_trigram_reuse_t_stat = see Table 3\nPAPER_REPORTED new_trigram_reuse_cohens_d = see Table 3\nRESULT new_word_comb_mean_award = nan\nRESULT new_word_comb_mean_control = nan\nRESULT new_word_comb_t_stat = nan\nRESULT new_word_comb_p_value = nan\nRESULT new_word_comb_cohens_d = 0.000\nPAPER_REPORTED new_word_comb_t_stat = see Table 3\nPAPER_REPORTED new_word_comb_cohens_d = see Table 3\nRESULT new_word_comb_reuse_mean_award = nan\nRESULT new_word_comb_reuse_mean_control = nan\nRESULT new_word_comb_reuse_t_stat = nan\nRESULT new_word_comb_reuse_p_value = nan\nRESULT new_word_comb_reuse_cohens_d = 0.000\nPAPER_REPORTED new_word_comb_reuse_t_stat = see Table 3\nPAPER_REPORTED new_word_comb_reuse_cohens_d = see Table 3\nRESULT backward_cosine_mean_award = nan\nRESULT backward_cosine_mean_control = nan\nRESULT backward_cosine_t_stat = nan\nRESULT backward_cosine_p_value = nan\nRESULT backward_cosine_cohens_d = 0.000\nPAPER_REPORTED backward_cosine_t_stat = see Table 3\nPAPER_REPORTED backward_cosine_cohens_d = see Table 3\n\n--- REPRODUCING TABLE 4: LOGIT REGRESSIONS ---\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/workspace/script.py\", line 106, in <module>\n    X = sm.add_constant(X_raw.values)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/statsmodels/tools/tools.py\", line 195, in add_constant\n    is_nonzero_const = np.ptp(x, axis=0) == 0\n                       ^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/numpy/core/fromnumeric.py\", line 2684, in ptp\n    return _methods._ptp(a, axis=axis, out=out, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/numpy/core/_methods.py\", line 220, in _ptp\n    umr_maximum(a, axis, None, out, keepdims),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: zero-size array to reduction operation maximum which has no identity\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 1.0,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 0.5
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "computed result evidence (no gold match)"
+    },
+    "weighted": 0.775,
+    "final_ecrf": 0.5,
+    "caps_applied": [
+      [
+        "c synthetic-substitute",
+        0.5
+      ]
+    ]
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": true,
+    "synthetic_generated": true,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 1
+    },
+    "n_result_lines": 1
+  },
+  "status": "DONE",
+  "t_end": 1782894261
+}

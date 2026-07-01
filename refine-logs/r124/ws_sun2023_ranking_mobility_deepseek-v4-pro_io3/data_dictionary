@@ -1,0 +1,16 @@
+# Data Dictionary — sun2023_ranking_mobility
+
+## Data source
+Public career-history dataset (MAG-derived) — Author career trajectories
+Access: public; Provenance: MAG/OpenAlex
+
+## Key variables
+- Unit of analysis: author
+- Time window: early-career window
+- Sample N: pending
+- Filter rules: career reconstruction, ranking bins
+
+## Indicator definitions
+- Formula: Ranking mobility (transition rates between impact quantiles); inequality measures
+- Parameters: quantile bins
+- Computation steps: reconstruct careers, compute rankings, transition rates

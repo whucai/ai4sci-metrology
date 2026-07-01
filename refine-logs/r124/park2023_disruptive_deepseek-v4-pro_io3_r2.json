@@ -1,0 +1,86 @@
+{
+  "run_id": "r10",
+  "paper": "park2023_disruptive",
+  "model": "deepseek-v4-pro",
+  "io": 3,
+  "image": "sciscigpt-ds:0.1",
+  "t_start": 1782894508,
+  "freeze": {
+    "scorer": "ecrf_v2 frozen",
+    "gold": "v1_r3",
+    "data_provided": true,
+    "ref_code_available": true
+  },
+  "out_path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/refine-logs/r124/park2023_disruptive_deepseek-v4-pro_io3_r2.json",
+  "io2_data_files": [
+    "sciscinet_sample.parquet"
+  ],
+  "io3_ref_code_files": [
+    "reproduce_v0_llm.py"
+  ],
+  "llm": {
+    "model": "deepseek-v4-pro",
+    "elapsed": 51.8,
+    "usage": {
+      "completion": 4172,
+      "prompt": 1127
+    },
+    "finish": "stop",
+    "n_content_chars": 3537
+  },
+  "llm_response_chars": 3537,
+  "code_parsed": true,
+  "exec": {
+    "exit_code": 0,
+    "elapsed": 0.69,
+    "network_blocked": true,
+    "network_probe": {
+      "reachable": false,
+      "err": "OSError"
+    },
+    "files_written": [
+      "_audit_net.json",
+      "_audit_probe.py"
+    ],
+    "stdout_chars": 1153,
+    "stderr_chars": 1709
+  },
+  "stdout": "[WARNING] sciscinet_connector not found. Falling back to raw_data/sciscinet_sample.parquet\n\n=== DATA_LOAD ===\nTotal papers loaded: 40000\nPapers after filter: 30540\nYear range: 1980 - 2010\n\n=== DESCRIPTIVE ===\nOverall mean CD: 0.003829\nOverall std CD: 0.054338\nAll years: 1980-2010\n\n=== CD_BY_YEAR ===\n1980: mean=0.008173, N=442\n1981: mean=0.001990, N=460\n1982: mean=0.006182, N=503\n1983: mean=0.001955, N=474\n1984: mean=0.012652, N=542\n1985: mean=0.010585, N=559\n1986: mean=0.003960, N=581\n1987: mean=0.003572, N=607\n1988: mean=0.010323, N=757\n1989: mean=0.008601, N=767\n1990: mean=0.003343, N=782\n1991: mean=0.005609, N=795\n1992: mean=0.007646, N=891\n1993: mean=0.005806, N=868\n1994: mean=0.010718, N=841\n1995: mean=0.006391, N=843\n1996: mean=0.007184, N=951\n1997: mean=0.003280, N=1013\n1998: mean=0.002768, N=1009\n1999: mean=-0.000517, N=1014\n2000: mean=0.003845, N=1095\n2001: mean=0.003462, N=1088\n2002: mean=0.005583, N=1197\n2003: mean=0.002234, N=1307\n2004: mean=0.002474, N=1339\n2005: mean=0.001803, N=1466\n2006: mean=0.002090, N=1558\n2007: mean=0.000850, N=1607\n2008: mean=0.001066, N=1684\n2009: mean=0.000415, N=1752\n2010: mean=0.000159, N=1748\n",
+  "stderr": "Traceback (most recent call last):\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3805, in get_loc\n    return self._engine.get_loc(casted_key)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"index.pyx\", line 167, in pandas._libs.index.IndexEngine.get_loc\n  File \"index.pyx\", line 196, in pandas._libs.index.IndexEngine.get_loc\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 2606, in pandas._libs.hashtable.Int64HashTable.get_item\n  File \"pandas/_libs/hashtable_class_helper.pxi\", line 2630, in pandas._libs.hashtable.Int64HashTable.get_item\nKeyError: 1945\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/workspace/script.py\", line 58, in <module>\n    cd_1945 = year_mean.loc[1945]\n              ~~~~~~~~~~~~~^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexing.py\", line 1191, in __getitem__\n    return self._getitem_axis(maybe_callable, axis=axis)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexing.py\", line 1431, in _getitem_axis\n    return self._get_label(key, axis=axis)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexing.py\", line 1381, in _get_label\n    return self.obj.xs(label, axis=axis)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/generic.py\", line 4301, in xs\n    loc = index.get_loc(key)\n          ^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.11/site-packages/pandas/core/indexes/base.py\", line 3812, in get_loc\n    raise KeyError(key) from err\nKeyError: 1945\n",
+  "isolation": {
+    "network_blocked": true,
+    "network_egress_blocked": true
+  },
+  "ecrf": {
+    "components": {
+      "data_source": 1.0,
+      "sample": 1.0,
+      "indicator": 0.5,
+      "model": 0.5,
+      "claim": 1.0,
+      "result": 1.0
+    },
+    "notes": {
+      "data_source": "loaded provided raw_data file",
+      "sample": "N + window/filter evidence",
+      "result": "gold result number matched"
+    },
+    "weighted": 0.875,
+    "final_ecrf": 0.875,
+    "caps_applied": []
+  },
+  "process_evidence": {
+    "real_data_used": true,
+    "ref_code_used": false,
+    "synthetic_generated": false,
+    "paper_reported_copied": false,
+    "executable_code_generated": true,
+    "execution_succeeded": true,
+    "result_line_classification": {
+      "COMPUTED": 36
+    },
+    "n_result_lines": 36
+  },
+  "status": "DONE",
+  "t_end": 1782894561
+}
