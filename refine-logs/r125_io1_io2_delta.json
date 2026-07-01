@@ -1,0 +1,473 @@
+{
+  "metric": "dECRF = ECRF(IO2) - ECRF(IO1)",
+  "n_runs": 35,
+  "n_papers": 18,
+  "mean_io1": 0.499,
+  "mean_io2": 0.604,
+  "mean_delta": 0.105,
+  "by_layer": {
+    "partial grounding uplift": {
+      "n_papers": 9,
+      "mean_io1": 0.497,
+      "mean_delta": 0.196,
+      "mean_io2": 0.693
+    },
+    "synthetic floor": {
+      "n_papers": 5,
+      "mean_io1": 0.5,
+      "mean_delta": 0.0,
+      "mean_io2": 0.5
+    },
+    "boundary invariance": {
+      "n_papers": 4,
+      "mean_io1": 0.5,
+      "mean_delta": 0.019,
+      "mean_io2": 0.519
+    }
+  },
+  "by_paper": {
+    "arts2021": {
+      "layer": "partial grounding uplift",
+      "io1_mean": 0.5,
+      "io2_mean": 0.663,
+      "delta_mean": 0.163,
+      "n": 2
+    },
+    "arts2021_patent_nlp": {
+      "layer": "synthetic floor",
+      "io1_mean": 0.5,
+      "io2_mean": 0.5,
+      "delta_mean": 0.0,
+      "n": 2
+    },
+    "bentley2023_disruption": {
+      "layer": "partial grounding uplift",
+      "io1_mean": 0.475,
+      "io2_mean": 0.675,
+      "delta_mean": 0.2,
+      "n": 2
+    },
+    "bikard2013": {
+      "layer": "boundary invariance",
+      "io1_mean": 0.5,
+      "io2_mean": 0.5,
+      "delta_mean": 0.0,
+      "n": 2
+    },
+    "donner2024_data_inaccuracy": {
+      "layer": "synthetic floor",
+      "io1_mean": 0.5,
+      "io2_mean": 0.5,
+      "delta_mean": 0.0,
+      "n": 2
+    },
+    "funk2017": {
+      "layer": "partial grounding uplift",
+      "io1_mean": 0.5,
+      "io2_mean": 0.6,
+      "delta_mean": 0.1,
+      "n": 2
+    },
+    "gebhart2023_math_framework": {
+      "layer": "partial grounding uplift",
+      "io1_mean": 0.5,
+      "io2_mean": 0.55,
+      "delta_mean": 0.05,
+      "n": 2
+    },
+    "ke2015_sleeping_beauties": {
+      "layer": "partial grounding uplift",
+      "io1_mean": 0.5,
+      "io2_mean": 0.9,
+      "delta_mean": 0.4,
+      "n": 2
+    },
+    "liu2018_hotstreaks": {
+      "layer": "synthetic floor",
+      "io1_mean": 0.5,
+      "io2_mean": 0.5,
+      "delta_mean": 0.0,
+      "n": 1
+    },
+    "maddi2024": {
+      "layer": "boundary invariance",
+      "io1_mean": 0.5,
+      "io2_mean": 0.5,
+      "delta_mean": 0.0,
+      "n": 2
+    },
+    "obadage2024_citations_repro": {
+      "layer": "partial grounding uplift",
+      "io1_mean": 0.5,
+      "io2_mean": 0.75,
+      "delta_mean": 0.25,
+      "n": 2
+    },
+    "park2023_disruptive": {
+      "layer": "partial grounding uplift",
+      "io1_mean": 0.5,
+      "io2_mean": 0.875,
+      "delta_mean": 0.375,
+      "n": 2
+    },
+    "petersen2024": {
+      "layer": "synthetic floor",
+      "io1_mean": 0.5,
+      "io2_mean": 0.5,
+      "delta_mean": 0.0,
+      "n": 2
+    },
+    "schaper2025_frontier": {
+      "layer": "synthetic floor",
+      "io1_mean": 0.5,
+      "io2_mean": 0.5,
+      "delta_mean": 0.0,
+      "n": 2
+    },
+    "sun2023_ranking_mobility": {
+      "layer": "partial grounding uplift",
+      "io1_mean": 0.5,
+      "io2_mean": 0.525,
+      "delta_mean": 0.025,
+      "n": 2
+    },
+    "vasarhelyi2023_who_benefits": {
+      "layer": "boundary invariance",
+      "io1_mean": 0.5,
+      "io2_mean": 0.5,
+      "delta_mean": 0.0,
+      "n": 2
+    },
+    "wu2019_teams": {
+      "layer": "partial grounding uplift",
+      "io1_mean": 0.5,
+      "io2_mean": 0.7,
+      "delta_mean": 0.2,
+      "n": 2
+    },
+    "zheng2025_male_female_retractions": {
+      "layer": "boundary invariance",
+      "io1_mean": 0.5,
+      "io2_mean": 0.575,
+      "delta_mean": 0.075,
+      "n": 2
+    }
+  },
+  "per_run": [
+    {
+      "paper": "arts2021",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.55,
+      "delta": 0.05,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "arts2021",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.775,
+      "delta": 0.275,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "arts2021_patent_nlp",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": true,
+      "synth_io2": true
+    },
+    {
+      "paper": "arts2021_patent_nlp",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": true,
+      "synth_io2": true
+    },
+    {
+      "paper": "bentley2023_disruption",
+      "model": "deepseek-v4-pro",
+      "io1": 0.45,
+      "io2": 0.675,
+      "delta": 0.225,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "bentley2023_disruption",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.675,
+      "delta": 0.175,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "bikard2013",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": false,
+      "synth_io2": true
+    },
+    {
+      "paper": "bikard2013",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": false,
+      "synth_io2": true
+    },
+    {
+      "paper": "donner2024_data_inaccuracy",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": true,
+      "synth_io2": true
+    },
+    {
+      "paper": "donner2024_data_inaccuracy",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": true,
+      "synth_io2": true
+    },
+    {
+      "paper": "funk2017",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.6,
+      "delta": 0.1,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "funk2017",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.6,
+      "delta": 0.1,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "gebhart2023_math_framework",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.55,
+      "delta": 0.05,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "gebhart2023_math_framework",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.55,
+      "delta": 0.05,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "ke2015_sleeping_beauties",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.9,
+      "delta": 0.4,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "ke2015_sleeping_beauties",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.9,
+      "delta": 0.4,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "liu2018_hotstreaks",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": true,
+      "synth_io2": true
+    },
+    {
+      "paper": "maddi2024",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": false,
+      "synth_io2": false
+    },
+    {
+      "paper": "maddi2024",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": false,
+      "synth_io2": true
+    },
+    {
+      "paper": "obadage2024_citations_repro",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.6,
+      "delta": 0.1,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "obadage2024_citations_repro",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.9,
+      "delta": 0.4,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "park2023_disruptive",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.875,
+      "delta": 0.375,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "park2023_disruptive",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.875,
+      "delta": 0.375,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "petersen2024",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": true,
+      "synth_io2": true
+    },
+    {
+      "paper": "petersen2024",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": true,
+      "synth_io2": true
+    },
+    {
+      "paper": "schaper2025_frontier",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": true,
+      "synth_io2": true
+    },
+    {
+      "paper": "schaper2025_frontier",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": true,
+      "synth_io2": true
+    },
+    {
+      "paper": "sun2023_ranking_mobility",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.55,
+      "delta": 0.05,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "sun2023_ranking_mobility",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": true,
+      "synth_io2": true
+    },
+    {
+      "paper": "vasarhelyi2023_who_benefits",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": false,
+      "synth_io2": true
+    },
+    {
+      "paper": "vasarhelyi2023_who_benefits",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": false,
+      "synth_io2": true
+    },
+    {
+      "paper": "wu2019_teams",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.8,
+      "delta": 0.3,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "wu2019_teams",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.6,
+      "delta": 0.1,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "zheng2025_male_female_retractions",
+      "model": "deepseek-v4-pro",
+      "io1": 0.5,
+      "io2": 0.65,
+      "delta": 0.15,
+      "real_data_used": true,
+      "synth_io2": false
+    },
+    {
+      "paper": "zheng2025_male_female_retractions",
+      "model": "qwen3-32b",
+      "io1": 0.5,
+      "io2": 0.5,
+      "delta": 0.0,
+      "real_data_used": true,
+      "synth_io2": true
+    }
+  ]
+}
