@@ -1,0 +1,205 @@
+{
+  "date": "2026-07-01",
+  "frozen": "R125 outputs + v2 scorer + v1 gates + gold v1-r3 (unchanged)",
+  "baseline": {
+    "check": "0. BASELINE (full sample)",
+    "excluded": "none",
+    "n_runs": 105,
+    "n_papers": 18,
+    "mean_ecrf_IO": {
+      "1": 0.499,
+      "2": 0.601,
+      "3": 0.591
+    },
+    "IO1_lt_IO2": "YES",
+    "IO1_lt_IO3": "YES",
+    "IO2_lt_IO3": "NO",
+    "real_data_AND_not_synth": {
+      "n": 33,
+      "mean": 0.702,
+      "break": 1.0
+    },
+    "synth_true": {
+      "n": 34,
+      "mean": 0.499,
+      "break": 0.0
+    },
+    "refcode_used": {
+      "n": 4,
+      "mean": 0.6,
+      "break": 0.25
+    },
+    "refcode_not_used": {
+      "n": 66,
+      "mean": 0.596,
+      "break": 0.5
+    },
+    "component_IO3_minus_IO1_slope": {
+      "data_source": 0.368,
+      "sample": -0.045,
+      "indicator": -0.048,
+      "model": -0.159,
+      "result": 0.074,
+      "claim": -0.015
+    },
+    "H_EUC_holds": "True"
+  },
+  "checks": [
+    {
+      "check": "1. KU Leuven/Arts EXCLUDED",
+      "excluded": "dropped ['arts2021', 'arts2021_patent_nlp', 'schaper2025_frontier']",
+      "n_runs": 87,
+      "n_papers": 15,
+      "mean_ecrf_IO": {
+        "1": 0.498,
+        "2": 0.61,
+        "3": 0.588
+      },
+      "IO1_lt_IO2": "YES",
+      "IO1_lt_IO3": "YES",
+      "IO2_lt_IO3": "NO",
+      "real_data_AND_not_synth": {
+        "n": 29,
+        "mean": 0.696,
+        "break": 1.0
+      },
+      "synth_true": {
+        "n": 26,
+        "mean": 0.5,
+        "break": 0.0
+      },
+      "refcode_used": {
+        "n": 3,
+        "mean": 0.633,
+        "break": 0.333
+      },
+      "refcode_not_used": {
+        "n": 55,
+        "mean": 0.598,
+        "break": 0.527
+      },
+      "component_IO3_minus_IO1_slope": {
+        "data_source": 0.375,
+        "sample": -0.054,
+        "indicator": -0.024,
+        "model": -0.175,
+        "result": 0.074,
+        "claim": 0.0
+      },
+      "H_EUC_holds": "True"
+    },
+    {
+      "check": "2. KU grouped sensitivity (full sample, KU vs non-KU)",
+      "KU_cluster": {
+        "n_runs": 18,
+        "n_papers": 3,
+        "mean_ecrf_IO": {
+          "1": 0.5,
+          "2": 0.554,
+          "3": 0.604
+        },
+        "real_data_not_synth_break": 1.0,
+        "synth_true_break": 0.0
+      },
+      "non_KU": {
+        "n_runs": 87,
+        "n_papers": 15,
+        "mean_ecrf_IO": {
+          "1": 0.498,
+          "2": 0.61,
+          "3": 0.588
+        },
+        "real_data_not_synth_break": 1.0,
+        "synth_true_break": 0.0
+      },
+      "interpretation": "if non-KU shows the same uptake pattern (ground->break, synth->0.50), the result is NOT driven only by the KU cluster."
+    },
+    {
+      "check": "3. Clean-IO3-anchor ONLY",
+      "excluded": "kept ['arts2021', 'arts2021_patent_nlp', 'bentley2023_disruption', 'funk2017', 'liu2018_hotstreaks', 'obadage2024_citations_repro', 'park2023_disruptive', 'petersen2024', 'wu2019_teams']",
+      "n_runs": 53,
+      "n_papers": 9,
+      "mean_ecrf_IO": {
+        "1": 0.497,
+        "2": 0.64,
+        "3": 0.638
+      },
+      "IO1_lt_IO2": "YES",
+      "IO1_lt_IO3": "YES",
+      "IO2_lt_IO3": "NO",
+      "real_data_AND_not_synth": {
+        "n": 23,
+        "mean": 0.72,
+        "break": 1.0
+      },
+      "synth_true": {
+        "n": 13,
+        "mean": 0.496,
+        "break": 0.0
+      },
+      "refcode_used": {
+        "n": 4,
+        "mean": 0.6,
+        "break": 0.25
+      },
+      "refcode_not_used": {
+        "n": 32,
+        "mean": 0.644,
+        "break": 0.688
+      },
+      "component_IO3_minus_IO1_slope": {
+        "data_source": 0.5,
+        "sample": 0.002,
+        "indicator": -0.011,
+        "model": -0.142,
+        "result": 0.051,
+        "claim": -0.028
+      },
+      "H_EUC_holds": "True"
+    },
+    {
+      "check": "4. Boundary EXCLUDED",
+      "excluded": "dropped ['bikard2013', 'maddi2024', 'schaper2025_frontier', 'vasarhelyi2023_who_benefits', 'zheng2025_male_female_retractions']",
+      "n_runs": 75,
+      "n_papers": 13,
+      "mean_ecrf_IO": {
+        "1": 0.498,
+        "2": 0.634,
+        "3": 0.619
+      },
+      "IO1_lt_IO2": "YES",
+      "IO1_lt_IO3": "YES",
+      "IO2_lt_IO3": "NO",
+      "real_data_AND_not_synth": {
+        "n": 31,
+        "mean": 0.706,
+        "break": 1.0
+      },
+      "synth_true": {
+        "n": 19,
+        "mean": 0.497,
+        "break": 0.0
+      },
+      "refcode_used": {
+        "n": 4,
+        "mean": 0.6,
+        "break": 0.25
+      },
+      "refcode_not_used": {
+        "n": 46,
+        "mean": 0.629,
+        "break": 0.652
+      },
+      "component_IO3_minus_IO1_slope": {
+        "data_source": 0.5,
+        "sample": -0.001,
+        "indicator": -0.05,
+        "model": -0.187,
+        "result": 0.084,
+        "claim": -0.021
+      },
+      "H_EUC_holds": "True"
+    }
+  ],
+  "interpretation_rule": "Do NOT claim simple monotonic observability. Correct conclusion: observability increases material availability, but realized reconstruction fidelity depends on agentic uptake. Code availability alone is incomplete; real-data uptake + avoidance of synthetic substitution mediate ECRF."
+}
