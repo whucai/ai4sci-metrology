@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "finalizedAt": "2026-07-02T07:21:58Z",
+  "workspace": "/mnt/mydisk/PycharmProjects/ai4sci-metrology",
+  "bestImage": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/figures/ai_generated/figure_v1.png",
+  "finalImage": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/figures/ai_generated/figure_final.png",
+  "score": 9.0,
+  "reviewSummary": "Native gpt-image-2 raster generated from fig1_sketch.png + fig1_layout.json condition; nativeToolConfirmed=true; 3-column IO->uptake->ECRF + gate bar + 3 callouts preserved.",
+  "caption": "[Replace with a paper-ready caption].",
+  "label": "fig:replace-me"
+}

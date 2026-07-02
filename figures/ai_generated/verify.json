@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "workspace": "/mnt/mydisk/PycharmProjects/ai4sci-metrology",
+  "checkedAt": "2026-07-02T07:21:58Z",
+  "artifacts": {
+    "figureFinal": {
+      "path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/figures/ai_generated/figure_final.png",
+      "exists": true
+    },
+    "latexInclude": {
+      "path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/figures/ai_generated/latex_include.tex",
+      "exists": true
+    },
+    "reviewLog": {
+      "path": "/mnt/mydisk/PycharmProjects/ai4sci-metrology/figures/ai_generated/review_log.json",
+      "exists": true
+    }
+  },
+  "errors": []
+}
