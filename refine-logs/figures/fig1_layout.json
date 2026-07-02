@@ -1,0 +1,574 @@
+{
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "coordinate_system": "axes_0_1",
+    "background": "#FFFFFF",
+    "palette": {
+      "grey": "#90A4AE",
+      "green": "#2E7D32",
+      "orange": "#E65100",
+      "purple": "#6A1B9A",
+      "dark": "#263238"
+    }
+  },
+  "regions": {
+    "titles": [
+      {
+        "id": "title_main",
+        "type": "text",
+        "position": {
+          "x": 0.5,
+          "y": 0.055,
+          "width": 0.72,
+          "height": 0.055
+        },
+        "text": "Figure 1. Evidence-Chain Uptake mechanism",
+        "fill_color": "#FFFFFF",
+        "edge_color": "#FFFFFF",
+        "font_size": 28,
+        "font_weight": "bold",
+        "text_color": "#263238",
+        "connects_to": []
+      },
+      {
+        "id": "mechanism_equation",
+        "type": "text",
+        "position": {
+          "x": 0.5,
+          "y": 0.125,
+          "width": 0.78,
+          "height": 0.05
+        },
+        "text": "IO → material availability → U → evidence use → ECRF",
+        "fill_color": "#FFFFFF",
+        "edge_color": "#FFFFFF",
+        "font_size": 22,
+        "font_weight": "bold",
+        "text_color": "#6A1B9A",
+        "connects_to": []
+      }
+    ],
+    "column1_IO": [
+      {
+        "id": "col1_header",
+        "type": "text",
+        "position": {
+          "x": 0.145,
+          "y": 0.205,
+          "width": 0.2,
+          "height": 0.04
+        },
+        "text": "Material observability\n(IO)",
+        "fill_color": "#FFFFFF",
+        "edge_color": "#FFFFFF",
+        "font_size": 19,
+        "font_weight": "bold",
+        "text_color": "#263238",
+        "connects_to": []
+      },
+      {
+        "id": "io_container",
+        "type": "box",
+        "position": {
+          "x": 0.145,
+          "y": 0.385,
+          "width": 0.205,
+          "height": 0.245
+        },
+        "text": "3 observability levels",
+        "fill_color": "#90A4AE",
+        "edge_color": "#263238",
+        "font_size": 16,
+        "font_weight": "bold",
+        "text_color": "#FFFFFF",
+        "connects_to": []
+      },
+      {
+        "id": "io1_box",
+        "type": "box",
+        "position": {
+          "x": 0.145,
+          "y": 0.305,
+          "width": 0.165,
+          "height": 0.055
+        },
+        "text": "IO1\npaper text only",
+        "fill_color": "#FFFFFF",
+        "edge_color": "#90A4AE",
+        "font_size": 14,
+        "font_weight": "normal",
+        "text_color": "#263238",
+        "connects_to": []
+      },
+      {
+        "id": "io2_box",
+        "type": "box",
+        "position": {
+          "x": 0.145,
+          "y": 0.385,
+          "width": 0.165,
+          "height": 0.055
+        },
+        "text": "IO2\n+ data/docs/raw_data",
+        "fill_color": "#FFFFFF",
+        "edge_color": "#90A4AE",
+        "font_size": 14,
+        "font_weight": "normal",
+        "text_color": "#263238",
+        "connects_to": []
+      },
+      {
+        "id": "io3_box",
+        "type": "box",
+        "position": {
+          "x": 0.145,
+          "y": 0.465,
+          "width": 0.165,
+          "height": 0.055
+        },
+        "text": "IO3\n+ reference code",
+        "fill_color": "#FFFFFF",
+        "edge_color": "#90A4AE",
+        "font_size": 14,
+        "font_weight": "normal",
+        "text_color": "#263238",
+        "connects_to": []
+      },
+      {
+        "id": "io_note",
+        "type": "text",
+        "position": {
+          "x": 0.145,
+          "y": 0.555,
+          "width": 0.19,
+          "height": 0.055
+        },
+        "text": "Necessary input,\nbut not sufficient",
+        "fill_color": "#FFFFFF",
+        "edge_color": "#FFFFFF",
+        "font_size": 14,
+        "font_weight": "bold",
+        "text_color": "#263238",
+        "connects_to": []
+      }
+    ],
+    "bottleneck": [
+      {
+        "id": "arrow_io_to_bottleneck",
+        "type": "arrow",
+        "position": {
+          "x": 0.275,
+          "y": 0.385,
+          "width": 0.11,
+          "height": 0.035
+        },
+        "text": "availability",
+        "fill_color": "#263238",
+        "edge_color": "#263238",
+        "font_size": 13,
+        "font_weight": "normal",
+        "text_color": "#263238",
+        "connects_to": [
+          "io_container",
+          "bottleneck_diamond"
+        ]
+      },
+      {
+        "id": "bottleneck_diamond",
+        "type": "diamond",
+        "position": {
+          "x": 0.365,
+          "y": 0.385,
+          "width": 0.125,
+          "height": 0.135
+        },
+        "text": "Bottleneck\nNOT\nautomatic",
+        "fill_color": "#6A1B9A",
+        "edge_color": "#263238",
+        "font_size": 15,
+        "font_weight": "bold",
+        "text_color": "#FFFFFF",
+        "connects_to": []
+      }
+    ],
+    "column2_uptake": [
+      {
+        "id": "arrow_bottleneck_to_u",
+        "type": "arrow",
+        "position": {
+          "x": 0.435,
+          "y": 0.385,
+          "width": 0.105,
+          "height": 0.035
+        },
+        "text": "agent choice",
+        "fill_color": "#263238",
+        "edge_color": "#263238",
+        "font_size": 13,
+        "font_weight": "normal",
+        "text_color": "#263238",
+        "connects_to": [
+          "bottleneck_diamond",
+          "uptake_node"
+        ]
+      },
+      {
+        "id": "uptake_node",
+        "type": "diamond",
+        "position": {
+          "x": 0.535,
+          "y": 0.385,
+          "width": 0.135,
+          "height": 0.14
+        },
+        "text": "Agent uptake\nU",
+        "fill_color": "#90A4AE",
+        "edge_color": "#263238",
+        "font_size": 17,
+        "font_weight": "bold",
+        "text_color": "#FFFFFF",
+        "connects_to": []
+      },
+      {
+        "id": "real_grounding_box",
+        "type": "box",
+        "position": {
+          "x": 0.535,
+          "y": 0.245,
+          "width": 0.18,
+          "height": 0.08
+        },
+        "text": "Grounded path\nreal_data ∧ ¬synth",
+        "fill_color": "#2E7D32",
+        "edge_color": "#263238",
+        "font_size": 15,
+        "font_weight": "bold",
+        "text_color": "#FFFFFF",
+        "connects_to": []
+      },
+      {
+        "id": "synth_shortcut_box",
+        "type": "box",
+        "position": {
+          "x": 0.535,
+          "y": 0.545,
+          "width": 0.18,
+          "height": 0.08
+        },
+        "text": "Synthetic shortcut\nsynth=True",
+        "fill_color": "#E65100",
+        "edge_color": "#263238",
+        "font_size": 15,
+        "font_weight": "bold",
+        "text_color": "#FFFFFF",
+        "connects_to": []
+      },
+      {
+        "id": "arrow_u_to_real",
+        "type": "arrow",
+        "position": {
+          "x": 0.535,
+          "y": 0.305,
+          "width": 0.04,
+          "height": 0.11
+        },
+        "text": "use evidence",
+        "fill_color": "#2E7D32",
+        "edge_color": "#2E7D32",
+        "font_size": 12,
+        "font_weight": "bold",
+        "text_color": "#2E7D32",
+        "connects_to": [
+          "uptake_node",
+          "real_grounding_box"
+        ]
+      },
+      {
+        "id": "arrow_u_to_synth",
+        "type": "arrow",
+        "position": {
+          "x": 0.535,
+          "y": 0.47,
+          "width": 0.04,
+          "height": 0.12
+        },
+        "text": "substitute",
+        "fill_color": "#E65100",
+        "edge_color": "#E65100",
+        "font_size": 12,
+        "font_weight": "bold",
+        "text_color": "#E65100",
+        "connects_to": [
+          "uptake_node",
+          "synth_shortcut_box"
+        ]
+      }
+    ],
+    "column3_ecrf": [
+      {
+        "id": "col3_header",
+        "type": "text",
+        "position": {
+          "x": 0.785,
+          "y": 0.205,
+          "width": 0.22,
+          "height": 0.04
+        },
+        "text": "Reconstruction fidelity\n(ECRF)",
+        "fill_color": "#FFFFFF",
+        "edge_color": "#FFFFFF",
+        "font_size": 19,
+        "font_weight": "bold",
+        "text_color": "#263238",
+        "connects_to": []
+      },
+      {
+        "id": "ecrf_floor_break",
+        "type": "box",
+        "position": {
+          "x": 0.785,
+          "y": 0.245,
+          "width": 0.225,
+          "height": 0.105
+        },
+        "text": "Floor-break\nmean ECRF = 0.703\n100% break",
+        "fill_color": "#2E7D32",
+        "edge_color": "#263238",
+        "font_size": 16,
+        "font_weight": "bold",
+        "text_color": "#FFFFFF",
+        "connects_to": []
+      },
+      {
+        "id": "ecrf_synth_floor",
+        "type": "box",
+        "position": {
+          "x": 0.785,
+          "y": 0.545,
+          "width": 0.225,
+          "height": 0.105
+        },
+        "text": "Synthetic floor\nmean ECRF = 0.497\n0% break",
+        "fill_color": "#E65100",
+        "edge_color": "#263238",
+        "font_size": 16,
+        "font_weight": "bold",
+        "text_color": "#FFFFFF",
+        "connects_to": []
+      },
+      {
+        "id": "arrow_real_to_ecrf",
+        "type": "arrow",
+        "position": {
+          "x": 0.66,
+          "y": 0.245,
+          "width": 0.13,
+          "height": 0.035
+        },
+        "text": "evidence use",
+        "fill_color": "#2E7D32",
+        "edge_color": "#2E7D32",
+        "font_size": 13,
+        "font_weight": "bold",
+        "text_color": "#2E7D32",
+        "connects_to": [
+          "real_grounding_box",
+          "ecrf_floor_break"
+        ]
+      },
+      {
+        "id": "arrow_synth_to_ecrf",
+        "type": "arrow",
+        "position": {
+          "x": 0.66,
+          "y": 0.545,
+          "width": 0.13,
+          "height": 0.035
+        },
+        "text": "gate applies",
+        "fill_color": "#E65100",
+        "edge_color": "#E65100",
+        "font_size": 13,
+        "font_weight": "bold",
+        "text_color": "#E65100",
+        "connects_to": [
+          "synth_shortcut_box",
+          "ecrf_synth_floor"
+        ]
+      }
+    ],
+    "gate_bar": [
+      {
+        "id": "gate_c_bar",
+        "type": "gate-bar",
+        "position": {
+          "x": 0.5,
+          "y": 0.805,
+          "width": 0.76,
+          "height": 0.075
+        },
+        "text": "Gate(c): synth=True mechanically caps ECRF at 0.50\nStructural failure mode: runnable output can substitute synthetic data for evidence",
+        "fill_color": "#263238",
+        "edge_color": "#263238",
+        "font_size": 17,
+        "font_weight": "bold",
+        "text_color": "#FFFFFF",
+        "connects_to": []
+      },
+      {
+        "id": "arrow_synth_to_gate",
+        "type": "arrow",
+        "position": {
+          "x": 0.585,
+          "y": 0.655,
+          "width": 0.045,
+          "height": 0.135
+        },
+        "text": "cap",
+        "fill_color": "#E65100",
+        "edge_color": "#E65100",
+        "font_size": 12,
+        "font_weight": "bold",
+        "text_color": "#E65100",
+        "connects_to": [
+          "synth_shortcut_box",
+          "gate_c_bar"
+        ]
+      },
+      {
+        "id": "arrow_gate_to_floor",
+        "type": "arrow",
+        "position": {
+          "x": 0.71,
+          "y": 0.67,
+          "width": 0.095,
+          "height": 0.1
+        },
+        "text": "0.50 cap",
+        "fill_color": "#E65100",
+        "edge_color": "#E65100",
+        "font_size": 12,
+        "font_weight": "bold",
+        "text_color": "#E65100",
+        "connects_to": [
+          "gate_c_bar",
+          "ecrf_synth_floor"
+        ]
+      }
+    ],
+    "callouts": [
+      {
+        "id": "callout_code_not_grounding",
+        "type": "callout",
+        "position": {
+          "x": 0.245,
+          "y": 0.675,
+          "width": 0.22,
+          "height": 0.095
+        },
+        "text": "arts2021 / obadage\ncode ≠ grounding\ncode present → synth",
+        "fill_color": "#FFFFFF",
+        "edge_color": "#E65100",
+        "font_size": 14,
+        "font_weight": "bold",
+        "text_color": "#263238",
+        "connects_to": []
+      },
+      {
+        "id": "callout_refcode_synth",
+        "type": "callout",
+        "position": {
+          "x": 0.52,
+          "y": 0.675,
+          "width": 0.22,
+          "height": 0.095
+        },
+        "text": "liu2018\nrefcode used\nbut synth shortcut",
+        "fill_color": "#FFFFFF",
+        "edge_color": "#6A1B9A",
+        "font_size": 14,
+        "font_weight": "bold",
+        "text_color": "#263238",
+        "connects_to": []
+      },
+      {
+        "id": "callout_data_over_code",
+        "type": "callout",
+        "position": {
+          "x": 0.795,
+          "y": 0.675,
+          "width": 0.22,
+          "height": 0.095
+        },
+        "text": "petersen / park\ndata > code\nreal data breaks floor",
+        "fill_color": "#FFFFFF",
+        "edge_color": "#2E7D32",
+        "font_size": 14,
+        "font_weight": "bold",
+        "text_color": "#263238",
+        "connects_to": []
+      },
+      {
+        "id": "arrow_callout1_to_synth",
+        "type": "arrow",
+        "position": {
+          "x": 0.34,
+          "y": 0.61,
+          "width": 0.145,
+          "height": 0.08
+        },
+        "text": "dashed",
+        "fill_color": "#E65100",
+        "edge_color": "#E65100",
+        "font_size": 10,
+        "font_weight": "normal",
+        "text_color": "#E65100",
+        "connects_to": [
+          "callout_code_not_grounding",
+          "synth_shortcut_box"
+        ]
+      },
+      {
+        "id": "arrow_callout2_to_uptake",
+        "type": "arrow",
+        "position": {
+          "x": 0.525,
+          "y": 0.6,
+          "width": 0.035,
+          "height": 0.115
+        },
+        "text": "dashed",
+        "fill_color": "#6A1B9A",
+        "edge_color": "#6A1B9A",
+        "font_size": 10,
+        "font_weight": "normal",
+        "text_color": "#6A1B9A",
+        "connects_to": [
+          "callout_refcode_synth",
+          "uptake_node"
+        ]
+      },
+      {
+        "id": "arrow_callout3_to_real",
+        "type": "arrow",
+        "position": {
+          "x": 0.69,
+          "y": 0.475,
+          "width": 0.125,
+          "height": 0.185
+        },
+        "text": "dashed",
+        "fill_color": "#2E7D32",
+        "edge_color": "#2E7D32",
+        "font_size": 10,
+        "font_weight": "normal",
+        "text_color": "#2E7D32",
+        "connects_to": [
+          "callout_data_over_code",
+          "real_grounding_box"
+        ]
+      }
+    ]
+  }
+}
