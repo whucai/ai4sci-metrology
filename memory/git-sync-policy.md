@@ -7,10 +7,10 @@ metadata:
   originSessionId: 971ee36a-7ba1-46b5-806c-553409f7da0d
 ---
 
-User directive (updated 2026-06-24): work ONLY on branch `master`; sync ONLY to `master`. Periodically local-commit.
+User directive (updated 2026-06-25): work on branch `dev/benchmark-wiki-updates`; keep dev as the active working branch. (Earlier 2026-06-24 directive said master-only; superseded.) Periodically local-commit.
 
-**Sync policy (updated 2026-06-24):**
-- Commit locally on `master`. Do NOT auto-push. (Earlier dev/benchmark-wiki-updates work was FF-merged into master.)
+**Sync policy (updated 2026-06-25):**
+- Commit locally on `dev/benchmark-wiki-updates`. Do NOT auto-push. On 2026-06-25 dev was FF-merged from master tip (93b4feb) so dev now carries R102/R103 + memory snapshot; dev and master are unified at `93b4feb`.
 - `.gitignore` excludes: `.litellm/` (plaintext API keys), `*.pdf` (large benchmark PDFs, kept local), `.agents/` + `.claude/skills/` (symlinks into ~/下载/Auto-claude-code-research-in-sleep), `psychic-binder-*.json` / `*service_account*.json` / `*-sa.json` (GCP keys).
 - Before each commit, verify `git diff --cached --name-only | grep -E '\.litellm/|psychic-binder|\.pdf$|^\.agents/|^\.claude/skills/'` is empty; abort if not.
 - A session-only cron (`13,43 * * * *`, id varies per session) does this every ~30 min while idle. It dies when the session ends — recreate if needed.
